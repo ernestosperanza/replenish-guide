@@ -1,0 +1,111 @@
+---
+import Layout from "@components/Layout.astro";
+---
+
+<Layout
+    title="Intuition Guide - Replenish Guide"
+    prev={{ name: "Mechanics", href: "/mechanics" }}
+    next={{ name: "Strategic Theory", href: "/strategy" }}
+>
+    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
+        The Intuition Guide
+    </h1>
+    <div style="margin-bottom: 1.5rem; text-align: left;">
+        <img
+            src="/images/intuition.jpeg"
+            alt="Intuition"
+            style="max-width: 300px; width: 100%; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
+        />
+        <p
+            style="font-size: 0.9rem; color: var(--w-color-primary-40); margin-top: 0.5rem; font-style: italic;"
+        >
+            Intuition by April Lee
+        </p>
+    </div>
+    <p>
+        <strong>A few tips:</strong> Intuition is a skill-intensive card, and it might
+        take some time to learn all the possible lines that the card enables, as it
+        plays multiple critical roles throughout a game. A fundamental rule of Intuition
+        is the tradeoff between immediacy and future availability: when you tutor
+        for a non-combo piece (like removal or a sideboard card), you are effectively
+        removing three copies of that card from your deck to guarantee access to one.
+        Keep in mind also when you are building your deck that any card you intend
+        to reliably fetch with Intuition requires you to run at least 3 copies in
+        your 75.
+    </p>
+    <p>
+        Timing is everything. Because Intuition is an instant, you almost always
+        want to cast it on your opponent's end step. This lets you untap with
+        all your mana available to slam a Replenish or hold up interaction on
+        your turn, giving your opponent a much smaller window to react. This
+        also gives you more information to make better decisions, and that is
+        always good.
+    </p>
+    <p>
+        Dealing with incomplete piles requires creativity—if you desperately
+        need a Swords to Plowshares, but you've already drawn one and only have
+        two left in your library, you'll need to build a hybrid pile like Swords
+        + Swords + Parallax Wave. Always keep track of what's left in your deck
+        so you don't cast Intuition only to realize you can't fetch three of a
+        kind.
+    </p>
+    <p>
+        Finally, when playing through graveyard hate like Tormod's Crypt or
+        Planar Void post-sideboard, Intuition stops being your combo setup tool
+        and immediately pivots to being your best out for finding answers (like
+        fetching 3 copies of Seal of Cleansing to clear the hate before filling
+        the graveyard).
+    </p>
+
+    <h3 style="margin-top: 2rem;">Common Scenarios & Piles</h3>
+    <p>Here are the most common scenarios and how to navigate them:</p>
+
+    <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
+        <li style="margin-bottom: 1rem;">
+            <strong>Dumping Combo Pieces:</strong><br />
+            The primary use. You can use it to fetch the exact enchantments you need
+            into the graveyard. This is perfect when you keep a hand with Replenish
+            plus a discard outlet (like Attunement or Frantic Search). <em
+                >Crucial Note:</em
+            > Since the opponent chooses which card goes to your hand, if you absolutely
+            want a specific enchantment in the graveyard, you must pick at least two
+            copies of it in your pile.<br />
+            <strong>Examples:</strong> Opal + Decree + Wave, Opal + Opal + Wave, Opal
+            + Opal + Decree, Wave x3 (against aggro).
+        </li>
+        <li style="margin-bottom: 1rem;">
+            <strong
+                >Tutoring Removal (Swords to Plowshares or Seal of Cleansing):</strong
+            ><br />
+            Used when you face an immediate, game-ending threat. Getting Seal of Cleansing
+            is slightly better than Swords because you can always bring the discarded
+            Seals back to the battlefield later with a Replenish.<br />
+            <strong>Examples:</strong> Swords to Plowshares x3, Seal of Cleansing
+            x3.
+        </li>
+        <li style="margin-bottom: 1rem;">
+            <strong>Guaranteeing Land Drops:</strong><br />
+            You can search for 3 lands to fix your colors, guarantee you don't miss
+            a critical land drop, or even accelerate your mana a turn early by grabbing
+            3 Ancient Tombs. It's a less frequent play, but highly impactful when
+            you need it.<br />
+            <strong>Examples:</strong> Ancient Tomb x3, Skycloud expanse x3, Plains
+            x3.
+        </li>
+        <li style="margin-bottom: 1rem;">
+            <strong>Finding a Discard Outlet:</strong><br />
+            When you have all the combo pieces and Replenish in your hand but no way
+            to discard them, you can Intuition for 3 Frantic Searches or 3 Attunements.
+            <em>Note:</em> Grabbing 3 Attunements is a very slow, mana-intensive play,
+            so make sure you have the time to execute it.<br />
+            <strong>Examples:</strong> Frantic Search x3, Attunement x3.
+        </li>
+        <li style="margin-bottom: 1rem;">
+            <strong>Finding Sideboard Silver Bullets:</strong><br />
+            You can fetch 3 copies of a key sideboard card—like Meddling Mage or Abeyance—to
+            stop an opposing combo or fight through the mirror match.<br />
+            <strong>Examples:</strong> Meddling Mage x3, Abeyance x3, Tsabo's web
+            x3.
+        </li>
+    </ul>
+</Layout>

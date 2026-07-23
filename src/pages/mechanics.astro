@@ -5,7 +5,7 @@ import Layout from "@components/Layout.astro";
 <Layout
     title="Mechanics - Replenish Guide"
     prev={{ name: "The Decklists", href: "/deck" }}
-    next={{ name: "Strategic Theory", href: "/strategy" }}
+    next={{ name: "Intuition Guide", href: "/intuition" }}
 >
     <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
         Mechanics
@@ -22,8 +22,29 @@ import Layout from "@components/Layout.astro";
         creature-exile triggers resolve and those creatures are gone
         permanently. Repeat until the board is clear.
     </p>
+    <p>
+        <strong>Combat Sequencing:</strong> A side effect of this trick is that the
+        Wave returns as a new object, meaning it has summoning sickness and cannot
+        attack that turn. Therefore, whenever possible, you should temporarily exile
+        blockers normally, swing with your team (including the Wave) for 4 damage,
+        and <em>then</em> do the permanent exile trick in your second main phase.
+        Those 4 points of damage can often change the outcome of the game. The exception
+        is if the opponent's blockers have powerful Enter the Battlefield (ETB) effects
+        (like <em>Goblin Ringleader</em> or <em>Bone Shredder</em>), because
+        temporarily exiling them means they'll return and trigger their ETB
+        again before being permanently exiled. Against those, you just
+        permanent-exile them immediately.
+    </p>
+    <p>
+        <strong>Exiling Opposing Enchantments:</strong> Because Opalescence affects <em>all</em> non-Aura enchantments on the battlefield, your opponent's enchantments also become creatures. This means you can use the Wave trick to permanently exile problematic enchantments like <em>Survival of the Fittest</em>, <em>Sylvan Library</em>, or an opposing <em>Seal of Cleansing</em>.
+    </p>
 
-    <h3>The Decree Lock</h3>
+    <h3 style="margin-top: 2.5rem;">Opalescence & Summoning Sickness</h3>
+    <p>
+        It's a common mistake for newer players to think they can cast Replenish and immediately swing for lethal. Because Opalescence turns your enchantments into creatures, any enchantment that enters the battlefield this turn <em>will have summoning sickness</em>. You cannot attack the turn you cast Replenish. This is why the deck relies on Parallax Wave and Decree of Silence—you need to lock the opponent out to survive a full turn cycle before you can attack.
+    </p>
+
+    <h3 style="margin-top: 2.5rem;">The Decree Lock</h3>
     <p>
         Post-Replenish with all three pieces, creatures are permanently exiled
         and spells are countered.
@@ -57,103 +78,98 @@ import Layout from "@components/Layout.astro";
         back as a new object and the removal fizzles.
     </p>
 
-    <h2 style="margin-top: 4rem;">The Intuition Cheat Sheet</h2>
-    <div style="margin-bottom: 1.5rem; text-align: left;">
-        <img
-            src="/images/intuition.jpeg"
-            alt="Intuition"
-            style="max-width: 300px; width: 100%; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <p
-            style="font-size: 0.9rem; color: var(--w-color-primary-40); margin-top: 0.5rem; font-style: italic;"
+    <h3 style="margin-top: 2.5rem;">Parallax Wave + Disenchant Effect</h3>
+    <p>
+        Just like the Opalescence trick, you can permanently exile creatures
+        using Seal of Cleansing or a sideboard Disenchant. Activate Parallax
+        Wave to target up to 5 of your opponent's creatures. While those
+        activations are still on the stack, sacrifice your Seal of Cleansing
+        targeting your own Wave. The Wave leaves the battlefield, its "return
+        creatures" trigger resolves (returning nothing), and then the exile
+        triggers resolve, permanently removing the creatures. This is a crucial
+        survival tactic in the early game.
+    </p>
+
+    <h3 style="margin-top: 2.5rem;">Parallax Wave Creature Synergies</h3>
+    <p>
+        Parallax Wave isn't just for clearing your opponent's board; it has
+        incredible synergy with your own creatures, especially post-sideboard. <em
+            >Note: The first two tricks practically require you to have both
+            Opalescence and Parallax Wave on the board so you can instantly
+            flicker the Wave and get your creatures back immediately.</em
         >
-            Intuition by April Lee
-        </p>
-    </div>
-    <p>
-        <strong>A few tips:</strong> Intuition is a skill-intensive card, and it might
-        take some time to learn all the possible lines that the card enables, as it
-        plays multiple critical roles throughout a game. A fundamental rule of Intuition
-        is the tradeoff between immediacy and future availability: when you tutor
-        for a non-combo piece (like removal or a sideboard card), you are effectively
-        removing three copies of that card from your deck to guarantee access to one.
-        Keep in mind also when you are building your deck that any card you intend
-        to reliably fetch with Intuition requires you to run at least 3 copies in
-        your 75.
     </p>
-    <p>
-        Timing is everything. Because Intuition is an instant, you almost always
-        want to cast it on your opponent's end step. This lets you untap with
-        all your mana available to slam a Replenish or hold up interaction on
-        your turn, giving your opponent a much smaller window to react. This
-        also gives you more information to make better decisions, and that is
-        always good.
-    </p>
-    <p>
-        Dealing with incomplete piles requires creativity—if you desperately
-        need a Swords to Plowshares, but you've already drawn one and only have
-        two left in your library, you'll need to build a hybrid pile like Swords
-        + Swords + Parallax Wave. Always keep track of what's left in your deck
-        so you don't cast Intuition only to realize you can't fetch three of a
-        kind.
-    </p>
-    <p>
-        Finally, when playing through graveyard hate like Tormod's Crypt or
-        Planar Void post-sideboard, Intuition stops being your combo setup tool
-        and immediately pivots to being your best out for finding answers (like
-        fetching 3 copies of Seal of Cleansing to clear the hate before filling
-        the graveyard).
-    </p>
-
-    <h3 style="margin-top: 2rem;">Common Scenarios & Piles</h3>
-    <p>Here are the most common scenarios and how to navigate them:</p>
-
     <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
         <li style="margin-bottom: 1rem;">
-            <strong>Dumping Combo Pieces:</strong><br />
-            The primary use. You can use it to fetch the exact enchantments you need
-            into the graveyard. This is perfect when you keep a hand with Replenish
-            plus a discard outlet (like Attunement or Frantic Search). <em
-                >Crucial Note:</em
-            > Since the opponent chooses which card goes to your hand, if you absolutely
-            want a specific enchantment in the graveyard, you must pick at least two
-            copies of it in your pile.<br />
-            <strong>Examples:</strong> Opal + Decree + Wave, Opal + Opal + Wave, Opal
-            + Opal + Decree, Wave x3 (against aggro).
+            <strong>Flipping Exalted Angel for Free:</strong> If you cast Exalted
+            Angel face-down as a morph (for 3 mana), you can target it with Parallax
+            Wave. Then, use the Opalescence trick to flicker the Wave. When the Angel
+            returns to the battlefield, it comes back face-up. This instantly saves
+            you the 2WW unmorph cost.
         </li>
         <li style="margin-bottom: 1rem;">
-            <strong
-                >Tutoring Removal (Swords to Plowshares or Seal of Cleansing):</strong
-            ><br />
-            Used when you face an immediate, game-ending threat. Getting Seal of Cleansing
-            is slightly better than Swords because you can always bring the discarded
-            Seals back to the battlefield later with a Replenish.<br />
-            <strong>Examples:</strong> Swords to Plowshares x3, Seal of Cleansing
-            x3.
+            <strong>Resetting Meddling Mage:</strong> If your opponent draws an out
+            to the card you named with Meddling Mage, or if you simply need to lock
+            out a different spell, you can exile your own Mage with Wave and immediately
+            flicker the Wave. When the Mage returns, you get to name a brand-new card.
         </li>
         <li style="margin-bottom: 1rem;">
-            <strong>Guaranteeing Land Drops:</strong><br />
-            You can search for 3 lands to fix your colors, guarantee you don't miss
-            a critical land drop, or even accelerate your mana a turn early by grabbing
-            3 Ancient Tombs. It's a less frequent play, but highly impactful when
-            you need it.<br />
-            <strong>Examples:</strong> Ancient Tomb x3, Skycloud expanse x3, Plains
-            x3.
-        </li>
-        <li style="margin-bottom: 1rem;">
-            <strong>Finding a Discard Outlet:</strong><br />
-            When you have all the combo pieces and Replenish in your hand but no way
-            to discard them, you can Intuition for 3 Frantic Searches or 3 Attunements.
-            <em>Note:</em> Grabbing 3 Attunements is a very slow, mana-intensive play,
-            so make sure you have the time to execute it.<br />
-            <strong>Examples:</strong> Frantic Search x3, Attunement x3.
-        </li>
-        <li style="margin-bottom: 1rem;">
-            <strong>Finding Sideboard Silver Bullets:</strong><br />
-            You can fetch 3 copies of a key sideboard card—like Meddling Mage or Abeyance—to
-            stop an opposing combo or fight through the mirror match.<br />
-            <strong>Examples:</strong> Meddling Mage x3, Abeyance x3, Tsabo's web
-            x3.
+            <strong>Creature Protection:</strong> This trick only requires the Wave.
+            You can use Parallax Wave as a "safe house" for your Mages or Angels in
+            response to spot removal or a sweeper. Exile them yourself, and let the
+            Wave fade naturally later to bring them back completely unharmed.
         </li>
     </ul>
-</Layout>
+
+    <h3 style="margin-top: 2.5rem;">Asymmetrical Tsabo's Web</h3>
+    <p>
+        The deck leverages Tsabo's Web to shut down problematic lands like
+        Rishadan Port, Wasteland, and Dust Bowl. The reason this card is
+        completely asymmetrical is that it only affects lands with activated
+        abilities that <em>don't</em> produce mana. All of our non-basic lands (Skycloud
+        Expanse, Adarkar Wastes, Ancient Tomb) only have mana abilities, meaning they
+        untap perfectly fine under the Web.
+    </p>
+
+    <h3 style="margin-top: 2.5rem;">Frantic Search Mana Tricks</h3>
+    <p>
+        Frantic Search isn't just a discard outlet; the "untap up to three
+        lands" clause enables several powerful mana tricks:
+    </p>
+    <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
+        <li style="margin-bottom: 1rem;">
+            <strong>The 'Free' Discard:</strong> Because the spell untaps your lands,
+            it acts as a completely free way to dump combo pieces into your graveyard
+            on the turn you intend to "go off." Even better, if one of the three lands
+            you untap is an Ancient Tomb, it actually nets you +1 mana. For example:
+            tap three lands (including Tomb) to float 4 mana, spend 3 on Frantic Search,
+            and untap those three lands. You now have 1 floating + 4 from lands =
+            5 mana total on turn 3, giving you enough to cast Replenish and still
+            hold up interaction.
+        </li>
+        <li style="margin-bottom: 1rem;">
+            <strong>Beating Rishadan Port:</strong> If an opponent tries to tap your
+            land with Port during your upkeep, you can float the mana in response,
+            let the port trigger resolve and then cast Frantic Search using that mana.
+            The spell will untap the lands, effectively ignoring the Port activation.
+        </li>
+        <li style="margin-bottom: 1rem;">
+            <strong>Beating Tangle Wire:</strong> Similar to the Port trick, if you
+            have 3 mana sources, you can float all 3 mana in response to the Tangle
+            Wire tap trigger on your upkeep. Let the trigger resolve, tapping your
+            permanents. Then, use the 3 floating mana to cast Frantic Search, untapping
+            three of those lands.
+        </li>
+    </ul>
+
+    <h3 style="margin-top: 2.5rem;">Attunement's Built-in Protection</h3>
+    <p>
+        The ability of Attunement reads: "Return Attunement to its owner's hand:
+        Draw three cards, then discard four cards." Because returning it to your
+        hand is the <em>cost</em> to activate the ability (and not the effect), you
+        can always activate it in response to a Disenchant or Seal of Cleansing. The
+        Attunement immediately goes to your hand, dodging the removal completely,
+        and you still get your card filtering.
+    </p>
+
+    </Layout>

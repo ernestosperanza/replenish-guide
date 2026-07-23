@@ -3,9 +3,14 @@ import Layout from "@components/Layout.astro";
 import { Grid, Card } from "webcoreui/astro";
 ---
 
-<Layout title="Introduction - Replenish Guide" next={{ name: "Card Analysis", href: "/analysis" }}>
+<Layout
+    title="Introduction - Replenish Guide"
+    next={{ name: "Card Analysis", href: "/analysis" }}
+>
     <div>
-        <h1 style="margin-top: 2rem; margin-bottom: 0.25rem; font-size: 3rem; letter-spacing: -0.02em;">
+        <h1
+            style="margin-top: 2rem; margin-bottom: 0.25rem; font-size: 3rem; letter-spacing: -0.02em;"
+        >
             Replenish Guide
         </h1>
 
@@ -15,7 +20,9 @@ import { Grid, Card } from "webcoreui/astro";
             The definitive guide focused on reading, visual clarity, and speed.
             Master every line of play with our optimized interface.
         </p>
-        <figure style="margin: 0 auto; margin-bottom: 2rem; display: flex; flex-direction: column; align-items: center;">
+        <figure
+            style="margin: 0 auto; margin-bottom: 2rem; display: flex; flex-direction: column; align-items: center;"
+        >
             <img
                 src="/images/replenish.webp"
                 alt="Replenish"
@@ -27,6 +34,25 @@ import { Grid, Card } from "webcoreui/astro";
                 Replenish by Jim Nelson
             </figcaption>
         </figure>
+    </div>
+
+    <div
+        style="margin: 2rem 0; padding: 1.5rem; background-color: var(--w-color-primary-80); border-left: 4px solid var(--w-color-primary-40); border-radius: 4px;"
+    >
+        <p
+            style="margin: 0; font-size: 1.05rem; line-height: 1.5; color: var(--w-color-primary-20);"
+        >
+            <strong>Acknowledgments:</strong> This website is an expanded, interactive
+            adaptation of the original Replenish Primer written by <strong
+                >Brian Siu (Dr Siuss)</strong
+            >. Huge thanks to Brian for allowing his work to be the foundation
+            of this project. You can read his original primer at <a
+                href="https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu"
+                target="_blank"
+                style="color: var(--w-color-primary-20); text-decoration: underline;"
+                >Squee's House of Pizza</a
+            >.
+        </p>
     </div>
 
     <h2>Introduction and History</h2>
@@ -165,7 +191,14 @@ import { Grid, Card } from "webcoreui/astro";
     </Grid>
 
     <h2>Why Replenish?</h2>
-    <p style="font-size: 1.15rem; color: var(--w-color-primary-20); line-height: 1.6;">If you want to play a deck capable of explosive Turn-4 unfair combo kills, but that can simultaneously grind through long control matchups with heavy interaction and card advantage, Replenish is the deck for you.</p>
+    <p
+        style="font-size: 1.15rem; color: var(--w-color-primary-20); line-height: 1.6;"
+    >
+        If you want to play a deck capable of explosive Turn-4 unfair combo
+        kills, but that can simultaneously grind through long control matchups
+        with heavy interaction and card advantage, Replenish is the deck for
+        you.
+    </p>
     <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
         <li style="margin-bottom: 0.5rem;">
             You enjoy combo decks requiring setup and patience with explosive
@@ -185,5 +218,4 @@ import { Grid, Card } from "webcoreui/astro";
             new position.
         </li>
     </ul>
-
-    </Layout>
+</Layout>
