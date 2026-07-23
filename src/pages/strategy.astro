@@ -2,10 +2,18 @@
 import Layout from "@components/Layout.astro";
 ---
 
-<Layout title="Strategic Theory - Replenish Guide" prev={{ name: "Combos & Mechanics", href: "/combos" }} next={{ name: "Matchups", href: "/matchups" }}>
-    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">Strategic Theory</h1>
+<Layout
+    title="Strategic Theory - Replenish Guide"
+    prev={{ name: "Combos & Mechanics", href: "/combos" }}
+    next={{ name: "Matchups", href: "/matchups" }}
+>
+    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
+        Strategic Theory
+    </h1>
 
-    <figure style="margin: 0 auto; margin-bottom: 3rem; margin-top: 1rem; display: flex; flex-direction: column; align-items: center;">
+    <figure
+        style="margin: 0 auto; margin-bottom: 3rem; margin-top: 1rem; display: flex; flex-direction: column; align-items: center;"
+    >
         <img
             src="/images/theory.jpeg"
             alt="Unifying Theory"
@@ -19,59 +27,195 @@ import Layout from "@components/Layout.astro";
     </figure>
 
     <h3>The Two Angles Framework</h3>
-    <p>This deck handles one angle of attack really well. Pure aggression, pure mana denial, pure countermagic. You can deal with all of those. Where it gets hard is when a deck attacks from two angles at the same time. A fast clock plus Wasteland and Port. Aggro backed by counterspells. If they're hitting you from two directions, you need to draw the right half of your answers, and with your card filtering starting at three mana, you can't fix a bad split fast enough.</p>
-    <p>This is what should guide your mulligan decisions against the harder matchups. You need hands that have both early interaction and a path to your engines. All combo no defense doesn't work. All defense no engine doesn't work either.</p>
+    <p>
+        This deck handles one angle of attack really well. Pure aggression, pure
+        mana denial, pure countermagic. You can deal with all of those. Where it
+        gets hard is when a deck attacks from two angles at the same time. A
+        fast clock plus Wasteland and Port. Aggro backed by counterspells. If
+        they're hitting you from two directions, you need to draw the right half
+        of your answers, and with your card filtering starting at three mana,
+        you can't fix a bad split fast enough.
+    </p>
+    <p>
+        This is what should guide your mulligan decisions against the harder
+        matchups. You need hands that have both early interaction and a path to
+        your engines. All combo no defense doesn't work. All defense no engine
+        doesn't work either.
+    </p>
 
     <h3>Endpoint Play vs. Opportunistic Kills</h3>
-    <p>Against control, think about the game in terms of endpoints. Imagine both players have drawn every card in their deck. If you match up your cards against their cards, who comes out ahead? If the answer is you, then don't throw away resources for marginal value. Don't activate Attunement unless you know exactly what you're pitching. Cast Frantic Search at end of their turn, not yours.</p>
-    <p>Here's the thing: if they have eight counterspells and you have four Replenishes, four Opals, and three Decrees, your last Replenish is going to resolve. But only if you haven't wasted cards along the way.</p>
-    <p>Post-board the dynamic changes. With Defense Grid and Mage and Angel, you can find windows for faster kills. Knowing when to shift from endpoint play to opportunistic play is one of the most important skills with this deck.</p>
+    <p>
+        Against control, think about the game in terms of endpoints. Imagine
+        both players have drawn every card in their deck. If you match up your
+        cards against their cards, who comes out ahead? If the answer is you,
+        then don't throw away resources for marginal value. Don't activate
+        Attunement unless you know exactly what you're pitching. Cast Frantic
+        Search at end of their turn, not yours.
+    </p>
+    <p>
+        Here's the thing: if they have eight counterspells and you have four
+        Replenishes, four Opals, and three Decrees, your last Replenish is going
+        to resolve. But only if you haven't wasted cards along the way.
+    </p>
+    <p>
+        Post-board the dynamic changes. With Defense Grid and Mage and Angel,
+        you can find windows for faster kills. Knowing when to shift from
+        endpoint play to opportunistic play is one of the most important skills
+        with this deck.
+    </p>
 
     <h3>Attunement Discipline</h3>
-    <p>I see a lot of players just spinning Attunement hoping something good happens. That can be wrong. Before you activate, ask yourself two questions: what cards am I willing to discard, and what am I looking for? If you can't answer both, don't activate. Against control especially, every reckless activation costs you. If you narrow your hand down looking for one specific thing and they deal with that thing, you've lost everything you discarded along the way.</p>
+    <p>
+        I see a lot of players just spinning Attunement hoping something good
+        happens. That can be wrong. Before you activate, ask yourself two
+        questions: what cards am I willing to discard, and what am I looking
+        for? If you can't answer both, don't activate. Against control
+        especially, every reckless activation costs you. If you narrow your hand
+        down looking for one specific thing and they deal with that thing,
+        you've lost everything you discarded along the way.
+    </p>
 
     <h2 style="margin-top: 3rem;">Advanced Mulligan Theory</h2>
-    <p>Before the ban, the deck had eight cards that could "fix" a bad hand: four Attunement and four Parallax Tide. Now it only has four (Attunement). Because topdecks are worse on average, <strong>more aggressive mulliganing is required in the dark.</strong></p>
-    
-    <p>Assuming you have lands to cast them, the community framework for keepable hands in the blind includes:</p>
+    <p>
+        Before the ban, the deck had eight cards that could "fix" a bad hand:
+        four Attunement and four Parallax Tide. Now it only has four
+        (Attunement). Because topdecks are worse on average, <strong
+            >more aggressive mulliganing is required in the dark.</strong>
+    </p>
+
+    <p>
+        Assuming you have lands to cast them, the community framework for
+        keepable hands in the blind includes:
+    </p>
     <ul>
-        <li style="margin-bottom: 0.5rem;"><strong>The Golden Ticket:</strong> Any hand with <code>Attunement</code>.</li>
-        <li style="margin-bottom: 0.5rem;"><strong>The Natural Combo:</strong> <code>Opalescence</code> + <code>Parallax Wave</code>.</li>
-        <li style="margin-bottom: 0.5rem;"><strong>The Tutor:</strong> <code>Intuition</code> + any combo piece (Opal, Wave, Replenish).</li>
-        <li style="margin-bottom: 0.5rem;"><strong>The Dig:</strong> <code>Frantic Search</code> + <code>Replenish</code> + any combo piece (Opal, Wave, Decree).</li>
-        <li style="margin-bottom: 0.5rem;"><strong>The Control Route:</strong> Three pieces of interaction (e.g., <code>Mana Leak</code> + <code>Swords</code> + <code>Seal</code>).</li>
-        <li style="margin-bottom: 0.5rem;"><strong>The Buy-Time:</strong> <code>Parallax Wave</code> + <code>Seal of Cleansing</code>.</li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong>The Golden Ticket:</strong> Any hand with <code
+                >Attunement</code
+            >.
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong>The Natural Combo:</strong>
+            <code>Opalescence</code> + <code>Parallax Wave</code>.
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong>The Tutor:</strong>
+            <code>Intuition</code> + any combo piece (Opal, Wave, Replenish).
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong>The Dig:</strong>
+            <code>Frantic Search</code> + <code>Replenish</code> + any combo piece
+            (Opal, Wave, Decree).
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong>The Control Route:</strong> Three pieces of interaction (e.g.,
+            <code>Mana Leak</code> + <code>Swords</code> + <code>Seal</code>).
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong>The Buy-Time:</strong>
+            <code>Parallax Wave</code> + <code>Seal of Cleansing</code>.
+        </li>
     </ul>
 
-    <p><strong>The Ancient Tomb Exception:</strong> Hands that are otherwise too slow become keepable if you have an <code>Ancient Tomb</code>. For example, <code>Swords to Plowshares</code> + <code>Intuition</code> + <code>Ancient Tomb</code> is a snap keep because you have both interaction and fast manipulation.</p>
+    <p>
+        <strong>The Ancient Tomb Exception:</strong> Hands that are otherwise too
+        slow become keepable if you have an <code>Ancient Tomb</code>. For
+        example, <code>Swords to Plowshares</code> + <code>Intuition</code> + <code
+            >Ancient Tomb</code
+        > is a snap keep because you have both interaction and fast manipulation.
+    </p>
 
-    <p><strong>What to Mulligan:</strong> A hand like four lands, <code>Opalescence</code>, <code>Decree of Silence</code>, and <code>Seal of Cleansing</code> is a trap. You are relying entirely on the top of your deck for a fixer (which you now only have four of). It is highly likely the game will run away from you before you draw out of it.</p>
+    <p>
+        <strong>What to Mulligan:</strong> A hand like four lands, <code
+            >Opalescence</code
+        >, <code>Decree of Silence</code>, and <code>Seal of Cleansing</code> is a
+        trap. You are relying entirely on the top of your deck for a fixer (which
+        you now only have four of). It is highly likely the game will run away from
+        you before you draw out of it.
+    </p>
 
-    <div style="margin-top: 3rem; background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: 2rem;">
-        <h3 style="margin-top: 0; color: var(--w-color-primary-10);">Case Study: The Great Mulligan Debate</h3>
-        <p style="font-size: 0.95rem;"><em>This is a real community debate over a specific hypothetical opening hand that highlights how top players evaluate risk vs. reward in the post-ban format.</em></p>
-        
-        <p><strong>The Scenario:</strong> Game 1, on the play, in the dark.<br/>
-        <strong>The Hand:</strong> 4 Lands (including Ancient Tomb), <code>Seal of Cleansing</code>, <code>Decree of Silence</code>, <code>Frantic Search</code>.</p>
-        
-        <p><em>Do you keep or mulligan? The community was split right down the middle.</em></p>
+    <div
+        style="margin-top: 3rem; background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: 2rem;"
+    >
+        <h3 style="margin-top: 0; color: var(--w-color-primary-10);">
+            Case Study: The Great Mulligan Debate
+        </h3>
+        <p style="font-size: 0.95rem;">
+            <em
+                >This is a real community debate over a specific hypothetical
+                opening hand that highlights how top players evaluate risk vs.
+                reward in the post-ban format.</em>
+        </p>
 
-        <h4 style="margin-top: 1.5rem; color: var(--w-color-success);">Argument 1: The "Keep" Camp</h4>
+        <p>
+            <strong>The Scenario:</strong> Game 1, on the play, in the dark.<br
+            />
+            <strong>The Hand:</strong> 4 Lands (including Ancient Tomb), <code
+                >Seal of Cleansing</code
+            >, <code>Decree of Silence</code>, <code>Frantic Search</code>.
+        </p>
+
+        <p>
+            <em
+                >Do you keep or mulligan? The community was split right down the
+                middle.</em>
+        </p>
+
+        <h4 style="margin-top: 1.5rem; color: var(--w-color-success);">
+            Argument 1: The "Keep" Camp
+        </h4>
         <ul style="padding-left: 1.25rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Hitting Land Drops:</strong> Historically, Replenish loses games when it stumbles on mana. This hand guarantees you hit your first 4 land drops.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>The Frantic Math:</strong> You have 15 "outs" left in the deck that turn this into a winning hand (Replenish, Wave, Attunement, Intuition). Between your natural draw steps and Frantic Search, you see 4 new cards by turn 3. Statistically, you have roughly a 75% chance to hit at least one of those outs.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Flexibility:</strong> The hand has game against control (Seal + Decree + Lands) and discard decks (redundant lands). Its only glaring weakness is a fast aggro start.</li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Hitting Land Drops:</strong> Historically, Replenish loses
+                games when it stumbles on mana. This hand guarantees you hit your
+                first 4 land drops.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>The Frantic Math:</strong> You have 15 "outs" left in the
+                deck that turn this into a winning hand (Replenish, Wave, Attunement,
+                Intuition). Between your natural draw steps and Frantic Search, you
+                see 4 new cards by turn 3. Statistically, you have roughly a 75% chance
+                to hit at least one of those outs.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Flexibility:</strong> The hand has game against control (Seal
+                + Decree + Lands) and discard decks (redundant lands). Its only glaring
+                weakness is a fast aggro start.
+            </li>
         </ul>
 
-        <h4 style="margin-top: 1.5rem; color: var(--w-color-danger);">Argument 2: The "Mulligan" Camp</h4>
+        <h4 style="margin-top: 1.5rem; color: var(--w-color-danger);">
+            Argument 2: The "Mulligan" Camp
+        </h4>
         <ul style="padding-left: 1.25rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Frantic Search is not an engine:</strong> Relying on it as your only path to victory is dangerous because it is card disadvantage. If you whiff, you are completely out of gas.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>The 50/50 Coinflip:</strong> Looking at just the immediate Frantic Search draw, you have roughly a 50% chance to brick completely. A fresh hand of 7 cards has better overall odds of providing a coherent gameplan.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Seal is not a turn-buyer:</strong> While Seal is a fantastic maindeck card, unlike Swords to Plowshares or Mana Leak, it does not buy you time against early creature pressure. Keeping a hand with Seal as your only interaction is very risky in the dark.</li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Frantic Search is not an engine:</strong> Relying on it as
+                your only path to victory is dangerous because it is card disadvantage.
+                If you whiff, you are completely out of gas.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>The 50/50 Coinflip:</strong> Looking at just the immediate
+                Frantic Search draw, you have roughly a 50% chance to brick completely.
+                A fresh hand of 7 cards has better overall odds of providing a coherent
+                gameplan.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Seal is not a turn-buyer:</strong> While Seal is a fantastic
+                maindeck card, unlike Swords to Plowshares or Mana Leak, it does not
+                buy you time against early creature pressure. Keeping a hand with
+                Seal as your only interaction is very risky in the dark.
+            </li>
         </ul>
 
-        <h4 style="margin-top: 1.5rem; color: var(--w-color-primary-20);">The Verdict</h4>
-        <p style="margin-bottom: 0;">There is no absolute "right" answer, but this debate reveals a core tension: Risk-averse players prefer to guarantee their land drops and trust the math of their cantrips, while aggressive mulliganers believe that with the weaker topdecks post-ban, you can no longer afford to keep hands that don't proactively dictate the pace of the game.</p>
+        <h4 style="margin-top: 1.5rem; color: var(--w-color-primary-20);">
+            The Verdict
+        </h4>
+        <p style="margin-bottom: 0;">
+            There is no absolute "right" answer, but this debate reveals a core
+            tension: Risk-averse players prefer to guarantee their land drops
+            and trust the math of their cantrips, while aggressive mulliganers
+            believe that with the weaker topdecks post-ban, you can no longer
+            afford to keep hands that don't proactively dictate the pace of the
+            game.
+        </p>
     </div>
-
-    </Layout>
+</Layout>
