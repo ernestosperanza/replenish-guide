@@ -1,5 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
+import FeaturedImage from "@components/FeaturedImage.astro";
 import { Badge, Card, Grid } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
 import DeckSection from "@components/DeckSection.astro";
@@ -13,6 +14,13 @@ import DeckSection from "@components/DeckSection.astro";
     <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
         History of the Deck
     </h1>
+
+    <FeaturedImage 
+        src="/images/paralax_wave.jpeg"
+        alt="Parallax Wave"
+        caption="Parallax Wave by Greg Staples"
+        isCard={true}
+    />
 
     <p
         style="font-size: 1.1rem; color: var(--w-color-primary-20); margin-bottom: 2rem;"

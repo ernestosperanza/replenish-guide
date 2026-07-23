@@ -1,0 +1,33 @@
+---
+export interface Props {
+    src: string;
+    alt: string;
+    caption?: string;
+    isCard?: boolean;
+}
+
+const { src, alt, caption, isCard = false } = Astro.props;
+
+// For magic cards, use specific rounded corners.
+// All images will share the same width to maintain consistent sizing.
+const maxWidth = "400px";
+const maxHeight = "auto";
+const borderRadius = isCard ? "4.75% / 3.5%" : "var(--w-lg-radius)";
+---
+
+<figure
+    style="margin: 3rem auto; display: flex; flex-direction: column; align-items: center; text-align: center;"
+>
+    <img
+        src={src}
+        alt={alt}
+        style={`max-width: ${maxWidth}; width: 100%; height: auto; max-height: ${maxHeight}; border-radius: ${borderRadius}; border: 1px solid var(--w-color-primary-50); display: block;`}
+    />
+    {
+        caption && (
+            <figcaption style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--w-color-primary-40); font-style: italic;">
+                {caption}
+            </figcaption>
+        )
+    }
+</figure>
