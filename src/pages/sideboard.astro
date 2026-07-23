@@ -1,6 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
-
+import FeaturedImage from "@components/FeaturedImage.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 ---
 
@@ -12,6 +12,54 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
         Sideboard Analysis
     </h1>
+
+    <FeaturedImage
+        src="/images/banners/decree.jpeg"
+        alt="Decree of Silence"
+        caption="Decree of Silence"
+        isCard={true}
+    />
+
+    <h2
+        style="font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;"
+    >
+        The Sculpting Method
+    </h2>
+    <p>
+        I use this process before every tournament to finalize my 75. Start with
+        a pool of 85-90 cards that you think could work in the deck, then carve
+        away what doesn't fit the expected field.
+    </p>
+    <ol style="padding-left: 1.25rem;">
+        <li>
+            <strong>Start Broad.</strong> 85–90 cards including variants and bullets.
+        </li>
+        <li>
+            <strong>Assess the Meta.</strong> Goblins heavy? Wraths. Blue heavy? Grids
+            and creatures.
+        </li>
+        <li>
+            <strong>Prioritize Slots.</strong> Rank flex cards by standalone value
+            and field impact.
+        </li>
+        <li>
+            <strong>Cut Strategically.</strong> Remove cards that don’t serve at least
+            two matchups.
+        </li>
+        <li>
+            <strong>Finalize Sideboard.</strong> Transformative packages only if they
+            address multiple matchups.
+        </li>
+        <li>
+            <strong>Main vs. Side.</strong> Placement based on expected frequency.
+        </li>
+    </ol>
+    <p>
+        <strong>The Creature Sideboard Package:</strong> Angel and Mage let you transform
+        into a midrange deck after sideboarding. Your opponents face a bad choice:
+        keep their enchantment hate and risk losing to creature beatdown, or cut it
+        and risk losing to the combo. Either way their draws get worse.
+    </p>
 
     <h2
         style="margin-top: 2rem; font-size: 2rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;"
@@ -283,45 +331,4 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             doesn't lock you out if you know it's coming.
         </p>
     </CardAnalysis>
-
-    <h2
-        style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;"
-    >
-        The Sculpting Method
-    </h2>
-    <p>
-        I use this process before every tournament to finalize my 75. Start with
-        a pool of 85-90 cards that you think could work in the deck, then carve
-        away what doesn't fit the expected field.
-    </p>
-    <ol style="padding-left: 1.25rem;">
-        <li>
-            <strong>Start Broad.</strong> 85–90 cards including variants and bullets.
-        </li>
-        <li>
-            <strong>Assess the Meta.</strong> Goblins heavy? Wraths. Blue heavy? Grids
-            and creatures.
-        </li>
-        <li>
-            <strong>Prioritize Slots.</strong> Rank flex cards by standalone value
-            and field impact.
-        </li>
-        <li>
-            <strong>Cut Strategically.</strong> Remove cards that don’t serve at least
-            two matchups.
-        </li>
-        <li>
-            <strong>Finalize Sideboard.</strong> Transformative packages only if they
-            address multiple matchups.
-        </li>
-        <li>
-            <strong>Main vs. Side.</strong> Placement based on expected frequency.
-        </li>
-    </ol>
-    <p>
-        <strong>The Creature Sideboard Package:</strong> Angel and Mage let you transform
-        into a midrange deck after sideboarding. Your opponents face a bad choice:
-        keep their enchantment hate and risk losing to creature beatdown, or cut it
-        and risk losing to the combo. Either way their draws get worse.
-    </p>
 </Layout>

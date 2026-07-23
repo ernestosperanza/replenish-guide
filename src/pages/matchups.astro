@@ -1,5 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
+import DecklistTooltip from "@components/DecklistTooltip.astro";
 ---
 
 <Layout
@@ -26,63 +27,63 @@ import Layout from "@components/Layout.astro";
             <tbody>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>Replenish (Mirror)</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 Meddling Mage</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>Terrageddon</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+2 Exalted Angel<br/>+1 Wrath of God<br/>+1 Seal of Cleansing</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Meddling Mage</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+2 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a><br/>+1 <a href="#" class="card-hover" data-card-name="Wrath of God">Wrath of God</a><br/>+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>Elves</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+1 Seal of Cleansing<br/>+1 Wrath of God<br/>+1 Nevinyrral's Disk</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 Meddling Mage</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>+1 <a href="#" class="card-hover" data-card-name="Wrath of God">Wrath of God</a><br/>+1 <a href="#" class="card-hover" data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>Enchantress</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance<br/>+1 Seal of Cleansing<br/>+1 Nevinyrral's Disk</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Swords to Plowshares<br/>-1 Meddling Mage</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a><br/>+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>+1 <a href="#" class="card-hover" data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a><br/>-1 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>Moneyball Black</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+2 Exalted Angel</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-2 Meddling Mage</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+2 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-2 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>HFEB</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-1 Frantic Search<br/>-2 Decree of Silence</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-1 <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a><br/>-2 <a href="#" class="card-hover" data-card-name="Decree of Silence">Decree of Silence</a></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>Stiflenought</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance<br/>+3 Exalted Angel<br/>+1 Seal of Cleansing</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-2 Frantic Search<br/>-3 Attunement<br/>-2 Intuition</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a><br/>+3 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a><br/>+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-2 <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a><br/>-3 <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a><br/>-2 <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>Stasis</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance<br/>+1 Seal of Cleansing</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Swords to Plowshares</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a><br/>+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>PitRack</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+1 Seal of Cleansing<br/>+2 Tsabo's Web<br/>+1 Nevinyrral's Disk<br/>+2 Exalted Angel</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Meddling Mage<br/>-2 Decree of Silence</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>+2 <a href="#" class="card-hover" data-card-name="Tsabo's Web">Tsabo's Web</a><br/>+1 <a href="#" class="card-hover" data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a><br/>+2 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a><br/>-2 <a href="#" class="card-hover" data-card-name="Decree of Silence">Decree of Silence</a></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>Landstill</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Tsabo's Web<br/>+3 Abeyance<br/>+1 Seal of Cleansing<br/>+2 Exalted Angel</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Meddling Mage<br/>-3 Swords to Plowshares<br/>-1 Frantic Search<br/>-1 Intuition</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Tsabo's Web">Tsabo's Web</a><br/>+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a><br/>+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>+2 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a><br/>-3 <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a><br/>-1 <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a><br/>-1 <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
                     <td style="padding: 1rem;"><strong>Psychatog</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance<br/>+3 Exalted Angel</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 Seal of Cleansing<br/>-2 Frantic Search<br/>-2 Intuition<br/>-1 Attunement</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a><br/>+3 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>-2 <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a><br/>-2 <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a><br/>-1 <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a></td>
                 </tr>
                 <tr>
                     <td style="padding: 1rem;"><strong>Goblins</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Hydroblast / BEB<br/>+1 Wrath of God<br/>+1 Nevinyrral's Disk<br/>+3 Exalted Angel</td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Meddling Mage<br/>-3 Seal of Cleansing<br/>-1 Intuition</td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Hydroblast">Hydroblast</a> / <a href="#" class="card-hover" data-card-name="Blue Elemental Blast">BEB</a><br/>+1 <a href="#" class="card-hover" data-card-name="Wrath of God">Wrath of God</a><br/>+1 <a href="#" class="card-hover" data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a><br/>+3 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a></td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a><br/>-3 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>-1 <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a></td>
                 </tr>
             </tbody>
         </table>
@@ -645,4 +646,6 @@ import Layout from "@components/Layout.astro";
         Attacks life and mana simultaneously. Prioritize basics and early
         Swords.
     </p>
+
+    <DecklistTooltip />
 </Layout>
