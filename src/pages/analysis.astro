@@ -1,5 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
+import PageHeader from "@components/PageHeader.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 ---
 
@@ -8,10 +9,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     prev={{ name: "History", href: "/history" }}
     next={{ name: "Sideboard", href: "/sideboard" }}
 >
-    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
-        Maindeck Analysis
-    </h1>
-
+    <PageHeader title="Maindeck Analysis" />
     <h2 style="margin-top: 3rem; margin-bottom: 2rem;">The Core</h2>
 
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">

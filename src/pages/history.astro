@@ -1,6 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
-import FeaturedImage from "@components/FeaturedImage.astro";
+import PageHeader from "@components/PageHeader.astro";
 import { Badge, Card, Grid } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
 import DeckSection from "@components/DeckSection.astro";
@@ -11,26 +11,14 @@ import DeckSection from "@components/DeckSection.astro";
     prev={{ name: "Introduction", href: "/" }}
     next={{ name: "Maindeck", href: "/analysis" }}
 >
-    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
-        History of the Deck
-    </h1>
-
-    <p
-        style="font-size: 1.1rem; color: var(--w-color-primary-20); margin-bottom: 2rem;"
-    >
-        The story of Replenish spans over two decades. From its dominance in
-        Type 2 (Standard) at the turn of the millennium, to its rebirth in
-        Premodern fueled by rules changes, and finally its resilience in the
-        face of bans. Here is a look at the archetypes' defining milestones.
-    </p>
-
-    <FeaturedImage
-        src="/images/banners/parallax_wave.jpeg"
-        alt="Parallax Wave"
-        caption="Parallax Wave by Greg Staples"
+    <PageHeader 
+        title="History of the Deck"
+        description="The story of Replenish spans over two decades. From its dominance in Type 2 (Standard) at the turn of the millennium, to its rebirth in Premodern fueled by rules changes, and finally its resilience in the face of bans. Here is a look at the archetypes' defining milestones."
+        imageSrc="/images/banners/parallax_wave.jpeg"
+        imageAlt="Parallax Wave"
+        imageCaption="Parallax Wave by Greg Staples"
         isCard={true}
     />
-
     <div style="margin-bottom: 3rem;">
         <h2>1. The Standard Origins (2000)</h2>
         <p>

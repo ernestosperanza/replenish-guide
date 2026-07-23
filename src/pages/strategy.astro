@@ -1,6 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
-import FeaturedImage from "@components/FeaturedImage.astro";
+import PageHeader from "@components/PageHeader.astro";
 ---
 
 <Layout
@@ -8,14 +8,11 @@ import FeaturedImage from "@components/FeaturedImage.astro";
     prev={{ name: "Intuition Guide", href: "/intuition" }}
     next={{ name: "Matchups", href: "/matchups" }}
 >
-    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
-        Strategic Theory
-    </h1>
-
-    <FeaturedImage
-        src="/images/banners/theory.jpeg"
-        alt="Unifying Theory"
-        caption="Unifying Theory by Ron Spears"
+    <PageHeader 
+        title="Strategic Theory"
+        imageSrc="/images/banners/theory.jpeg"
+        imageAlt="Unifying Theory"
+        imageCaption="Unifying Theory by Ron Spears"
         isCard={false}
     />
 

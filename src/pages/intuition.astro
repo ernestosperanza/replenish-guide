@@ -1,6 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
-import FeaturedImage from "@components/FeaturedImage.astro";
+import PageHeader from "@components/PageHeader.astro";
 ---
 
 <Layout
@@ -8,26 +8,14 @@ import FeaturedImage from "@components/FeaturedImage.astro";
     prev={{ name: "Mechanics", href: "/mechanics" }}
     next={{ name: "Strategic Theory", href: "/strategy" }}
 >
-    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
-        The Intuition Guide
-    </h1>
-    <FeaturedImage
-        src="/images/banners/intuition.jpeg"
-        alt="Intuition"
-        caption="Intuition by April Lee"
+    <PageHeader 
+        title="The Intuition Guide"
+        description="<strong>A few tips:</strong> Intuition is a skill-intensive card, and it might take some time to learn all the possible lines that the card enables, as it plays multiple critical roles throughout a game. A fundamental rule of Intuition is the tradeoff between immediacy and future availability: when you tutor for a non-combo piece (like removal or a sideboard card), you are effectively removing three copies of that card from your deck to guarantee access to one. Keep in mind also when you are building your deck that any card you intend to reliably fetch with Intuition requires you to run at least 3 copies in your 75."
+        imageSrc="/images/banners/intuition.jpeg"
+        imageAlt="Intuition"
+        imageCaption="Intuition by April Lee"
         isCard={true}
     />
-    <p>
-        <strong>A few tips:</strong> Intuition is a skill-intensive card, and it might
-        take some time to learn all the possible lines that the card enables, as it
-        plays multiple critical roles throughout a game. A fundamental rule of Intuition
-        is the tradeoff between immediacy and future availability: when you tutor
-        for a non-combo piece (like removal or a sideboard card), you are effectively
-        removing three copies of that card from your deck to guarantee access to one.
-        Keep in mind also when you are building your deck that any card you intend
-        to reliably fetch with Intuition requires you to run at least 3 copies in
-        your 75.
-    </p>
     <p>
         Timing is everything. Because Intuition is an instant, you almost always
         want to cast it on your opponent's end step. This lets you untap with

@@ -1,6 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
-import FeaturedImage from "@components/FeaturedImage.astro";
+import PageHeader from "@components/PageHeader.astro";
 import { Grid, Card, Badge } from "webcoreui/astro";
 import DeckSection from "@components/DeckSection.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
@@ -11,23 +11,14 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     prev={{ name: "Sideboard", href: "/sideboard" }}
     next={{ name: "Mechanics", href: "/mechanics" }}
 >
-    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
-        Lists
-    </h1>
-
-    <FeaturedImage
-        src="/images/banners/attunement.jpeg"
-        alt="Attunement"
-        caption="Attunement"
+    <PageHeader 
+        title="Lists"
+        description="Below are four different configurations of Parallax Replenish, ranging from stock modern builds to classic lists and experimental control variants."
+        imageSrc="/images/banners/attunement.jpeg"
+        imageAlt="Attunement"
+        imageCaption="Attunement"
         isCard={true}
     />
-    <p
-        style="font-size: 1.15rem; color: var(--w-color-primary-20); max-width: 650px; line-height: 1.6;"
-    >
-        Below are four different configurations of Parallax Replenish, ranging
-        from stock modern builds to classic lists and experimental control
-        variants.
-    </p>
 
     <h2>Key Differences</h2>
     <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">

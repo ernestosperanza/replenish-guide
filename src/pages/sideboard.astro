@@ -1,6 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
-import FeaturedImage from "@components/FeaturedImage.astro";
+import PageHeader from "@components/PageHeader.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 ---
 
@@ -9,14 +9,11 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     prev={{ name: "Maindeck", href: "/analysis" }}
     next={{ name: "Lists", href: "/deck" }}
 >
-    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
-        Sideboard Analysis
-    </h1>
-
-    <FeaturedImage
-        src="/images/banners/decree.jpeg"
-        alt="Decree of Silence"
-        caption="Decree of Silence"
+    <PageHeader 
+        title="Sideboard Analysis"
+        imageSrc="/images/banners/decree.jpeg"
+        imageAlt="Decree of Silence"
+        imageCaption="Decree of Silence"
         isCard={true}
     />
 

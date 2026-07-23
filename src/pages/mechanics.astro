@@ -1,6 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
-import FeaturedImage from "@components/FeaturedImage.astro";
+import PageHeader from "@components/PageHeader.astro";
 ---
 
 <Layout
@@ -8,14 +8,11 @@ import FeaturedImage from "@components/FeaturedImage.astro";
     prev={{ name: "Lists", href: "/deck" }}
     next={{ name: "Intuition Guide", href: "/intuition" }}
 >
-    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
-        Mechanics
-    </h1>
-
-    <FeaturedImage
-        src="/images/banners/opalescence.jpeg"
-        alt="Opalescence"
-        caption="Opalescence"
+    <PageHeader 
+        title="Mechanics"
+        imageSrc="/images/banners/opalescence.jpeg"
+        imageAlt="Opalescence"
+        imageCaption="Opalescence"
         isCard={true}
     />
 

@@ -1,6 +1,6 @@
 ---
 import Layout from "@components/Layout.astro";
-import FeaturedImage from "@components/FeaturedImage.astro";
+import PageHeader from "@components/PageHeader.astro";
 import { Grid, Card } from "webcoreui/astro";
 ---
 
@@ -8,38 +8,14 @@ import { Grid, Card } from "webcoreui/astro";
     title="Introduction - Replenish Guide"
     next={{ name: "History", href: "/history" }}
 >
-    <div>
-        <h1
-            style="margin-top: 2rem; margin-bottom: 0.25rem; font-size: 3rem; letter-spacing: -0.02em;"
-        >
-            Replenish Guide
-        </h1>
-
-        <p
-            style="font-size: 1.25rem; color: var(--w-color-primary-20); margin-top: 1rem; line-height: 1.6;"
-        >
-            <strong>DON'T PANIC.</strong><br />
-            Welcome, weary traveler. What you are looking at is the mostly harmless,
-            yet wholly definitive guide to playing the Replenish deck in the Premodern
-            format. This compendium is an expanded, interactive adaptation of the
-            <a
-                href="https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu"
-                target="_blank"
-                style="color: var(--w-color-primary-20); text-decoration: underline;"
-                >excellent primer</a
-            > originally penned by <strong>Brian Siu (Dr Siuss)</strong>. It has
-            been redesigned and upgraded to serve as your ultimate resource—so
-            grab your towel, ensure your tray table is securely stowed, and
-            let's cheat some enchantments into play.
-        </p>
-
-        <FeaturedImage
-            src="/images/banners/replenish.webp"
-            alt="Replenish"
-            caption="Replenish by Jim Nelson"
-            isCard={false}
-        />
-    </div>
+    <PageHeader 
+        title="Replenish Guide"
+        description="<strong>DON'T PANIC.</strong><br />Welcome, weary traveler. What you are looking at is the mostly harmless, yet wholly definitive guide to playing the Replenish deck in the Premodern format. This compendium is an expanded, interactive adaptation of the <a href='https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu' target='_blank' style='color: var(--w-color-primary-20); text-decoration: underline;'>excellent primer</a> originally penned by <strong>Brian Siu (Dr Siuss)</strong>. It has been redesigned and upgraded to serve as your ultimate resource—so grab your towel, ensure your tray table is securely stowed, and let's cheat some enchantments into play."
+        imageSrc="/images/banners/replenish.webp"
+        imageAlt="Replenish"
+        imageCaption="Replenish by Jim Nelson"
+        isCard={false}
+    />
 
     <h2>What is Replenish?</h2>
     <p>

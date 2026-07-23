@@ -1,0 +1,53 @@
+---
+import FeaturedImage from "./FeaturedImage.astro";
+
+export interface Props {
+    title: string;
+    description?: string;
+    imageSrc?: string;
+    imageAlt?: string;
+    imageCaption?: string;
+    isCard?: boolean;
+}
+
+const {
+    title,
+    description,
+    imageSrc,
+    imageAlt,
+    imageCaption,
+    isCard = false,
+} = Astro.props;
+---
+
+<header style="margin-bottom: 3rem;">
+    <h1
+        style="margin-top: 2rem; border-bottom: 1px solid var(--w-color-primary-50); font-size: 3rem; letter-spacing: -0.02em; margin-bottom: 1rem;"
+    >
+        {title}
+    </h1>
+
+    {
+        description && (
+            <p
+                style="font-size: 1.15rem; color: var(--w-color-primary-20); margin-bottom: 2rem; line-height: 1.6; max-width: 800px;"
+                set:html={description}
+            />
+        )
+    }
+
+    <hr
+        style="border: 0; height: 1px; background: var(--w-color-primary-80); margin-bottom: 2rem;"
+    />
+
+    {
+        imageSrc && (
+            <FeaturedImage
+                src={imageSrc}
+                alt={imageAlt || ""}
+                caption={imageCaption}
+                isCard={isCard}
+            />
+        )
+    }
+</header>
