@@ -1,6 +1,8 @@
 ---
 import Layout from "@components/Layout.astro";
 import { Grid, Card, Badge } from "webcoreui/astro";
+import DeckSection from "@components/DeckSection.astro";
+import DecklistTooltip from "@components/DecklistTooltip.astro";
 ---
 
 <Layout title="Deck Building - Replenish Guide" prev={{ name: "Sideboard Guide", href: "/sideboard" }} next={{ name: "Combos & Mechanics", href: "/combos" }}>
@@ -10,111 +12,99 @@ import { Grid, Card, Badge } from "webcoreui/astro";
     <Grid column={2} gap="lg" style="margin-top: 2rem; margin-bottom: 3rem;">
         <Card>
             <h2 style="margin-top: 0; font-size: 1.5rem;">MTGO League 5-0</h2>
-            <div style="margin-bottom: 1rem;"><Badge theme="info" small={true}>March 19, 2026</Badge></div>
+            <div style="margin-bottom: 1.5rem;"><Badge theme="info" small={true}>March 19, 2026</Badge></div>
             
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Creatures</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>3 Meddling Mage</li>
-            </ul>
+            <DeckSection title="Creatures" items={[
+                { count: 3, name: "Meddling Mage" }
+            ]} />
 
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Combo / Engine</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>4 Replenish</li>
-                <li>4 Attunement</li>
-                <li>3 Decree of Silence</li>
-                <li>4 Opalescence</li>
-                <li>4 Parallax Wave</li>
-            </ul>
+            <DeckSection title="Combo / Engine" items={[
+                { count: 4, name: "Replenish" },
+                { count: 4, name: "Attunement" },
+                { count: 3, name: "Decree of Silence" },
+                { count: 4, name: "Opalescence" },
+                { count: 4, name: "Parallax Wave" }
+            ]} />
 
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Card Selection</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>3 Frantic Search</li>
-                <li>3 Intuition</li>
-            </ul>
+            <DeckSection title="Card Selection" items={[
+                { count: 3, name: "Frantic Search" },
+                { count: 3, name: "Intuition" }
+            ]} />
 
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Interaction</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>3 Swords to Plowshares</li>
-                <li>3 Seal of Cleansing</li>
-                <li>1 Tsabo’s Web</li>
-            </ul>
+            <DeckSection title="Interaction" items={[
+                { count: 3, name: "Swords to Plowshares" },
+                { count: 3, name: "Seal of Cleansing" },
+                { count: 1, name: "Tsabo's Web" }
+            ]} />
 
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Lands (25)</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>5 Island</li>
-                <li>5 Plains</li>
-                <li>4 Adarkar Wastes</li>
-                <li>4 Ancient Tomb</li>
-                <li>4 Flooded Strand</li>
-                <li>3 Skycloud Expanse</li>
-            </ul>
+            <DeckSection title="Lands (25)" items={[
+                { count: 5, name: "Island" },
+                { count: 5, name: "Plains" },
+                { count: 4, name: "Adarkar Wastes" },
+                { count: 4, name: "Ancient Tomb" },
+                { count: 4, name: "Flooded Strand" },
+                { count: 3, name: "Skycloud Expanse" }
+            ]} />
 
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Sideboard (15)</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>2 Abeyance</li>
-                <li>1 Arcane Denial</li>
-                <li>3 Defense Grid</li>
-                <li>3 Exalted Angel</li>
-                <li>2 Hydroblast</li>
-                <li>1 Meddling Mage</li>
-                <li>1 Seal of Cleansing</li>
-                <li>1 Swords to Plowshares</li>
-                <li>1 Tsabo’s Web</li>
-            </ul>
+            <DeckSection title="Sideboard (15)" items={[
+                { count: 2, name: "Abeyance" },
+                { count: 1, name: "Arcane Denial" },
+                { count: 3, name: "Defense Grid" },
+                { count: 3, name: "Exalted Angel" },
+                { count: 2, name: "Hydroblast" },
+                { count: 1, name: "Meddling Mage" },
+                { count: 1, name: "Seal of Cleansing" },
+                { count: 1, name: "Swords to Plowshares" },
+                { count: 1, name: "Tsabo's Web" }
+            ]} />
         </Card>
 
         <Card>
             <h2 style="margin-top: 0; font-size: 1.5rem;">Paper: 2nd Place</h2>
-            <div style="margin-bottom: 1rem;"><Badge theme="success" small={true}>NE Winter Regional (131 Players), Feb 21 2026</Badge></div>
+            <div style="margin-bottom: 1.5rem;"><Badge theme="success" small={true}>NE Winter Regional (131 Players), Feb 21 2026</Badge></div>
             
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Creatures</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>3 Meddling Mage</li>
-            </ul>
+            <DeckSection title="Creatures" items={[
+                { count: 3, name: "Meddling Mage" }
+            ]} />
 
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Combo / Engine</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>4 Replenish</li>
-                <li>4 Attunement</li>
-                <li>2 Decree of Silence</li>
-                <li>4 Opalescence</li>
-                <li>4 Parallax Wave</li>
-            </ul>
+            <DeckSection title="Combo / Engine" items={[
+                { count: 4, name: "Replenish" },
+                { count: 4, name: "Attunement" },
+                { count: 2, name: "Decree of Silence" },
+                { count: 4, name: "Opalescence" },
+                { count: 4, name: "Parallax Wave" }
+            ]} />
 
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Card Selection</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>3 Frantic Search</li>
-                <li>3 Intuition</li>
-            </ul>
+            <DeckSection title="Card Selection" items={[
+                { count: 3, name: "Frantic Search" },
+                { count: 3, name: "Intuition" }
+            ]} />
 
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Interaction</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>3 Swords to Plowshares</li>
-                <li>2 Seal of Cleansing</li>
-                <li>3 Tsabo’s Web</li>
-            </ul>
+            <DeckSection title="Interaction" items={[
+                { count: 3, name: "Swords to Plowshares" },
+                { count: 2, name: "Seal of Cleansing" },
+                { count: 3, name: "Tsabo's Web" }
+            ]} />
 
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Lands (25)</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>5 Island</li>
-                <li>5 Plains</li>
-                <li>4 Adarkar Wastes</li>
-                <li>4 Ancient Tomb</li>
-                <li>4 Flooded Strand</li>
-                <li>3 Skycloud Expanse</li>
-            </ul>
+            <DeckSection title="Lands (25)" items={[
+                { count: 5, name: "Island" },
+                { count: 5, name: "Plains" },
+                { count: 4, name: "Adarkar Wastes" },
+                { count: 4, name: "Ancient Tomb" },
+                { count: 4, name: "Flooded Strand" },
+                { count: 3, name: "Skycloud Expanse" }
+            ]} />
 
-            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Sideboard (15)</h4>
-            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
-                <li>2 Abeyance</li>
-                <li>2 Arcane Denial</li>
-                <li>3 Defense Grid</li>
-                <li>3 Exalted Angel</li>
-                <li>2 Hydroblast</li>
-                <li>1 Meddling Mage</li>
-                <li>1 Seal of Cleansing</li>
-                <li>1 Swords to Plowshares</li>
-            </ul>
+            <DeckSection title="Sideboard (15)" items={[
+                { count: 2, name: "Abeyance" },
+                { count: 2, name: "Arcane Denial" },
+                { count: 3, name: "Defense Grid" },
+                { count: 3, name: "Exalted Angel" },
+                { count: 2, name: "Hydroblast" },
+                { count: 1, name: "Meddling Mage" },
+                { count: 1, name: "Seal of Cleansing" },
+                { count: 1, name: "Swords to Plowshares" }
+            ]} />
         </Card>
     </Grid>
 
@@ -125,4 +115,37 @@ import { Grid, Card, Badge } from "webcoreui/astro";
         <li style="margin-bottom: 0.5rem;"><strong>Tsabo’s Web (3 vs. 2):</strong> The paper list ran three because my local region has a lot of Terrageddon and Port. Online, Terrageddon has been trending down, so the count is closer to two in the 75.</li>
     </ul>
 
-    </Layout>
+    <h2 style="margin-top: 4rem;">The Creatureless Control Shell (Experimental)</h2>
+    <p style="font-size: 1.15rem; color: var(--w-color-primary-20); max-width: 650px; line-height: 1.6;">A modern reimagining of the deck by Marine Biomancer, dropping the creature pivot entirely (0 creatures in the 75) to lean fully into a traditional control-combo role.</p>
+
+    <Grid column={1} style="margin-top: 2rem; margin-bottom: 3rem;">
+        <Card>
+            <h2 style="margin-top: 0; font-size: 1.5rem;">Creatureless Replenish</h2>
+            <div style="margin-bottom: 1rem;"><Badge theme="warning" small={true}>Experimental (July 2026)</Badge></div>
+            
+            <p style="margin-top: 1rem; margin-bottom: 1rem;"><strong>Key Adjustments:</strong></p>
+            <ul style="padding-left: 1.25rem; margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;"><strong>0 Seals Maindeck:</strong> Without Tide to combo with, Seal is weaker Game 1. They are moved to the sideboard to make room for more impactful maindeck cards.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>3rd Decree of Silence:</strong> Required in the main to provide extra "meat" and closing power when you don't have Angels or Mages.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>The Disenchant Split:</strong> In the sideboard, splitting 4 Seals into 2 Seal of Cleansing and 2 Disenchant. The instant speed of Disenchant is incredibly valuable, specifically for blowing out an opponent's Aura of Silence.</li>
+            </ul>
+
+            <DeckSection title="Example Decklist Framework" items={[
+                { count: 4, name: "Replenish" },
+                { count: 4, name: "Attunement" },
+                { count: 3, name: "Decree of Silence" },
+                { count: 4, name: "Opalescence" },
+                { count: 4, name: "Parallax Wave" },
+                { count: 3, name: "Frantic Search" },
+                { count: 3, name: "Intuition" },
+                { count: 4, name: "Swords to Plowshares" },
+                { count: 3, name: "Tsabo's Web" },
+                { count: 3, name: "Mana Leak" },
+                { count: 25, name: "Lands" }
+            ]} />
+        </Card>
+    </Grid>
+
+    <DecklistTooltip />
+
+</Layout>

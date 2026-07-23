@@ -1,0 +1,14 @@
+---
+export interface Props {
+    title: string;
+    image: string;
+}
+const { title, image } = Astro.props;
+---
+<div style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem; align-items: flex-start; flex-wrap: wrap;">
+    <img src={`/images/cards/${image}`} alt={title} style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);" />
+    <div style="flex: 1; min-width: 300px;">
+        <h3 style="margin-top: 0; margin-bottom: 0.75rem;">{title}</h3>
+        <slot />
+    </div>
+</div>

@@ -1,54 +1,109 @@
 ---
 import Layout from "@components/Layout.astro";
-import { Card, Badge, Grid } from "webcoreui/astro";
+import CardAnalysis from "@components/CardAnalysis.astro";
 ---
 
 <Layout title="Card-by-Card Analysis - Replenish Guide" prev={{ name: "Introduction & History", href: "/" }} next={{ name: "Sideboard Guide", href: "/sideboard" }}>
     <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">Card-by-Card Analysis</h1>
 
-    <h2>The Core</h2>
-    <p><strong>Replenish (4)</strong><br />Always a four-of. The one card whose count has never been challenged.</p>
-    <p><strong>Opalescence (4)</strong><br />Turns all other non-Aura enchantments into creatures based on mana value. Opalescence does not affect itself—you need two for each to turn the other into a 4/4. With a single Opalescence, your attackers are Decree (8/8), Wave (4/4), Attunement (3/3), and Seals (2/2).</p>
-    <p><strong>Parallax Wave (4)</strong><br />Defensive early, combo piece late. With Opalescence, it permanently exiles every creature your opponent controls.</p>
-    <p><strong>Attunement (4)</strong><br />This is the glue. Digs three cards deep, fills the graveyard, and attacks as a 3/3 under Opalescence. It's also the most commonly misplayed card in the deck. A lot of players just spin it hoping to find something good. Don't do that. Every activation should have a plan. Before you activate, you should roughly know which cards you're willing to discard. If you can't identify them, don't activate yet.</p>
+    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">The Core</h2>
+    
+    <CardAnalysis title="Replenish (4)" image="replenish.jpg">
+        <p style="margin-top: 0;">Always a four-of. The one card whose count has never been challenged.</p>
+    </CardAnalysis>
 
-    <h2>The Lock Piece</h2>
-    <p><strong>Decree of Silence (2–3)</strong><br />This replaced Parallax Tide as the post-Replenish lock and it's turned out to be much better than I expected. The full combo is great, but what surprised me is how good Decree is on its own. Just discarding it to Frantic Search or Attunement and Replenishing it back, even without the other pieces, can end games. Their hand gets too clunky to fight through three counters, and by the time the Decree is gone you've assembled everything else.</p>
-    <p>Against control, cycling it for six mana is an uncounterable cantrip. Opponents are consistently surprised when you cycle it. They gave it to you off Intuition thinking who cares about an eight-mana enchantment, and then the uncounterable draw refuels you at a critical moment.</p>
-    <p>Under Opalescence it's an 8/8, which is also not nothing.</p>
-    <p>You want more copies when the field is diverse or combo-heavy. Against control specifically, where you're cutting Frantic Search and Intuition post-board, you can't reliably discard it, so the third copy can be a liability.</p>
+    <CardAnalysis title="Opalescence (4)" image="opalescence.jpg">
+        <p style="margin-top: 0;">Turns all other non-Aura enchantments into creatures based on mana value. Opalescence does not affect itself—you need two for each to turn the other into a 4/4. With a single Opalescence, your attackers are Decree (8/8), Wave (4/4), Attunement (3/3), and Seals (2/2).</p>
+    </CardAnalysis>
 
-    <h2>Proactive Disruption</h2>
-    <p><strong>Meddling Mage</strong><br />I want four Mage total—whether they are main or side is metagaming. The move to maindeck happened preparing for a paper tournament: the shared clock made a proactive element desirable against Landstill. It also improves combo, Sligh, and Stiflenought matchups simultaneously. Maindeck Mage is a meta call—it excels in the metagames I play in, but it’s not required in the main.</p>
-    <p>Naming is context-dependent. Against Sligh, name Lightning Bolt not to lock them out, but to protect Mage as a blocker for Jackal Pup. The Mage’s job against red is to eat a creature. Late game, shift to Fireblast or Ball Lightning. Against control: Counterspell or Swords. Against Stiflenought: Dreadnought or Stifle. Against Enchantress: Enchantress (Argothian Enchantress or Enchantress’s Precense) in game 1, Tormod’s Crypt in game 2.</p>
-    <p>Main weakness: bad against green decks, discard, and midrange. Against Ponza, Rock, and Terrageddon; Mages come out because green creatures outclass a 2/2 and these decks don’t rely on single spells Mage can profitably name. In fields heavy with these archetypes, some or all Mages may belong in the sideboard.</p>
+    <CardAnalysis title="Parallax Wave (4)" image="parallax_wave.jpg">
+        <p style="margin-top: 0;">Defensive early, combo piece late. With Opalescence, it permanently exiles every creature your opponent controls.</p>
+    </CardAnalysis>
 
-    <h2>Card Selection</h2>
-    <p><strong>Frantic Search (3)</strong><br />Velocity. Makes explosive turns possible, especially with Sol lands. It's also the card I side out the most. In any matchup where the game goes long and card disadvantage hurts, it comes out.</p>
-    <p><strong>Intuition (3)</strong><br />The most skill-testing card in the deck. Classic pile is Opalescence, Wave, Decree. Whatever they give you, the other two go to the graveyard for Replenish. But the piles change based on what you're playing against. Against Landstill you might pile three lands. Against aggro, three Swords. I often trim it against control because it lowers your threat density.</p>
+    <CardAnalysis title="Attunement (4)" image="attunement.jpg">
+        <p style="margin-top: 0;">This is the glue. Digs three cards deep, fills the graveyard, and attacks as a 3/3 under Opalescence. It's also the most commonly misplayed card in the deck. A lot of players just spin it hoping to find something good. Don't do that. Every activation should have a plan. Before you activate, you should roughly know which cards you're willing to discard. If you can't identify them, don't activate yet.</p>
+    </CardAnalysis>
 
-    <h2>Interaction</h2>
-    <p><strong>Swords to Plowshares (3 main, 1 side)</strong><br />Essential one-mana removal. The fourth comes in against creature-heavy matchups.</p>
-    <p><strong>Seal of Cleansing (2-3 main, 1 side)</strong><br />Answers problematic enchantments and artifacts. It synergizes with Replenish since it comes back from the graveyard ready to use again. Comes out against decks that don't have relevant targets.</p>
-    <p><strong>Tsabo’s Web (1-3 main, 1 side)</strong><br />Shuts down Port, Dust Bowl, Factory. The count flexes from one to three depending on how many utility lands you expect. It's been trending down online as Terrageddon has declined.</p>
+    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">The Lock Piece</h2>
+    
+    <CardAnalysis title="Decree of Silence (2–3)" image="decree_of_silence.jpg">
+        <p style="margin-top: 0;">This replaced Parallax Tide as the post-Replenish lock and it's turned out to be much better than I expected. The full combo is great, but what surprised me is how good Decree is on its own. Just discarding it to Frantic Search or Attunement and Replenishing it back, even without the other pieces, can end games. Their hand gets too clunky to fight through three counters, and by the time the Decree is gone you've assembled everything else.</p>
+        <p>Against control, cycling it for six mana is an uncounterable cantrip. Opponents are consistently surprised when you cycle it. They gave it to you off Intuition thinking who cares about an eight-mana enchantment, and then the uncounterable draw refuels you at a critical moment.</p>
+        <p>Under Opalescence it's an 8/8, which is also not nothing.</p>
+        <p>You want more copies when the field is diverse or combo-heavy. Against control specifically, where you're cutting Frantic Search and Intuition post-board, you can't reliably discard it, so the third copy can be a liability.</p>
+    </CardAnalysis>
 
-    <h2>No Maindeck Mana Leak</h2>
-    <p>I cut Mana Leak because Landstill was the most popular control deck when I was building the list. Leak is bad in long games where they can just pay the three. With Landstill declining and Esper Psychatog picking up, Leak looks better now. The mirror is also a real matchup post-ban, which makes cheap countermagic more valuable. For now I've been using Defense Grid from the sideboard to handle blue matchups, but Mana Leak is worth reconsidering depending on your field.</p>
+    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Proactive Disruption</h2>
+    
+    <CardAnalysis title="Meddling Mage" image="meddling_mage.jpg">
+        <p style="margin-top: 0;">I want four Mage total—whether they are main or side is metagaming. The move to maindeck happened preparing for a paper tournament: the shared clock made a proactive element desirable against Landstill. It also improves combo, Sligh, and Stiflenought matchups simultaneously. Maindeck Mage is a meta call—it excels in the metagames I play in, but it’s not required in the main.</p>
+        <p>Naming is context-dependent. Against Sligh, name Lightning Bolt not to lock them out, but to protect Mage as a blocker for Jackal Pup. The Mage’s job against red is to eat a creature. Late game, shift to Fireblast or Ball Lightning. Against control: Counterspell or Swords. Against Stiflenought: Dreadnought or Stifle. Against Enchantress: Enchantress (Argothian Enchantress or Enchantress’s Precense) in game 1, Tormod’s Crypt in game 2.</p>
+        <p>Main weakness: bad against green decks, discard, and midrange. Against Ponza, Rock, and Terrageddon; Mages come out because green creatures outclass a 2/2 and these decks don’t rely on single spells Mage can profitably name. In fields heavy with these archetypes, some or all Mages may belong in the sideboard.</p>
+    </CardAnalysis>
 
+    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Card Selection</h2>
+    
+    <CardAnalysis title="Frantic Search (3)" image="frantic_search.jpg">
+        <p style="margin-top: 0;">Velocity. Makes explosive turns possible, especially with Sol lands. It's also the card I side out the most. In any matchup where the game goes long and card disadvantage hurts, it comes out.</p>
+    </CardAnalysis>
 
+    <CardAnalysis title="Intuition (3)" image="intuition.jpg">
+        <p style="margin-top: 0;">The most skill-testing card in the deck. Classic pile is Opalescence, Wave, Decree. Whatever they give you, the other two go to the graveyard for Replenish. But the piles change based on what you're playing against. Against Landstill you might pile three lands. Against aggro, three Swords. I often trim it against control because it lowers your threat density.</p>
+    </CardAnalysis>
 
-    <h2>Other Cards Worth Considering</h2>
-    <p><strong>Deep Analysis</strong><br />Not in the current list, but it's been in prior versions and I could see it coming back. The appeal is that it gives you a card advantage option for Intuition piles in matchups where velocity doesn't matter. Against control specifically, you don't want to Intuition for combo pieces because it lowers your threat density, but Intuition for Deep Analysis is actually useful. If your meta has a lot of Landstill or other slow blue decks, one copy maindeck is worth considering.</p>
-    <p><strong>Fact or Fiction</strong><br />This was more popular when the deck ran Mana Leak and had more of a reactive, play-on-your-opponent's-turn shell. The four mana cost is the downside, but if you're already on Mana Leaks then Fact or Fiction makes a lot of sense. It's card advantage, it digs five deep, and it puts your opponent in difficult spots on how to split the piles. If the meta shifts back toward a more interactive build with countermagic, I'd consider one or two.</p>
-    <p><strong>Orim's Chant</strong><br />I had a hard time setting up Chant without Tide. Previously I could use Chant to force through a spell that would end the game. Going down on cards was fine because if the game ends, who cares. But without Tide, Decree is harder to set up for a full combo against control. I found that they could just let me Chant, let me resolve something, then dismantle it afterwards and I'd be down on cards. Defense Grid ended up being better than Chant or Abeyance against Landstill, Psychatog, and Stiflenought. Not by a huge amount, but enough.</p>
-    <p><strong>Wrath of God</strong><br />Always in consideration. Extra removal against creature-heavy decks like Goblins and Elves. It's also relevant against opposing Meddling Mage if they're naming Swords, Wave, or both. I've had it in the sideboard before and could see it returning if creature decks pick up in the meta.</p>
-    <p><strong>Sphere of Law</strong><br />Has been in the sideboard in the past when Sligh was a heavy presence. Four mana to prevent two damage from every red source is a hard lock against most Sligh builds. Right now the red matchup is manageable enough without it, but if Sligh representation spikes, Sphere is the card you want.</p>
+    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Interaction</h2>
+    
+    <CardAnalysis title="Swords to Plowshares (3 main, 1 side)" image="swords_to_plowshares.jpg">
+        <p style="margin-top: 0;">Essential one-mana removal. The fourth comes in against creature-heavy matchups.</p>
+    </CardAnalysis>
 
-    <h1 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">Mana Base Theory</h1>
+    <CardAnalysis title="Seal of Cleansing (2-3 main, 1 side)" image="seal_of_cleansing.jpg">
+        <p style="margin-top: 0;">Answers problematic enchantments and artifacts. It synergizes with Replenish since it comes back from the graveyard ready to use again. Comes out against decks that don't have relevant targets.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Tsabo’s Web (1-3 main, 1 side)" image="tsabos_web.jpg">
+        <p style="margin-top: 0;">Shuts down Port, Dust Bowl, Factory. The count flexes from one to three depending on how many utility lands you expect. It's been trending down online as Terrageddon has declined.</p>
+    </CardAnalysis>
+
+    <h2 style="margin-top: 4rem; border-top: 1px solid var(--w-color-primary-50); padding-top: 2rem;">No Maindeck Mana Leak</h2>
+    <CardAnalysis title="Mana Leak" image="mana_leak.jpg">
+        <p style="margin-top: 0;">I cut Mana Leak because Landstill was the most popular control deck when I was building the list. Leak is bad in long games where they can just pay the three. With Landstill declining and Esper Psychatog picking up, Leak looks better now. The mirror is also a real matchup post-ban, which makes cheap countermagic more valuable. For now I've been using Defense Grid from the sideboard to handle blue matchups, but Mana Leak is worth reconsidering depending on your field.</p>
+    </CardAnalysis>
+
+    <h2 style="margin-top: 4rem; border-top: 1px solid var(--w-color-primary-50); padding-top: 2rem;">Other Cards Worth Considering</h2>
+    
+    <CardAnalysis title="Deep Analysis" image="deep_analysis.jpg">
+        <p style="margin-top: 0;">Not in the current list, but it's been in prior versions and I could see it coming back. The appeal is that it gives you a card advantage option for Intuition piles in matchups where velocity doesn't matter. Against control specifically, you don't want to Intuition for combo pieces because it lowers your threat density, but Intuition for Deep Analysis is actually useful. If your meta has a lot of Landstill or other slow blue decks, one copy maindeck is worth considering.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Fact or Fiction" image="fact_or_fiction.jpg">
+        <p style="margin-top: 0;">This was more popular when the deck ran Mana Leak and had more of a reactive, play-on-your-opponent's-turn shell. The four mana cost is the downside, but if you're already on Mana Leaks then Fact or Fiction makes a lot of sense. It's card advantage, it digs five deep, and it puts your opponent in difficult spots on how to split the piles. If the meta shifts back toward a more interactive build with countermagic, I'd consider one or two.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Orim's Chant" image="orims_chant.jpg">
+        <p style="margin-top: 0;">I had a hard time setting up Chant without Tide. Previously I could use Chant to force through a spell that would end the game. Going down on cards was fine because if the game ends, who cares. But without Tide, Decree is harder to set up for a full combo against control. I found that they could just let me Chant, let me resolve something, then dismantle it afterwards and I'd be down on cards. Defense Grid ended up being better than Chant or Abeyance against Landstill, Psychatog, and Stiflenought. Not by a huge amount, but enough.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Wrath of God" image="wrath_of_god.jpg">
+        <p style="margin-top: 0;">Always in consideration. Extra removal against creature-heavy decks like Goblins and Elves. It's also relevant against opposing Meddling Mage if they're naming Swords, Wave, or both. I've had it in the sideboard before and could see it returning if creature decks pick up in the meta.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Sphere of Law" image="sphere_of_law.jpg">
+        <p style="margin-top: 0;">Has been in the sideboard in the past when Sligh was a heavy presence. Four mana to prevent two damage from every red source is a hard lock against most Sligh builds. Right now the red matchup is manageable enough without it, but if Sligh representation spikes, Sphere is the card you want.</p>
+    </CardAnalysis>
+
+    <h2 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">Mana Base Theory</h2>
     <p><strong>25 Lands</strong><br />I've tried 24 and 26. Twenty-five feels right, though I wouldn’t fault anyone for 26.</p>
-    <p><strong>Ten Basics</strong><br />Five Islands, five Plains. This makes you resilient against Price of Progress and Wasteland. Starting with your first three land drops as basics is a realistic line against red and mana denial strategies. It meets Karsten's threshold of roughly 16 sources for each color to cast double-colored four-drops on time.</p>
-    <p><strong>Three Skycloud Expanse</strong><br />Down from four for the fifth basic of each type.</p>
-    <p><strong>No City of Traitors</strong><br />Without Tide’s lock, games go longer. City disrupts sequencing and loses value in attrition matchups.</p>
+    <p style="margin-bottom: 2.5rem;"><strong>Ten Basics</strong><br />Five Islands, five Plains. This makes you resilient against Price of Progress and Wasteland. Starting with your first three land drops as basics is a realistic line against red and mana denial strategies. It meets Karsten's threshold of roughly 16 sources for each color to cast double-colored four-drops on time.</p>
+
+    <CardAnalysis title="Skycloud Expanse (3)" image="skycloud_expanse.jpg">
+        <p style="margin-top: 0;">Down from four for the fifth basic of each type.</p>
+    </CardAnalysis>
+    
+    <CardAnalysis title="City of Traitors (0)" image="city_of_traitors.jpg">
+        <p style="margin-top: 0;">Without Tide’s lock, games go longer. City disrupts sequencing and loses value in attrition matchups.</p>
+    </CardAnalysis>
+
     <p><strong>Turn-One Sequencing</strong><br />If I have a dual and a basic, I'll usually lead with the dual to keep options open for my second draw. Against Wasteland decks, I lead basic instead. It depends on the hand.</p>
 
-    </Layout>
+</Layout>
