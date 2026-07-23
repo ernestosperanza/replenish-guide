@@ -1,0 +1,132 @@
+---
+const matrix = [
+    {
+        matchup: "Replenish (Mirror)",
+        in: [{ q: "+3", card: "Abeyance" }],
+        out: [{ q: "-3", card: "Meddling Mage" }]
+    },
+    {
+        matchup: "Terrageddon",
+        in: [{ q: "+2", card: "Exalted Angel" }, { q: "+1", card: "Wrath of God" }, { q: "+1", card: "Seal of Cleansing" }],
+        out: [{ q: "-4", card: "Meddling Mage" }]
+    },
+    {
+        matchup: "Elves",
+        in: [{ q: "+1", card: "Seal of Cleansing" }, { q: "+1", card: "Wrath of God" }, { q: "+1", card: "Nevinyrral's Disk" }],
+        out: [{ q: "-3", card: "Meddling Mage" }]
+    },
+    {
+        matchup: "Enchantress",
+        in: [{ q: "+3", card: "Abeyance" }, { q: "+1", card: "Seal of Cleansing" }, { q: "+1", card: "Nevinyrral's Disk" }],
+        out: [{ q: "-4", card: "Swords to Plowshares" }, { q: "-1", card: "Meddling Mage" }]
+    },
+    {
+        matchup: "Moneyball Black",
+        in: [{ q: "+2", card: "Exalted Angel" }],
+        out: [{ q: "-2", card: "Meddling Mage" }]
+    },
+    {
+        matchup: "HFEB",
+        in: [{ q: "+3", card: "Abeyance" }],
+        out: [{ q: "-1", card: "Frantic Search" }, { q: "-2", card: "Decree of Silence" }]
+    },
+    {
+        matchup: "Stiflenought",
+        in: [{ q: "+3", card: "Abeyance" }, { q: "+3", card: "Exalted Angel" }, { q: "+1", card: "Seal of Cleansing" }],
+        out: [{ q: "-2", card: "Frantic Search" }, { q: "-3", card: "Attunement" }, { q: "-2", card: "Intuition" }]
+    },
+    {
+        matchup: "Stasis",
+        in: [{ q: "+3", card: "Abeyance" }, { q: "+1", card: "Seal of Cleansing" }],
+        out: [{ q: "-4", card: "Swords to Plowshares" }]
+    },
+    {
+        matchup: "PitRack",
+        in: [{ q: "+1", card: "Seal of Cleansing" }, { q: "+2", card: "Tsabo's Web" }, { q: "+1", card: "Nevinyrral's Disk" }, { q: "+2", card: "Exalted Angel" }],
+        out: [{ q: "-4", card: "Meddling Mage" }, { q: "-2", card: "Decree of Silence" }]
+    },
+    {
+        matchup: "Landstill",
+        in: [{ q: "+3", card: "Tsabo's Web" }, { q: "+3", card: "Abeyance" }, { q: "+1", card: "Seal of Cleansing" }, { q: "+2", card: "Exalted Angel" }],
+        out: [{ q: "-4", card: "Meddling Mage" }, { q: "-3", card: "Swords to Plowshares" }, { q: "-1", card: "Frantic Search" }, { q: "-1", card: "Intuition" }]
+    },
+    {
+        matchup: "Psychatog",
+        in: [{ q: "+3", card: "Abeyance" }, { q: "+3", card: "Exalted Angel" }],
+        out: [{ q: "-3", card: "Seal of Cleansing" }, { q: "-2", card: "Frantic Search" }, { q: "-2", card: "Intuition" }, { q: "-1", card: "Attunement" }]
+    },
+    {
+        matchup: "Goblins",
+        in: [{ q: "+3", card: "Hydroblast", alt: "Blue Elemental Blast", altLabel: "BEB" }, { q: "+1", card: "Wrath of God" }, { q: "+1", card: "Nevinyrral's Disk" }, { q: "+3", card: "Exalted Angel" }],
+        out: [{ q: "-4", card: "Meddling Mage" }, { q: "-3", card: "Seal of Cleansing" }, { q: "-1", card: "Intuition" }]
+    }
+];
+---
+
+<div style="overflow-x: auto; margin-bottom: 4rem;">
+    <table
+        style="width: 100%; text-align: left; border-collapse: collapse; background-color: var(--w-color-primary-95); border-radius: var(--w-sm-radius);"
+    >
+        <thead>
+            <tr style="border-bottom: 2px solid var(--w-color-primary-50);">
+                <th style="padding: 1rem;">Matchup</th>
+                <th style="padding: 1rem;">In</th>
+                <th style="padding: 1rem;">Out</th>
+            </tr>
+        </thead>
+        <tbody>
+            {
+                matrix.map((row) => (
+                    <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                        <td style="padding: 1rem;">
+                            <strong>{row.matchup}</strong>
+                        </td>
+                        <td style="padding: 1rem; color: var(--w-color-success);">
+                            {row.in.map((item, index) => (
+                                <>
+                                    {item.q}{" "}
+                                    <a
+                                        href="#"
+                                        class="card-hover"
+                                        data-card-name={item.card}
+                                    >
+                                        {item.card}
+                                    </a>
+                                    {item.alt && (
+                                        <>
+                                            {" "}
+                                            /{" "}
+                                            <a
+                                                href="#"
+                                                class="card-hover"
+                                                data-card-name={item.alt}
+                                            >
+                                                {item.altLabel || item.alt}
+                                            </a>
+                                        </>
+                                    )}
+                                    {index < row.in.length - 1 && <br />}
+                                </>
+                            ))}
+                        </td>
+                        <td style="padding: 1rem; color: var(--w-color-danger);">
+                            {row.out.map((item, index) => (
+                                <>
+                                    {item.q}{" "}
+                                    <a
+                                        href="#"
+                                        class="card-hover"
+                                        data-card-name={item.card}
+                                    >
+                                        {item.card}
+                                    </a>
+                                    {index < row.out.length - 1 && <br />}
+                                </>
+                            ))}
+                        </td>
+                    </tr>
+                ))
+            }
+        </tbody>
+    </table>
+</div>

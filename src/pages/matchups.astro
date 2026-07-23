@@ -1,6 +1,9 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import SectionHeader from "@components/SectionHeader.astro";
+import SideboardMatrix from "@components/SideboardMatrix.astro";
+import CardGrid from "@components/CardGrid.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
 ---
 
@@ -11,84 +14,12 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 >
     <PageHeader title="Matchups" />
 
-    <h2>Lobstercon 2026 Sideboard Matrix</h2>
+    <SectionHeader title="Lobstercon 2026 Sideboard Matrix" />
     <p>A quick-reference guide based on the Lobstercon 2026 sideboard strategies:</p>
 
-    <div style="overflow-x: auto; margin-bottom: 4rem;">
-        <table style="width: 100%; text-align: left; border-collapse: collapse; background-color: var(--w-color-primary-95); border-radius: var(--w-sm-radius);">
-            <thead>
-                <tr style="border-bottom: 2px solid var(--w-color-primary-50);">
-                    <th style="padding: 1rem;">Matchup</th>
-                    <th style="padding: 1rem;">In</th>
-                    <th style="padding: 1rem;">Out</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>Replenish (Mirror)</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>Terrageddon</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+2 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a><br/>+1 <a href="#" class="card-hover" data-card-name="Wrath of God">Wrath of God</a><br/>+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>Elves</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>+1 <a href="#" class="card-hover" data-card-name="Wrath of God">Wrath of God</a><br/>+1 <a href="#" class="card-hover" data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>Enchantress</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a><br/>+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>+1 <a href="#" class="card-hover" data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a><br/>-1 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>Moneyball Black</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+2 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-2 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>HFEB</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-1 <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a><br/>-2 <a href="#" class="card-hover" data-card-name="Decree of Silence">Decree of Silence</a></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>Stiflenought</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a><br/>+3 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a><br/>+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-2 <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a><br/>-3 <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a><br/>-2 <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>Stasis</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a><br/>+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>PitRack</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>+2 <a href="#" class="card-hover" data-card-name="Tsabo's Web">Tsabo's Web</a><br/>+1 <a href="#" class="card-hover" data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a><br/>+2 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a><br/>-2 <a href="#" class="card-hover" data-card-name="Decree of Silence">Decree of Silence</a></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>Landstill</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Tsabo's Web">Tsabo's Web</a><br/>+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a><br/>+1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>+2 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a><br/>-3 <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a><br/>-1 <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a><br/>-1 <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a></td>
-                </tr>
-                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                    <td style="padding: 1rem;"><strong>Psychatog</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a><br/>+3 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>-2 <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a><br/>-2 <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a><br/>-1 <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a></td>
-                </tr>
-                <tr>
-                    <td style="padding: 1rem;"><strong>Goblins</strong></td>
-                    <td style="padding: 1rem; color: var(--w-color-success);">+3 <a href="#" class="card-hover" data-card-name="Hydroblast">Hydroblast</a> / <a href="#" class="card-hover" data-card-name="Blue Elemental Blast">BEB</a><br/>+1 <a href="#" class="card-hover" data-card-name="Wrath of God">Wrath of God</a><br/>+1 <a href="#" class="card-hover" data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a><br/>+3 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a></td>
-                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a><br/>-3 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a><br/>-1 <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <SideboardMatrix />
 
-    <h2>Matchups Analysis</h2>
+    <SectionHeader title="Matchups Analysis" />
     <p
         style="font-size: 1.1rem; color: var(--w-color-primary-20); margin-bottom: 2rem;"
     >
@@ -99,25 +30,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     <h3 style="color: var(--w-color-success);">Dominant</h3>
 
     <h4>Enchantress</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/enchantress/argothian_enchantress.jpg"
-            alt="Argothian Enchantress"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/enchantress/enchantresss_presence.jpg"
-            alt="Enchantress's Presence"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/enchantress/sterling_grove.jpg"
-            alt="Sterling Grove"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/enchantress/argothian_enchantress.jpg", alt: "Argothian Enchantress" },
+            { src: "/images/cards/matchups/enchantress/enchantresss_presence.jpg", alt: "Enchantress's Presence" },
+            { src: "/images/cards/matchups/enchantress/sterling_grove.jpg", alt: "Sterling Grove" }
+        ]} 
+    />
     <p>
         The deck's best matchup. You assemble the Opal-Wave lock faster and more
         consistently than they do. If Enchantress is the best deck in the
@@ -132,25 +51,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>Elves</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/elves/priest_of_titania.jpg"
-            alt="Priest of Titania"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/elves/quirion_ranger.jpg"
-            alt="Quirion Ranger"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/elves/wirewood_symbiote.jpg"
-            alt="Wirewood Symbiote"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/elves/priest_of_titania.jpg", alt: "Priest of Titania" },
+            { src: "/images/cards/matchups/elves/quirion_ranger.jpg", alt: "Quirion Ranger" },
+            { src: "/images/cards/matchups/elves/wirewood_symbiote.jpg", alt: "Wirewood Symbiote" }
+        ]} 
+    />
     <p>
         Their whole board gets permanently exiled by Opal-Wave. Swords handles
         the key mana creatures early. They can be fast, but if you survive to
@@ -162,25 +69,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>Rock and Midrange</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/rock_and_midrange/pernicious_deed.jpg"
-            alt="Pernicious Deed"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/rock_and_midrange/spiritmonger.jpg"
-            alt="Spiritmonger"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/rock_and_midrange/cabal_therapy.jpg"
-            alt="Cabal Therapy"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/rock_and_midrange/pernicious_deed.jpg", alt: "Pernicious Deed" },
+            { src: "/images/cards/matchups/rock_and_midrange/spiritmonger.jpg", alt: "Spiritmonger" },
+            { src: "/images/cards/matchups/rock_and_midrange/cabal_therapy.jpg", alt: "Cabal Therapy" }
+        ]} 
+    />
     <p>
         One-for-one trading can’t keep pace with Replenish refueling from the
         graveyard. They don’t have a strong clock to pressure you.
@@ -190,25 +85,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     <h3 style="color: var(--w-color-info); margin-top: 2rem;">Favorable</h3>
 
     <h4>Sligh</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/sligh/jackal_pup.jpg"
-            alt="Jackal Pup"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/sligh/fireblast.jpg"
-            alt="Fireblast"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/sligh/ball_lightning.jpg"
-            alt="Ball Lightning"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/sligh/jackal_pup.jpg", alt: "Jackal Pup" },
+            { src: "/images/cards/matchups/sligh/fireblast.jpg", alt: "Fireblast" },
+            { src: "/images/cards/matchups/sligh/ball_lightning.jpg", alt: "Ball Lightning" }
+        ]} 
+    />
     <p>
         They can't interact with your combo, they can only race. Name Bolt with
         Mage to keep it alive as a Jackal Pup blocker. Late game, shift to
@@ -230,25 +113,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>Landstill</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/landstill/standstill.jpg"
-            alt="Standstill"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/landstill/mishras_factory.jpg"
-            alt="Mishra's Factory"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/landstill/counterspell.jpg"
-            alt="Counterspell"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/landstill/standstill.jpg", alt: "Standstill" },
+            { src: "/images/cards/matchups/landstill/mishras_factory.jpg", alt: "Mishra's Factory" },
+            { src: "/images/cards/matchups/landstill/counterspell.jpg", alt: "Counterspell" }
+        ]} 
+    />
     <p>
         Endpoint theory works here. Be patient, preserve your resources, and
         your last Replenish will resolve. I usually hard cast a few Decrees, but
@@ -288,25 +159,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>Psychatog</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/psychatog/psychatog.jpg"
-            alt="Psychatog"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/psychatog/upheaval.jpg"
-            alt="Upheaval"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/psychatog/circular_logic.jpg"
-            alt="Circular Logic"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/psychatog/psychatog.jpg", alt: "Psychatog" },
+            { src: "/images/cards/matchups/psychatog/upheaval.jpg", alt: "Upheaval" },
+            { src: "/images/cards/matchups/psychatog/circular_logic.jpg", alt: "Circular Logic" }
+        ]} 
+    />
     <p>Similar to Landstill. Your threat density overwhelms their answers.</p>
     <p>
         <strong>Sideboard:</strong> Full control transformation. Grid, Angels, Abeyance,
@@ -314,50 +173,26 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>BW Control</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/bw_control/vindicate.jpg"
-            alt="Vindicate"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/bw_control/gerrards_verdict.jpg"
-            alt="Gerrard's Verdict"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/bw_control/swords_to_plowshares.jpg"
-            alt="Swords to Plowshares"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/bw_control/vindicate.jpg", alt: "Vindicate" },
+            { src: "/images/cards/matchups/bw_control/gerrards_verdict.jpg", alt: "Gerrard's Verdict" },
+            { src: "/images/cards/matchups/bw_control/swords_to_plowshares.jpg", alt: "Swords to Plowshares" }
+        ]} 
+    />
     <p>
         Their discard and removal can't keep up with Replenish refueling from
         the graveyard. Angel is strong post-board.
     </p>
 
     <h4>RG Ponza</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/rg_ponza/stone_rain.jpg"
-            alt="Stone Rain"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/rg_ponza/pillage.jpg"
-            alt="Pillage"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/rg_ponza/rishadan_port.jpg"
-            alt="Rishadan Port"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/rg_ponza/stone_rain.jpg", alt: "Stone Rain" },
+            { src: "/images/cards/matchups/rg_ponza/pillage.jpg", alt: "Pillage" },
+            { src: "/images/cards/matchups/rg_ponza/rishadan_port.jpg", alt: "Rishadan Port" }
+        ]} 
+    />
     <p>
         This matchup is heavily play/draw dependent. Your primary goal is to
         protect your mana base and ensure you hit your land drops. In fact, you
@@ -385,25 +220,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </h3>
 
     <h4>Moneyball (Black Aggro)</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/moneyball/wretched_anurid.jpg"
-            alt="Wretched Anurid"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/moneyball/grinning_demon.jpg"
-            alt="Grinning Demon"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/moneyball/gloom.jpg"
-            alt="Gloom"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/moneyball/wretched_anurid.jpg", alt: "Wretched Anurid" },
+            { src: "/images/cards/matchups/moneyball/grinning_demon.jpg", alt: "Grinning Demon" },
+            { src: "/images/cards/matchups/moneyball/gloom.jpg", alt: "Gloom" }
+        ]} 
+    />
     <p>
         Newer variants running Wretched Anurid and Grinning Demon are a serious
         threat. These creatures have a high enough power level that your
@@ -440,25 +263,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>Goblins</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/goblins/goblin_lackey.jpg"
-            alt="Goblin Lackey"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/goblins/goblin_piledriver.jpg"
-            alt="Goblin Piledriver"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/goblins/goblin_ringleader.jpg"
-            alt="Goblin Ringleader"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/goblins/goblin_lackey.jpg", alt: "Goblin Lackey" },
+            { src: "/images/cards/matchups/goblins/goblin_piledriver.jpg", alt: "Goblin Piledriver" },
+            { src: "/images/cards/matchups/goblins/goblin_ringleader.jpg", alt: "Goblin Ringleader" }
+        ]} 
+    />
     <p>
         The textbook two-angle deck. Mage can be bad here since it doesn't block
         Lackey well on the draw and it doesn't block Piledriver at all. This
@@ -470,25 +281,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>Terrageddon / Quiet Spec Oath</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/terrageddon/terravore.jpg"
-            alt="Terravore"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/terrageddon/armageddon.jpg"
-            alt="Armageddon"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/terrageddon/oath_of_druids.jpg"
-            alt="Oath of Druids"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/terrageddon/terravore.jpg", alt: "Terravore" },
+            { src: "/images/cards/matchups/terrageddon/armageddon.jpg", alt: "Armageddon" },
+            { src: "/images/cards/matchups/terrageddon/oath_of_druids.jpg", alt: "Oath of Druids" }
+        ]} 
+    />
     <p>
         Watch for Wayfarer, Sylvan Library, and Armageddon. Having a plan for
         Armageddon doesn't necessarily mean stopping it. Not playing more than
@@ -502,25 +301,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>Stiflenought</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/stiflenought/phyrexian_dreadnought.jpg"
-            alt="Phyrexian Dreadnought"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/stiflenought/stifle.jpg"
-            alt="Stifle"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/stiflenought/illusionary_mask.jpg"
-            alt="Illusionary Mask"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/stiflenought/phyrexian_dreadnought.jpg", alt: "Phyrexian Dreadnought" },
+            { src: "/images/cards/matchups/stiflenought/stifle.jpg", alt: "Stifle" },
+            { src: "/images/cards/matchups/stiflenought/illusionary_mask.jpg", alt: "Illusionary Mask" }
+        ]} 
+    />
     <p>
         How you sideboard depends on what you think their configuration is. Do
         they have Factories? Are Dreadnoughts in their post-board plan or not?
@@ -536,25 +323,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>Mirror</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/mirror/replenish.jpg"
-            alt="Replenish"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/mirror/opalescence.jpg"
-            alt="Opalescence"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/mirror/parallax_wave.jpg"
-            alt="Parallax Wave"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/mirror/replenish.jpg", alt: "Replenish" },
+            { src: "/images/cards/matchups/mirror/opalescence.jpg", alt: "Opalescence" },
+            { src: "/images/cards/matchups/mirror/parallax_wave.jpg", alt: "Parallax Wave" }
+        ]} 
+    />
     <p>
         You’re mostly just racing. Getting out a seal to protect against their
         decree is important.
@@ -565,25 +340,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>Stasis</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/stasis/stasis.jpg"
-            alt="Stasis"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/stasis/black_vise.jpg"
-            alt="Black Vise"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/stasis/forsaken_city.jpg"
-            alt="Forsaken City"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/stasis/stasis.jpg", alt: "Stasis" },
+            { src: "/images/cards/matchups/stasis/black_vise.jpg", alt: "Black Vise" },
+            { src: "/images/cards/matchups/stasis/forsaken_city.jpg", alt: "Forsaken City" }
+        ]} 
+    />
     <p>Seal answers Stasis and Black Vise directly.</p>
     <p>
         <strong>Sideboard:</strong> Full transformation. Swords, Intuition, Waves,
@@ -593,25 +356,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     <h3 style="color: var(--w-color-danger); margin-top: 2rem;">Difficult</h3>
 
     <h4>Devourer</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/devourer/phyrexian_devourer.jpg"
-            alt="Phyrexian Devourer"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/devourer/sutured_ghoul.jpg"
-            alt="Sutured Ghoul"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/devourer/survival_of_the_fittest.jpg"
-            alt="Survival of the Fittest"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/devourer/phyrexian_devourer.jpg", alt: "Phyrexian Devourer" },
+            { src: "/images/cards/matchups/devourer/sutured_ghoul.jpg", alt: "Sutured Ghoul" },
+            { src: "/images/cards/matchups/devourer/survival_of_the_fittest.jpg", alt: "Survival of the Fittest" }
+        ]} 
+    />
     <p>
         The deck’s worst common matchup. Devourer goldfish kills faster than you
         interact, and their combo is resilient to your disruption.
@@ -622,25 +373,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
 
     <h4>Aggro with Armageddon</h4>
-    <div
-        style="display: flex; gap: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
-    >
-        <img
-            src="/images/cards/matchups/terrageddon/armageddon.jpg"
-            alt="Armageddon"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/aggro_with_armageddon/mother_of_runes.jpg"
-            alt="Mother of Runes"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-        <img
-            src="/images/cards/matchups/aggro_with_armageddon/silver_knight.jpg"
-            alt="Silver Knight"
-            style="width: 150px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-        />
-    </div>
+    <CardGrid 
+        cards={[
+            { src: "/images/cards/matchups/terrageddon/armageddon.jpg", alt: "Armageddon" },
+            { src: "/images/cards/matchups/aggro_with_armageddon/mother_of_runes.jpg", alt: "Mother of Runes" },
+            { src: "/images/cards/matchups/aggro_with_armageddon/silver_knight.jpg", alt: "Silver Knight" }
+        ]} 
+    />
     <p>
         Attacks life and mana simultaneously. Prioritize basics and early
         Swords.

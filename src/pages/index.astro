@@ -1,6 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import SectionHeader from "@components/SectionHeader.astro";
 import { Grid, Card } from "webcoreui/astro";
 ---
 
@@ -17,7 +18,7 @@ import { Grid, Card } from "webcoreui/astro";
         isCard={false}
     />
 
-    <h2>What is Replenish?</h2>
+    <SectionHeader title="What is Replenish?" />
     <p>
         <strong>Replenish</strong> is a combo-control archetype in Premodern Magic:
         The Gathering that leverages its namesake card to cheat powerful, high-cost
@@ -55,7 +56,7 @@ import { Grid, Card } from "webcoreui/astro";
         counter every spell your opponent tries to cast. That's the lock.
     </p>
 
-    <h2>Why Replenish?</h2>
+    <SectionHeader title="Why Replenish?" />
     <p
         style="font-size: 1.15rem; color: var(--w-color-primary-20); line-height: 1.6;"
     >
@@ -83,7 +84,7 @@ import { Grid, Card } from "webcoreui/astro";
         </li>
     </ul>
 
-    <h2>Strengths and Weaknesses</h2>
+    <SectionHeader title="Strengths and Weaknesses" />
     <Grid column={2} gap="md" style="margin-top: 1.5rem; margin-bottom: 2rem;">
         <Card>
             <h3 style="margin-top: 0; color: var(--w-color-success);">

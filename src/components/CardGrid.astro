@@ -1,0 +1,22 @@
+---
+export interface Props {
+    cards: { src: string; alt: string }[];
+    width?: string;
+}
+
+const { cards, width = "150px" } = Astro.props;
+---
+
+<div
+    style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem; margin-top: 1.5rem;"
+>
+    {
+        cards.map((card) => (
+            <img
+                src={card.src}
+                alt={card.alt}
+                style={`width: ${width}; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);`}
+            />
+        ))
+    }
+</div>

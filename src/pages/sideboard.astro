@@ -1,6 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import SectionHeader from "@components/SectionHeader.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 ---
 
@@ -17,11 +18,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         isCard={true}
     />
 
-    <h2
-        style="font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;"
-    >
-        The Sculpting Method
-    </h2>
+    <SectionHeader title="The Sculpting Method" />
     <p>
         I use this process before every tournament to finalize my 75. Start with
         a pool of 85-90 cards that you think could work in the deck, then carve
@@ -58,11 +55,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         and risk losing to the combo. Either way their draws get worse.
     </p>
 
-    <h2
-        style="margin-top: 2rem; font-size: 2rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;"
-    >
-        Sideboarding Principles
-    </h2>
+    <SectionHeader title="Sideboarding Principles" />
     <h3>Transformation Against Control</h3>
     <p>
         Against blue permission decks, you become a different deck. Frantic,

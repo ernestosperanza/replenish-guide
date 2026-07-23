@@ -1,6 +1,8 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import SectionHeader from "@components/SectionHeader.astro";
+import CardGrid from "@components/CardGrid.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 ---
 
@@ -10,14 +12,17 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     next={{ name: "Sideboard", href: "/sideboard" }}
 >
     <PageHeader title="Maindeck Analysis" />
-    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">The Core</h2>
+    <SectionHeader title="The Core" />
 
-    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
-        <img src="/images/cards/sorceries/replenish.jpg" alt="Replenish" style="width: 180px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);" />
-        <img src="/images/cards/enchantments/opalescence.jpg" alt="Opalescence" style="width: 180px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);" />
-        <img src="/images/cards/enchantments/parallax_wave.webp" alt="Parallax Wave" style="width: 180px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);" />
-        <img src="/images/cards/enchantments/attunement.jpg" alt="Attunement" style="width: 180px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);" />
-    </div>
+    <CardGrid 
+        width="180px"
+        cards={[
+            { src: "/images/cards/sorceries/replenish.jpg", alt: "Replenish" },
+            { src: "/images/cards/enchantments/opalescence.jpg", alt: "Opalescence" },
+            { src: "/images/cards/enchantments/parallax_wave.webp", alt: "Parallax Wave" },
+            { src: "/images/cards/enchantments/attunement.jpg", alt: "Attunement" }
+        ]} 
+    />
 
     <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem; background-color: var(--w-color-primary-80); padding: 1.5rem; border-radius: var(--w-lg-radius); border: 1px solid var(--w-color-primary-70);">
         <div>
@@ -38,7 +43,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         </div>
     </div>
 
-    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">The Lock Piece</h2>
+    <SectionHeader title="The Lock Piece" />
 
     <CardAnalysis
         title="Decree of Silence (2-3 main)"
@@ -69,7 +74,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         </p>
     </CardAnalysis>
 
-    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Proactive Disruption</h2>
+    <SectionHeader title="Proactive Disruption" />
 
     <CardAnalysis
         title="Meddling Mage (0-4 main)"
@@ -101,7 +106,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         </p>
     </CardAnalysis>
 
-    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Card Selection</h2>
+    <SectionHeader title="Card Selection" />
 
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
         <img src="/images/cards/instants/frantic_search.webp" alt="Frantic Search" style="width: 180px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);" />
@@ -119,7 +124,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         </div>
     </div>
 
-    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Interaction</h2>
+    <SectionHeader title="Interaction" />
 
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
         <img src="/images/cards/instants/swords_to_plowshares.webp" alt="Swords to Plowshares" style="width: 180px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);" />
@@ -190,9 +195,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         </p>
     </CardAnalysis>
 
-    <h2
-        style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;"
-    >
+    <SectionHeader title="The Mana Base" />
         Mana Base Theory
     </h2>
     <p>
