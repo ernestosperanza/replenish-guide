@@ -1,0 +1,62 @@
+---
+import { Sidebar } from "webcoreui/astro";
+
+const sidebarGroups = [
+    {
+        title: "Empezando",
+        items: [
+            { name: "Introducción", href: "/", icon: "info", active: true },
+        ],
+    },
+    {
+        title: "Estrategia",
+        items: [
+            { name: "El Mazo", href: "/deck", icon: "order" },
+            { name: "Combos", href: "/combos", icon: "check" },
+            { name: "Matchups", href: "/matchups", icon: "alert" },
+        ],
+    },
+];
+---
+
+<div class="sidebar-wrapper">
+    <Sidebar groups={sidebarGroups} className="sidebar" />
+</div>
+
+<style lang="scss" is:global>
+    .sidebar-wrapper {
+        position: fixed;
+        left: -250px;
+        top: 60px;
+        width: 260px;
+        height: calc(100vh - 60px);
+        z-index: 90;
+        /* Transición más rápida y responsiva */
+        transition: left 0.15s ease-out;
+
+        /* Hit area para que sea fácil abrirlo */
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -20px;
+            width: 30px;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        &:hover {
+            left: 0;
+        }
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        background-color: var(--w-color-primary-70);
+        border-right: 1px solid var(--w-color-primary-50);
+        overflow-y: auto;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+    }
+</style>

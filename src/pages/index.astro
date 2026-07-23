@@ -1,36 +1,77 @@
 ---
-import { Button, Icon } from "webcoreui/astro";
-
 import Layout from "@components/Layout.astro";
+import { Alert, Button, Grid, Card, Icon, Badge } from "webcoreui/astro";
 ---
 
-<Layout>
-	<h1 class="flex center md">
-		Welcome to <img src="logo.svg" width="160" />
-	</h1>
-	<p>
-		Edit <code>pages/index.astro</code> to get started. For documentation, visit
-		<a href="https://webcoreui.dev" target="_blank">webcoreui.dev</a>
-	</p>
-	<div class="flex justify-center xs">
-		<Button href="https://webcoreui.dev" target="_blank">
-			Get Started
-		</Button>
-		<Button
-			href="https://github.com/Frontendland/webcoreui"
-			target="_blank"
-			theme="secondary"
-		>
-			<Icon type="github" size={20} />
-			GitHub
-		</Button>
-	</div>
+<Layout title="Introducción - Replenish Guide">
+    <div style="margin-bottom: 2.5rem;">
+        <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
+            Replenish Guide
+        </h1>
+
+        <p
+            style="font-size: 1.15rem; color: var(--w-color-primary-20); max-width: 650px; line-height: 1.6;"
+        >
+            La guía definitiva enfocada en la lectura, la claridad visual y la
+            velocidad. Domina cada línea de juego con nuestra interfaz
+            optimizada.
+        </p>
+
+        <div style="display: flex; gap: 10px; margin-top: 1.5rem;">
+            <Button href="/deck" theme="info">
+                Comenzar a leer
+                <Icon type="chevron-right" size={16} />
+            </Button>
+            <Button
+                href="https://github.com/ernest/replenish"
+                theme="secondary"
+            >
+                <Icon type="github" size={16} />
+                Ver Repositorio
+            </Button>
+        </div>
+    </div>
+
+    <Alert theme="success" title="Diseño WebcoreUI">
+        El contenido es lo más importante. La interfaz utiliza componentes
+        nativos de <strong>WebcoreUI</strong> para mantener una apariencia limpia
+        y coherente.
+    </Alert>
+
+    <h2>Características de la Estructura</h2>
+    <p>
+        Utilizamos la potencia de <strong>WebcoreUI</strong> para tener componentes
+        listos para usar, logrando una estética unificada con muy poco CSS personalizado.
+    </p>
+
+    <Grid column={2} gap="md" style="margin-top: 2rem; margin-bottom: 2rem;">
+        <Card>
+            <div style="margin-bottom: 10px; color: var(--w-color-primary);">
+                <Icon type="info" size={24} />
+            </div>
+            <h3>Contenido Centralizado</h3>
+            <p>
+                El texto es el protagonista, restringido a un ancho máximo de
+                800px. Esto asegura que tus ojos no se fatiguen al leer.
+            </p>
+        </Card>
+
+        <Card>
+            <div style="margin-bottom: 10px; color: var(--w-color-primary);">
+                <Icon type="order" size={24} />
+            </div>
+            <h3>Navegación Fluida</h3>
+            <p>
+                La <em>sidebar</em> anclada y el <em>header</em> permiten que siempre
+                sepas dónde estás de forma intuitiva.
+            </p>
+        </Card>
+    </Grid>
+
+    <h2>Siguientes Pasos</h2>
+    <p>
+        Con esta base elegante, estás listo para poblar las diferentes secciones
+        de tu guía. Simplemente crea los archivos en <code>src/pages</code> y enlázalos
+        en el componente <code>Layout.astro</code>.
+    </p>
 </Layout>
-
-<style lang="scss">
-	@use "webcoreui/config" as *;
-
-	p {
-		@include typography(center);
-	}
-</style>
