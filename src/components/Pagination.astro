@@ -1,0 +1,21 @@
+---
+const { prev, next } = Astro.props;
+---
+<div style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--w-color-primary-50); display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+    <div style="flex: 1;">
+        {prev && (
+            <a href={prev.href} style="display: inline-block; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--w-sm-radius); color: var(--w-color-primary-10);">
+                <div style="font-size: 0.85rem; color: var(--w-color-primary-30); margin-bottom: 0.25rem;">Previous</div>
+                <div style="font-size: 1.1rem; font-weight: 500;">&larr; {prev.name}</div>
+            </a>
+        )}
+    </div>
+    <div style="flex: 1; text-align: right;">
+        {next && (
+            <a href={next.href} style="display: inline-block; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--w-sm-radius); color: var(--w-color-primary-10);">
+                <div style="font-size: 0.85rem; color: var(--w-color-primary-30); margin-bottom: 0.25rem;">Next</div>
+                <div style="font-size: 1.1rem; font-weight: 500;">{next.name} &rarr;</div>
+            </a>
+        )}
+    </div>
+</div>

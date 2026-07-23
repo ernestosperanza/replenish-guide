@@ -1,0 +1,128 @@
+---
+import Layout from "@components/Layout.astro";
+import { Grid, Card, Badge } from "webcoreui/astro";
+---
+
+<Layout title="Deck Building - Replenish Guide" prev={{ name: "Sideboard Guide", href: "/sideboard" }} next={{ name: "Combos & Mechanics", href: "/combos" }}>
+    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">The Current Decklists</h1>
+    <p style="font-size: 1.15rem; color: var(--w-color-primary-20); max-width: 650px; line-height: 1.6;">Below are two different configurations.</p>
+
+    <Grid column={2} gap="lg" style="margin-top: 2rem; margin-bottom: 3rem;">
+        <Card>
+            <h2 style="margin-top: 0; font-size: 1.5rem;">MTGO League 5-0</h2>
+            <div style="margin-bottom: 1rem;"><Badge theme="info" small={true}>March 19, 2026</Badge></div>
+            
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Creatures</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>3 Meddling Mage</li>
+            </ul>
+
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Combo / Engine</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>4 Replenish</li>
+                <li>4 Attunement</li>
+                <li>3 Decree of Silence</li>
+                <li>4 Opalescence</li>
+                <li>4 Parallax Wave</li>
+            </ul>
+
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Card Selection</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>3 Frantic Search</li>
+                <li>3 Intuition</li>
+            </ul>
+
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Interaction</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>3 Swords to Plowshares</li>
+                <li>3 Seal of Cleansing</li>
+                <li>1 Tsabo’s Web</li>
+            </ul>
+
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Lands (25)</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>5 Island</li>
+                <li>5 Plains</li>
+                <li>4 Adarkar Wastes</li>
+                <li>4 Ancient Tomb</li>
+                <li>4 Flooded Strand</li>
+                <li>3 Skycloud Expanse</li>
+            </ul>
+
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Sideboard (15)</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>2 Abeyance</li>
+                <li>1 Arcane Denial</li>
+                <li>3 Defense Grid</li>
+                <li>3 Exalted Angel</li>
+                <li>2 Hydroblast</li>
+                <li>1 Meddling Mage</li>
+                <li>1 Seal of Cleansing</li>
+                <li>1 Swords to Plowshares</li>
+                <li>1 Tsabo’s Web</li>
+            </ul>
+        </Card>
+
+        <Card>
+            <h2 style="margin-top: 0; font-size: 1.5rem;">Paper: 2nd Place</h2>
+            <div style="margin-bottom: 1rem;"><Badge theme="success" small={true}>NE Winter Regional (131 Players), Feb 21 2026</Badge></div>
+            
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Creatures</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>3 Meddling Mage</li>
+            </ul>
+
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Combo / Engine</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>4 Replenish</li>
+                <li>4 Attunement</li>
+                <li>2 Decree of Silence</li>
+                <li>4 Opalescence</li>
+                <li>4 Parallax Wave</li>
+            </ul>
+
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Card Selection</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>3 Frantic Search</li>
+                <li>3 Intuition</li>
+            </ul>
+
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Interaction</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>3 Swords to Plowshares</li>
+                <li>2 Seal of Cleansing</li>
+                <li>3 Tsabo’s Web</li>
+            </ul>
+
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Lands (25)</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>5 Island</li>
+                <li>5 Plains</li>
+                <li>4 Adarkar Wastes</li>
+                <li>4 Ancient Tomb</li>
+                <li>4 Flooded Strand</li>
+                <li>3 Skycloud Expanse</li>
+            </ul>
+
+            <h4 style="margin-bottom: 0.25rem; color: var(--w-color-primary-20);">Sideboard (15)</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 1rem;">
+                <li>2 Abeyance</li>
+                <li>2 Arcane Denial</li>
+                <li>3 Defense Grid</li>
+                <li>3 Exalted Angel</li>
+                <li>2 Hydroblast</li>
+                <li>1 Meddling Mage</li>
+                <li>1 Seal of Cleansing</li>
+                <li>1 Swords to Plowshares</li>
+            </ul>
+        </Card>
+    </Grid>
+
+    <h2>Key Differences</h2>
+    <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
+        <li style="margin-bottom: 0.5rem;"><strong>Decree of Silence (3 vs. 2):</strong> You want more Decrees when the field is diverse or combo-heavy. Discarding Decree and Replenishing it back is a reliable game-ender even without the full combo. I went to two for the paper list because against control, you cut Frantic Search and Intuition post-board, so you can't reliably discard an eight-mana enchantment. The third copy becomes a liability in those matchups.</li>
+        <li style="margin-bottom: 0.5rem;"><strong>Seal of Cleansing (4 vs. 3 in the 75):</strong> Running four total is a luxury. It's gotten better with the rise of Aluren, the Replenish mirror, Enchantress, and other enchantment-heavy decks. Three in the 75 is the leaner option if those matchups are less common in your field.</li>
+        <li style="margin-bottom: 0.5rem;"><strong>Tsabo’s Web (3 vs. 2):</strong> The paper list ran three because my local region has a lot of Terrageddon and Port. Online, Terrageddon has been trending down, so the count is closer to two in the 75.</li>
+    </ul>
+
+    </Layout>

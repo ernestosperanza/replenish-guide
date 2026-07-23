@@ -1,0 +1,26 @@
+---
+import Layout from "@components/Layout.astro";
+import { Card, Badge, Alert } from "webcoreui/astro";
+---
+
+<Layout title="Combos & Mechanics - Replenish Guide" prev={{ name: "The Decklists", href: "/deck" }} next={{ name: "Strategic Theory", href: "/strategy" }}>
+    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">Combos & Mechanics</h1>
+    
+    <h2>Combo Mechanics</h2>
+    
+    <h3>Opal-Wave Permanent Exile</h3>
+    <p>With Opalescence and Parallax Wave on the board, Wave is a 4/4 that can target itself. You hold priority and stack a bunch of creature-exile triggers, then use the last counter to exile Wave itself. Wave comes back with five fresh counters as a new object. Then all the creature-exile triggers resolve and those creatures are gone permanently. Repeat until the board is clear.</p>
+
+    <h3>The Decree Lock</h3>
+    <p>Post-Replenish with all three pieces, creatures are permanently exiled and spells are countered.</p>
+
+    <h3>Resetting Decree with Wave</h3>
+    <p>When the third depletion trigger goes on the stack (which would sacrifice Decree), you respond with Wave to exile the Decree. It comes back with three fresh counters. Your opponent gets a small window, but they'd need to have had three spells countered and still have an instant ready. Very few decks can pull that off. Worst case they destroy your Opalescence through the window, and Decree comes back as a regular enchantment to counter their next three spells.</p>
+
+    <h3>Value Replenish</h3>
+    <p>You don't always need the full combo. I've won plenty of games by just getting back a single Decree mid-game to choke an opponent who has a hand full of expensive spells. Opal plus Wave by itself stabilizes against most creature boards.</p>
+
+    <h3>Protecting Your Board</h3>
+    <p>If someone casts Tranquil Domain or Wrath of God, you can respond with Wave (while Opal is on board) to exile your own enchantments. They come back fresh when Wave exits. If you have two Opalescences in play and they target one with removal, you can Wave the targeted one. It comes back as a new object and the removal fizzles.</p>
+
+    </Layout>

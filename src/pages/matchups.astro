@@ -1,0 +1,78 @@
+---
+import Layout from "@components/Layout.astro";
+import { Card, Badge, Grid } from "webcoreui/astro";
+---
+
+<Layout title="Matchups - Replenish Guide" prev={{ name: "Strategic Theory", href: "/strategy" }} next={{ name: "Resources & Conclusion", href: "/conclusion" }}>
+    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">Matchups</h1>
+
+    <h2>Matchups</h2>
+    <p style="font-size: 1.1rem; color: var(--w-color-primary-20); margin-bottom: 2rem;">These are based on my results across MTGO leagues and paper events since the ban.</p>
+
+    <h3 style="color: var(--w-color-success);">Dominant</h3>
+    
+    <h4>Enchantress</h4>
+    <p>The deck's best matchup. You assemble the Opal-Wave lock faster and more consistently than they do. If Enchantress is the best deck in the format, that's a great reason to play Replenish.</p>
+    <p><strong>Sideboard:</strong> Take out swords and webs to bring in seal, abeyance, arcane denial, and maybe the 4th mage.</p>
+
+    <h4>Elves</h4>
+    <p>Their whole board gets permanently exiled by Opal-Wave. Swords handles the key mana creatures early. They can be fast, but if you survive to combo they have no way back.</p>
+    <p><strong>Sideboard:</strong> Take out webs usually unless you see ports. You can trim on meddling mage if you need more space. Bring in seal and sword</p>
+
+    <h4>Rock and Midrange</h4>
+    <p>One-for-one trading can’t keep pace with Replenish refueling from the graveyard. They don’t have a strong clock to pressure you.</p>
+    <p><strong>Sideboard:</strong> Frantic searches usually come out here.</p>
+
+    <h3 style="color: var(--w-color-info); margin-top: 2rem;">Favorable</h3>
+
+    <h4>Sligh</h4>
+    <p>They can't interact with your combo, they can only race. Name Bolt with Mage to keep it alive as a Jackal Pup blocker. Late game, shift to naming Fireblast or Ball Lightning.</p>
+    <p><strong>Sideboard:</strong> Tombs out because the life loss is too much. Angels, Hydroblast, fourth Mage come in. Every sideboard card just needs to eat one of their cards. You're bridging to the combo, not trying to race them.</p>
+
+    <h4>Landstill</h4>
+    <p>Endpoint theory works here. Be patient, preserve your resources, and your last Replenish will resolve. I usually hard cast a few Decrees, but cycling Decree is an uncounterable cantrip that opponents consistently undervalue.</p>
+    <p>Post-board, you can jam Mage on turn 2 if you think the 2/2 body can get there, but without a hand that backs it up it rarely can. Look at your hand and ask what your turn 3 and turn 4 plays are. If there's no follow-up, wait until you have a plan for the next few turns before you start deploying spells. When you do play Mage, name whatever your hand can't already deal with. If your hand beats Counterspell, name their card draw. If you're setting up a combo turn and want them to waste time killing the Mage, name Counterspell. If you want the body to stick around, name Swords.</p>
+    <p><strong>Sideboard:</strong> Full transformation. Frantic, Wave, Intuition, excess Swords out. Grid, Angels, Abeyance, Arcane Denial, fourth Mage in. You become a midrange threat deck.</p>
+
+    <h4>Psychatog</h4>
+    <p>Similar to Landstill. Your threat density overwhelms their answers.</p>
+    <p><strong>Sideboard:</strong> Full control transformation. Grid, Angels, Abeyance, Denial, fourth Mage in.</p>
+
+    <h4>BW Control</h4>
+    <p>Their discard and removal can't keep up with Replenish refueling from the graveyard. Angel is strong post-board.</p>
+
+    <h4>RG Ponza</h4>
+    <p>Protect your mana base. Web is important for Port. Mages come out, Angels go in.</p>
+
+    <h3 style="color: var(--w-color-warning); margin-top: 2rem;">Competitive</h3>
+
+    <h4>Goblins</h4>
+    <p>The textbook two-angle deck. Mage can be bad here since it doesn't block Lackey well on the draw and it doesn't block Piledriver at all. This matchup comes down to surviving the first three turns.</p>
+    <p><strong>Sideboard:</strong> All Mages and Seals out. Hydroblast, Angels, fourth Swords, extra Web in. Destroying Lackey turn one is the highest-impact play.</p>
+
+    <h4>Terrageddon / Quiet Spec Oath</h4>
+    <p>Watch for Wayfarer, Sylvan Library, and Armageddon. Having a plan for Armageddon doesn't necessarily mean stopping it. Not playing more than three lands and saving extras in your hand is a plan. Playing Angel and getting ahead on board so they can't profitably cast Armageddon is a plan.</p>
+    <p><strong>Sideboard:</strong> Trim Wave, Opal, Attunement; remove all Mages. Angels, Seal, Denial, Web in.</p>
+
+    <h4>Stiflenought</h4>
+    <p>How you sideboard depends on what you think their configuration is. Do they have Factories? Are Dreadnoughts in their post-board plan or not? Do they have Brain Freeze? All of that changes your approach. The general direction is the control transformation, but the specific cards you trim depend on your read. This is a matchup where knowing your opponent matters more than following a guide.</p>
+    <p><strong>Sideboard:</strong> Grid, Angels, Abeyance in. Frantic, Intuition, some Waves, some Swords out.</p>
+
+    <h4>Mirror</h4>
+    <p>You’re mostly just racing. Getting out a seal to protect against their decree is important.</p>
+    <p><strong>Sideboard:</strong> Swords, Web, excess Mages, one Opal out. Grid, Abeyance, Seal, Denial in.</p>
+
+    <h4>Stasis</h4>
+    <p>Seal answers Stasis and Black Vise directly.</p>
+    <p><strong>Sideboard:</strong> Full transformation. Swords, Intuition, Waves, Web, Frantic out. Grid, Angels, Abeyance, Denial, Seal in.</p>
+
+    <h3 style="color: var(--w-color-danger); margin-top: 2rem;">Difficult</h3>
+
+    <h4>Devourer</h4>
+    <p>The deck’s worst common matchup. Devourer goldfish kills faster than you interact, and their combo is resilient to your disruption.</p>
+    <p><strong>Sideboard:</strong> Web and Swords out. Hydroblast, Mage, Seal, Denial in.</p>
+
+    <h4>Aggro with Armageddon</h4>
+    <p>Attacks life and mana simultaneously. Prioritize basics and early Swords.</p>
+
+    </Layout>

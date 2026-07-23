@@ -3,17 +3,31 @@ import { Sidebar } from "webcoreui/astro";
 
 const sidebarGroups = [
     {
-        title: "Empezando",
+        title: "Overview",
         items: [
-            { name: "Introducción", href: "/", icon: "info", active: true },
+            { name: "Introduction & History", href: "/", icon: "info", active: true },
         ],
     },
     {
-        title: "Estrategia",
+        title: "Deckbuilding",
         items: [
-            { name: "El Mazo", href: "/deck", icon: "order" },
-            { name: "Combos", href: "/combos", icon: "check" },
+            { name: "Card Analysis", href: "/analysis", icon: "file" },
+            { name: "Sideboard Guide", href: "/sideboard", icon: "bookmark" },
+            { name: "The Decklists", href: "/deck", icon: "order" },
+        ],
+    },
+    {
+        title: "Gameplay",
+        items: [
+            { name: "Combos & Mechanics", href: "/combos", icon: "check" },
+            { name: "Strategic Theory", href: "/strategy", icon: "info" },
             { name: "Matchups", href: "/matchups", icon: "alert" },
+        ],
+    },
+    {
+        title: "Wrapping Up",
+        items: [
+            { name: "Resources & Conclusion", href: "/conclusion", icon: "info" },
         ],
     },
 ];

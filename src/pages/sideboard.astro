@@ -1,0 +1,54 @@
+---
+import Layout from "@components/Layout.astro";
+import { Card, Badge, Grid } from "webcoreui/astro";
+---
+
+<Layout title="Sideboard Guide - Replenish Guide" prev={{ name: "Card Analysis", href: "/analysis" }} next={{ name: "The Decklists", href: "/deck" }}>
+    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">Sideboard Guide</h1>
+
+    <h2 style="margin-top: 2rem; font-size: 2rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">Sideboarding Principles</h2>
+    <h3>Transformation Against Control</h3>
+    <p>Against blue permission decks, you become a different deck. Frantic, Wave, Intuition, excess Swords all come out. Grid, Angels, Abeyance, Denial, fourth Mage go in. You're a midrange threat deck. If they sideboard to fight enchantments, they face Angels and Mages. If they respect the creatures, they face Replenish.</p>
+
+    <h3>Keeping Combo Against Aggro</h3>
+    <p>Against aggro the combo stays in. You swap interaction pieces. Seals come out when there aren't relevant targets.</p>
+
+    <h3>Mage Exits Against Green</h3>
+    <p>Against Rock, Ponza, and Terrageddon, Mages come out. Their creatures outclass a 2/2 and they don't depend on single spells Mage can name. Angels replace them.</p>
+
+    <h3>Exalted Angel Is the Default In</h3>
+    <p>Angel enters against every non-combo matchup: aggro, control, and midrange. It stays out against combo decks (Enchantress, the mirror, Elves) where diluting your own combo is too costly. If you’re unsure what to bring in against a non-combo deck, Angel is almost never wrong.</p>
+
+    <h3>Frantic Search Is the Default Cut</h3>
+    <p>Frantic exits primarily against control matchups where card disadvantage is punishing and discard heavy decks. Stays in against aggro and combo where velocity matters.</p>
+
+    <h2 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">Sideboard Card Analysis</h2>
+    <p><strong>Defense Grid (3)</strong><br />Comes in against every permission-heavy matchup. It sticks on the board, it comes down on a different turn than your threats, and it works with Decree cycling.</p>
+    <p><strong>Exalted Angel (3)</strong><br />I board this in more than any other card. It goes in against aggro, control, and midrange. Basically every non-combo matchup. It stays out against Enchantress, the mirror, and Elves where you can't afford to dilute your combo. Against Sligh, even playing it face-down as a morph blocker that eats a Lightning Bolt is fine. Against control, it demands totally different answers than your enchantments. Against Terrageddon, if you're ahead on board with an Angel, they often can't cast Armageddon.</p>
+    <p><strong>Abeyance (2)</strong><br />Protects your combo turn by shutting off their spells and non-mana abilities. Draws a card too. I bring it in against permission-heavy blue decks and in Opal-Wave combo matchups where disrupting one key turn is the difference.</p>
+    <p><strong>Arcane Denial (1)</strong><br />Better than it looks through card advantage math. By itself, Arcane Denial is a natural +1 for your opponent (their spell is -1, you give them two cards which is +2, net +1 to them). But context determines whether that +1 is acceptable. If your opponent casts Armageddon and it resolves, that’s a +3 for them—destroying multiple lands. Giving them +1 with Arcane Denial is far better than letting them get +3. Another scenario: you cast Replenish, they counter it. Your Replenish is going to give you more than +1, so giving your opponent +1 to resolve a Replenish is ok. The similar logic applies to a face-down morph that gets countered: Arcane Denial your own morph to draw three cards (+2 for you) rather than Arcane Denying their counterspell to save the morph (which gives them +1 - a worse trade). Think of the card this way and it always makes sense.<br /><br />Arcane Denial enters against combo decks that rely on resolving a single powerful spell (Replenish mirror, PandeBurst, Devourer) and against control when protecting a critical spell.</p>
+    <p><strong>Hydroblast (2)</strong><br />Only for Sligh and Goblins. Countering Lackey on turn one is the single biggest sideboard play against Goblins.</p>
+    <p><strong>Flex Slots (1 Mage / 1 Seal / 1 Swords / 1 Web)</strong><br />Additional copies of maindeck cards. Fourth Mage for blue matchups. Fourth Seal for Enchantress. Fourth Swords for creature matchups. Extra Web for utility lands.</p>
+
+    <h2 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">Playing Through Hate</h2>
+    <p>A lot of beating hate comes down to knowing what your opponent is likely to have and not walking into it. You don't need a specific sideboard card for every hate piece. You just need to adjust how you sequence your game.</p>
+    <p><strong>Withered Wretch (Black Aggro, Rock):</strong> Wretch is a real problem because it's repeatable and it's on a body that can attack you. If you know they have it, save your Swords for it. Don't use Swords on a random creature if you don’t have to and then lose because Wretch ate your graveyard. Prioritize removing it before you start committing enchantments to the yard.</p>
+    <p><strong>Tormod's Crypt and Phyrexian Furnace:</strong> The easy answer to both of these is an early Seal of Cleansing. But you can't always rely on having one, so knowing how to play through them matters.</p>
+    <p>Against Crypt, the key is not putting yourself in a position where a single crypt beats you. Don't just blindly dump your hand into the graveyard and hope they don't have it. Use Intuition on your opponent's end step the turn before you Replenish. When activating Attunement, don't discard too many combo pieces if you're not ready to Replenish yet. If they already have Crypt in play, one line that works well: set up Attunement on the battlefield and hold your combo pieces in hand. Then with a minimal graveyard - just enough that they'd want to Crypt - cast Replenish. They use Crypt in response, wiping your graveyard. But Replenish is still on the stack. Still in response to your own Replenish, activate Attunement and dump a fresh graveyard. Replenish resolves and brings back everything you just discarded.</p>
+    <p>Furnace is different because it only exiles one card at a time. Don't commit cards to the graveyard slowly — that just lets them pick off your best pieces one by one. If you're going to go for it, go for it all at once. Force them to make a choice about what one thing to remove. They can only get one card, and if the rest of your graveyard is good enough, Replenish still wins.</p>
+    <p><strong>Enchantment Removal (Tranquil Domain, Naturalize):</strong> Decree of Silence is the easiest answer. If you Replenish with Decree, they need to fight through three counters before they can touch your board. The Parallax Wave protection trick also helps - with Opal-Wave, you can Wave your own enchantments to safety and they come back fresh. Another winning line is getting two Opalescences on the board, since you can use one to protect the other. Post-board against heavy enchantment removal, the creature package gives them a completely different problem to solve.</p>
+    <p><strong>Meddling Mage:</strong> Be aware of which decks can have this post-board. If you expect it, keep some amount of removal available. Parallax Wave handles it, Swords works, and Wrath of God if you have it. One Meddling Mage doesn't lock you out if you know it's coming.</p>
+
+    <h2 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">The Sculpting Method</h2>
+    <p>I use this process before every tournament to finalize my 75. Start with a pool of 85-90 cards that you think could work in the deck, then carve away what doesn't fit the expected field.</p>
+    <ol style="padding-left: 1.25rem;">
+        <li><strong>Start Broad.</strong> 85–90 cards including variants and bullets.</li>
+        <li><strong>Assess the Meta.</strong> Goblins heavy? Wraths. Blue heavy? Grids and creatures.</li>
+        <li><strong>Prioritize Slots.</strong> Rank flex cards by standalone value and field impact.</li>
+        <li><strong>Cut Strategically.</strong> Remove cards that don’t serve at least two matchups.</li>
+        <li><strong>Finalize Sideboard.</strong> Transformative packages only if they address multiple matchups.</li>
+        <li><strong>Main vs. Side.</strong> Placement based on expected frequency.</li>
+    </ol>
+    <p><strong>The Creature Sideboard Package:</strong> Angel and Mage let you transform into a midrange deck after sideboarding. Your opponents face a bad choice: keep their enchantment hate and risk losing to creature beatdown, or cut it and risk losing to the combo. Either way their draws get worse.</p>
+
+    </Layout>
