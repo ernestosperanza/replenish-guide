@@ -24,24 +24,24 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     <p>Frantic exits primarily against control matchups where card disadvantage is punishing and discard heavy decks. Stays in against aggro and combo where velocity matters.</p>
 
     <h2 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">Sideboard Card Analysis</h2>
-    <CardAnalysis title="Defense Grid (3)" image="defense_grid.jpg">
+    <CardAnalysis title="Defense Grid (3)" image="artifacts/defense_grid.jpg">
         <p style="margin-top: 0;">Comes in against every permission-heavy matchup. It sticks on the board, it comes down on a different turn than your threats, and it works with Decree cycling.</p>
     </CardAnalysis>
 
-    <CardAnalysis title="Exalted Angel (3)" image="exalted_angel.jpg">
+    <CardAnalysis title="Exalted Angel (3)" image="creatures/exalted_angel.jpg">
         <p style="margin-top: 0;">I board this in more than any other card. It goes in against aggro, control, and midrange. Basically every non-combo matchup. It stays out against Enchantress, the mirror, and Elves where you can't afford to dilute your combo. Against Sligh, even playing it face-down as a morph blocker that eats a Lightning Bolt is fine. Against control, it demands totally different answers than your enchantments. Against Terrageddon, if you're ahead on board with an Angel, they often can't cast Armageddon.</p>
     </CardAnalysis>
 
-    <CardAnalysis title="Abeyance (2)" image="abeyance.jpg">
+    <CardAnalysis title="Abeyance (2)" image="instants/abeyance.jpg">
         <p style="margin-top: 0;">Protects your combo turn by shutting off their spells and non-mana abilities. Draws a card too. I bring it in against permission-heavy blue decks and in Opal-Wave combo matchups where disrupting one key turn is the difference.</p>
     </CardAnalysis>
 
-    <CardAnalysis title="Arcane Denial (1)" image="arcane_denial.jpg">
+    <CardAnalysis title="Arcane Denial (1)" image="instants/arcane_denial.jpg">
         <p style="margin-top: 0;">Better than it looks through card advantage math. By itself, Arcane Denial is a natural +1 for your opponent (their spell is -1, you give them two cards which is +2, net +1 to them). But context determines whether that +1 is acceptable. If your opponent casts Armageddon and it resolves, that’s a +3 for them—destroying multiple lands. Giving them +1 with Arcane Denial is far better than letting them get +3. Another scenario: you cast Replenish, they counter it. Your Replenish is going to give you more than +1, so giving your opponent +1 to resolve a Replenish is ok. The similar logic applies to a face-down morph that gets countered: Arcane Denial your own morph to draw three cards (+2 for you) rather than Arcane Denying their counterspell to save the morph (which gives them +1 - a worse trade). Think of the card this way and it always makes sense.</p>
         <p>Arcane Denial enters against combo decks that rely on resolving a single powerful spell (Replenish mirror, PandeBurst, Devourer) and against control when protecting a critical spell.</p>
     </CardAnalysis>
 
-    <CardAnalysis title="Hydroblast (2)" image="hydroblast.jpg">
+    <CardAnalysis title="Hydroblast (2)" image="instants/hydroblast.jpg">
         <p style="margin-top: 0;">Only for Sligh and Goblins. Countering Lackey on turn one is the single biggest sideboard play against Goblins.</p>
     </CardAnalysis>
 
@@ -49,13 +49,28 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     <p>Additional copies of maindeck cards. Fourth Mage for blue matchups. Fourth Seal for Enchantress. Fourth Swords for creature matchups. Extra Web for utility lands.</p>
 
     <h2 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">Playing Through Hate</h2>
-    <p>A lot of beating hate comes down to knowing what your opponent is likely to have and not walking into it. You don't need a specific sideboard card for every hate piece. You just need to adjust how you sequence your game.</p>
-    <p><strong>Withered Wretch (Black Aggro, Rock):</strong> Wretch is a real problem because it's repeatable and it's on a body that can attack you. If you know they have it, save your Swords for it. Don't use Swords on a random creature if you don’t have to and then lose because Wretch ate your graveyard. Prioritize removing it before you start committing enchantments to the yard.</p>
-    <p><strong>Tormod's Crypt and Phyrexian Furnace:</strong> The easy answer to both of these is an early Seal of Cleansing. But you can't always rely on having one, so knowing how to play through them matters.</p>
-    <p>Against Crypt, the key is not putting yourself in a position where a single crypt beats you. Don't just blindly dump your hand into the graveyard and hope they don't have it. Use Intuition on your opponent's end step the turn before you Replenish. When activating Attunement, don't discard too many combo pieces if you're not ready to Replenish yet. If they already have Crypt in play, one line that works well: set up Attunement on the battlefield and hold your combo pieces in hand. Then with a minimal graveyard - just enough that they'd want to Crypt - cast Replenish. They use Crypt in response, wiping your graveyard. But Replenish is still on the stack. Still in response to your own Replenish, activate Attunement and dump a fresh graveyard. Replenish resolves and brings back everything you just discarded.</p>
-    <p>Furnace is different because it only exiles one card at a time. Don't commit cards to the graveyard slowly — that just lets them pick off your best pieces one by one. If you're going to go for it, go for it all at once. Force them to make a choice about what one thing to remove. They can only get one card, and if the rest of your graveyard is good enough, Replenish still wins.</p>
-    <p><strong>Enchantment Removal (Tranquil Domain, Naturalize):</strong> Decree of Silence is the easiest answer. If you Replenish with Decree, they need to fight through three counters before they can touch your board. The Parallax Wave protection trick also helps - with Opal-Wave, you can Wave your own enchantments to safety and they come back fresh. Another winning line is getting two Opalescences on the board, since you can use one to protect the other. Post-board against heavy enchantment removal, the creature package gives them a completely different problem to solve.</p>
-    <p><strong>Meddling Mage:</strong> Be aware of which decks can have this post-board. If you expect it, keep some amount of removal available. Parallax Wave handles it, Swords works, and Wrath of God if you have it. One Meddling Mage doesn't lock you out if you know it's coming.</p>
+    <p style="margin-bottom: 2rem;">A lot of beating hate comes down to knowing what your opponent is likely to have and not walking into it. You don't need a specific sideboard card for every hate piece. You just need to adjust how you sequence your game.</p>
+    
+    <CardAnalysis title="Withered Wretch" image="creatures/withered_wretch.jpg">
+        <p style="margin-top: 0;"><strong>(Black Aggro, Rock)</strong> Wretch is a real problem because it's repeatable and it's on a body that can attack you. If you know they have it, save your Swords for it. Don't use Swords on a random creature if you don’t have to and then lose because Wretch ate your graveyard. Prioritize removing it before you start committing enchantments to the yard.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Tormod's Crypt" image="artifacts/tormods_crypt.jpg">
+        <p style="margin-top: 0;">The easy answer to this is an early Seal of Cleansing. But you can't always rely on having one, so knowing how to play through it matters.</p>
+        <p>Against Crypt, the key is not putting yourself in a position where a single crypt beats you. Don't just blindly dump your hand into the graveyard and hope they don't have it. Use Intuition on your opponent's end step the turn before you Replenish. When activating Attunement, don't discard too many combo pieces if you're not ready to Replenish yet. If they already have Crypt in play, one line that works well: set up Attunement on the battlefield and hold your combo pieces in hand. Then with a minimal graveyard - just enough that they'd want to Crypt - cast Replenish. They use Crypt in response, wiping your graveyard. But Replenish is still on the stack. Still in response to your own Replenish, activate Attunement and dump a fresh graveyard. Replenish resolves and brings back everything you just discarded.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Phyrexian Furnace" image="artifacts/phyrexian_furnace.jpg">
+        <p style="margin-top: 0;">Furnace is different because it only exiles one card at a time. Don't commit cards to the graveyard slowly — that just lets them pick off your best pieces one by one. If you're going to go for it, go for it all at once. Force them to make a choice about what one thing to remove. They can only get one card, and if the rest of your graveyard is good enough, Replenish still wins.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Tranquil Domain / Naturalize" image="instants/tranquil_domain.jpg">
+        <p style="margin-top: 0;"><strong>Enchantment Removal:</strong> Decree of Silence is the easiest answer. If you Replenish with Decree, they need to fight through three counters before they can touch your board. The Parallax Wave protection trick also helps - with Opal-Wave, you can Wave your own enchantments to safety and they come back fresh. Another winning line is getting two Opalescences on the board, since you can use one to protect the other. Post-board against heavy enchantment removal, the creature package gives them a completely different problem to solve.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Meddling Mage" image="creatures/meddling_mage.webp">
+        <p style="margin-top: 0;">Be aware of which decks can have this post-board. If you expect it, keep some amount of removal available. Parallax Wave handles it, Swords works, and Wrath of God if you have it. One Meddling Mage doesn't lock you out if you know it's coming.</p>
+    </CardAnalysis>
 
     <h2 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">The Sculpting Method</h2>
     <p>I use this process before every tournament to finalize my 75. Start with a pool of 85-90 cards that you think could work in the deck, then carve away what doesn't fit the expected field.</p>
