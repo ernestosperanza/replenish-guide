@@ -5,173 +5,343 @@ import DeckSection from "@components/DeckSection.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
 ---
 
-<Layout title="Lists - Replenish Guide" prev={{ name: "Sideboard", href: "/sideboard" }} next={{ name: "Mechanics", href: "/mechanics" }}>
-    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">Lists</h1>
-    <p style="font-size: 1.15rem; color: var(--w-color-primary-20); max-width: 650px; line-height: 1.6;">Below are two different configurations.</p>
-
-    <Grid column={2} gap="lg" style="margin-top: 2rem; margin-bottom: 3rem;">
-        <Card>
-            <h2 style="margin-top: 0; font-size: 1.5rem;">MTGO League 5-0</h2>
-            <div style="margin-bottom: 1.5rem;"><Badge theme="info" small={true}>March 19, 2026</Badge></div>
-            
-            <DeckSection title="Creatures" items={[
-                { count: 3, name: "Meddling Mage" }
-            ]} />
-
-            <DeckSection title="Combo / Engine" items={[
-                { count: 4, name: "Replenish" },
-                { count: 4, name: "Attunement" },
-                { count: 3, name: "Decree of Silence" },
-                { count: 4, name: "Opalescence" },
-                { count: 4, name: "Parallax Wave" }
-            ]} />
-
-            <DeckSection title="Card Selection" items={[
-                { count: 3, name: "Frantic Search" },
-                { count: 3, name: "Intuition" }
-            ]} />
-
-            <DeckSection title="Interaction" items={[
-                { count: 3, name: "Swords to Plowshares" },
-                { count: 3, name: "Seal of Cleansing" },
-                { count: 1, name: "Tsabo's Web" }
-            ]} />
-
-            <DeckSection title="Lands (25)" items={[
-                { count: 5, name: "Island" },
-                { count: 5, name: "Plains" },
-                { count: 4, name: "Adarkar Wastes" },
-                { count: 4, name: "Ancient Tomb" },
-                { count: 4, name: "Flooded Strand" },
-                { count: 3, name: "Skycloud Expanse" }
-            ]} />
-
-            <DeckSection title="Sideboard (15)" items={[
-                { count: 2, name: "Abeyance" },
-                { count: 1, name: "Arcane Denial" },
-                { count: 3, name: "Defense Grid" },
-                { count: 3, name: "Exalted Angel" },
-                { count: 2, name: "Hydroblast" },
-                { count: 1, name: "Meddling Mage" },
-                { count: 1, name: "Seal of Cleansing" },
-                { count: 1, name: "Swords to Plowshares" },
-                { count: 1, name: "Tsabo's Web" }
-            ]} />
-        </Card>
-
-        <Card>
-            <h2 style="margin-top: 0; font-size: 1.5rem;">Paper: 2nd Place</h2>
-            <div style="margin-bottom: 1.5rem;"><Badge theme="success" small={true}>NE Winter Regional (131 Players), Feb 21 2026</Badge></div>
-            
-            <DeckSection title="Creatures" items={[
-                { count: 3, name: "Meddling Mage" }
-            ]} />
-
-            <DeckSection title="Combo / Engine" items={[
-                { count: 4, name: "Replenish" },
-                { count: 4, name: "Attunement" },
-                { count: 2, name: "Decree of Silence" },
-                { count: 4, name: "Opalescence" },
-                { count: 4, name: "Parallax Wave" }
-            ]} />
-
-            <DeckSection title="Card Selection" items={[
-                { count: 3, name: "Frantic Search" },
-                { count: 3, name: "Intuition" }
-            ]} />
-
-            <DeckSection title="Interaction" items={[
-                { count: 3, name: "Swords to Plowshares" },
-                { count: 2, name: "Seal of Cleansing" },
-                { count: 3, name: "Tsabo's Web" }
-            ]} />
-
-            <DeckSection title="Lands (25)" items={[
-                { count: 5, name: "Island" },
-                { count: 5, name: "Plains" },
-                { count: 4, name: "Adarkar Wastes" },
-                { count: 4, name: "Ancient Tomb" },
-                { count: 4, name: "Flooded Strand" },
-                { count: 3, name: "Skycloud Expanse" }
-            ]} />
-
-            <DeckSection title="Sideboard (15)" items={[
-                { count: 2, name: "Abeyance" },
-                { count: 2, name: "Arcane Denial" },
-                { count: 3, name: "Defense Grid" },
-                { count: 3, name: "Exalted Angel" },
-                { count: 2, name: "Hydroblast" },
-                { count: 1, name: "Meddling Mage" },
-                { count: 1, name: "Seal of Cleansing" },
-                { count: 1, name: "Swords to Plowshares" }
-            ]} />
-        </Card>
-    </Grid>
+<Layout
+    title="Lists - Replenish Guide"
+    prev={{ name: "Sideboard", href: "/sideboard" }}
+    next={{ name: "Mechanics", href: "/mechanics" }}
+>
+    <h1 style="margin-top: 2rem; font-size: 3rem; letter-spacing: -0.02em;">
+        Lists
+    </h1>
+    <p
+        style="font-size: 1.15rem; color: var(--w-color-primary-20); max-width: 650px; line-height: 1.6;"
+    >
+        Below are four different configurations of Parallax Replenish, ranging
+        from stock modern builds to classic lists and experimental control
+        variants.
+    </p>
 
     <h2>Key Differences</h2>
     <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
-        <li style="margin-bottom: 0.5rem;"><strong>Decree of Silence (3 vs. 2):</strong> Three is relevant in situations where Replenish is likely to resolve and Opal+Wave does not necessarily mean an immediate win. Matchups like Sligh, the mirror, Enchantress, BW Control, and decks with Tranquil Domain fall into this category. You go down to two when the opposite is true: when Replenish is hard to resolve, or when resolving an Opal+Wave is enough to win the game by itself. In those situations, having fewer Decrees clogging up your hand is much better (especially since against control you side out discard outlets like Frantic Search anyway).</li>
-        <li style="margin-bottom: 0.5rem;"><strong>Seal of Cleansing (4 vs. 3 in the 75):</strong> Running four total is a luxury. It's gotten better with the rise of Aluren, the Replenish mirror, Enchantress, and other enchantment-heavy decks. Three in the 75 is the leaner option if those matchups are less common in your field.</li>
-        <li style="margin-bottom: 0.5rem;"><strong>Tsabo’s Web (3 vs. 2):</strong> The paper list ran three because my local region has a lot of Terrageddon and Port. Online, Terrageddon has been trending down, so the count is closer to two in the 75.</li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong>Decree of Silence (3 vs. 2):</strong> Three is relevant in situations
+            where Replenish is likely to resolve and Opal+Wave does not necessarily
+            mean an immediate win. Matchups like Sligh, the mirror, Enchantress, BW
+            Control, and decks with Tranquil Domain fall into this category. You go
+            down to two when the opposite is true: when Replenish is hard to resolve,
+            or when resolving an Opal+Wave is enough to win the game by itself. In
+            those situations, having fewer Decrees clogging up your hand is much better
+            (especially since against control you side out discard outlets like Frantic
+            Search anyway).
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong>Seal of Cleansing (4 vs. 3 in the 75):</strong> Running four total
+            is a luxury. It's gotten better with the rise of Aluren, the Replenish
+            mirror, Enchantress, and other enchantment-heavy decks. Three in the 75
+            is the leaner option if those matchups are less common in your field.
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong>Tsabo’s Web (3 vs. 2):</strong> Some lists run three because their
+            local region has a lot of Terrageddon and Port. Online, Terrageddon has
+            been trending down, so the count is closer to two in the 75 for most general
+            builds.
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <strong>Maindeck vs Sideboard Creatures:</strong> Bryan Gulotta's list
+            puts 4 Meddling Mages in the maindeck for proactive protection against
+            fast combo and control, while lists like Alessandro's keep them in the
+            sideboard to blank opposing removal Game 1.
+        </li>
     </ul>
 
-    <h2 style="margin-top: 4rem;">The Creatureless Control Shell (Experimental)</h2>
-    <p style="font-size: 1.15rem; color: var(--w-color-primary-20); max-width: 650px; line-height: 1.6;">A modern reimagining of the deck by Marine Biomancer, dropping the creature pivot entirely (0 creatures in the 75) to lean fully into a traditional control-combo role.</p>
-
-    <div style="margin-top: 2rem; margin-bottom: 3rem;">
+    <div
+        style="display: flex; flex-direction: column; gap: 3rem; margin-top: 2rem; margin-bottom: 3rem;"
+    >
+        {/* List 1: Alessandro Galli */}
         <Card>
-            <h2 style="margin-top: 0; font-size: 1.5rem;">Creatureless Replenish</h2>
-            <div style="margin-bottom: 1rem;"><Badge theme="warning" small={true}>Experimental (July 2026)</Badge></div>
-            
-            <p style="margin-top: 1rem; margin-bottom: 1rem;"><strong>Key Adjustments:</strong></p>
-            <ul style="padding-left: 1.25rem; margin-bottom: 1.5rem;">
-                <li style="margin-bottom: 0.5rem;"><strong>0 Seals Maindeck:</strong> Without Tide to combo with, Seal is weaker Game 1. They are moved to the sideboard to make room for more impactful maindeck cards.</li>
-                <li style="margin-bottom: 0.5rem;"><strong>3rd Decree of Silence:</strong> Required in the main to provide extra "meat" and closing power when you don't have Angels or Mages.</li>
-                <li style="margin-bottom: 0.5rem;"><strong>The Disenchant Split:</strong> In the sideboard, splitting 4 Seals into 2 Seal of Cleansing and 2 Disenchant. The instant speed of Disenchant is incredibly valuable, specifically for blowing out an opponent's Aura of Silence.</li>
-            </ul>
+            <h2 style="margin-top: 0; font-size: 1.5rem;">Alessandro Galli</h2>
+            <div style="margin-bottom: 1.5rem;">
+                <Badge theme="info" small={true}
+                    >4Seasons Spring Ed. @ Bologna (2026)</Badge
+                >
+            </div>
 
-            <DeckSection title="Example Decklist Framework" items={[
-                { count: 4, name: "Replenish" },
-                { count: 4, name: "Attunement" },
-                { count: 3, name: "Decree of Silence" },
-                { count: 4, name: "Opalescence" },
-                { count: 4, name: "Parallax Wave" },
-                { count: 3, name: "Frantic Search" },
-                { count: 3, name: "Intuition" },
-                { count: 4, name: "Swords to Plowshares" },
-                { count: 3, name: "Tsabo's Web" },
-                { count: 3, name: "Mana Leak" },
-                { count: 25, name: "Lands" }
-            ]} />
+            <Grid column={3} gap="lg">
+                <div>
+                    <DeckSection
+                        title="Combo / Engine"
+                        items={[
+                            { count: 4, name: "Replenish" },
+                            { count: 4, name: "Attunement" },
+                            { count: 4, name: "Opalescence" },
+                            { count: 4, name: "Parallax Wave" },
+                            { count: 3, name: "Decree of Silence" },
+                        ]}
+                    />
+
+                    <DeckSection
+                        title="Card Selection"
+                        items={[
+                            { count: 3, name: "Frantic Search" },
+                            { count: 3, name: "Intuition" },
+                        ]}
+                    />
+                </div>
+                <div>
+                    <DeckSection
+                        title="Interaction / Protection"
+                        items={[
+                            { count: 4, name: "Swords to Plowshares" },
+                            { count: 3, name: "Seal of Cleansing" },
+                            { count: 3, name: "Abeyance" },
+                        ]}
+                    />
+
+                    <DeckSection
+                        title="Lands (25)"
+                        items={[
+                            { count: 5, name: "Island" },
+                            { count: 5, name: "Plains" },
+                            { count: 4, name: "Adarkar Wastes" },
+                            { count: 4, name: "Ancient Tomb" },
+                            { count: 4, name: "Flooded Strand" },
+                            { count: 3, name: "Skycloud Expanse" },
+                        ]}
+                    />
+                </div>
+                <div>
+                    <DeckSection
+                        title="Sideboard (15)"
+                        items={[
+                            { count: 4, name: "Meddling Mage" },
+                            { count: 3, name: "Defense Grid" },
+                            { count: 3, name: "Hydroblast" },
+                            { count: 2, name: "Exalted Angel" },
+                            { count: 2, name: "Tsabo's Web" },
+                            { count: 1, name: "Seal of Cleansing" },
+                        ]}
+                    />
+                </div>
+            </Grid>
         </Card>
-    </Grid>
 
-    <h2 style="margin-top: 4rem;">Flavors of Replenish</h2>
-    <p style="font-size: 1.15rem; color: var(--w-color-primary-20); max-width: 650px; line-height: 1.6;">Like many of the format's great archetypes, Replenish isn't a monolith. The core engine is fixed, but the surrounding shell can be tuned drastically depending on your playstyle and expected metagame.</p>
-
-    <Grid column={3} gap="md" style="margin-bottom: 3rem;">
+        {/* List 2: Brian Siu */}
         <Card>
-            <h3 style="margin-top: 0;">1. Quad-Laser</h3>
-            <p>The purest combo approach. Focuses on speed and maxing out at 4 copies of every combo piece and cantrip (Frantic Search, Attunement).</p>
-            <p><strong>Pros:</strong> The absolute fastest version of the deck. Highly consistent in Game 1 and punishes any opponent who stumbles.</p>
-            <p><strong>Cons:</strong> Weaker against early hand disruption. Sideboard plans are often linear and easy for opponents to predict.</p>
-        </Card>
-        
-        <Card>
-            <h3 style="margin-top: 0;">2. Control Replenish</h3>
-            <p>Sacrifices raw speed to pack heavy interaction, such as Mana Leak, extra Swords to Plowshares, and Tsabo's Web.</p>
-            <p><strong>Pros:</strong> Excellent against aggressive and tempo decks. Doesn't rely 100% on the graveyard to stay alive.</p>
-            <p><strong>Cons:</strong> Leads to longer, more exhausting games. Managing mana between interaction and combo pieces is very demanding.</p>
+            <h2 style="margin-top: 0; font-size: 1.5rem;">Brian Siu</h2>
+            <div style="margin-bottom: 1.5rem;">
+                <Badge theme="success" small={true}
+                    >1st Place - NA Premodern Championship @ Lobstercon (2026)</Badge
+                >
+            </div>
+
+            <Grid column={3} gap="lg">
+                <div>
+                    <DeckSection
+                        title="Combo / Engine"
+                        items={[
+                            { count: 4, name: "Replenish" },
+                            { count: 4, name: "Attunement" },
+                            { count: 4, name: "Opalescence" },
+                            { count: 4, name: "Parallax Wave" },
+                            { count: 3, name: "Decree of Silence" },
+                        ]}
+                    />
+
+                    <DeckSection
+                        title="Card Selection"
+                        items={[
+                            { count: 3, name: "Frantic Search" },
+                            { count: 3, name: "Intuition" },
+                        ]}
+                    />
+                </div>
+                <div>
+                    <DeckSection
+                        title="Interaction / Protection"
+                        items={[
+                            { count: 4, name: "Swords to Plowshares" },
+                            { count: 2, name: "Mana Leak" },
+                            { count: 2, name: "Seal of Cleansing" },
+                            { count: 1, name: "Abeyance" },
+                        ]}
+                    />
+
+                    <DeckSection
+                        title="Lands (26)"
+                        items={[
+                            { count: 5, name: "Island" },
+                            { count: 5, name: "Plains" },
+                            { count: 4, name: "Adarkar Wastes" },
+                            { count: 4, name: "Ancient Tomb" },
+                            { count: 4, name: "Flooded Strand" },
+                            { count: 4, name: "Skycloud Expanse" },
+                        ]}
+                    />
+                </div>
+                <div>
+                    <DeckSection
+                        title="Sideboard (14)"
+                        items={[
+                            { count: 4, name: "Meddling Mage" },
+                            { count: 2, name: "Abeyance" },
+                            { count: 2, name: "Exalted Angel" },
+                            { count: 2, name: "Hydroblast" },
+                            { count: 2, name: "Seal of Cleansing" },
+                            { count: 2, name: "Tsabo's Web" },
+                        ]}
+                    />
+                </div>
+            </Grid>
         </Card>
 
+        {/* List 3: Bryan Gulotta */}
         <Card>
-            <h3 style="margin-top: 0;">3. Hybrid Replenish</h3>
-            <p>Cuts <em>Frantic Search</em> and <em>City of Traitors</em> for <em>Fact or Fiction</em> and a fully basic land-driven mana base.</p>
-            <p><strong>Pros:</strong> Massive instant-speed card advantage. A virtually unbreakable mana base that ignores Wasteland and Price of Progress.</p>
-            <p><strong>Cons:</strong> Noticeably less explosive on turns 2 and 3, which can be a liability against the fastest combo decks in the format.</p>
-        </Card>
-    </Grid>
+            <h2 style="margin-top: 0; font-size: 1.5rem;">Bryan Gulotta</h2>
+            <div style="margin-bottom: 1.5rem;">
+                <Badge theme="warning" small={true}
+                    >2nd Place - NA Premodern Championship @ Lobstercon (2026)</Badge
+                >
+            </div>
 
+            <Grid column={3} gap="lg">
+                <div>
+                    <DeckSection
+                        title="Creatures"
+                        items={[{ count: 4, name: "Meddling Mage" }]}
+                    />
+
+                    <DeckSection
+                        title="Combo / Engine"
+                        items={[
+                            { count: 4, name: "Replenish" },
+                            { count: 4, name: "Attunement" },
+                            { count: 4, name: "Opalescence" },
+                            { count: 4, name: "Parallax Wave" },
+                            { count: 2, name: "Decree of Silence" },
+                        ]}
+                    />
+                </div>
+                <div>
+                    <DeckSection
+                        title="Card Selection"
+                        items={[
+                            { count: 3, name: "Frantic Search" },
+                            { count: 3, name: "Intuition" },
+                        ]}
+                    />
+
+                    <DeckSection
+                        title="Interaction"
+                        items={[
+                            { count: 4, name: "Swords to Plowshares" },
+                            { count: 3, name: "Seal of Cleansing" },
+                        ]}
+                    />
+                </div>
+                <div>
+                    <DeckSection
+                        title="Lands (25)"
+                        items={[
+                            { count: 5, name: "Island" },
+                            { count: 5, name: "Plains" },
+                            { count: 4, name: "Adarkar Wastes" },
+                            { count: 4, name: "Ancient Tomb" },
+                            { count: 4, name: "Flooded Strand" },
+                            { count: 3, name: "Skycloud Expanse" },
+                        ]}
+                    />
+
+                    <DeckSection
+                        title="Sideboard (15)"
+                        items={[
+                            { count: 3, name: "Abeyance" },
+                            { count: 3, name: "Exalted Angel" },
+                            { count: 2, name: "Hydroblast" },
+                            { count: 2, name: "Tsabo's Web" },
+                            { count: 1, name: "Blue Elemental Blast" },
+                            { count: 1, name: "Nevinyrral's Disk" },
+                            { count: 1, name: "Seal of Cleansing" },
+                            { count: 1, name: "Sphere of Law" },
+                            { count: 1, name: "Wrath of God" },
+                        ]}
+                    />
+                </div>
+            </Grid>
+        </Card>
+
+        {/* List 4: Marinebiomancer */}
+        <Card>
+            <h2 style="margin-top: 0; font-size: 1.5rem;">Marinebiomancer</h2>
+            <div style="margin-bottom: 1.5rem;">
+                <Badge theme="alert" small={true}
+                    >Top 16 - New England Premodern Summer Regional (2026)</Badge
+                >
+            </div>
+
+            <Grid column={3} gap="lg">
+                <div>
+                    <DeckSection
+                        title="Combo / Engine"
+                        items={[
+                            { count: 4, name: "Replenish" },
+                            { count: 4, name: "Attunement" },
+                            { count: 4, name: "Opalescence" },
+                            { count: 4, name: "Parallax Wave" },
+                            { count: 2, name: "Decree of Silence" },
+                        ]}
+                    />
+
+                    <DeckSection
+                        title="Card Selection"
+                        items={[
+                            { count: 3, name: "Frantic Search" },
+                            { count: 3, name: "Intuition" },
+                            { count: 1, name: "Fact or Fiction" },
+                        ]}
+                    />
+                </div>
+                <div>
+                    <DeckSection
+                        title="Interaction / Protection"
+                        items={[
+                            { count: 4, name: "Swords to Plowshares" },
+                            { count: 2, name: "Abeyance" },
+                            { count: 2, name: "Mana Leak" },
+                            { count: 1, name: "Counterspell" },
+                        ]}
+                    />
+
+                    <DeckSection
+                        title="Lands (26)"
+                        items={[
+                            { count: 6, name: "Plains" },
+                            { count: 5, name: "Island" },
+                            { count: 4, name: "Adarkar Wastes" },
+                            { count: 4, name: "Ancient Tomb" },
+                            { count: 4, name: "Flooded Strand" },
+                            { count: 3, name: "Skycloud Expanse" },
+                        ]}
+                    />
+                </div>
+                <div>
+                    <DeckSection
+                        title="Sideboard (15)"
+                        items={[
+                            { count: 3, name: "Tsabo's Web" },
+                            { count: 2, name: "Blue Elemental Blast" },
+                            { count: 2, name: "Disenchant" },
+                            { count: 2, name: "Seal of Cleansing" },
+                            { count: 1, name: "Abeyance" },
+                            { count: 1, name: "Fact or Fiction" },
+                            { count: 1, name: "Hydroblast" },
+                            { count: 1, name: "Nevinyrral's Disk" },
+                            { count: 1, name: "Orim's Chant" },
+                            { count: 1, name: "Wrath of God" },
+                        ]}
+                    />
+                </div>
+            </Grid>
+        </Card>
+    </div>
     <DecklistTooltip />
-
 </Layout>

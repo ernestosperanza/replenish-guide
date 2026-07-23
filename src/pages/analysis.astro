@@ -14,14 +14,17 @@ import CardAnalysis from "@components/CardAnalysis.astro";
 
     <h2 style="margin-top: 3rem; margin-bottom: 2rem;">The Core</h2>
 
-    <CardAnalysis title="Replenish (4)" image="sorceries/replenish.jpg">
+    <CardAnalysis title="Replenish (4 main)" image="sorceries/replenish.jpg">
         <p style="margin-top: 0;">
             Always a four-of. The one card whose count has never been
             challenged.
         </p>
     </CardAnalysis>
 
-    <CardAnalysis title="Opalescence (4)" image="enchantments/opalescence.jpg">
+    <CardAnalysis
+        title="Opalescence (4 main)"
+        image="enchantments/opalescence.jpg"
+    >
         <p style="margin-top: 0;">
             Turns all other non-Aura enchantments into creatures based on mana
             value. Opalescence does not affect itself—you need two for each to
@@ -31,7 +34,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     </CardAnalysis>
 
     <CardAnalysis
-        title="Parallax Wave (4)"
+        title="Parallax Wave (4 main)"
         image="enchantments/parallax_wave.webp"
     >
         <p style="margin-top: 0;">
@@ -40,7 +43,10 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         </p>
     </CardAnalysis>
 
-    <CardAnalysis title="Attunement (4)" image="enchantments/attunement.jpg">
+    <CardAnalysis
+        title="Attunement (4 main)"
+        image="enchantments/attunement.jpg"
+    >
         <p style="margin-top: 0;">
             This is the glue. Digs three cards deep, fills the graveyard, and
             attacks as a 3/3 under Opalescence. It's also the most commonly
@@ -55,7 +61,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     <h2 style="margin-top: 3rem; margin-bottom: 2rem;">The Lock Piece</h2>
 
     <CardAnalysis
-        title="Decree of Silence (2–3)"
+        title="Decree of Silence (2-3 main)"
         image="enchantments/decree_of_silence.jpg"
     >
         <p style="margin-top: 0;">
@@ -85,7 +91,10 @@ import CardAnalysis from "@components/CardAnalysis.astro";
 
     <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Proactive Disruption</h2>
 
-    <CardAnalysis title="Meddling Mage" image="creatures/meddling_mage.webp">
+    <CardAnalysis
+        title="Meddling Mage (0-4 main)"
+        image="creatures/meddling_mage.webp"
+    >
         <p style="margin-top: 0;">
             I want four Mage total—whether they are main or side is metagaming.
             The move to maindeck happened preparing for a paper tournament: the
@@ -115,7 +124,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Card Selection</h2>
 
     <CardAnalysis
-        title="Frantic Search (3)"
+        title="Frantic Search (2-3 main)"
         image="instants/frantic_search.webp"
     >
         <p style="margin-top: 0;">
@@ -125,7 +134,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         </p>
     </CardAnalysis>
 
-    <CardAnalysis title="Intuition (3)" image="instants/intuition.webp">
+    <CardAnalysis title="Intuition (3-4 main)" image="instants/intuition.webp">
         <p style="margin-top: 0;">
             The most skill-testing card in the deck. Classic pile is
             Opalescence, Wave, Decree. Whatever they give you, the other two go
@@ -139,7 +148,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Interaction</h2>
 
     <CardAnalysis
-        title="Swords to Plowshares (3 main, 1 side)"
+        title="Swords to Plowshares (3-4 main, 0-1 side)"
         image="instants/swords_to_plowshares.webp"
     >
         <p style="margin-top: 0;">
@@ -160,7 +169,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     </CardAnalysis>
 
     <CardAnalysis
-        title="Tsabo’s Web (1-3 main, 1 side)"
+        title="Tsabo’s Web (0-3 main, 1-3 side)"
         image="artifacts/tsabos_web.jpg"
     >
         <p style="margin-top: 0;">
@@ -175,7 +184,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     >
         No Maindeck Mana Leak
     </h2>
-    <CardAnalysis title="Mana Leak" image="instants/mana_leak.webp">
+    <CardAnalysis title="Mana Leak (0-3 main)" image="instants/mana_leak.webp">
         <p style="margin-top: 0;">
             I cut Mana Leak because Landstill was the most popular control deck
             when I was building the list. Leak is bad in long games where they
@@ -218,15 +227,14 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         </p>
     </CardAnalysis>
 
-
     <h2
         style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;"
     >
         Mana Base Theory
     </h2>
     <p>
-        <strong>25 Lands</strong><br />I've tried 24 and 26. Twenty-five feels
-        right, though I wouldn’t fault anyone for 26.
+        <strong>25-26 Lands</strong><br />I've tried 24 and 26. Twenty-five
+        feels right, though I wouldn’t fault anyone for 26.
     </p>
     <div
         style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem; align-items: flex-start; flex-wrap: wrap;"
@@ -259,7 +267,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     </div>
 
     <CardAnalysis
-        title="Skycloud Expanse (3)"
+        title="Skycloud Expanse (3-4 main)"
         image="lands/skycloud_expanse.webp"
     >
         <p style="margin-top: 0;">
