@@ -1,0 +1,99 @@
+---
+---
+<div id="decklist-tooltip" style="display: none; position: fixed; z-index: 9999; pointer-events: none; width: 250px; border-radius: 4.75% / 3.5%; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+    <img id="decklist-tooltip-img" src="" alt="Card Preview" style="width: 100%; height: auto; display: block;" />
+</div>
+
+<script>
+    const initTooltips = () => {
+        const tooltip = document.getElementById('decklist-tooltip');
+        if (!tooltip) return;
+        const tooltipImg = document.getElementById('decklist-tooltip-img') as HTMLImageElement;
+        
+        // Cache for storing the oldest printing image URLs
+        const imageCache = new Map<string, string>();
+
+        // Function to find the oldest printing URL
+        const fetchOldestImageUrl = async (cardName: string) => {
+            if (imageCache.has(cardName)) return imageCache.get(cardName);
+            try {
+                const query = encodeURIComponent(`!"${cardName}"`);
+                const res = await fetch(`https://api.scryfall.com/cards/search?q=${query}&order=released&dir=asc`);
+                const data = await res.json();
+                if (data && data.data && data.data.length > 0 && data.data[0].image_uris) {
+                    const url = data.data[0].image_uris.normal;
+                    imageCache.set(cardName, url);
+                    return url;
+                }
+            } catch (e) {
+                console.error("Error fetching oldest printing for", cardName, e);
+            }
+            // Fallback to default named API if search fails
+            const fallbackUrl = `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(cardName)}&format=image`;
+            imageCache.set(cardName, fallbackUrl);
+            return fallbackUrl;
+        };
+
+        const handleMouseEnter = async (e: MouseEvent) => {
+            const target = e.currentTarget as HTMLElement;
+            const cardName = target.getAttribute('data-card-name');
+            if (cardName) {
+                tooltip.style.display = 'block';
+                tooltipImg.src = ''; // Clear previous image
+                
+                const url = await fetchOldestImageUrl(cardName);
+                if (tooltip.style.display === 'block') {
+                    tooltipImg.src = url!;
+                }
+            }
+        };
+
+        const handleMouseMove = (e: MouseEvent) => {
+            const xOffset = 15;
+            const yOffset = 15;
+            const tooltipWidth = 250;
+            const tooltipHeight = 350;
+            
+            let x = e.clientX + xOffset;
+            let y = e.clientY + yOffset;
+
+            if (x + tooltipWidth > window.innerWidth) {
+                x = e.clientX - tooltipWidth - xOffset;
+            }
+            if (y + tooltipHeight > window.innerHeight) {
+                y = e.clientY - tooltipHeight - yOffset;
+            }
+
+            tooltip.style.left = `${x}px`;
+            tooltip.style.top = `${y}px`;
+        };
+
+        const handleMouseLeave = () => {
+            tooltip.style.display = 'none';
+            tooltipImg.src = '';
+        };
+
+        const hoverItems = document.querySelectorAll('.card-hover');
+        hoverItems.forEach(item => {
+            item.addEventListener('mouseenter', handleMouseEnter);
+            item.addEventListener('mousemove', handleMouseMove);
+            item.addEventListener('mouseleave', handleMouseLeave);
+            
+            // Preload the URL in the background
+            const cardName = item.getAttribute('data-card-name');
+            if (cardName && !imageCache.has(cardName)) {
+                setTimeout(() => fetchOldestImageUrl(cardName), Math.random() * 2000);
+            }
+        });
+    };
+
+    // Run immediately since Astro module scripts execute deferred (after DOM parsing)
+    initTooltips();
+    
+    // Also run on Astro view transitions
+    document.addEventListener('astro:page-load', () => {
+        // Re-initialize if the tooltip element is lost
+        if (!document.getElementById('decklist-tooltip')) return;
+        initTooltips();
+    });
+</script>
