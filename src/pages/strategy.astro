@@ -209,13 +209,43 @@ import Layout from "@components/Layout.astro";
         <h4 style="margin-top: 1.5rem; color: var(--w-color-primary-20);">
             The Verdict
         </h4>
-        <p style="margin-bottom: 0;">
-            There is no absolute "right" answer, but this debate reveals a core
-            tension: Risk-averse players prefer to guarantee their land drops
-            and trust the math of their cantrips, while aggressive mulliganers
-            believe that with the weaker topdecks post-ban, you can no longer
-            afford to keep hands that don't proactively dictate the pace of the
-            game.
-        </p>
+        <p style="margin-bottom: 0;">There is no absolute "right" answer, but this debate reveals a core tension: Risk-averse players prefer to guarantee their land drops and trust the math of their cantrips, while aggressive mulliganers believe that with the weaker topdecks post-ban, you can no longer afford to keep hands that don't proactively dictate the pace of the game.</p>
     </div>
+
+    <h2 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">The Math Behind Replenish</h2>
+    <p>We can calculate the probability of finding a specific missing combo piece (e.g., Replenish) when casting our card selection spells using a hypergeometric calculator.</p>
+    <p>Assuming we are on the play and we cast our spell on Turn 3 (so we have drawn 9 cards total: 7 starting + 2 draw steps). There are 51 cards left in the deck.</p>
+    
+    <table style="width: 100%; text-align: left; border-collapse: collapse; margin-bottom: 1rem; background-color: var(--w-color-primary-95); border-radius: var(--w-sm-radius);">
+        <thead>
+            <tr style="border-bottom: 2px solid var(--w-color-primary-50);">
+                <th style="padding: 1rem;">Spell Cast</th>
+                <th style="padding: 1rem;">Cards Seen</th>
+                <th style="padding: 1rem;">Chance to find at least 1 of a 4-of</th>
+                <th style="padding: 1rem;">Chance to find at least 1 of a 3-of</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                <td style="padding: 1rem;"><strong>Frantic Search</strong></td>
+                <td style="padding: 1rem;">2</td>
+                <td style="padding: 1rem;">15.1%</td>
+                <td style="padding: 1rem;">11.4%</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                <td style="padding: 1rem;"><strong>Attunement</strong> (1 activation)</td>
+                <td style="padding: 1rem;">3</td>
+                <td style="padding: 1rem;">22.2%</td>
+                <td style="padding: 1rem;">16.9%</td>
+            </tr>
+            <tr>
+                <td style="padding: 1rem;"><strong>Fact or Fiction</strong></td>
+                <td style="padding: 1rem;">5</td>
+                <td style="padding: 1rem;">35.3%</td>
+                <td style="padding: 1rem;">27.3%</td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="margin-bottom: 4rem;">This is why keeping hands without any engine or cantrip is dangerous. A single Frantic Search only gives you a ~15% chance to find that one specific card you need to survive. The more you know these percentages, the better your in-game sequencing will be.</p>
+
 </Layout>

@@ -11,7 +11,84 @@ import Layout from "@components/Layout.astro";
         Matchups
     </h1>
 
-    <h2>Matchups</h2>
+    <h2>Lobstercon 2026 Sideboard Matrix</h2>
+    <p>A quick-reference guide based on the Lobstercon 2026 sideboard strategies:</p>
+
+    <div style="overflow-x: auto; margin-bottom: 4rem;">
+        <table style="width: 100%; text-align: left; border-collapse: collapse; background-color: var(--w-color-primary-95); border-radius: var(--w-sm-radius);">
+            <thead>
+                <tr style="border-bottom: 2px solid var(--w-color-primary-50);">
+                    <th style="padding: 1rem;">Matchup</th>
+                    <th style="padding: 1rem;">In</th>
+                    <th style="padding: 1rem;">Out</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>Replenish (Mirror)</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 Meddling Mage</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>Terrageddon</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+2 Exalted Angel<br/>+1 Wrath of God<br/>+1 Seal of Cleansing</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Meddling Mage</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>Elves</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+1 Seal of Cleansing<br/>+1 Wrath of God<br/>+1 Nevinyrral's Disk</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 Meddling Mage</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>Enchantress</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance<br/>+1 Seal of Cleansing<br/>+1 Nevinyrral's Disk</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Swords to Plowshares<br/>-1 Meddling Mage</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>Moneyball Black</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+2 Exalted Angel</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-2 Meddling Mage</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>HFEB</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-1 Frantic Search<br/>-2 Decree of Silence</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>Stiflenought</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance<br/>+3 Exalted Angel<br/>+1 Seal of Cleansing</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-2 Frantic Search<br/>-3 Attunement<br/>-2 Intuition</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>Stasis</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance<br/>+1 Seal of Cleansing</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Swords to Plowshares</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>PitRack</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+1 Seal of Cleansing<br/>+2 Tsabo's Web<br/>+1 Nevinyrral's Disk<br/>+2 Exalted Angel</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Meddling Mage<br/>-2 Decree of Silence</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>Landstill</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Tsabo's Web<br/>+3 Abeyance<br/>+1 Seal of Cleansing<br/>+2 Exalted Angel</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Meddling Mage<br/>-3 Swords to Plowshares<br/>-1 Frantic Search<br/>-1 Intuition</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
+                    <td style="padding: 1rem;"><strong>Psychatog</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Abeyance<br/>+3 Exalted Angel</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-3 Seal of Cleansing<br/>-2 Frantic Search<br/>-2 Intuition<br/>-1 Attunement</td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem;"><strong>Goblins</strong></td>
+                    <td style="padding: 1rem; color: var(--w-color-success);">+3 Hydroblast / BEB<br/>+1 Wrath of God<br/>+1 Nevinyrral's Disk<br/>+3 Exalted Angel</td>
+                    <td style="padding: 1rem; color: var(--w-color-danger);">-4 Meddling Mage<br/>-3 Seal of Cleansing<br/>-1 Intuition</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Matchups Analysis</h2>
     <p
         style="font-size: 1.1rem; color: var(--w-color-primary-20); margin-bottom: 2rem;"
     >

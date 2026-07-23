@@ -110,7 +110,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 
     <h2>Key Differences</h2>
     <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
-        <li style="margin-bottom: 0.5rem;"><strong>Decree of Silence (3 vs. 2):</strong> You want more Decrees when the field is diverse or combo-heavy. Discarding Decree and Replenishing it back is a reliable game-ender even without the full combo. I went to two for the paper list because against control, you cut Frantic Search and Intuition post-board, so you can't reliably discard an eight-mana enchantment. The third copy becomes a liability in those matchups.</li>
+        <li style="margin-bottom: 0.5rem;"><strong>Decree of Silence (3 vs. 2):</strong> Three is relevant in situations where Replenish is likely to resolve and Opal+Wave does not necessarily mean an immediate win. Matchups like Sligh, the mirror, Enchantress, BW Control, and decks with Tranquil Domain fall into this category. You go down to two when the opposite is true: when Replenish is hard to resolve, or when resolving an Opal+Wave is enough to win the game by itself. In those situations, having fewer Decrees clogging up your hand is much better (especially since against control you side out discard outlets like Frantic Search anyway).</li>
         <li style="margin-bottom: 0.5rem;"><strong>Seal of Cleansing (4 vs. 3 in the 75):</strong> Running four total is a luxury. It's gotten better with the rise of Aluren, the Replenish mirror, Enchantress, and other enchantment-heavy decks. Three in the 75 is the leaner option if those matchups are less common in your field.</li>
         <li style="margin-bottom: 0.5rem;"><strong>Tsabo’s Web (3 vs. 2):</strong> The paper list ran three because my local region has a lot of Terrageddon and Port. Online, Terrageddon has been trending down, so the count is closer to two in the 75.</li>
     </ul>
@@ -143,6 +143,32 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                 { count: 3, name: "Mana Leak" },
                 { count: 25, name: "Lands" }
             ]} />
+        </Card>
+    </Grid>
+
+    <h2 style="margin-top: 4rem;">Flavors of Replenish</h2>
+    <p style="font-size: 1.15rem; color: var(--w-color-primary-20); max-width: 650px; line-height: 1.6;">Like many of the format's great archetypes, Replenish isn't a monolith. The core engine is fixed, but the surrounding shell can be tuned drastically depending on your playstyle and expected metagame.</p>
+
+    <Grid column={3} gap="md" style="margin-bottom: 3rem;">
+        <Card>
+            <h3 style="margin-top: 0;">1. Quad-Laser</h3>
+            <p>The purest combo approach. Focuses on speed and maxing out at 4 copies of every combo piece and cantrip (Frantic Search, Attunement).</p>
+            <p><strong>Pros:</strong> The absolute fastest version of the deck. Highly consistent in Game 1 and punishes any opponent who stumbles.</p>
+            <p><strong>Cons:</strong> Weaker against early hand disruption. Sideboard plans are often linear and easy for opponents to predict.</p>
+        </Card>
+        
+        <Card>
+            <h3 style="margin-top: 0;">2. Control Replenish</h3>
+            <p>Sacrifices raw speed to pack heavy interaction, such as Mana Leak, extra Swords to Plowshares, and Tsabo's Web.</p>
+            <p><strong>Pros:</strong> Excellent against aggressive and tempo decks. Doesn't rely 100% on the graveyard to stay alive.</p>
+            <p><strong>Cons:</strong> Leads to longer, more exhausting games. Managing mana between interaction and combo pieces is very demanding.</p>
+        </Card>
+
+        <Card>
+            <h3 style="margin-top: 0;">3. Hybrid Replenish</h3>
+            <p>Cuts <em>Frantic Search</em> and <em>City of Traitors</em> for <em>Fact or Fiction</em> and a fully basic land-driven mana base.</p>
+            <p><strong>Pros:</strong> Massive instant-speed card advantage. A virtually unbreakable mana base that ignores Wasteland and Price of Progress.</p>
+            <p><strong>Cons:</strong> Noticeably less explosive on turns 2 and 3, which can be a liability against the fastest combo decks in the format.</p>
         </Card>
     </Grid>
 
