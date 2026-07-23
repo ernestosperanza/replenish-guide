@@ -1,6 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import { Card, Badge, Grid } from "webcoreui/astro";
+import CardAnalysis from "@components/CardAnalysis.astro";
 ---
 
 <Layout title="Sideboard Guide - Replenish Guide" prev={{ name: "Card Analysis", href: "/analysis" }} next={{ name: "The Decklists", href: "/deck" }}>
@@ -23,12 +24,29 @@ import { Card, Badge, Grid } from "webcoreui/astro";
     <p>Frantic exits primarily against control matchups where card disadvantage is punishing and discard heavy decks. Stays in against aggro and combo where velocity matters.</p>
 
     <h2 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">Sideboard Card Analysis</h2>
-    <p><strong>Defense Grid (3)</strong><br />Comes in against every permission-heavy matchup. It sticks on the board, it comes down on a different turn than your threats, and it works with Decree cycling.</p>
-    <p><strong>Exalted Angel (3)</strong><br />I board this in more than any other card. It goes in against aggro, control, and midrange. Basically every non-combo matchup. It stays out against Enchantress, the mirror, and Elves where you can't afford to dilute your combo. Against Sligh, even playing it face-down as a morph blocker that eats a Lightning Bolt is fine. Against control, it demands totally different answers than your enchantments. Against Terrageddon, if you're ahead on board with an Angel, they often can't cast Armageddon.</p>
-    <p><strong>Abeyance (2)</strong><br />Protects your combo turn by shutting off their spells and non-mana abilities. Draws a card too. I bring it in against permission-heavy blue decks and in Opal-Wave combo matchups where disrupting one key turn is the difference.</p>
-    <p><strong>Arcane Denial (1)</strong><br />Better than it looks through card advantage math. By itself, Arcane Denial is a natural +1 for your opponent (their spell is -1, you give them two cards which is +2, net +1 to them). But context determines whether that +1 is acceptable. If your opponent casts Armageddon and it resolves, that’s a +3 for them—destroying multiple lands. Giving them +1 with Arcane Denial is far better than letting them get +3. Another scenario: you cast Replenish, they counter it. Your Replenish is going to give you more than +1, so giving your opponent +1 to resolve a Replenish is ok. The similar logic applies to a face-down morph that gets countered: Arcane Denial your own morph to draw three cards (+2 for you) rather than Arcane Denying their counterspell to save the morph (which gives them +1 - a worse trade). Think of the card this way and it always makes sense.<br /><br />Arcane Denial enters against combo decks that rely on resolving a single powerful spell (Replenish mirror, PandeBurst, Devourer) and against control when protecting a critical spell.</p>
-    <p><strong>Hydroblast (2)</strong><br />Only for Sligh and Goblins. Countering Lackey on turn one is the single biggest sideboard play against Goblins.</p>
-    <p><strong>Flex Slots (1 Mage / 1 Seal / 1 Swords / 1 Web)</strong><br />Additional copies of maindeck cards. Fourth Mage for blue matchups. Fourth Seal for Enchantress. Fourth Swords for creature matchups. Extra Web for utility lands.</p>
+    <CardAnalysis title="Defense Grid (3)" image="defense_grid.jpg">
+        <p style="margin-top: 0;">Comes in against every permission-heavy matchup. It sticks on the board, it comes down on a different turn than your threats, and it works with Decree cycling.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Exalted Angel (3)" image="exalted_angel.jpg">
+        <p style="margin-top: 0;">I board this in more than any other card. It goes in against aggro, control, and midrange. Basically every non-combo matchup. It stays out against Enchantress, the mirror, and Elves where you can't afford to dilute your combo. Against Sligh, even playing it face-down as a morph blocker that eats a Lightning Bolt is fine. Against control, it demands totally different answers than your enchantments. Against Terrageddon, if you're ahead on board with an Angel, they often can't cast Armageddon.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Abeyance (2)" image="abeyance.jpg">
+        <p style="margin-top: 0;">Protects your combo turn by shutting off their spells and non-mana abilities. Draws a card too. I bring it in against permission-heavy blue decks and in Opal-Wave combo matchups where disrupting one key turn is the difference.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Arcane Denial (1)" image="arcane_denial.jpg">
+        <p style="margin-top: 0;">Better than it looks through card advantage math. By itself, Arcane Denial is a natural +1 for your opponent (their spell is -1, you give them two cards which is +2, net +1 to them). But context determines whether that +1 is acceptable. If your opponent casts Armageddon and it resolves, that’s a +3 for them—destroying multiple lands. Giving them +1 with Arcane Denial is far better than letting them get +3. Another scenario: you cast Replenish, they counter it. Your Replenish is going to give you more than +1, so giving your opponent +1 to resolve a Replenish is ok. The similar logic applies to a face-down morph that gets countered: Arcane Denial your own morph to draw three cards (+2 for you) rather than Arcane Denying their counterspell to save the morph (which gives them +1 - a worse trade). Think of the card this way and it always makes sense.</p>
+        <p>Arcane Denial enters against combo decks that rely on resolving a single powerful spell (Replenish mirror, PandeBurst, Devourer) and against control when protecting a critical spell.</p>
+    </CardAnalysis>
+
+    <CardAnalysis title="Hydroblast (2)" image="hydroblast.jpg">
+        <p style="margin-top: 0;">Only for Sligh and Goblins. Countering Lackey on turn one is the single biggest sideboard play against Goblins.</p>
+    </CardAnalysis>
+
+    <h3 style="margin-top: 3rem;">Flex Slots (1 Mage / 1 Seal / 1 Swords / 1 Web)</h3>
+    <p>Additional copies of maindeck cards. Fourth Mage for blue matchups. Fourth Seal for Enchantress. Fourth Swords for creature matchups. Extra Web for utility lands.</p>
 
     <h2 style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;">Playing Through Hate</h2>
     <p>A lot of beating hate comes down to knowing what your opponent is likely to have and not walking into it. You don't need a specific sideboard card for every hate piece. You just need to adjust how you sequence your game.</p>
