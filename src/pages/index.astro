@@ -5,217 +5,74 @@ import { Grid, Card } from "webcoreui/astro";
 
 <Layout
     title="Introduction - Replenish Guide"
-    next={{ name: "Maindeck", href: "/analysis" }}
+    next={{ name: "History", href: "/history" }}
 >
     <div>
-        <h1
-            style="margin-top: 2rem; margin-bottom: 0.25rem; font-size: 3rem; letter-spacing: -0.02em;"
-        >
+        <h1 style="margin-top: 2rem; margin-bottom: 0.25rem; font-size: 3rem; letter-spacing: -0.02em;">
             Replenish Guide
         </h1>
 
-        <p
-            style="margin-top: 0; margin-bottom: 1rem; font-size: 1.15rem; color: var(--w-color-primary-20); max-width: 650px; line-height: 1.6;"
-        >
-            The definitive guide focused on reading, visual clarity, and speed.
-            Master every line of play with our optimized interface.
+        <p style="font-size: 1.25rem; color: var(--w-color-primary-20); margin-top: 1rem; line-height: 1.6;">
+            <strong>DON'T PANIC.</strong><br/>
+            Welcome, weary traveler. What you are looking at is the mostly harmless, yet wholly definitive guide to playing the Replenish deck in the Premodern format. This compendium is an expanded, interactive adaptation of the <a href="https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu" target="_blank" style="color: var(--w-color-primary-20); text-decoration: underline;">excellent primer</a> originally penned by <strong>Brian Siu (Dr Siuss)</strong>. It has been redesigned and upgraded to serve as your ultimate resource—so grab your towel, ensure your tray table is securely stowed, and let's cheat some enchantments into play.
         </p>
-        <figure
-            style="margin: 0 auto; margin-bottom: 2rem; display: flex; flex-direction: column; align-items: center;"
-        >
-            <img
-                src="/images/replenish.webp"
-                alt="Replenish"
-                style="max-width: 100%; height: auto; max-height: 600px; border-radius: var(--w-lg-radius); border: 1px solid var(--w-color-primary-50);"
-            />
-            <figcaption
-                style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--w-color-primary-30); text-align: center; font-style: italic;"
-            >
+
+        <figure style="margin: 3rem auto; display: flex; flex-direction: column; align-items: center;">
+            <img src="/images/replenish.webp" alt="Replenish" style="max-width: 100%; height: auto; max-height: 600px; border-radius: var(--w-lg-radius); border: 1px solid var(--w-color-primary-50);" />
+            <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--w-color-primary-30); text-align: center; font-style: italic;">
                 Replenish by Jim Nelson
             </figcaption>
         </figure>
     </div>
 
-    <div
-        style="margin: 2rem 0; padding: 1.5rem; background-color: var(--w-color-primary-80); border-left: 4px solid var(--w-color-primary-40); border-radius: 4px;"
-    >
-        <p
-            style="margin: 0; font-size: 1.05rem; line-height: 1.5; color: var(--w-color-primary-20);"
-        >
-            <strong>Acknowledgments:</strong> This website is an expanded, interactive
-            adaptation of the original Replenish Primer written by <strong
-                >Brian Siu (Dr Siuss)</strong
-            >. Huge thanks to Brian for allowing his work to be the foundation
-            of this project. You can read his original primer at <a
-                href="https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu"
-                target="_blank"
-                style="color: var(--w-color-primary-20); text-decoration: underline;"
-                >Squee's House of Pizza</a
-            >.
+    <h2>What is Replenish?</h2>
+    <p>
+        <strong>Replenish</strong> is a combo-control archetype in Premodern Magic: The Gathering that leverages its namesake card to cheat powerful, high-cost enchantments into play directly from the graveyard. The primary game plan is simple in concept: fill your graveyard using card selection engines like <strong>Attunement</strong> and <strong>Frantic Search</strong>, and then cast a single <strong>Replenish</strong> to return them all to the battlefield at once for just four mana.
+    </p>
+    
+    <div style="margin: 2rem 0; padding: 1.5rem; background-color: var(--w-color-primary-80); border-left: 4px solid var(--w-color-info); border-radius: 4px;">
+        <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.25rem;">The Core Combo: The Wave Lock</h3>
+        <p style="margin-bottom: 0.75rem;">The deck's primary win condition revolves around a devastating synergy between two cards:</p>
+        <ul style="padding-left: 1.25rem; margin-bottom: 0;">
+            <li style="margin-bottom: 0.5rem;"><strong>Opalescence:</strong> Turns all of your non-Aura enchantments into creatures with power and toughness equal to their mana value.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Parallax Wave:</strong> Normally used to temporarily exile up to five creatures. However, because Opalescence turns Wave into a creature, <em>it can target itself</em>.</li>
+        </ul>
+        <p style="margin-top: 0.75rem; margin-bottom: 0;">
+            By stacking exile triggers targeting your opponent's board and then using the final counter to exile the Parallax Wave itself, the Wave leaves play <em>before</em> its earlier triggers resolve. Due to old rules text, this severs the return trigger—meaning your opponent's creatures are exiled permanently, while your Wave returns to the battlefield with 5 fresh counters. Add a <strong>Decree of Silence</strong> to this loop, and you can counter every spell your opponent tries to cast. That's the lock.
         </p>
     </div>
 
-    <h2>Introduction and History</h2>
-    <p>
-        Replenish is a combo-control archetype in Premodern Magic: The Gathering
-        that leverages the namesake card Replenish to cheat enchantments into
-        play from the graveyard. The deck’s lineage traces back to Standard of
-        the early 2000s. In Premodern, Replenish has sustained a resurgence as a
-        powerful and flexible strategy tunable toward aggressive combo kills,
-        grinding midrange play, or long-game control.
+    <h2>Why Replenish?</h2>
+    <p style="font-size: 1.15rem; color: var(--w-color-primary-20); line-height: 1.6;">
+        If you are looking for a deck capable of explosive, unfair Turn-4 combo kills, but that can simultaneously grind through long, grueling control matchups with heavy interaction and card advantage, Replenish is the deck for you.
     </p>
-    <p>
-        A critical rules change elevated the deck: the removal of old errata on
-        the Parallax cards. After errata was reversed to match the printed
-        cards, Parallax Wave and Parallax Tide now create delayed triggered
-        abilities. If a Wave or Tide leaves play before the removal abilities
-        resolve, the return trigger is severed—permanently exiling creatures or
-        lands. Paired with Opalescence, this supercharged the deck’s combo
-        lines.
-    </p>
-
-    <h2>The Parallax Tide Ban (January 2026)</h2>
-    <p>
-        On January 18, 2026, format curator Martin Berlin banned Parallax Tide.
-        Thirty percent of top-8 decks across major 2025 tournaments were
-        Tide-based archetypes. Replenish posted a 59.5% win rate in 2025—and
-        when filtered against top-tier competition, it led the format at 54.9%.
-    </p>
-    <p>
-        The community wrote Replenish off. The prevailing take: without Tide’s
-        one-sided Armageddon, Replenish was a worse Enchantress.
-    </p>
-    <p>
-        Those predictions have not held up. For me, over 248 post-ban matches,
-        the deck has maintained a 72.3% win rate across the full metagame. On
-        MTGO, Replenish has one of the most 5-0 league finishes. At the
-        131-player Duress Crew New England Winter Regional - one of the first
-        major paper events post-ban - Replenish placed 1st and 2nd, with three
-        copies in the top 8.
-    </p>
-
-    <h2>Game Plan</h2>
-    <p>
-        The deck runs enchantments that are powerful but expensive. The primary
-        plan is to discard them to cards like Attunement and Frantic Search,
-        then cast Replenish to put them all onto the battlefield at once for
-        four mana. But the deck can also just hard cast its enchantments
-        naturally. Sometimes you win games without ever casting Replenish — you
-        just deploy your pieces one at a time as you hit your land drops. That's
-        more of a Plan B, but it comes up more often than people think, and it's
-        part of what makes the deck resilient. Opponents who focus all their
-        disruption on your graveyard can lose to a normally cast Opalescence
-        into a normally cast Wave.
-    </p>
-    <p>
-        The key combo is Opalescence plus Parallax Wave. Opalescence turns your
-        enchantments into creatures. Parallax Wave can exile creatures by
-        removing fading counters from itself. Since Wave is now a creature
-        thanks to Opalescence, it can target itself. You stack a bunch of exile
-        triggers targeting your opponent's creatures, then exile Wave with its
-        last counter. Wave leaves play, comes back as a new object with fresh
-        counters, and the exile triggers resolve — permanently removing those
-        creatures because the Wave that exiled them no longer exists. Add Decree
-        of Silence to that board and your opponent can't cast spells either.
-        That's the lock.
-    </p>
-    <p>
-        Everything else in the deck supports getting there. Swords to Plowshares
-        buys time against early creatures. Intuition finds missing combo pieces.
-        Meddling Mage disrupts opponents while you set up.
-    </p>
-    <p>
-        The real strength of this deck is that it's not just a combo deck.
-        Depending on the matchup, you might play it as a control deck, a
-        midrange deck, or a creature-based beatdown deck after sideboarding.
-        Meddling Mage adds another dimension to this. You can be proactive from
-        turn two in ways that most opponents don't expect from an enchantment
-        combo deck.
-    </p>
+    <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
+        <li style="margin-bottom: 0.5rem;">You enjoy combo decks that require careful setup, patience, and reward you with an explosive payoff.</li>
+        <li style="margin-bottom: 0.5rem;">You appreciate intricate sequencing, deep decision trees, and the puzzle of navigating to victory from complex board states.</li>
+        <li style="margin-bottom: 0.5rem;">You want a highly adaptable deck that seamlessly pivots between combo, control, and midrange roles depending on the matchup.</li>
+        <li style="margin-bottom: 0.5rem;">You want to punish metagames heavily skewed towards Enchantress, Midrange, or Aggro.</li>
+    </ul>
 
     <h2>Strengths and Weaknesses</h2>
     <Grid column={2} gap="md" style="margin-top: 1.5rem; margin-bottom: 2rem;">
         <Card>
-            <h3 style="margin-top: 0; color: var(--w-color-success);">
-                Strengths
-            </h3>
+            <h3 style="margin-top: 0; color: var(--w-color-success);">Strengths</h3>
             <ul style="padding-left: 1.25rem;">
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Explosive wins:</strong> A single Replenish assembling
-                    Opal-Wave-Decree ends the game.
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Role flexibility:</strong> Combo, control, or midrange
-                    depending on matchup. Meddling Mage adds proactive disruption.
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Dominant against the field’s pillars:</strong> Enchantress,
-                    midrange, creature strategies, and even most control decks are
-                    favorable.
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Post-ban positioning:</strong> Your opponents don't have
-                    Tide against you anymore either, which frees up a lot of deckbuilding
-                    space.
-                </li>
+                <li style="margin-bottom: 0.5rem;"><strong>Explosive Wins:</strong> A single resolved Replenish assembling the Opal-Wave-Decree lock usually ends the game on the spot.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Role Flexibility:</strong> It can play as combo, control, or midrange depending on the matchup. Tools like Meddling Mage provide excellent proactive disruption.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Dominant Matchups:</strong> Highly favored against the format's pillars, including Enchantress, midrange piles, creature strategies, and most control variants.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Post-Ban Positioning:</strong> With Parallax Tide banned, opponents no longer have access to it either, freeing up significant deckbuilding space for your own answers.</li>
             </ul>
         </Card>
 
         <Card>
-            <h3 style="margin-top: 0; color: var(--w-color-danger);">
-                Weaknesses
-            </h3>
+            <h3 style="margin-top: 0; color: var(--w-color-danger);">Weaknesses</h3>
             <ul style="padding-left: 1.25rem;">
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Graveyard dependence:</strong> Vulnerable to Tormod’s
-                    Crypt, Phyrexian Furnace, Planar Void. The creature sideboard
-                    mitigates this.
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Multi-axis aggression:</strong> If a deck is attacking
-                    you from two angles at once, that's where things get hard. A clock
-                    plus mana denial, or aggro plus counters. You need the right half
-                    of your deck and there's no time to fix a bad draw.
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Fast unfair combo:</strong> Decks like Devourer that goldfish
-                    faster than you can interact are structurally difficult.
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Mana hungry:</strong> Everything important costs three
-                    or four mana. You have to survive to turn three before your card
-                    selection comes online.
-                </li>
+                <li style="margin-bottom: 0.5rem;"><strong>Graveyard Dependence:</strong> Inherently vulnerable to hate pieces like Tormod's Crypt, Phyrexian Furnace, and Planar Void (though post-sideboard creature plans mitigate this).</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Multi-Axis Aggression:</strong> Struggles against decks that apply pressure on two fronts simultaneously (e.g., a fast clock paired with mana denial or heavy countermagic).</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Faster Unfair Combos:</strong> Structurally weak to archetypes like Devourer Combo that can goldfish a win faster than you can meaningfully interact.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Mana Hungry:</strong> Key pieces cost three to four mana, meaning you must survive the critical early turns before your card selection engines come online.</li>
             </ul>
         </Card>
     </Grid>
-
-    <h2>Why Replenish?</h2>
-    <p
-        style="font-size: 1.15rem; color: var(--w-color-primary-20); line-height: 1.6;"
-    >
-        If you want to play a deck capable of explosive Turn-4 unfair combo
-        kills, but that can simultaneously grind through long control matchups
-        with heavy interaction and card advantage, Replenish is the deck for
-        you.
-    </p>
-    <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
-        <li style="margin-bottom: 0.5rem;">
-            You enjoy combo decks requiring setup and patience with explosive
-            payoff.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            You like intricate sequencing and decision trees.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            You want a deck that pivots roles based on matchup and board state.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            You want to punish Enchantress-heavy or midrange-heavy metagames.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            You appreciate the puzzle—figuring out the path to victory from each
-            new position.
-        </li>
-    </ul>
 </Layout>
