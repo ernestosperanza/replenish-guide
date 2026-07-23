@@ -2,6 +2,8 @@
 import Header from "./Header.astro";
 import AppSidebar from "./AppSidebar.astro";
 import Pagination from "./Pagination.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 
 export interface Props {
     title?: string;
@@ -34,6 +36,8 @@ const { title = "Replenish Guide", prev, next } = Astro.props;
                 </div>
             </main>
         </div>
+        <SpeedInsights />
+        <Analytics />
     </body>
 </html>
 
