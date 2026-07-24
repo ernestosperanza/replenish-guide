@@ -1,8 +1,8 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import SectionHeader from "@components/SectionHeader.astro";
 import CardGrid from "@components/CardGrid.astro";
+import { Card } from "webcoreui/astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 ---
 
@@ -12,7 +12,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     next={{ name: "Sideboard", href: "/sideboard" }}
 >
     <PageHeader title="Maindeck Analysis" />
-    <SectionHeader title="The Core" />
+    <Card title="The Core" titleTag="h2">
 
     <CardGrid 
         width="180px"
@@ -42,8 +42,9 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             <p style="margin-top: 0; margin-bottom: 0;">This is the glue. Digs three cards deep, fills the graveyard, and attacks as a 3/3 under Opalescence. It's also the most commonly misplayed card in the deck. A lot of players just spin it hoping to find something good. Don't do that. Every activation should have a plan. Before you activate, you should roughly know which cards you're willing to discard. If you can't identify them, don't activate yet.</p>
         </div>
     </div>
+    </Card>
 
-    <SectionHeader title="The Lock Piece" />
+    <Card title="The Lock Piece" titleTag="h2">
 
     <CardAnalysis
         title="Decree of Silence (2-3 main)"
@@ -73,8 +74,9 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             third copy can be a liability.
         </p>
     </CardAnalysis>
+    </Card>
 
-    <SectionHeader title="Proactive Disruption" />
+    <Card title="Proactive Disruption" titleTag="h2">
 
     <CardAnalysis
         title="Meddling Mage (0-4 main)"
@@ -105,8 +107,9 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             some or all Mages may belong in the sideboard.
         </p>
     </CardAnalysis>
+    </Card>
 
-    <SectionHeader title="Card Selection" />
+    <Card title="Card Selection" titleTag="h2">
 
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
         <img src="/images/cards/instants/frantic_search.webp" alt="Frantic Search" style="width: 180px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);" />
@@ -123,8 +126,9 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             <p style="margin-top: 0; margin-bottom: 0;">The most skill-testing card in the deck. Classic pile is Opalescence, Wave, Decree. Whatever they give you, the other two go to the graveyard for Replenish. But the piles change based on what you're playing against. Against Landstill you might pile three lands. Against aggro, three Swords. I often trim it against control because it lowers your threat density.</p>
         </div>
     </div>
+    </Card>
 
-    <SectionHeader title="Interaction" />
+    <Card title="Interaction" titleTag="h2">
 
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
         <img src="/images/cards/instants/swords_to_plowshares.webp" alt="Swords to Plowshares" style="width: 180px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);" />
@@ -146,12 +150,9 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             <p style="margin-top: 0; margin-bottom: 0;">Shuts down Port, Dust Bowl, Factory. The count flexes from one to three depending on how many utility lands you expect. It's been trending down online as Terrageddon has declined.</p>
         </div>
     </div>
+    </Card>
 
-    <h2
-        style="margin-top: 4rem; border-top: 1px solid var(--w-color-primary-50); padding-top: 2rem;"
-    >
-        No Maindeck Mana Leak
-    </h2>
+    <Card title="No Maindeck Mana Leak" titleTag="h2">
     <CardAnalysis title="Mana Leak (0-3 main)" image="instants/mana_leak.webp">
         <p style="margin-top: 0;">
             I cut Mana Leak because Landstill was the most popular control deck
@@ -163,12 +164,9 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             but Mana Leak is worth reconsidering depending on your field.
         </p>
     </CardAnalysis>
+    </Card>
 
-    <h2
-        style="margin-top: 4rem; border-top: 1px solid var(--w-color-primary-50); padding-top: 2rem;"
-    >
-        Other Cards Worth Considering
-    </h2>
+    <Card title="Other Cards Worth Considering" titleTag="h2">
 
     <CardAnalysis title="Deep Analysis" image="sorceries/deep_analysis.webp">
         <p style="margin-top: 0;">
@@ -194,10 +192,10 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             with countermagic, I'd consider one or two.
         </p>
     </CardAnalysis>
+    </Card>
 
-    <SectionHeader title="The Mana Base" />
-        Mana Base Theory
-    </h2>
+    <Card title="The Mana Base" titleTag="h2">
+    <h3 style="margin-top: 0;">Mana Base Theory</h3>
     <p>
         <strong>25-26 Lands</strong><br />I've tried 24 and 26. Twenty-five
         feels right, though I wouldn’t fault anyone for 26.
@@ -256,4 +254,5 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         I'll usually lead with the dual to keep options open for my second draw.
         Against Wasteland decks, I lead basic instead. It depends on the hand.
     </p>
+    </Card>
 </Layout>

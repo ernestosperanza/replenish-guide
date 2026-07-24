@@ -1,7 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import SectionHeader from "@components/SectionHeader.astro";
+import { Card } from "webcoreui/astro";
 ---
 
 <Layout
@@ -17,7 +17,8 @@ import SectionHeader from "@components/SectionHeader.astro";
         isCard={false}
     />
 
-    <h3>The Two Angles Framework</h3>
+    <Card title="Strategic Frameworks" titleTag="h2">
+    <h3 style="margin-top: 0;">The Two Angles Framework</h3>
     <p>
         This deck handles one angle of attack really well. Pure aggression, pure
         mana denial, pure countermagic. You can deal with all of those. Where it
@@ -66,7 +67,9 @@ import SectionHeader from "@components/SectionHeader.astro";
         you've lost everything you discarded along the way.
     </p>
 
-    <SectionHeader title="Advanced Mulligan Theory" />
+    </Card>
+
+    <Card title="Advanced Mulligan Theory" titleTag="h2">
     <p>
         Before the ban, the deck had eight cards that could "fix" a bad hand:
         four Attunement and four Parallax Tide. Now it only has four
@@ -202,8 +205,9 @@ import SectionHeader from "@components/SectionHeader.astro";
         </h4>
         <p style="margin-bottom: 0;">There is no absolute "right" answer, but this debate reveals a core tension: Risk-averse players prefer to guarantee their land drops and trust the math of their cantrips, while aggressive mulliganers believe that with the weaker topdecks post-ban, you can no longer afford to keep hands that don't proactively dictate the pace of the game.</p>
     </div>
+    </Card>
 
-    <SectionHeader title="The Math Behind Replenish" />
+    <Card title="The Math Behind Replenish" titleTag="h2">
     <p>We can calculate the probability of finding a specific missing combo piece (e.g., Replenish) when casting our card selection spells using a hypergeometric calculator.</p>
     <p>Assuming we are on the play and we cast our spell on Turn 3 (so we have drawn 9 cards total: 7 starting + 2 draw steps). There are 51 cards left in the deck.</p>
     
@@ -238,5 +242,6 @@ import SectionHeader from "@components/SectionHeader.astro";
         </tbody>
     </table>
     <p style="margin-bottom: 4rem;">This is why keeping hands without any engine or cantrip is dangerous. A single Frantic Search only gives you a ~15% chance to find that one specific card you need to survive. The more you know these percentages, the better your in-game sequencing will be.</p>
+    </Card>
 
 </Layout>

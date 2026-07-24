@@ -1,8 +1,8 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import SectionHeader from "@components/SectionHeader.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
+import { Card } from "webcoreui/astro";
 ---
 
 <Layout
@@ -18,7 +18,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         isCard={true}
     />
 
-    <SectionHeader title="The Sculpting Method" />
+    <Card title="The Sculpting Method" titleTag="h2">
     <p>
         I use this process before every tournament to finalize my 75. Start with
         a pool of 85-90 cards that you think could work in the deck, then carve
@@ -54,8 +54,9 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         keep their enchantment hate and risk losing to creature beatdown, or cut it
         and risk losing to the combo. Either way their draws get worse.
     </p>
+    </Card>
 
-    <SectionHeader title="Sideboarding Principles" />
+    <Card title="Sideboarding Principles" titleTag="h2">
     <h3>Transformation Against Control</h3>
     <p>
         Against blue permission decks, you become a different deck. Frantic,
@@ -115,12 +116,9 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             one-mana Blast.
         </li>
     </ul>
+    </Card>
 
-    <h2
-        style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;"
-    >
-        Sideboard Card Analysis
-    </h2>
+    <Card title="Sideboard Card Analysis" titleTag="h2">
     <CardAnalysis title="Defense Grid (3)" image="artifacts/defense_grid.jpg">
         <p style="margin-top: 0;">
             Comes in against every permission-heavy matchup. It sticks on the
@@ -196,12 +194,9 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         Fourth Seal for Enchantress. Fourth Swords for creature matchups. Extra
         Web for utility lands.
     </p>
+    </Card>
 
-    <h2
-        style="margin-top: 4rem; border-top: 1px solid var(--w-color-primary-50); padding-top: 2rem;"
-    >
-        Other Sideboard Options
-    </h2>
+    <Card title="Other Sideboard Options" titleTag="h2">
 
     <CardAnalysis title="Orim's Chant" image="instants/orims_chant.webp">
         <p style="margin-top: 0;">
@@ -236,12 +231,9 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             Sphere is the card you want.
         </p>
     </CardAnalysis>
+    </Card>
 
-    <h2
-        style="margin-top: 4rem; font-size: 2.5rem; border-bottom: 1px solid var(--w-color-primary-50); padding-bottom: 0.5rem; margin-bottom: 2rem;"
-    >
-        Playing Through Hate
-    </h2>
+    <Card title="Playing Through Hate" titleTag="h2">
     <p style="margin-bottom: 2rem;">
         A lot of beating hate comes down to knowing what your opponent is likely
         to have and not walking into it. You don't need a specific sideboard
@@ -321,4 +313,5 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             doesn't lock you out if you know it's coming.
         </p>
     </CardAnalysis>
+    </Card>
 </Layout>

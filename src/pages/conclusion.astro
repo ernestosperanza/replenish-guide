@@ -1,7 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import { List } from "webcoreui/astro";
+import { List, Card } from "webcoreui/astro";
 ---
 
 <Layout
@@ -10,7 +10,7 @@ import { List } from "webcoreui/astro";
 >
     <PageHeader title="Further Reading" />
 
-    <div style="margin-bottom: 3rem;">
+    <Card title="External Links" titleTag="h2">
         <List
             itemGroups={[
                 {
@@ -49,5 +49,5 @@ import { List } from "webcoreui/astro";
                 }
             ]}
         />
-    </div>
+    </Card>
 </Layout>

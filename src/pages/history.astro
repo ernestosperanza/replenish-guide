@@ -1,8 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import SectionHeader from "@components/SectionHeader.astro";
-import { Badge, Card, Grid, Timeline, TimelineItem } from "webcoreui/astro";
+import { Badge, Card, Grid } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
 import DeckSection from "@components/DeckSection.astro";
 ---
@@ -20,9 +19,7 @@ import DeckSection from "@components/DeckSection.astro";
         imageCaption="Parallax Wave by Greg Staples"
         isCard={true}
     />
-    <div style="margin-bottom: 3rem;">
-        <Timeline>
-        <TimelineItem title="The Standard Origins (2000)" titleTag="h3">
+    <Card title="1. The Standard Origins (2000)" titleTag="h2">
         <p>
             Replenish first made waves at the highest levels of competitive
             Magic during the 2000 World Championship. Hall of Famer Tom van de
@@ -143,10 +140,9 @@ import DeckSection from "@components/DeckSection.astro";
                 </div>
             </Grid>
         </Card>
-    </div>
+    </Card>
 
-    <div style="margin-bottom: 3rem;">
-        <SectionHeader title="2. The Errata Reversal (The Spark)" />
+    <Card title="2. The Errata Reversal (The Spark)" titleTag="h2">
         <p>
             For many years in Premodern, Replenish was merely a fringe strategy.
             The card that changed everything was a rules update. Originally,
@@ -162,10 +158,9 @@ import DeckSection from "@components/DeckSection.astro";
             > permanent-exile loop was restored. This single change resurrected the
             archetype and propelled it to Tier 1 status.
         </p>
-    </div>
+    </Card>
 
-    <div style="margin-bottom: 3rem;">
-        <SectionHeader title="3. The Parallax Tide Era (Pre-Ban 2025)" />
+    <Card title="3. The Parallax Tide Era (Pre-Ban 2025)" titleTag="h2">
         <p>
             With the errata reversed, players quickly realized that <a
                 href="#"
@@ -260,10 +255,9 @@ import DeckSection from "@components/DeckSection.astro";
                 </div>
             </Grid>
         </Card>
-    </div>
+    </Card>
 
-    <div style="margin-bottom: 3rem;">
-        <SectionHeader title="4. The Post-Ban Resurgence (2026 - Present)" />
+    <Card title="4. The Post-Ban Resurgence (2026 - Present)" titleTag="h2">
         <p>
             On January 18, 2026, format curator Martin Berlin banned Parallax
             Tide, citing its oppressive, repetitive play patterns and
@@ -289,6 +283,6 @@ import DeckSection from "@components/DeckSection.astro";
                 >Lists page</a
             >.
         </p>
-    </div>
+    </Card>
     <DecklistTooltip />
 </Layout>
