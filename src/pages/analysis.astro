@@ -215,16 +215,13 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     <div
         style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem; align-items: flex-start; flex-wrap: wrap;"
     >
-        <div style="display: flex; gap: 1rem; flex-shrink: 0; flex-wrap: wrap;">
-            <img
-                src="/images/cards/lands/island.jpg"
-                alt="Island"
-                style="width: 220px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
-            />
-            <img
-                src="/images/cards/lands/plains.jpg"
-                alt="Plains"
-                style="width: 220px; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);"
+        <div style="flex-shrink: 0; max-width: 100%;">
+            <CardGrid 
+                cards={[
+                    { src: "/images/cards/lands/island.jpg", alt: "Island" },
+                    { src: "/images/cards/lands/plains.jpg", alt: "Plains" }
+                ]}
+                width="220px"
             />
         </div>
         <div style="flex: 1; min-width: 300px;">

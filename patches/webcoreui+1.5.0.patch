@@ -1,0 +1,15 @@
+diff --git a/node_modules/webcoreui/components/Carousel/Carousel.astro b/node_modules/webcoreui/components/Carousel/Carousel.astro
+index 498ac16..53f310a 100644
+--- a/node_modules/webcoreui/components/Carousel/Carousel.astro
++++ b/node_modules/webcoreui/components/Carousel/Carousel.astro
+@@ -170,8 +170,8 @@ const style = getItemsPerSlide() > 1
+             const totalPages = Math.ceil(totalItems / itemsPerSlide)
+ 
+             carousel.dataset.currentBreakpoint = breakpoint
+-            carousel.dataset.visibleItems = itemsPerSlide
+-            carousel.children[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' })
++            // Prevent unwanted scroll on page load/resize
++            // carousel.children[0].scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+             carousel.style.setProperty('--width', `calc(${100 / itemsPerSlide}% - 5px)`)
+ 
+             pagination.dataset.totalPages = String(totalPages)

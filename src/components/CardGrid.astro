@@ -1,27 +1,62 @@
 ---
-import { Flex } from "webcoreui/astro";
+import { Carousel, CarouselItem } from "webcoreui/astro";
 export interface Props {
     cards: { src: string; alt: string }[];
     width?: string;
 }
 
 const { cards, width = "150px" } = Astro.props;
+
+// Calculate responsive items per slide based on total cards
+const smItems = Math.min(cards.length, 2);
+const mdItems = Math.min(cards.length, 3);
+const lgItems = Math.min(cards.length, 4);
 ---
 
-<Flex
-    gap="lg"
-    wrap="wrap"
-    alignment={{ horizontal: "center" }}
-    className="card-grid"
-    style="margin-bottom: 2.5rem; margin-top: 1.5rem;"
->
-    {
-        cards.map((card) => (
+<div style="margin-bottom: 2.5rem; margin-top: 1.5rem; max-width: 100%;" class="card-carousel-wrapper">
+    {cards.length > 1 ? (
+        <Carousel 
+            items={cards.length}
+            itemsPerSlide={{ default: 1, sm: smItems, md: mdItems, lg: lgItems }}
+            pagination={{ theme: 'secondary' }}
+        >
+            {
+                cards.map((card) => (
+                    <CarouselItem>
+                        <div style="display: flex; justify-content: center; align-items: center; padding: 1rem 0.5rem;">
+                            <img
+                                src={card.src}
+                                alt={card.alt}
+                                style={`width: ${width}; max-width: 100%; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50); box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;`}
+                                class="card-hover-effect"
+                            />
+                        </div>
+                    </CarouselItem>
+                ))
+            }
+        </Carousel>
+    ) : (
+        <div style="display: flex; justify-content: center; align-items: center; padding: 1rem 0;">
             <img
-                src={card.src}
-                alt={card.alt}
-                style={`width: ${width}; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50);`}
+                src={cards[0].src}
+                alt={cards[0].alt}
+                style={`width: ${width}; max-width: 100%; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50); box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;`}
+                class="card-hover-effect"
             />
-        ))
+        </div>
+    )}
+</div>
+
+<style>
+    /* Make sure carousel arrows don't get hidden behind padding */
+    .card-carousel-wrapper {
+        position: relative;
+        overflow: visible;
+        --w-carousel-nav-size: 40px; /* Make pagination arrows a bit larger if supported */
     }
-</Flex>
+    
+    .card-hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3) !important;
+    }
+</style>
