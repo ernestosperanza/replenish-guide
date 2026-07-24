@@ -1,7 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import { Grid, Card } from "webcoreui/astro";
+import { Grid, Card, Alert } from "webcoreui/astro";
 ---
 
 <Layout title="Introduction - Replenish Guide">
@@ -13,6 +13,14 @@ import { Grid, Card } from "webcoreui/astro";
         imageCaption="Replenish by Jim Nelson"
         isCard={false}
     />
+
+    <div style="margin-bottom: 0.5rem; margin-top: 1rem;">
+        <Alert theme="warning">
+            <strong>Work In Progress:</strong> This site is currently under construction.
+            It may contain unedited information, errors, missing card links, or sections
+            that still need adjustment.
+        </Alert>
+    </div>
 
     <Card title="What is Replenish?" titleTag="h2">
         <p>
