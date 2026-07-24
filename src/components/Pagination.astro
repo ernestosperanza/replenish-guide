@@ -3,32 +3,59 @@ import { FLAT_NAV } from "../config/nav";
 
 const currentPath = Astro.url.pathname;
 // Strip trailing slash if any, but keep / if it's the root
-const normalizedPath = currentPath.endsWith('/') && currentPath.length > 1 
-    ? currentPath.slice(0, -1) 
-    : currentPath;
+const normalizedPath =
+    currentPath.endsWith("/") && currentPath.length > 1
+        ? currentPath.slice(0, -1)
+        : currentPath;
 
-const currentIndex = FLAT_NAV.findIndex((item) => 
-    item.href === normalizedPath || (item.href !== "/" && normalizedPath.startsWith(item.href + "/"))
+const currentIndex = FLAT_NAV.findIndex(
+    (item) =>
+        item.href === normalizedPath ||
+        (item.href !== "/" && normalizedPath.startsWith(item.href + "/")),
 );
 
 const prev = currentIndex > 0 ? FLAT_NAV[currentIndex - 1] : null;
-const next = currentIndex !== -1 && currentIndex < FLAT_NAV.length - 1 ? FLAT_NAV[currentIndex + 1] : null;
+const next =
+    currentIndex !== -1 && currentIndex < FLAT_NAV.length - 1
+        ? FLAT_NAV[currentIndex + 1]
+        : null;
 ---
-<div style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--w-color-primary-50); display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+
+<div
+    style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--w-color-primary-50); display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;"
+>
     <div style="flex: 1;">
-        {prev && (
-            <a href={prev.href} style="display: inline-block; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--w-sm-radius); color: var(--w-color-primary-10);">
-                <div style="font-size: 0.85rem; color: var(--w-color-primary-30); margin-bottom: 0.25rem;">Previous</div>
-                <div style="font-size: 1.1rem; font-weight: 500;">&larr; {prev.name}</div>
-            </a>
-        )}
+        {
+            prev && (
+                <a
+                    href={prev.href}
+                    style="display: inline-block; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--w-sm-radius); color: var(--w-color-primary-10);"
+                >
+                    <div style="font-size: 0.85rem; color: var(--w-color-primary-30); margin-bottom: 0.25rem;">
+                        Previous
+                    </div>
+                    <div style="font-size: 1.1rem; font-weight: 500;">
+                        &larr; {prev.name}
+                    </div>
+                </a>
+            )
+        }
     </div>
     <div style="flex: 1; text-align: right;">
-        {next && (
-            <a href={next.href} style="display: inline-block; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--w-sm-radius); color: var(--w-color-primary-10);">
-                <div style="font-size: 0.85rem; color: var(--w-color-primary-30); margin-bottom: 0.25rem;">Next</div>
-                <div style="font-size: 1.1rem; font-weight: 500;">{next.name} &rarr;</div>
-            </a>
-        )}
+        {
+            next && (
+                <a
+                    href={next.href}
+                    style="display: inline-block; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--w-sm-radius); color: var(--w-color-primary-10);"
+                >
+                    <div style="font-size: 0.85rem; color: var(--w-color-primary-30); margin-bottom: 0.25rem;">
+                        Next
+                    </div>
+                    <div style="font-size: 1.1rem; font-weight: 500;">
+                        {next.name} &rarr;
+                    </div>
+                </a>
+            )
+        }
     </div>
 </div>

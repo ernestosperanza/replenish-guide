@@ -6,8 +6,10 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 import DeckSection from "@components/DeckSection.astro";
 ---
 
-<Layout title="History - Replenish Guide"
-    description="Explore the rich history of the Replenish deck in Magic: The Gathering. From its Type 2 origins in 2000 to the dramatic errata changes and its resilience after the Parallax Tide ban.">
+<Layout
+    title="History - Replenish Guide"
+    description="Explore the rich history of the Replenish deck in Magic: The Gathering. From its Type 2 origins in 2000 to the dramatic errata changes and its resilience after the Parallax Tide ban."
+>
     <PageHeader
         title="History of the Deck"
         description="The story of Replenish spans over two decades. From its dominance in Type 2 (Standard) at the turn of the millennium, to its rebirth in Premodern fueled by rules changes, and finally its resilience in the face of bans. Here is a look at the archetypes' defining milestones."
@@ -16,289 +18,295 @@ import DeckSection from "@components/DeckSection.astro";
         imageCaption="Parallax Wave by Greg Staples"
         isCard={true}
     />
-    <div style="margin-top: 3rem;">
+    <div style="margin-top: 3rem; margin-bottom: 3rem;">
         <Timeline>
-        <TimelineItem title="1. The Standard Origins (2000)" titleTag="h2">
-            <p>
-                Replenish first made waves at the highest levels of competitive
-                Magic during the 2000 World Championship. Hall of Famer Tom van
-                de Logt piloted this list to a Top 8 finish. This Type 2 list
-                leaned on fast mana like <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Sky Diamond">Sky Diamond</a
-                > and <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Rishadan Port">Rishadan Port</a
-                > to slow opponents down, while using <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Mystical Tutor">Mystical Tutor</a
-                > and <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Enlightened Tutor">Enlightened Tutor</a
-                > for immense consistency. A single <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Energy Field">Energy Field</a
-                > could buy infinite time until the combo was ready.
-            </p>
-            <p
-                style="font-size: 0.9rem; color: var(--w-color-primary-40); margin-bottom: 1.5rem;"
+            <TimelineItem title="1. The Standard Origins (2000)" titleTag="h2">
+                <p>
+                    Replenish first made waves at the highest levels of
+                    competitive Magic during the 2000 World Championship. Hall
+                    of Famer Tom van de Logt piloted this list to a Top 8
+                    finish. This Type 2 list leaned on fast mana like <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Sky Diamond">Sky Diamond</a
+                    > and <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Rishadan Port">Rishadan Port</a
+                    > to slow opponents down, while using <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Mystical Tutor">Mystical Tutor</a
+                    > and <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Enlightened Tutor">Enlightened Tutor</a
+                    > for immense consistency. A single <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Energy Field">Energy Field</a
+                    > could buy infinite time until the combo was ready.
+                </p>
+                <p
+                    style="font-size: 0.9rem; color: var(--w-color-primary-40); margin-bottom: 1.5rem;"
+                >
+                    <em
+                        >Source: <a
+                            href="https://mtgtop8.com/event?e=9200&d=252726&f=ST"
+                            target="_blank"
+                            style="color: var(--w-color-info);"
+                            >2000 World Championship Coverage (MTGTop8)</a
+                        ></em
+                    >
+                </p>
+
+                <Card>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;"
+                    >
+                        <div>
+                            <h3
+                                style="margin: 0; font-size: 1.5rem; color: var(--w-color-primary-10);"
+                            >
+                                2000 World Championship (Standard)
+                            </h3>
+                            <p
+                                style="margin: 0.25rem 0 0 0; color: var(--w-color-primary-40);"
+                            >
+                                Played by Tom van de Logt
+                            </p>
+                        </div>
+                        <Badge theme="info">Standard</Badge>
+                    </div>
+
+                    <Grid column={{ md: 3 }} gap="lg">
+                        <div>
+                            <DeckSection
+                                title="Enchantments"
+                                items={[
+                                    { count: 4, name: "Attunement" },
+                                    { count: 4, name: "Opalescence" },
+                                    { count: 4, name: "Parallax Wave" },
+                                    { count: 3, name: "Parallax Tide" },
+                                    { count: 1, name: "Energy Field" },
+                                    { count: 1, name: "Seal of Cleansing" },
+                                    { count: 1, name: "Seal of Removal" },
+                                ]}
+                            />
+                            <DeckSection
+                                title="Sorceries"
+                                items={[
+                                    { count: 4, name: "Replenish" },
+                                    { count: 1, name: "Wrath of God" },
+                                ]}
+                            />
+                        </div>
+                        <div>
+                            <DeckSection
+                                title="Instants"
+                                items={[
+                                    { count: 4, name: "Frantic Search" },
+                                    { count: 3, name: "Counterspell" },
+                                    { count: 3, name: "Enlightened Tutor" },
+                                    { count: 1, name: "Mystical Tutor" },
+                                ]}
+                            />
+                            <DeckSection
+                                title="Artifacts"
+                                items={[{ count: 1, name: "Sky Diamond" }]}
+                            />
+                        </div>
+                        <div>
+                            <DeckSection
+                                title="Lands"
+                                items={[
+                                    { count: 9, name: "Island" },
+                                    { count: 8, name: "Plains" },
+                                    { count: 4, name: "Adarkar Wastes" },
+                                    { count: 4, name: "Rishadan Port" },
+                                ]}
+                            />
+                            <DeckSection
+                                title="Sideboard"
+                                items={[
+                                    { count: 3, name: "Erase" },
+                                    { count: 2, name: "Daze" },
+                                    { count: 2, name: "Lilting Refrain" },
+                                    { count: 2, name: "Submerge" },
+                                    { count: 2, name: "Wrath of God" },
+                                    { count: 1, name: "Chill" },
+                                    {
+                                        count: 1,
+                                        name: "Circle of Protection: Black",
+                                    },
+                                    { count: 1, name: "Cursed Totem" },
+                                    { count: 1, name: "Seal of Cleansing" },
+                                ]}
+                            />
+                        </div>
+                    </Grid>
+                </Card>
+            </TimelineItem>
+
+            <TimelineItem
+                title="2. The Errata Reversal (The Spark)"
+                titleTag="h2"
             >
-                <em
-                    >Source: <a
-                        href="https://mtgtop8.com/event?e=9200&d=252726&f=ST"
-                        target="_blank"
-                        style="color: var(--w-color-info);"
-                        >2000 World Championship Coverage (MTGTop8)</a
-                    ></em
-                >
-            </p>
+                <p>
+                    For many years in Premodern, Replenish was merely a fringe
+                    strategy. The card that changed everything was a rules
+                    update. Originally, Parallax cards received errata to
+                    prevent their "leave play" triggers from resolving before
+                    their "remove a counter" triggers (preventing permanent
+                    exile). When Wizards of the Coast reversed this errata to
+                    match the printed wording on the cards, the <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Parallax Wave">Parallax Wave</a
+                    > + <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Opalescence">Opalescence</a
+                    > permanent-exile loop was restored. This single change resurrected
+                    the archetype and propelled it to Tier 1 status.
+                </p>
+            </TimelineItem>
 
-            <Card>
-                <div
-                    style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;"
-                >
-                    <div>
-                        <h3
-                            style="margin: 0; font-size: 1.5rem; color: var(--w-color-primary-10);"
-                        >
-                            2000 World Championship (Standard)
-                        </h3>
-                        <p
-                            style="margin: 0.25rem 0 0 0; color: var(--w-color-primary-40);"
-                        >
-                            Played by Tom van de Logt
-                        </p>
-                    </div>
-                    <Badge theme="info">Standard</Badge>
-                </div>
-
-                <Grid column={{ md: 3 }} gap="lg">
-                    <div>
-                        <DeckSection
-                            title="Enchantments"
-                            items={[
-                                { count: 4, name: "Attunement" },
-                                { count: 4, name: "Opalescence" },
-                                { count: 4, name: "Parallax Wave" },
-                                { count: 3, name: "Parallax Tide" },
-                                { count: 1, name: "Energy Field" },
-                                { count: 1, name: "Seal of Cleansing" },
-                                { count: 1, name: "Seal of Removal" },
-                            ]}
-                        />
-                        <DeckSection
-                            title="Sorceries"
-                            items={[
-                                { count: 4, name: "Replenish" },
-                                { count: 1, name: "Wrath of God" },
-                            ]}
-                        />
-                    </div>
-                    <div>
-                        <DeckSection
-                            title="Instants"
-                            items={[
-                                { count: 4, name: "Frantic Search" },
-                                { count: 3, name: "Counterspell" },
-                                { count: 3, name: "Enlightened Tutor" },
-                                { count: 1, name: "Mystical Tutor" },
-                            ]}
-                        />
-                        <DeckSection
-                            title="Artifacts"
-                            items={[{ count: 1, name: "Sky Diamond" }]}
-                        />
-                    </div>
-                    <div>
-                        <DeckSection
-                            title="Lands"
-                            items={[
-                                { count: 9, name: "Island" },
-                                { count: 8, name: "Plains" },
-                                { count: 4, name: "Adarkar Wastes" },
-                                { count: 4, name: "Rishadan Port" },
-                            ]}
-                        />
-                        <DeckSection
-                            title="Sideboard"
-                            items={[
-                                { count: 3, name: "Erase" },
-                                { count: 2, name: "Daze" },
-                                { count: 2, name: "Lilting Refrain" },
-                                { count: 2, name: "Submerge" },
-                                { count: 2, name: "Wrath of God" },
-                                { count: 1, name: "Chill" },
-                                {
-                                    count: 1,
-                                    name: "Circle of Protection: Black",
-                                },
-                                { count: 1, name: "Cursed Totem" },
-                                { count: 1, name: "Seal of Cleansing" },
-                            ]}
-                        />
-                    </div>
-                </Grid>
-            </Card>
-        </TimelineItem>
-
-        <TimelineItem title="2. The Errata Reversal (The Spark)" titleTag="h2">
-            <p>
-                For many years in Premodern, Replenish was merely a fringe
-                strategy. The card that changed everything was a rules update.
-                Originally, Parallax cards received errata to prevent their
-                "leave play" triggers from resolving before their "remove a
-                counter" triggers (preventing permanent exile). When Wizards of
-                the Coast reversed this errata to match the printed wording on
-                the cards, the <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Parallax Wave">Parallax Wave</a
-                > + <a href="#" class="card-hover" data-card-name="Opalescence"
-                    >Opalescence</a
-                > permanent-exile loop was restored. This single change resurrected
-                the archetype and propelled it to Tier 1 status.
-            </p>
-        </TimelineItem>
-
-        <TimelineItem
-            title="3. The Parallax Tide Era (Pre-Ban 2025)"
-            titleTag="h2"
-        >
-            <p>
-                With the errata reversed, players quickly realized that <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Parallax Tide">Parallax Tide</a
-                > could permanently exile an opponent's lands just as easily as Wave
-                exiled creatures. By late 2025, Parallax Tide Replenish variants accounted
-                for nearly 30% of Top 8 finishes in major tournaments. It was a one-sided
-                Armageddon that left opponents completely helpless.
-            </p>
-            <p
-                style="font-size: 0.9rem; color: var(--w-color-primary-40); margin-bottom: 1.5rem;"
+            <TimelineItem
+                title="3. The Parallax Tide Era (Pre-Ban 2025)"
+                titleTag="h2"
             >
-                <em
-                    >Source: <a
-                        href="https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu"
-                        target="_blank"
-                        style="color: var(--w-color-info);"
-                        >Replenish Primer by Brian Siu</a
-                    ></em
+                <p>
+                    With the errata reversed, players quickly realized that <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Parallax Tide">Parallax Tide</a
+                    > could permanently exile an opponent's lands just as easily as
+                    Wave exiled creatures. By late 2025, Parallax Tide Replenish variants
+                    accounted for nearly 30% of Top 8 finishes in major tournaments.
+                    It was a one-sided Armageddon that left opponents completely helpless.
+                </p>
+                <p
+                    style="font-size: 0.9rem; color: var(--w-color-primary-40); margin-bottom: 1.5rem;"
                 >
-            </p>
+                    <em
+                        >Source: <a
+                            href="https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu"
+                            target="_blank"
+                            style="color: var(--w-color-info);"
+                            >Replenish Primer by Brian Siu</a
+                        ></em
+                    >
+                </p>
 
-            <Card>
-                <div
-                    style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;"
-                >
-                    <div>
-                        <h3
-                            style="margin: 0; font-size: 1.5rem; color: var(--w-color-primary-10);"
-                        >
-                            The Parallax Tide Era (Pre-Ban)
-                        </h3>
-                        <p
-                            style="margin: 0.25rem 0 0 0; color: var(--w-color-primary-40);"
-                        >
-                            Typical 2025 Premodern Decklist
-                        </p>
+                <Card>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;"
+                    >
+                        <div>
+                            <h3
+                                style="margin: 0; font-size: 1.5rem; color: var(--w-color-primary-10);"
+                            >
+                                The Parallax Tide Era (Pre-Ban)
+                            </h3>
+                            <p
+                                style="margin: 0.25rem 0 0 0; color: var(--w-color-primary-40);"
+                            >
+                                Typical 2025 Premodern Decklist
+                            </p>
+                        </div>
+                        <Badge theme="warning">Premodern</Badge>
                     </div>
-                    <Badge theme="warning">Premodern</Badge>
-                </div>
 
-                <Grid column={{ md: 3 }} gap="lg">
-                    <div>
-                        <DeckSection
-                            title="Enchantments"
-                            items={[
-                                { count: 4, name: "Attunement" },
-                                { count: 4, name: "Opalescence" },
-                                { count: 4, name: "Parallax Wave" },
-                                { count: 4, name: "Parallax Tide" },
-                            ]}
-                        />
-                        <DeckSection
-                            title="Sorceries"
-                            items={[{ count: 4, name: "Replenish" }]}
-                        />
-                    </div>
-                    <div>
-                        <DeckSection
-                            title="Instants"
-                            items={[
-                                { count: 4, name: "Swords to Plowshares" },
-                                { count: 4, name: "Frantic Search" },
-                                { count: 4, name: "Intuition" },
-                                { count: 3, name: "Mana Leak" },
-                            ]}
-                        />
-                    </div>
-                    <div>
-                        <DeckSection
-                            title="Lands"
-                            items={[
-                                { count: 6, name: "Island" },
-                                { count: 5, name: "Plains" },
-                                { count: 4, name: "Flooded Strand" },
-                                { count: 4, name: "Adarkar Wastes" },
-                                { count: 4, name: "Ancient Tomb" },
-                                { count: 2, name: "City of Traitors" },
-                            ]}
-                        />
-                        <DeckSection
-                            title="Sideboard"
-                            items={[
-                                { count: 4, name: "Meddling Mage" },
-                                { count: 3, name: "Exalted Angel" },
-                                { count: 3, name: "Seal of Cleansing" },
-                                { count: 3, name: "Defense Grid" },
-                                { count: 2, name: "Hydroblast" },
-                            ]}
-                        />
-                    </div>
-                </Grid>
-            </Card>
-        </TimelineItem>
+                    <Grid column={{ md: 3 }} gap="lg">
+                        <div>
+                            <DeckSection
+                                title="Enchantments"
+                                items={[
+                                    { count: 4, name: "Attunement" },
+                                    { count: 4, name: "Opalescence" },
+                                    { count: 4, name: "Parallax Wave" },
+                                    { count: 4, name: "Parallax Tide" },
+                                ]}
+                            />
+                            <DeckSection
+                                title="Sorceries"
+                                items={[{ count: 4, name: "Replenish" }]}
+                            />
+                        </div>
+                        <div>
+                            <DeckSection
+                                title="Instants"
+                                items={[
+                                    { count: 4, name: "Swords to Plowshares" },
+                                    { count: 4, name: "Frantic Search" },
+                                    { count: 4, name: "Intuition" },
+                                    { count: 3, name: "Mana Leak" },
+                                ]}
+                            />
+                        </div>
+                        <div>
+                            <DeckSection
+                                title="Lands"
+                                items={[
+                                    { count: 6, name: "Island" },
+                                    { count: 5, name: "Plains" },
+                                    { count: 4, name: "Flooded Strand" },
+                                    { count: 4, name: "Adarkar Wastes" },
+                                    { count: 4, name: "Ancient Tomb" },
+                                    { count: 2, name: "City of Traitors" },
+                                ]}
+                            />
+                            <DeckSection
+                                title="Sideboard"
+                                items={[
+                                    { count: 4, name: "Meddling Mage" },
+                                    { count: 3, name: "Exalted Angel" },
+                                    { count: 3, name: "Seal of Cleansing" },
+                                    { count: 3, name: "Defense Grid" },
+                                    { count: 2, name: "Hydroblast" },
+                                ]}
+                            />
+                        </div>
+                    </Grid>
+                </Card>
+            </TimelineItem>
 
-        <TimelineItem
-            title="4. The Post-Ban Resurgence (2026 - Present)"
-            titleTag="h2"
-        >
-            <p>
-                On January 18, 2026, format curator Martin Berlin banned
-                Parallax Tide, citing its oppressive, repetitive play patterns
-                and insurmountable win rates. The community wrote the deck off,
-                assuming it was dead without its primary lock piece.
-            </p>
-            <p>
-                However, dedicated pilots proved them wrong. By replacing Tide
-                with <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Decree of Silence">Decree of Silence</a
-                > and relying more heavily on cards like <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Meddling Mage">Meddling Mage</a
-                > and <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Exalted Angel">Exalted Angel</a
-                > out of the sideboard, the deck evolved from a pure combo lock into
-                a resilient combo-control hybrid. You can check out the current, post-ban
-                decklists on the <a
-                    href="/deck"
-                    style="color: var(--w-color-info); text-decoration: underline;"
-                    >Lists page</a
-                >.
-            </p>
-        </TimelineItem>
-    </Timeline>
+            <TimelineItem
+                title="4. The Post-Ban Resurgence (2026 - Present)"
+                titleTag="h2"
+            >
+                <p>
+                    On January 18, 2026, format curator Martin Berlin banned
+                    Parallax Tide, citing its oppressive, repetitive play
+                    patterns and insurmountable win rates. The community wrote
+                    the deck off, assuming it was dead without its primary lock
+                    piece.
+                </p>
+                <p>
+                    However, dedicated pilots proved them wrong. By replacing
+                    Tide with <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Decree of Silence">Decree of Silence</a
+                    > and relying more heavily on cards like <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Meddling Mage">Meddling Mage</a
+                    > and <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Exalted Angel">Exalted Angel</a
+                    > out of the sideboard, the deck evolved from a pure combo lock
+                    into a resilient combo-control hybrid. You can check out the current,
+                    post-ban decklists on the <a
+                        href="/deck"
+                        style="color: var(--w-color-info); text-decoration: underline;"
+                        >Lists page</a
+                    >.
+                </p>
+            </TimelineItem>
+        </Timeline>
     </div>
     <DecklistTooltip />
 </Layout>

@@ -92,7 +92,7 @@ const ogImageUrl = new URL(image, siteUrl).toString();
 
     .content-area {
         flex: 1;
-        padding: var(--w-space-xl);
+        padding: var(--w-space-md);
         display: flex;
         justify-content: center;
         min-width: 0;
@@ -122,6 +122,11 @@ const ogImageUrl = new URL(image, siteUrl).toString();
         line-height: 1.6;
         color: var(--w-color-primary-10);
         margin-bottom: 1.2em;
+    }
+
+    /* Reduce el espacio entre todas las secciones (Cards) globalmente */
+    :global(.w-card) {
+        margin-bottom: 1rem !important;
     }
 
     @media (max-width: 768px) {
