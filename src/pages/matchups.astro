@@ -2,24 +2,19 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import SectionHeader from "@components/SectionHeader.astro";
-import SideboardMatrix from "@components/SideboardMatrix.astro";
 import CardGrid from "@components/CardGrid.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
+import { Select } from "webcoreui/astro";
 ---
 
 <Layout
     title="Matchups - Replenish Guide"
     prev={{ name: "Strategic Theory", href: "/strategy" }}
-    next={{ name: "Resources & Conclusion", href: "/conclusion" }}
+    next={{ name: "Sideboard Matrix", href: "/sideboard-matrix" }}
 >
     <PageHeader title="Matchups" />
 
-    <SectionHeader title="Lobstercon 2026 Sideboard Matrix" />
-    <p>A quick-reference guide based on the Lobstercon 2026 sideboard strategies:</p>
-
-    <SideboardMatrix />
-
-    <SectionHeader title="Matchups Analysis" />
+        <SectionHeader title="Matchups Analysis" />
     <p
         style="font-size: 1.1rem; color: var(--w-color-primary-20); margin-bottom: 2rem;"
     >
@@ -27,8 +22,41 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         the ban.
     </p>
 
+    <div style="margin-bottom: 2rem; max-width: 300px;">
+        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold; color: var(--w-color-primary-10);">Filter by Matchup:</label>
+        <Select
+            name="matchup-filter"
+            placeholder="View All"
+            itemGroups={[
+                {
+                    items: [
+                        { name: "View All", value: "all", selected: true },
+                        { name: "Enchantress", value: "enchantress" },
+                        { name: "Elves", value: "elves" },
+                        { name: "Rock and Midrange", value: "rock_and_midrange" },
+                        { name: "Sligh", value: "sligh" },
+                        { name: "Landstill", value: "landstill" },
+                        { name: "Psychatog", value: "psychatog" },
+                        { name: "BW Control", value: "bw_control" },
+                        { name: "RG Ponza", value: "rg_ponza" },
+                        { name: "Moneyball (Black Aggro)", value: "moneyball" },
+                        { name: "Goblins", value: "goblins" },
+                        { name: "Terrageddon / Quiet Spec Oath", value: "terrageddon" },
+                        { name: "Stiflenought", value: "stiflenought" },
+                        { name: "Mirror", value: "mirror" },
+                        { name: "Stasis", value: "stasis" },
+                        { name: "Devourer", value: "devourer" },
+                        { name: "Aggro with Armageddon", value: "aggro_with_armageddon" }
+                    ]
+                }
+            ]}
+        />
+    </div>
+
+
     <h3 style="color: var(--w-color-success);">Dominant</h3>
 
+    <div class="matchup-block" data-matchup="enchantress">
     <h4>Enchantress</h4>
     <CardGrid 
         cards={[
@@ -50,6 +78,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         sidestep their hate and beat them down while they hold dead cards.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="elves">
     <h4>Elves</h4>
     <CardGrid 
         cards={[
@@ -68,6 +98,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         can trim on meddling mage if you need more space. Bring in seal and sword
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="rock_and_midrange">
     <h4>Rock and Midrange</h4>
     <CardGrid 
         cards={[
@@ -82,8 +114,10 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </p>
     <p><strong>Sideboard:</strong> Frantic searches usually come out here.</p>
 
+    </div>
     <h3 style="color: var(--w-color-info); margin-top: 2rem;">Favorable</h3>
 
+    <div class="matchup-block" data-matchup="sligh">
     <h4>Sligh</h4>
     <CardGrid 
         cards={[
@@ -112,6 +146,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         your combo.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="landstill">
     <h4>Landstill</h4>
     <CardGrid 
         cards={[
@@ -158,6 +194,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         > is highly recommended.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="psychatog">
     <h4>Psychatog</h4>
     <CardGrid 
         cards={[
@@ -172,6 +210,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         Denial, fourth Mage in.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="bw_control">
     <h4>BW Control</h4>
     <CardGrid 
         cards={[
@@ -185,6 +225,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         the graveyard. Angel is strong post-board.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="rg_ponza">
     <h4>RG Ponza</h4>
     <CardGrid 
         cards={[
@@ -215,10 +257,12 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         completely invalidate Stone Rain and Pillage.
     </p>
 
+    </div>
     <h3 style="color: var(--w-color-warning); margin-top: 2rem;">
         Competitive
     </h3>
 
+    <div class="matchup-block" data-matchup="moneyball">
     <h4>Moneyball (Black Aggro)</h4>
     <CardGrid 
         cards={[
@@ -262,6 +306,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         Demons and Anurids.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="goblins">
     <h4>Goblins</h4>
     <CardGrid 
         cards={[
@@ -280,6 +326,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         Swords, extra Web in. Destroying Lackey turn one is the highest-impact play.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="terrageddon">
     <h4>Terrageddon / Quiet Spec Oath</h4>
     <CardGrid 
         cards={[
@@ -300,6 +348,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         Angels, Seal, Denial, Web in.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="stiflenought">
     <h4>Stiflenought</h4>
     <CardGrid 
         cards={[
@@ -322,6 +372,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         <strong>Wrath of God</strong> is absolutely fantastic here.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="mirror">
     <h4>Mirror</h4>
     <CardGrid 
         cards={[
@@ -339,6 +391,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         Abeyance, Seal, Denial in.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="stasis">
     <h4>Stasis</h4>
     <CardGrid 
         cards={[
@@ -353,8 +407,10 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         Web, Frantic out. Grid, Angels, Abeyance, Denial, Seal in.
     </p>
 
+    </div>
     <h3 style="color: var(--w-color-danger); margin-top: 2rem;">Difficult</h3>
 
+    <div class="matchup-block" data-matchup="devourer">
     <h4>Devourer</h4>
     <CardGrid 
         cards={[
@@ -372,6 +428,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         in.
     </p>
 
+    </div>
+    <div class="matchup-block" data-matchup="aggro_with_armageddon">
     <h4>Aggro with Armageddon</h4>
     <CardGrid 
         cards={[
@@ -384,6 +442,50 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         Attacks life and mana simultaneously. Prioritize basics and early
         Swords.
     </p>
+
+    </div>
+    
+<script>
+    const blocks = document.querySelectorAll('.matchup-block') as NodeListOf<HTMLElement>;
+    const categories = document.querySelectorAll('h3') as NodeListOf<HTMLElement>;
+
+    document.addEventListener('selectOnChange', (e: any) => {
+        const payload = e.detail;
+        if (payload && payload.select === 'matchup-filter') {
+            const selected = payload.value;
+            
+            blocks.forEach((block: HTMLElement) => {
+                if (selected === 'all' || block.getAttribute('data-matchup') === selected) {
+                    block.style.display = 'block';
+                } else {
+                    block.style.display = 'none';
+                }
+            });
+
+            // Hide category headers if all children are hidden
+            categories.forEach((h3: HTMLElement) => {
+                let nextNode = h3.nextElementSibling as HTMLElement | null;
+                let hasVisibleMatchup = false;
+                
+                while (nextNode && !nextNode.tagName.match(/^H3$/)) {
+                    if (nextNode.classList && nextNode.classList.contains('matchup-block')) {
+                        if (nextNode.style.display !== 'none') {
+                            hasVisibleMatchup = true;
+                            break;
+                        }
+                    }
+                    nextNode = nextNode.nextElementSibling as HTMLElement | null;
+                }
+                
+                if (selected === 'all' || hasVisibleMatchup) {
+                    h3.style.display = 'block';
+                } else {
+                    h3.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
 
     <DecklistTooltip />
 </Layout>
