@@ -1,7 +1,14 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import { Card } from "webcoreui/astro";
+import { Card, Table } from "webcoreui/astro";
+
+const tableHeadings = ["Spell Cast", "Cards Seen", "Chance to find at least 1 of a 4-of", "Chance to find at least 1 of a 3-of"];
+const tableData = [
+    ["<strong>Frantic Search</strong>", "2", "15.1%", "11.4%"],
+    ["<strong>Attunement</strong> (1 activation)", "3", "22.2%", "16.9%"],
+    ["<strong>Fact or Fiction</strong>", "5", "35.3%", "27.3%"]
+];
 ---
 
 <Layout
@@ -128,7 +135,7 @@ import { Card } from "webcoreui/astro";
     </p>
 
     <div
-        style="margin-top: 3rem; background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: 2rem;"
+        style="margin-top: 3rem; background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: clamp(1rem, 4vw, 2rem);"
     >
         <h3 style="margin-top: 0; color: var(--w-color-primary-10);">
             Case Study: The Great Mulligan Debate
@@ -211,36 +218,14 @@ import { Card } from "webcoreui/astro";
     <p>We can calculate the probability of finding a specific missing combo piece (e.g., Replenish) when casting our card selection spells using a hypergeometric calculator.</p>
     <p>Assuming we are on the play and we cast our spell on Turn 3 (so we have drawn 9 cards total: 7 starting + 2 draw steps). There are 51 cards left in the deck.</p>
     
-    <table style="width: 100%; text-align: left; border-collapse: collapse; margin-bottom: 1rem; background-color: var(--w-color-primary-95); border-radius: var(--w-sm-radius);">
-        <thead>
-            <tr style="border-bottom: 2px solid var(--w-color-primary-50);">
-                <th style="padding: 1rem;">Spell Cast</th>
-                <th style="padding: 1rem;">Cards Seen</th>
-                <th style="padding: 1rem;">Chance to find at least 1 of a 4-of</th>
-                <th style="padding: 1rem;">Chance to find at least 1 of a 3-of</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                <td style="padding: 1rem;"><strong>Frantic Search</strong></td>
-                <td style="padding: 1rem;">2</td>
-                <td style="padding: 1rem;">15.1%</td>
-                <td style="padding: 1rem;">11.4%</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                <td style="padding: 1rem;"><strong>Attunement</strong> (1 activation)</td>
-                <td style="padding: 1rem;">3</td>
-                <td style="padding: 1rem;">22.2%</td>
-                <td style="padding: 1rem;">16.9%</td>
-            </tr>
-            <tr>
-                <td style="padding: 1rem;"><strong>Fact or Fiction</strong></td>
-                <td style="padding: 1rem;">5</td>
-                <td style="padding: 1rem;">35.3%</td>
-                <td style="padding: 1rem;">27.3%</td>
-            </tr>
-        </tbody>
-    </table>
+    <div style="margin-bottom: 2rem; margin-top: 1rem; overflow-x: auto; width: 100%; max-width: 100%;">
+        <Table 
+            headings={tableHeadings}
+            data={tableData}
+            hover={true}
+            striped="row"
+        />
+    </div>
     <p style="margin-bottom: 4rem;">This is why keeping hands without any engine or cantrip is dangerous. A single Frantic Search only gives you a ~15% chance to find that one specific card you need to survive. The more you know these percentages, the better your in-game sequencing will be.</p>
     </Card>
 

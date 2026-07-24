@@ -69,11 +69,13 @@ const { title = "Replenish Guide", prev, next } = Astro.props;
         padding: var(--w-space-xl);
         display: flex;
         justify-content: center;
+        min-width: 0;
     }
 
     .content-container {
         width: 100%;
         max-width: 800px;
+        min-width: 0;
     }
 
     // Typography rules para todo el sitio
@@ -118,5 +120,10 @@ const { title = "Replenish Guide", prev, next } = Astro.props;
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
+        min-width: 0;
+    }
+    
+    [class*="card_"] > [class*="body_"] {
+        min-width: 0;
     }
 </style>

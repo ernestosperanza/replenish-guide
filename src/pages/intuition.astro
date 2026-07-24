@@ -1,6 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import { Card } from "webcoreui/astro";
 ---
 
 <Layout
@@ -16,6 +17,7 @@ import PageHeader from "@components/PageHeader.astro";
         imageCaption="Intuition by April Lee"
         isCard={true}
     />
+    <Card title="General Heuristics" titleTag="h2">
     <p>
         Timing is everything. Because Intuition is an instant, you almost always
         want to cast it on your opponent's end step. This lets you untap with
@@ -39,8 +41,9 @@ import PageHeader from "@components/PageHeader.astro";
         fetching 3 copies of Seal of Cleansing to clear the hate before filling
         the graveyard).
     </p>
+    </Card>
 
-    <h3 style="margin-top: 2rem;">Common Scenarios & Piles</h3>
+    <Card title="Common Scenarios & Piles" titleTag="h2">
     <p>Here are the most common scenarios and how to navigate them:</p>
 
     <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
@@ -91,4 +94,5 @@ import PageHeader from "@components/PageHeader.astro";
             x3.
         </li>
     </ul>
+    </Card>
 </Layout>
