@@ -1,5 +1,18 @@
 ---
-const { prev, next } = Astro.props;
+import { FLAT_NAV } from "../config/nav";
+
+const currentPath = Astro.url.pathname;
+// Strip trailing slash if any, but keep / if it's the root
+const normalizedPath = currentPath.endsWith('/') && currentPath.length > 1 
+    ? currentPath.slice(0, -1) 
+    : currentPath;
+
+const currentIndex = FLAT_NAV.findIndex((item) => 
+    item.href === normalizedPath || (item.href !== "/" && normalizedPath.startsWith(item.href + "/"))
+);
+
+const prev = currentIndex > 0 ? FLAT_NAV[currentIndex - 1] : null;
+const next = currentIndex !== -1 && currentIndex < FLAT_NAV.length - 1 ? FLAT_NAV[currentIndex + 1] : null;
 ---
 <div style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--w-color-primary-50); display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
     <div style="flex: 1;">

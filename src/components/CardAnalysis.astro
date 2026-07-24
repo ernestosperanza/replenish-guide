@@ -3,13 +3,30 @@ import { Flex } from "webcoreui/astro";
 export interface Props {
     title: string;
     image: string;
+    collapsible?: boolean;
 }
-const { title, image } = Astro.props;
+const { title, image, collapsible = false } = Astro.props;
 ---
-<Flex gap="lg" alignment={{ vertical: "start" }} wrap="wrap" style="margin-bottom: 2.5rem;">
-    <img src={`/images/cards/${image}`} alt={title} style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);" />
-    <div style="flex: 1; min-width: 250px;">
-        <h3 style="margin-top: 0; margin-bottom: 0.75rem;">{title}</h3>
-        <slot />
-    </div>
-</Flex>
+{collapsible ? (
+    <details style="margin-bottom: 1rem; border-bottom: 1px solid var(--w-color-primary-80); padding-bottom: 1rem;">
+        <summary style="cursor: pointer; font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; color: var(--w-color-primary-10); padding: 0.5rem; border-radius: var(--w-sm-radius);">
+            {title}
+        </summary>
+        <div style="padding-top: 0.5rem;">
+            <Flex gap="lg" alignment={{ vertical: "start" }} wrap="wrap">
+                <img src={`/images/cards/${image}`} alt={title} style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);" />
+                <div style="flex: 1; min-width: 250px;">
+                    <slot />
+                </div>
+            </Flex>
+        </div>
+    </details>
+) : (
+    <Flex gap="lg" alignment={{ vertical: "start" }} wrap="wrap" style="margin-bottom: 2.5rem;">
+        <img src={`/images/cards/${image}`} alt={title} style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);" />
+        <div style="flex: 1; min-width: 250px;">
+            <h3 style="margin-top: 0; margin-bottom: 0.75rem;">{title}</h3>
+            <slot />
+        </div>
+    </Flex>
+)}

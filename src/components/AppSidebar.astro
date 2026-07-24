@@ -1,47 +1,20 @@
 ---
 import { Sidebar } from "webcoreui/astro";
+import { SIDEBAR_GROUPS } from "../config/nav";
 
 const currentPath = Astro.url.pathname;
 
-const sidebarGroups = [
-    {
-        title: "Overview",
-        items: [
-            { name: "Introduction", href: "/", active: currentPath === "/" },
-            { name: "History", href: "/history", active: currentPath.startsWith("/history") },
-        ],
-    },
-    {
-        title: "Deckbuilding",
-        items: [
-            { name: "Maindeck", href: "/analysis", active: currentPath.startsWith("/analysis") },
-            { name: "Sideboard", href: "/sideboard", active: currentPath.startsWith("/sideboard") },
-            { name: "Lists", href: "/deck", active: currentPath.startsWith("/deck") },
-        ],
-    },
-    {
-        title: "Gameplay",
-        items: [
-            { name: "Mechanics", href: "/mechanics", active: currentPath.startsWith("/mechanics") },
-            { name: "Intuition Guide", href: "/intuition", active: currentPath.startsWith("/intuition") },
-            { name: "Strategy", href: "/strategy", active: currentPath.startsWith("/strategy") },
-            { name: "Mulligan Guide", href: "/mulligan", active: currentPath.startsWith("/mulligan") },
-        ],
-    },
-    {
-        title: "Matchups",
-        items: [
-            { name: "Matchup Analysis", href: "/matchups", active: currentPath.startsWith("/matchups") },
-            { name: "Sideboard Matrix", href: "/sideboard-matrix", active: currentPath.startsWith("/sideboard-matrix") },
-        ],
-    },
-    {
-        title: "Wrapping Up",
-        items: [
-            { name: "Conclusion", href: "/conclusion", active: currentPath.startsWith("/conclusion") },
-        ],
-    },
-];
+// Add 'active' property dynamically to match the current path
+const sidebarGroups = SIDEBAR_GROUPS.map((group) => ({
+    ...group,
+    items: group.items.map((item) => {
+        // Special case for root (Introduction)
+        if (item.href === "/") {
+            return { ...item, active: currentPath === "/" };
+        }
+        return { ...item, active: currentPath === item.href || currentPath.startsWith(item.href + "/") };
+    }),
+}));
 ---
 
 <div id="sidebar-overlay" class="sidebar-overlay"></div>

@@ -8,8 +8,6 @@ import { Select, Badge, Card } from "webcoreui/astro";
 
 <Layout
     title="Matchups - Replenish Guide"
-    prev={{ name: "Strategic Theory", href: "/strategy" }}
-    next={{ name: "Sideboard Matrix", href: "/sideboard-matrix" }}
 >
     <PageHeader title="Matchups" />
     <Card title="Matchups Analysis" titleTag="h2">
@@ -52,7 +50,10 @@ import { Select, Badge, Card } from "webcoreui/astro";
     </div>
 
 
-    <h3><Badge theme="success">Dominant</Badge></h3>
+    <details open style=\"margin-bottom: 2rem;\">
+    <summary style=\"cursor: pointer; list-style: none;\">
+        <h3><Badge theme="success">Dominant</Badge></h3>
+    </summary>
 
     <Card className="matchup-block" data-matchup="enchantress" title="Enchantress" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
@@ -115,7 +116,12 @@ import { Select, Badge, Card } from "webcoreui/astro";
     <p><strong>Sideboard:</strong> Frantic searches usually come out here.</p>
 
     </Card>
-    <h3><Badge theme="info">Favorable</Badge></h3>
+    </details>
+
+<details open style=\"margin-bottom: 2rem;\">
+    <summary style=\"cursor: pointer; list-style: none;\">
+        <h3><Badge theme="info">Favorable</Badge></h3>
+    </summary>
 
     <Card className="matchup-block" data-matchup="sligh" title="Sligh" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
@@ -253,9 +259,14 @@ import { Select, Badge, Card } from "webcoreui/astro";
     </p>
 
     </Card>
-    <h3 style="color: var(--w-color-warning); margin-top: 2rem;">
+    </details>
+
+<details open style=\"margin-bottom: 2rem;\">
+    <summary style=\"cursor: pointer; list-style: none;\">
+        <h3 style="color: var(--w-color-warning); margin-top: 2rem;">
         Competitive
     </h3>
+    </summary>
 
     <Card className="matchup-block" data-matchup="moneyball" title="Moneyball (Black Aggro)" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
@@ -403,7 +414,12 @@ import { Select, Badge, Card } from "webcoreui/astro";
     </p>
 
     </Card>
-    <h3 style="color: var(--w-color-danger); margin-top: 2rem;">Difficult</h3>
+    </details>
+
+<details open style=\"margin-bottom: 2rem;\">
+    <summary style=\"cursor: pointer; list-style: none;\">
+        <h3 style="color: var(--w-color-danger); margin-top: 2rem;">Difficult</h3>
+    </summary>
 
     <Card className="matchup-block" data-matchup="devourer" title="Devourer" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
@@ -482,5 +498,6 @@ import { Select, Badge, Card } from "webcoreui/astro";
 </script>
 
     <DecklistTooltip />
+</details>
 </Layout>
 

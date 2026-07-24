@@ -7,12 +7,10 @@ import { Card } from "webcoreui/astro";
 
 <Layout
     title="Sideboard Analysis - Replenish Guide"
-    prev={{ name: "Maindeck", href: "/analysis" }}
-    next={{ name: "Lists", href: "/deck" }}
 >
     <PageHeader 
         title="Sideboard Analysis"
-        imageSrc="/images/banners/decree.jpeg"
+        imageSrc="/src/assets/banners/decree.jpeg"
         imageAlt="Decree of Silence"
         imageCaption="Decree of Silence"
         isCard={true}
@@ -253,7 +251,7 @@ import { Card } from "webcoreui/astro";
         game.
     </p>
 
-    <CardAnalysis title="Withered Wretch" image="creatures/withered_wretch.jpg">
+    <CardAnalysis collapsible={true} title="Withered Wretch" image="creatures/withered_wretch.jpg">
         <p style="margin-top: 0;">
             <strong>(Black Aggro, Rock)</strong> Wretch is a real problem because
             it's repeatable and it's on a body that can attack you. If you know they
@@ -264,7 +262,7 @@ import { Card } from "webcoreui/astro";
         </p>
     </CardAnalysis>
 
-    <CardAnalysis title="Tormod's Crypt" image="artifacts/tormods_crypt.jpg">
+    <CardAnalysis collapsible={true} title="Tormod's Crypt" image="artifacts/tormods_crypt.jpg">
         <p style="margin-top: 0;">
             The easy answer to this is an early Seal of Cleansing. But you can't
             always rely on having one, so knowing how to play through it
@@ -287,7 +285,7 @@ import { Card } from "webcoreui/astro";
         </p>
     </CardAnalysis>
 
-    <CardAnalysis
+    <CardAnalysis collapsible={true}
         title="Phyrexian Furnace"
         image="artifacts/phyrexian_furnace.jpg"
     >
@@ -301,7 +299,7 @@ import { Card } from "webcoreui/astro";
         </p>
     </CardAnalysis>
 
-    <CardAnalysis
+    <CardAnalysis collapsible={true}
         title="Tranquil Domain / Naturalize"
         image="instants/tranquil_domain.jpg"
     >
@@ -317,7 +315,7 @@ import { Card } from "webcoreui/astro";
         </p>
     </CardAnalysis>
 
-    <CardAnalysis title="Meddling Mage" image="creatures/meddling_mage.webp">
+    <CardAnalysis collapsible={true} title="Meddling Mage" image="creatures/meddling_mage.webp">
         <p style="margin-top: 0;">
             Be aware of which decks can have this post-board. If you expect it,
             keep some amount of removal available. Parallax Wave handles it,
