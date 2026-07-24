@@ -3,10 +3,12 @@ import Layout from "@components/Layout.astro";
 import { Card, Button, Flex } from "webcoreui/astro";
 import { Image } from "astro:assets";
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/cards/*.{jpeg,jpg,png,gif,webp}');
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/cards/*.{jpeg,jpg,png,gif,webp}",
+);
 let importedImage: ImageMetadata | null = null;
-if (images['/src/assets/cards/awol.webp']) {
-    importedImage = (await images['/src/assets/cards/awol.webp']()).default;
+if (images["/src/assets/cards/awol.webp"]) {
+    importedImage = (await images["/src/assets/cards/awol.webp"]()).default;
 }
 ---
 
@@ -15,22 +17,37 @@ if (images['/src/assets/cards/awol.webp']) {
     description="Oops! The page you were looking for was removed from the game... and then absolutely removed from the freaking game forever."
 >
     <Card style="text-align: center; margin-top: 4rem; padding: 3rem 1rem;">
-        <h1 style="font-size: clamp(3rem, 8vw, 5rem); margin: 0; color: var(--w-color-primary-10); line-height: 1;">404</h1>
-        <h2 style="font-size: clamp(1.5rem, 4vw, 2.5rem); margin-top: 0.5rem; margin-bottom: 2rem;">Target Not Found</h2>
-        
-        {importedImage && (
-            <div style="display: flex; justify-content: center; margin-bottom: 2.5rem;">
-                <Image 
-                    src={importedImage} 
-                    alt="AWOL Card"
-                    width={250}
-                    style="max-width: 100%; height: auto; border-radius: var(--w-lg-radius); box-shadow: 0 8px 20px rgba(0,0,0,0.4); border: 2px solid #111;"
-                />
-            </div>
-        )}
+        <h1
+            style="font-size: clamp(3rem, 8vw, 5rem); margin: 0; color: var(--w-color-primary-10); line-height: 1;"
+        >
+            404
+        </h1>
+        <h2
+            style="font-size: clamp(1.5rem, 4vw, 2.5rem); margin-top: 0.5rem; margin-bottom: 2rem;"
+        >
+            Target Not Found
+        </h2>
 
-        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2.5rem auto;">
-            It seems this page was removed from the game. And then removed from the removed-from-game zone and put into the <strong>absolutely-removed-from-the-freaking-game-forever</strong> zone.
+        {
+            importedImage && (
+                <div style="display: flex; justify-content: center; margin-bottom: 2.5rem;">
+                    <Image
+                        src={importedImage}
+                        alt="AWOL Card"
+                        width={250}
+                        style="max-width: 100%; height: auto; border-radius: var(--w-lg-radius); box-shadow: 0 8px 20px rgba(0,0,0,0.4); border: 2px solid #111;"
+                    />
+                </div>
+            )
+        }
+
+        <p
+            style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2.5rem auto;"
+        >
+            It seems this page was removed from the game. And then removed from
+            the removed-from-game zone and put into the <strong
+                >absolutely-removed-from-the-freaking-game-forever</strong
+            > zone.
         </p>
 
         <Flex alignment={{ horizontal: "center" }} gap="md">
