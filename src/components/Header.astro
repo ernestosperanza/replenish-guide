@@ -3,6 +3,7 @@
 ---
 
 <header class="top-nav">
+    <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
     <div class="logo">
         <a href="/" style="text-decoration: none; color: inherit;">
             <strong style="margin-left: 1rem;">Replenish Guide</strong>
@@ -13,7 +14,7 @@
 <style lang="scss">
     .top-nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         padding: 0 var(--w-space-xl);
         background-color: #fdfaf6; /* Fallback light parchment color */
@@ -27,11 +28,19 @@
         position: sticky;
         top: 0;
         z-index: 100;
+        
+        @media (max-width: 768px) {
+            padding: 0 var(--w-space-md);
+        }
 
         .logo {
             display: flex;
             align-items: center;
             gap: var(--w-space-sm);
+            
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
         a {
@@ -41,6 +50,22 @@
             letter-spacing: 0.02em;
             &:hover {
                 color: #000;
+            }
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #111;
+            cursor: pointer;
+            padding: 0.5rem;
+            margin-right: 1rem;
+            margin-left: -0.5rem;
+            
+            @media (max-width: 768px) {
+                display: block;
             }
         }
     }

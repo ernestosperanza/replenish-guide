@@ -95,4 +95,22 @@ const { title = "Replenish Guide", prev, next } = Astro.props;
         color: var(--w-color-primary-10);
         margin-bottom: 1.2em;
     }
+
+    @media (max-width: 768px) {
+        .content-area {
+            padding: var(--w-space-md);
+        }
+        
+        h1 {
+            font-size: 2rem !important;
+        }
+        
+        h2 {
+            font-size: 1.75rem !important;
+        }
+        
+        h3 {
+            font-size: 1.5rem !important;
+        }
+    }
 </style>
