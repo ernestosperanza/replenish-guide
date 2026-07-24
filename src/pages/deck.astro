@@ -278,6 +278,10 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                 >
             </div>
 
+            <p style="margin-bottom: 2rem; padding: 1rem; background-color: var(--w-color-primary-95); border-radius: var(--w-lg-radius); border-left: 4px solid var(--w-color-primary);">
+                <strong>The "Creatureless 75" Experiment:</strong> This highly innovative list completely abandons the traditional post-board midrange pivot (no Exalted Angels or Meddling Mages). Instead, it runs zero creatures in all 75 cards, pivoting into absolute hard-control by running a 3rd copy of <code>Decree of Silence</code> in the maindeck alongside a mountain of instant-speed interaction. It also showcases the modern <code>Seal of Cleansing</code> and <code>Disenchant</code> split in the sideboard to fight through opposing <code>Aura of Silence</code>.
+            </p>
+
             <Grid column={3} gap="lg">
                 <div>
                     <DeckSection
@@ -287,7 +291,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                             { count: 4, name: "Attunement" },
                             { count: 4, name: "Opalescence" },
                             { count: 4, name: "Parallax Wave" },
-                            { count: 2, name: "Decree of Silence" },
+                            { count: 3, name: "Decree of Silence" },
                         ]}
                     />
 
@@ -295,8 +299,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                         title="Card Selection"
                         items={[
                             { count: 3, name: "Frantic Search" },
-                            { count: 3, name: "Intuition" },
-                            { count: 1, name: "Fact or Fiction" },
+                            { count: 3, name: "Intuition" }
                         ]}
                     />
                 </div>
