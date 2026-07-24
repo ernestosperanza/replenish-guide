@@ -4,7 +4,7 @@ import PageHeader from "@components/PageHeader.astro";
 import SectionHeader from "@components/SectionHeader.astro";
 import CardGrid from "@components/CardGrid.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
-import { Select } from "webcoreui/astro";
+import { Select, Badge, Card } from "webcoreui/astro";
 ---
 
 <Layout
@@ -54,10 +54,9 @@ import { Select } from "webcoreui/astro";
     </div>
 
 
-    <h3 style="color: var(--w-color-success);">Dominant</h3>
+    <h3><Badge theme="success">Dominant</Badge></h3>
 
-    <div class="matchup-block" data-matchup="enchantress">
-    <h4>Enchantress</h4>
+    <Card className="matchup-block" data-matchup="enchantress" title="Enchantress" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/enchantress/argothian_enchantress.jpg", alt: "Argothian Enchantress" },
@@ -78,9 +77,8 @@ import { Select } from "webcoreui/astro";
         sidestep their hate and beat them down while they hold dead cards.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="elves">
-    <h4>Elves</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="elves" title="Elves" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/elves/priest_of_titania.jpg", alt: "Priest of Titania" },
@@ -98,9 +96,8 @@ import { Select } from "webcoreui/astro";
         can trim on meddling mage if you need more space. Bring in seal and sword
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="rock_and_midrange">
-    <h4>Rock and Midrange</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="rock_and_midrange" title="Rock and Midrange" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/rock_and_midrange/pernicious_deed.jpg", alt: "Pernicious Deed" },
@@ -114,11 +111,10 @@ import { Select } from "webcoreui/astro";
     </p>
     <p><strong>Sideboard:</strong> Frantic searches usually come out here.</p>
 
-    </div>
-    <h3 style="color: var(--w-color-info); margin-top: 2rem;">Favorable</h3>
+    </Card>
+    <h3><Badge theme="info">Favorable</Badge></h3>
 
-    <div class="matchup-block" data-matchup="sligh">
-    <h4>Sligh</h4>
+    <Card className="matchup-block" data-matchup="sligh" title="Sligh" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/sligh/jackal_pup.jpg", alt: "Jackal Pup" },
@@ -146,9 +142,8 @@ import { Select } from "webcoreui/astro";
         your combo.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="landstill">
-    <h4>Landstill</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="landstill" title="Landstill" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/landstill/standstill.jpg", alt: "Standstill" },
@@ -194,9 +189,8 @@ import { Select } from "webcoreui/astro";
         > is highly recommended.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="psychatog">
-    <h4>Psychatog</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="psychatog" title="Psychatog" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/psychatog/psychatog.jpg", alt: "Psychatog" },
@@ -210,9 +204,8 @@ import { Select } from "webcoreui/astro";
         Denial, fourth Mage in.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="bw_control">
-    <h4>BW Control</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="bw_control" title="BW Control" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/bw_control/vindicate.jpg", alt: "Vindicate" },
@@ -225,9 +218,8 @@ import { Select } from "webcoreui/astro";
         the graveyard. Angel is strong post-board.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="rg_ponza">
-    <h4>RG Ponza</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="rg_ponza" title="RG Ponza" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/rg_ponza/stone_rain.jpg", alt: "Stone Rain" },
@@ -257,13 +249,12 @@ import { Select } from "webcoreui/astro";
         completely invalidate Stone Rain and Pillage.
     </p>
 
-    </div>
+    </Card>
     <h3 style="color: var(--w-color-warning); margin-top: 2rem;">
         Competitive
     </h3>
 
-    <div class="matchup-block" data-matchup="moneyball">
-    <h4>Moneyball (Black Aggro)</h4>
+    <Card className="matchup-block" data-matchup="moneyball" title="Moneyball (Black Aggro)" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/moneyball/wretched_anurid.jpg", alt: "Wretched Anurid" },
@@ -306,9 +297,8 @@ import { Select } from "webcoreui/astro";
         Demons and Anurids.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="goblins">
-    <h4>Goblins</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="goblins" title="Goblins" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/goblins/goblin_lackey.jpg", alt: "Goblin Lackey" },
@@ -326,9 +316,8 @@ import { Select } from "webcoreui/astro";
         Swords, extra Web in. Destroying Lackey turn one is the highest-impact play.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="terrageddon">
-    <h4>Terrageddon / Quiet Spec Oath</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="terrageddon" title="Terrageddon / Quiet Spec Oath" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/terrageddon/terravore.jpg", alt: "Terravore" },
@@ -348,9 +337,8 @@ import { Select } from "webcoreui/astro";
         Angels, Seal, Denial, Web in.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="stiflenought">
-    <h4>Stiflenought</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="stiflenought" title="Stiflenought" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/stiflenought/phyrexian_dreadnought.jpg", alt: "Phyrexian Dreadnought" },
@@ -372,9 +360,8 @@ import { Select } from "webcoreui/astro";
         <strong>Wrath of God</strong> is absolutely fantastic here.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="mirror">
-    <h4>Mirror</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="mirror" title="Mirror" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/mirror/replenish.jpg", alt: "Replenish" },
@@ -391,9 +378,8 @@ import { Select } from "webcoreui/astro";
         Abeyance, Seal, Denial in.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="stasis">
-    <h4>Stasis</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="stasis" title="Stasis" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/stasis/stasis.jpg", alt: "Stasis" },
@@ -407,11 +393,10 @@ import { Select } from "webcoreui/astro";
         Web, Frantic out. Grid, Angels, Abeyance, Denial, Seal in.
     </p>
 
-    </div>
+    </Card>
     <h3 style="color: var(--w-color-danger); margin-top: 2rem;">Difficult</h3>
 
-    <div class="matchup-block" data-matchup="devourer">
-    <h4>Devourer</h4>
+    <Card className="matchup-block" data-matchup="devourer" title="Devourer" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/devourer/phyrexian_devourer.jpg", alt: "Phyrexian Devourer" },
@@ -428,9 +413,8 @@ import { Select } from "webcoreui/astro";
         in.
     </p>
 
-    </div>
-    <div class="matchup-block" data-matchup="aggro_with_armageddon">
-    <h4>Aggro with Armageddon</h4>
+    </Card>
+    <Card className="matchup-block" data-matchup="aggro_with_armageddon" title="Aggro with Armageddon" titleTag="h4" style="margin-bottom: 0.5rem;">
     <CardGrid 
         cards={[
             { src: "/images/cards/matchups/terrageddon/armageddon.jpg", alt: "Armageddon" },
@@ -443,7 +427,7 @@ import { Select } from "webcoreui/astro";
         Swords.
     </p>
 
-    </div>
+    </Card>
     
 <script>
     const blocks = document.querySelectorAll('.matchup-block') as NodeListOf<HTMLElement>;
@@ -489,3 +473,4 @@ import { Select } from "webcoreui/astro";
 
     <DecklistTooltip />
 </Layout>
+

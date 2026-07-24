@@ -61,72 +61,35 @@ const matrix = [
         out: [{ q: "-4", card: "Meddling Mage" }, { q: "-3", card: "Seal of Cleansing" }, { q: "-1", card: "Intuition" }]
     }
 ];
+
+import { Table } from "webcoreui/astro";
+
+const headings = ["Matchup", "In", "Out"];
+
+const tableData = matrix.map(row => {
+    const matchupStr = `<strong>${row.matchup}</strong>`;
+    
+    const inStr = `<div style="color: var(--w-color-success);">` + row.in.map((item) => {
+        let str = `${item.q} <a href="#" class="card-hover" data-card-name="${item.card}">${item.card}</a>`;
+        if (item.alt) {
+            str += ` / <a href="#" class="card-hover" data-card-name="${item.alt}">${item.altLabel || item.alt}</a>`;
+        }
+        return str;
+    }).join("<br/>") + `</div>`;
+
+    const outStr = `<div style="color: var(--w-color-danger);">` + row.out.map((item) => {
+        return `${item.q} <a href="#" class="card-hover" data-card-name="${item.card}">${item.card}</a>`;
+    }).join("<br/>") + `</div>`;
+    
+    return [matchupStr, inStr, outStr];
+});
 ---
 
-<div style="overflow-x: auto; margin-bottom: 4rem;">
-    <table
-        style="width: 100%; text-align: left; border-collapse: collapse; background-color: var(--w-color-primary-95); border-radius: var(--w-sm-radius);"
-    >
-        <thead>
-            <tr style="border-bottom: 2px solid var(--w-color-primary-50);">
-                <th style="padding: 1rem;">Matchup</th>
-                <th style="padding: 1rem;">In</th>
-                <th style="padding: 1rem;">Out</th>
-            </tr>
-        </thead>
-        <tbody>
-            {
-                matrix.map((row) => (
-                    <tr style="border-bottom: 1px solid var(--w-color-primary-80);">
-                        <td style="padding: 1rem;">
-                            <strong>{row.matchup}</strong>
-                        </td>
-                        <td style="padding: 1rem; color: var(--w-color-success);">
-                            {row.in.map((item, index) => (
-                                <>
-                                    {item.q}{" "}
-                                    <a
-                                        href="#"
-                                        class="card-hover"
-                                        data-card-name={item.card}
-                                    >
-                                        {item.card}
-                                    </a>
-                                    {item.alt && (
-                                        <>
-                                            {" "}
-                                            /{" "}
-                                            <a
-                                                href="#"
-                                                class="card-hover"
-                                                data-card-name={item.alt}
-                                            >
-                                                {item.altLabel || item.alt}
-                                            </a>
-                                        </>
-                                    )}
-                                    {index < row.in.length - 1 && <br />}
-                                </>
-                            ))}
-                        </td>
-                        <td style="padding: 1rem; color: var(--w-color-danger);">
-                            {row.out.map((item, index) => (
-                                <>
-                                    {item.q}{" "}
-                                    <a
-                                        href="#"
-                                        class="card-hover"
-                                        data-card-name={item.card}
-                                    >
-                                        {item.card}
-                                    </a>
-                                    {index < row.out.length - 1 && <br />}
-                                </>
-                            ))}
-                        </td>
-                    </tr>
-                ))
-            }
-        </tbody>
-    </table>
+<div style="margin-bottom: 4rem;">
+    <Table 
+        headings={headings}
+        data={tableData}
+        hover={true}
+        striped="row"
+    />
 </div>

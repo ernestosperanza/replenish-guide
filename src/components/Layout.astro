@@ -113,4 +113,10 @@ const { title = "Replenish Guide", prev, next } = Astro.props;
             font-size: 1.5rem !important;
         }
     }
+    // Estilo global para hacer las tarjetas transparentes y sin borde
+    [class*="card_"] {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
 </style>

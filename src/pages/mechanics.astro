@@ -2,6 +2,7 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import SectionHeader from "@components/SectionHeader.astro";
+import { Card } from "webcoreui/astro";
 ---
 
 <Layout
@@ -9,173 +10,194 @@ import SectionHeader from "@components/SectionHeader.astro";
     prev={{ name: "Lists", href: "/deck" }}
     next={{ name: "Intuition Guide", href: "/intuition" }}
 >
-    <PageHeader 
-        title="Mechanics"
+    <PageHeader
+        title="Deck Mechanics"
         imageSrc="/images/banners/opalescence.jpeg"
         imageAlt="Opalescence"
         imageCaption="Opalescence"
         isCard={true}
     />
+    <Card
+        title="Core Combos & Locks"
+        titleTag="h2"
+        style="margin-bottom: 0.5rem;"
+    >
+        <h3 style="margin-top: 0;">Opal-Wave Permanent Exile</h3>
+        <p>
+            With Opalescence and Parallax Wave on the board, Wave is a 4/4 that
+            can target itself. You hold priority and stack a bunch of
+            creature-exile triggers, then use the last counter to exile Wave
+            itself. Wave comes back with five fresh counters as a new object.
+            Then all the creature-exile triggers resolve and those creatures are
+            gone permanently. Repeat until the board is clear.
+        </p>
+        <p>
+            <strong>Combat Sequencing:</strong> A side effect of this trick is that
+            the Wave returns as a new object, meaning it has summoning sickness and
+            cannot attack that turn. Therefore, whenever possible, you should temporarily
+            exile blockers normally, swing with your team (including the Wave) for
+            4 damage, and <em>then</em> do the permanent exile trick in your second
+            main phase. Those 4 points of damage can often change the outcome of the
+            game. The exception is if the opponent's blockers have powerful Enter
+            the Battlefield (ETB) effects (like <em>Goblin Ringleader</em> or <em
+                >Bone Shredder</em
+            >), because temporarily exiling them means they'll return and
+            trigger their ETB again before being permanently exiled. Against
+            those, you just permanent-exile them immediately.
+        </p>
+        <p>
+            <strong>Exiling Opposing Enchantments:</strong> Because Opalescence affects
+            <em>all</em> non-Aura enchantments on the battlefield, your opponent's
+            enchantments also become creatures. This means you can use the Wave trick
+            to permanently exile problematic enchantments like <em
+                >Survival of the Fittest</em
+            >, <em>Sylvan Library</em>, or an opposing <em>Seal of Cleansing</em
+            >.
+        </p>
 
-    <SectionHeader title="Deck Mechanics" />
+        <h3 style="margin-top: 2.5rem;">Opalescence & Summoning Sickness</h3>
+        <p>
+            It's a common mistake for newer players to think they can cast
+            Replenish and immediately swing for lethal. Because Opalescence
+            turns your enchantments into creatures, any enchantment that enters
+            the battlefield this turn <em>will have summoning sickness</em>. You
+            cannot attack the turn you cast Replenish. This is why the deck
+            relies on Parallax Wave and Decree of Silence—you need to lock the
+            opponent out to survive a full turn cycle before you can attack.
+        </p>
 
-    <h3>Opal-Wave Permanent Exile</h3>
-    <p>
-        With Opalescence and Parallax Wave on the board, Wave is a 4/4 that can
-        target itself. You hold priority and stack a bunch of creature-exile
-        triggers, then use the last counter to exile Wave itself. Wave comes
-        back with five fresh counters as a new object. Then all the
-        creature-exile triggers resolve and those creatures are gone
-        permanently. Repeat until the board is clear.
-    </p>
-    <p>
-        <strong>Combat Sequencing:</strong> A side effect of this trick is that the
-        Wave returns as a new object, meaning it has summoning sickness and cannot
-        attack that turn. Therefore, whenever possible, you should temporarily exile
-        blockers normally, swing with your team (including the Wave) for 4 damage,
-        and <em>then</em> do the permanent exile trick in your second main phase.
-        Those 4 points of damage can often change the outcome of the game. The exception
-        is if the opponent's blockers have powerful Enter the Battlefield (ETB) effects
-        (like <em>Goblin Ringleader</em> or <em>Bone Shredder</em>), because
-        temporarily exiling them means they'll return and trigger their ETB
-        again before being permanently exiled. Against those, you just
-        permanent-exile them immediately.
-    </p>
-    <p>
-        <strong>Exiling Opposing Enchantments:</strong> Because Opalescence affects <em>all</em> non-Aura enchantments on the battlefield, your opponent's enchantments also become creatures. This means you can use the Wave trick to permanently exile problematic enchantments like <em>Survival of the Fittest</em>, <em>Sylvan Library</em>, or an opposing <em>Seal of Cleansing</em>.
-    </p>
+        <h3 style="margin-top: 2.5rem;">The Decree Lock</h3>
+        <p>
+            Post-Replenish with all three pieces, creatures are permanently
+            exiled and spells are countered.
+        </p>
 
-    <h3 style="margin-top: 2.5rem;">Opalescence & Summoning Sickness</h3>
-    <p>
-        It's a common mistake for newer players to think they can cast Replenish and immediately swing for lethal. Because Opalescence turns your enchantments into creatures, any enchantment that enters the battlefield this turn <em>will have summoning sickness</em>. You cannot attack the turn you cast Replenish. This is why the deck relies on Parallax Wave and Decree of Silence—you need to lock the opponent out to survive a full turn cycle before you can attack.
-    </p>
+        <h3 style="margin-top: 2.5rem;">Resetting Decree with Wave</h3>
+        <p>
+            When the third depletion trigger goes on the stack (which would
+            sacrifice Decree), you respond with Wave to exile the Decree. It
+            comes back with three fresh counters. Your opponent gets a small
+            window, but they'd need to have had three spells countered and still
+            have an instant ready. Very few decks can pull that off. Worst case
+            they destroy your Opalescence through the window, and Decree comes
+            back as a regular enchantment to counter their next three spells.
+        </p>
 
-    <h3 style="margin-top: 2.5rem;">The Decree Lock</h3>
-    <p>
-        Post-Replenish with all three pieces, creatures are permanently exiled
-        and spells are countered.
-    </p>
+        <h3 style="margin-top: 2.5rem;">Value Replenish</h3>
+        <p>
+            You don't always need the full combo. I've won plenty of games by
+            just getting back a single Decree mid-game to choke an opponent who
+            has a hand full of expensive spells. Opal plus Wave by itself
+            stabilizes against most creature boards.
+        </p>
 
-    <h3>Resetting Decree with Wave</h3>
-    <p>
-        When the third depletion trigger goes on the stack (which would
-        sacrifice Decree), you respond with Wave to exile the Decree. It comes
-        back with three fresh counters. Your opponent gets a small window, but
-        they'd need to have had three spells countered and still have an instant
-        ready. Very few decks can pull that off. Worst case they destroy your
-        Opalescence through the window, and Decree comes back as a regular
-        enchantment to counter their next three spells.
-    </p>
+        <h3 style="margin-top: 2.5rem;">Protecting Your Board</h3>
+        <p>
+            If someone casts Tranquil Domain or Wrath of God, you can respond
+            with Wave (while Opal is on board) to exile your own enchantments.
+            They come back fresh when Wave exits. If you have two Opalescences
+            in play and they target one with removal, you can Wave the targeted
+            one. It comes back as a new object and the removal fizzles.
+        </p>
 
-    <h3>Value Replenish</h3>
-    <p>
-        You don't always need the full combo. I've won plenty of games by just
-        getting back a single Decree mid-game to choke an opponent who has a
-        hand full of expensive spells. Opal plus Wave by itself stabilizes
-        against most creature boards.
-    </p>
+        <h3 style="margin-top: 2.5rem;">Parallax Wave + Disenchant Effect</h3>
+        <p>
+            Just like the Opalescence trick, you can permanently exile creatures
+            using Seal of Cleansing or a sideboard Disenchant. Activate Parallax
+            Wave to target up to 5 of your opponent's creatures. While those
+            activations are still on the stack, sacrifice your Seal of Cleansing
+            targeting your own Wave. The Wave leaves the battlefield, its
+            "return creatures" trigger resolves (returning nothing), and then
+            the exile triggers resolve, permanently removing the creatures. This
+            is a crucial survival tactic in the early game.
+        </p>
+    </Card>
 
-    <h3>Protecting Your Board</h3>
-    <p>
-        If someone casts Tranquil Domain or Wrath of God, you can respond with
-        Wave (while Opal is on board) to exile your own enchantments. They come
-        back fresh when Wave exits. If you have two Opalescences in play and
-        they target one with removal, you can Wave the targeted one. It comes
-        back as a new object and the removal fizzles.
-    </p>
+    <Card title="Synergies & Tricks" titleTag="h2" style="margin-bottom: 0.5rem;">
+        <h3 style="margin-top: 0;">Parallax Wave Creature Synergies</h3>
+        <p>
+            Parallax Wave isn't just for clearing your opponent's board; it has
+            incredible synergy with your own creatures, especially
+            post-sideboard. <em
+                >Note: The first two tricks practically require you to have both
+                Opalescence and Parallax Wave on the board so you can instantly
+                flicker the Wave and get your creatures back immediately.</em
+            >
+        </p>
+        <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
+            <li style="margin-bottom: 1rem;">
+                <strong>Flipping Exalted Angel for Free:</strong> If you cast Exalted
+                Angel face-down as a morph (for 3 mana), you can target it with Parallax
+                Wave. Then, use the Opalescence trick to flicker the Wave. When the
+                Angel returns to the battlefield, it comes back face-up. This instantly
+                saves you the 2WW unmorph cost.
+            </li>
+            <li style="margin-bottom: 1rem;">
+                <strong>Resetting Meddling Mage:</strong> If your opponent draws an
+                out to the card you named with Meddling Mage, or if you simply need
+                to lock out a different spell, you can exile your own Mage with Wave
+                and immediately flicker the Wave. When the Mage returns, you get to
+                name a brand-new card.
+            </li>
+            <li style="margin-bottom: 1rem;">
+                <strong>Creature Protection:</strong> This trick only requires the
+                Wave. You can use Parallax Wave as a "safe house" for your Mages or
+                Angels in response to spot removal or a sweeper. Exile them yourself,
+                and let the Wave fade naturally later to bring them back completely
+                unharmed.
+            </li>
+        </ul>
 
-    <h3 style="margin-top: 2.5rem;">Parallax Wave + Disenchant Effect</h3>
-    <p>
-        Just like the Opalescence trick, you can permanently exile creatures
-        using Seal of Cleansing or a sideboard Disenchant. Activate Parallax
-        Wave to target up to 5 of your opponent's creatures. While those
-        activations are still on the stack, sacrifice your Seal of Cleansing
-        targeting your own Wave. The Wave leaves the battlefield, its "return
-        creatures" trigger resolves (returning nothing), and then the exile
-        triggers resolve, permanently removing the creatures. This is a crucial
-        survival tactic in the early game.
-    </p>
+        <h3 style="margin-top: 2.5rem;">Asymmetrical Tsabo's Web</h3>
+        <p>
+            The deck leverages Tsabo's Web to shut down problematic lands like
+            Rishadan Port, Wasteland, and Dust Bowl. The reason this card is
+            completely asymmetrical is that it only affects lands with activated
+            abilities that <em>don't</em> produce mana. All of our non-basic lands
+            (Skycloud Expanse, Adarkar Wastes, Ancient Tomb) only have mana abilities,
+            meaning they untap perfectly fine under the Web.
+        </p>
 
-    <h3 style="margin-top: 2.5rem;">Parallax Wave Creature Synergies</h3>
-    <p>
-        Parallax Wave isn't just for clearing your opponent's board; it has
-        incredible synergy with your own creatures, especially post-sideboard. <em
-            >Note: The first two tricks practically require you to have both
-            Opalescence and Parallax Wave on the board so you can instantly
-            flicker the Wave and get your creatures back immediately.</em
-        >
-    </p>
-    <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
-        <li style="margin-bottom: 1rem;">
-            <strong>Flipping Exalted Angel for Free:</strong> If you cast Exalted
-            Angel face-down as a morph (for 3 mana), you can target it with Parallax
-            Wave. Then, use the Opalescence trick to flicker the Wave. When the Angel
-            returns to the battlefield, it comes back face-up. This instantly saves
-            you the 2WW unmorph cost.
-        </li>
-        <li style="margin-bottom: 1rem;">
-            <strong>Resetting Meddling Mage:</strong> If your opponent draws an out
-            to the card you named with Meddling Mage, or if you simply need to lock
-            out a different spell, you can exile your own Mage with Wave and immediately
-            flicker the Wave. When the Mage returns, you get to name a brand-new card.
-        </li>
-        <li style="margin-bottom: 1rem;">
-            <strong>Creature Protection:</strong> This trick only requires the Wave.
-            You can use Parallax Wave as a "safe house" for your Mages or Angels in
-            response to spot removal or a sweeper. Exile them yourself, and let the
-            Wave fade naturally later to bring them back completely unharmed.
-        </li>
-    </ul>
+        <h3 style="margin-top: 2.5rem;">Frantic Search Mana Tricks</h3>
+        <p>
+            Frantic Search isn't just a discard outlet; the "untap up to three
+            lands" clause enables several powerful mana tricks:
+        </p>
+        <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
+            <li style="margin-bottom: 1rem;">
+                <strong>The 'Free' Discard:</strong> Because the spell untaps your
+                lands, it acts as a completely free way to dump combo pieces into
+                your graveyard on the turn you intend to "go off." Even better, if
+                one of the three lands you untap is an Ancient Tomb, it actually nets
+                you +1 mana. For example: tap three lands (including Tomb) to float
+                4 mana, spend 3 on Frantic Search, and untap those three lands. You
+                now have 1 floating + 4 from lands = 5 mana total on turn 3, giving
+                you enough to cast Replenish and still hold up interaction.
+            </li>
+            <li style="margin-bottom: 1rem;">
+                <strong>Beating Rishadan Port:</strong> If an opponent tries to tap
+                your land with Port during your upkeep, you can float the mana in
+                response, let the port trigger resolve and then cast Frantic Search
+                using that mana. The spell will untap the lands, effectively ignoring
+                the Port activation.
+            </li>
+            <li style="margin-bottom: 1rem;">
+                <strong>Beating Tangle Wire:</strong> Similar to the Port trick, if
+                you have 3 mana sources, you can float all 3 mana in response to the
+                Tangle Wire tap trigger on your upkeep. Let the trigger resolve, tapping
+                your permanents. Then, use the 3 floating mana to cast Frantic Search,
+                untapping three of those lands.
+            </li>
+        </ul>
 
-    <h3 style="margin-top: 2.5rem;">Asymmetrical Tsabo's Web</h3>
-    <p>
-        The deck leverages Tsabo's Web to shut down problematic lands like
-        Rishadan Port, Wasteland, and Dust Bowl. The reason this card is
-        completely asymmetrical is that it only affects lands with activated
-        abilities that <em>don't</em> produce mana. All of our non-basic lands (Skycloud
-        Expanse, Adarkar Wastes, Ancient Tomb) only have mana abilities, meaning they
-        untap perfectly fine under the Web.
-    </p>
-
-    <h3 style="margin-top: 2.5rem;">Frantic Search Mana Tricks</h3>
-    <p>
-        Frantic Search isn't just a discard outlet; the "untap up to three
-        lands" clause enables several powerful mana tricks:
-    </p>
-    <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
-        <li style="margin-bottom: 1rem;">
-            <strong>The 'Free' Discard:</strong> Because the spell untaps your lands,
-            it acts as a completely free way to dump combo pieces into your graveyard
-            on the turn you intend to "go off." Even better, if one of the three lands
-            you untap is an Ancient Tomb, it actually nets you +1 mana. For example:
-            tap three lands (including Tomb) to float 4 mana, spend 3 on Frantic Search,
-            and untap those three lands. You now have 1 floating + 4 from lands =
-            5 mana total on turn 3, giving you enough to cast Replenish and still
-            hold up interaction.
-        </li>
-        <li style="margin-bottom: 1rem;">
-            <strong>Beating Rishadan Port:</strong> If an opponent tries to tap your
-            land with Port during your upkeep, you can float the mana in response,
-            let the port trigger resolve and then cast Frantic Search using that mana.
-            The spell will untap the lands, effectively ignoring the Port activation.
-        </li>
-        <li style="margin-bottom: 1rem;">
-            <strong>Beating Tangle Wire:</strong> Similar to the Port trick, if you
-            have 3 mana sources, you can float all 3 mana in response to the Tangle
-            Wire tap trigger on your upkeep. Let the trigger resolve, tapping your
-            permanents. Then, use the 3 floating mana to cast Frantic Search, untapping
-            three of those lands.
-        </li>
-    </ul>
-
-    <h3 style="margin-top: 2.5rem;">Attunement's Built-in Protection</h3>
-    <p>
-        The ability of Attunement reads: "Return Attunement to its owner's hand:
-        Draw three cards, then discard four cards." Because returning it to your
-        hand is the <em>cost</em> to activate the ability (and not the effect), you
-        can always activate it in response to a Disenchant or Seal of Cleansing. The
-        Attunement immediately goes to your hand, dodging the removal completely,
-        and you still get your card filtering.
-    </p>
-
-    </Layout>
+        <h3 style="margin-top: 2.5rem;">Attunement's Built-in Protection</h3>
+        <p>
+            The ability of Attunement reads: "Return Attunement to its owner's
+            hand: Draw three cards, then discard four cards." Because returning
+            it to your hand is the <em>cost</em> to activate the ability (and not
+            the effect), you can always activate it in response to a Disenchant or
+            Seal of Cleansing. The Attunement immediately goes to your hand, dodging
+            the removal completely, and you still get your card filtering.
+        </p>
+    </Card>
+</Layout>

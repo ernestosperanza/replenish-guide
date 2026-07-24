@@ -1,6 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import { List } from "webcoreui/astro";
 ---
 
 <Layout
@@ -9,49 +10,44 @@ import PageHeader from "@components/PageHeader.astro";
 >
     <PageHeader title="Further Reading" />
 
-    <ul
-        style="padding-left: 1.25rem; font-size: 1.1rem; line-height: 1.6; margin-bottom: 3rem;"
-    >
-        <li style="margin-bottom: 1rem;">
-            <strong>Original Replenish Primer</strong> by Brian Siu (Dr Siuss)<br
-            />
-            <a
-                href="https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu"
-                target="_blank">Read at Squee's House of Pizza</a
-            >
-        </li>
-        <li style="margin-bottom: 1rem;">
-            <strong>External Interference in Opalescent Parallax Waves</strong> by
-            Gary Roth (December 2024)<br />
-            <a
-                href="https://docs.google.com/document/d/e/2PACX-1vTS7yvU3FLB3Y2tPfV5EX8IEKFtGmMYDLAmKHieoIV90dbmX7jcu-C_dImJpM3ZU0w5zLt3hF_QuwCM/pub"
-                target="_blank">Read Document</a
-            >
-        </li>
-        <li style="margin-bottom: 1rem;">
-            <strong
-                >On the Physics of Collisions Between Opalescent Parallax Waves</strong
-            > by Gary Roth (September 2024)<br />
-            <a
-                href="https://docs.google.com/document/d/e/2PACX-1vQEW3hgl_gxjLwuTjdH5hoIZKxWNXAUotSipazs2pv60AzC0CUuwrjxjINJkgVfnKOquMgIgm6HZHc4/pub"
-                target="_blank">Read Document</a
-            >
-        </li>
-        <li style="margin-bottom: 1rem;">
-            <strong>Ban List Update 2026</strong> by Martin Berlin (January 2026)
-            on premodernmagic.com<br />
-            <a
-                href="https://premodernmagic.com/blog/ban-list-update-2026/"
-                target="_blank">Read Article</a
-            >
-        </li>
-        <li style="margin-bottom: 1rem;">
-            <strong>Monster of the Week Episode 101: Replenish 2.0</strong> (February
-            2026) on Wak-Wak<br />
-            <a
-                href="https://www.wak-wak.se/monster/2026-2-5/episode-101-replenish-20"
-                target="_blank">Listen to Episode</a
-            >
-        </li>
-    </ul>
+    <div style="margin-bottom: 3rem;">
+        <List
+            itemGroups={[
+                {
+                    items: [
+                        {
+                            name: "Original Replenish Primer",
+                            subText: "by Brian Siu (Dr Siuss)",
+                            href: "https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu",
+                            target: "_blank"
+                        },
+                        {
+                            name: "External Interference in Opalescent Parallax Waves",
+                            subText: "by Gary Roth (December 2024)",
+                            href: "https://docs.google.com/document/d/e/2PACX-1vTS7yvU3FLB3Y2tPfV5EX8IEKFtGmMYDLAmKHieoIV90dbmX7jcu-C_dImJpM3ZU0w5zLt3hF_QuwCM/pub",
+                            target: "_blank"
+                        },
+                        {
+                            name: "On the Physics of Collisions Between Opalescent Parallax Waves",
+                            subText: "by Gary Roth (September 2024)",
+                            href: "https://docs.google.com/document/d/e/2PACX-1vQEW3hgl_gxjLwuTjdH5hoIZKxWNXAUotSipazs2pv60AzC0CUuwrjxjINJkgVfnKOquMgIgm6HZHc4/pub",
+                            target: "_blank"
+                        },
+                        {
+                            name: "Ban List Update 2026",
+                            subText: "by Martin Berlin (January 2026) on premodernmagic.com",
+                            href: "https://premodernmagic.com/blog/ban-list-update-2026/",
+                            target: "_blank"
+                        },
+                        {
+                            name: "Monster of the Week Episode 101: Replenish 2.0",
+                            subText: "(February 2026) on Wak-Wak",
+                            href: "https://www.wak-wak.se/monster/2026-2-5/episode-101-replenish-20",
+                            target: "_blank"
+                        }
+                    ]
+                }
+            ]}
+        />
+    </div>
 </Layout>

@@ -1,4 +1,5 @@
 ---
+import { Flex, Badge } from "webcoreui/astro";
 export interface Props {
     title: string;
     items: { count: number, name: string }[];
@@ -13,15 +14,19 @@ const { title, items } = Astro.props;
     </h4>
     <ul style="list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 0;">
         {items.map(item => (
-            <li 
-                class="card-hover" 
-                data-card-name={item.name}
-                style="display: flex; gap: 0.75rem; padding: 0.25rem 0.5rem; cursor: pointer; align-items: center; border-radius: 4px; transition: background-color 0.15s ease;"
-                onmouseover="this.style.backgroundColor='rgba(150, 150, 150, 0.15)'"
-                onmouseout="this.style.backgroundColor='transparent'"
-            >
-                <span style="background-color: rgba(150, 150, 150, 0.2); font-weight: 600; font-size: 0.85rem; padding: 0.15rem 0.4rem; border-radius: 4px; min-width: 1.25rem; text-align: center; display: inline-block;">{item.count}</span>
-                <span style="font-weight: 500; font-size: 0.95rem;">{item.name}</span>
+            <li>
+                <Flex 
+                    gap="sm"
+                    alignment={{ vertical: "center" }}
+                    className="card-hover" 
+                    data-card-name={item.name}
+                    style="padding: 0.25rem 0.5rem; cursor: pointer; border-radius: 4px; transition: background-color 0.15s ease;"
+                    onmouseover="this.style.backgroundColor='rgba(150, 150, 150, 0.15)'"
+                    onmouseout="this.style.backgroundColor='transparent'"
+                >
+                    <Badge theme="secondary" style="min-width: 1.25rem; text-align: center;">{item.count}</Badge>
+                    <span style="font-weight: 500; font-size: 0.95rem;">{item.name}</span>
+                </Flex>
             </li>
         ))}
     </ul>
