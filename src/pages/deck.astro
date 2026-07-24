@@ -4,6 +4,117 @@ import PageHeader from "@components/PageHeader.astro";
 import { Grid, Card, Badge } from "webcoreui/astro";
 import DeckSection from "@components/DeckSection.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
+import CopyDeckButton from "@components/CopyDeckButton.astro";
+
+const alessandroDeck = `4 Replenish
+4 Attunement
+4 Opalescence
+4 Parallax Wave
+3 Decree of Silence
+3 Frantic Search
+3 Intuition
+4 Swords to Plowshares
+3 Seal of Cleansing
+3 Abeyance
+5 Island
+5 Plains
+4 Adarkar Wastes
+4 Ancient Tomb
+4 Flooded Strand
+3 Skycloud Expanse
+
+// Sideboard
+4 Meddling Mage
+3 Defense Grid
+3 Hydroblast
+2 Exalted Angel
+2 Tsabo's Web
+1 Seal of Cleansing`;
+
+const brianDeck = `4 Replenish
+4 Attunement
+4 Opalescence
+4 Parallax Wave
+3 Decree of Silence
+3 Frantic Search
+3 Intuition
+4 Swords to Plowshares
+2 Mana Leak
+2 Seal of Cleansing
+1 Abeyance
+5 Island
+5 Plains
+4 Adarkar Wastes
+4 Ancient Tomb
+4 Flooded Strand
+4 Skycloud Expanse
+
+// Sideboard
+4 Meddling Mage
+2 Abeyance
+2 Exalted Angel
+2 Hydroblast
+2 Seal of Cleansing
+2 Tsabo's Web`;
+
+const bryanDeck = `4 Meddling Mage
+4 Replenish
+4 Attunement
+4 Opalescence
+4 Parallax Wave
+2 Decree of Silence
+3 Frantic Search
+3 Intuition
+4 Swords to Plowshares
+3 Seal of Cleansing
+5 Island
+5 Plains
+4 Adarkar Wastes
+4 Ancient Tomb
+4 Flooded Strand
+3 Skycloud Expanse
+
+// Sideboard
+3 Abeyance
+3 Exalted Angel
+2 Hydroblast
+2 Tsabo's Web
+1 Blue Elemental Blast
+1 Nevinyrral's Disk
+1 Seal of Cleansing
+1 Sphere of Law
+1 Wrath of God`;
+
+const marinebiomancerDeck = `4 Replenish
+4 Attunement
+4 Opalescence
+4 Parallax Wave
+3 Decree of Silence
+3 Frantic Search
+3 Intuition
+4 Swords to Plowshares
+2 Abeyance
+2 Mana Leak
+1 Counterspell
+6 Plains
+5 Island
+4 Adarkar Wastes
+4 Ancient Tomb
+4 Flooded Strand
+3 Skycloud Expanse
+
+// Sideboard
+3 Tsabo's Web
+2 Blue Elemental Blast
+2 Disenchant
+2 Seal of Cleansing
+1 Abeyance
+1 Fact or Fiction
+1 Hydroblast
+1 Nevinyrral's Disk
+1 Orim's Chant
+1 Wrath of God`;
+
 ---
 
 <Layout
@@ -57,7 +168,10 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     >
         {/* List 1: Alessandro Galli */}
         <Card>
-            <h2 style="margin-top: 0; font-size: 1.5rem;">Alessandro Galli</h2>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+    <h2 style="margin: 0; font-size: 1.5rem;">Alessandro Galli</h2>
+    <CopyDeckButton decklist={alessandroDeck} />
+</div>
             <div style="margin-bottom: 1.5rem;">
                 <Badge theme="info" small={true}
                     >4Seasons Spring Ed. @ Bologna (2026)</Badge
@@ -125,7 +239,10 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 
         {/* List 2: Brian Siu */}
         <Card>
-            <h2 style="margin-top: 0; font-size: 1.5rem;">Brian Siu</h2>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+    <h2 style="margin: 0; font-size: 1.5rem;">Brian Siu</h2>
+    <CopyDeckButton decklist={brianDeck} />
+</div>
             <div style="margin-bottom: 1.5rem;">
                 <Badge theme="success" small={true}
                     >1st Place - NA Premodern Championship @ Lobstercon (2026)</Badge
@@ -194,7 +311,10 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 
         {/* List 3: Bryan Gulotta */}
         <Card>
-            <h2 style="margin-top: 0; font-size: 1.5rem;">Bryan Gulotta</h2>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+    <h2 style="margin: 0; font-size: 1.5rem;">Bryan Gulotta</h2>
+    <CopyDeckButton decklist={bryanDeck} />
+</div>
             <div style="margin-bottom: 1.5rem;">
                 <Badge theme="warning" small={true}
                     >2nd Place - NA Premodern Championship @ Lobstercon (2026)</Badge
@@ -269,7 +389,10 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 
         {/* List 4: Marinebiomancer */}
         <Card>
-            <h2 style="margin-top: 0; font-size: 1.5rem;">Marinebiomancer</h2>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+    <h2 style="margin: 0; font-size: 1.5rem;">Marinebiomancer</h2>
+    <CopyDeckButton decklist={marinebiomancerDeck} />
+</div>
             <div style="margin-bottom: 1.5rem;">
                 <Badge theme="alert" small={true}
                     >Top 16 - New England Premodern Summer Regional (2026)</Badge

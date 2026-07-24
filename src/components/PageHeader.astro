@@ -11,16 +11,10 @@ export interface Props {
     isCard?: boolean;
 }
 
-const {
-    title,
-    description,
-    imageSrc,
-    imageAlt,
-    imageCaption
-} = Astro.props;
+const { title, description, imageSrc, imageAlt, imageCaption } = Astro.props;
 ---
 
-<header style="margin-bottom: 3rem;">
+<header>
     <Card>
         <h1
             style="margin-top: 0; border-bottom: 1px solid var(--w-color-primary-50); font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -0.02em; margin-bottom: 1rem; padding-bottom: 0.5rem;"

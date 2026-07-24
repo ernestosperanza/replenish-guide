@@ -1,5 +1,7 @@
 ---
 import { Carousel, CarouselItem } from "webcoreui/astro";
+import { Image } from "astro:assets";
+
 export interface Props {
     cards: { src: string; alt: string }[];
     width?: string;
@@ -11,40 +13,71 @@ const { cards, width = "150px" } = Astro.props;
 const smItems = Math.min(cards.length, 2);
 const mdItems = Math.min(cards.length, 3);
 const lgItems = Math.min(cards.length, 4);
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/cards/**/*.{jpeg,jpg,png,gif,webp}');
+
+// Resolve all card images
+const processedCards = await Promise.all(cards.map(async (card) => {
+    let importedImage: ImageMetadata | null = null;
+    if (images[card.src]) {
+        importedImage = (await images[card.src]()).default;
+    }
+    return { ...card, importedImage };
+}));
 ---
 
 <div style="margin-bottom: 2.5rem; margin-top: 1.5rem; max-width: 100%;" class="card-carousel-wrapper">
-    {cards.length > 1 ? (
+    {processedCards.length > 1 ? (
         <Carousel 
-            items={cards.length}
+            items={processedCards.length}
             itemsPerSlide={{ default: 1, sm: smItems, md: mdItems, lg: lgItems }}
             pagination={{ theme: 'secondary' }}
         >
             {
-                cards.map((card) => (
+                processedCards.map((card) => (
                     <CarouselItem>
                         <div style="display: flex; justify-content: center; align-items: center; padding: 1rem 0.5rem;">
-                            <img
-                                src={card.src}
-                                alt={card.alt}
-                                style={`width: ${width}; max-width: 100%; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50); box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;`}
-                                class="card-hover-effect"
-                            />
+                            {card.importedImage ? (
+                                <Image
+                                    src={card.importedImage}
+                                    alt={card.alt}
+                                    width={300}
+                                    style={`width: ${width}; max-width: 100%; height: auto; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50); box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;`}
+                                    class="card-hover-effect"
+                                />
+                            ) : (
+                                <img
+                                    src={card.src}
+                                    alt={card.alt}
+                                    style={`width: ${width}; max-width: 100%; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50); box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;`}
+                                    class="card-hover-effect"
+                                />
+                            )}
                         </div>
                     </CarouselItem>
                 ))
             }
         </Carousel>
-    ) : (
+    ) : processedCards.length === 1 ? (
         <div style="display: flex; justify-content: center; align-items: center; padding: 1rem 0;">
-            <img
-                src={cards[0].src}
-                alt={cards[0].alt}
-                style={`width: ${width}; max-width: 100%; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50); box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;`}
-                class="card-hover-effect"
-            />
+            {processedCards[0].importedImage ? (
+                <Image
+                    src={processedCards[0].importedImage}
+                    alt={processedCards[0].alt}
+                    width={300}
+                    style={`width: ${width}; max-width: 100%; height: auto; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50); box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;`}
+                    class="card-hover-effect"
+                />
+            ) : (
+                <img
+                    src={processedCards[0].src}
+                    alt={processedCards[0].alt}
+                    style={`width: ${width}; max-width: 100%; border-radius: 4.75% / 3.5%; border: 1px solid var(--w-color-primary-50); box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s ease;`}
+                    class="card-hover-effect"
+                />
+            )}
         </div>
-    )}
+    ) : null}
 </div>
 
 <style>

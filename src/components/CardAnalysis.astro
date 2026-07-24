@@ -1,11 +1,21 @@
 ---
 import { Flex } from "webcoreui/astro";
+import { Image } from "astro:assets";
+
 export interface Props {
     title: string;
     image: string;
     collapsible?: boolean;
 }
 const { title, image, collapsible = false } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/cards/**/*.{jpeg,jpg,png,gif,webp}');
+const fullPath = `/src/assets/cards/${image}`;
+
+let importedImage: ImageMetadata | null = null;
+if (images[fullPath]) {
+    importedImage = (await images[fullPath]()).default;
+}
 ---
 {collapsible ? (
     <details style="margin-bottom: 1rem; border-bottom: 1px solid var(--w-color-primary-80); padding-bottom: 1rem;">
@@ -14,7 +24,11 @@ const { title, image, collapsible = false } = Astro.props;
         </summary>
         <div style="padding-top: 0.5rem;">
             <Flex gap="lg" alignment={{ vertical: "start" }} wrap="wrap">
-                <img src={`/images/cards/${image}`} alt={title} style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);" />
+                {importedImage ? (
+                    <Image src={importedImage} alt={title} width={400} style="width: 220px; height: auto; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);" />
+                ) : (
+                    <img src={fullPath} alt={title} style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);" />
+                )}
                 <div style="flex: 1; min-width: 250px;">
                     <slot />
                 </div>
@@ -23,7 +37,11 @@ const { title, image, collapsible = false } = Astro.props;
     </details>
 ) : (
     <Flex gap="lg" alignment={{ vertical: "start" }} wrap="wrap" style="margin-bottom: 2.5rem;">
-        <img src={`/images/cards/${image}`} alt={title} style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);" />
+        {importedImage ? (
+            <Image src={importedImage} alt={title} width={400} style="width: 220px; height: auto; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);" />
+        ) : (
+            <img src={fullPath} alt={title} style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);" />
+        )}
         <div style="flex: 1; min-width: 250px;">
             <h3 style="margin-top: 0; margin-bottom: 0.75rem;">{title}</h3>
             <slot />

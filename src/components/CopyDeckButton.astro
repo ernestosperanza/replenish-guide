@@ -1,0 +1,31 @@
+---
+import { Button } from "webcoreui/astro";
+export interface Props {
+    decklist: string;
+}
+const { decklist } = Astro.props;
+---
+<div class="copy-deck-wrapper" data-decklist={decklist} style="display: inline-block;">
+    <Button theme="secondary" className="copy-btn">Copy MTGO List</Button>
+</div>
+
+<script>
+    const initCopyButtons = () => {
+        document.querySelectorAll('.copy-deck-wrapper').forEach(wrapper => {
+            const btn = wrapper.querySelector('.copy-btn');
+            if (btn && !btn.hasAttribute('data-copy-initialized')) {
+                btn.setAttribute('data-copy-initialized', 'true');
+                btn.addEventListener('click', () => {
+                    navigator.clipboard.writeText(wrapper.getAttribute('data-decklist') || '');
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => { btn.textContent = originalText; }, 2000);
+                });
+            }
+        });
+    };
+
+    // Run on initial load and after view transitions
+    initCopyButtons();
+    document.addEventListener('astro:page-load', initCopyButtons);
+</script>
