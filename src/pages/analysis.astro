@@ -6,260 +6,385 @@ import { Card } from "webcoreui/astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 ---
 
-<Layout
-    title="Maindeck Analysis - Replenish Guide"
->
+<Layout title="Maindeck Analysis - Replenish Guide"
+    description="Deep dive into the core cards and strategy of the Replenish deck. Understand the purpose of every enchantment, cantrip, and interaction spell in the maindeck and sideboard.">
     <PageHeader title="Maindeck Analysis" />
     <Card title="The Core" titleTag="h2">
+        <CardGrid
+            width="180px"
+            cards={[
+                {
+                    src: "/src/assets/cards/sorceries/replenish.jpg",
+                    alt: "Replenish",
+                },
+                {
+                    src: "/src/assets/cards/enchantments/opalescence.jpg",
+                    alt: "Opalescence",
+                },
+                {
+                    src: "/src/assets/cards/enchantments/parallax_wave.webp",
+                    alt: "Parallax Wave",
+                },
+                {
+                    src: "/src/assets/cards/enchantments/attunement.jpg",
+                    alt: "Attunement",
+                },
+            ]}
+        />
 
-    <CardGrid 
-        width="180px"
-        cards={[
-            { src: "/src/assets/cards/sorceries/replenish.jpg", alt: "Replenish" },
-            { src: "/src/assets/cards/enchantments/opalescence.jpg", alt: "Opalescence" },
-            { src: "/src/assets/cards/enchantments/parallax_wave.webp", alt: "Parallax Wave" },
-            { src: "/src/assets/cards/enchantments/attunement.jpg", alt: "Attunement" }
-        ]} 
-    />
-
-    <Card secondary={true} style="margin-bottom: 3rem;">
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div>
-            <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">Replenish (4 main)</h3>
-            <p style="margin-top: 0; margin-bottom: 0;">Always a four-of. The one card whose count has never been challenged.</p>
-        </div>
-        <div>
-            <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">Opalescence (4 main)</h3>
-            <p style="margin-top: 0; margin-bottom: 0;">Turns all other non-Aura enchantments into creatures based on mana value. Opalescence does not affect itself—you need two for each to turn the other into a 4/4. With a single Opalescence, your attackers are Decree (8/8), Wave (4/4), Attunement (3/3), and Seals (2/2).</p>
-        </div>
-        <div>
-            <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">Parallax Wave (4 main)</h3>
-            <p style="margin-top: 0; margin-bottom: 0;">Defensive early, combo piece late. With Opalescence, it permanently exiles every creature your opponent controls.</p>
-        </div>
-        <div>
-            <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">Attunement (4 main)</h3>
-            <p style="margin-top: 0; margin-bottom: 0;">This is the glue. Digs three cards deep, fills the graveyard, and attacks as a 3/3 under Opalescence. It's also the most commonly misplayed card in the deck. A lot of players just spin it hoping to find something good. Don't do that. Every activation should have a plan. Before you activate, you should roughly know which cards you're willing to discard. If you can't identify them, don't activate yet.</p>
-        </div>
-        </div>
-    </Card>
+        <Card secondary={true} style="margin-bottom: 3rem;">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div>
+                    <h3
+                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                    >
+                        Replenish (4 main)
+                    </h3>
+                    <p style="margin-top: 0; margin-bottom: 0;">
+                        Always a four-of. The one card whose count has never
+                        been challenged.
+                    </p>
+                </div>
+                <div>
+                    <h3
+                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                    >
+                        Opalescence (4 main)
+                    </h3>
+                    <p style="margin-top: 0; margin-bottom: 0;">
+                        Turns all other non-Aura enchantments into creatures
+                        based on mana value. Opalescence does not affect
+                        itself—you need two for each to turn the other into a
+                        4/4. With a single Opalescence, your attackers are
+                        Decree (8/8), Wave (4/4), Attunement (3/3), and Seals
+                        (2/2).
+                    </p>
+                </div>
+                <div>
+                    <h3
+                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                    >
+                        Parallax Wave (4 main)
+                    </h3>
+                    <p style="margin-top: 0; margin-bottom: 0;">
+                        Defensive early, combo piece late. With Opalescence, it
+                        permanently exiles every creature your opponent
+                        controls.
+                    </p>
+                </div>
+                <div>
+                    <h3
+                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                    >
+                        Attunement (4 main)
+                    </h3>
+                    <p style="margin-top: 0; margin-bottom: 0;">
+                        This is the glue. Digs three cards deep, fills the
+                        graveyard, and attacks as a 3/3 under Opalescence. It's
+                        also the most commonly misplayed card in the deck. A lot
+                        of players just spin it hoping to find something good.
+                        Don't do that. Every activation should have a plan.
+                        Before you activate, you should roughly know which cards
+                        you're willing to discard. If you can't identify them,
+                        don't activate yet.
+                    </p>
+                </div>
+            </div>
+        </Card>
     </Card>
 
     <Card title="The Lock Piece" titleTag="h2">
-
-    <CardAnalysis
-        title="Decree of Silence (2-3 main)"
-        image="enchantments/decree_of_silence.jpg"
-    >
-        <p style="margin-top: 0;">
-            This replaced Parallax Tide as the post-Replenish lock and it's
-            turned out to be much better than I expected. The full combo is
-            great, but what surprised me is how good Decree is on its own. Just
-            discarding it to Frantic Search or Attunement and Replenishing it
-            back, even without the other pieces, can end games. Their hand gets
-            too clunky to fight through three counters, and by the time the
-            Decree is gone you've assembled everything else.
-        </p>
-        <p>
-            Against control, cycling it for six mana is an uncounterable
-            cantrip. Opponents are consistently surprised when you cycle it.
-            They gave it to you off Intuition thinking who cares about an
-            eight-mana enchantment, and then the uncounterable draw refuels you
-            at a critical moment.
-        </p>
-        <p>Under Opalescence it's an 8/8, which is also not nothing.</p>
-        <p>
-            You want more copies when the field is diverse or combo-heavy.
-            Against control specifically, where you're cutting Frantic Search
-            and Intuition post-board, you can't reliably discard it, so the
-            third copy can be a liability.
-        </p>
-    </CardAnalysis>
+        <CardAnalysis
+            title="Decree of Silence (2-3 main)"
+            image="enchantments/decree_of_silence.jpg"
+        >
+            <p style="margin-top: 0;">
+                This replaced Parallax Tide as the post-Replenish lock and it's
+                turned out to be much better than I expected. The full combo is
+                great, but what surprised me is how good Decree is on its own.
+                Just discarding it to Frantic Search or Attunement and
+                Replenishing it back, even without the other pieces, can end
+                games. Their hand gets too clunky to fight through three
+                counters, and by the time the Decree is gone you've assembled
+                everything else.
+            </p>
+            <p>
+                Against control, cycling it for six mana is an uncounterable
+                cantrip. Opponents are consistently surprised when you cycle it.
+                They gave it to you off Intuition thinking who cares about an
+                eight-mana enchantment, and then the uncounterable draw refuels
+                you at a critical moment.
+            </p>
+            <p>Under Opalescence it's an 8/8, which is also not nothing.</p>
+            <p>
+                You want more copies when the field is diverse or combo-heavy.
+                Against control specifically, where you're cutting Frantic
+                Search and Intuition post-board, you can't reliably discard it,
+                so the third copy can be a liability.
+            </p>
+        </CardAnalysis>
     </Card>
 
     <Card title="Proactive Disruption" titleTag="h2">
-
-    <CardAnalysis
-        title="Meddling Mage (0-4 main)"
-        image="creatures/meddling_mage.webp"
-    >
-        <p style="margin-top: 0;">
-            I want four Mage total—whether they are main or side is metagaming.
-            The move to maindeck happened preparing for a paper tournament: the
-            shared clock made a proactive element desirable against Landstill.
-            It also improves combo, Sligh, and Stiflenought matchups
-            simultaneously. Maindeck Mage is a meta call—it excels in the
-            metagames I play in, but it’s not required in the main.
-        </p>
-        <p>
-            Naming is context-dependent. Against Sligh, name Lightning Bolt not
-            to lock them out, but to protect Mage as a blocker for Jackal Pup.
-            The Mage’s job against red is to eat a creature. Late game, shift to
-            Fireblast or Ball Lightning. Against control: Counterspell or
-            Swords. Against Stiflenought: Dreadnought or Stifle. Against
-            Enchantress: Enchantress (Argothian Enchantress or Enchantress’s
-            Precense) in game 1, Tormod’s Crypt in game 2.
-        </p>
-        <p>
-            Main weakness: bad against green decks, discard, and midrange.
-            Against Ponza, Rock, and Terrageddon; Mages come out because green
-            creatures outclass a 2/2 and these decks don’t rely on single spells
-            Mage can profitably name. In fields heavy with these archetypes,
-            some or all Mages may belong in the sideboard.
-        </p>
-    </CardAnalysis>
+        <CardAnalysis
+            title="Meddling Mage (0-4 main)"
+            image="creatures/meddling_mage.webp"
+        >
+            <p style="margin-top: 0;">
+                I want four Mage total—whether they are main or side is
+                metagaming. The move to maindeck happened preparing for a paper
+                tournament: the shared clock made a proactive element desirable
+                against Landstill. It also improves combo, Sligh, and
+                Stiflenought matchups simultaneously. Maindeck Mage is a meta
+                call—it excels in the metagames I play in, but it’s not required
+                in the main.
+            </p>
+            <p>
+                Naming is context-dependent. Against Sligh, name Lightning Bolt
+                not to lock them out, but to protect Mage as a blocker for
+                Jackal Pup. The Mage’s job against red is to eat a creature.
+                Late game, shift to Fireblast or Ball Lightning. Against
+                control: Counterspell or Swords. Against Stiflenought:
+                Dreadnought or Stifle. Against Enchantress: Enchantress
+                (Argothian Enchantress or Enchantress’s Precense) in game 1,
+                Tormod’s Crypt in game 2.
+            </p>
+            <p>
+                Main weakness: bad against green decks, discard, and midrange.
+                Against Ponza, Rock, and Terrageddon; Mages come out because
+                green creatures outclass a 2/2 and these decks don’t rely on
+                single spells Mage can profitably name. In fields heavy with
+                these archetypes, some or all Mages may belong in the sideboard.
+            </p>
+        </CardAnalysis>
     </Card>
 
     <Card title="Card Selection" titleTag="h2">
+        <CardGrid
+            width="180px"
+            cards={[
+                {
+                    src: "/src/assets/cards/instants/frantic_search.webp",
+                    alt: "Frantic Search",
+                },
+                {
+                    src: "/src/assets/cards/instants/intuition.webp",
+                    alt: "Intuition",
+                },
+            ]}
+        />
 
-    <CardGrid 
-        width="180px"
-        cards={[
-            { src: "/src/assets/cards/instants/frantic_search.webp", alt: "Frantic Search" },
-            { src: "/src/assets/cards/instants/intuition.webp", alt: "Intuition" }
-        ]} 
-    />
-
-    <Card secondary={true} style="margin-bottom: 3rem;">
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div>
-            <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">Frantic Search (2-3 main)</h3>
-            <p style="margin-top: 0; margin-bottom: 0;">Velocity. Makes explosive turns possible, especially with Sol lands. It's also the card I side out the most. In any matchup where the game goes long and card disadvantage hurts, it comes out.</p>
-        </div>
-        <div>
-            <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">Intuition (3-4 main)</h3>
-            <p style="margin-top: 0; margin-bottom: 0;">The most skill-testing card in the deck. Classic pile is Opalescence, Wave, Decree. Whatever they give you, the other two go to the graveyard for Replenish. But the piles change based on what you're playing against. Against Landstill you might pile three lands. Against aggro, three Swords. I often trim it against control because it lowers your threat density.</p>
-        </div>
-        </div>
-    </Card>
+        <Card secondary={true} style="margin-bottom: 3rem;">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div>
+                    <h3
+                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                    >
+                        Frantic Search (2-3 main)
+                    </h3>
+                    <p style="margin-top: 0; margin-bottom: 0;">
+                        Velocity. Makes explosive turns possible, especially
+                        with Sol lands. It's also the card I side out the most.
+                        In any matchup where the game goes long and card
+                        disadvantage hurts, it comes out.
+                    </p>
+                </div>
+                <div>
+                    <h3
+                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                    >
+                        Intuition (3-4 main)
+                    </h3>
+                    <p style="margin-top: 0; margin-bottom: 0;">
+                        The most skill-testing card in the deck. Classic pile is
+                        Opalescence, Wave, Decree. Whatever they give you, the
+                        other two go to the graveyard for Replenish. But the
+                        piles change based on what you're playing against.
+                        Against Landstill you might pile three lands. Against
+                        aggro, three Swords. I often trim it against control
+                        because it lowers your threat density.
+                    </p>
+                </div>
+            </div>
+        </Card>
     </Card>
 
     <Card title="Interaction" titleTag="h2">
+        <CardGrid
+            width="180px"
+            cards={[
+                {
+                    src: "/src/assets/cards/instants/swords_to_plowshares.webp",
+                    alt: "Swords to Plowshares",
+                },
+                {
+                    src: "/src/assets/cards/enchantments/seal_of_cleansing.webp",
+                    alt: "Seal of Cleansing",
+                },
+                {
+                    src: "/src/assets/cards/artifacts/tsabos_web.jpg",
+                    alt: "Tsabo’s Web",
+                },
+            ]}
+        />
 
-    <CardGrid 
-        width="180px"
-        cards={[
-            { src: "/src/assets/cards/instants/swords_to_plowshares.webp", alt: "Swords to Plowshares" },
-            { src: "/src/assets/cards/enchantments/seal_of_cleansing.webp", alt: "Seal of Cleansing" },
-            { src: "/src/assets/cards/artifacts/tsabos_web.jpg", alt: "Tsabo’s Web" }
-        ]} 
-    />
-
-    <Card secondary={true} style="margin-bottom: 3rem;">
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div>
-            <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">Swords to Plowshares (3-4 main, 0-1 side)</h3>
-            <p style="margin-top: 0; margin-bottom: 0;">Essential one-mana removal. The fourth comes in against creature-heavy matchups.</p>
-        </div>
-        <div>
-            <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">Seal of Cleansing (2-3 main, 1 side)</h3>
-            <p style="margin-top: 0; margin-bottom: 0;">Answers problematic enchantments and artifacts. It synergizes with Replenish since it comes back from the graveyard ready to use again. Comes out against decks that don't have relevant targets.</p>
-        </div>
-        <div>
-            <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">Tsabo’s Web (0-3 main, 1-3 side)</h3>
-            <p style="margin-top: 0; margin-bottom: 0;">Shuts down Port, Dust Bowl, Factory. The count flexes from one to three depending on how many utility lands you expect. It's been trending down online as Terrageddon has declined.</p>
-        </div>
-        </div>
-    </Card>
+        <Card secondary={true} style="margin-bottom: 3rem;">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div>
+                    <h3
+                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                    >
+                        Swords to Plowshares (3-4 main, 0-1 side)
+                    </h3>
+                    <p style="margin-top: 0; margin-bottom: 0;">
+                        Essential one-mana removal. The fourth comes in against
+                        creature-heavy matchups.
+                    </p>
+                </div>
+                <div>
+                    <h3
+                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                    >
+                        Seal of Cleansing (2-3 main, 1 side)
+                    </h3>
+                    <p style="margin-top: 0; margin-bottom: 0;">
+                        Answers problematic enchantments and artifacts. It
+                        synergizes with Replenish since it comes back from the
+                        graveyard ready to use again. Comes out against decks
+                        that don't have relevant targets.
+                    </p>
+                </div>
+                <div>
+                    <h3
+                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                    >
+                        Tsabo’s Web (0-3 main, 1-3 side)
+                    </h3>
+                    <p style="margin-top: 0; margin-bottom: 0;">
+                        Shuts down Port, Dust Bowl, Factory. The count flexes
+                        from one to three depending on how many utility lands
+                        you expect. It's been trending down online as
+                        Terrageddon has declined.
+                    </p>
+                </div>
+            </div>
+        </Card>
     </Card>
 
     <Card title="No Maindeck Mana Leak" titleTag="h2">
-    <CardAnalysis title="Mana Leak (0-3 main)" image="instants/mana_leak.webp">
-        <p style="margin-top: 0;">
-            I cut Mana Leak because Landstill was the most popular control deck
-            when I was building the list. Leak is bad in long games where they
-            can just pay the three. With Landstill declining and Esper Psychatog
-            picking up, Leak looks better now. The mirror is also a real matchup
-            post-ban, which makes cheap countermagic more valuable. For now I've
-            been using Defense Grid from the sideboard to handle blue matchups,
-            but Mana Leak is worth reconsidering depending on your field.
-        </p>
-    </CardAnalysis>
+        <CardAnalysis
+            title="Mana Leak (0-3 main)"
+            image="instants/mana_leak.webp"
+        >
+            <p style="margin-top: 0;">
+                I cut Mana Leak because Landstill was the most popular control
+                deck when I was building the list. Leak is bad in long games
+                where they can just pay the three. With Landstill declining and
+                Esper Psychatog picking up, Leak looks better now. The mirror is
+                also a real matchup post-ban, which makes cheap countermagic
+                more valuable. For now I've been using Defense Grid from the
+                sideboard to handle blue matchups, but Mana Leak is worth
+                reconsidering depending on your field.
+            </p>
+        </CardAnalysis>
     </Card>
 
     <Card title="Other Cards Worth Considering" titleTag="h2">
+        <CardAnalysis
+            title="Deep Analysis"
+            image="sorceries/deep_analysis.webp"
+        >
+            <p style="margin-top: 0;">
+                Not in the current list, but it's been in prior versions and I
+                could see it coming back. The appeal is that it gives you a card
+                advantage option for Intuition piles in matchups where velocity
+                doesn't matter. Against control specifically, you don't want to
+                Intuition for combo pieces because it lowers your threat
+                density, but Intuition for Deep Analysis is actually useful. If
+                your meta has a lot of Landstill or other slow blue decks, one
+                copy maindeck is worth considering.
+            </p>
+        </CardAnalysis>
 
-    <CardAnalysis title="Deep Analysis" image="sorceries/deep_analysis.webp">
-        <p style="margin-top: 0;">
-            Not in the current list, but it's been in prior versions and I could
-            see it coming back. The appeal is that it gives you a card advantage
-            option for Intuition piles in matchups where velocity doesn't
-            matter. Against control specifically, you don't want to Intuition
-            for combo pieces because it lowers your threat density, but
-            Intuition for Deep Analysis is actually useful. If your meta has a
-            lot of Landstill or other slow blue decks, one copy maindeck is
-            worth considering.
-        </p>
-    </CardAnalysis>
-
-    <CardAnalysis title="Fact or Fiction" image="instants/fact_or_fiction.webp">
-        <p style="margin-top: 0;">
-            This was more popular when the deck ran Mana Leak and had more of a
-            reactive, play-on-your-opponent's-turn shell. The four mana cost is
-            the downside, but if you're already on Mana Leaks then Fact or
-            Fiction makes a lot of sense. It's card advantage, it digs five
-            deep, and it puts your opponent in difficult spots on how to split
-            the piles. If the meta shifts back toward a more interactive build
-            with countermagic, I'd consider one or two.
-        </p>
-    </CardAnalysis>
+        <CardAnalysis
+            title="Fact or Fiction"
+            image="instants/fact_or_fiction.webp"
+        >
+            <p style="margin-top: 0;">
+                This was more popular when the deck ran Mana Leak and had more
+                of a reactive, play-on-your-opponent's-turn shell. The four mana
+                cost is the downside, but if you're already on Mana Leaks then
+                Fact or Fiction makes a lot of sense. It's card advantage, it
+                digs five deep, and it puts your opponent in difficult spots on
+                how to split the piles. If the meta shifts back toward a more
+                interactive build with countermagic, I'd consider one or two.
+            </p>
+        </CardAnalysis>
     </Card>
 
     <Card title="The Mana Base" titleTag="h2">
-    <h3 style="margin-top: 0;">Mana Base Theory</h3>
-    <p>
-        <strong>25-26 Lands</strong><br />I've tried 24 and 26. Twenty-five
-        feels right, though I wouldn’t fault anyone for 26.
-    </p>
-    <div
-        style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem; align-items: flex-start; flex-wrap: wrap;"
-    >
-        <div style="flex-shrink: 0; max-width: 100%;">
-            <CardGrid 
-                cards={[
-                    { src: "/src/assets/cards/lands/island.jpg", alt: "Island" },
-                    { src: "/src/assets/cards/lands/plains.jpg", alt: "Plains" }
-                ]}
-                width="220px"
-            />
+        <h3 style="margin-top: 0;">Mana Base Theory</h3>
+        <p>
+            <strong>25-26 Lands</strong><br />I've tried 24 and 26. Twenty-five
+            feels right, though I wouldn’t fault anyone for 26.
+        </p>
+        <div
+            style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem; align-items: flex-start; flex-wrap: wrap;"
+        >
+            <div style="flex-shrink: 0; max-width: 100%;">
+                <CardGrid
+                    cards={[
+                        {
+                            src: "/src/assets/cards/lands/island.jpg",
+                            alt: "Island",
+                        },
+                        {
+                            src: "/src/assets/cards/lands/plains.jpg",
+                            alt: "Plains",
+                        },
+                    ]}
+                    width="220px"
+                />
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="margin-top: 0; margin-bottom: 0.75rem;">
+                    Ten Basics (5 Island, 5 Plains)
+                </h3>
+                <p style="margin-top: 0;">
+                    Five Islands, five Plains. This makes you resilient against
+                    Price of Progress and Wasteland. Starting with your first
+                    three land drops as basics is a realistic line against red
+                    and mana denial strategies. It meets Karsten's threshold of
+                    roughly 16 sources for each color to cast double-colored
+                    four-drops on time.
+                </p>
+            </div>
         </div>
-        <div style="flex: 1; min-width: 300px;">
-            <h3 style="margin-top: 0; margin-bottom: 0.75rem;">
-                Ten Basics (5 Island, 5 Plains)
-            </h3>
+
+        <CardAnalysis
+            title="Skycloud Expanse (3-4 main)"
+            image="lands/skycloud_expanse.webp"
+        >
             <p style="margin-top: 0;">
-                Five Islands, five Plains. This makes you resilient against
-                Price of Progress and Wasteland. Starting with your first three
-                land drops as basics is a realistic line against red and mana
-                denial strategies. It meets Karsten's threshold of roughly 16
-                sources for each color to cast double-colored four-drops on
-                time.
+                Down from four for the fifth basic of each type.
             </p>
-        </div>
-    </div>
+        </CardAnalysis>
 
-    <CardAnalysis
-        title="Skycloud Expanse (3-4 main)"
-        image="lands/skycloud_expanse.webp"
-    >
-        <p style="margin-top: 0;">
-            Down from four for the fifth basic of each type.
+        <CardAnalysis
+            title="City of Traitors (0)"
+            image="lands/city_of_traitors.webp"
+        >
+            <p style="margin-top: 0;">
+                Without Tide’s lock, games go longer. City disrupts sequencing
+                and loses value in attrition matchups.
+            </p>
+        </CardAnalysis>
+
+        <p>
+            <strong>Turn-One Sequencing</strong><br />If I have a dual and a
+            basic, I'll usually lead with the dual to keep options open for my
+            second draw. Against Wasteland decks, I lead basic instead. It
+            depends on the hand.
         </p>
-    </CardAnalysis>
-
-    <CardAnalysis
-        title="City of Traitors (0)"
-        image="lands/city_of_traitors.webp"
-    >
-        <p style="margin-top: 0;">
-            Without Tide’s lock, games go longer. City disrupts sequencing and
-            loses value in attrition matchups.
-        </p>
-    </CardAnalysis>
-
-    <p>
-        <strong>Turn-One Sequencing</strong><br />If I have a dual and a basic,
-        I'll usually lead with the dual to keep options open for my second draw.
-        Against Wasteland decks, I lead basic instead. It depends on the hand.
-    </p>
     </Card>
 </Layout>

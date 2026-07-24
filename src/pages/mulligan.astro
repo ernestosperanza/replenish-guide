@@ -3,177 +3,216 @@ import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import { Card, Table } from "webcoreui/astro";
 
-const tableHeadings = ["Spell Cast", "Cards Seen", "Chance to find at least 1 of a 4-of", "Chance to find at least 1 of a 3-of"];
+const tableHeadings = [
+    "Spell Cast",
+    "Cards Seen",
+    "Chance to find at least 1 of a 4-of",
+    "Chance to find at least 1 of a 3-of",
+];
 const tableData = [
     ["<strong>Frantic Search</strong>", "2", "15.1%", "11.4%"],
     ["<strong>Attunement</strong> (1 activation)", "3", "22.2%", "16.9%"],
-    ["<strong>Fact or Fiction</strong>", "5", "35.3%", "27.3%"]
+    ["<strong>Fact or Fiction</strong>", "5", "35.3%", "27.3%"],
 ];
 ---
 
-<Layout
-    title="Mulligan Guide - Replenish Guide"
->
-    <PageHeader 
+<Layout title="Mulligan Guide - Replenish Guide"
+    description="Learn when to keep or mulligan your opening hand with the Replenish deck. Explore probability tables, mathematical frameworks, and real-world case studies for MTG Premodern.">
+    <PageHeader
         title="Mulligan Guide"
         description="Knowing when to keep and when to throw back your opening hand is one of the most difficult and rewarding skills with Replenish. Let's break down the math and the theory."
         imageSrc="/src/assets/banners/attunement.jpeg"
         imageAlt="Attunement"
-        imageCaption="Attunement"
+        imageCaption="Attunement by Randy Gallegos"
         isCard={false}
     />
 
     <Card title="Advanced Mulligan Theory" titleTag="h2">
-    <p>
-        <strong>The Atog Lord's Framework:</strong> One of the most respected voices in the Premodern community, "The Atog Lord", established a highly logical framework for keepable hands in a post-Tide world. 
-    </p>
-    <p>
-        The core math behind this theory is simple but brutal: Before the ban, the deck had <strong>eight</strong> cards that could single-handedly "fix" a bad opening hand (4 Attunement and 4 Parallax Tide). Now it only has <strong>four</strong> (Attunement). Because your odds of topdecking a hand-fixer have been literally cut in half, <strong>you are mathematically obligated to mulligan much more aggressively in Game 1 in the dark.</strong> You can no longer afford to keep slow, clunky hands and hope the top of your deck bails you out.
-    </p>
-
-    <p>
-        Assuming you have lands to cast them, The Atog Lord's framework for
-        keepable hands in the blind includes:
-    </p>
-    <ul>
-        <li style="margin-bottom: 0.5rem;">
-            <strong>The Golden Ticket:</strong> Any hand with <code
-                >Attunement</code
-            >.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            <strong>The Natural Combo:</strong>
-            <code>Opalescence</code> + <code>Parallax Wave</code>.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            <strong>The Tutor:</strong>
-            <code>Intuition</code> + any combo piece (Opal, Wave, Replenish).
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            <strong>The Dig:</strong>
-            <code>Frantic Search</code> + <code>Replenish</code> + any combo piece
-            (Opal, Wave, Decree).
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            <strong>The Control Route:</strong> Three pieces of interaction (e.g.,
-            <code>Mana Leak</code> + <code>Swords</code> + <code>Seal</code>).
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            <strong>The Buy-Time:</strong>
-            <code>Parallax Wave</code> + <code>Seal of Cleansing</code>.
-        </li>
-    </ul>
-
-    <p>
-        <strong>The Ancient Tomb Exception:</strong> Hands that are otherwise too
-        slow become keepable if you have an <code>Ancient Tomb</code>. For
-        example, <code>Swords to Plowshares</code> + <code>Intuition</code> + <code
-            >Ancient Tomb</code
-        > is a snap keep because you have both interaction and fast manipulation.
-    </p>
-
-    <p>
-        <strong>What to Mulligan:</strong> A hand like four lands, <code
-            >Opalescence</code
-        >, <code>Decree of Silence</code>, and <code>Seal of Cleansing</code> is a
-        trap. You are relying entirely on the top of your deck for a fixer (which
-        you now only have four of). It is highly likely the game will run away from
-        you before you draw out of it.
-    </p>
-
-    <div
-        style="margin-top: 3rem; background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: clamp(1rem, 4vw, 2rem);"
-    >
-        <h3 style="margin-top: 0; color: var(--w-color-primary-10);">
-            Case Study: The Great Mulligan Debate
-        </h3>
-        <p style="font-size: 0.95rem;">
-            <em
-                >This is a real community debate over a specific hypothetical
-                opening hand that highlights how top players evaluate risk vs.
-                reward in the post-ban format.</em>
+        <p>
+            <strong>The Atog Lord's Framework:</strong> One of the most respected
+            voices in the Premodern community, "The Atog Lord", established a highly
+            logical framework for keepable hands in a post-Tide world.
+        </p>
+        <p>
+            The core math behind this theory is simple but brutal: Before the
+            ban, the deck had <strong>eight</strong> cards that could single-handedly
+            "fix" a bad opening hand (4 Attunement and 4 Parallax Tide). Now it only
+            has <strong>four</strong> (Attunement). Because your odds of topdecking
+            a hand-fixer have been literally cut in half, <strong
+                >you are mathematically obligated to mulligan much more
+                aggressively in Game 1 in the dark.</strong
+            > You can no longer afford to keep slow, clunky hands and hope the top
+            of your deck bails you out.
         </p>
 
         <p>
-            <strong>The Scenario:</strong> Game 1, on the play, in the dark.<br
-            />
-            <strong>The Hand:</strong> 4 Lands (including Ancient Tomb), <code
-                >Seal of Cleansing</code
-            >, <code>Decree of Silence</code>, <code>Frantic Search</code>.
+            Assuming you have lands to cast them, The Atog Lord's framework for
+            keepable hands in the blind includes:
+        </p>
+        <ul>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>The Golden Ticket:</strong> Any hand with <code
+                    >Attunement</code
+                >.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>The Natural Combo:</strong>
+                <code>Opalescence</code> + <code>Parallax Wave</code>.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>The Tutor:</strong>
+                <code>Intuition</code> + any combo piece (Opal, Wave, Replenish).
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>The Dig:</strong>
+                <code>Frantic Search</code> + <code>Replenish</code> + any combo piece
+                (Opal, Wave, Decree).
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>The Control Route:</strong> Three pieces of interaction (e.g.,
+                <code>Mana Leak</code> + <code>Swords</code> + <code>Seal</code
+                >).
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>The Buy-Time:</strong>
+                <code>Parallax Wave</code> + <code>Seal of Cleansing</code>.
+            </li>
+        </ul>
+
+        <p>
+            <strong>The Ancient Tomb Exception:</strong> Hands that are otherwise
+            too slow become keepable if you have an <code>Ancient Tomb</code>.
+            For example, <code>Swords to Plowshares</code> + <code
+                >Intuition</code
+            > + <code>Ancient Tomb</code> is a snap keep because you have both interaction
+            and fast manipulation.
         </p>
 
         <p>
-            <em
-                >Do you keep or mulligan? The community was split right down the
-                middle.</em>
+            <strong>What to Mulligan:</strong> A hand like four lands, <code
+                >Opalescence</code
+            >, <code>Decree of Silence</code>, and <code>Seal of Cleansing</code
+            > is a trap. You are relying entirely on the top of your deck for a fixer
+            (which you now only have four of). It is highly likely the game will run
+            away from you before you draw out of it.
         </p>
 
-        <h4 style="margin-top: 1.5rem; color: var(--w-color-success);">
-            Argument 1: The "Keep" Camp
-        </h4>
-        <ul style="padding-left: 1.25rem;">
-            <li style="margin-bottom: 0.5rem;">
-                <strong>Hitting Land Drops:</strong> Historically, Replenish loses
-                games when it stumbles on mana. This hand guarantees you hit your
-                first 4 land drops.
-            </li>
-            <li style="margin-bottom: 0.5rem;">
-                <strong>The Frantic Math:</strong> You have 15 "outs" left in the
-                deck that turn this into a winning hand (Replenish, Wave, Attunement,
-                Intuition). Between your natural draw steps and Frantic Search, you
-                see 4 new cards by turn 3. Statistically, you have roughly a 75% chance
-                to hit at least one of those outs.
-            </li>
-            <li style="margin-bottom: 0.5rem;">
-                <strong>Flexibility:</strong> The hand has game against control (Seal
-                + Decree + Lands) and discard decks (redundant lands). Its only glaring
-                weakness is a fast aggro start.
-            </li>
-        </ul>
+        <div
+            style="margin-top: 3rem; background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: clamp(1rem, 4vw, 2rem);"
+        >
+            <h3 style="margin-top: 0; color: var(--w-color-primary-10);">
+                Case Study: The Great Mulligan Debate
+            </h3>
+            <p style="font-size: 0.95rem;">
+                <em
+                    >This is a real community debate over a specific
+                    hypothetical opening hand that highlights how top players
+                    evaluate risk vs. reward in the post-ban format.</em
+                >
+            </p>
 
-        <h4 style="margin-top: 1.5rem; color: var(--w-color-danger);">
-            Argument 2: The "Mulligan" Camp
-        </h4>
-        <ul style="padding-left: 1.25rem;">
-            <li style="margin-bottom: 0.5rem;">
-                <strong>Frantic Search is not an engine:</strong> Relying on it as
-                your only path to victory is dangerous because it is card disadvantage.
-                If you whiff, you are completely out of gas.
-            </li>
-            <li style="margin-bottom: 0.5rem;">
-                <strong>The 50/50 Coinflip:</strong> Looking at just the immediate
-                Frantic Search draw, you have roughly a 50% chance to brick completely.
-                A fresh hand of 7 cards has better overall odds of providing a coherent
-                gameplan.
-            </li>
-            <li style="margin-bottom: 0.5rem;">
-                <strong>Seal is not a turn-buyer:</strong> While Seal is a fantastic
-                maindeck card, unlike Swords to Plowshares or Mana Leak, it does not
-                buy you time against early creature pressure. Keeping a hand with
-                Seal as your only interaction is very risky in the dark.
-            </li>
-        </ul>
+            <p>
+                <strong>The Scenario:</strong> Game 1, on the play, in the dark.<br
+                />
+                <strong>The Hand:</strong> 4 Lands (including Ancient Tomb), <code
+                    >Seal of Cleansing</code
+                >, <code>Decree of Silence</code>, <code>Frantic Search</code>.
+            </p>
 
-        <h4 style="margin-top: 1.5rem; color: var(--w-color-primary-20);">
-            The Verdict
-        </h4>
-        <p style="margin-bottom: 0;">There is no absolute "right" answer, but this debate reveals a core tension: Risk-averse players prefer to guarantee their land drops and trust the math of their cantrips, while aggressive mulliganers believe that with the weaker topdecks post-ban, you can no longer afford to keep hands that don't proactively dictate the pace of the game.</p>
-    </div>
+            <p>
+                <em
+                    >Do you keep or mulligan? The community was split right down
+                    the middle.</em
+                >
+            </p>
+
+            <h4 style="margin-top: 1.5rem; color: var(--w-color-success);">
+                Argument 1: The "Keep" Camp
+            </h4>
+            <ul style="padding-left: 1.25rem;">
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Hitting Land Drops:</strong> Historically, Replenish loses
+                    games when it stumbles on mana. This hand guarantees you hit your
+                    first 4 land drops.
+                </li>
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>The Frantic Math:</strong> You have 15 "outs" left in
+                    the deck that turn this into a winning hand (Replenish, Wave,
+                    Attunement, Intuition). Between your natural draw steps and Frantic
+                    Search, you see 4 new cards by turn 3. Statistically, you have
+                    roughly a 75% chance to hit at least one of those outs.
+                </li>
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Flexibility:</strong> The hand has game against control
+                    (Seal + Decree + Lands) and discard decks (redundant lands). Its
+                    only glaring weakness is a fast aggro start.
+                </li>
+            </ul>
+
+            <h4 style="margin-top: 1.5rem; color: var(--w-color-danger);">
+                Argument 2: The "Mulligan" Camp
+            </h4>
+            <ul style="padding-left: 1.25rem;">
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Frantic Search is not an engine:</strong> Relying on it
+                    as your only path to victory is dangerous because it is card disadvantage.
+                    If you whiff, you are completely out of gas.
+                </li>
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>The 50/50 Coinflip:</strong> Looking at just the immediate
+                    Frantic Search draw, you have roughly a 50% chance to brick completely.
+                    A fresh hand of 7 cards has better overall odds of providing a
+                    coherent gameplan.
+                </li>
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>Seal is not a turn-buyer:</strong> While Seal is a fantastic
+                    maindeck card, unlike Swords to Plowshares or Mana Leak, it does
+                    not buy you time against early creature pressure. Keeping a hand
+                    with Seal as your only interaction is very risky in the dark.
+                </li>
+            </ul>
+
+            <h4 style="margin-top: 1.5rem; color: var(--w-color-primary-20);">
+                The Verdict
+            </h4>
+            <p style="margin-bottom: 0;">
+                There is no absolute "right" answer, but this debate reveals a
+                core tension: Risk-averse players prefer to guarantee their land
+                drops and trust the math of their cantrips, while aggressive
+                mulliganers believe that with the weaker topdecks post-ban, you
+                can no longer afford to keep hands that don't proactively
+                dictate the pace of the game.
+            </p>
+        </div>
     </Card>
 
     <Card title="The Math Behind Replenish" titleTag="h2">
-    <p>We can calculate the probability of finding a specific missing combo piece (e.g., Replenish) when casting our card selection spells using a hypergeometric calculator.</p>
-    <p>Assuming we are on the play and we cast our spell on Turn 3 (so we have drawn 9 cards total: 7 starting + 2 draw steps). There are 51 cards left in the deck.</p>
-    
-    <div style="margin-bottom: 2rem; margin-top: 1rem; overflow-x: auto; width: 100%; max-width: 100%;">
-        <Table 
-            headings={tableHeadings}
-            data={tableData}
-            hover={true}
-            striped="row"
-        />
-    </div>
-    <p style="margin-bottom: 4rem;">This is why keeping hands without any engine or cantrip is dangerous. A single Frantic Search only gives you a ~15% chance to find that one specific card you need to survive. The more you know these percentages, the better your in-game sequencing will be.</p>
-    </Card>
+        <p>
+            We can calculate the probability of finding a specific missing combo
+            piece (e.g., Replenish) when casting our card selection spells using
+            a hypergeometric calculator.
+        </p>
+        <p>
+            Assuming we are on the play and we cast our spell on Turn 3 (so we
+            have drawn 9 cards total: 7 starting + 2 draw steps). There are 51
+            cards left in the deck.
+        </p>
 
+        <div
+            style="margin-bottom: 2rem; margin-top: 1rem; overflow-x: auto; width: 100%; max-width: 100%;"
+        >
+            <Table
+                headings={tableHeadings}
+                data={tableData}
+                hover={true}
+                striped="row"
+            />
+        </div>
+        <p style="margin-bottom: 4rem;">
+            This is why keeping hands without any engine or cantrip is
+            dangerous. A single Frantic Search only gives you a ~15% chance to
+            find that one specific card you need to survive. The more you know
+            these percentages, the better your in-game sequencing will be.
+        </p>
+    </Card>
 </Layout>

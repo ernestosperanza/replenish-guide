@@ -114,53 +114,54 @@ const marinebiomancerDeck = `4 Replenish
 1 Nevinyrral's Disk
 1 Orim's Chant
 1 Wrath of God`;
-
 ---
 
 <Layout
     title="Lists - Replenish Guide"
+    description="Browse the most successful and innovative Replenish decklists in MTG Premodern. Easily copy configurations directly to MTGO, from stock builds to experimental control shells."
 >
-    <PageHeader 
+    <PageHeader
         title="Lists"
         description="Below are four different configurations of Parallax Replenish, ranging from stock modern builds to classic lists and experimental control variants."
         imageSrc="/src/assets/banners/attunement.jpeg"
         imageAlt="Attunement"
-        imageCaption="Attunement"
+        imageCaption="Attunement by Randy Gallegos"
         isCard={true}
     />
 
     <Card title="Key Differences" titleTag="h2">
-    <ul style="padding-left: 1.25rem; margin-bottom: 0;">
-        <li style="margin-bottom: 0.5rem;">
-            <strong>Decree of Silence (3 vs. 2):</strong> Three is relevant in situations
-            where Replenish is likely to resolve and Opal+Wave does not necessarily
-            mean an immediate win. Matchups like Sligh, the mirror, Enchantress, BW
-            Control, and decks with Tranquil Domain fall into this category. You go
-            down to two when the opposite is true: when Replenish is hard to resolve,
-            or when resolving an Opal+Wave is enough to win the game by itself. In
-            those situations, having fewer Decrees clogging up your hand is much better
-            (especially since against control you side out discard outlets like Frantic
-            Search anyway).
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            <strong>Seal of Cleansing (4 vs. 3 in the 75):</strong> Running four total
-            is a luxury. It's gotten better with the rise of Aluren, the Replenish
-            mirror, Enchantress, and other enchantment-heavy decks. Three in the 75
-            is the leaner option if those matchups are less common in your field.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            <strong>Tsabo’s Web (3 vs. 2):</strong> Some lists run three because their
-            local region has a lot of Terrageddon and Port. Online, Terrageddon has
-            been trending down, so the count is closer to two in the 75 for most general
-            builds.
-        </li>
-        <li style="margin-bottom: 0.5rem;">
-            <strong>Maindeck vs Sideboard Creatures:</strong> Bryan Gulotta's list
-            puts 4 Meddling Mages in the maindeck for proactive protection against
-            fast combo and control, while lists like Alessandro's keep them in the
-            sideboard to blank opposing removal Game 1.
-        </li>
-    </ul>
+        <ul style="padding-left: 1.25rem; margin-bottom: 0;">
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Decree of Silence (3 vs. 2):</strong> Three is relevant in
+                situations where Replenish is likely to resolve and Opal+Wave does
+                not necessarily mean an immediate win. Matchups like Sligh, the mirror,
+                Enchantress, BW Control, and decks with Tranquil Domain fall into
+                this category. You go down to two when the opposite is true: when
+                Replenish is hard to resolve, or when resolving an Opal+Wave is enough
+                to win the game by itself. In those situations, having fewer Decrees
+                clogging up your hand is much better (especially since against control
+                you side out discard outlets like Frantic Search anyway).
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Seal of Cleansing (4 vs. 3 in the 75):</strong> Running four
+                total is a luxury. It's gotten better with the rise of Aluren, the
+                Replenish mirror, Enchantress, and other enchantment-heavy decks.
+                Three in the 75 is the leaner option if those matchups are less common
+                in your field.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Tsabo’s Web (3 vs. 2):</strong> Some lists run three because
+                their local region has a lot of Terrageddon and Port. Online, Terrageddon
+                has been trending down, so the count is closer to two in the 75 for
+                most general builds.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Maindeck vs Sideboard Creatures:</strong> Bryan Gulotta's
+                list puts 4 Meddling Mages in the maindeck for proactive protection
+                against fast combo and control, while lists like Alessandro's keep
+                them in the sideboard to blank opposing removal Game 1.
+            </li>
+        </ul>
     </Card>
 
     <div
@@ -168,10 +169,12 @@ const marinebiomancerDeck = `4 Replenish
     >
         {/* List 1: Alessandro Galli */}
         <Card>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-    <h2 style="margin: 0; font-size: 1.5rem;">Alessandro Galli</h2>
-    <CopyDeckButton decklist={alessandroDeck} />
-</div>
+            <div
+                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;"
+            >
+                <h2 style="margin: 0; font-size: 1.5rem;">Alessandro Galli</h2>
+                <CopyDeckButton decklist={alessandroDeck} />
+            </div>
             <div style="margin-bottom: 1.5rem;">
                 <Badge theme="info" small={true}
                     >4Seasons Spring Ed. @ Bologna (2026)</Badge
@@ -239,10 +242,12 @@ const marinebiomancerDeck = `4 Replenish
 
         {/* List 2: Brian Siu */}
         <Card>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-    <h2 style="margin: 0; font-size: 1.5rem;">Brian Siu</h2>
-    <CopyDeckButton decklist={brianDeck} />
-</div>
+            <div
+                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;"
+            >
+                <h2 style="margin: 0; font-size: 1.5rem;">Brian Siu</h2>
+                <CopyDeckButton decklist={brianDeck} />
+            </div>
             <div style="margin-bottom: 1.5rem;">
                 <Badge theme="success" small={true}
                     >1st Place - NA Premodern Championship @ Lobstercon (2026)</Badge
@@ -311,10 +316,12 @@ const marinebiomancerDeck = `4 Replenish
 
         {/* List 3: Bryan Gulotta */}
         <Card>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-    <h2 style="margin: 0; font-size: 1.5rem;">Bryan Gulotta</h2>
-    <CopyDeckButton decklist={bryanDeck} />
-</div>
+            <div
+                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;"
+            >
+                <h2 style="margin: 0; font-size: 1.5rem;">Bryan Gulotta</h2>
+                <CopyDeckButton decklist={bryanDeck} />
+            </div>
             <div style="margin-bottom: 1.5rem;">
                 <Badge theme="warning" small={true}
                     >2nd Place - NA Premodern Championship @ Lobstercon (2026)</Badge
@@ -389,18 +396,31 @@ const marinebiomancerDeck = `4 Replenish
 
         {/* List 4: Marinebiomancer */}
         <Card>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
-    <h2 style="margin: 0; font-size: 1.5rem;">Marinebiomancer</h2>
-    <CopyDeckButton decklist={marinebiomancerDeck} />
-</div>
+            <div
+                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;"
+            >
+                <h2 style="margin: 0; font-size: 1.5rem;">Marinebiomancer</h2>
+                <CopyDeckButton decklist={marinebiomancerDeck} />
+            </div>
             <div style="margin-bottom: 1.5rem;">
                 <Badge theme="alert" small={true}
                     >Top 16 - New England Premodern Summer Regional (2026)</Badge
                 >
             </div>
 
-            <p style="margin-bottom: 2rem; padding: 1rem; background-color: var(--w-color-primary-95); border-radius: var(--w-lg-radius); border-left: 4px solid var(--w-color-primary);">
-                <strong>The "Creatureless 75" Experiment:</strong> This highly innovative list completely abandons the traditional post-board midrange pivot (no Exalted Angels or Meddling Mages). Instead, it runs zero creatures in all 75 cards, pivoting into absolute hard-control by running a 3rd copy of <code>Decree of Silence</code> in the maindeck alongside a mountain of instant-speed interaction. It also showcases the modern <code>Seal of Cleansing</code> and <code>Disenchant</code> split in the sideboard to fight through opposing <code>Aura of Silence</code>.
+            <p
+                style="margin-bottom: 2rem; padding: 1rem; background-color: var(--w-color-primary-95); border-radius: var(--w-lg-radius); border-left: 4px solid var(--w-color-primary);"
+            >
+                <strong>The "Creatureless 75" Experiment:</strong> This highly innovative
+                list completely abandons the traditional post-board midrange pivot
+                (no Exalted Angels or Meddling Mages). Instead, it runs zero creatures
+                in all 75 cards, pivoting into absolute hard-control by running a
+                3rd copy of <code>Decree of Silence</code> in the maindeck alongside
+                a mountain of instant-speed interaction. It also showcases the modern
+                <code>Seal of Cleansing</code> and <code>Disenchant</code> split in
+                the sideboard to fight through opposing <code
+                    >Aura of Silence</code
+                >.
             </p>
 
             <Grid column={3} gap="lg">
@@ -420,7 +440,7 @@ const marinebiomancerDeck = `4 Replenish
                         title="Card Selection"
                         items={[
                             { count: 3, name: "Frantic Search" },
-                            { count: 3, name: "Intuition" }
+                            { count: 3, name: "Intuition" },
                         ]}
                     />
                 </div>

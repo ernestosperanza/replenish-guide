@@ -4,14 +4,13 @@ import PageHeader from "@components/PageHeader.astro";
 import { Card } from "webcoreui/astro";
 ---
 
-<Layout
-    title="Mechanics - Replenish Guide"
->
+<Layout title="Mechanics - Replenish Guide"
+    description="Learn the complex rules interactions of the Replenish deck. Master the timing of Parallax Wave, Opalescence triggers, and how to permanently exile your opponent’s creatures.">
     <PageHeader
         title="Deck Mechanics"
         imageSrc="/src/assets/banners/opalescence.jpeg"
         imageAlt="Opalescence"
-        imageCaption="Opalescence"
+        imageCaption="Opalescence by John Avon"
         isCard={true}
     />
     <Card
@@ -110,7 +109,11 @@ import { Card } from "webcoreui/astro";
         </p>
     </Card>
 
-    <Card title="Synergies & Tricks" titleTag="h2" style="margin-bottom: 0.5rem;">
+    <Card
+        title="Synergies & Tricks"
+        titleTag="h2"
+        style="margin-bottom: 0.5rem;"
+    >
         <h3 style="margin-top: 0;">Parallax Wave Creature Synergies</h3>
         <p>
             Parallax Wave isn't just for clearing your opponent's board; it has

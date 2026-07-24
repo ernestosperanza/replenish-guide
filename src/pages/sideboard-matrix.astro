@@ -6,15 +6,17 @@ import { Card } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
 ---
 
-<Layout
-    title="Sideboard Matrix - Replenish Guide"
->
+<Layout title="Sideboard Matrix - Replenish Guide"
+    description="The ultimate sideboard guide for Replenish. A comprehensive matrix detailing exactly which cards to bring in and take out against the top Premodern meta decks.">
     <PageHeader title="Sideboard Matrix" />
 
     <Card title="Lobstercon 2026 Sideboard Matrix" titleTag="h2">
-    <p>A quick-reference guide based on the Lobstercon 2026 sideboard strategies:</p>
+        <p>
+            A quick-reference guide based on the Lobstercon 2026 sideboard
+            strategies:
+        </p>
 
-    <SideboardMatrix />
+        <SideboardMatrix />
     </Card>
 
     <DecklistTooltip />
