@@ -5,13 +5,19 @@
 </div>
 
 <script>
+    const assetUrls = import.meta.glob('/src/assets/cards/**/*.{jpeg,jpg,png,gif,webp}', {
+        eager: true,
+        query: '?url',
+        import: 'default'
+    }) as Record<string, string>;
+
+    // Cache for storing the oldest printing image URLs across page navigations
+    const imageCache = new Map<string, string>();
+
     const initTooltips = () => {
         const tooltip = document.getElementById('decklist-tooltip');
         if (!tooltip) return;
         const tooltipImg = document.getElementById('decklist-tooltip-img') as HTMLImageElement;
-        
-        // Cache for storing the oldest printing image URLs
-        const imageCache = new Map<string, string>();
 
         const localImages: Record<string, string> = {
             "Tormod's Crypt": "/src/assets/cards/artifacts/tormods_crypt.jpg",
@@ -111,7 +117,10 @@
 
         // Function to find the oldest printing URL
         const fetchOldestImageUrl = async (cardName: string) => {
-            if (localImages[cardName]) return localImages[cardName];
+            if (localImages[cardName]) {
+                const path = localImages[cardName];
+                return assetUrls[path] || path;
+            }
             if (imageCache.has(cardName)) return imageCache.get(cardName);
             try {
                 const query = encodeURIComponent(`!"${cardName}"`);
