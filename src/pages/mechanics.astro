@@ -17,9 +17,8 @@ import { Card } from "webcoreui/astro";
         isCard={true}
     />
 
-    <Card title="The Opalescence & Parallax Wave Engine" titleTag="h2">
-        <h3 style="margin-top: 0;">Opal-Wave Permanent Exile</h3>
-        <p>
+    <Card title="The Opal-Wave Permanent Exile Engine" titleTag="h2">
+        <p style="margin-top: 0;">
             With <a href="#" class="card-hover" data-card-name="Opalescence"
                 >Opalescence</a
             > and <a href="#" class="card-hover" data-card-name="Parallax Wave"
@@ -39,30 +38,10 @@ import { Card } from "webcoreui/astro";
                 >Conclusion & Resources</a
             > chapter.
         </p>
-        <p>
-            <strong>Combat Sequencing:</strong> A mechanical consequence of this loop
-            is that <a
-                href="#"
-                class="card-hover"
-                data-card-name="Parallax Wave">Parallax Wave</a
-            > re-enters as a new permanent subject to summoning sickness, preventing
-            it from attacking that turn. Therefore, whenever tactically possible,
-            temporarily exile opposing blockers before combat, execute a full team
-            attack (swinging with Wave for 4 damage), and initiate the permanent exile
-            loop during your post-combat main phase. The notable exception occurs
-            when opposing creatures carry devastating Enter the Battlefield (ETB)
-            triggers (such as <a
-                href="#"
-                class="card-hover"
-                data-card-name="Goblin Ringleader">Goblin Ringleader</a
-            > or <a href="#" class="card-hover" data-card-name="Bone Shredder"
-                >Bone Shredder</a
-            >). Because temporary exile permits them to re-enter and re-trigger
-            before permanent removal, immediately permanently exile such threats
-            prior to combat.
-        </p>
-        <p>
-            <strong>Exiling Opposing Enchantments:</strong> Because <a
+
+        <h3 style="margin-top: 2.5rem;">Exiling Opposing Enchantments</h3>
+        <p style="margin-bottom: 0;">
+            Because <a
                 href="#"
                 class="card-hover"
                 data-card-name="Opalescence">Opalescence</a
@@ -82,8 +61,33 @@ import { Card } from "webcoreui/astro";
                 data-card-name="Seal of Cleansing">Seal of Cleansing</a
             >.
         </p>
+    </Card>
 
-        <h3 style="margin-top: 2.5rem;">Opalescence & Summoning Sickness</h3>
+    <Card title="Combat Sequencing & Summoning Sickness" titleTag="h2">
+        <h3 style="margin-top: 0;">Parallax Wave Combat Sequencing</h3>
+        <p>
+            A mechanical consequence of the permanent exile loop is that <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            > re-enters as a new permanent subject to summoning sickness, preventing
+            it from attacking that turn. Therefore, whenever tactically possible,
+            temporarily exile opposing blockers before combat, execute a full team
+            attack (swinging with Wave for 4 damage), and initiate the permanent exile
+            loop during your post-combat main phase. The notable exception occurs
+            when opposing creatures carry devastating Enter the Battlefield (ETB)
+            triggers (such as <a
+                href="#"
+                class="card-hover"
+                data-card-name="Goblin Ringleader">Goblin Ringleader</a
+            > or <a href="#" class="card-hover" data-card-name="Bone Shredder"
+                >Bone Shredder</a
+            >). Because temporary exile permits them to re-enter and re-trigger
+            before permanent removal, immediately permanently exile such threats
+            prior to combat.
+        </p>
+
+        <h3 style="margin-top: 2.5rem;">Opalescence & Post-Replenish Sickness</h3>
         <p style="margin-bottom: 0;">
             A frequent analytical misstep among inexperienced pilots is assuming
             a resolved <a href="#" class="card-hover" data-card-name="Replenish"
@@ -108,8 +112,7 @@ import { Card } from "webcoreui/astro";
     </Card>
 
     <Card title="The Decree of Silence Lock" titleTag="h2">
-        <h3 style="margin-top: 0;">Resetting Decree with Wave</h3>
-        <p style="margin-bottom: 0;">
+        <p style="margin-top: 0; margin-bottom: 0;">
             When <a
                 href="#"
                 class="card-hover"
@@ -131,8 +134,7 @@ import { Card } from "webcoreui/astro";
     </Card>
 
     <Card title="Board Protection & Stack Interactions" titleTag="h2">
-        <h3 style="margin-top: 0;">Protecting Your Board</h3>
-        <p>
+        <p style="margin-top: 0;">
             When confronting mass removal, your self-protection mechanics differ
             significantly depending on whether the sweeper targets creatures or
             enchantments:
@@ -186,7 +188,7 @@ import { Card } from "webcoreui/astro";
             </li>
         </ul>
 
-        <h3 style="margin-top: 2.5rem;">Parallax Wave + Disenchant Effect</h3>
+        <h3 style="margin-top: 2.5rem;">Stack Trick: Wave + Disenchant Exile</h3>
         <p style="margin-bottom: 0;">
             Independent of Opalescence, you can engineer permanent creature
             removal utilizing <a
@@ -209,11 +211,33 @@ import { Card } from "webcoreui/astro";
             expelling those targets—a paramount defensive stabilization maneuver during
             early turns.
         </p>
+
+        <h3 style="margin-top: 2.5rem;">Attunement's Activation Cost Immunity</h3>
+        <p style="margin-bottom: 0;">
+            The activation syntax of <a
+                href="#"
+                class="card-hover"
+                data-card-name="Attunement">Attunement</a
+            > explicitly states: "Return Attunement to its owner's hand: Draw three
+            cards, then discard four cards." Because bouncing the enchantment back
+            to your hand represents the mandatory activation <em>cost</em> (rather
+            than an effect residing on the stack), you can freely activate it in immediate
+            response to inbound removal like <a
+                href="#"
+                class="card-hover"
+                data-card-name="Disenchant">Disenchant</a
+            > or an opposing <a
+                href="#"
+                class="card-hover"
+                data-card-name="Seal of Cleansing">Seal of Cleansing</a
+            >. Attunement immediately returns to safety in your
+            hand—invalidating their interaction spell completely while
+            guaranteeing full card-filtering velocity.
+        </p>
     </Card>
 
     <Card title="Post-Sideboard Creature Synergies" titleTag="h2">
-        <h3 style="margin-top: 0;">Parallax Wave Creature Synergies</h3>
-        <p>
+        <p style="margin-top: 0;">
             Beyond clearing adversarial boards, <a
                 href="#"
                 class="card-hover"
@@ -295,7 +319,7 @@ import { Card } from "webcoreui/astro";
                 data-card-name="Frantic Search">Frantic Search</a
             > unlocks pivotal logistical combat mana tricks:
         </p>
-        <ul style="padding-left: 1.25rem; margin-bottom: 2.5rem;">
+        <ul style="padding-left: 1.25rem; margin-bottom: 0;">
             <li style="margin-bottom: 1rem;">
                 <strong>Netting Mana via Ancient Tomb:</strong> While Frantic Search
                 conventionally operates as a zero-net-cost discard mechanism, resolving
@@ -334,29 +358,6 @@ import { Card } from "webcoreui/astro";
                 and completely neutralize their interactive tempo play.
             </li>
         </ul>
-
-        <h3 style="margin-top: 2.5rem;">Attunement's Built-in Protection</h3>
-        <p style="margin-bottom: 0;">
-            The activation syntax of <a
-                href="#"
-                class="card-hover"
-                data-card-name="Attunement">Attunement</a
-            > explicitly states: "Return Attunement to its owner's hand: Draw three
-            cards, then discard four cards." Because bouncing the enchantment back
-            to your hand represents the mandatory activation <em>cost</em> (rather
-            than an effect residing on the stack), you can freely activate it in immediate
-            response to inbound removal like <a
-                href="#"
-                class="card-hover"
-                data-card-name="Disenchant">Disenchant</a
-            > or an opposing <a
-                href="#"
-                class="card-hover"
-                data-card-name="Seal of Cleansing">Seal of Cleansing</a
-            >. Attunement immediately returns to safety in your
-            hand—invalidating their interaction spell completely while
-            guaranteeing full card-filtering velocity.
-        </p>
     </Card>
     <DecklistTooltip />
 </Layout>
