@@ -2,15 +2,63 @@
 
 ---
 
-<footer
-    style="margin-top: 0.5rem; padding: 0.5rem 0; border-top: 1px solid var(--w-color-primary-50); color: var(--w-color-primary-20); font-size: 0.9rem; text-align: center;"
->
-    <p style="margin-bottom: 0; color: var(--w-color-primary-30);">
+<footer class="site-footer">
+    <div class="footer-content">
         <a
             href="https://discord.gg/yg2cUdYZwN"
             target="_blank"
-            style="color: var(--w-color-primary-10); text-decoration: underline;"
+            class="footer-link"
             >Join the Premodern Discord</a
-        > | Version 0.0.1-alpha | Made with ❤️ by ernesthope
-    </p>
+        >
+        <span class="separator">|</span>
+        <span>Version 0.0.1-alpha</span>
+        <span class="separator">|</span>
+        <span>Made with ❤️ by ernesthope</span>
+    </div>
 </footer>
+
+<style>
+    .site-footer {
+        margin-top: 2rem;
+        padding: 1rem 0;
+        border-top: 1px solid var(--w-color-primary-50);
+        color: var(--w-color-primary-30);
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem 0.75rem;
+    }
+
+    .footer-link {
+        color: var(--w-color-primary-10);
+        text-decoration: underline;
+        transition: color 0.2s ease;
+    }
+
+    .footer-link:hover {
+        color: var(--w-color-info, #4a9eff);
+    }
+
+    .separator {
+        color: var(--w-color-primary-50);
+        user-select: none;
+    }
+
+    /* En pantallas móviles (< 640px), apilar en columna y quitar los separadores verticales */
+    @media (max-width: 640px) {
+        .footer-content {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .separator {
+            display: none;
+        }
+    }
+</style>
