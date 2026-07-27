@@ -12,73 +12,217 @@ const sidebarGroups = SIDEBAR_GROUPS.map((group) => ({
         if (item.href === "/") {
             return { ...item, active: currentPath === "/" };
         }
-        return { ...item, active: currentPath === item.href || currentPath.startsWith(item.href + "/") };
+        return {
+            ...item,
+            active:
+                currentPath === item.href ||
+                currentPath.startsWith(item.href + "/"),
+        };
     }),
 }));
 ---
 
 <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<!-- Expand button (floating tab on left screen edge when collapsed on desktop) -->
+<button
+    id="desktop-expand-btn"
+    class="desktop-expand-btn"
+    aria-label="Open Primer Chapters"
+    title="Open Primer Chapters"
+>
+    <span>❯ Chapters</span>
+</button>
+
 <div id="sidebar-wrapper" class="sidebar-wrapper">
-    <Sidebar groups={sidebarGroups} className="sidebar" />
+    <div class="sidebar-header-bar">
+        <span class="sidebar-title">Chapters</span>
+        <button
+            id="desktop-collapse-btn"
+            class="desktop-collapse-btn"
+            aria-label="Collapse Menu"
+            title="Collapse Menu"
+        >
+            «
+        </button>
+    </div>
+    <div class="sidebar-content">
+        <Sidebar groups={sidebarGroups} className="sidebar" />
+    </div>
 </div>
 
-<script>
-    const btn = document.getElementById('mobile-menu-btn');
-    const wrapper = document.getElementById('sidebar-wrapper');
-    const overlay = document.getElementById('sidebar-overlay');
+<script is:inline>
+    // Execute synchronously before DOM rendering to eliminate FOUC on page transitions
+    (function () {
+        if (typeof window !== "undefined" && window.innerWidth >= 769) {
+            const isCollapsed =
+                localStorage.getItem("sidebar-collapsed") === "true";
+            const wrapper = document.getElementById("sidebar-wrapper");
+            const expandBtn = document.getElementById("desktop-expand-btn");
+            if (isCollapsed && wrapper && expandBtn) {
+                wrapper.classList.add("collapsed");
+                expandBtn.classList.add("visible");
+            }
+        }
+    })();
+</script>
 
+<script>
+    const btn = document.getElementById("mobile-menu-btn");
+    const wrapper = document.getElementById("sidebar-wrapper");
+    const overlay = document.getElementById("sidebar-overlay");
+    const collapseBtn = document.getElementById("desktop-collapse-btn");
+    const expandBtn = document.getElementById("desktop-expand-btn");
+
+    // Mobile menu toggle (via top header hamburger button)
     if (btn && wrapper && overlay) {
-        btn.addEventListener('click', () => {
-            wrapper.classList.toggle('mobile-open');
-            overlay.classList.toggle('mobile-open');
+        btn.addEventListener("click", () => {
+            wrapper.classList.toggle("mobile-open");
+            overlay.classList.toggle("mobile-open");
         });
-        
-        overlay.addEventListener('click', () => {
-            wrapper.classList.remove('mobile-open');
-            overlay.classList.remove('mobile-open');
+
+        overlay.addEventListener("click", () => {
+            wrapper.classList.remove("mobile-open");
+            overlay.classList.remove("mobile-open");
+        });
+    }
+
+    // Desktop collapse & expand triggers with localStorage persistence
+    if (collapseBtn && expandBtn && wrapper) {
+        collapseBtn.addEventListener("click", () => {
+            wrapper.classList.add("collapsed");
+            expandBtn.classList.add("visible");
+            localStorage.setItem("sidebar-collapsed", "true");
+        });
+
+        expandBtn.addEventListener("click", () => {
+            wrapper.classList.remove("collapsed");
+            expandBtn.classList.remove("visible");
+            localStorage.setItem("sidebar-collapsed", "false");
         });
     }
 </script>
 
 <style lang="scss" is:global>
+    /* Default Desktop Docked Layout */
     .sidebar-wrapper {
-        position: fixed;
-        left: -250px;
-        top: 60px;
+        position: sticky;
+        top: 45px; /* Flush beneath the 45px top Header */
         width: 260px;
-        height: calc(100vh - 60px);
+        min-width: 260px;
+        height: calc(100vh - 45px);
         z-index: 90;
-        /* Transición más rápida y responsiva */
-        transition: left 0.15s ease-out;
+        background-color: var(--w-color-primary-70);
+        border-right: 1px solid var(--w-color-primary-50);
+        box-shadow: none; /* Removed heavy drop shadow for natural inline documentation integration */
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        transition:
+            width 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+            min-width 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-        /* Hit area para que sea fácil abrirlo en desktop */
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: -20px;
-            width: 30px;
-            height: 100%;
+        &.collapsed {
+            width: 0;
+            min-width: 0;
+            border-right: none;
+        }
+    }
+
+    .sidebar-header-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--w-color-primary-50);
+        background: transparent;
+        min-width: 260px;
+
+        .sidebar-title {
+            font-weight: bold;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--w-color-primary-20);
+        }
+
+        .desktop-collapse-btn {
+            background: none;
+            border: 1px solid transparent;
+            border-radius: var(--w-sm-radius, 4px);
+            color: var(--w-color-primary-20);
             cursor: pointer;
-            
-            @media (max-width: 768px) {
-                display: none;
+            font-size: 1.15rem;
+            line-height: 1;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition:
+                background-color 0.15s,
+                border-color 0.15s,
+                color 0.15s;
+
+            &:hover {
+                background-color: var(--w-color-primary-60);
+                border-color: var(--w-color-primary-40);
+                color: var(--w-color-primary);
             }
         }
+    }
 
-        @media (max-width: 768px) {
-            /* Hide completely on mobile to prevent the 10px strip and shadow from overlapping text */
-            left: -300px; 
-        }
+    .sidebar-content {
+        flex: 1;
+        overflow-y: auto;
+        min-width: 260px; /* Prevents internal link text from squashing/wrapping during collapse animations */
+    }
+
+    /* Style override for Webcore UI internal Sidebar component */
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 1rem;
+    }
+
+    /* Floating Tab Trigger when Sidebar is collapsed on Desktop */
+    .desktop-expand-btn {
+        display: none;
+        position: fixed;
+        top: 60px; /* Sitting cleanly below Header */
+        left: 0;
+        z-index: 85;
+        background-color: var(--w-color-primary-60);
+        border: 1px solid var(--w-color-primary-40);
+        border-left: none;
+        border-radius: 0 var(--w-md-radius, 6px) var(--w-md-radius, 6px) 0;
+        padding: 0.5rem 0.85rem;
+        color: var(--w-color-primary-10);
+        font-weight: bold;
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+        transition:
+            background-color 0.15s,
+            padding 0.15s,
+            color 0.15s;
 
         @media (min-width: 769px) {
-            &:hover {
-                left: 0;
+            &.visible {
+                display: flex;
+                align-items: center;
             }
         }
 
-        &.mobile-open {
-            left: 0;
+        &:hover {
+            background-color: var(--w-color-primary-50);
+            color: var(--w-color-primary);
+            padding-right: 1.05rem; /* Micro-animation extension on hover */
         }
     }
 
@@ -89,21 +233,37 @@ const sidebarGroups = SIDEBAR_GROUPS.map((group) => ({
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.55);
         z-index: 80;
-        
+
         &.mobile-open {
             display: block;
         }
     }
 
-    .sidebar {
-        width: 100%;
-        height: 100%;
-        background-color: var(--w-color-primary-70);
-        border-right: 1px solid var(--w-color-primary-50);
-        overflow-y: auto;
-        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
-        padding: 1rem;
+    /* Responsive adjustments for Mobile & Small Tablets */
+    @media (max-width: 768px) {
+        .sidebar-wrapper {
+            position: fixed;
+            left: -300px;
+            top: 45px;
+            width: 280px !important;
+            min-width: 280px !important;
+            height: calc(100vh - 45px);
+            transition: left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sidebar-wrapper.mobile-open {
+            left: 0;
+            box-shadow: 10px 0 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .sidebar-header-bar .desktop-collapse-btn {
+            display: none;
+        }
+
+        .desktop-expand-btn {
+            display: none !important;
+        }
     }
 </style>
