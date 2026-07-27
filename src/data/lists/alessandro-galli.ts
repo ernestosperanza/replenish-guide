@@ -4,7 +4,7 @@ export const alessandroGalliDeck: Decklist = {
     id: "alessandro-galli",
     player: "Alessandro Galli",
     badgeText: "4Seasons Spring Ed. @ Bologna (2026)",
-    badgeTheme: "info",
+    badgeTheme: "secondary",
     columns: [
         {
             sections: [

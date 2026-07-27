@@ -4,7 +4,7 @@ export const bryanGulottaDeck: Decklist = {
     id: "bryan-gulotta",
     player: "Bryan Gulotta",
     badgeText: "2nd Place - NA Premodern Championship @ Lobstercon (2026)",
-    badgeTheme: "warning",
+    badgeTheme: "secondary",
     columns: [
         {
             sections: [

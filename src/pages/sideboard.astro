@@ -7,7 +7,14 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 ---
 
 <Layout title="Sideboard Analysis - Replenish Guide">
-    <PageHeader title="Sideboard Analysis" />
+    <PageHeader
+        title="Sideboard Analysis"
+        description="Mastering competitive Replenish demands an adaptive, disciplined 15-card toolkit capable of transitioning between explosive combo setups and hard-hitting creature transformations."
+        imageSrc="/src/assets/banners/attunement.jpeg"
+        imageAlt="Attunement"
+        imageCaption="Attunement by Randy Gallegos"
+        isCard={true}
+    />
 
     <Card title="The Sculpting Methodology" titleTag="h2">
         <p>
@@ -390,6 +397,56 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     data-card-name="Disenchant">Disenchant</a
                 > provides immune, instant-speed interaction that cleanly bypasses
                 Aura's cost penalty.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Nevinyrral's Disk"
+            image="artifacts/nevinyrrals_disk.jpg"
+        >
+            <p style="margin-top: 0;">
+                The premier universal reset button against intricate permanent
+                locks, heavy midrange boards, and resolved anti-combo artifacts.
+                In protracted attrition battles (e.g., The Rock, UW Control),
+                detonating an active Disk not only wipes opposing creatures and
+                hate pieces simultaneously, but milimetrically drops your own
+                fielded enchantments directly into your graveyard—preparing a
+                devastating follow-up <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                > onto a completely clear board.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis title="Chill" image="enchantments/chill.jpg">
+            <p style="margin-top: 0;">
+                An absolute tournament powerhouse against aggressive red decks,
+                Sligh, and Burn. By doubling the casting cost of every red spell,
+                it completely paralyzes early burn velocity and renders high-cost
+                threats untranslatable. Because it exists as an enchantment, any
+                discarded copies naturally recur during late-game combo loops.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Light of Day"
+            image="enchantments/light_of_day.jpg"
+        >
+            <p style="margin-top: 0;">
+                The ultimate structural lockdown against black creature-driven
+                archetypes. Against Suicide Black, Psychatog, or aggressive The
+                Rock formations, deploying a resolved <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Light of Day">Light of Day</a
+                > establishes an absolute prohibition: black creatures are permanently
+                forbidden from attacking or blocking. Furthermore, its four-mana
+                enchantment card type ensures seamless recursion with <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                > if stripped early by opposing discard suites.
             </p>
         </CardAnalysis>
     </Card>

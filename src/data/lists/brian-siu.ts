@@ -4,7 +4,7 @@ export const brianSiuDeck: Decklist = {
     id: "brian-siu",
     player: "Brian Siu",
     badgeText: "1st Place - NA Premodern Championship @ Lobstercon (2026)",
-    badgeTheme: "success",
+    badgeTheme: "secondary",
     columns: [
         {
             sections: [
