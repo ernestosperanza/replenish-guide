@@ -41,7 +41,7 @@ import { modernDecklists, getCopyString } from "@data/decklists";
                 in the maindeck, systematically blanking the opponent's Game 1 spot
                 removal.
             </li>
-            <li style="margin-bottom: 0.5rem;">
+            <li style="margin-bottom: 0;">
                 <strong>Transformational vs. Pure Control Sideboards:</strong> While
                 traditional configurations pivot aggressively post-board into midrange
                 threat structures (<a
@@ -54,26 +54,6 @@ import { modernDecklists, getCopyString } from "@data/decklists";
                 render opposing spot removal and sideboard creature sweepers
                 inert.
             </li>
-            <li style="margin-bottom: 0;">
-                <strong>Metagame Flex-Slot Tailoring:</strong> Because the foundational
-                combo engine requires approximately 52 invariant slots, pilots freely
-                modulate flex allocations of <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Decree of Silence">Decree of Silence</a
-                >, <a href="#" class="card-hover" data-card-name="Tsabo's Web"
-                    >Tsabo's Web</a
-                >, and <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > to match anticipated regional target densities (refer to our detailed
-                <a
-                    href="/analysis"
-                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
-                    >Maindeck Analysis</a
-                > for quantitative flex slot guidance).
-            </li>
         </ul>
     </Card>
 
@@ -82,7 +62,7 @@ import { modernDecklists, getCopyString } from "@data/decklists";
     >
         {
             modernDecklists.map((deck) => (
-                <Card>
+                <Card style="border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius);">
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
                         <h2 style="margin: 0; font-size: 1.5rem;">
                             {deck.player}
@@ -103,18 +83,22 @@ import { modernDecklists, getCopyString } from "@data/decklists";
                         />
                     )}
 
-                    <Grid column={3} gap="lg">
-                        {deck.columns.map((col) => (
-                            <div>
-                                {col.sections.map((sec) => (
-                                    <DeckSection
-                                        title={sec.title}
-                                        items={sec.items}
-                                    />
-                                ))}
-                            </div>
-                        ))}
-                    </Grid>
+                    <div
+                        style="border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: 1.75rem; background-color: var(--w-color-bg); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);"
+                    >
+                        <Grid column={3} gap="lg">
+                            {deck.columns.map((col) => (
+                                <div>
+                                    {col.sections.map((sec) => (
+                                        <DeckSection
+                                            title={sec.title}
+                                            items={sec.items}
+                                        />
+                                    ))}
+                                </div>
+                            ))}
+                        </Grid>
+                    </div>
                 </Card>
             ))
         }

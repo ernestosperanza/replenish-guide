@@ -2,6 +2,7 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
+import WipAlert from "@components/WipAlert.astro";
 import { Card } from "webcoreui/astro";
 ---
 
@@ -18,6 +19,7 @@ import { Card } from "webcoreui/astro";
         isCard={true}
     />
 
+    <WipAlert />
     <Card title="Strategic Frameworks" titleTag="h2">
         <h3 style="margin-top: 0;">The Two-Angle Disruption Framework</h3>
         <p>

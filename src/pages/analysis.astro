@@ -10,18 +10,14 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     title="Maindeck Analysis - Replenish Guide"
     description="Deep dive into the core cards and strategy of the Replenish deck. Understand the purpose of every enchantment, cantrip, and interaction spell in the maindeck and sideboard."
 >
-    <PageHeader title="Maindeck Analysis" />
-    <Card>
-        <p style="margin-top: 0; margin-bottom: 0;">
-            The post-ban Replenish maindeck operates as a calculated
-            combo-control architecture. Every slot across the 60 cards is
-            strictly allocated to balance early deck velocity, resilient mana
-            development, proactive defense against fast hostile metagames, and
-            graveyard sculpting for lethal turns. Below is an analytical
-            breakdown of the mandatory staples and flex configurations that
-            define contemporary winning lists.
-        </p>
-    </Card>
+    <PageHeader
+        title="Maindeck Analysis"
+        description="The post-ban Replenish maindeck operates as a calculated combo-control architecture. Every slot across the 60 cards is strictly allocated to balance early deck velocity, resilient mana development, proactive defense against fast hostile metagames. Below is an analytical breakdown of the mandatory staples and flex configurations that define contemporary winning lists."
+        imageSrc="/src/assets/banners/attunement.jpeg"
+        imageAlt="Attunement"
+        imageCaption="Sculpting the Optimal 60-Card Framework"
+        isCard={true}
+    />
     <Card title="The Core" titleTag="h2">
         <CardGrid
             width="180px"
@@ -222,150 +218,128 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     </Card>
 
     <Card title="Card Selection" titleTag="h2">
-        <CardGrid
-            width="180px"
-            cards={[
-                {
-                    src: "/src/assets/cards/instants/frantic_search.webp",
-                    alt: "Frantic Search",
-                },
-                {
-                    src: "/src/assets/cards/instants/intuition.webp",
-                    alt: "Intuition",
-                },
-            ]}
-        />
-
-        <div
-            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;"
+        <CardAnalysis
+            title="Frantic Search"
+            badge="2–3 Main"
+            image="instants/frantic_search.webp"
         >
-            <div>
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Frantic Search
-                    </h3>
-                    <Badge theme="secondary" small={true}>2–3 Main</Badge>
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0;">
-                    Provides essential deck velocity and enables explosive
-                    development turns when paired with sol lands or painlands.
-                    However, because it incurs intrinsic card disadvantage, it
-                    is the most frequently trimmed tool post-sideboard against
-                    grinding control strategies where resource conservation is
-                    critical.
-                </p>
-            </div>
-            <div>
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Intuition
-                    </h3>
-                    <Badge theme="secondary" small={true}>3–4 Main</Badge>
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0;">
-                    The archetype's most versatile selection engine and
-                    skill-testing tool. The standard combo pile is Opalescence,
-                    Parallax Wave, and Decree of Silence—guaranteeing that
-                    whichever piece the opponent selects, the other two fuel a
-                    subsequent Replenish. Yet piles must adapt dynamically to
-                    the board state: against Landstill, searching for three
-                    lands; against fast aggro, tutoring for three copies of
-                    Swords to Plowshares ensures survival. Trimming copies
-                    against reactive blue decks is common practice to preserve
-                    overall threat density. For an exhaustive masterclass on
-                    generating tactical piles and navigating tricky board
-                    states, consult our dedicated <a
-                        href="/intuition"
-                        style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
-                        >Intuition Guide</a
-                    >.
-                </p>
-            </div>
-        </div>
+            <p style="margin-top: 0; margin-bottom: 0;">
+                Provides essential deck velocity and enables explosive
+                development turns when paired with sol lands or painlands.
+                However, because it incurs intrinsic card disadvantage, it is
+                the most frequently trimmed tool post-sideboard against grinding
+                control strategies where resource conservation is critical.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Intuition"
+            badge="3–4 Main"
+            image="instants/intuition.webp"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                The archetype's most versatile selection engine and
+                skill-testing tool. The standard combo pile is Opalescence,
+                Parallax Wave, and Decree of Silence—guaranteeing that whichever
+                piece the opponent selects, the other two fuel a subsequent
+                Replenish. Yet piles must adapt dynamically to the board state:
+                against Landstill, searching for three lands; against fast
+                aggro, tutoring for three copies of Swords to Plowshares ensures
+                survival. Trimming copies against reactive blue decks is common
+                practice to preserve overall threat density. For an exhaustive
+                masterclass on generating tactical piles and navigating tricky
+                board states, consult our dedicated <a
+                    href="/intuition"
+                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                    >Intuition Guide</a
+                >.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Why Not Careful Study?"
+            badge="Omitted from Maindeck"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                While <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Careful Study">Careful Study</a
+                > appears tempting as a one-mana graveyard sculpting engine, competitive
+                theory rules it out as a structural sub-optimum. Unlike <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Attunement">Attunement</a
+                > (which remains a recurring enchantment engine) or <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Frantic Search">Frantic Search</a
+                > (which fuels burst untaps on sol lands and painless velocity), Careful
+                Study incurs strict card disadvantage (a -1 net resource loss immediately
+                upon resolution). In our combo-control architecture, bleeding card
+                advantage simply to dump enchantments exhausts our critical mass of
+                permission and defense before reaching the lethal four-mana Replenish
+                threshold.
+            </p>
+        </CardAnalysis>
     </Card>
 
     <Card title="Interaction" titleTag="h2">
-        <CardGrid
-            width="180px"
-            cards={[
-                {
-                    src: "/src/assets/cards/instants/swords_to_plowshares.webp",
-                    alt: "Swords to Plowshares",
-                },
-                {
-                    src: "/src/assets/cards/enchantments/seal_of_cleansing.webp",
-                    alt: "Seal of Cleansing",
-                },
-                {
-                    src: "/src/assets/cards/artifacts/tsabos_web.jpg",
-                    alt: "Tsabo’s Web",
-                },
-            ]}
-        />
-
-        <div
-            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;"
+        <CardAnalysis
+            title="Swords to Plowshares"
+            badge="3–4 Main · 0–1 Side"
+            image="instants/swords_to_plowshares.webp"
         >
-            <div>
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Swords to Plowshares
-                    </h3>
-                    <Badge theme="secondary" small={true}
-                        >3–4 Main · 0–1 Side</Badge
-                    >
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0;">
-                    The gold standard of one-mana spot removal. Three copies in
-                    the maindeck keep the strategy efficient and streamlined,
-                    while bringing in the fourth post-sideboard solidifies your
-                    defenses against creature-heavy builds.
-                </p>
-            </div>
-            <div>
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Seal of Cleansing
-                    </h3>
-                    <Badge theme="secondary" small={true}
-                        >2–3 Main · 0-2 Side</Badge
-                    >
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0;">
-                    Provides proactive interaction against problematic
-                    enchantments and mana artifacts. Because it can be
-                    sacrificed for instant tactical value and reanimated via
-                    Replenish, it functions as a recurring control engine.
-                    Easily sideboarded out against opponents lacking targets.
-                </p>
-            </div>
-            <div>
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Tsabo’s Web
-                    </h3>
-                    <Badge theme="secondary" small={true}
-                        >0–3 Main · 1–3 Side</Badge
-                    >
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0;">
-                    A clean, disruptive answer to utility lands like Rishadan
-                    Port, Dust Bowl, and Mishra's Factory. The precise number
-                    across the 75 shifts between one and three depending on the
-                    prevalence of mana-denial structures in your local metagame.
-                </p>
-            </div>
-        </div>
+            <p style="margin-top: 0; margin-bottom: 0;">
+                The gold standard of one-mana spot removal. Three copies in the
+                maindeck keep the strategy efficient and streamlined, while
+                bringing in the fourth post-sideboard solidifies your defenses
+                against creature-heavy builds.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Seal of Cleansing"
+            badge="2–3 Main · 0-2 Side"
+            image="enchantments/seal_of_cleansing.webp"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                Provides proactive interaction against problematic enchantments
+                and mana artifacts. Because it can be sacrificed for instant
+                tactical value and reanimated via Replenish, it functions as a
+                recurring control engine. Easily sideboarded out against
+                opponents lacking targets.
+            </p>
+        </CardAnalysis>
+    </Card>
+
+    <Card title="Proactive Disruption & Mana Denial" titleTag="h2">
+        <CardAnalysis
+            title="Tsabo’s Web"
+            badge="0–3 Main · 1–3 Side"
+            image="artifacts/tsabos_web.jpg"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                A premier proactive answer to opponent utility lands like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Rishadan Port">Rishadan Port</a
+                >, <a href="#" class="card-hover" data-card-name="Dust Bowl"
+                    >Dust Bowl</a
+                >, <a href="#" class="card-hover" data-card-name="Wasteland"
+                    >Wasteland</a
+                >, and <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Mishra's Factory">Mishra's Factory</a
+                >. Repositioning this artifact out of general removal and into
+                proactive mana denial highlights its architectural role: casting
+                it early completely neutralizes enemy taxing lands and attacking
+                creature-lands before they can constrain our setup or pressure
+                our combo timelines, while instantly cantripping to preserve
+                card velocity.
+            </p>
+        </CardAnalysis>
     </Card>
     <Card title="Other Cards Worth Considering" titleTag="h2">
         <CardAnalysis
@@ -470,10 +444,8 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                     the strategy against aggressive non-basic punishment like
                     Wasteland and Price of Progress. Securing your first three
                     land drops as basics is a crucial stabilizing line against
-                    burn and mana-denial builds. Furthermore, this distribution
-                    strictly adheres to Karsten's mana consistency thresholds,
-                    providing ~16 sources of each color to cast double-pipped
-                    four-drops on schedule.
+                    burn and mana-denial builds. Providing ~16 sources of each
+                    color to cast double-pipped four-drops on schedule.
                 </p>
             </div>
         </div>

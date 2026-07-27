@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 
 export interface Props {
     title: string;
-    image: string;
+    image?: string;
     collapsible?: boolean;
     badge?: string;
 }
@@ -13,10 +13,10 @@ const { title, image, collapsible = false, badge } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
     "/src/assets/cards/**/*.{jpeg,jpg,png,gif,webp}",
 );
-const fullPath = `/src/assets/cards/${image}`;
+const fullPath = image ? `/src/assets/cards/${image}` : "";
 
 let importedImage: ImageMetadata | null = null;
-if (images[fullPath]) {
+if (image && images[fullPath]) {
     importedImage = (await images[fullPath]()).default;
 }
 ---
@@ -30,19 +30,21 @@ if (images[fullPath]) {
             </summary>
             <div style="padding-top: 0.5rem;">
                 <Flex gap="lg" alignment={{ vertical: "start" }} wrap="wrap">
-                    {importedImage ? (
-                        <Image
-                            src={importedImage}
-                            alt={title}
-                            width={400}
-                            style="width: 220px; height: auto; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);"
-                        />
-                    ) : (
-                        <img
-                            src={fullPath}
-                            alt={title}
-                            style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);"
-                        />
+                    {image && (
+                        importedImage ? (
+                            <Image
+                                src={importedImage}
+                                alt={title}
+                                width={400}
+                                style="width: 220px; height: auto; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);"
+                            />
+                        ) : (
+                            <img
+                                src={fullPath}
+                                alt={title}
+                                style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);"
+                            />
+                        )
                     )}
                     <div style="flex: 1; min-width: 250px;">
                         <slot />
@@ -55,25 +57,27 @@ if (images[fullPath]) {
             gap="lg"
             alignment={{ vertical: "start" }}
             wrap="wrap"
-            style="margin-bottom: 0.5rem;"
+            style="margin-bottom: 1.5rem;"
         >
-            {importedImage ? (
-                <Image
-                    src={importedImage}
-                    alt={title}
-                    width={400}
-                    style="width: 220px; height: auto; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);"
-                />
-            ) : (
-                <img
-                    src={fullPath}
-                    alt={title}
-                    style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);"
-                />
+            {image && (
+                importedImage ? (
+                    <Image
+                        src={importedImage}
+                        alt={title}
+                        width={400}
+                        style="width: 220px; height: auto; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);"
+                    />
+                ) : (
+                    <img
+                        src={fullPath}
+                        alt={title}
+                        style="width: 220px; border-radius: 4.75% / 3.5%; flex-shrink: 0; border: 1px solid var(--w-color-primary-50);"
+                    />
+                )
             )}
             <div style="flex: 1; min-width: 250px;">
                 <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
-                    <h3 style="margin: 0;">{title}</h3>
+                    <h3 style="margin: 0; color: var(--w-color-primary-10); font-size: 1.3rem;">{title}</h3>
                     {badge && <Badge theme="secondary" small={true}>{badge}</Badge>}
                 </div>
                 <slot />

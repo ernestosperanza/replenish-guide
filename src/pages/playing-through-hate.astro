@@ -2,8 +2,9 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
-import { Card, Alert } from "webcoreui/astro";
+import { Card } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
+import WipAlert from "@components/WipAlert.astro";
 ---
 
 <Layout title="Playing Through Hate - Replenish Guide">
@@ -16,6 +17,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         isCard={true}
     />
 
+    <WipAlert />
     <Card title="Graveyard Interference" titleTag="h2">
         <p style="margin-bottom: 1.5rem;">
             Because <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> relies heavily on the graveyard to cheat massive mana costs, opponents will inevitably present graveyard disruption in post-board games. The secret to defeating graveyard hate is simple: never commit critical resources blindly without an immediate win condition on the stack or in hand.
@@ -66,6 +68,18 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             </p>
             <p>
                 <strong>Counterplay:</strong> Because Haunting Echoes is a heavy five-mana sorcery, opponents are forced to tap down significantly during their own main phase to deploy it. Preserve cheap blue countermagic (<a href="#" class="card-hover" data-card-name="Mana Leak">Mana Leak</a>, <a href="#" class="card-hover" data-card-name="Counterspell">Counterspell</a>, <a href="#" class="card-hover" data-card-name="Arcane Denial">Arcane Denial</a>) specifically for their fifth mana threshold, or proactively lock out the spell via <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a> in Games 2 and 3. Avoid passively building an overflowing graveyard against five-mana black control pools without an immediate plan to execute Replenish on your own turn.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Planar Void"
+            image="enchantments/planar_void.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Continuous Exile Constraint:</strong> A one-mana static enchantment favored by Suicide Black and aggressive mono-black builds that automatically exiles any card immediately as it hits the graveyard, creating an oppressive graveyard vacuum.
+            </p>
+            <p>
+                <strong>Counterplay & Trigger Manipulation:</strong> Because <a href="#" class="card-hover" data-card-name="Planar Void">Planar Void</a> is an enchantment itself, our maindeck copies of <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> or instant-speed <a href="#" class="card-hover" data-card-name="Disenchant">Disenchant</a> cleanly destroy it before attempting combo loops. Furthermore, for advanced stack mastery: Planar Void operates via a triggered ability ("whenever another card is put into a graveyard, exile it") rather than an instantaneous replacement effect. When an enchantment enters your graveyard, Void's exile trigger is placed on the stack; if you can initiate instant-speed recursion or respond before the trigger resolves, you can exploit brief tactical windows, though prior physical removal remains the gold standard.
             </p>
         </CardAnalysis>
     </Card>
@@ -120,6 +134,28 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             </p>
             <p>
                 <strong>Counterplay:</strong> As a sorcery, opponents are restricted to casting <a href="#" class="card-hover" data-card-name="Reverent Silence">Reverent Silence</a> during their main phase. During preliminary setup rounds, gladly accept the 6-life cushion; every destroyed enchantment lands directly in your graveyard, actively advancing your <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> setup at zero card cost to you. Once your Opal-Wave engine is fully assembled, simply activate <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a> in response to stack self-protection triggers, bringing your entire board back safely once Reverent Silence resolves.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Ray of Revelation / Sylvan Reclamation"
+        >
+            <p style="margin-top: 0;">
+                <strong>Flashback & Exile Spot Removal:</strong> Green-white disruptive configurations rely on <a href="#" class="card-hover" data-card-name="Ray of Revelation">Ray of Revelation</a> for devastating 2-for-1 enchantment attrition via Flashback, while extended format analyses frequently emphasize permanent exile sweepers like <a href="#" class="card-hover" data-card-name="Sylvan Reclamation">Sylvan Reclamation</a> to deny graveyard recursion entirely. Countering the front half of Ray from hand fails to prevent an opponent from paying one white mana to destroy your key piece directly from the graveyard.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Against recurring flashback interaction, do not rely on sequential, piece-by-piece enchantment deployments. Execute simultaneous multi-enchantment installations via <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> where an instant-speed <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a> can protect your lock pieces, or shift tactical focus entirely toward transformational non-enchantment win conditions (<a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a>, <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a>) that leave opposing enchantment removal completely dead in hand.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Calming Verse"
+        >
+            <p style="margin-top: 0;">
+                <strong>Asymmetric Mass Sweeper:</strong> A catastrophic four-mana green sorcery sweeper that destroys all enchantments you control while leaving a tapped-out or green opponent's permanent infrastructure completely unharmed.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Calming Verse demands rigorous permission discipline: preserve hard blue countermagic (<a href="#" class="card-hover" data-card-name="Mana Leak">Mana Leak</a>, <a href="#" class="card-hover" data-card-name="Counterspell">Counterspell</a>, <a href="#" class="card-hover" data-card-name="Arcane Denial">Arcane Denial</a>) strictly for their four-mana sorcery deployment window. Alternatively, deploy proactive interaction like <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a>, <a href="#" class="card-hover" data-card-name="Orim's Chant">Orim's Chant</a>, or <a href="#" class="card-hover" data-card-name="Defense Grid">Defense Grid</a> to strip their ability to safely clear the table during decisive setup turns.
             </p>
         </CardAnalysis>
     </Card>
@@ -185,7 +221,30 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                 <strong>The Opalescence Lockout:</strong> A subtle and deceptively dangerous sideboard artifact. On an empty board or during standard setup phases, <a href="#" class="card-hover" data-card-name="Cursed Totem">Cursed Totem</a> has zero interaction with normal enchantments. However, <strong>the instant <a href="#" class="card-hover" data-card-name="Opalescence">Opalescence</a> enters the battlefield, all of your non-Aura enchantments transform into creatures.</strong>
             </p>
             <p>
-                Under Opalescence and Cursed Totem simultaneously, <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a>, <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a>, and <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> are strictly considered creatures with activated abilities—meaning Cursed Totem completely disables their activation loops! To circumvent this critical gotcha, always utilize <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> or instant-speed <a href="#" class="card-hover" data-card-name="Disenchant">Disenchant</a> to destroy Cursed Totem <em>before</em> deploying Opalescence onto the battlefield.
+                <strong>Counterplay:</strong> Under Opalescence and Cursed Totem simultaneously, <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a>, <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a>, and <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> are strictly considered creatures with activated abilities—meaning Cursed Totem completely disables their activation loops! To circumvent this critical gotcha, always utilize <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> or instant-speed <a href="#" class="card-hover" data-card-name="Disenchant">Disenchant</a> to destroy Cursed Totem <em>before</em> deploying Opalescence onto the battlefield.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Dystopia"
+            image="enchantments/dystopia.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Cumulative Color Attrition:</strong> A grueling sideboard enchantment deployed by Black control and midrange configurations (such as The Rock) that imposes a recurring upkeep tax: at the beginning of your upkeep, you are forced to sacrifice a green or white permanent. Left unchecked, <a href="#" class="card-hover" data-card-name="Dystopia">Dystopia</a> aggressively strips away your <a href="#" class="card-hover" data-card-name="Opalescence">Opalescence</a>, <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a>, and <a href="#" class="card-hover" data-card-name="Sphere of Law">Sphere of Law</a> structures.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Crucially, Dystopia demands progressive cumulative upkeep life payments from the opponent and is entirely color-restricted to green and white—meaning your foundational blue draw-discard engine (<a href="#" class="card-hover" data-card-name="Attunement">Attunement</a>, <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a>) and sol artifact base operate completely immune to its effect. Simply accumulate your combo payload safely inside your graveyard without casting premature white permanents; when ready, deploy <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> onto an overwhelming board where sacrificing a single redundant white permanent to Dystopia's upkeep trigger is irrelevant before executing lethal attacks.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Humility"
+        >
+            <p style="margin-top: 0;">
+                <strong>Layered Stat Normalization:</strong> Occasional mirror tech or UW Control sideboard inclusion, <a href="#" class="card-hover" data-card-name="Humility">Humility</a> strips all creature abilities and forces base stats to 1/1. Because our lethal endgame relies on <a href="#" class="card-hover" data-card-name="Opalescence">Opalescence</a> transforming our non-Aura enchantments into dynamic attacking creatures, a resolved Humility creates complex layer conflicts and neutralizes your creature-based engine activations if timestamped over your setup.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> When Humility is fielded, do not attempt to win through combat damage with Opalescence creatures or rely on creature-state activated abilities. Treat Humility as a mandatory removal target: systematically clear it from the table via instant-speed <a href="#" class="card-hover" data-card-name="Disenchant">Disenchant</a> or an existing <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> prior to transitioning your graveyard architecture into active battlefield combat.
             </p>
         </CardAnalysis>
     </Card>

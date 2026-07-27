@@ -2,6 +2,7 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
+import WipAlert from "@components/WipAlert.astro";
 import { Card } from "webcoreui/astro";
 ---
 
@@ -15,6 +16,7 @@ import { Card } from "webcoreui/astro";
         imageCaption="Intuition by April Lee"
         isCard={true}
     />
+    <WipAlert />
     <Card title="General Heuristics" titleTag="h2">
         <p>
             Timing is everything. Because <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a> is an instant, you almost always want to cast it on your opponent's end step. This lets you untap with full mana available to resolve a lethal <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> or preserve interaction on your turn, granting your opponent a drastically compressed tactical window to react while gathering maximum information before committing.

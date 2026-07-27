@@ -2,6 +2,8 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import { List, Card } from "webcoreui/astro";
+import DecklistTooltip from "@components/DecklistTooltip.astro";
+import WipAlert from "@components/WipAlert.astro";
 ---
 
 <Layout title="Resources & Conclusion - Replenish Guide">
@@ -14,60 +16,49 @@ import { List, Card } from "webcoreui/astro";
         isCard={true}
     />
 
+    <WipAlert />
     <Card title="Acknowledgments & Community Credits" titleTag="h2">
-        <p style="margin-top: 0;">
-            This exhaustive compendium is the culmination of years of
-            theoretical refinement, tournament playtesting, and passionate
-            community collaboration within the Premodern ecosystem. Special
-            gratitude belongs to <strong>Brian Siu (Dr Siuss)</strong> for penning
-            the definitive foundational primer that inspired this modern interactive
-            guide, and to <strong>Gary Roth</strong> for his rigorous mathematical
-            treatises documenting the formal physics and stack interactions of Opalescent
-            Parallax Wave collisions.
+        <p style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;">
+            This exhaustive strategic compendium represents the culmination of years of rigorous tournament playtesting, mathematical analysis, and passionate theoretical refinement within the Premodern competitive ecosystem. Deepest gratitude and formal attribution belong to the following community builders:
         </p>
-        <p style="margin-bottom: 0;">
-            Most importantly, profound credit is owed to the enthusiastic
-            pilots, deckbuilders, and theorists of the <strong
-                >Premodern Replenish Discord community</strong
-            >. In particular, notable tournament innovations and strategic
-            frameworks from
-            <strong>Marinebiomancer</strong> (pioneer of the "Creatureless 75" hard-control
-            lock),
-            <strong>AchiIIes</strong> (architect of pre-ban Parallax Tide dominance),
-            <strong>Bryan Gulotta</strong> (proactive game-1 disruption theorist),
-            and
-            <strong>Alessandro Galli</strong> directly shaped the maindeck analyses
-            and sideboard methodologies featured across these pages. Substantial analytical
-            insights, mulligan heuristics, and granular matchup evaluations were cultivated
-            directly from their rigorous daily discussions and match reporting within
-            the channel.
-        </p>
+        <ul style="padding-left: 1.25rem; margin-bottom: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li>
+                <strong>Brian Siu (Dr Siuss):</strong> Author of the original foundational Premodern Replenish primer that inspired the educational framework and design architecture of this comprehensive, interactive guide.
+            </li>
+            <li>
+                <strong>Gary Roth:</strong> Mathematical theorist and rules scholar behind the definitive treatises documenting the formal stack-physics, timestamp layering, and priority loops of Opalescent Parallax Wave collisions.
+            </li>
+            <li>
+                <strong>Marinebiomancer:</strong> Premodern competitive pioneer and primary theorist behind the structural transition toward the modern "Creatureless 75" hard-control lock ideology.
+            </li>
+            <li>
+                <strong>AchiIIes:</strong> Tournament innovator and analytical strategist whose early work on tempo heuristics and proactive control lines defined competitive play across pre-ban eras.
+            </li>
+            <li>
+                <strong>Bryan Gulotta:</strong> Proactive resource-denial advocate whose high-leverage testing established the necessity of dedicated Game 1 mana-taxing infrastructure (<a href="#" class="card-hover" data-card-name="Tsabo's Web">Tsabo's Web</a> and <a href="#" class="card-hover" data-card-name="Rishadan Port">Rishadan Port</a>).
+            </li>
+            <li>
+                <strong>Alessandro Galli:</strong> High-level competitive pilot whose clinical tournament reports, post-sideboard optimization lines, and granular match analysis directly shaped our tiered sideboard methodology and threat matrices.
+            </li>
+            <li>
+                <strong>The Premodern Replenish Discord Community:</strong> The collective brotherhood of passionate tournament pilots, deckbuilders, and researchers whose daily rigorous discussions, mulligan evaluations, and collaborative passion continue to elevate the archetype.
+            </li>
+        </ul>
     </Card>
 
     <Card title="Project Backlog & Roadmap" titleTag="h2">
-        <p style="margin-top: 0; margin-bottom: 0.75rem;">
-            This guide is an actively curated, living document designed to
-            evolve alongside the competitive Premodern metagame. Below is our
-            transparent engineering backlog of feature upgrades and expansions
-            currently under active development:
+        <p style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;">
+            With our foundational UX architecture—including modular <code>&lt;MatchupCard&gt;</code> visual layouts, tiered sideboard categorizations, and exhaustive hate-counterplay deep dives—now fully implemented, this guide continues to evolve as a living strategic repository. Our current engineering backlog focuses on advanced pedagogical tooling:
         </p>
-        <ul style="padding-left: 1.25rem; margin-bottom: 0;">
-            <li style="margin-bottom: 0.5rem;">
-                <strong>Mobile UI & Responsiveness Optimization:</strong> Fine-tuning
-                spacing across our interactive sideboard matrices, card analysis tables,
-                and mobile navigation layouts to guarantee a flawless reading experience
-                on compact touchscreens.
+        <ul style="padding-left: 1.25rem; margin-bottom: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li>
+                <strong>Interactive Mulligan Sandbox & Hand Simulator:</strong> Developing an in-browser interactive hand generator to test decision heuristics against specific format archetypes and simulated pre-game disruption.
             </li>
-            <li style="margin-bottom: 0.5rem;">
-                <strong>Ongoing Metagame & Matchup Maintenance:</strong> Regularly
-                refreshing sideboard transformation configurations, threat matrices,
-                and flex slot recommendations as post-ban regional championship trends
-                solidify.
+            <li>
+                <strong>Ongoing Post-Ban Metagame Evolutions:</strong> Periodically re-calibrating sideboard flex slots, threat assessments, and archetype badges as contemporary regional championship meta dynamics shift.
             </li>
-            <li style="margin-bottom: 0;">
-                <strong>Championship Decklist Archive:</strong> Expanding the tournament
-                showcase with emerging Top 8 tournament decklists and analytical post-mortem
-                evaluations from upcoming premier live events.
+            <li>
+                <strong>Video Match Post-Mortems & Replay Archive:</strong> Integrating curated championship match recordings and turn-by-turn video breakdowns illustrating complex stack manipulations in live competitive environments.
             </li>
         </ul>
     </Card>
@@ -108,9 +99,40 @@ import { List, Card } from "webcoreui/astro";
                             href: "https://www.wak-wak.se/monster/2026-2-5/episode-101-replenish-20",
                             target: "_blank",
                         },
+                        {
+                            name: "The quest to find the best sideboard card to play main continues!",
+                            subText: "YouTube Video Breakdown & Proactive Maindeck Tech Analysis",
+                            href: "https://www.youtube.com/watch?v=rqv5ZgezjCA",
+                            target: "_blank",
+                        },
+                        {
+                            name: "REPLENISH IS STILL BANANAS! Premodern Blue-White Opal-Wave Enchantment Combo MTG",
+                            subText: "YouTube Gameplay & Match Coverage",
+                            href: "https://www.youtube.com/watch?v=XWB2-UFgn6Q",
+                            target: "_blank",
+                        },
+                        {
+                            name: "LAN D HO's Replenish Masterclass",
+                            subText: "YouTube Strategic Tutorial & Deep-Dive Masterclass",
+                            href: "https://www.youtube.com/watch?v=DnOyOweDK5Y",
+                            target: "_blank",
+                        },
+                        {
+                            name: "[Premodern] Replenish vs Replenish - Finals - North American Championship 2026",
+                            subText: "YouTube Championship Finals Replay (Lobstercon 2026)",
+                            href: "https://www.youtube.com/watch?v=-TwRB8k71Sw",
+                            target: "_blank",
+                        },
+                        {
+                            name: "[Premodern] Moneyball Black vs Replenish - Top 8 - North American Championship 2026",
+                            subText: "YouTube Championship Top 8 Replay (Lobstercon 2026)",
+                            href: "https://www.youtube.com/watch?v=tFb1_RK8DnY",
+                            target: "_blank",
+                        },
                     ],
                 },
             ]}
         />
     </Card>
+    <DecklistTooltip />
 </Layout>

@@ -1,0 +1,46 @@
+---
+import { Badge } from "webcoreui/astro";
+
+export interface Props {
+    title: string;
+    matchup: string;
+    category: "dominant" | "favorable" | "competitive" | "difficult";
+    badgeText: string;
+    badgeTheme?: "success" | "info" | "warning" | "alert" | "secondary";
+    subtitle: string;
+}
+
+const {
+    title,
+    matchup,
+    category,
+    badgeText,
+    badgeTheme = "secondary",
+    subtitle,
+} = Astro.props;
+---
+
+<div
+    class="matchup-block"
+    data-matchup={matchup}
+    data-category={category}
+    style="border: 2px solid var(--w-color-primary-60); border-radius: var(--w-lg-radius); background-color: var(--w-color-primary-95); padding: 2rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); transition: border-color 0.2s ease;"
+>
+    <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.6rem; color: var(--w-color-primary-10);">
+        {title}
+    </h3>
+    <div
+        style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;"
+    >
+        <Badge theme={badgeTheme}>{badgeText}</Badge>
+        <span
+            style="font-size: 0.95rem; color: var(--w-color-primary-30); font-style: italic;"
+        >
+            {subtitle}
+        </span>
+    </div>
+
+    <div class="matchup-content">
+        <slot />
+    </div>
+</div>
