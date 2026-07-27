@@ -1,11 +1,14 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import DecklistTooltip from "@components/DecklistTooltip.astro";
 import { Card } from "webcoreui/astro";
 ---
 
-<Layout title="Mechanics - Replenish Guide"
-    description="Learn the complex rules interactions of the Replenish deck. Master the timing of Parallax Wave, Opalescence triggers, and how to permanently exile your opponent’s creatures.">
+<Layout
+    title="Mechanics - Replenish Guide"
+    description="Learn the complex rules interactions of the Replenish deck. Master the timing of Parallax Wave, Opalescence triggers, and how to permanently exile your opponent’s creatures."
+>
     <PageHeader
         title="Deck Mechanics"
         imageSrc="/src/assets/banners/opalescence.jpeg"
@@ -20,92 +23,191 @@ import { Card } from "webcoreui/astro";
     >
         <h3 style="margin-top: 0;">Opal-Wave Permanent Exile</h3>
         <p>
-            With Opalescence and Parallax Wave on the board, Wave is a 4/4 that
-            can target itself. You hold priority and stack a bunch of
-            creature-exile triggers, then use the last counter to exile Wave
-            itself. Wave comes back with five fresh counters as a new object.
-            Then all the creature-exile triggers resolve and those creatures are
-            gone permanently. Repeat until the board is clear.
+            With <a href="#" class="card-hover" data-card-name="Opalescence"
+                >Opalescence</a
+            > and <a href="#" class="card-hover" data-card-name="Parallax Wave"
+                >Parallax Wave</a
+            > on the battlefield, Wave becomes an operational 4/4 creature capable
+            of targeting itself. You retain priority and stack consecutive creature-exile
+            triggers against opposing threats, allocating the final fading counter
+            to target Wave itself. Wave exits and immediately returns with five fresh
+            fading counters as a brand-new object. Subsequently, the original exile
+            triggers resolve on the stack, eradicating those targets permanently.
+            Repeat this sequence until the opposing battlefield is cleared.
         </p>
         <p>
-            <strong>Combat Sequencing:</strong> A side effect of this trick is that
-            the Wave returns as a new object, meaning it has summoning sickness and
-            cannot attack that turn. Therefore, whenever possible, you should temporarily
-            exile blockers normally, swing with your team (including the Wave) for
-            4 damage, and <em>then</em> do the permanent exile trick in your second
-            main phase. Those 4 points of damage can often change the outcome of the
-            game. The exception is if the opponent's blockers have powerful Enter
-            the Battlefield (ETB) effects (like <em>Goblin Ringleader</em> or <em
-                >Bone Shredder</em
-            >), because temporarily exiling them means they'll return and
-            trigger their ETB again before being permanently exiled. Against
-            those, you just permanent-exile them immediately.
+            <strong>Combat Sequencing:</strong> A mechanical consequence of this loop
+            is that <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            > re-enters as a new permanent subject to summoning sickness, preventing
+            it from attacking that turn. Therefore, whenever tactically possible,
+            temporarily exile opposing blockers before combat, execute a full team
+            attack (swinging with Wave for 4 damage), and initiate the permanent exile
+            loop during your post-combat main phase. The notable exception occurs
+            when opposing creatures carry devastating Enter the Battlefield (ETB)
+            triggers (such as <a
+                href="#"
+                class="card-hover"
+                data-card-name="Goblin Ringleader">Goblin Ringleader</a
+            > or <a href="#" class="card-hover" data-card-name="Bone Shredder"
+                >Bone Shredder</a
+            >). Because temporary exile permits them to re-enter and re-trigger
+            before permanent removal, immediately permanently exile such threats
+            prior to combat.
         </p>
         <p>
-            <strong>Exiling Opposing Enchantments:</strong> Because Opalescence affects
-            <em>all</em> non-Aura enchantments on the battlefield, your opponent's
-            enchantments also become creatures. This means you can use the Wave trick
-            to permanently exile problematic enchantments like <em
-                >Survival of the Fittest</em
-            >, <em>Sylvan Library</em>, or an opposing <em>Seal of Cleansing</em
+            <strong>Exiling Opposing Enchantments:</strong> Because <a
+                href="#"
+                class="card-hover"
+                data-card-name="Opalescence">Opalescence</a
+            > globally animates <em>all</em> non-Aura enchantments on the battlefield,
+            opposing enchantments transform into targetable creatures. Consequently,
+            you can utilize the Wave interaction to permanently exile antagonistic
+            permanents such as <a
+                href="#"
+                class="card-hover"
+                data-card-name="Survival of the Fittest"
+                >Survival of the Fittest</a
+            >, <a href="#" class="card-hover" data-card-name="Sylvan Library"
+                >Sylvan Library</a
+            >, or an opposing <a
+                href="#"
+                class="card-hover"
+                data-card-name="Seal of Cleansing">Seal of Cleansing</a
             >.
         </p>
 
         <h3 style="margin-top: 2.5rem;">Opalescence & Summoning Sickness</h3>
         <p>
-            It's a common mistake for newer players to think they can cast
-            Replenish and immediately swing for lethal. Because Opalescence
-            turns your enchantments into creatures, any enchantment that enters
-            the battlefield this turn <em>will have summoning sickness</em>. You
-            cannot attack the turn you cast Replenish. This is why the deck
-            relies on Parallax Wave and Decree of Silence—you need to lock the
-            opponent out to survive a full turn cycle before you can attack.
+            A frequent analytical misstep among inexperienced pilots is assuming
+            a resolved <a href="#" class="card-hover" data-card-name="Replenish"
+                >Replenish</a
+            > enables immediate lethal combat. Because <a
+                href="#"
+                class="card-hover"
+                data-card-name="Opalescence">Opalescence</a
+            > animates returned enchantments into creatures, any permanent entering
+            the battlefield this turn is governed by summoning sickness and cannot
+            attack. Consequently, executing a decisive board lock via <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            > and <a
+                href="#"
+                class="card-hover"
+                data-card-name="Decree of Silence">Decree of Silence</a
+            > is essential to completely insulate your position across a full turn
+            cycle before delivering lethal damage.
         </p>
 
         <h3 style="margin-top: 2.5rem;">The Decree Lock</h3>
         <p>
-            Post-Replenish with all three pieces, creatures are permanently
-            exiled and spells are countered.
+            Post-<a href="#" class="card-hover" data-card-name="Replenish"
+                >Replenish</a
+            > with all three structural anchors assembled (<a
+                href="#"
+                class="card-hover"
+                data-card-name="Opalescence">Opalescence</a
+            >, <a href="#" class="card-hover" data-card-name="Parallax Wave"
+                >Parallax Wave</a
+            >, and <a
+                href="#"
+                class="card-hover"
+                data-card-name="Decree of Silence">Decree of Silence</a
+            >), all opposing creatures are systematically exiled and every
+            inbound spell is unconditionally countered.
         </p>
 
         <h3 style="margin-top: 2.5rem;">Resetting Decree with Wave</h3>
         <p>
-            When the third depletion trigger goes on the stack (which would
-            sacrifice Decree), you respond with Wave to exile the Decree. It
-            comes back with three fresh counters. Your opponent gets a small
-            window, but they'd need to have had three spells countered and still
-            have an instant ready. Very few decks can pull that off. Worst case
-            they destroy your Opalescence through the window, and Decree comes
-            back as a regular enchantment to counter their next three spells.
+            When <a
+                href="#"
+                class="card-hover"
+                data-card-name="Decree of Silence">Decree of Silence</a
+            > counters its third spell, its mandatory sacrifice trigger stacks. In
+            response, activate an animated <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            > to target the Decree. Upon resolving the standard flicker loop, Decree
+            returns with three refreshed depletion counters. While this sequence briefly
+            exposes a tiny window on the stack, an opponent would need to cast three
+            distinct spells simply to force the third trigger and still retain instant-speed
+            interaction to exploit the transition—an exceptional hurdle for traditional
+            Premodern archetypes. Even if removal targeting Opalescence resolves during
+            this brief gap, Decree simply returns as an unenchantment object ready
+            to counter their next three plays.
         </p>
 
         <h3 style="margin-top: 2.5rem;">Value Replenish</h3>
         <p>
-            You don't always need the full combo. I've won plenty of games by
-            just getting back a single Decree mid-game to choke an opponent who
-            has a hand full of expensive spells. Opal plus Wave by itself
-            stabilizes against most creature boards.
+            Championship matches do not strictly require assembling the complete
+            three-piece lock. Resolving <a
+                href="#"
+                class="card-hover"
+                data-card-name="Replenish">Replenish</a
+            > purely for incremental tactical value—such as reanimating a solitary
+            <a href="#" class="card-hover" data-card-name="Decree of Silence"
+                >Decree of Silence</a
+            > to asphyxiate an opponent holding high-mana spells, or recurring <a
+                href="#"
+                class="card-hover"
+                data-card-name="Opalescence">Opalescence</a
+            > paired with <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            > to completely dominate creature boards—is frequently sufficient to clinch
+            decisive victories.
         </p>
 
         <h3 style="margin-top: 2.5rem;">Protecting Your Board</h3>
         <p>
-            If someone casts Tranquil Domain or Wrath of God, you can respond
-            with Wave (while Opal is on board) to exile your own enchantments.
-            They come back fresh when Wave exits. If you have two Opalescences
-            in play and they target one with removal, you can Wave the targeted
-            one. It comes back as a new object and the removal fizzles.
+            If an opponent resolves mass sweeping removal such as <a
+                href="#"
+                class="card-hover"
+                data-card-name="Tranquil Domain">Tranquil Domain</a
+            > or <a href="#" class="card-hover" data-card-name="Wrath of God"
+                >Wrath of God</a
+            >, retain priority while <a
+                href="#"
+                class="card-hover"
+                data-card-name="Opalescence">Opalescence</a
+            > is active to exile your own critical enchantment creatures via <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            >. As the sweeper resolves and destroys Wave, all exiled permanents
+            safely re-enter completely refreshed. Similarly, when controlling
+            dual Opalescence instances against targeted interaction, simply
+            activating Wave to flicker the targeted copy invalidates the inbound
+            removal spell.
         </p>
 
         <h3 style="margin-top: 2.5rem;">Parallax Wave + Disenchant Effect</h3>
         <p>
-            Just like the Opalescence trick, you can permanently exile creatures
-            using Seal of Cleansing or a sideboard Disenchant. Activate Parallax
-            Wave to target up to 5 of your opponent's creatures. While those
-            activations are still on the stack, sacrifice your Seal of Cleansing
-            targeting your own Wave. The Wave leaves the battlefield, its
-            "return creatures" trigger resolves (returning nothing), and then
-            the exile triggers resolve, permanently removing the creatures. This
-            is a crucial survival tactic in the early game.
+            Independent of Opalescence, you can engineer permanent creature
+            removal utilizing <a
+                href="#"
+                class="card-hover"
+                data-card-name="Seal of Cleansing">Seal of Cleansing</a
+            > or sideboard <a
+                href="#"
+                class="card-hover"
+                data-card-name="Disenchant">Disenchant</a
+            > effects. Activate <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            > to target up to five opposing creatures. Retaining priority with those
+            targeting activations on the stack, sacrifice your Seal (or cast Disenchant)
+            destroying your own Wave. As Wave exits the battlefield prior to exiling
+            anything, its leaves-play clause resolves immediately (returning zero
+            creatures). Finally, the original exile activations resolve, permanently
+            expelling those targets—a paramount defensive stabilization maneuver during
+            early turns.
         </p>
     </Card>
 
@@ -116,88 +218,170 @@ import { Card } from "webcoreui/astro";
     >
         <h3 style="margin-top: 0;">Parallax Wave Creature Synergies</h3>
         <p>
-            Parallax Wave isn't just for clearing your opponent's board; it has
-            incredible synergy with your own creatures, especially
+            Beyond clearing adversarial boards, <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            > exhibits profound synergy with your own creature packages, particularly
             post-sideboard. <em
-                >Note: The first two tricks practically require you to have both
-                Opalescence and Parallax Wave on the board so you can instantly
-                flicker the Wave and get your creatures back immediately.</em
+                >Note: The initial two maneuvers rely on active <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Opalescence">Opalescence</a
+                > and Wave presence to execute immediate loop flickers.</em
             >
         </p>
         <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
             <li style="margin-bottom: 1rem;">
-                <strong>Flipping Exalted Angel for Free:</strong> If you cast Exalted
-                Angel face-down as a morph (for 3 mana), you can target it with Parallax
-                Wave. Then, use the Opalescence trick to flicker the Wave. When the
-                Angel returns to the battlefield, it comes back face-up. This instantly
-                saves you the 2WW unmorph cost.
+                <strong>Flipping Exalted Angel for Free:</strong> Deploying <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Exalted Angel">Exalted Angel</a
+                > face-down via morph for three colorless mana permits targeting it
+                with <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Parallax Wave">Parallax Wave</a
+                >. Executing an Opal-Wave flicker immediately returns the Angel
+                to the battlefield face-up, entirely circumventing the 2WW
+                unmorph cost while presenting an immediate 4/5 flying lifelink
+                threat.
             </li>
             <li style="margin-bottom: 1rem;">
-                <strong>Resetting Meddling Mage:</strong> If your opponent draws an
-                out to the card you named with Meddling Mage, or if you simply need
-                to lock out a different spell, you can exile your own Mage with Wave
-                and immediately flicker the Wave. When the Mage returns, you get to
-                name a brand-new card.
+                <strong>Resetting Meddling Mage:</strong> If an opponent reveals alternative
+                threat avenues or circumvents your primary named restriction, target
+                your own <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Meddling Mage">Meddling Mage</a
+                > with Wave before initiating an immediate flicker loop. Upon re-entering,
+                Mage permits declaring an entirely new target name tailored to the
+                evolving board state.
             </li>
             <li style="margin-bottom: 1rem;">
-                <strong>Creature Protection:</strong> This trick only requires the
-                Wave. You can use Parallax Wave as a "safe house" for your Mages or
-                Angels in response to spot removal or a sweeper. Exile them yourself,
-                and let the Wave fade naturally later to bring them back completely
-                unharmed.
+                <strong>Creature Protection (Safe-Housing):</strong> Utilizing Wave
+                independently without Opalescence allows you to "safe-house" vulnerable
+                creatures like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Meddling Mage">Meddling Mage</a
+                > or <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Exalted Angel">Exalted Angel</a
+                > in response to opposing lethal sweepers or spot removal. Exiling
+                your own creatures shelters them until Wave naturally depletes its
+                fading counters later in the game, returning your clock unharmed.
             </li>
         </ul>
 
         <h3 style="margin-top: 2.5rem;">Asymmetrical Tsabo's Web</h3>
         <p>
-            The deck leverages Tsabo's Web to shut down problematic lands like
-            Rishadan Port, Wasteland, and Dust Bowl. The reason this card is
-            completely asymmetrical is that it only affects lands with activated
-            abilities that <em>don't</em> produce mana. All of our non-basic lands
-            (Skycloud Expanse, Adarkar Wastes, Ancient Tomb) only have mana abilities,
-            meaning they untap perfectly fine under the Web.
+            Competitive Replenish relies on <a
+                href="#"
+                class="card-hover"
+                data-card-name="Tsabo's Web">Tsabo's Web</a
+            > to paralyze disruptive opposing lands including <a
+                href="#"
+                class="card-hover"
+                data-card-name="Rishadan Port">Rishadan Port</a
+            >, <a href="#" class="card-hover" data-card-name="Wasteland"
+                >Wasteland</a
+            >, and <a href="#" class="card-hover" data-card-name="Dust Bowl"
+                >Dust Bowl</a
+            >. This restriction remains completely asymmetrical because Tsabo's
+            Web strictly targets lands possessing activated abilities that <em
+                >do not</em
+            > generate mana. All native non-basic filtering sources within our architecture
+            (<a href="#" class="card-hover" data-card-name="Skycloud Expanse"
+                >Skycloud Expanse</a
+            >, <a href="#" class="card-hover" data-card-name="Adarkar Wastes"
+                >Adarkar Wastes</a
+            >, <a href="#" class="card-hover" data-card-name="Ancient Tomb"
+                >Ancient Tomb</a
+            >) exclusively carry mana-generating abilities, untapping
+            effortlessly under the lock.
         </p>
 
         <h3 style="margin-top: 2.5rem;">Frantic Search Mana Tricks</h3>
         <p>
-            Frantic Search isn't just a discard outlet; the "untap up to three
-            lands" clause enables several powerful mana tricks:
+            Beyond its role as a high-velocity discard engine, the untap clause
+            within <a
+                href="#"
+                class="card-hover"
+                data-card-name="Frantic Search">Frantic Search</a
+            > unlocks pivotal logistical combat mana tricks:
         </p>
         <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
             <li style="margin-bottom: 1rem;">
-                <strong>The 'Free' Discard:</strong> Because the spell untaps your
-                lands, it acts as a completely free way to dump combo pieces into
-                your graveyard on the turn you intend to "go off." Even better, if
-                one of the three lands you untap is an Ancient Tomb, it actually nets
-                you +1 mana. For example: tap three lands (including Tomb) to float
-                4 mana, spend 3 on Frantic Search, and untap those three lands. You
-                now have 1 floating + 4 from lands = 5 mana total on turn 3, giving
-                you enough to cast Replenish and still hold up interaction.
+                <strong>Netting Mana via Ancient Tomb:</strong> While Frantic Search
+                conventionally operates as a zero-net-cost discard mechanism, resolving
+                it when untapping <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Ancient Tomb">Ancient Tomb</a
+                > actively ramps mana production. For example, tapping three lands
+                (including Tomb) floats 4 mana; spending 3 on <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Frantic Search">Frantic Search</a
+                > leaves 1 mana floating before untapping those exact three lands.
+                You now command 5 available mana on turn three—enabling an immediate
+                <a href="#" class="card-hover" data-card-name="Replenish"
+                    >Replenish</a
+                > while preserving open interaction mana.
             </li>
             <li style="margin-bottom: 1rem;">
-                <strong>Beating Rishadan Port:</strong> If an opponent tries to tap
-                your land with Port during your upkeep, you can float the mana in
-                response, let the port trigger resolve and then cast Frantic Search
-                using that mana. The spell will untap the lands, effectively ignoring
-                the Port activation.
+                <strong>Bypassing Rishadan Port:</strong> When an opponent activates
+                <a href="#" class="card-hover" data-card-name="Rishadan Port"
+                    >Rishadan Port</a
+                > during your upkeep, float the targeted land's mana in response.
+                Following resolution, utilize that floating mana to cast <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Frantic Search">Frantic Search</a
+                >, immediately untapping your disrupted lands and neutralizing
+                their interactive tempo play.
             </li>
             <li style="margin-bottom: 1rem;">
-                <strong>Beating Tangle Wire:</strong> Similar to the Port trick, if
-                you have 3 mana sources, you can float all 3 mana in response to the
-                Tangle Wire tap trigger on your upkeep. Let the trigger resolve, tapping
-                your permanents. Then, use the 3 floating mana to cast Frantic Search,
-                untapping three of those lands.
+                <strong>Bypassing Tangle Wire Taxes:</strong> When confronting an
+                opposing <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Tangle Wire">Tangle Wire</a
+                > tap trigger during your upkeep, float all available mana across
+                your targeted lands in response. Permit the tap trigger to resolve,
+                exhausting your board state, and then immediately expend the floating
+                mana on <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Frantic Search">Frantic Search</a
+                > to cleanly re-untap three core lands for main-phase execution.
             </li>
         </ul>
 
         <h3 style="margin-top: 2.5rem;">Attunement's Built-in Protection</h3>
         <p>
-            The ability of Attunement reads: "Return Attunement to its owner's
-            hand: Draw three cards, then discard four cards." Because returning
-            it to your hand is the <em>cost</em> to activate the ability (and not
-            the effect), you can always activate it in response to a Disenchant or
-            Seal of Cleansing. The Attunement immediately goes to your hand, dodging
-            the removal completely, and you still get your card filtering.
+            The activation syntax of <a
+                href="#"
+                class="card-hover"
+                data-card-name="Attunement">Attunement</a
+            > explicitly states: "Return Attunement to its owner's hand: Draw three
+            cards, then discard four cards." Because bouncing the enchantment back
+            to your hand represents the mandatory activation <em>cost</em> (rather
+            than an effect residing on the stack), you can freely activate it in immediate
+            response to inbound removal like <a
+                href="#"
+                class="card-hover"
+                data-card-name="Disenchant">Disenchant</a
+            > or an opposing <a
+                href="#"
+                class="card-hover"
+                data-card-name="Seal of Cleansing">Seal of Cleansing</a
+            >. Attunement immediately returns to safety in your
+            hand—invalidating their interaction spell completely while
+            guaranteeing full card-filtering velocity.
         </p>
     </Card>
+    <DecklistTooltip />
 </Layout>

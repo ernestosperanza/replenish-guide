@@ -17,8 +17,10 @@ const tableData = [
 ];
 ---
 
-<Layout title="Mulligan Guide - Replenish Guide"
-    description="Learn when to keep or mulligan your opening hand with the Replenish deck. Explore probability tables, mathematical frameworks, and real-world case studies for MTG Premodern.">
+<Layout
+    title="Mulligan Guide - Replenish Guide"
+    description="Learn when to keep or mulligan your opening hand with the Replenish deck. Explore probability tables, mathematical frameworks, and real-world case studies for MTG Premodern."
+>
     <PageHeader
         title="Mulligan Guide"
         description="Knowing when to keep and when to throw back your opening hand is one of the most difficult and rewarding skills with Replenish. Let's break down the math and the theory."
@@ -30,61 +32,184 @@ const tableData = [
 
     <Card title="Advanced Mulligan Theory (Post-Tide)" titleTag="h2">
         <p>
-            <strong>Reduced Topdeck Reliance:</strong> Following the banning of <a href="#" class="card-hover" data-card-name="Parallax Tide">Parallax Tide</a>, the deck transitioned from possessing eight autonomous hand-fixers to only four (<a href="#" class="card-hover" data-card-name="Attunement">Attunement</a>). Because your statistical probability of drawing out of an uncoordinated hand has literally halved, <strong>you are mathematically obligated to mulligan far more aggressively in Game 1 in the dark.</strong> You can no longer afford to retain slow, speculative starting hands and rely on perfect topdecks to bail you out.
+            <strong>Reduced Topdeck Reliance:</strong> Following the banning of <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Tide">Parallax Tide</a
+            >, the deck transitioned from possessing eight autonomous
+            hand-fixers to only four (<a
+                href="#"
+                class="card-hover"
+                data-card-name="Attunement">Attunement</a
+            >). Because your statistical probability of drawing out of an
+            uncoordinated hand has literally halved, <strong
+                >you are mathematically obligated to mulligan far more
+                aggressively in Game 1 in the dark.</strong
+            > You can no longer afford to retain slow, speculative starting hands
+            and rely on perfect topdecks to bail you out.
         </p>
         <p>
-            <strong>The Early-Turn Rule:</strong> When evaluating opening hands in the blind, a competitive pilot is willing to rely on topdecking exactly <em>one</em> specific operational element during early draw steps (such as hitting a third land drop or drawing an early interaction spell)—never more than one.
+            <strong>The Early-Turn Rule:</strong> When evaluating opening hands in
+            the blind, a competitive pilot is willing to rely on topdecking exactly
+            <em>one</em> specific operational element during early draw steps (such
+            as hitting a third land drop or drawing an early interaction spell)—never
+            more than one.
         </p>
         <p style="margin-bottom: 1.5rem;">
-            <strong>Minimum Keep Thresholds:</strong> A viable championship hand must guarantee functional mana delivery paired directly with either strong early interaction, an active selection engine, or a reliable tutor.
+            <strong>Minimum Keep Thresholds:</strong> A viable championship hand must
+            guarantee functional mana delivery paired directly with either strong
+            early interaction, an active selection engine, or a reliable tutor.
         </p>
 
-        <h3 style="margin-top: 0; color: var(--w-color-success);">Keepable Architectures (Snap Keeps)</h3>
-        <p>Assuming functional colored mana production, standard keepable formations in the blind include:</p>
+        <h3 style="margin-top: 0; color: var(--w-color-success);">
+            Keepable Architectures (Snap Keeps)
+        </h3>
+        <p>
+            Assuming functional colored mana production, standard keepable
+            formations in the blind include:
+        </p>
         <ul style="padding-left: 1.25rem; margin-bottom: 2rem;">
             <li style="margin-bottom: 0.5rem;">
-                <strong>Active Engine:</strong> <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a> + lands. The absolute gold-standard opening, immediately filtering redundant draws and insulating resources against discard disruption.
+                <strong>Active Engine:</strong>
+                <a href="#" class="card-hover" data-card-name="Attunement"
+                    >Attunement</a
+                > + lands. The absolute gold-standard opening, immediately filtering
+                redundant draws and insulating resources against discard disruption.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Natural Combo In Hand:</strong> <a href="#" class="card-hover" data-card-name="Opalescence">Opalescence</a> + <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a>.
+                <strong>Natural Combo In Hand:</strong>
+                <a href="#" class="card-hover" data-card-name="Opalescence"
+                    >Opalescence</a
+                > + <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Parallax Wave">Parallax Wave</a
+                >.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Tutor + Key Piece:</strong> <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a> + any foundational component (Opal, Wave, or Replenish). Intuition reliably locates whatever missing link remains, fully justifying its turn-three investment.
+                <strong>Tutor + Key Piece:</strong>
+                <a href="#" class="card-hover" data-card-name="Intuition"
+                    >Intuition</a
+                > + any foundational component (Opal, Wave, or Replenish). Intuition
+                reliably locates whatever missing link remains, fully justifying its
+                turn-three investment.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Dual Interaction + Setup:</strong> <a href="#" class="card-hover" data-card-name="Mana Leak">Mana Leak</a> + at least 2 interaction pieces (<a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a>, <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a>). Buys critical operational time to locate selection engines naturally.
+                <strong>Dual Interaction + Setup:</strong>
+                <a href="#" class="card-hover" data-card-name="Mana Leak"
+                    >Mana Leak</a
+                > + at least 2 interaction pieces (<a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Swords to Plowshares"
+                    >Swords to Plowshares</a
+                >, <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Seal of Cleansing">Seal of Cleansing</a
+                >). Buys critical operational time to locate selection engines
+                naturally.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Interaction + Discard Engine:</strong> <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> + <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a> + an expensive permanent to dump into the graveyard (Opal, Wave, or Decree).
+                <strong>Interaction + Discard Engine:</strong>
+                <a href="#" class="card-hover" data-card-name="Replenish"
+                    >Replenish</a
+                > + <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Frantic Search">Frantic Search</a
+                > + an expensive permanent to dump into the graveyard (Opal, Wave,
+                or Decree).
             </li>
             <li>
-                <strong>Early Board Control:</strong> <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a> + <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a>.
+                <strong>Early Board Control:</strong>
+                <a href="#" class="card-hover" data-card-name="Parallax Wave"
+                    >Parallax Wave</a
+                > + <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Seal of Cleansing">Seal of Cleansing</a
+                >.
             </li>
         </ul>
 
-        <div style="background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: 1.25rem; margin-bottom: 2.5rem;">
-            <h4 style="margin-top: 0; color: var(--w-color-primary-10);">The Ancient Tomb Acceleration Factor</h4>
+        <div
+            style="background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: 1.25rem; margin-bottom: 2.5rem;"
+        >
+            <h4 style="margin-top: 0; color: var(--w-color-primary-10);">
+                The Ancient Tomb Acceleration Factor
+            </h4>
             <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                <a href="#" class="card-hover" data-card-name="Ancient Tomb">Ancient Tomb</a> dramatically accelerates game-plan pacing, transforming otherwise sluggish combinations into automatic, tier-1 operational keeps. Consider the following <strong>automatic keeps</strong> whenever Ancient Tomb anchors your starting mana:
+                <a href="#" class="card-hover" data-card-name="Ancient Tomb"
+                    >Ancient Tomb</a
+                > dramatically accelerates game-plan pacing, transforming otherwise
+                sluggish combinations into automatic, tier-1 operational keeps. Consider
+                the following <strong>automatic keeps</strong> whenever Ancient Tomb
+                anchors your starting mana:
             </p>
             <ul style="padding-left: 1.25rem; margin-bottom: 0;">
-                <li style="margin-bottom: 0.35rem;"><code>Swords to Plowshares</code> + <code>Intuition</code> + <code>Ancient Tomb</code></li>
-                <li style="margin-bottom: 0.35rem;"><code>Frantic Search</code> + <code>Intuition</code> + <code>Ancient Tomb</code></li>
-                <li><code>Mana Leak</code> + <code>Intuition</code> + <code>Ancient Tomb</code></li>
+                <li style="margin-bottom: 0.35rem;">
+                    <code>Swords to Plowshares</code> + <code>Intuition</code> + <code
+                        >Ancient Tomb</code>
+                </li>
+                <li style="margin-bottom: 0.35rem;">
+                    <code>Frantic Search</code> + <code>Intuition</code> + <code
+                        >Ancient Tomb</code>
+                </li>
+                <li>
+                    <code>Mana Leak</code> + <code>Intuition</code> + <code
+                        >Ancient Tomb</code>
+                </li>
             </ul>
         </div>
 
-        <h3 style="margin-top: 0; color: var(--w-color-danger);">Blind Mulligan Traps (Unviable Starts)</h3>
-        <p>A competitive pilot aggressively folds the following structured traps when evaluating in the dark:</p>
+        <h3 style="margin-top: 0; color: var(--w-color-danger);">
+            Blind Mulligan Traps (Unviable Starts)
+        </h3>
+        <p>
+            A competitive pilot aggressively folds the following structured
+            traps when evaluating in the dark:
+        </p>
         <ul style="padding-left: 1.25rem; margin-bottom: 1rem;">
             <li style="margin-bottom: 0.5rem;">
-                <strong>The Passive Hand (No Interaction or Engine):</strong> 4 Lands + <a href="#" class="card-hover" data-card-name="Opalescence">Opalescence</a> + <a href="#" class="card-hover" data-card-name="Decree of Silence">Decree of Silence</a> + <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a>. Requires too many speculative, consecutive topdeck alignments to execute anything proactive before falling fatally behind.
+                <strong>The Passive Hand (No Interaction or Engine):</strong> 4 Lands
+                + <a href="#" class="card-hover" data-card-name="Opalescence"
+                    >Opalescence</a
+                > + <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Decree of Silence">Decree of Silence</a
+                > + <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Seal of Cleansing">Seal of Cleansing</a
+                >. Requires too many speculative, consecutive topdeck alignments
+                to execute anything proactive before falling fatally behind.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>The Partial Resource Trap:</strong> 5 Lands + 2 spot interaction spells. Presents an exceptionally high statistical probability of drawing uncastable, redundant combo weights (Opal, Replenish, Decree) without any mechanism to discard them or accelerate their development, losing inevitable attrition games.
+                <strong>The Partial Resource Trap:</strong> 5 Lands + 2 spot interaction
+                spells. Presents an exceptionally high statistical probability of
+                drawing uncastable, redundant combo weights (Opal, Replenish, Decree)
+                without any mechanism to discard them or accelerate their development,
+                losing inevitable attrition games.
             </li>
             <li>
-                <strong>Orphaned Combo Pieces:</strong> Holding <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> without an active enabling engine (<a href="#" class="card-hover" data-card-name="Attunement">Attunement</a>, <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a>, or <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a>). Replenish is strictly dead weight during early sequences when uncoupled from graveyard preparation.
+                <strong>Orphaned Combo Pieces:</strong> Holding <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                > without an active enabling engine (<a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Attunement">Attunement</a
+                >, <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Frantic Search">Frantic Search</a
+                >, or <a href="#" class="card-hover" data-card-name="Intuition"
+                    >Intuition</a
+                >). Replenish is strictly dead weight during early sequences
+                when uncoupled from graveyard preparation.
             </li>
         </ul>
 

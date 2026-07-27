@@ -1,6 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
+import DecklistTooltip from "@components/DecklistTooltip.astro";
 import { Card } from "webcoreui/astro";
 ---
 
@@ -16,84 +17,48 @@ import { Card } from "webcoreui/astro";
     />
     <Card title="General Heuristics" titleTag="h2">
         <p>
-            Timing is everything. Because Intuition is an instant, you almost
-            always want to cast it on your opponent's end step. This lets you
-            untap with all your mana available to slam a Replenish or hold up
-            interaction on your turn, giving your opponent a much smaller window
-            to react. This also gives you more information to make better
-            decisions, and that is always good.
+            Timing is everything. Because <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a> is an instant, you almost always want to cast it on your opponent's end step. This lets you untap with full mana available to resolve a lethal <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> or preserve interaction on your turn, granting your opponent a drastically compressed tactical window to react while gathering maximum information before committing.
         </p>
         <p>
-            Dealing with incomplete piles requires creativity—if you desperately
-            need a Swords to Plowshares, but you've already drawn one and only
-            have two left in your library, you'll need to build a hybrid pile
-            like Swords + Swords + Parallax Wave. Always keep track of what's
-            left in your deck so you don't cast Intuition only to realize you
-            can't fetch three of a kind.
+            Navigating incomplete piles demands adaptability—if you desperately require a <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a>, but have already drawn one with only two remaining in your library, construct a hybrid defensive structure such as Swords + Swords + <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a>. Maintain strict mental tracking of remaining library allocations so you never cast Intuition only to discover you cannot assemble a three-of-a-kind guarantee.
         </p>
         <p>
-            Finally, when playing through graveyard hate like Tormod's Crypt or
-            Planar Void post-sideboard, Intuition stops being your combo setup
-            tool and immediately pivots to being your best out for finding
-            answers (like fetching 3 copies of Seal of Cleansing to clear the
-            hate before filling the graveyard).
+            Finally, when fighting through permanent graveyard disruption like <a href="#" class="card-hover" data-card-name="Tormod's Crypt">Tormod's Crypt</a> or <a href="#" class="card-hover" data-card-name="Planar Void">Planar Void</a> post-sideboard, Intuition ceases functioning as a combo engine setup and immediately pivots into your ultimate removal tutor—searching for three copies of <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> to cleanly dismantle opposing hate prior to reloading your graveyard.
         </p>
     </Card>
 
     <Card title="Common Scenarios & Piles" titleTag="h2">
-        <p>Here are the most common scenarios and how to navigate them:</p>
+        <p>Below are primary championship configurations and strategic navigation heuristics:</p>
 
         <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
             <li style="margin-bottom: 1rem;">
                 <strong>Dumping Combo Pieces:</strong><br />
-                The primary use. You can use it to fetch the exact enchantments you
-                need into the graveyard. This is perfect when you keep a hand with
-                Replenish plus a discard outlet (like Attunement or Frantic Search).
-                <em>Crucial Note:</em> Since the opponent chooses which card goes
-                to your hand, if you absolutely want a specific enchantment in the
-                graveyard, you must pick at least two copies of it in your pile.<br
-                />
-                <strong>Examples:</strong> Opal + Decree + Wave, Opal + Opal + Wave,
-                Opal + Opal + Decree, Wave x3 (against aggro).
+                The primary operational sequence. Use Intuition to deposit precise foundational enchantments directly into your graveyard—an ideal play when holding <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> paired with an active discard engine (<a href="#" class="card-hover" data-card-name="Attunement">Attunement</a> or <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a>).<br />
+                <em>Crucial Heuristic:</em> Because the opponent selects which card enters your hand, if an enchantment absolutely must reach the graveyard immediately, your pile must include at least two copies of it.<br />
+                <strong>Standard Configurations:</strong> Opal + Decree + Wave, Opal + Opal + Wave, Opal + Opal + Decree, or Wave x3 (against explosive aggro).
             </li>
             <li style="margin-bottom: 1rem;">
-                <strong
-                    >Tutoring Removal (Swords to Plowshares or Seal of
-                    Cleansing):</strong
-                ><br />
-                Used when you face an immediate, game-ending threat. Getting Seal
-                of Cleansing is slightly better than Swords because you can always
-                bring the discarded Seals back to the battlefield later with a Replenish.<br
-                />
-                <strong>Examples:</strong> Swords to Plowshares x3, Seal of Cleansing
-                x3.
+                <strong>Tutoring Removal (<a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a> or <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a>):</strong><br />
+                Deployed when confronting lethal on-board threat clocks. Searching for <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> yields higher systemic synergy than Swords because discarded Seals naturally reanimate to the battlefield upon revolving your next <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a>.<br />
+                <strong>Standard Configurations:</strong> <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a> x3, <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> x3.
             </li>
             <li style="margin-bottom: 1rem;">
                 <strong>Guaranteeing Land Drops:</strong><br />
-                You can search for 3 lands to fix your colors, guarantee you don't
-                miss a critical land drop, or even accelerate your mana a turn early
-                by grabbing 3 Ancient Tombs. It's a less frequent play, but highly
-                impactful when you need it.<br />
-                <strong>Examples:</strong> Ancient Tomb x3, Skycloud expanse x3, Plains
-                x3.
+                Search for three lands to guarantee continuous colored mana development, ensure critical land drops on schedule, or proactively accelerate mana production by grabbing three copies of <a href="#" class="card-hover" data-card-name="Ancient Tomb">Ancient Tomb</a>. While utilized less frequently, it prevents fatal developmental stumbles.<br />
+                <strong>Standard Configurations:</strong> <a href="#" class="card-hover" data-card-name="Ancient Tomb">Ancient Tomb</a> x3, <a href="#" class="card-hover" data-card-name="Skycloud Expanse">Skycloud Expanse</a> x3, <a href="#" class="card-hover" data-card-name="Plains">Plains</a> x3.
             </li>
             <li style="margin-bottom: 1rem;">
-                <strong>Finding a Discard Outlet:</strong><br />
-                When you have all the combo pieces and Replenish in your hand but
-                no way to discard them, you can Intuition for 3 Frantic Searches or
-                3 Attunements.
-                <em>Note:</em> Grabbing 3 Attunements is a very slow, mana-intensive
-                play, so make sure you have the time to execute it.<br />
-                <strong>Examples:</strong> Frantic Search x3, Attunement x3.
+                <strong>Finding a Discard Engine:</strong><br />
+                When retaining complete combo redundancy plus <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> in hand without an operational discard outlet, utilize Intuition to secure immediate card selection engines.<br />
+                <em>Note:</em> Grabbing three copies of <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a> requires substantial mana commitments across subsequent turns, so verify sufficient developmental time before opting out of instantaneous instant-speed cantrips.<br />
+                <strong>Standard Configurations:</strong> <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a> x3, <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a> x3.
             </li>
             <li style="margin-bottom: 1rem;">
                 <strong>Finding Sideboard Silver Bullets:</strong><br />
-                You can fetch 3 copies of a key sideboard card—like Meddling Mage
-                or Abeyance—to stop an opposing combo or fight through the mirror
-                match.<br />
-                <strong>Examples:</strong> Meddling Mage x3, Abeyance x3, Tsabo's
-                web x3.
+                Fetch three exact copies of a meta-breaking sideboard tool to paralyze opposing combo engines, dismantle countermagic, or dominate mirror interactions.<br />
+                <strong>Standard Configurations:</strong> <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a> x3, <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a> x3, <a href="#" class="card-hover" data-card-name="Tsabo's Web">Tsabo's Web</a> x3.
             </li>
         </ul>
     </Card>
+    <DecklistTooltip />
 </Layout>
