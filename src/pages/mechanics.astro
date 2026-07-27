@@ -30,7 +30,14 @@ import { Card } from "webcoreui/astro";
             to target Wave itself. Wave exits and immediately returns with five fresh
             fading counters as a brand-new object. Subsequently, the original exile
             triggers resolve on the stack, eradicating those targets permanently.
-            Repeat this sequence until the opposing battlefield is cleared.
+            Repeat this sequence until the opposing battlefield is cleared. For
+            exhaustive stack physics, timestamp layering, and formal rules
+            treatises on Opal-Wave loops, consult the mathematical breakdowns
+            and video tutorials curated in our <a
+                href="/conclusion"
+                style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                >Conclusion & Resources</a
+            > chapter.
         </p>
         <p>
             <strong>Combat Sequencing:</strong> A mechanical consequence of this loop
@@ -126,26 +133,58 @@ import { Card } from "webcoreui/astro";
     <Card title="Board Protection & Stack Interactions" titleTag="h2">
         <h3 style="margin-top: 0;">Protecting Your Board</h3>
         <p>
-            If an opponent resolves mass sweeping removal such as <a
-                href="#"
-                class="card-hover"
-                data-card-name="Tranquil Domain">Tranquil Domain</a
-            > or <a href="#" class="card-hover" data-card-name="Wrath of God"
-                >Wrath of God</a
-            >, retain priority while <a
-                href="#"
-                class="card-hover"
-                data-card-name="Opalescence">Opalescence</a
-            > is active to exile your own critical enchantment creatures via <a
-                href="#"
-                class="card-hover"
-                data-card-name="Parallax Wave">Parallax Wave</a
-            >. As the sweeper resolves and destroys Wave, all exiled permanents
-            safely re-enter completely refreshed. Similarly, when controlling
-            dual Opalescence instances against targeted interaction, simply
-            activating Wave to flicker the targeted copy invalidates the inbound
-            removal spell.
+            When confronting mass removal, your self-protection mechanics differ
+            significantly depending on whether the sweeper targets creatures or
+            enchantments:
         </p>
+        <ul style="padding-left: 1.25rem; margin-bottom: 0;">
+            <li style="margin-bottom: 1rem;">
+                <strong>Creature Sweepers (Wrath of God):</strong> Against a
+                creature wipe like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Wrath of God">Wrath of God</a
+                >, a single active <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Opalescence">Opalescence</a
+                > is sufficient. Because Opalescence does not animate itself,
+                Wrath threatens only your animated enchantments. Retain priority
+                to exile your own vulnerable team via <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Parallax Wave">Parallax Wave</a
+                >; when the sweeper resolves and destroys Wave, your exiled
+                permanents re-enter completely refreshed alongside the untouched
+                Opalescence.
+            </li>
+            <li style="margin-bottom: 0;">
+                <strong>Enchantment Sweepers (Tranquil Domain):</strong>
+                Surviving a global enchantment sweeper such as <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Tranquil Domain">Tranquil Domain</a
+                > strictly requires controlling <strong>two copies</strong> of <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Opalescence">Opalescence</a
+                >. If you control only a single Opalescence and target it with
+                Wave to save it, its leaves-play transition instantly strips
+                Wave's creature status—terminating your ability to chain further
+                loop activations or protect the remaining board before Tranquil
+                Domain eradicates everything. With two copies of Opalescence on
+                the table, exiling one still leaves the second operational to
+                keep Wave animated throughout the flicker sequence. Because
+                assembling dual Opalescence instances purely to dodge a sweeper
+                is logistically demanding, your overriding tactical imperative
+                against green decks fielding Tranquil Domain is to proactively
+                lock out the spell via <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Decree of Silence">Decree of Silence</a
+                > rather than relying on reactive Wave loops.
+            </li>
+        </ul>
 
         <h3 style="margin-top: 2.5rem;">Parallax Wave + Disenchant Effect</h3>
         <p style="margin-bottom: 0;">
@@ -296,7 +335,7 @@ import { Card } from "webcoreui/astro";
             </li>
         </ul>
 
-        <h3 style="margin-top: 0;">Attunement's Built-in Protection</h3>
+        <h3 style="margin-top: 2.5rem;">Attunement's Built-in Protection</h3>
         <p style="margin-bottom: 0;">
             The activation syntax of <a
                 href="#"
@@ -320,5 +359,4 @@ import { Card } from "webcoreui/astro";
         </p>
     </Card>
     <DecklistTooltip />
-</Layout>p />
 </Layout>
