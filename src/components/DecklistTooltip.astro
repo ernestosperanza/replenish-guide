@@ -58,6 +58,16 @@
             "Dust Bowl": "/src/assets/cards/lands/dust_bowl.jpg",
             "Tangle Wire": "/src/assets/cards/artifacts/tangle_wire.jpg",
             "Planar Void": "/src/assets/cards/enchantments/planar_void.jpg",
+            "Foil": "/src/assets/cards/instants/foil.jpg",
+            "Thwart": "/src/assets/cards/instants/thwart.jpg",
+            "Mana Short": "/src/assets/cards/instants/mana_short.jpg",
+            "Alter Reality": "/src/assets/cards/instants/alter_reality.jpg",
+            "Llanowar Elves": "/src/assets/cards/creatures/llanowar_elves.jpg",
+            "Dystopia": "/src/assets/cards/enchantments/dystopia.jpg",
+            "Sacred Ground": "/src/assets/cards/enchantments/sacred_ground.jpg",
+            "Divert": "/src/assets/cards/instants/divert.jpg",
+            "Nimble Mongoose": "/src/assets/cards/creatures/nimble_mongoose.jpg",
+            "Brain Freeze": "/src/assets/cards/instants/brain_freeze.jpg",
             "Cursed Totem": "/src/assets/cards/artifacts/cursed_totem.jpg",
             "Daze": "/src/assets/cards/instants/daze.jpg",
             "Erase": "/src/assets/cards/instants/erase.jpg",
@@ -124,8 +134,9 @@
 
         // Function to find the oldest printing URL
         const fetchOldestImageUrl = async (cardName: string) => {
-            if (localImages[cardName]) {
-                const path = localImages[cardName];
+            const exactKey = Object.keys(localImages).find(k => k.toLowerCase() === cardName.toLowerCase());
+            if (exactKey && localImages[exactKey]) {
+                const path = localImages[exactKey];
                 return assetUrls[path] || path;
             }
             if (imageCache.has(cardName)) return imageCache.get(cardName);
