@@ -1,0 +1,207 @@
+---
+import Layout from "@components/Layout.astro";
+import PageHeader from "@components/PageHeader.astro";
+import CardAnalysis from "@components/CardAnalysis.astro";
+import { Card, Alert } from "webcoreui/astro";
+import DecklistTooltip from "@components/DecklistTooltip.astro";
+---
+
+<Layout title="Playing Through Hate - Replenish Guide">
+    <PageHeader
+        title="Playing Through Hate"
+        description="Mastering post-sideboard matches requires understanding how to navigate around targeted opposing interaction. You do not need an explicit answer to every sideboard threat; rather, winning Games 2 and 3 relies on altering your sequencing, timing your stack triggers, and executing disciplined counterplay."
+        imageSrc="/src/assets/banners/decree.jpeg"
+        imageAlt="Decree of Silence"
+        imageCaption="Navigating Tournament Disruption"
+        isCard={true}
+    />
+
+    <Card title="Graveyard Interference" titleTag="h2">
+        <p style="margin-bottom: 1.5rem;">
+            Because Replenish relies heavily on the graveyard to cheat massive mana costs, opponents will inevitably present graveyard disruption in post-board games. The secret to defeating graveyard hate is simple: never commit critical resources blindly without an immediate win condition on the stack or in hand.
+        </p>
+
+        <CardAnalysis
+            title="Withered Wretch"
+            image="creatures/withered_wretch.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>(Black Aggro, The Rock):</strong> Wretch is exceptionally dangerous because its graveyard exile activation is repeatable, instant-speed, and attached to an aggressive creature body that clocks your life total.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> When playing against black midrange or aggro, strictly preserve your copies of Swords to Plowshares specifically for Withered Wretch. Do not waste interaction on redundant aggressive beaters like Jackal Pup or Llanowar Elves if doing so leaves you helpless against a Wretch. Prioritize removing it before activating card selection engines or committing enchantments to your graveyard.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Tormod's Crypt"
+            image="artifacts/tormods_crypt.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Universal Exile:</strong> The simplest physical answer to an early Tormod's Crypt is destroying it with Seal of Cleansing or Disenchant before initiating a combo loop. However, relying purely on finding removal is undisciplined; knowing how to out-sequence Crypt on the stack is a foundational Replenish skill.
+            </p>
+            <p>
+                <strong>The Stack Trick:</strong> Against an active Crypt on the battlefield, do not blindly dump your entire hand into your graveyard. Instead, maintain an active Attunement on the table while retaining your winning combo pieces in hand. With a moderate, tempting graveyard (just enough value to bait activation), cast Replenish. When your opponent sacrifices Crypt in response to purge your existing yard, Replenish remains sitting on the stack. Still in response to your own Replenish, activate your Attunement to dump a fresh hand of combo enchantments into your newly cleared graveyard. Replenish resolves instantly thereafter, returning everything you just discarded.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Phyrexian Furnace"
+            image="artifacts/phyrexian_furnace.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Incremental Attrition:</strong> Unlike Tormod's Crypt, Phyrexian Furnace exiles only one card at a time via targeted sacrifice or random tap activations.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Never commit your combo enchantments to the graveyard gradually over several turns—this simply invites your opponent to snipe key lock pieces one by one. Instead, execute your setup explosively in a single turn via Frantic Search or Intuition immediately before casting Replenish. By overwhelming their single targeted exile activation on the stack, they can capture at most one card while the rest of your architecture returns to end the game.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Haunting Echoes"
+            image="sorceries/haunting_echoes.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Graveyard & Library Extraction:</strong> The supreme terminal hate piece of Black-based control shells and Psychatog variants. Resolving a five-mana Haunting Echoes obliterates your accumulated graveyard while scouring your entire library of all namesake copies, completely disabling your combo architecture.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Because Haunting Echoes is a heavy five-mana sorcery, opponents are forced to tap down significantly during their own main phase to deploy it. Preserve cheap blue countermagic (Mana Leak, Counterspell, Arcane Denial) specifically for their fifth mana threshold, or proactively lock out the spell via Meddling Mage in Games 2 and 3. Avoid passively building an overflowing graveyard against five-mana black control pools without an immediate plan to execute Replenish on your own turn.
+            </p>
+        </CardAnalysis>
+    </Card>
+
+    <Card title="Enchantment Sweepers & Removal" titleTag="h2">
+        <p style="margin-bottom: 1.5rem;">
+            When opponents fail to attack your graveyard, they frequently overload on reactive anti-enchantment removal to dismantle your engines once they reach the battlefield.
+        </p>
+
+        <CardAnalysis
+            title="Tranquil Domain / Naturalize"
+            image="instants/tranquil_domain.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Instant-Speed Destruction:</strong> Traditional green answers aimed at destroying your lock pieces as they are cast or attacking your established board during combat or end steps.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Decree of Silence serves as the premier overarching defense: returning Decree alongside your combo forces the opponent to exhaust three spells just to break through the automatic counter shielding. Furthermore, under an active Opal-Wave engine, you can activate Parallax Wave targeting your own vulnerable enchantments in response to removal; once the stack clears and Wave triggers, your board returns unharmed and refreshed. Finally, transitioning into our post-sideboard creature package (Exalted Angel) completely invalidates opposing naturalize suites by presenting lethal damage from non-enchantment sources.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Scour"
+            image="instants/scour.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Surgical Eradiability:</strong> Primarily fielded by blue-white control sideboards utilizing Invasion-block removal suites, Scour threatens to destroy an enchantment on the battlefield and permanently exile all corresponding copies across your hand, library, and graveyard. A single resolved Scour targeting Opalescence or Parallax Wave can dismantle your foundational win condition for the rest of the match.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Never deploy an unprotected engine enchantment against open four-mana white suites post-sideboard without permission or a defensive plan. Most importantly, when initiating an Opal-Wave loop, maintain active fading counters on your Parallax Wave so you can instantly exile your own enchantments in response to Scour targeting them on the stack. If the target leaves the battlefield before resolution, Scour completely fizzles and zero copies are exiled.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Anarchy"
+            image="sorceries/anarchy.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Red Sweeper & Color Hate:</strong> Aggressive red architectures (Sligh, RG Ponza, Goblins) consistently side in Anarchy to destroy white stabilization engines like Sphere of Law, Exalted Angel, Meddling Mage, Opalescence, and Parallax Wave in a single sweeping blow.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Anarchy is a four-mana sorcery that destroys rather than exiles. First, proactively throttle their mana development via Tsabo's Web and Rishadan Port to keep them off four operational mana, or name it defensively with Meddling Mage. Second, recognize that because Anarchy sends all destroyed enchantments directly to your graveyard, retaining a backup copy of Replenish allows you to instantly reanimate your entire wiped board on your subsequent turn, turning an apparent catastrophe into immediate game-ending tempo.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Reverent Silence"
+            image="sorceries/reverent_silence.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Free Enchantment Sweeper:</strong> Utilized by Elves and green aggro-midrange builds as zero-mana interaction by having you gain 6 life as an alternate casting cost. While sweeping your entire enchantment board for zero mana can ruin early stabilization pieces like Sphere of Law or Attunement, the dynamic is deeply advantageous if planned correctly.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> As a sorcery, opponents are restricted to casting Reverent Silence during their main phase. During preliminary setup rounds, gladly accept the 6-life cushion; every destroyed enchantment lands directly in your graveyard, actively advancing your Replenish setup at zero card cost to you. Once your Opal-Wave engine is fully assembled, simply activate Parallax Wave in response to stack self-protection triggers, bringing your entire board back safely once Reverent Silence resolves.
+            </p>
+        </CardAnalysis>
+    </Card>
+
+    <Card title="Taxing Structures & Lockouts" titleTag="h2">
+        <p style="margin-bottom: 1.5rem;">
+            Static restriction permanents attempt to lock down your resource development or prevent your core engine loops from executing cleanly.
+        </p>
+
+        <CardAnalysis
+            title="Presence of the Master"
+            image="enchantments/presence_of_the_master.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>The Replenish Bypass:</strong> While imposing on paper against an enchantment archetype, Presence of the Master strictly counters enchantment spells that are <em>played</em> (cast from your hand). <strong>It does not intercept enchantments entering the battlefield via Replenish!</strong>
+            </p>
+            <p>
+                However, a resolved Presence prevents you from casting manual combo pieces or hardcasting answers like Seal of Cleansing. To navigate around it, focus entirely on sculpting a decisive graveyard and winning directly off a single Replenish, or rely on instant-speed removal like Disenchant and non-enchantment proactive threats like Meddling Mage and Exalted Angel.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Aura of Silence"
+            image="enchantments/aura_of_silence.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Tax & Threat Combination:</strong> Frequently sideboarded in White Weenie, BW Control, and Enchantress mirrors. Because it increases the casting cost of your artifacts and enchantments by two generic mana, deploying early ramp or hardcasting combo engines becomes agonizingly slow. Worse still, sitting openly on the battlefield, it represents an immediate sacrifice trigger to destroy whatever key enchantment you do manage to resolve.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> This interaction underscores precisely why our sideboard engineers a split between Seal of Cleansing and Disenchant. Disenchant remains a clean two-mana instant entirely immune to Aura's static tax. In attrition matchups where Aura hits the table early, concentrate your mana on resolving Attunement and Frantic Search to load the graveyard, then cast a multi-enchantment Replenish; a single sacrifice trigger cannot dismantle a complete Opal-Wave-Decree lock entering simultaneously.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Gloom"
+            image="matchups/moneyball/gloom.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Asymmetric Color Tax:</strong> Brought in by Black aggro, Suicide Black, and The Rock. By taxing all white spells and white enchantment activation costs by three generic mana, Gloom threatens to cripple Replenish, Swords to Plowshares, Opalescence, and Parallax Wave.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Fortunately, Gloom is strictly color-scoped to white. Your entire blue card-selection engine (Attunement, Frantic Search, Intuition, Deep Analysis) and blue permission suite (Mana Leak, Counterspell) function entirely unimpeded. Against heavily black fields, reserve early blue countermagic strictly for intercepting Gloom on the stack. If resolved, leverage sol lands (Ancient Tomb, City of Traitors) and artifact ramp to manually overcome the three-mana surcharge over extended games, or rely on blue bounce mechanics like Upheaval and cycling Decree of Silence.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Winter Orb"
+            image="artifacts/winter_orb.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>Mana Chokepoints:</strong> Featured heavily in Stasis, Merfolk, and aggressive tempo builds. Because Replenish operates around a critical three- and four-mana spell curve, restricted untap steps severely constrain your operational bandwidth and setup speed.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Prioritize removing Winter Orb immediately with Seal of Cleansing or instant-speed Disenchant. In game lines where Orb persists, sol lands like Ancient Tomb provide immense tactical leverage by generating two mana off a single untap step. Most importantly, remember that Frantic Search functions as an extraordinary burst untapper under Winter Orb: tap all available lands for mana before casting Search, then untap three lands upon resolution to suddenly generate a massive mana pool during a choked turn.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Cursed Totem"
+            image="artifacts/cursed_totem.jpg"
+        >
+            <p style="margin-top: 0;">
+                <strong>The Opalescence Lockout:</strong> A subtle and deceptively dangerous sideboard artifact. On an empty board or during standard setup phases, Cursed Totem has zero interaction with normal enchantments. However, <strong>the instant Opalescence enters the battlefield, all of your non-Aura enchantments transform into creatures.</strong>
+            </p>
+            <p>
+                Under Opalescence and Cursed Totem simultaneously, Parallax Wave, Attunement, and Seal of Cleansing are strictly considered creatures with activated abilities—meaning Cursed Totem completely disables their activation loops! To circumvent this critical gotcha, always utilize Seal of Cleansing or instant-speed Disenchant to destroy Cursed Totem <em>before</em> deploying Opalescence onto the battlefield.
+            </p>
+        </CardAnalysis>
+    </Card>
+
+    <Card title="Proactive Creature Interference" titleTag="h2">
+        <CardAnalysis
+            title="Meddling Mage"
+            image="creatures/meddling_mage.webp"
+        >
+            <p style="margin-top: 0;">
+                <strong>Precision Bottlenecks:</strong> Opponents fielding blue-white builds (UW Landstill, mirrors) frequently introduce Meddling Mage post-board to lock down your namesake Replenish or foundational combo engines like Parallax Wave.
+            </p>
+            <p>
+                <strong>Counterplay:</strong> Maintain vigilant situational awareness regarding which opponent archetypes have access to white and blue mana after Games 1. When anticipating opposing Mages, deliberately retain spot removal suite representation (leaving in 1–2 copies of Swords to Plowshares or Parallax Wave). A single Meddling Mage represents a temporary hurdle rather than a hard lockout if you construct your sideboard transitions to expect it.
+            </p>
+        </CardAnalysis>
+    </Card>
+    <DecklistTooltip />
+</Layout>

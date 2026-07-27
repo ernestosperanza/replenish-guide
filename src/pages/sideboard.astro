@@ -3,6 +3,7 @@ import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 import { Card } from "webcoreui/astro";
+import DecklistTooltip from "@components/DecklistTooltip.astro";
 ---
 
 <Layout title="Sideboard Analysis - Replenish Guide">
@@ -14,104 +15,183 @@ import { Card } from "webcoreui/astro";
         isCard={true}
     />
 
-    <Card title="The Sculpting Method" titleTag="h2">
+    <Card title="The Sculpting Methodology" titleTag="h2">
         <p>
-            I use this process before every tournament to finalize my 75. Start
-            with a pool of 85-90 cards that you think could work in the deck,
-            then carve away what doesn't fit the expected field.
+            A disciplined tournament pilot relies on a systematic methodology
+            before every regional or competitive championship to finalize their
+            75. Rather than constructing a sideboard from scratch on tournament
+            morning, begin with a master pool of 85–90 proven cards, then
+            analytically carve away options that do not align with expected
+            local metagame concentrations.
         </p>
         <ol style="padding-left: 1.25rem;">
-            <li>
-                <strong>Start Broad.</strong> 85–90 cards including variants and bullets.
+            <li style="margin-bottom: 0.35rem;">
+                <strong>Start Broad:</strong> Maintain an expansive candidate pool
+                of 85–90 cards, encompassing archetype variants and specific bullet
+                interaction.
+            </li>
+            <li style="margin-bottom: 0.35rem;">
+                <strong>Assess the Metagame:</strong> Heavy red and aggressive tribal
+                fields demand sweeping board control (<a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Wrath of God">Wrath of God</a
+                >, <a href="#" class="card-hover" data-card-name="Sphere of Law"
+                    >Sphere of Law</a
+                >). Permission-saturated blue tables necessitate mana taxing (<a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Defense Grid">Defense Grid</a
+                >) and robust midrange threat structures.
+            </li>
+            <li style="margin-bottom: 0.35rem;">
+                <strong>Prioritize Utility Slots:</strong> Rank flex options by standalone
+                power level and multi-matchup application.
+            </li>
+            <li style="margin-bottom: 0.35rem;">
+                <strong>Cut Strategically:</strong> Eliminate targeted bullets that
+                fail to actively serve across at least two major matchup profiles.
+            </li>
+            <li style="margin-bottom: 0.35rem;">
+                <strong>Finalize Transformative Packages:</strong> Deploy post-board
+                pivot strategies only when they invert undesirable Game 1 dynamics
+                across multiple foundational archetypes.
             </li>
             <li>
-                <strong>Assess the Meta.</strong> Goblins heavy? Wraths. Blue heavy?
-                Grids and creatures.
-            </li>
-            <li>
-                <strong>Prioritize Slots.</strong> Rank flex cards by standalone value
-                and field impact.
-            </li>
-            <li>
-                <strong>Cut Strategically.</strong> Remove cards that don’t serve
-                at least two matchups.
-            </li>
-            <li>
-                <strong>Finalize Sideboard.</strong> Transformative packages only
-                if they address multiple matchups.
-            </li>
-            <li>
-                <strong>Main vs. Side.</strong> Placement based on expected frequency.
+                <strong>Main vs. Side Positioning:</strong> Assign final positions
+                based on mathematical expected matchup frequencies.
             </li>
         </ol>
-        <p>
-            <strong>The Creature Sideboard Package:</strong> Angel and Mage let you
-            transform into a midrange deck after sideboarding. Your opponents face
-            a bad choice: keep their enchantment hate and risk losing to creature
-            beatdown, or cut it and risk losing to the combo. Either way their draws
-            get worse.
+        <p style="margin-top: 1rem; margin-bottom: 0;">
+            <strong>The Creature Sideboard Package:</strong> Incorporating <a
+                href="#"
+                class="card-hover"
+                data-card-name="Exalted Angel">Exalted Angel</a
+            > and <a href="#" class="card-hover" data-card-name="Meddling Mage"
+                >Meddling Mage</a
+            > enables an aggressive, high-efficiency midrange transformation after
+            sideboarding. This places opponents in an untenable structural bind: if
+            they retain heavy anti-enchantment and graveyard hate, they succumb quickly
+            to aerial beatdowns; if they dilute their hate to respect creatures, they
+            are overrun by the namesake combo.
         </p>
     </Card>
 
     <Card title="Sideboarding Principles" titleTag="h2">
-        <h3>Transformation Against Control</h3>
+        <h3 style="margin-top: 0;">Transformation Against Control</h3>
         <p>
-            Against blue permission decks, you become a different deck. Frantic,
-            Wave, Intuition, excess Swords all come out. Grid, Angels, Abeyance,
-            Denial, fourth Mage go in. You're a midrange threat deck. If they
-            sideboard to fight enchantments, they face Angels and Mages. If they
-            respect the creatures, they face Replenish.
+            Against heavy blue permission archetypes, the deck seamlessly
+            transitions its primary identity. Velocity engines like <a
+                href="#"
+                class="card-hover"
+                data-card-name="Frantic Search">Frantic Search</a
+            >, reactive lock pieces like <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            >, and excess spot removal exit the 75. In their place, <a
+                href="#"
+                class="card-hover"
+                data-card-name="Defense Grid">Defense Grid</a
+            >, <a href="#" class="card-hover" data-card-name="Exalted Angel"
+                >Exalted Angel</a
+            >, <a href="#" class="card-hover" data-card-name="Abeyance"
+                >Abeyance</a
+            >, <a href="#" class="card-hover" data-card-name="Arcane Denial"
+                >Arcane Denial</a
+            >, and full rosters of <a
+                href="#"
+                class="card-hover"
+                data-card-name="Meddling Mage">Meddling Mage</a
+            > take over. Operating as a proactive midrange beatdown deck completely
+            invalidates traditional control post-board logic.
         </p>
 
-        <h3>Keeping Combo Against Aggro</h3>
+        <h3>Maintaining the Combo Against Aggression</h3>
         <p>
-            Against aggro the combo stays in. You swap interaction pieces. Seals
-            come out when there aren't relevant targets.
+            When pairing against linear aggressive builds, the primary combo
+            engine remains completely intact to facilitate an explosive race.
+            Swap situational interaction slots; specifically, trim <a
+                href="#"
+                class="card-hover"
+                data-card-name="Seal of Cleansing">Seal of Cleansing</a
+            > whenever opponents lack relevant enchantment or artifact targets.
         </p>
 
-        <h3>Mage Exits Against Green</h3>
+        <h3>Retiring Mages Against Green and Midrange</h3>
         <p>
-            Against Rock, Ponza, and Terrageddon, Mages come out. Their
-            creatures outclass a 2/2 and they don't depend on single spells Mage
-            can name. Angels replace them.
+            Against heavy green midrange formations and attrition suites (e.g.,
+            The Rock, RG Ponza, Terrageddon), <a
+                href="#"
+                class="card-hover"
+                data-card-name="Meddling Mage">Meddling Mage</a
+            > exits the formation. Opposing creature curves consistently outclass
+            a 2/2 body, and their strategy rarely bottlenecks upon a single named
+            spell. Transition into <a
+                href="#"
+                class="card-hover"
+                data-card-name="Exalted Angel">Exalted Angel</a
+            > to dominate combat math and life-point races.
         </p>
 
-        <h3>Exalted Angel Is the Default In</h3>
+        <h3>Exalted Angel is the Universal Default</h3>
         <p>
-            Angel enters against every non-combo matchup: aggro, control, and
-            midrange. It stays out against combo decks (Enchantress, the mirror,
-            Elves) where diluting your own combo is too costly. If you’re unsure
-            what to bring in against a non-combo deck, Angel is almost never
-            wrong.
+            <a href="#" class="card-hover" data-card-name="Exalted Angel"
+                >Exalted Angel</a
+            > enters against virtually every non-combo opponent: aggro, control, and
+            midrange alike. It stays out exclusively against opposing fast combo shells
+            (Enchantress, mirrors, Elves), where diluting your internal combination
+            velocity is fatal. When facing an unfamiliar non-combo list, bringing
+            in Angel is universally strategically sound.
         </p>
 
-        <h3>Frantic Search Is the Default Cut</h3>
+        <h3>Frantic Search is the First Trim</h3>
         <p>
-            Frantic exits primarily against control matchups where card
-            disadvantage is punishing and discard heavy decks. Stays in against
-            aggro and combo where velocity matters.
+            <a href="#" class="card-hover" data-card-name="Frantic Search"
+                >Frantic Search</a
+            > is consistently trimmed against dedicated blue control and discard-heavy
+            architectures where inherent card disadvantage (-1 card on resolution)
+            proves overly taxing. Conversely, retain full sets against rapid aggro
+            and combo where turn-three execution velocity is paramount.
         </p>
 
-        <h3>What to Trim Post-Board (General Rules)</h3>
-        <ul>
+        <h3 style="margin-bottom: 0.5rem;">Core Trimming Rules Post-Board</h3>
+        <ul style="padding-left: 1.25rem; margin-bottom: 0;">
             <li style="margin-bottom: 0.5rem;">
-                <strong>Vs. Blue / Control:</strong> Cut <em>Intuition</em> and <em
-                    >Frantic Search</em
-                > (to avoid getting 2-for-1'd).
+                <strong>Against Blue Control:</strong> Trim <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Intuition">Intuition</a
+                > and <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Frantic Search">Frantic Search</a
+                > to eliminate exploitative 2-for-1 counter trades.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Vs. Non-Creature Decks:</strong> Trim <em
-                    >Swords to Plowshares</em
-                >. Be careful though—many control decks bring in creatures like
-                Meddling Mage or Exalted Angel from the sideboard, so leaving 1
-                or 2 Swords is often correct.
+                <strong>Against Non-Creature Shells:</strong> Reduce <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Swords to Plowshares"
+                    >Swords to Plowshares</a
+                > counts. However, exercise vigilance—many control pilots introduce
+                creature clocks (<a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Meddling Mage">Meddling Mage</a
+                >, <a href="#" class="card-hover" data-card-name="Exalted Angel"
+                    >Exalted Angel</a
+                >) post-board, making it mathematically optimal to retain 1 or 2
+                removal copies.
             </li>
-            <li style="margin-bottom: 0.5rem;">
-                <strong>Vs. Red Blast / Pyroblast (e.g., Sligh):</strong> Trim expensive
-                blue spells (like <em>Fact or Fiction</em> or extra copies of <em
-                    >Parallax Tide</em
-                >) to limit the number of juicy four-mana targets vulnerable to
-                a one-mana Blast.
+            <li style="margin-bottom: 0;">
+                <strong>Against Red Blast Suites (Sligh, Ponza):</strong> Trim expensive
+                blue card selection spells like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Fact or Fiction">Fact or Fiction</a
+                > to minimize high-value four-mana targets vulnerable to a one-mana
+                blast.
             </li>
         </ul>
     </Card>
@@ -122,9 +202,15 @@ import { Card } from "webcoreui/astro";
             image="artifacts/defense_grid.jpg"
         >
             <p style="margin-top: 0;">
-                Comes in against every permission-heavy matchup. It sticks on
-                the board, it comes down on a different turn than your threats,
-                and it works with Decree cycling.
+                The premier resource equalizer against permission-heavy
+                structures. By forcing opponents to pay an additional three mana
+                to play spells during your turn, it neutralizes countermagic and
+                allows your four-mana combo setups to deploy uninhibited.
+                Furthermore, it operates seamlessly alongside cycling <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Decree of Silence">Decree of Silence</a
+                > on opposing end steps.
             </p>
         </CardAnalysis>
 
@@ -133,31 +219,41 @@ import { Card } from "webcoreui/astro";
             image="creatures/exalted_angel.jpg"
         >
             <p style="margin-top: 0;">
-                I board this in more than any other card. It goes in against
-                aggro, control, and midrange. Basically every non-combo matchup.
-                It stays out against Enchantress, the mirror, and Elves where
-                you can't afford to dilute your combo. Against Sligh, even
-                playing it face-down as a morph blocker that eats a Lightning
-                Bolt is fine. Against control, it demands totally different
-                answers than your enchantments. Against Terrageddon, if you're
-                ahead on board with an Angel, they often can't cast Armageddon.
+                The quintessential post-sideboard hammer, introduced across
+                virtually every non-combo matchup. Against red aggression, even
+                deploying it as a face-down morph blocker that absorbs a burn
+                spell preserves critical life. Against control, it demands
+                physical removal that opponents frequently trimmed after Game 1.
+                Against mana-denial builds (Terrageddon), establishing an early
+                Angel clock consistently deters opponents from executing <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Armageddon">Armageddon</a
+                >.
             </p>
             <p>
-                <strong>The Transformational Plan:</strong> Opponents often side out
-                all their spot removal (like Swords to Plowshares) and load up on
-                enchantment and graveyard hate (Aura of Silence, Tormod's Crypt, Naturalize).
-                An early face-down Angel can easily steal games against UW, Enchantress,
-                Rock, or Ponza Oath while they hold a hand full of dead anti-enchantment
-                cards.
+                <strong>The Transformational Advantage:</strong> Because opponents
+                predictably side out spot removal in favor of enchantment sweepers
+                and graveyard extraction (<a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Aura of Silence">Aura of Silence</a
+                >, <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Tormod's Crypt">Tormod's Crypt</a
+                >), an early morph transition frequently dominates UW Control,
+                Rock, and Ponza while they clutch inert hate pieces.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Abeyance (2)" image="instants/abeyance.jpg">
             <p style="margin-top: 0;">
-                Protects your combo turn by shutting off their spells and
-                non-mana abilities. Draws a card too. I bring it in against
-                permission-heavy blue decks and in Opal-Wave combo matchups
-                where disrupting one key turn is the difference.
+                A multi-functional protection cantrip that secures your combo
+                turn by silencing opposing instant spells and activated non-mana
+                abilities. Fielded aggressively against deep permission decks
+                and during combo races where guaranteeing an uninterruptible
+                operational phase decides the championship.
             </p>
         </CardAnalysis>
 
@@ -166,67 +262,96 @@ import { Card } from "webcoreui/astro";
             image="instants/arcane_denial.jpg"
         >
             <p style="margin-top: 0;">
-                Better than it looks through card advantage math. By itself,
-                Arcane Denial is a natural +1 for your opponent (their spell is
-                -1, you give them two cards which is +2, net +1 to them). But
-                context determines whether that +1 is acceptable. If your
-                opponent casts Armageddon and it resolves, that’s a +3 for
-                them—destroying multiple lands. Giving them +1 with Arcane
-                Denial is far better than letting them get +3. Another scenario:
-                you cast Replenish, they counter it. Your Replenish is going to
-                give you more than +1, so giving your opponent +1 to resolve a
-                Replenish is ok. The similar logic applies to a face-down morph
-                that gets countered: Arcane Denial your own morph to draw three
-                cards (+2 for you) rather than Arcane Denying their counterspell
-                to save the morph (which gives them +1 - a worse trade). Think
-                of the card this way and it always makes sense.
-            </p>
-            <p>
-                Arcane Denial enters against combo decks that rely on resolving
-                a single powerful spell (Replenish mirror, PandeBurst, Devourer)
-                and against control when protecting a critical spell.
+                An exceptional tactical tool when evaluated through advanced
+                resource math. In isolation, <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Arcane Denial">Arcane Denial</a
+                > grants the opponent net card advantage (+1 total). However, championship
+                games hinge upon tempo and game-state preservation: intercepting an
+                opposing <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Armageddon">Armageddon</a
+                > or lethal win condition is vastly superior to conceding massive
+                board destruction. Similarly, protecting your own decisive <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                > justifies granting the opponent delayed cards when resolution immediately
+                locks the table.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Hydroblast (2)" image="instants/hydroblast.jpg">
             <p style="margin-top: 0;">
-                Only for Sligh and Goblins. Countering Lackey on turn one is the
-                single biggest sideboard play against Goblins.
+                Precision anti-red interaction engineered specifically for
+                Goblins and Sligh architectures. Intercepting a turn-one <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Goblin Lackey">Goblin Lackey</a
+                > or neutralising high-damage burn trajectories provides essential
+                early game survival.
             </p>
         </CardAnalysis>
 
-        <h3 style="margin-top: 3rem;">
+        <h3 style="margin-top: 2.5rem; margin-bottom: 0.5rem;">
             Flex Slots (1 Mage / 1 Seal / 1 Swords / 1 Web)
         </h3>
-        <p>
-            Additional copies of maindeck cards. Fourth Mage for blue matchups.
-            Fourth Seal for Enchantress. Fourth Swords for creature matchups.
-            Extra Web for utility lands.
+        <p style="margin-bottom: 0;">
+            These designated sideboard utility slots accommodate additional
+            copies of foundational maindeck tools: deploying a fourth <a
+                href="#"
+                class="card-hover"
+                data-card-name="Meddling Mage">Meddling Mage</a
+            > against blue control, a fourth <a
+                href="#"
+                class="card-hover"
+                data-card-name="Seal of Cleansing">Seal of Cleansing</a
+            > against Enchantress mirrors, a fourth <a
+                href="#"
+                class="card-hover"
+                data-card-name="Swords to Plowshares">Swords to Plowshares</a
+            > against aggressive beatdown, or supplementary <a
+                href="#"
+                class="card-hover"
+                data-card-name="Tsabo's Web">Tsabo's Web</a
+            > against land-denial suites.
         </p>
     </Card>
 
-    <Card title="Other Sideboard Options" titleTag="h2">
+    <Card title="Other Sideboard Considerations" titleTag="h2">
         <CardAnalysis title="Orim's Chant" image="instants/orims_chant.webp">
             <p style="margin-top: 0;">
-                I had a hard time setting up Chant without Tide. Previously I
-                could use Chant to force through a spell that would end the
-                game. Going down on cards was fine because if the game ends, who
-                cares. But without Tide, Decree is harder to set up for a full
-                combo against control. I found that they could just let me
-                Chant, let me resolve something, then dismantle it afterwards
-                and I'd be down on cards. Defense Grid ended up being better
-                than Chant or Abeyance against Landstill, Psychatog, and
-                Stiflenought. Not by a huge amount, but enough.
+                In the post-<a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Parallax Tide">Parallax Tide</a
+                > era, utilizing <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Orim's Chant">Orim's Chant</a
+                > purely to force through individual engine pieces incurs significant
+                card disadvantage without guaranteeing an immediate hard lockout.
+                Tournament practice demonstrates that <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Defense Grid">Defense Grid</a
+                > provides far superior, permanent structural resilience against Landstill,
+                Psychatog, and Stiflenought formations.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Wrath of God" image="sorceries/wrath_of_god.webp">
             <p style="margin-top: 0;">
-                Always in consideration. Extra removal against creature-heavy
-                decks like Goblins and Elves. It's also relevant against
-                opposing Meddling Mage if they're naming Swords, Wave, or both.
-                I've had it in the sideboard before and could see it returning
-                if creature decks pick up in the meta.
+                An elite defensive sweeper against swarming creature tribal
+                structures like Goblins and Elves. Furthermore, it functions as
+                clean answer to opposing <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Meddling Mage">Meddling Mage</a
+                > configurations targeting spot removal or combo pieces. Highly recommended
+                whenever fast tribal formations spike in regional meta representation.
             </p>
         </CardAnalysis>
 
@@ -235,249 +360,61 @@ import { Card } from "webcoreui/astro";
             image="enchantments/sphere_of_law.jpg"
         >
             <p style="margin-top: 0;">
-                Has been in the sideboard in the past when Sligh was a heavy
-                presence. Four mana to prevent two damage from every red source
-                is a hard lock against most Sligh builds. Right now the red
-                matchup is manageable enough without it, but if Sligh
-                representation spikes, Sphere is the card you want.
+                The absolute terminal answer against mono-red Sligh and burn
+                strategies. Mitigating two points of damage across every
+                individual red source establishes an almost unbreachable
+                defensive buffer. While modern spot removal counts sufficiently
+                handle average burn presence, dedicating sideboard space to
+                Sphere is paramount if Sligh saturates your meta.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Alter Reality" image="instants/alter_reality.jpg">
             <p style="margin-top: 0;">
-                A very spicy, highly specific piece of tech specifically to
-                combat <code>Gloom</code> from Monoblack Moneyball variants. By casting
-                this and changing the word "White" to "Black" on Gloom, their own
-                spell taxes them instead of you. The flashback makes it extremely
-                resilient to discard.
+                Highly precise regional tech deployed specifically to counter <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Gloom">Gloom</a
+                > from black disruptive piles. By modulating the word "White" to "Black"
+                on their resolved Gloom, the tax reverses entirely onto the opponent's
+                own spell curve. Its embedded Flashback cost ensures functional utility
+                even under discarded constraints.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Disenchant" image="instants/disenchant.jpg">
             <p style="margin-top: 0;">
-                <strong>The Seal/Disenchant Split:</strong> With the rise of <code
-                    >Aura of Silence</code
-                > in the metagame, running exclusively <code
-                    >Seal of Cleansing</code
-                > in the sideboard has become a liability, because an opposing Aura
-                prevents you from easily casting your Seals. Splitting your removal
-                suite to include 1 or 2 <code>Disenchant</code> guarantees you have
-                instant-speed answers that don't get shut down by Aura's static effect.
+                <strong>The Seal/Disenchant Split:</strong> With the dominance of
+                <a href="#" class="card-hover" data-card-name="Aura of Silence"
+                    >Aura of Silence</a
+                > across contemporary tournaments, relying exclusively on <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Seal of Cleansing">Seal of Cleansing</a
+                > post-board presents vulnerability to two-mana static taxation. Maintaining
+                1 or 2 copies of <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Disenchant">Disenchant</a
+                > provides immune, instant-speed interaction that cleanly bypasses
+                Aura's cost penalty.
             </p>
         </CardAnalysis>
     </Card>
 
-    <Card title="Playing Through Hate" titleTag="h2">
-        <p style="margin-bottom: 2rem;">
-            A lot of beating hate comes down to knowing what your opponent is
-            likely to have and not walking into it. You don't need a specific
-            sideboard card for every hate piece. You just need to adjust how you
-            sequence your game.
+    <Card title="Navigating Opposing Sideboard Hate" titleTag="h2">
+        <p style="margin-top: 0; margin-bottom: 0;">
+            Once you have constructed your sideboard architecture and mastered
+            your strategic transformations, the ultimate test of competitive
+            proficiency is anticipating and out-sequencing your opponent's
+            targeted hate in Games 2 and 3. For a comprehensive, card-by-card
+            masterclass on defeating graveyard extraction, taxing structures,
+            and enchantment sweepers, proceed to our dedicated <a
+                href="/playing-through-hate"
+                style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                >Playing Through Hate analysis</a
+            >.
         </p>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Withered Wretch"
-            image="creatures/withered_wretch.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>(Black Aggro, Rock)</strong> Wretch is a real problem because
-                it's repeatable and it's on a body that can attack you. If you know
-                they have it, save your Swords for it. Don't use Swords on a random
-                creature if you don’t have to and then lose because Wretch ate your
-                graveyard. Prioritize removing it before you start committing enchantments
-                to the yard.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Tormod's Crypt"
-            image="artifacts/tormods_crypt.jpg"
-        >
-            <p style="margin-top: 0;">
-                The easy answer to this is an early Seal of Cleansing. But you
-                can't always rely on having one, so knowing how to play through
-                it matters.
-            </p>
-            <p>
-                Against Crypt, the key is not putting yourself in a position
-                where a single crypt beats you. Don't just blindly dump your
-                hand into the graveyard and hope they don't have it. Use
-                Intuition on your opponent's end step the turn before you
-                Replenish. When activating Attunement, don't discard too many
-                combo pieces if you're not ready to Replenish yet. If they
-                already have Crypt in play, one line that works well: set up
-                Attunement on the battlefield and hold your combo pieces in
-                hand. Then with a minimal graveyard - just enough that they'd
-                want to Crypt - cast Replenish. They use Crypt in response,
-                wiping your graveyard. But Replenish is still on the stack.
-                Still in response to your own Replenish, activate Attunement and
-                dump a fresh graveyard. Replenish resolves and brings back
-                everything you just discarded.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Phyrexian Furnace"
-            image="artifacts/phyrexian_furnace.jpg"
-        >
-            <p style="margin-top: 0;">
-                Furnace is different because it only exiles one card at a time.
-                Don't commit cards to the graveyard slowly — that just lets them
-                pick off your best pieces one by one. If you're going to go for
-                it, go for it all at once. Force them to make a choice about
-                what one thing to remove. They can only get one card, and if the
-                rest of your graveyard is good enough, Replenish still wins.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Tranquil Domain / Naturalize"
-            image="instants/tranquil_domain.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>Enchantment Removal:</strong> Decree of Silence is the easiest
-                answer. If you Replenish with Decree, they need to fight through three
-                counters before they can touch your board. The Parallax Wave protection
-                trick also helps - with Opal-Wave, you can Wave your own enchantments
-                to safety and they come back fresh. Another winning line is getting
-                two Opalescences on the board, since you can use one to protect the
-                other. Post-board against heavy enchantment removal, the creature
-                package gives them a completely different problem to solve.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Meddling Mage"
-            image="creatures/meddling_mage.webp"
-        >
-            <p style="margin-top: 0;">
-                Be aware of which decks can have this post-board. If you expect
-                it, keep some amount of removal available. Parallax Wave handles
-                it, Swords works, and Wrath of God if you have it. One Meddling
-                Mage doesn't lock you out if you know it's coming.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Presence of the Master"
-            image="enchantments/presence_of_the_master.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>The Replenish Bypass:</strong> While imposing on paper against an enchantment archetype, Presence of the Master strictly counters enchantment spells that are <em>played</em> (cast from your hand). <strong>It does not intercept enchantments entering the battlefield via Replenish!</strong>
-            </p>
-            <p>
-                However, a resolved Presence prevents you from casting manual combo pieces or hardcasting answers like Seal of Cleansing. To navigate around it, focus entirely on sculpting a decisive graveyard and winning directly off a single Replenish, or rely on instant-speed removal like Disenchant and non-enchantment proactive threats like Meddling Mage and Exalted Angel.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Aura of Silence"
-            image="enchantments/aura_of_silence.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>Tax & Threat Combination:</strong> Frequently sideboarded in White Weenie, BW Control, and Enchantress mirrors. Because it increases the casting cost of your artifacts and enchantments by two generic mana, deploying early ramp or hardcasting combo engines becomes agonizingly slow. Worse still, sitting openly on the battlefield, it represents an immediate sacrifice trigger to destroy whatever key enchantment you do manage to resolve.
-            </p>
-            <p>
-                <strong>Counterplay:</strong> This interaction underscores precisely why our sideboard engineers a split between Seal of Cleansing and Disenchant. Disenchant remains a clean two-mana instant entirely immune to Aura's static tax. In attrition matchups where Aura hits the table early, concentrate your mana on resolving Attunement and Frantic Search to load the graveyard, then cast a multi-enchantment Replenish; a single sacrifice trigger cannot dismantle a complete Opal-Wave-Decree lock entering simultaneously.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Scour"
-            image="instants/scour.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>Surgical Eradication:</strong> Primarily fielded by blue-white control sideboards utilizing Invasion-block removal suites, Scour threatens to destroy an enchantment on the battlefield and permanently exile all corresponding copies across your hand, library, and graveyard. A single resolved Scour targeting Opalescence or Parallax Wave can dismantle your foundational win condition for the rest of the match.
-            </p>
-            <p>
-                <strong>Counterplay:</strong> Never deploy an unprotected engine enchantment against open four-mana white suites post-sideboard without permission or a defensive plan. Most importantly, when initiating an Opal-Wave loop, maintain active fading counters on your Parallax Wave so you can instantly exile your own enchantments in response to Scour targeting them on the stack. If the target leaves the battlefield before resolution, Scour completely fizzles and zero copies are exiled.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Anarchy"
-            image="sorceries/anarchy.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>Red Sweeper & Color Hate:</strong> Aggressive red architectures (Sligh, RG Ponza, Goblins) consistently side in Anarchy to destroy white stabilization engines like Sphere of Law, Exalted Angel, Meddling Mage, Opalescence, and Parallax Wave in a single sweeping blow.
-            </p>
-            <p>
-                <strong>Counterplay:</strong> Anarchy is a four-mana sorcery that destroys rather than exiles. First, proactively throttle their mana development via Tsabo's Web and Rishadan Port to keep them off four operational mana, or name it defensively with Meddling Mage. Second, recognize that because Anarchy sends all destroyed enchantments directly to your graveyard, retaining a backup copy of Replenish allows you to instantly reanimate your entire wiped board on your subsequent turn, turning an apparent catastrophe into immediate game-ending tempo.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Gloom"
-            image="matchups/moneyball/gloom.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>Asymmetric Color Tax:</strong> Brought in by Black aggro, Suicide Black, and The Rock. By taxing all white spells and white enchantment activation costs by three generic mana, Gloom threatens to cripple Replenish, Swords to Plowshares, Opalescence, and Parallax Wave.
-            </p>
-            <p>
-                <strong>Counterplay:</strong> Fortunately, Gloom is strictly color-scoped to white. Your entire blue card-selection engine (Attunement, Frantic Search, Intuition, Deep Analysis) and blue permission suite (Mana Leak, Counterspell) function entirely unimpeded. Against heavily black fields, reserve early blue countermagic strictly for intercepting Gloom on the stack. If resolved, leverage sol lands (Ancient Tomb, City of Traitors) and artifact ramp to manually overcome the three-mana surcharge over extended games, or rely on blue bounce mechanics like Upheaval and cycling Decree of Silence.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Haunting Echoes"
-            image="sorceries/haunting_echoes.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>Graveyard & Library Extraction:</strong> The supreme terminal hate piece of Black-based control shells and Psychatog variants. Resolving a five-mana Haunting Echoes obliterates your accumulated graveyard while scouring your entire library of all namesake copies, completely disabling your combo architecture.
-            </p>
-            <p>
-                <strong>Counterplay:</strong> Because Haunting Echoes is a heavy five-mana sorcery, opponents are forced to tap down significantly during their own main phase to deploy it. Preserve cheap blue countermagic (Mana Leak, Counterspell, Arcane Denial) specifically for their fifth mana threshold, or proactively lock out the spell via Meddling Mage in Games 2 and 3. Avoid passively building an overflowing graveyard against five-mana black control pools without an immediate plan to execute Replenish on your own turn.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Reverent Silence"
-            image="sorceries/reverent_silence.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>Free Enchantment Sweeper:</strong> Utilized by Elves and green aggro-midrange builds as zero-mana interaction by having you gain 6 life as an alternate casting cost. While sweeping your entire enchantment board for zero mana can ruin early stabilization pieces like Sphere of Law or Attunement, the dynamic is deeply advantageous if planned correctly.
-            </p>
-            <p>
-                <strong>Counterplay:</strong> As a sorcery, opponents are restricted to casting Reverent Silence during their main phase. During preliminary setup rounds, gladly accept the 6-life cushion; every destroyed enchantment lands directly in your graveyard, actively advancing your Replenish setup at zero card cost to you. Once your Opal-Wave engine is fully assembled, simply activate Parallax Wave in response to stack self-protection triggers, bringing your entire board back safely once Reverent Silence resolves.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Winter Orb"
-            image="artifacts/winter_orb.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>Mana Chokepoints:</strong> Featured heavily in Stasis, Merfolk, and aggressive tempo builds. Because Replenish operates around a critical three- and four-mana spell curve, restricted untap steps severely constrain your operational bandwidth and setup speed.
-            </p>
-            <p>
-                <strong>Counterplay:</strong> Prioritize removing Winter Orb immediately with Seal of Cleansing or instant-speed Disenchant. In game lines where Orb persists, sol lands like Ancient Tomb provide immense tactical leverage by generating two mana off a single untap step. Most importantly, remember that Frantic Search functions as an extraordinary burst untapper under Winter Orb: tap all available lands for mana before casting Search, then untap three lands upon resolution to suddenly generate a massive mana pool during a choked turn.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            collapsible={true}
-            title="Cursed Totem"
-            image="artifacts/cursed_totem.jpg"
-        >
-            <p style="margin-top: 0;">
-                <strong>The Opalescence Lockout:</strong> A subtle and deceptively dangerous sideboard artifact. On an empty board or during standard setup phases, Cursed Totem has zero interaction with normal enchantments. However, <strong>the instant Opalescence enters the battlefield, all of your non-Aura enchantments transform into creatures.</strong>
-            </p>
-            <p>
-                Under Opalescence and Cursed Totem simultaneously, Parallax Wave, Attunement, and Seal of Cleansing are strictly considered creatures with activated abilities—meaning Cursed Totem completely disables their activation loops! To circumvent this critical gotcha, always utilize Seal of Cleansing or instant-speed Disenchant to destroy Cursed Totem <em>before</em> deploying Opalescence onto the battlefield.
-            </p>
-        </CardAnalysis>
     </Card>
+    <DecklistTooltip />
 </Layout>
