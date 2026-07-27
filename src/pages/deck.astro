@@ -14,7 +14,7 @@ import { modernDecklists, getCopyString } from "@data/decklists";
 >
     <PageHeader
         title="Lists"
-        description="Below are four different configurations of Parallax Replenish, ranging from stock modern builds to classic lists and experimental control variants."
+        description="Below are four competitive configurations of Parallax Replenish, spanning standard championship builds to analytical control variants."
         imageSrc="/src/assets/banners/attunement.jpeg"
         imageAlt="Attunement"
         imageCaption="Attunement by Randy Gallegos"
@@ -24,34 +24,40 @@ import { modernDecklists, getCopyString } from "@data/decklists";
     <Card title="Key Differences" titleTag="h2">
         <ul style="padding-left: 1.25rem; margin-bottom: 0;">
             <li style="margin-bottom: 0.5rem;">
-                <strong>Decree of Silence (3 vs. 2):</strong> Three is relevant in
-                situations where Replenish is likely to resolve and Opal+Wave does
-                not necessarily mean an immediate win. Matchups like Sligh, the mirror,
-                Enchantress, BW Control, and decks with Tranquil Domain fall into
-                this category. You go down to two when the opposite is true: when
-                Replenish is hard to resolve, or when resolving an Opal+Wave is enough
-                to win the game by itself. In those situations, having fewer Decrees
-                clogging up your hand is much better (especially since against control
-                you side out discard outlets like Frantic Search anyway).
+                <strong>Decree of Silence (3 vs. 2):</strong> Running a third copy
+                is tactically advantageous in slower, attrition-based matchups where
+                resolving Replenish is probable, but a basic Opal-Wave loop does not
+                guarantee an immediate win. Archetypes such as the mirror, Enchantress,
+                BW Control, and shells fielding Tranquil Domain demand this higher
+                threat density. Conversely, drop to two copies when facing aggressive
+                pressure or heavy countermagic where Replenish is heavily contested
+                and resolving an Opal-Wave loop is sufficient to seal the game. In
+                those reactive dynamics, minimizing high-cost cards in hand is imperative—particularly
+                since velocity discard engines like Frantic Search are trimmed post-sideboard.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Seal of Cleansing (4 vs. 3 in the 75):</strong> Running four
-                total is a luxury. It's gotten better with the rise of Aluren, the
-                Replenish mirror, Enchantress, and other enchantment-heavy decks.
-                Three in the 75 is the leaner option if those matchups are less common
-                in your field.
+                <strong>Seal of Cleansing (4 vs. 3 in the 75):</strong> Fielding four
+                total copies across the 75 is a potent meta-targeted adaptation that
+                escalates in value against Aluren, the Replenish mirror, Enchantress,
+                and artifact-heavy control builds. Allocating three copies across
+                the 75 represents the leaner, more streamlined option when facing
+                fields with fewer relevant targets.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Tsabo’s Web (3 vs. 2):</strong> Some lists run three because
-                their local region has a lot of Terrageddon and Port. Online, Terrageddon
-                has been trending down, so the count is closer to two in the 75 for
-                most general builds.
+                <strong>Tsabo’s Web (3 vs. 2):</strong> Certain configurations dedicate
+                three copies across the 75 to counter regional metagames saturated
+                with Terrageddon, Dust Bowl, and Rishadan Port. In broader online
+                ecosystems where land-destruction archetypes have declined, restricting
+                this allocation to two total copies is the current competitive standard.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Maindeck vs Sideboard Creatures:</strong> Bryan Gulotta's
-                list puts 4 Meddling Mages in the maindeck for proactive protection
-                against fast combo and control, while lists like Alessandro's keep
-                them in the sideboard to blank opposing removal Game 1.
+                <strong>Maindeck vs. Sideboard Creatures:</strong> Bryan Gulotta’s
+                championship configuration positions 4 Meddling Mages directly in
+                the maindeck—securing immediate, game-one interference against fast
+                combo and permission-dense control decks. In contrast, standard frameworks
+                like Alessandro Galli’s retain creatures strictly in the sideboard,
+                intentionally insulating the combo engine by blanking the opponent's
+                spot removal during Game 1.
             </li>
         </ul>
     </Card>
@@ -70,7 +76,10 @@ import { modernDecklists, getCopyString } from "@data/decklists";
                     </div>
                     {deck.badgeText && (
                         <div style="margin-bottom: 1.5rem;">
-                            <Badge theme={deck.badgeTheme || "info"} small={true}>
+                            <Badge
+                                theme={deck.badgeTheme || "info"}
+                                small={true}
+                            >
                                 {deck.badgeText}
                             </Badge>
                         </div>

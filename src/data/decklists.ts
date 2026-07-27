@@ -405,7 +405,7 @@ export const modernDecklists: Decklist[] = [
         badgeText: "Top 16 - New England Premodern Summer Regional (2026)",
         badgeTheme: "alert",
         description:
-            '<strong>The "Creatureless 75" Experiment:</strong> This highly innovative list completely abandons the traditional post-board midrange pivot (no Exalted Angels or Meddling Mages). Instead, it runs zero creatures in all 75 cards, pivoting into absolute hard-control by running a 3rd copy of <code>Decree of Silence</code> in the maindeck alongside a mountain of instant-speed interaction. It also showcases the modern <code>Seal of Cleansing</code> and <code>Disenchant</code> split in the sideboard to fight through opposing <code>Aura of Silence</code>.',
+            '<strong>The "Creatureless 75" Architecture:</strong> This innovative tournament configuration completely circumvents the traditional post-board midrange creature pivot (omitting Exalted Angel and Meddling Mage entirely). By maintaining zero creatures across all 75 cards, it permanently invalidates opposing spot removal and sideboard sweepers. In exchange, the list transitions into an absolute hard-control engine—fielding a third maindeck copy of <code>Decree of Silence</code> supported by an extensive instant-speed permission suite. Additionally, the sideboard engineers a strategic split between <code>Seal of Cleansing</code> and <code>Disenchant</code> to efficiently dismantle opposing tax pieces like <code>Aura of Silence</code> without incurring casting delays.',
         columns: [
             {
                 sections: [

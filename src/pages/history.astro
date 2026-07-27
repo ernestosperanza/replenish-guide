@@ -9,11 +9,11 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
 
 <Layout
     title="History - Replenish Guide"
-    description="Explore the rich history of the Replenish deck in Magic: The Gathering. From its Type 2 origins in 2000 to the dramatic errata changes and its resilience after the Parallax Tide ban."
+    description="Explore the competitive evolution of the Replenish archetype in Magic: The Gathering. Trace its legacy from Type 2 dominance in 2000 to its modern engineering and championship adaptation in Premodern."
 >
     <PageHeader
         title="History of the Deck"
-        description="The story of Replenish spans over two decades. From its dominance in Type 2 (Standard) at the turn of the millennium, to its rebirth in Premodern fueled by rules changes, and finally its resilience in the face of bans. Here is a look at the archetypes' defining milestones."
+        description="The pedigree of Replenish spans more than two decades. From its dominance in Type 2 (Standard) at the turn of the millennium to its modern competitive engineering and adaptation after format bans, here is an anatomical breakdown of the archetype's historical milestones."
         imageSrc="/src/assets/banners/parallax_wave.jpeg"
         imageAlt="Parallax Wave"
         imageCaption="Parallax Wave by Greg Staples"
@@ -23,18 +23,20 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
         <Timeline>
             <TimelineItem title="1. The Standard Origins (2000)" titleTag="h2">
                 <p>
-                    Replenish first made waves at the highest levels of
-                    competitive Magic during the 2000 World Championship. Hall
-                    of Famer Tom van de Logt piloted this list to a Top 8
-                    finish. This Type 2 list leaned on fast mana like <a
+                    Replenish first asserted itself at the highest echelons of
+                    competitive Magic during the 2000 World Championship, where
+                    Hall of Famer Tom van de Logt piloted the strategy to a
+                    premier Top 8 finish. This classical Type 2 build coupled
+                    artifact acceleration like <a
                         href="#"
                         class="card-hover"
                         data-card-name="Sky Diamond">Sky Diamond</a
-                    > and <a
+                    > with active mana denial via <a
                         href="#"
                         class="card-hover"
                         data-card-name="Rishadan Port">Rishadan Port</a
-                    > to slow opponents down, while using <a
+                    > to disrupt opposing development. Immense game-to-game consistency
+                    was secured through a precise tutoring suite of <a
                         href="#"
                         class="card-hover"
                         data-card-name="Mystical Tutor">Mystical Tutor</a
@@ -42,11 +44,12 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
                         href="#"
                         class="card-hover"
                         data-card-name="Enlightened Tutor">Enlightened Tutor</a
-                    > for immense consistency. A single <a
+                    >, while a solitary <a
                         href="#"
                         class="card-hover"
                         data-card-name="Energy Field">Energy Field</a
-                    > could buy infinite time until the combo was ready.
+                    > acted as an impermeable structural shield until the definitive
+                    combo engine could come online.
                 </p>
 
                 <Card>
@@ -68,16 +71,18 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
                     </div>
 
                     <Grid column={{ md: 3 }} gap="lg">
-                        {tomVanDeLogtDeck.columns.map((col) => (
-                            <div>
-                                {col.sections.map((sec) => (
-                                    <DeckSection
-                                        title={sec.title}
-                                        items={sec.items}
-                                    />
-                                ))}
-                            </div>
-                        ))}
+                        {
+                            tomVanDeLogtDeck.columns.map((col) => (
+                                <div>
+                                    {col.sections.map((sec) => (
+                                        <DeckSection
+                                            title={sec.title}
+                                            items={sec.items}
+                                        />
+                                    ))}
+                                </div>
+                            ))
+                        }
                     </Grid>
                 </Card>
             </TimelineItem>
@@ -87,24 +92,27 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
                 titleTag="h2"
             >
                 <p>
-                    As the Premodern format developed, players realized that <a
+                    As Premodern maturely developed into a competitive eternal
+                    format, deckbuilders recognized that <a
                         href="#"
                         class="card-hover"
                         data-card-name="Parallax Tide">Parallax Tide</a
-                    > could be weaponized to permanently exile an opponent's lands
-                    just as easily as Wave exiled creatures. By late 2025 and early
-                    2026, Parallax Tide Replenish dominated competitive play. To secure
-                    complete control in mirrors and against interaction, pilots like
-                    AchiIIes adapted by running cards like <a
+                    > could be weaponized alongside Opalescence to permanently eradicate
+                    an opponent's mana base just as efficiently as Wave annihilated
+                    creature boards. By late 2025 and early 2026, Parallax Tide Replenish
+                    achieved overwhelming metagame dominance. To guarantee unconditional
+                    supremacy in contested mirrors and heavy blue battles, elite pilots
+                    like AchiIIes evolved the architecture by integrating maindeck
+                    copies of <a
                         href="#"
                         class="card-hover"
                         data-card-name="Tsabo's Web">Tsabo's Web</a
-                    > and four copies of <a
+                    > and a definitive four-of suite of <a
                         href="#"
                         class="card-hover"
                         data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                    > in the main deck—creating a stifling one-sided lock right before
-                    the hammer fell.
+                    >—manufacturing an inescapable, unilateral lock right before
+                    format curation intervened.
                 </p>
                 <Card>
                     <div
@@ -125,16 +133,18 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
                     </div>
 
                     <Grid column={{ md: 3 }} gap="lg">
-                        {achiIIesDeck.columns.map((col) => (
-                            <div>
-                                {col.sections.map((sec) => (
-                                    <DeckSection
-                                        title={sec.title}
-                                        items={sec.items}
-                                    />
-                                ))}
-                            </div>
-                        ))}
+                        {
+                            achiIIesDeck.columns.map((col) => (
+                                <div>
+                                    {col.sections.map((sec) => (
+                                        <DeckSection
+                                            title={sec.title}
+                                            items={sec.items}
+                                        />
+                                    ))}
+                                </div>
+                            ))
+                        }
                     </Grid>
                 </Card>
             </TimelineItem>
@@ -144,19 +154,20 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
                 titleTag="h2"
             >
                 <p>
-                    On January 18, 2026, format curator Martin Berlin banned
-                    Parallax Tide, citing its oppressive, repetitive play
-                    patterns and insurmountable win rates. The community wrote
-                    the deck off, assuming it was dead without its primary lock
-                    piece.
+                    On January 18, 2026, format curator Martin Berlin formally
+                    banned Parallax Tide, citing repetitive play patterns and
+                    oppressive tournament win percentages. Conventional
+                    community discourse prematurely dismissed the archetype,
+                    assuming Replenish could not survive without its primary
+                    resource-denial lock.
                 </p>
                 <p>
-                    However, dedicated pilots proved them wrong. By replacing
-                    Tide with <a
+                    However, dedicated specialists engineered an immediate
+                    resurgence. By transitioning the primary lock piece to <a
                         href="#"
                         class="card-hover"
                         data-card-name="Decree of Silence">Decree of Silence</a
-                    > and incorporating flexible protection like <a
+                    > and weaving in flexible, agile protection such as <a
                         href="#"
                         class="card-hover"
                         data-card-name="Abeyance">Abeyance</a
@@ -164,23 +175,23 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
                         href="#"
                         class="card-hover"
                         data-card-name="Mana Leak">Mana Leak</a
-                    >, the deck evolved from a pure combo lock into a resilient
-                    combo-control hybrid.
+                    >, the deck evolved from a linear combo-lock into an
+                    exceptionally formidable combo-control hybrid.
                 </p>
                 <p>
-                    This new iteration reached its definitive proving ground on
-                    May 1, 2026, when
-                    <strong>Brian Siu</strong> piloted Parallax Replenish to victory
-                    at the
+                    This modern engineering achieved absolute technical
+                    validation on May 1, 2026, when
+                    <strong>Brian Siu</strong> piloted post-ban Parallax Replenish
+                    to conquer the
                     <strong
                         >North American Premodern Championship at Lobstercon
                         2026</strong
-                    >, silencing doubters and cementing the archetype's status
-                    as a top-tier powerhouse.
+                    >, silencing skepticism and cementing the archetype's status
+                    as an enduring tournament heavyweight.
                 </p>
                 <p style="margin-bottom: 0;">
-                    To explore Brian Siu's championship decklist and other
-                    refined post-ban configurations, check out our interactive <a
+                    To explore Brian Siu's championship architecture and other
+                    refined post-ban configurations, proceed to our interactive <a
                         href="/deck"
                         style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
                         >Lists page</a
