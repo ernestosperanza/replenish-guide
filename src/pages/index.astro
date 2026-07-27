@@ -25,63 +25,96 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 
     <Card title="What is Replenish?" titleTag="h2">
         <p>
-            <strong>Replenish</strong> is a premier combo-control archetype in Premodern Magic:
-            The Gathering that leverages its namesake sorcery to cheat powerful, high-cost
-            enchantments onto the battlefield directly from the graveyard. The core operating game plan
-            is straightforward in concept: aggressively curate your graveyard using card selection engines
-            like <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a> and <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a>, and then resolve <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> to return
-            them all at once for just four mana.
+            <strong>Replenish</strong> is a classic combo-control deck in Premodern
+            Magic: The Gathering that leverages its namesake sorcery to cheat massive,
+            high-cost enchantments onto the battlefield directly from the graveyard.
+            The game plan is straightforward: fill and filter your graveyard using
+            draw engines like <a
+                href="#"
+                class="card-hover"
+                data-card-name="Attunement">Attunement</a
+            > and <a href="#" class="card-hover" data-card-name="Frantic Search"
+                >Frantic Search</a
+            >, and then resolve a single four-mana <a
+                href="#"
+                class="card-hover"
+                data-card-name="Replenish">Replenish</a
+            > to command the board.
         </p>
 
         <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.25rem;">
             The Core Combo: The Wave Lock
         </h3>
         <p style="margin-bottom: 0.75rem;">
-            The deck's primary terminal condition revolves around a devastating
-            stack synergy between two flagship enchantments:
+            The deck's primary win condition revolves around a powerful stack
+            interaction between two key enchantments:
         </p>
         <ul style="padding-left: 1.25rem; margin-bottom: 0;">
             <li style="margin-bottom: 0.5rem;">
-                <strong><a href="#" class="card-hover" data-card-name="Opalescence">Opalescence</a>:</strong> Transforms all of your non-Aura enchantments
-                into creatures with power and toughness equal to their respective mana values.
+                <strong
+                    ><a href="#" class="card-hover" data-card-name="Opalescence"
+                        >Opalescence</a
+                    >:</strong
+                > Transforms all of your non-Aura enchantments into creatures with
+                power and toughness equal to their respective mana values.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong><a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a>:</strong> Ordinarily utilized to temporarily exile
-                up to five target creatures. However, because <a href="#" class="card-hover" data-card-name="Opalescence">Opalescence</a> animates Wave into
-                a creature,
+                <strong
+                    ><a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Parallax Wave">Parallax Wave</a
+                    >:</strong
+                > Normally used to temporarily exile up to five target creatures.
+                However, because <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Opalescence">Opalescence</a
+                > animates Wave into a creature,
                 <em>it can target itself</em>.
             </li>
         </ul>
         <p style="margin-top: 0.75rem; margin-bottom: 0;">
-            By stacking four exile triggers targeting opposing battlefield presence and then
-            using the final fading counter to exile the <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a> itself, Wave
-            leaves play <em>before</em> its initial exile triggers resolve. Because its
-            return-to-play clause triggers and resolves while nothing has been exiled yet, your opponent's creatures
-            are exiled permanently once the remaining stack clears, and your Wave returns to the battlefield refreshed with
-            five new counters. Incorporating <a href="#" class="card-hover" data-card-name="Decree of Silence">Decree of Silence</a> into this loop permanently intercepts and counters
-            every subsequent spell your opponent attempts to cast.
+            By stacking four exile triggers targeting opposing creatures and
+            then using the final fading counter to exile the <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            > itself, Wave leaves play <em>before</em> its initial exile triggers
+            resolve. Because its return-to-play clause triggers and resolves while
+            nothing has been exiled yet, your opponent's creatures are exiled permanently
+            once the remaining stack clears, and your Wave returns to the battlefield
+            refreshed with five new counters. Incorporating <a
+                href="#"
+                class="card-hover"
+                data-card-name="Decree of Silence">Decree of Silence</a
+            > into this loop hard-counters every spell your opponent tries to cast
+            for the rest of the game.
         </p>
     </Card>
 
     <Card title="Why Replenish?" titleTag="h2">
         <p>
-            If you are seeking an archetype capable of delivering explosive, unilateral combo
-            kills while possessing the stamina to grind through intense, grueling
-            control matches via superior interaction and card selection,
-            Replenish is your ideal match.
+            If you enjoy explosive combo finishes backed by the tools to grind
+            through long, technical games against control and aggro, Replenish
+            is an excellent match.
         </p>
         <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
             <li style="margin-bottom: 0.5rem;">
-                You relish combo architectures that reward disciplined setup, analytical patience, and explosive terminal payoffs.
+                You enjoy strategies that reward patient setup, careful
+                sequencing math, and decisive late-game payoffs.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                You appreciate intricate decision trees, precise sequencing mechanics, and the tactical puzzle of navigating out of complex board states.
+                You appreciate complex decision trees and the tactical puzzle of
+                navigating out of difficult board states.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                You value structural adaptability, seeking a framework that seamlessly transitions across combo, control, and midrange postures as match dynamics evolve.
+                You want a versatile strategy that can easily pivot between
+                combo, control, and beatdown roles as match dynamics evolve.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                You aim to decisively dominate local metagames heavily populated by Enchantress, slower midrange piles, and traditional permission control.
+                You want a deck positioned favorably against Enchantress,
+                traditional midrange piles, and draw-go control.
             </li>
         </ul>
     </Card>
@@ -98,23 +131,37 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                 </h3>
                 <ul style="padding-left: 1.25rem;">
                     <li style="margin-bottom: 0.5rem;">
-                        <strong>Explosive Wins:</strong> A single resolved <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a>
-                        assembling the Opal-Wave-Decree lock almost universally terminates the game
+                        <strong>Explosive Wins:</strong> A single resolved <a
+                            href="#"
+                            class="card-hover"
+                            data-card-name="Replenish">Replenish</a
+                        >
+                        assembling the Opal-Wave-Decree lock usually wins the game
                         on the spot.
                     </li>
                     <li style="margin-bottom: 0.5rem;">
-                        <strong>Role Flexibility:</strong> Capable of seamlessly shifting between pure combo, hard control,
-                        or aggressive midrange depending on matchup pressure. Proactive disruption pieces like <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a> solidify early board control.
+                        <strong>Role Flexibility:</strong> Can pivot between pure
+                        combo, defensive control, or aggressive beatdown depending
+                        on the matchup, with proactive disruption like <a
+                            href="#"
+                            class="card-hover"
+                            data-card-name="Meddling Mage">Meddling Mage</a
+                        > to solidify early boards.
                     </li>
                     <li style="margin-bottom: 0.5rem;">
-                        <strong>Dominant Matchups:</strong> Statistically favored against
-                        foundational Premodern pillars, including Enchantress, midrange piles,
-                        creature beatdowns, and slow control variants.
+                        <strong>Strong Matchups:</strong> Favorably positioned against
+                        classic Premodern staples, including Enchantress, midrange
+                        piles, creature beatdowns, and slow control variants.
                     </li>
                     <li style="margin-bottom: 0.5rem;">
-                        <strong>Post-Ban Positioning:</strong> With <a href="#" class="card-hover" data-card-name="Parallax Tide">Parallax Tide</a>
-                        removed from competitive legalities, opposing blue decks no longer threaten instant land sweepers, liberating
-                        critical sideboard and maindeck utility space for your own gameplan.
+                        <strong>Post-Ban Positioning:</strong> With <a
+                            href="#"
+                            class="card-hover"
+                            data-card-name="Parallax Tide">Parallax Tide</a
+                        >
+                        out of the format, opposing blue decks no longer threaten
+                        instant land sweepers, liberating critical sideboard and maindeck
+                        slots for your own gameplan.
                     </li>
                 </ul>
             </Card>
@@ -126,21 +173,40 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                 <ul style="padding-left: 1.25rem;">
                     <li style="margin-bottom: 0.5rem;">
                         <strong>Graveyard Dependence:</strong> Inherently vulnerable
-                        to hate pieces like <a href="#" class="card-hover" data-card-name="Tormod's Crypt">Tormod's Crypt</a>, <a href="#" class="card-hover" data-card-name="Phyrexian Furnace">Phyrexian Furnace</a>, and
-                        <a href="#" class="card-hover" data-card-name="Planar Void">Planar Void</a> (though post-sideboard creature plans mitigate
-                        this).
+                        to hate pieces like <a
+                            href="#"
+                            class="card-hover"
+                            data-card-name="Tormod's Crypt">Tormod's Crypt</a
+                        >, <a
+                            href="#"
+                            class="card-hover"
+                            data-card-name="Phyrexian Furnace"
+                            >Phyrexian Furnace</a
+                        >, and
+                        <a
+                            href="#"
+                            class="card-hover"
+                            data-card-name="Planar Void">Planar Void</a
+                        > (though post-sideboard creature transitions mitigate this).
                     </li>
                     <li style="margin-bottom: 0.5rem;">
-                        <strong>Multi-Axis Aggression:</strong> Vulnerable against
-                        strategies generating dual-axis pressure simultaneously (e.g.,
-                        a rapid clock supported by heavy mana denial or dense permission spells).
+                        <strong>Multi-Axis Aggression:</strong> Vulnerable to strategies
+                        generating pressure on multiple fronts at once (like a fast
+                        clock backed by mana denial or heavy countermagic).
                     </li>
                     <li style="margin-bottom: 0.5rem;">
-                        <strong>Faster Unfair Combos:</strong> Structurally challenged by ultra-fast linear engines like <a href="#" class="card-hover" data-card-name="Phyrexian Devourer">Devourer Combo</a> that can manufacture lethal sequences faster than you can position meaningful early interaction.
+                        <strong>Faster Combos:</strong> Can struggle against ultra-fast
+                        linear engines like <a
+                            href="#"
+                            class="card-hover"
+                            data-card-name="Phyrexian Devourer"
+                            >Devourer Combo</a
+                        > that can combo off before your early disruption comes online.
                     </li>
                     <li style="margin-bottom: 0.5rem;">
-                        <strong>Mana Hungry:</strong> Primary engine spells sit at three and four
-                        mana, necessitating deliberate defensive navigation during early turns before your selection mechanics stabilize.
+                        <strong>Mana Hungry:</strong> Primary engine spells sit at
+                        three and four mana, meaning you often have to play defensively
+                        until your card selection engines stabilize.
                     </li>
                 </ul>
             </Card>
