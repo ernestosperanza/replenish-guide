@@ -1,0 +1,216 @@
+---
+import Layout from "@components/Layout.astro";
+import PageHeader from "@components/PageHeader.astro";
+import { Card } from "webcoreui/astro";
+import DecklistTooltip from "@components/DecklistTooltip.astro";
+---
+
+<Layout
+    title="Sideboard Strategy & Principles - Replenish Guide"
+    description="Master competitive Premodern sideboard theory. Learn how to execute transformative midrange beatdown pivots, execute precise card trimming heuristics, and sculpt your optimal 15-card toolkit."
+>
+    <PageHeader
+        title="Sideboard Strategy & Principles"
+        description="Mastering competitive post-board dynamics requires transformative role assessment, strategic trimming heuristics, and 15-card sculpting methodology."
+        imageSrc="/src/assets/banners/mage.webp"
+        imageAlt="Meddling Mage"
+        imageCaption="Meddling Mage by Christopher Moeller"
+        isCard={true}
+    />
+
+    <Card title="The Sculpting Methodology" titleTag="h2">
+        <p style="margin-top: 0;">
+            A disciplined tournament pilot relies on a systematic methodology
+            before every regional or competitive championship to finalize their
+            75. Rather than constructing a sideboard from scratch on tournament
+            morning, begin with a master pool of 85–90 proven cards, then
+            analytically carve away options that do not align with expected
+            local metagame concentrations.
+        </p>
+        <ol style="padding-left: 1.25rem;">
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Start Broad:</strong> Maintain an expansive candidate pool
+                of 85–90 cards, encompassing archetype variants and specific bullet
+                interaction.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Assess the Metagame:</strong> Heavy red and aggressive tribal
+                fields demand sweeping board control (<a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Wrath of God">Wrath of God</a
+                >, <a href="#" class="card-hover" data-card-name="Sphere of Law"
+                    >Sphere of Law</a
+                >). Permission-saturated blue tables necessitate mana taxing (<a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Defense Grid">Defense Grid</a
+                >) and robust midrange threat structures.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Prioritize Utility Slots:</strong> Rank flex options by standalone
+                power level and multi-matchup application.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Cut Strategically:</strong> Eliminate targeted bullets that
+                fail to actively serve across at least two major matchup profiles.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Finalize Transformative Packages:</strong> Deploy post-board
+                pivot strategies only when they invert undesirable Game 1 dynamics
+                across multiple foundational archetypes.
+            </li>
+            <li style="margin-bottom: 0;">
+                <strong>Main vs. Side Positioning:</strong> Assign final positions
+                based on mathematical expected matchup frequencies.
+            </li>
+        </ol>
+        <p style="margin-top: 1.5rem; margin-bottom: 0;">
+            <strong>The Creature Sideboard Package:</strong> Incorporating <a
+                href="#"
+                class="card-hover"
+                data-card-name="Exalted Angel">Exalted Angel</a
+            > and <a href="#" class="card-hover" data-card-name="Meddling Mage"
+                >Meddling Mage</a
+            > enables an aggressive, high-efficiency midrange transformation after
+            sideboarding. This places opponents in an untenable structural bind: if
+            they retain heavy anti-enchantment and graveyard hate, they succumb quickly
+            to aerial beatdowns; if they dilute their hate to respect creatures, they
+            are overrun by the namesake combo.
+        </p>
+    </Card>
+
+    <Card title="Strategic Transformation & Role Assessment" titleTag="h2">
+        <h3 style="margin-top: 0;">Transformation Against Control</h3>
+        <p>
+            Against heavy blue permission archetypes, the deck seamlessly
+            transitions its primary identity. Velocity engines like <a
+                href="#"
+                class="card-hover"
+                data-card-name="Frantic Search">Frantic Search</a
+            >, reactive lock pieces like <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Wave">Parallax Wave</a
+            >, and excess spot removal exit the 75. In their place, <a
+                href="#"
+                class="card-hover"
+                data-card-name="Defense Grid">Defense Grid</a
+            >, <a href="#" class="card-hover" data-card-name="Exalted Angel"
+                >Exalted Angel</a
+            >, <a href="#" class="card-hover" data-card-name="Abeyance"
+                >Abeyance</a
+            >, <a href="#" class="card-hover" data-card-name="Arcane Denial"
+                >Arcane Denial</a
+            >, and full rosters of <a
+                href="#"
+                class="card-hover"
+                data-card-name="Meddling Mage">Meddling Mage</a
+            > take over. Operating as a proactive midrange beatdown deck completely
+            invalidates traditional control post-board logic.
+        </p>
+
+        <h3 style="margin-top: 2.5rem;">
+            Maintaining the Combo Against Aggression
+        </h3>
+        <p>
+            When pairing against linear aggressive builds, the primary combo
+            engine remains completely intact to facilitate an explosive race.
+            Swap situational interaction slots; specifically, trim <a
+                href="#"
+                class="card-hover"
+                data-card-name="Seal of Cleansing">Seal of Cleansing</a
+            > whenever opponents lack relevant enchantment or artifact targets.
+        </p>
+
+        <h3 style="margin-top: 2.5rem;">
+            Retiring Mages Against Green and Midrange
+        </h3>
+        <p style="margin-bottom: 0;">
+            Against heavy green midrange formations and attrition suites (e.g.,
+            The Rock, RG Ponza, Terrageddon), <a
+                href="#"
+                class="card-hover"
+                data-card-name="Meddling Mage">Meddling Mage</a
+            > exits the formation. Opposing creature curves consistently outclass
+            a 2/2 body, and their strategy rarely bottlenecks upon a single named
+            spell. Transition into <a
+                href="#"
+                class="card-hover"
+                data-card-name="Exalted Angel">Exalted Angel</a
+            > to dominate combat math and life-point races.
+        </p>
+    </Card>
+
+    <Card title="Key Slot Heuristics & Trimming Rules" titleTag="h2">
+        <h3 style="margin-top: 0;">Exalted Angel is the Universal Default</h3>
+        <p>
+            <a href="#" class="card-hover" data-card-name="Exalted Angel"
+                >Exalted Angel</a
+            > enters against virtually every non-combo opponent: aggro, control, and
+            midrange alike. It stays out exclusively against opposing fast combo shells
+            (Enchantress, mirrors, Elves), where diluting your internal combination
+            velocity is fatal. When facing an unfamiliar non-combo list, bringing
+            in Angel is universally strategically sound.
+        </p>
+
+        <h3 style="margin-top: 2.5rem;">Frantic Search is the First Trim</h3>
+        <p>
+            <a href="#" class="card-hover" data-card-name="Frantic Search"
+                >Frantic Search</a
+            > is consistently trimmed against dedicated blue control and discard-heavy
+            architectures where inherent card disadvantage (-1 card on resolution)
+            proves overly taxing. Conversely, retain full sets against rapid aggro
+            and combo where turn-three execution velocity is paramount.
+        </p>
+
+        <h3 style="margin-top: 2.5rem; margin-bottom: 0.75rem;">
+            Core Trimming Rules Post-Board
+        </h3>
+        <ul style="padding-left: 1.25rem; margin-bottom: 0;">
+            <li style="margin-bottom: 0.75rem;">
+                <strong>Against Blue Control:</strong> Trim <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Intuition">Intuition</a
+                > and <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Frantic Search">Frantic Search</a
+                > to eliminate exploitative 2-for-1 counter trades.
+            </li>
+            <li style="margin-bottom: 0.75rem;">
+                <strong>Against Non-Creature Shells:</strong> Reduce <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Swords to Plowshares"
+                    >Swords to Plowshares</a
+                > counts. However, exercise vigilance—many control pilots introduce
+                creature clocks (<a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Meddling Mage">Meddling Mage</a
+                >, <a href="#" class="card-hover" data-card-name="Exalted Angel"
+                    >Exalted Angel</a
+                >) post-board, making it mathematically optimal to retain 1 or 2
+                removal copies.
+            </li>
+            <li style="margin-bottom: 0;">
+                <strong>Against Red Blast Suites (Sligh, Ponza):</strong> Trim expensive
+                or card-disadvantaged blue engines like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Intuition">Intuition</a
+                > and <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Frantic Search">Frantic Search</a
+                > to deny opponents devastating tempo trades against one-mana blasts
+                like <a href="#" class="card-hover" data-card-name="Pyroblast"
+                    >Pyroblast</a
+                > or Red Elemental Blast.
+            </li>
+        </ul>
+    </Card>
+    <DecklistTooltip />
+</Layout>
