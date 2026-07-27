@@ -34,72 +34,69 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             ]}
         />
 
-        <Card secondary={true} style="margin-bottom: 3rem;">
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                <div>
-                    <h3
-                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
-                    >
-                        Replenish (4 main)
-                    </h3>
-                    <p style="margin-top: 0; margin-bottom: 0;">
-                        The non-negotiable cornerstone of the archetype.
-                        Delivering massive, asymmetric tempo and permanent
-                        swings, running four copies is strictly essential
-                        regardless of your configuration.
-                    </p>
-                </div>
-                <div>
-                    <h3
-                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
-                    >
-                        Opalescence (4 main)
-                    </h3>
-                    <p style="margin-top: 0; margin-bottom: 0;">
-                        Transforms all non-Aura enchantments into creatures with
-                        power and toughness equal to their mana value. Note that
-                        Opalescence does not animate itself—a second copy on the
-                        battlefield is required to animate the first into a 4/4.
-                        Under a single Opalescence, your primary threats become
-                        massive combat clocks: Decree of Silence (8/8), Parallax
-                        Wave (4/4), Attunement (3/3), and Seal of Cleansing
-                        (2/2).
-                    </p>
-                </div>
-                <div>
-                    <h3
-                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
-                    >
-                        Parallax Wave (4 main)
-                    </h3>
-                    <p style="margin-top: 0; margin-bottom: 0;">
-                        Serves a dual role as early tactical defense and lethal
-                        end-game engine. Defensively, it controls hostile
-                        creature boards; paired with Opalescence, it initiates a
-                        permanent, one-sided creature exile loop while
-                        presenting a 4/4 body.
-                    </p>
-                </div>
-                <div>
-                    <h3
-                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
-                    >
-                        Attunement (4 main)
-                    </h3>
-                    <p style="margin-top: 0; margin-bottom: 0;">
-                        The foundational selection engine that digs three cards
-                        deep, curates the graveyard for Replenish, and attacks
-                        as a 3/3 under Opalescence. Avoid blind activations.
-                        Treat Attunement as a precise tactical tool rather than
-                        casual draw; before activating, explicitly identify the
-                        cards you intend to discard. If your current hand
-                        structure already dictates your upcoming sequence and
-                        lacks redundant discard fodder, preserve your hand and
-                        hold the activation.
-                    </p>
-                </div>
+        <div
+            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;"
+        >
+            <div>
+                <h3
+                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                >
+                    Replenish (4 main)
+                </h3>
+                <p style="margin-top: 0; margin-bottom: 0;">
+                    The non-negotiable cornerstone of the archetype. Delivering
+                    massive, asymmetric tempo and permanent swings, running four
+                    copies is strictly essential regardless of your
+                    configuration.
+                </p>
             </div>
-        </Card>
+            <div>
+                <h3
+                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                >
+                    Opalescence (4 main)
+                </h3>
+                <p style="margin-top: 0; margin-bottom: 0;">
+                    Transforms all non-Aura enchantments into creatures with
+                    power and toughness equal to their mana value. Note that
+                    Opalescence does not animate itself—a second copy on the
+                    battlefield is required to animate the first into a 4/4.
+                    Under a single Opalescence, your primary threats become
+                    massive combat clocks: Decree of Silence (8/8), Parallax
+                    Wave (4/4), Attunement (3/3), and Seal of Cleansing (2/2).
+                </p>
+            </div>
+            <div>
+                <h3
+                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                >
+                    Parallax Wave (4 main)
+                </h3>
+                <p style="margin-top: 0; margin-bottom: 0;">
+                    Serves a dual role as early tactical defense and lethal
+                    end-game engine. Defensively, it controls hostile creature
+                    boards; paired with Opalescence, it initiates a permanent,
+                    one-sided creature exile loop while presenting a 4/4 body.
+                </p>
+            </div>
+            <div>
+                <h3
+                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                >
+                    Attunement (4 main)
+                </h3>
+                <p style="margin-top: 0; margin-bottom: 0;">
+                    The foundational selection engine that digs three cards
+                    deep, curates the graveyard for Replenish, and attacks as a
+                    3/3 under Opalescence. Avoid blind activations. Treat
+                    Attunement as a precise tactical tool rather than casual
+                    draw; before activating, explicitly identify the cards you
+                    intend to discard. If your current hand structure already
+                    dictates your upcoming sequence and lacks redundant discard
+                    fodder, preserve your hand and hold the activation.
+                </p>
+            </div>
+        </div>
     </Card>
 
     <Card title="The Lock Piece" titleTag="h2">
@@ -143,26 +140,25 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             image="creatures/meddling_mage.webp"
         >
             <p style="margin-top: 0;">
-                Whether positioned proactively in the maindeck or retained in
-                the sideboard for Games 2 and 3, operating Meddling Mage
-                successfully demands rigorous situational awareness and precise
-                naming conventions.
+                While traditional configurations reserve creatures for
+                post-sideboard transformation to render opposing Game 1 spot
+                removal dead, running Meddling Mage in the maindeck provides an
+                immediate, highly disruptive shield against fast combo and
+                permission-dense control decks.
             </p>
-            <p>
-                Against Sligh, naming Lightning Bolt is designed primarily to
-                preserve Mage as a stable blocker against Jackal Pup, later
-                pivoting to closing burn spells like Fireblast or Ball
-                Lightning. Against control, prioritize Counterspell or Swords to
-                Plowshares. Against Stiflenought, lock out Phyrexian Dreadnought
-                or Stifle. Against Enchantress, name Argothian Enchantress or
-                Enchantress's Presence in Game 1, shifting to Tormod's Crypt in
-                Game 2.
-            </p>
-            <p>
-                Note that Mage underperforms against green heavy hitters,
-                midrange builds, and discard suites (e.g., The Rock, Ponza,
-                Terrageddon), where opposing creatures outclass a 2/2 body and
-                threats cannot be easily bottlenecked to a single named spell.
+            <p style="margin-bottom: 0;">
+                Operating Meddling Mage effectively requires precise metagame
+                anticipation and understanding of enemy bottleneck spells. For
+                exhaustive matchup-by-match naming conventions and
+                transformational sideboarding principles, consult our dedicated <a
+                    href="/sideboard"
+                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                    >Sideboard Analysis</a
+                > and <a
+                    href="/matchups"
+                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                    >Matchup Matrix</a
+                >.
             </p>
         </CardAnalysis>
     </Card>
@@ -182,46 +178,44 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             ]}
         />
 
-        <Card secondary={true} style="margin-bottom: 3rem;">
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                <div>
-                    <h3
-                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
-                    >
-                        Frantic Search (2-3 main)
-                    </h3>
-                    <p style="margin-top: 0; margin-bottom: 0;">
-                        Provides essential deck velocity and enables explosive
-                        development turns when paired with sol lands or
-                        painlands. However, because it incurs intrinsic card
-                        disadvantage, it is the most frequently trimmed tool
-                        post-sideboard against grinding control strategies where
-                        resource conservation is critical.
-                    </p>
-                </div>
-                <div>
-                    <h3
-                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
-                    >
-                        Intuition (3-4 main)
-                    </h3>
-                    <p style="margin-top: 0; margin-bottom: 0;">
-                        The archetype's most versatile selection engine and
-                        skill-testing tool. The standard combo pile is
-                        Opalescence, Parallax Wave, and Decree of
-                        Silence—guaranteeing that whichever piece the opponent
-                        selects, the other two fuel a subsequent Replenish. Yet
-                        piles must adapt dynamically to the board state: against
-                        Landstill, searching for three foundational lands
-                        secures crucial early drops; against fast aggro,
-                        tutoring for three copies of Swords to Plowshares
-                        ensures survival. Trimming copies against reactive blue
-                        decks is common practice to preserve overall threat
-                        density.
-                    </p>
-                </div>
+        <div
+            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;"
+        >
+            <div>
+                <h3
+                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                >
+                    Frantic Search (2-3 main)
+                </h3>
+                <p style="margin-top: 0; margin-bottom: 0;">
+                    Provides essential deck velocity and enables explosive
+                    development turns when paired with sol lands or painlands.
+                    However, because it incurs intrinsic card disadvantage, it
+                    is the most frequently trimmed tool post-sideboard against
+                    grinding control strategies where resource conservation is
+                    critical.
+                </p>
             </div>
-        </Card>
+            <div>
+                <h3
+                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                >
+                    Intuition (3-4 main)
+                </h3>
+                <p style="margin-top: 0; margin-bottom: 0;">
+                    The archetype's most versatile selection engine and
+                    skill-testing tool. The standard combo pile is Opalescence,
+                    Parallax Wave, and Decree of Silence—guaranteeing that
+                    whichever piece the opponent selects, the other two fuel a
+                    subsequent Replenish. Yet piles must adapt dynamically to
+                    the board state: against Landstill, searching for three
+                    foundational lands secures crucial early drops; against fast
+                    aggro, tutoring for three copies of Swords to Plowshares
+                    ensures survival. Trimming copies against reactive blue
+                    decks is common practice to preserve overall threat density.
+                </p>
+            </div>
+        </div>
     </Card>
 
     <Card title="Interaction" titleTag="h2">
@@ -243,59 +237,53 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             ]}
         />
 
-        <Card secondary={true} style="margin-bottom: 3rem;">
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                <div>
-                    <h3
-                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
-                    >
-                        Swords to Plowshares (3-4 main, 0-1 side)
-                    </h3>
-                    <p style="margin-top: 0; margin-bottom: 0;">
-                        The gold standard of one-mana spot removal. Three copies
-                        in the maindeck keep the strategy efficient and
-                        streamlined, while bringing in the fourth post-sideboard
-                        solidifies your defenses against creature-heavy builds.
-                    </p>
-                </div>
-                <div>
-                    <h3
-                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
-                    >
-                        Seal of Cleansing (2-3 main, 1 side)
-                    </h3>
-                    <p style="margin-top: 0; margin-bottom: 0;">
-                        Provides proactive interaction against problematic
-                        enchantments and mana artifacts. Because it can be
-                        sacrificed for instant tactical value and reanimated via
-                        Replenish, it functions as a recurring control engine.
-                        Easily sideboarded out against opponents lacking
-                        targets.
-                    </p>
-                </div>
-                <div>
-                    <h3
-                        style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
-                    >
-                        Tsabo’s Web (0-3 main, 1-3 side)
-                    </h3>
-                    <p style="margin-top: 0; margin-bottom: 0;">
-                        A clean, disruptive answer to utility lands like
-                        Rishadan Port, Dust Bowl, and Mishra's Factory. The
-                        precise number across the 75 shifts between one and
-                        three depending on the prevalence of mana-denial
-                        structures in your local metagame.
-                    </p>
-                </div>
-            </div>
-        </Card>
-    </Card>
-
-    <Card title="No Maindeck Mana Leak" titleTag="h2">
-        <CardAnalysis
-            title="Mana Leak (0-3 main)"
-            image="instants/mana_leak.webp"
+        <div
+            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;"
         >
+            <div>
+                <h3
+                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                >
+                    Swords to Plowshares (3-4 main, 0-1 side)
+                </h3>
+                <p style="margin-top: 0; margin-bottom: 0;">
+                    The gold standard of one-mana spot removal. Three copies in
+                    the maindeck keep the strategy efficient and streamlined,
+                    while bringing in the fourth post-sideboard solidifies your
+                    defenses against creature-heavy builds.
+                </p>
+            </div>
+            <div>
+                <h3
+                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                >
+                    Seal of Cleansing (2-3 main, 1 side)
+                </h3>
+                <p style="margin-top: 0; margin-bottom: 0;">
+                    Provides proactive interaction against problematic
+                    enchantments and mana artifacts. Because it can be
+                    sacrificed for instant tactical value and reanimated via
+                    Replenish, it functions as a recurring control engine.
+                    Easily sideboarded out against opponents lacking targets.
+                </p>
+            </div>
+            <div>
+                <h3
+                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                >
+                    Tsabo’s Web (0-3 main, 1-3 side)
+                </h3>
+                <p style="margin-top: 0; margin-bottom: 0;">
+                    A clean, disruptive answer to utility lands like Rishadan
+                    Port, Dust Bowl, and Mishra's Factory. The precise number
+                    across the 75 shifts between one and three depending on the
+                    prevalence of mana-denial structures in your local metagame.
+                </p>
+            </div>
+        </div>
+    </Card>
+    <Card title="Other Cards Worth Considering" titleTag="h2">
+        <CardAnalysis title="Mana Leak" image="instants/mana_leak.webp">
             <p style="margin-top: 0;">
                 Maindecking Mana Leak is an active metagame calculation. In
                 environments dominated by patient control strategies like
@@ -308,9 +296,6 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 exceptionally strong early shield.
             </p>
         </CardAnalysis>
-    </Card>
-
-    <Card title="Other Cards Worth Considering" titleTag="h2">
         <CardAnalysis
             title="Deep Analysis"
             image="sorceries/deep_analysis.webp"
@@ -420,30 +405,6 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 leading with a basic land is the safer path to avoid losing
                 tempo.
             </Alert>
-        </div>
-    </Card>
-
-    <Card title="Post-Tide Deckbuilding Rationale" titleTag="h2">
-        <p style="margin-bottom: 1.5rem;">
-            The ban of <a href="#" class="card-hover" data-card-name="Parallax Tide">Parallax Tide</a> naturally led to shifts in how the deck is constructed. Without Tide acting as an instant win-condition against opposing mana bases, modern lists have recalibrated their threat density and spot removal packages.
-        </p>
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div>
-                <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">
-                    Removal Realignment: The Seal & Disenchant Split
-                </h3>
-                <p style="margin-top: 0;">
-                    Historically, running a full four-of maindeck suite of <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> was mandatory because of its stack interaction with <a href="#" class="card-hover" data-card-name="Parallax Tide">Parallax Tide</a>: by sacrificing Seal to destroy your own Tide in response to its triggers, you could permanently exile five opposing lands without needing <a href="#" class="card-hover" data-card-name="Opalescence">Opalescence</a>. Without Tide in the format, drawing multiple maindeck Seals can clog up your hand. Modern lists typically trim maindeck numbers and often opt for a <strong>2/2 split between Seal of Cleansing and <a href="#" class="card-hover" data-card-name="Disenchant">Disenchant</a></strong> post-sideboard. This split ensures you have immediate answers against taxing enchantments like <a href="#" class="card-hover" data-card-name="Aura of Silence">Aura of Silence</a> (which makes casting Seal cost extra) while still retaining targets to return with Replenish in late-game loops.
-                </p>
-            </div>
-            <div>
-                <h3 style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);">
-                    The Creatureless 75 & Third Decree Option
-                </h3>
-                <p style="margin-top: 0;">
-                    While transforming post-sideboard into a creature beatdown deck with <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a> and <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a> remains a popular tactic, recent tournament results have proven the strength of running <strong>zero creatures across all 75 cards</strong>. By avoiding creature threats entirely, you completely invalidate your opponent's creature removal and sweeper packages, stranding dead cards in their hand. To ensure inevitability without creatures, these leaner lists often run a <strong>third maindeck copy of <a href="#" class="card-hover" data-card-name="Decree of Silence">Decree of Silence</a></strong> backed by a denser permission suite.
-                </p>
-            </div>
         </div>
     </Card>
 </Layout>

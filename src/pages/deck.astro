@@ -9,16 +9,12 @@ import { modernDecklists, getCopyString } from "@data/decklists";
 ---
 
 <Layout
-    title="Lists - Replenish Guide"
+    title="Tournament Lists - Replenish Guide"
     description="Browse the most successful and innovative Replenish decklists in MTG Premodern. Easily copy configurations directly to MTGO, from stock builds to experimental control shells."
 >
     <PageHeader
-        title="Lists"
+        title="Tournament Lists"
         description="Below are four competitive configurations of Parallax Replenish, spanning standard championship builds to analytical control variants."
-        imageSrc="/src/assets/banners/attunement.jpeg"
-        imageAlt="Attunement"
-        imageCaption="Attunement by Randy Gallegos"
-        isCard={true}
     />
 
     <Card title="Key Differences" titleTag="h2">
@@ -58,6 +54,31 @@ import { modernDecklists, getCopyString } from "@data/decklists";
                 like Alessandro Galli’s retain creatures strictly in the sideboard,
                 intentionally insulating the combo engine by blanking the opponent's
                 spot removal during Game 1.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>The Creatureless 75 Architecture:</strong> While traditional
+                post-board strategies rely on transforming into a creature beatdown
+                deck with <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Exalted Angel">Exalted Angel</a
+                > and <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Meddling Mage">Meddling Mage</a
+                >, modern competitive results have demonstrated the strategic
+                viability of running
+                <strong>zero creatures across all 75 cards</strong>. By entirely
+                foregoing creature threats, you permanently invalidate your
+                opponent's spot removal and anti-creature sweeper packages
+                post-board. To ensure inevitability without combat damage,
+                creatureless builds systematically incorporate the <strong
+                    >third maindeck copy of <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Decree of Silence">Decree of Silence</a
+                    ></strong
+                > backed by denser instant-speed permission.
             </li>
         </ul>
     </Card>
