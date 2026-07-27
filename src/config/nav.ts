@@ -38,7 +38,6 @@ export const SIDEBAR_GROUPS: NavGroup[] = [
         items: [
             { name: "Playing Through Hate", href: "/playing-through-hate" },
             { name: "Matchup Analysis", href: "/matchups" },
-            { name: "Sideboard Matrix", href: "/sideboard-matrix" },
         ],
     },
     {

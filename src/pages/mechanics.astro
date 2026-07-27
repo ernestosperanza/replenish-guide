@@ -2,7 +2,6 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
-import WipAlert from "@components/WipAlert.astro";
 import { Card } from "webcoreui/astro";
 ---
 
@@ -12,17 +11,13 @@ import { Card } from "webcoreui/astro";
 >
     <PageHeader
         title="Deck Mechanics"
-        imageSrc="/src/assets/banners/opalescence.jpeg"
-        imageAlt="Opalescence"
-        imageCaption="Opalescence by John Avon"
+        imageSrc="/src/assets/banners/seal.jpeg"
+        imageAlt="Seal of Cleansing"
+        imageCaption="Seal of Cleansing by Christopher Moeller"
         isCard={true}
     />
-    <WipAlert />
-    <Card
-        title="Core Combos & Locks"
-        titleTag="h2"
-        style="margin-bottom: 0.5rem;"
-    >
+
+    <Card title="The Opalescence & Parallax Wave Engine" titleTag="h2">
         <h3 style="margin-top: 0;">Opal-Wave Permanent Exile</h3>
         <p>
             With <a href="#" class="card-hover" data-card-name="Opalescence"
@@ -82,7 +77,7 @@ import { Card } from "webcoreui/astro";
         </p>
 
         <h3 style="margin-top: 2.5rem;">Opalescence & Summoning Sickness</h3>
-        <p>
+        <p style="margin-bottom: 0;">
             A frequent analytical misstep among inexperienced pilots is assuming
             a resolved <a href="#" class="card-hover" data-card-name="Replenish"
                 >Replenish</a
@@ -103,27 +98,11 @@ import { Card } from "webcoreui/astro";
             > is essential to completely insulate your position across a full turn
             cycle before delivering lethal damage.
         </p>
+    </Card>
 
-        <h3 style="margin-top: 2.5rem;">The Decree Lock</h3>
-        <p>
-            Post-<a href="#" class="card-hover" data-card-name="Replenish"
-                >Replenish</a
-            > with all three structural anchors assembled (<a
-                href="#"
-                class="card-hover"
-                data-card-name="Opalescence">Opalescence</a
-            >, <a href="#" class="card-hover" data-card-name="Parallax Wave"
-                >Parallax Wave</a
-            >, and <a
-                href="#"
-                class="card-hover"
-                data-card-name="Decree of Silence">Decree of Silence</a
-            >), all opposing creatures are systematically exiled and every
-            inbound spell is unconditionally countered.
-        </p>
-
-        <h3 style="margin-top: 2.5rem;">Resetting Decree with Wave</h3>
-        <p>
+    <Card title="The Decree of Silence Lock" titleTag="h2">
+        <h3 style="margin-top: 0;">Resetting Decree with Wave</h3>
+        <p style="margin-bottom: 0;">
             When <a
                 href="#"
                 class="card-hover"
@@ -142,30 +121,10 @@ import { Card } from "webcoreui/astro";
             this brief gap, Decree simply returns as an unenchantment object ready
             to counter their next three plays.
         </p>
+    </Card>
 
-        <h3 style="margin-top: 2.5rem;">Value Replenish</h3>
-        <p>
-            Championship matches do not strictly require assembling the complete
-            three-piece lock. Resolving <a
-                href="#"
-                class="card-hover"
-                data-card-name="Replenish">Replenish</a
-            > purely for incremental tactical value—such as reanimating a solitary
-            <a href="#" class="card-hover" data-card-name="Decree of Silence"
-                >Decree of Silence</a
-            > to asphyxiate an opponent holding high-mana spells, or recurring <a
-                href="#"
-                class="card-hover"
-                data-card-name="Opalescence">Opalescence</a
-            > paired with <a
-                href="#"
-                class="card-hover"
-                data-card-name="Parallax Wave">Parallax Wave</a
-            > to completely dominate creature boards—is frequently sufficient to clinch
-            decisive victories.
-        </p>
-
-        <h3 style="margin-top: 2.5rem;">Protecting Your Board</h3>
+    <Card title="Board Protection & Stack Interactions" titleTag="h2">
+        <h3 style="margin-top: 0;">Protecting Your Board</h3>
         <p>
             If an opponent resolves mass sweeping removal such as <a
                 href="#"
@@ -189,7 +148,7 @@ import { Card } from "webcoreui/astro";
         </p>
 
         <h3 style="margin-top: 2.5rem;">Parallax Wave + Disenchant Effect</h3>
-        <p>
+        <p style="margin-bottom: 0;">
             Independent of Opalescence, you can engineer permanent creature
             removal utilizing <a
                 href="#"
@@ -213,11 +172,7 @@ import { Card } from "webcoreui/astro";
         </p>
     </Card>
 
-    <Card
-        title="Synergies & Tricks"
-        titleTag="h2"
-        style="margin-bottom: 0.5rem;"
-    >
+    <Card title="Post-Sideboard Creature Synergies" titleTag="h2">
         <h3 style="margin-top: 0;">Parallax Wave Creature Synergies</h3>
         <p>
             Beyond clearing adversarial boards, <a
@@ -226,14 +181,14 @@ import { Card } from "webcoreui/astro";
                 data-card-name="Parallax Wave">Parallax Wave</a
             > exhibits profound synergy with your own creature packages, particularly
             post-sideboard. <em
-                >Note: The initial two maneuvers rely on active <a
+                >Note: These maneuvers rely on active <a
                     href="#"
                     class="card-hover"
                     data-card-name="Opalescence">Opalescence</a
                 > and Wave presence to execute immediate loop flickers.</em
             >
         </p>
-        <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
+        <ul style="padding-left: 1.25rem; margin-bottom: 0;">
             <li style="margin-bottom: 1rem;">
                 <strong>Flipping Exalted Angel for Free:</strong> Deploying <a
                     href="#"
@@ -249,7 +204,7 @@ import { Card } from "webcoreui/astro";
                 unmorph cost while presenting an immediate 4/5 flying lifelink
                 threat.
             </li>
-            <li style="margin-bottom: 1rem;">
+            <li style="margin-bottom: 0;">
                 <strong>Resetting Meddling Mage:</strong> If an opponent reveals alternative
                 threat avenues or circumvents your primary named restriction, target
                 your own <a
@@ -260,24 +215,11 @@ import { Card } from "webcoreui/astro";
                 Mage permits declaring an entirely new target name tailored to the
                 evolving board state.
             </li>
-            <li style="margin-bottom: 1rem;">
-                <strong>Creature Protection (Safe-Housing):</strong> Utilizing Wave
-                independently without Opalescence allows you to "safe-house" vulnerable
-                creatures like <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Meddling Mage">Meddling Mage</a
-                > or <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Exalted Angel">Exalted Angel</a
-                > in response to opposing lethal sweepers or spot removal. Exiling
-                your own creatures shelters them until Wave naturally depletes its
-                fading counters later in the game, returning your clock unharmed.
-            </li>
         </ul>
+    </Card>
 
-        <h3 style="margin-top: 2.5rem;">Asymmetrical Tsabo's Web</h3>
+    <Card title="Mana Mechanics & Tax Evasion" titleTag="h2">
+        <h3 style="margin-top: 0;">Asymmetrical Tsabo's Web</h3>
         <p>
             Competitive Replenish relies on <a
                 href="#"
@@ -314,7 +256,7 @@ import { Card } from "webcoreui/astro";
                 data-card-name="Frantic Search">Frantic Search</a
             > unlocks pivotal logistical combat mana tricks:
         </p>
-        <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
+        <ul style="padding-left: 1.25rem; margin-bottom: 2.5rem;">
             <li style="margin-bottom: 1rem;">
                 <strong>Netting Mana via Ancient Tomb:</strong> While Frantic Search
                 conventionally operates as a zero-net-cost discard mechanism, resolving
@@ -333,37 +275,29 @@ import { Card } from "webcoreui/astro";
                     >Replenish</a
                 > while preserving open interaction mana.
             </li>
-            <li style="margin-bottom: 1rem;">
-                <strong>Bypassing Rishadan Port:</strong> When an opponent activates
-                <a href="#" class="card-hover" data-card-name="Rishadan Port"
-                    >Rishadan Port</a
-                > during your upkeep, float the targeted land's mana in response.
-                Following resolution, utilize that floating mana to cast <a
+            <li style="margin-bottom: 0;">
+                <strong>Bypassing Upkeep Tap Disruptors:</strong> When confronting
+                opposing upkeep mana denial such as <a
                     href="#"
                     class="card-hover"
-                    data-card-name="Frantic Search">Frantic Search</a
-                >, immediately untapping your disrupted lands and neutralizing
-                their interactive tempo play.
-            </li>
-            <li style="margin-bottom: 1rem;">
-                <strong>Bypassing Tangle Wire Taxes:</strong> When confronting an
-                opposing <a
+                    data-card-name="Rishadan Port">Rishadan Port</a
+                > activations or <a
                     href="#"
                     class="card-hover"
                     data-card-name="Tangle Wire">Tangle Wire</a
-                > tap trigger during your upkeep, float all available mana across
-                your targeted lands in response. Permit the tap trigger to resolve,
-                exhausting your board state, and then immediately expend the floating
-                mana on <a
+                > tap triggers, float all available mana across your targeted lands
+                in response. After the tap effects resolve and exhaust your board state,
+                immediately utilize that floating mana to cast <a
                     href="#"
                     class="card-hover"
                     data-card-name="Frantic Search">Frantic Search</a
-                > to cleanly re-untap three core lands for main-phase execution.
+                >—cleanly untapping three core lands to execute main-phase development
+                and completely neutralize their interactive tempo play.
             </li>
         </ul>
 
-        <h3 style="margin-top: 2.5rem;">Attunement's Built-in Protection</h3>
-        <p>
+        <h3 style="margin-top: 0;">Attunement's Built-in Protection</h3>
+        <p style="margin-bottom: 0;">
             The activation syntax of <a
                 href="#"
                 class="card-hover"
@@ -386,4 +320,5 @@ import { Card } from "webcoreui/astro";
         </p>
     </Card>
     <DecklistTooltip />
+</Layout>p />
 </Layout>
