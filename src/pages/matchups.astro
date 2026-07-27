@@ -6,8 +6,10 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 import { Select, Badge, Card } from "webcoreui/astro";
 ---
 
-<Layout title="Matchups - Replenish Guide"
-    description="Detailed matchup analysis for Replenish in Premodern. Learn how to beat The Rock, Sligh, Goblins, Burn, and other tier 1 strategies.">
+<Layout
+    title="Matchups - Replenish Guide"
+    description="Detailed matchup analysis for Replenish in Premodern. Learn how to beat The Rock, Sligh, Goblins, Burn, and other tier 1 strategies."
+>
     <PageHeader title="Matchups" />
     <Card title="Matchups Analysis" titleTag="h2">
         <p
@@ -261,46 +263,97 @@ import { Select, Badge, Card } from "webcoreui/astro";
                     ]}
                 />
                 <p>
-                    Endpoint theory works here. Be patient, preserve your
-                    resources, and your last Replenish will resolve. I usually
-                    hard cast a few Decrees, but cycling Decree is an
-                    uncounterable cantrip that opponents consistently
-                    undervalue.
+                    <strong>Core Gameplan:</strong> Landstill relies on slow, incremental
+                    advantage and typically fields a restricted density of active
+                    blue mana sources on the board. Your overarching objective is
+                    to accumulate resources patiently and then overload their blue
+                    mana entirely within a single critical turn cycle. While they
+                    can often counter one or two test spells, initiating your sequence
+                    when they have only 3 to 4 open blue sources consistently ensures
+                    your lethal <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Replenish">Replenish</a
+                    > resolves as the terminal spell on the stack.
                 </p>
                 <p>
-                    Post-board, your strategy often involves overloading their
-                    mana on one critical turn. They usually only have enough
-                    blue sources to cast 3-4 counterspells in a single turn
-                    cycle. You can use cheap "must-counters" like Orim's Chant
-                    and Abeyance to force them to tap down, then slam your real
-                    threats. <br /><em>Why not Mana Short?</em> While it seems perfect
-                    for overloading mana, it was dismissed by the community because
-                    it's too expensive to use defensively, it doesn't stop free counters
-                    like Foil or Thwart, and it lacks the utility of Abeyance (which
-                    draws a card and stops activated abilities like cycling).
+                    <strong
+                        >Tactical Tools (Chant & Abeyance vs. Mana Short):</strong
+                    > In post-board games, strictly prioritize low-cost interaction
+                    like <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Orim's Chant">Orim's Chant</a
+                    > and <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Abeyance">Abeyance</a
+                    > over costly alternatives like <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Mana Short">Mana Short</a
+                    >. Because Chant and Abeyance cost just one and two mana
+                    respectively, you can deploy them as high-leverage
+                    "must-counter" threats without taxing your own mana
+                    development. Most importantly, resolving an Abeyance or
+                    Chant completely shuts off zero-mana interaction like <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Foil">Foil</a
+                    > or <a href="#" class="card-hover" data-card-name="Thwart"
+                        >Thwart</a
+                    >—which Mana Short entirely fails to intercept—while
+                    Abeyance provides the dual utility of drawing a card and
+                    locking out <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Mishra's Factory">Mishra's Factory</a
+                    > and cycling activations.
                 </p>
                 <p>
-                    When you do jam Mage on turn 2, make sure you have a hand
-                    that backs it up. Look at your hand and ask what your turn 3
-                    and turn 4 plays are. If there's no follow-up, wait until
-                    you have a plan for the next few turns before you start
-                    deploying spells. When you do play Mage, name whatever your
-                    hand can't already deal with. If your hand beats
-                    Counterspell, name their card draw. If you're setting up a
-                    combo turn and want them to waste time killing the Mage,
-                    name Counterspell. If you want the body to stick around,
-                    name Swords.
+                    <strong>Deploying Meddling Mage:</strong> When deploying an early
+                    <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Meddling Mage">Meddling Mage</a
+                    > on turn 2, evaluate your immediate follow-up lines for turns
+                    3 and 4 before casting it. If you are preparing a decisive combo
+                    turn and simply want to consume their countermagic or mana, name
+                    <a href="#" class="card-hover" data-card-name="Counterspell"
+                        >Counterspell</a
+                    >. If your hand requires proactive board presence to apply
+                    combat pressure while retaining the body, name <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Swords to Plowshares"
+                        >Swords to Plowshares</a
+                    > or their primary card draw engine.
                 </p>
                 <p>
-                    <strong>Sideboard:</strong> Full transformation. Frantic, Wave,
-                    Intuition, excess Swords out. Grid, Angels, Abeyance, Arcane Denial,
-                    fourth Mage in. You become a midrange threat deck. <em
+                    <strong>Sideboard Execution:</strong> Proactively deploy early
+                    permanent solutions—specifically bringing in your 4th <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Seal of Cleansing">Seal of Cleansing</a
+                    > and copies of <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Tsabo's Web">Tsabo's Web</a
+                    >. An active Seal sitting on the battlefield completely
+                    neutralizes their ability to stick a <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Standstill">Standstill</a
+                    >, while Tsabo's Web dismantles both their operational mana
+                    production and their Mishra's Factory combat clock. <em
                         >Note:</em
-                    > Avoid <strong>Deep Analysis</strong> against Landstill and UW
-                    Dreadnought lists playing Fling, as the 3 life cost is too huge
-                    of a liability. Bringing in the 4th <strong
-                        >Seal of Cleansing</strong
-                    > is highly recommended.
+                    > Strictly avoid utilizing <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Deep Analysis">Deep Analysis</a
+                    > against Landstill and UW Dreadnought variants running Fling,
+                    as incurring a voluntary 3-life liability severely compromises
+                    your survival against high-impact finish lines.
                 </p>
             </Card>
             <Card
@@ -444,54 +497,20 @@ import { Select, Badge, Card } from "webcoreui/astro";
                     ]}
                 />
                 <p>
-                    Newer variants running Wretched Anurid and Grinning Demon
-                    are a serious threat. Combined with their infinite early
-                    discard, assembling the traditional combo is very difficult.
-                    The defining headache post-ban is facing the lethal
-                    combination of discard, <code>Withered Wretch</code> (which repeatedly
-                    shreds your graveyard), and <code>Gloom</code>.
+                    <strong>High-Variance Confrontation:</strong> Moneyball represents an exceptionally volatile, high-variance matchup governed by an oppressive triad of interaction: exhaustive early hand disruption (discard), repeatable graveyard eradication via <a href="#" class="card-hover" data-card-name="Withered Wretch">Withered Wretch</a>, and debilitating color-scoped taxing via <a href="#" class="card-hover" data-card-name="Gloom">Gloom</a> alongside efficient threats like <a href="#" class="card-hover" data-card-name="Wretched Anurid">Wretched Anurid</a> and <a href="#" class="card-hover" data-card-name="Grinning Demon">Grinning Demon</a>.
                 </p>
                 <p>
-                    <em>Key Heuristics:</em>
-                </p>
-                <ul style="padding-left: 1.25rem;">
-                    <li style="margin-bottom: 0.5rem;">
-                        <strong>Keep 4+ Lands:</strong> Against exhaustive discard,
-                        you want to keep hands with heavy mana (4+ lands). This guarantees
-                        you can cast whatever you topdeck without stumbling.
-                    </li>
-                    <li style="margin-bottom: 0.5rem;">
-                        <strong>Attunement's Role:</strong>
-                        <code>Attunement</code> is critical. Even if they wipe your
-                        graveyard with Wretch, an active Attunement lets you instantly
-                        rebuild a fresh graveyard the moment their hate piece is handled.
-                    </li>
-                    <li style="margin-bottom: 0.5rem;">
-                        <strong>The Midrange Pivot:</strong>
-                        <code>Exalted Angel</code> is incredibly effective here. Not
-                        only is it completely immune to <code>Gloom</code>'s tax
-                        effect, but it allows you to pivot into a midrange plan
-                        while they are over-sideboarding for the graveyard.
-                    </li>
-                </ul>
-                <p>
-                    <em>Fun interaction:</em> If they have a Wretched Anurid on the
-                    board and you manage to resolve Opalescence and Parallax Wave,
-                    you can infinitely blink your own enchantments. This triggers
-                    their Anurid infinitely, dealing lethal damage to them instantly.
+                    <strong>Core Gameplan (The Attunement MVP):</strong> <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a> is unequivocally the most valuable player in this matchup. First, it systematically transforms stagnant land floods—often retained to guarantee land drops through discard—into live gas. Most importantly, **Attunement functions as a defensive resource vault by allowing you to float critical pieces on top of your library, making them entirely immune to continuous hand discard and Dystopia.** Even against an active Withered Wretch, maintaining an operational Attunement allows you to explosively load a fresh graveyard on the exact turn their graveyard interaction is neutralized.
                 </p>
                 <p>
-                    <strong>Sideboard:</strong> Don't side out Intuition. Sacrificing
-                    all your velocity makes you too much of a control deck against
-                    a strategy that preys on control. You want to trim card disadvantage
-                    like Frantic Search instead. Alter Reality is a fantastic silver
-                    bullet against Gloom that you can easily Intuition for. Nevinyrral's
-                    Disk is also highly recommended if you have it, as it's a clean
-                    answer to Gloom, Dystopia, Humility, and Cursed Totem all at once.<br
-                    />
-                    <em>Typical Ins:</em> +3 Exalted Angel, +1 Seal of Cleansing,
-                    +1 Wrath of God, +1 Alter Reality. Keep your Swords to Plowshares
-                    to handle their big Demons and Anurids.
+                    <strong>Sideboard Strategy (Seal Priority & Morph Evasion):</strong> Post-board execution prioritizes landing an early <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> to preemptively dismantle <a href="#" class="card-hover" data-card-name="Gloom">Gloom</a> before its three-mana tax locks out your white spells and enchantment activations. Crucially, pivoting to <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a> wins games single-handedly: **by deploying Angel face-down via morph on turn 2 and unmorphing it on turn 3, you completely evade Gloom's three-mana casting surcharge, bypass their dedicated graveyard disruption entirely, and force the aggressive player into an unwinnable race against a 4/5 flying lifelinker.**
+                </p>
+                <p>
+                    <em>Tactical Interaction:</em> If an opponent controls an active Wretched Anurid and you successfully assemble an Opalescence + Parallax Wave loop, initiating infinite self-blink loops causes creatures to repeatedly enter the battlefield—triggering their own Anurid infinitely for instant lethal life-loss.
+                </p>
+                <p>
+                    <strong>Sideboard Transformations:</strong> Maintain your full suite of <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a>; sacrificing your velocity slows your gameplan to a halt against an aggressive framework designed to punish pure control. Instead, trim card-disadvantage manipulation like <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a>. Retain high-efficiency spot removal (<a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a>) specifically to intercept Withered Wretch and high-clock beaters.<br />
+                    <em>Standard Transitions:</em> +3 <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a>, +1 <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a>, +1 <a href="#" class="card-hover" data-card-name="Wrath of God">Wrath of God</a>, and targeted silver bullets like <a href="#" class="card-hover" data-card-name="Alter Reality">Alter Reality</a> or <a href="#" class="card-hover" data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a> when available.
                 </p>
             </Card>
             <Card

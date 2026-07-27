@@ -14,7 +14,6 @@ export const SIDEBAR_GROUPS: NavGroup[] = [
         items: [
             { name: "Introduction", href: "/" },
             { name: "History", href: "/history" },
-            { name: "Lists", href: "/deck" },
         ],
     },
     {
@@ -22,15 +21,16 @@ export const SIDEBAR_GROUPS: NavGroup[] = [
         items: [
             { name: "Maindeck", href: "/analysis" },
             { name: "Sideboard", href: "/sideboard" },
+            { name: "Tournament Lists", href: "/deck" },
         ],
     },
     {
         title: "Gameplay",
         items: [
+            { name: "Macro Strategy", href: "/strategy" },
             { name: "Mulligan Guide", href: "/mulligan" },
-            { name: "Mechanics", href: "/mechanics" },
+            { name: "Mechanics & Loops", href: "/mechanics" },
             { name: "Intuition Guide", href: "/intuition" },
-            { name: "Strategy", href: "/strategy" },
         ],
     },
     {
