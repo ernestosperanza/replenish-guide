@@ -2,7 +2,7 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import CardGrid from "@components/CardGrid.astro";
-import { Card, Alert } from "webcoreui/astro";
+import { Card, Alert, Badge } from "webcoreui/astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 ---
 
@@ -11,6 +11,17 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     description="Deep dive into the core cards and strategy of the Replenish deck. Understand the purpose of every enchantment, cantrip, and interaction spell in the maindeck and sideboard."
 >
     <PageHeader title="Maindeck Analysis" />
+    <Card>
+        <p style="margin-top: 0; margin-bottom: 0;">
+            The post-ban Replenish maindeck operates as a calculated
+            combo-control architecture. Every slot across the 60 cards is
+            strictly allocated to balance early deck velocity, resilient mana
+            development, proactive defense against fast hostile metagames, and
+            graveyard sculpting for lethal turns. Below is an analytical
+            breakdown of the mandatory staples and flex configurations that
+            define contemporary winning lists.
+        </p>
+    </Card>
     <Card title="The Core" titleTag="h2">
         <CardGrid
             width="180px"
@@ -38,11 +49,14 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;"
         >
             <div>
-                <h3
-                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
                 >
-                    Replenish (4 main)
-                </h3>
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Replenish
+                    </h3>
+                    <Badge theme="secondary" small={true}>4 Main</Badge>
+                </div>
                 <p style="margin-top: 0; margin-bottom: 0;">
                     The non-negotiable cornerstone of the archetype. Delivering
                     massive, asymmetric tempo and permanent swings, running four
@@ -51,11 +65,14 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 </p>
             </div>
             <div>
-                <h3
-                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
                 >
-                    Opalescence (4 main)
-                </h3>
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Opalescence
+                    </h3>
+                    <Badge theme="secondary" small={true}>4 Main</Badge>
+                </div>
                 <p style="margin-top: 0; margin-bottom: 0;">
                     Transforms all non-Aura enchantments into creatures with
                     power and toughness equal to their mana value. Note that
@@ -67,11 +84,14 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 </p>
             </div>
             <div>
-                <h3
-                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
                 >
-                    Parallax Wave (4 main)
-                </h3>
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Parallax Wave
+                    </h3>
+                    <Badge theme="secondary" small={true}>4 Main</Badge>
+                </div>
                 <p style="margin-top: 0; margin-bottom: 0;">
                     Serves a dual role as early tactical defense and lethal
                     end-game engine. Defensively, it controls hostile creature
@@ -80,11 +100,14 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 </p>
             </div>
             <div>
-                <h3
-                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
                 >
-                    Attunement (4 main)
-                </h3>
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Attunement
+                    </h3>
+                    <Badge theme="secondary" small={true}>4 Main</Badge>
+                </div>
                 <p style="margin-top: 0; margin-bottom: 0;">
                     The foundational selection engine that digs three cards
                     deep, curates the graveyard for Replenish, and attacks as a
@@ -101,7 +124,8 @@ import CardAnalysis from "@components/CardAnalysis.astro";
 
     <Card title="The Lock Piece" titleTag="h2">
         <CardAnalysis
-            title="Decree of Silence (2-3 main)"
+            title="Decree of Silence"
+            badge="2–3 Main"
             image="enchantments/decree_of_silence.jpg"
         >
             <p style="margin-top: 0;">
@@ -136,7 +160,8 @@ import CardAnalysis from "@components/CardAnalysis.astro";
 
     <Card title="Proactive Disruption" titleTag="h2">
         <CardAnalysis
-            title="Meddling Mage (0-4 main)"
+            title="Meddling Mage"
+            badge="0–4 Main"
             image="creatures/meddling_mage.webp"
         >
             <p style="margin-top: 0;">
@@ -161,6 +186,39 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 >.
             </p>
         </CardAnalysis>
+
+        <CardAnalysis
+            title="Abeyance"
+            badge="1–3 Main · 0–2 Side"
+            image="instants/abeyance.jpg"
+        >
+            <p style="margin-top: 0;">
+                A crucial staple in modern competitive lists, Abeyance functions
+                as both an unassailable protective shield for your combo turns
+                and a disruptive tempo instrument against hostile decks. Because
+                it restricts opponents from casting instants, sorceries, or
+                activating permanent abilities until end of turn, resolving it
+                immediately prior to casting <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                > guarantees uninterrupted reanimation while silencing artifact interaction
+                like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Tormod's Crypt">Tormod's Crypt</a
+                >.
+            </p>
+            <p style="margin-bottom: 0;">
+                Furthermore, since Abeyance replaces itself by drawing a card
+                upon resolution, it can be aggressively cast during an
+                opponent's upkeep to stall development turns, shut off <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Wasteland">Wasteland</a
+                > activations, or incapacitate threats with activated abilities.
+            </p>
+        </CardAnalysis>
     </Card>
 
     <Card title="Card Selection" titleTag="h2">
@@ -182,11 +240,14 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;"
         >
             <div>
-                <h3
-                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
                 >
-                    Frantic Search (2-3 main)
-                </h3>
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Frantic Search
+                    </h3>
+                    <Badge theme="secondary" small={true}>2–3 Main</Badge>
+                </div>
                 <p style="margin-top: 0; margin-bottom: 0;">
                     Provides essential deck velocity and enables explosive
                     development turns when paired with sol lands or painlands.
@@ -197,11 +258,14 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 </p>
             </div>
             <div>
-                <h3
-                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
                 >
-                    Intuition (3-4 main)
-                </h3>
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Intuition
+                    </h3>
+                    <Badge theme="secondary" small={true}>3–4 Main</Badge>
+                </div>
                 <p style="margin-top: 0; margin-bottom: 0;">
                     The archetype's most versatile selection engine and
                     skill-testing tool. The standard combo pile is Opalescence,
@@ -209,10 +273,16 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                     whichever piece the opponent selects, the other two fuel a
                     subsequent Replenish. Yet piles must adapt dynamically to
                     the board state: against Landstill, searching for three
-                    foundational lands secures crucial early drops; against fast
-                    aggro, tutoring for three copies of Swords to Plowshares
-                    ensures survival. Trimming copies against reactive blue
-                    decks is common practice to preserve overall threat density.
+                    lands; against fast aggro, tutoring for three copies of
+                    Swords to Plowshares ensures survival. Trimming copies
+                    against reactive blue decks is common practice to preserve
+                    overall threat density. For an exhaustive masterclass on
+                    generating tactical piles and navigating tricky board
+                    states, consult our dedicated <a
+                        href="/intuition"
+                        style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                        >Intuition Guide</a
+                    >.
                 </p>
             </div>
         </div>
@@ -241,11 +311,16 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;"
         >
             <div>
-                <h3
-                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
                 >
-                    Swords to Plowshares (3-4 main, 0-1 side)
-                </h3>
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Swords to Plowshares
+                    </h3>
+                    <Badge theme="secondary" small={true}
+                        >3–4 Main · 0–1 Side</Badge
+                    >
+                </div>
                 <p style="margin-top: 0; margin-bottom: 0;">
                     The gold standard of one-mana spot removal. Three copies in
                     the maindeck keep the strategy efficient and streamlined,
@@ -254,11 +329,16 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 </p>
             </div>
             <div>
-                <h3
-                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
                 >
-                    Seal of Cleansing (2-3 main, 1 side)
-                </h3>
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Seal of Cleansing
+                    </h3>
+                    <Badge theme="secondary" small={true}
+                        >2–3 Main · 0-2 Side</Badge
+                    >
+                </div>
                 <p style="margin-top: 0; margin-bottom: 0;">
                     Provides proactive interaction against problematic
                     enchantments and mana artifacts. Because it can be
@@ -268,11 +348,16 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 </p>
             </div>
             <div>
-                <h3
-                    style="margin-top: 0; margin-bottom: 0.5rem; color: var(--w-color-primary-10);"
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
                 >
-                    Tsabo’s Web (0-3 main, 1-3 side)
-                </h3>
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Tsabo’s Web
+                    </h3>
+                    <Badge theme="secondary" small={true}
+                        >0–3 Main · 1–3 Side</Badge
+                    >
+                </div>
                 <p style="margin-top: 0; margin-bottom: 0;">
                     A clean, disruptive answer to utility lands like Rishadan
                     Port, Dust Bowl, and Mishra's Factory. The precise number
@@ -283,47 +368,59 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         </div>
     </Card>
     <Card title="Other Cards Worth Considering" titleTag="h2">
-        <CardAnalysis title="Mana Leak" image="instants/mana_leak.webp">
+        <CardAnalysis
+            title="Mana Leak"
+            badge="0–3 Flex"
+            image="instants/mana_leak.webp"
+        >
             <p style="margin-top: 0;">
-                Maindecking Mana Leak is an active metagame calculation. In
-                environments dominated by patient control strategies like
-                Landstill—where games extend and opponents accumulate ample mana
-                to pay the additional three—it suffers noticeable diminishing
-                returns. However, as faster interactive decks like Esper
-                Psychatog and post-ban Replenish mirrors gain prominence, cheap
-                interactive countermagic rises in value. If your local field
-                demands robust early-turn protection, Mana Leak provides an
-                exceptionally strong early shield.
+                Running Mana Leak in the maindeck is a calculated metagame
+                adjustment. In fields saturated with slow, patient control
+                archetypes like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Standstill">Landstill</a
+                >, where games extend until opponents accumulate ample lands,
+                conditional three-mana surcharges degrade in utility. However,
+                in aggressive environments featuring combo decks or reactive
+                mirrors like Esper Psychatog and tempo Replenish builds, cheap
+                two-mana countermagic provides critical early-turn protection.
             </p>
         </CardAnalysis>
         <CardAnalysis
             title="Deep Analysis"
+            badge="0–1 Flex"
             image="sorceries/deep_analysis.webp"
         >
             <p style="margin-top: 0;">
-                While omitted from stock builds, Deep Analysis transforms
-                Intuition into a potent card advantage generator in slower
-                matchups where card volume matters more than raw velocity.
-                Rather than tutoring for combo pieces against heavy
-                control—which risks exposing threats to graveyard hate—tutoring
-                for Deep Analysis ensures persistent draw power from both hand
-                and graveyard. In metagames saturated with Landstill or
-                comparable slow blue decks, one maindeck copy deserves serious
-                consideration.
+                A potent utility piece that transforms an early <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Intuition">Intuition</a
+                > into a sustainable card-advantage engine during slower matchups.
+                Against permission-heavy control, tutoring directly for combo pieces
+                risks exposing vital threats to graveyard exiles; targeting Deep Analysis
+                instead guarantees persistent draw power from both hand and graveyard.
+                Including a single maindeck copy is an effective tool for out-grinding
+                traditional draw-go structures.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
             title="Fact or Fiction"
+            badge="0–2 Flex"
             image="instants/fact_or_fiction.webp"
         >
             <p style="margin-top: 0;">
-                A defining staple for reactive, instant-speed variations of the
-                deck that actively leverage countermagic suites like Mana Leak
-                and Counterspell. While the four-mana investment is non-trivial,
-                digging five cards deep provides premier selection while
-                generating skill-testing piles that put tremendous cognitive
-                pressure on your opponent.
+                An established option for reactive, instant-speed variations
+                that hold open countermagic suites like Mana Leak and <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Counterspell">Counterspell</a
+                >. While a four-mana investment is demanding, digging five cards
+                deep offers efficient end-of-turn selection, allowing you to
+                quickly deposit discarded enchantments into the graveyard or
+                sculpt defensive answers without relinquishing tempo.
             </p>
         </CardAnalysis>
     </Card>
@@ -331,11 +428,15 @@ import CardAnalysis from "@components/CardAnalysis.astro";
     <Card title="The Mana Base" titleTag="h2">
         <h3 style="margin-top: 0;">Mana Base Theory</h3>
         <p>
-            <strong>25-26 Lands</strong><br />Extensive testing across 24, 25,
-            and 26 lands reveals twenty-five as the optimal threshold for
-            balancing reliable early land drops with spell density, though
-            twenty-six remains entirely justifiable in mana-hungry
-            configurations.
+            <strong>25 vs. 26 Lands:</strong> Contemporary tournament setups split
+            cleanly between 25 and 26 total lands, with both quantities representing
+            battle-tested, valid configurations. Pilots operating on 25 lands typically
+            trim down to three copies of Skycloud Expanse to preserve maximum basic
+            land density against Wasteland and Price of Progress. Conversely, players
+            opting for 26 lands almost universally dedicate the additional slot to
+            completing the full four-of suite of Skycloud Expanse, maximizing dual-color
+            filtering and guaranteeing smooth, uninterrupted mana sequencing into
+            four-mana turns.
         </p>
         <div
             style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem; align-items: flex-start; flex-wrap: wrap;"
@@ -356,9 +457,14 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 />
             </div>
             <div style="flex: 1; min-width: 300px;">
-                <h3 style="margin-top: 0; margin-bottom: 0.75rem;">
-                    Ten Basics (5 Island, 5 Plains)
-                </h3>
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap;"
+                >
+                    <h3 style="margin: 0;">Ten Basics</h3>
+                    <Badge theme="secondary" small={true}
+                        >10 Main (5 Island · 5 Plains)</Badge
+                    >
+                </div>
                 <p style="margin-top: 0;">
                     Running five basic Islands and five basic Plains insulates
                     the strategy against aggressive non-basic punishment like
@@ -373,18 +479,64 @@ import CardAnalysis from "@components/CardAnalysis.astro";
         </div>
 
         <CardAnalysis
-            title="Skycloud Expanse (3-4 main)"
-            image="lands/skycloud_expanse.webp"
+            title="Ancient Tomb"
+            badge="4 Main"
+            image="lands/ancient_tomb.jpg"
         >
             <p style="margin-top: 0;">
-                Trimming from four down to three copies accommodates the fifth
-                basic Island and Plains, intentionally prioritizing resilience
-                against non-basic hate over redundant mana filtering.
+                As an essential "sol land" producing two colorless mana on turn
+                one, Ancient Tomb serves as the primary velocity accelerator of
+                the archetype. It enables explosive setups by fueling turn-two <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Intuition">Intuition</a
+                > or <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Frantic Search">Frantic Search</a
+                >, while deploying critical turn-three combo pieces like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                > or <a href="#" class="card-hover" data-card-name="Opalescence"
+                    >Opalescence</a
+                > ahead of schedule without sacrificing future land drops.
+            </p>
+            <p style="margin-bottom: 0;">
+                Furthermore, untapping Ancient Tomb via Frantic Search actually
+                nets an extra colorless mana upon resolution, generating immense
+                burst turns even under mana chokeholds. Because presence of
+                Ancient Tomb alters early spell math, it frequently transforms
+                borderline opening hands into automatic keeps; consult our <a
+                    href="/mulligan#the-ancient-tomb-acceleration-factor"
+                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                    >Mulligan Guide</a
+                > and <a
+                    href="/mechanics"
+                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                    >Mechanics Masterclass</a
+                > for deeper technical breakdowns.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
-            title="City of Traitors (0)"
+            title="Skycloud Expanse"
+            badge="3–4 Main"
+            image="lands/skycloud_expanse.webp"
+        >
+            <p style="margin-top: 0;">
+                The core fixing filter that converts colorless mana from sol
+                lands and basic lands into double-pipped blue or white symbols.
+                Running three copies in 25-land builds intentionally prioritizes
+                resilience against non-basic hate, whereas running the full four
+                copies in 26-land structures ensures absolute color stability
+                for heavy spell turns.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="City of Traitors"
+            badge="0 Main"
             image="lands/city_of_traitors.webp"
         >
             <p style="margin-top: 0;">
