@@ -14,6 +14,7 @@ export const SIDEBAR_GROUPS: NavGroup[] = [
         items: [
             { name: "Introduction", href: "/" },
             { name: "History", href: "/history" },
+            { name: "Lists", href: "/deck" },
         ],
     },
     {
@@ -21,7 +22,6 @@ export const SIDEBAR_GROUPS: NavGroup[] = [
         items: [
             { name: "Maindeck", href: "/analysis" },
             { name: "Sideboard", href: "/sideboard" },
-            { name: "Lists", href: "/deck" },
         ],
     },
     {

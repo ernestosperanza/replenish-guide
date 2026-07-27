@@ -5,115 +5,7 @@ import { Grid, Card, Badge } from "webcoreui/astro";
 import DeckSection from "@components/DeckSection.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
 import CopyDeckButton from "@components/CopyDeckButton.astro";
-
-const alessandroDeck = `4 Replenish
-4 Attunement
-4 Opalescence
-4 Parallax Wave
-3 Decree of Silence
-3 Frantic Search
-3 Intuition
-4 Swords to Plowshares
-3 Seal of Cleansing
-3 Abeyance
-5 Island
-5 Plains
-4 Adarkar Wastes
-4 Ancient Tomb
-4 Flooded Strand
-3 Skycloud Expanse
-
-// Sideboard
-4 Meddling Mage
-3 Defense Grid
-3 Hydroblast
-2 Exalted Angel
-2 Tsabo's Web
-1 Seal of Cleansing`;
-
-const brianDeck = `4 Replenish
-4 Attunement
-4 Opalescence
-4 Parallax Wave
-3 Decree of Silence
-3 Frantic Search
-3 Intuition
-4 Swords to Plowshares
-2 Mana Leak
-2 Seal of Cleansing
-1 Abeyance
-5 Island
-5 Plains
-4 Adarkar Wastes
-4 Ancient Tomb
-4 Flooded Strand
-4 Skycloud Expanse
-
-// Sideboard
-4 Meddling Mage
-2 Abeyance
-2 Exalted Angel
-2 Hydroblast
-2 Seal of Cleansing
-2 Tsabo's Web`;
-
-const bryanDeck = `4 Meddling Mage
-4 Replenish
-4 Attunement
-4 Opalescence
-4 Parallax Wave
-2 Decree of Silence
-3 Frantic Search
-3 Intuition
-4 Swords to Plowshares
-3 Seal of Cleansing
-5 Island
-5 Plains
-4 Adarkar Wastes
-4 Ancient Tomb
-4 Flooded Strand
-3 Skycloud Expanse
-
-// Sideboard
-3 Abeyance
-3 Exalted Angel
-2 Hydroblast
-2 Tsabo's Web
-1 Blue Elemental Blast
-1 Nevinyrral's Disk
-1 Seal of Cleansing
-1 Sphere of Law
-1 Wrath of God`;
-
-const marinebiomancerDeck = `4 Replenish
-4 Attunement
-4 Opalescence
-4 Parallax Wave
-3 Decree of Silence
-3 Frantic Search
-3 Intuition
-4 Swords to Plowshares
-2 Abeyance
-2 Mana Leak
-1 Counterspell
-6 Plains
-5 Island
-4 Adarkar Wastes
-4 Ancient Tomb
-4 Flooded Strand
-3 Skycloud Expanse
-
-// Sideboard
-3 Tsabo's Web
-2 Blue Elemental Blast
-2 Disenchant
-2 Seal of Cleansing
-1 Abeyance
-1 Fact or Fiction
-1 Hydroblast
-1 Nevinyrral's Disk
-1 Orim's Chant
-1 Wrath of God`;
+import { modernDecklists, getCopyString } from "@data/decklists";
 ---
 
 <Layout
@@ -167,325 +59,44 @@ const marinebiomancerDeck = `4 Replenish
     <div
         style="display: flex; flex-direction: column; gap: 3rem; margin-top: 2rem; margin-bottom: 3rem;"
     >
-        {/* List 1: Alessandro Galli */}
-        <Card>
-            <div
-                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;"
-            >
-                <h2 style="margin: 0; font-size: 1.5rem;">Alessandro Galli</h2>
-                <CopyDeckButton decklist={alessandroDeck} />
-            </div>
-            <div style="margin-bottom: 1.5rem;">
-                <Badge theme="info" small={true}
-                    >4Seasons Spring Ed. @ Bologna (2026)</Badge
-                >
-            </div>
+        {
+            modernDecklists.map((deck) => (
+                <Card>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <h2 style="margin: 0; font-size: 1.5rem;">
+                            {deck.player}
+                        </h2>
+                        <CopyDeckButton decklist={getCopyString(deck)} />
+                    </div>
+                    {deck.badgeText && (
+                        <div style="margin-bottom: 1.5rem;">
+                            <Badge theme={deck.badgeTheme || "info"} small={true}>
+                                {deck.badgeText}
+                            </Badge>
+                        </div>
+                    )}
+                    {deck.description && (
+                        <p
+                            style="margin-bottom: 2rem; padding: 1rem; background-color: var(--w-color-primary-95); border-radius: var(--w-lg-radius); border-left: 4px solid var(--w-color-primary);"
+                            set:html={deck.description}
+                        />
+                    )}
 
-            <Grid column={3} gap="lg">
-                <div>
-                    <DeckSection
-                        title="Combo / Engine"
-                        items={[
-                            { count: 4, name: "Replenish" },
-                            { count: 4, name: "Attunement" },
-                            { count: 4, name: "Opalescence" },
-                            { count: 4, name: "Parallax Wave" },
-                            { count: 3, name: "Decree of Silence" },
-                        ]}
-                    />
-
-                    <DeckSection
-                        title="Card Selection"
-                        items={[
-                            { count: 3, name: "Frantic Search" },
-                            { count: 3, name: "Intuition" },
-                        ]}
-                    />
-                </div>
-                <div>
-                    <DeckSection
-                        title="Interaction / Protection"
-                        items={[
-                            { count: 4, name: "Swords to Plowshares" },
-                            { count: 3, name: "Seal of Cleansing" },
-                            { count: 3, name: "Abeyance" },
-                        ]}
-                    />
-
-                    <DeckSection
-                        title="Lands (25)"
-                        items={[
-                            { count: 5, name: "Island" },
-                            { count: 5, name: "Plains" },
-                            { count: 4, name: "Adarkar Wastes" },
-                            { count: 4, name: "Ancient Tomb" },
-                            { count: 4, name: "Flooded Strand" },
-                            { count: 3, name: "Skycloud Expanse" },
-                        ]}
-                    />
-                </div>
-                <div>
-                    <DeckSection
-                        title="Sideboard (15)"
-                        items={[
-                            { count: 4, name: "Meddling Mage" },
-                            { count: 3, name: "Defense Grid" },
-                            { count: 3, name: "Hydroblast" },
-                            { count: 2, name: "Exalted Angel" },
-                            { count: 2, name: "Tsabo's Web" },
-                            { count: 1, name: "Seal of Cleansing" },
-                        ]}
-                    />
-                </div>
-            </Grid>
-        </Card>
-
-        {/* List 2: Brian Siu */}
-        <Card>
-            <div
-                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;"
-            >
-                <h2 style="margin: 0; font-size: 1.5rem;">Brian Siu</h2>
-                <CopyDeckButton decklist={brianDeck} />
-            </div>
-            <div style="margin-bottom: 1.5rem;">
-                <Badge theme="success" small={true}
-                    >1st Place - NA Premodern Championship @ Lobstercon (2026)</Badge
-                >
-            </div>
-
-            <Grid column={3} gap="lg">
-                <div>
-                    <DeckSection
-                        title="Combo / Engine"
-                        items={[
-                            { count: 4, name: "Replenish" },
-                            { count: 4, name: "Attunement" },
-                            { count: 4, name: "Opalescence" },
-                            { count: 4, name: "Parallax Wave" },
-                            { count: 3, name: "Decree of Silence" },
-                        ]}
-                    />
-
-                    <DeckSection
-                        title="Card Selection"
-                        items={[
-                            { count: 3, name: "Frantic Search" },
-                            { count: 3, name: "Intuition" },
-                        ]}
-                    />
-                </div>
-                <div>
-                    <DeckSection
-                        title="Interaction / Protection"
-                        items={[
-                            { count: 4, name: "Swords to Plowshares" },
-                            { count: 2, name: "Mana Leak" },
-                            { count: 2, name: "Seal of Cleansing" },
-                            { count: 1, name: "Abeyance" },
-                        ]}
-                    />
-
-                    <DeckSection
-                        title="Lands (26)"
-                        items={[
-                            { count: 5, name: "Island" },
-                            { count: 5, name: "Plains" },
-                            { count: 4, name: "Adarkar Wastes" },
-                            { count: 4, name: "Ancient Tomb" },
-                            { count: 4, name: "Flooded Strand" },
-                            { count: 4, name: "Skycloud Expanse" },
-                        ]}
-                    />
-                </div>
-                <div>
-                    <DeckSection
-                        title="Sideboard (14)"
-                        items={[
-                            { count: 4, name: "Meddling Mage" },
-                            { count: 2, name: "Abeyance" },
-                            { count: 2, name: "Exalted Angel" },
-                            { count: 2, name: "Hydroblast" },
-                            { count: 2, name: "Seal of Cleansing" },
-                            { count: 2, name: "Tsabo's Web" },
-                        ]}
-                    />
-                </div>
-            </Grid>
-        </Card>
-
-        {/* List 3: Bryan Gulotta */}
-        <Card>
-            <div
-                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;"
-            >
-                <h2 style="margin: 0; font-size: 1.5rem;">Bryan Gulotta</h2>
-                <CopyDeckButton decklist={bryanDeck} />
-            </div>
-            <div style="margin-bottom: 1.5rem;">
-                <Badge theme="warning" small={true}
-                    >2nd Place - NA Premodern Championship @ Lobstercon (2026)</Badge
-                >
-            </div>
-
-            <Grid column={3} gap="lg">
-                <div>
-                    <DeckSection
-                        title="Creatures"
-                        items={[{ count: 4, name: "Meddling Mage" }]}
-                    />
-
-                    <DeckSection
-                        title="Combo / Engine"
-                        items={[
-                            { count: 4, name: "Replenish" },
-                            { count: 4, name: "Attunement" },
-                            { count: 4, name: "Opalescence" },
-                            { count: 4, name: "Parallax Wave" },
-                            { count: 2, name: "Decree of Silence" },
-                        ]}
-                    />
-                </div>
-                <div>
-                    <DeckSection
-                        title="Card Selection"
-                        items={[
-                            { count: 3, name: "Frantic Search" },
-                            { count: 3, name: "Intuition" },
-                        ]}
-                    />
-
-                    <DeckSection
-                        title="Interaction"
-                        items={[
-                            { count: 4, name: "Swords to Plowshares" },
-                            { count: 3, name: "Seal of Cleansing" },
-                        ]}
-                    />
-                </div>
-                <div>
-                    <DeckSection
-                        title="Lands (25)"
-                        items={[
-                            { count: 5, name: "Island" },
-                            { count: 5, name: "Plains" },
-                            { count: 4, name: "Adarkar Wastes" },
-                            { count: 4, name: "Ancient Tomb" },
-                            { count: 4, name: "Flooded Strand" },
-                            { count: 3, name: "Skycloud Expanse" },
-                        ]}
-                    />
-
-                    <DeckSection
-                        title="Sideboard (15)"
-                        items={[
-                            { count: 3, name: "Abeyance" },
-                            { count: 3, name: "Exalted Angel" },
-                            { count: 2, name: "Hydroblast" },
-                            { count: 2, name: "Tsabo's Web" },
-                            { count: 1, name: "Blue Elemental Blast" },
-                            { count: 1, name: "Nevinyrral's Disk" },
-                            { count: 1, name: "Seal of Cleansing" },
-                            { count: 1, name: "Sphere of Law" },
-                            { count: 1, name: "Wrath of God" },
-                        ]}
-                    />
-                </div>
-            </Grid>
-        </Card>
-
-        {/* List 4: Marinebiomancer */}
-        <Card>
-            <div
-                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;"
-            >
-                <h2 style="margin: 0; font-size: 1.5rem;">Marinebiomancer</h2>
-                <CopyDeckButton decklist={marinebiomancerDeck} />
-            </div>
-            <div style="margin-bottom: 1.5rem;">
-                <Badge theme="alert" small={true}
-                    >Top 16 - New England Premodern Summer Regional (2026)</Badge
-                >
-            </div>
-
-            <p
-                style="margin-bottom: 2rem; padding: 1rem; background-color: var(--w-color-primary-95); border-radius: var(--w-lg-radius); border-left: 4px solid var(--w-color-primary);"
-            >
-                <strong>The "Creatureless 75" Experiment:</strong> This highly innovative
-                list completely abandons the traditional post-board midrange pivot
-                (no Exalted Angels or Meddling Mages). Instead, it runs zero creatures
-                in all 75 cards, pivoting into absolute hard-control by running a
-                3rd copy of <code>Decree of Silence</code> in the maindeck alongside
-                a mountain of instant-speed interaction. It also showcases the modern
-                <code>Seal of Cleansing</code> and <code>Disenchant</code> split in
-                the sideboard to fight through opposing <code
-                    >Aura of Silence</code
-                >.
-            </p>
-
-            <Grid column={3} gap="lg">
-                <div>
-                    <DeckSection
-                        title="Combo / Engine"
-                        items={[
-                            { count: 4, name: "Replenish" },
-                            { count: 4, name: "Attunement" },
-                            { count: 4, name: "Opalescence" },
-                            { count: 4, name: "Parallax Wave" },
-                            { count: 3, name: "Decree of Silence" },
-                        ]}
-                    />
-
-                    <DeckSection
-                        title="Card Selection"
-                        items={[
-                            { count: 3, name: "Frantic Search" },
-                            { count: 3, name: "Intuition" },
-                        ]}
-                    />
-                </div>
-                <div>
-                    <DeckSection
-                        title="Interaction / Protection"
-                        items={[
-                            { count: 4, name: "Swords to Plowshares" },
-                            { count: 2, name: "Abeyance" },
-                            { count: 2, name: "Mana Leak" },
-                            { count: 1, name: "Counterspell" },
-                        ]}
-                    />
-
-                    <DeckSection
-                        title="Lands (26)"
-                        items={[
-                            { count: 6, name: "Plains" },
-                            { count: 5, name: "Island" },
-                            { count: 4, name: "Adarkar Wastes" },
-                            { count: 4, name: "Ancient Tomb" },
-                            { count: 4, name: "Flooded Strand" },
-                            { count: 3, name: "Skycloud Expanse" },
-                        ]}
-                    />
-                </div>
-                <div>
-                    <DeckSection
-                        title="Sideboard (15)"
-                        items={[
-                            { count: 3, name: "Tsabo's Web" },
-                            { count: 2, name: "Blue Elemental Blast" },
-                            { count: 2, name: "Disenchant" },
-                            { count: 2, name: "Seal of Cleansing" },
-                            { count: 1, name: "Abeyance" },
-                            { count: 1, name: "Fact or Fiction" },
-                            { count: 1, name: "Hydroblast" },
-                            { count: 1, name: "Nevinyrral's Disk" },
-                            { count: 1, name: "Orim's Chant" },
-                            { count: 1, name: "Wrath of God" },
-                        ]}
-                    />
-                </div>
-            </Grid>
-        </Card>
+                    <Grid column={3} gap="lg">
+                        {deck.columns.map((col) => (
+                            <div>
+                                {col.sections.map((sec) => (
+                                    <DeckSection
+                                        title={sec.title}
+                                        items={sec.items}
+                                    />
+                                ))}
+                            </div>
+                        ))}
+                    </Grid>
+                </Card>
+            ))
+        }
     </div>
     <DecklistTooltip />
 </Layout>
