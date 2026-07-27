@@ -2,71 +2,162 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
-import WipAlert from "@components/WipAlert.astro";
-import { Card } from "webcoreui/astro";
+import { Card, Alert } from "webcoreui/astro";
 ---
 
 <Layout
-    title="Strategic Theory - Replenish Guide"
-    description="Master the foundational macro-concepts of competitive Premodern Replenish. Learn to navigate dual-angle disruption, execute patient endpoint control, and maintain rigorous selection discipline."
+    title="Macro Strategy - Replenish Guide"
+    description="Master the foundational macro-concepts of competitive Premodern Replenish. Learn to navigate dual-angle disruption, identify archetype roles, and maintain rigorous selection discipline."
 >
     <PageHeader
-        title="Strategic Theory"
+        title="Macro Strategy"
         description="Master the foundational macro-concepts that dictate competitive game flow—navigating bi-directional disruption vectors, executing patient endpoint control, and maintaining strict resource discipline."
-        imageSrc="/src/assets/banners/decree.jpeg"
-        imageAlt="Decree of Silence"
-        imageCaption="Decree of Silence by Adam Rex"
+        imageSrc="/src/assets/banners/swords.jpg"
+        imageAlt="Swords to Plowshares"
+        imageCaption="Swords to Plowshares by Kaja Foglio"
         isCard={true}
     />
 
-    <WipAlert />
-    <Card title="Strategic Frameworks" titleTag="h2">
-        <h3 style="margin-top: 0;">The Two-Angle Disruption Framework</h3>
+    <Card title="The Two-Angle Disruption Framework" titleTag="h2">
         <p>
             Parallax Replenish excels at insulating its game plan against
             single-axis strategies. Pure aggression, linear mana denial, or slow
-            countermagic suites can all be systematically dismantled. True
-            strategic tension emerges when an opposing archetype attacks across
-            two intersecting angles simultaneously—such as an early aggressive
-            clock backed by land destruction (<a
+            countermagic suites can all be systematically dismantled when
+            confronted in isolation. True strategic tension emerges when an
+            opposing archetype attacks across two intersecting angles
+            simultaneously—such as an early aggressive clock backed by severe
+            land destruction (<a
                 href="#"
                 class="card-hover"
                 data-card-name="Wasteland">Wasteland</a
             >, <a href="#" class="card-hover" data-card-name="Rishadan Port"
                 >Rishadan Port</a
-            >) or fast pressure supported by cheap permission.
+            >) or fast combat pressure supported by cheap permission.
         </p>
-        <p>
-            When confronting dual-angle pressure, your opening hand must contain
-            early answers aligning precisely against their primary threat
-            vector. Because dedicated selection engines begin at three mana,
-            attempting to fix a misaligned starting hand across early turns is
-            mathematically fatal. This principle must strictly dictate your
-            mulligan discipline in volatile matchups: viable keepable hands must
-            balance early interactive speed with an accessible pathway to an
-            operational combo engine.
-        </p>
+        <div
+            style="background-color: var(--w-color-primary-95); padding: 1rem; border-radius: var(--w-md-radius); border-left: 3px solid var(--w-color-primary-40); margin-top: 1.25rem;"
+        >
+            <strong
+                style="color: var(--w-color-primary-10); display: block; margin-bottom: 0.5rem;"
+                >Mulligan Discipline Under Dual-Angle Pressure</strong
+            >
+            When confronting dual-angle pressure, attempting to sculpt out of a misaligned
+            starting hand across turns one and two is mathematically fatal because
+            dedicated card selection engines begin at three mana. For quantitative
+            heuristics and hand evaluation frameworks under disruption, consult our
+            dedicated <a
+                href="/mulligan"
+                style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                >Mulligan Guide</a
+            >.
+        </div>
+    </Card>
 
-        <h3>Endpoint Play vs. Opportunistic Transitions</h3>
+    <Card title="Role Identification & Pace of Play" titleTag="h2">
+        <p>
+            In competitive Premodern, Parallax Replenish is a dynamic
+            Control-Combo archetype with multi-angled post-sideboard
+            capabilities. Succeeding across a full match requires accurately
+            identifying your strategic role based on your opponent's clock and
+            interaction suite:
+        </p>
+        <div
+            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.25rem;"
+        >
+            <div>
+                <h3
+                    style="margin: 0 0 0.5rem 0; color: var(--w-color-primary-10); font-size: 1.1rem;"
+                >
+                    Disruptive Control & Fast Combo Pivot
+                </h3>
+                <p style="margin: 0;">
+                    Against fast aggressive clocks and burn structures (such as
+                    Goblins, Sligh, or UG Madness), your goal is not passive
+                    long-term survival—you must actively disrupt their momentum
+                    and control the battlefield just long enough to assemble
+                    your combo as rapidly as possible. Deploy early defensive
+                    interaction like <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Parallax Wave">Parallax Wave</a
+                    >, spot removal, and table resets to stall their clock,
+                    while aggressively sculpting your graveyard to force a
+                    decisive lethal untap before their direct damage reach or
+                    explosive topdecks close the gap.
+                </p>
+            </div>
+            <div>
+                <h3
+                    style="margin: 0 0 0.5rem 0; color: var(--w-color-primary-10); font-size: 1.1rem;"
+                >
+                    The Proactive Combo Role
+                </h3>
+                <p style="margin: 0;">
+                    Against traditional inevitability control decks or faster
+                    pure combo setups, you must assume an urgent proactive
+                    stance. Your imperative shifts to aggressively sculpting
+                    your graveyard in early turns and forcing through an
+                    operational <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Replenish">Replenish</a
+                    > or hardcasting <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Opalescence">Opalescence</a
+                    > before their defensive countermagic perimeter fully solidifies.
+                </p>
+            </div>
+            <div>
+                <h3
+                    style="margin: 0 0 0.5rem 0; color: var(--w-color-primary-10); font-size: 1.1rem;"
+                >
+                    The Transformational Midrange Role
+                </h3>
+                <p style="margin: 0;">
+                    In post-sideboard games, when opponents severely dilute
+                    their primary game plans with graveyard hate like <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Tormod's Crypt">Tormod's Crypt</a
+                    > or <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Planar Void">Planar Void</a
+                    >, Replenish can transform into a potent white-blue midrange
+                    deck. By deploying proactive disruptive armor like <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Defense Grid">Defense Grid</a
+                    > alongside efficient threat engines such as <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Exalted Angel">Exalted Angel</a
+                    > and <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Meddling Mage">Meddling Mage</a
+                    >, you completely circumvent their reactive hate
+                    suite—closing out the game through superior battlefield
+                    presence and evasive combat clocks while they sit on dead
+                    graveyard interaction.
+                </p>
+            </div>
+        </div>
+    </Card>
+
+    <Card title="Endpoint Play & Resource Preservation" titleTag="h2">
         <p>
             Against heavy permission decks, evaluate game state progression
-            through the lens of terminal endpoints. Imagine a hypothetical game
+            through the lens of terminal endpoints. Imagine a hypothetical final
             state where both players draw out their entire libraries: if your
-            ultimate counter-threat density overcomes their interaction count,
-            you are statistically favored to win long attrition battles. In such
-            matchups, resource preservation is paramount. Avoid executing
-            speculative cantrips or discarding high-value cards for trivial
-            tempo advantages—never activate <a
-                href="#"
-                class="card-hover"
-                data-card-name="Attunement">Attunement</a
-            > without a documented plan for every card being discarded, and cast <a
-                href="#"
-                class="card-hover"
-                data-card-name="Frantic Search">Frantic Search</a
-            > strictly during the opponent's end step.
+            ultimate win-condition density overcomes their absolute countermagic
+            count, you are statistically favored to win prolonged attrition
+            battles. In such matchups, total resource preservation is
+            paramount—avoid executing speculative cantrips or discarding
+            high-value cards for trivial temporary advantages.
         </p>
-        <p>
+        <p style="margin-bottom: 0;">
             In protracted counter-wars, if a control opponent retains eight
             permission spells while you assemble four copies of <a
                 href="#"
@@ -81,35 +172,33 @@ import { Card } from "webcoreui/astro";
             >, your terminal spell will ultimately resolve—provided you have not
             frittered away redundant engine pieces in early exchanges.
         </p>
-        <p>
-            Post-sideboard, strategic dynamics alter significantly. With access
-            to proactive disruptive tools like <a
-                href="#"
-                class="card-hover"
-                data-card-name="Defense Grid">Defense Grid</a
-            >, <a href="#" class="card-hover" data-card-name="Meddling Mage"
-                >Meddling Mage</a
-            >, and <a href="#" class="card-hover" data-card-name="Exalted Angel"
-                >Exalted Angel</a
-            >, you gain the capacity to engineer explosive early winning
-            windows. Recognizing precisely when to abandon conservative endpoint
-            play to force a rapid opportunistic lethal transition is a hallmark
-            of elite Replenish mastery.
-        </p>
+    </Card>
 
-        <h3>Attunement Discipline</h3>
-        <p>
+    <Card title="Attunement Resource Discipline" titleTag="h2">
+        <Alert theme="warning">
+            <strong>Never Activate Attunement Blindly</strong><br />
+            Before resolving an activation, you must confidently answer two analytical
+            criteria: <em>which exact cards in your hand are expendable</em>,
+            and <em
+                >what precise mechanism or answer is required from the top of
+                your deck?</em
+            > If either answer remains ambiguous, strictly forego the activation.
+        </Alert>
+        <p style="margin-top: 1.25rem; margin-bottom: 0;">
             A prevalent execution error among developing pilots is activating <a
                 href="#"
                 class="card-hover"
                 data-card-name="Attunement">Attunement</a
-            > blindly without a definitive resource plan. Before resolving an activation,
-            you must confidently answer two analytical criteria: which exact cards
-            in hand are expendable, and what precise mechanism or answer is required
-            from the top of the deck? If either question remains ambiguous, forego
-            the activation. Particularly against interactive control structures, every
-            reckless filtering loop risks stripping irreplaceable lands or protective
-            redundancy, exposing your late-game posture to fatal single-point answers.
+            > repeatedly without a definitive resource plan. Particularly against
+            interactive control structures, every reckless filtering loop risks stripping
+            irreplaceable lands or protective win-condition redundancy—exposing your
+            late-game posture to fatal single-point answers. Always maintain documented
+            purpose for every discarded card, and cast <a
+                href="#"
+                class="card-hover"
+                data-card-name="Frantic Search">Frantic Search</a
+            > strictly during your opponent's end step to maximize operational untap
+            safety.
         </p>
     </Card>
     <DecklistTooltip />
