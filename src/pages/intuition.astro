@@ -2,12 +2,13 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
-import WipAlert from "@components/WipAlert.astro";
-import { Card } from "webcoreui/astro";
+import { Card, Badge, Alert } from "webcoreui/astro";
 ---
 
-<Layout title="Intuition Guide - Replenish Guide"
-    description="Master the art of Intuition in Replenish. Discover common pile patterns, engine setups, and complex situational plays to maximize your card selection.">
+<Layout
+    title="Intuition Guide - Replenish Guide"
+    description="Master the art of Intuition in Replenish. Discover common pile patterns, engine setups, and complex situational plays to maximize your card selection."
+>
     <PageHeader
         title="The Intuition Guide"
         description="<strong>A few tips:</strong> Intuition is a skill-intensive card, and it might take some time to learn all the possible lines that the card enables, as it plays multiple critical roles throughout a game. A fundamental rule of Intuition is the tradeoff between immediacy and future availability: when you tutor for a non-combo piece (like removal or a sideboard card), you are effectively removing three copies of that card from your deck to guarantee access to one. Keep in mind also when you are building your deck that any card you intend to reliably fetch with Intuition requires you to run at least 3 copies in your 75."
@@ -16,51 +17,386 @@ import { Card } from "webcoreui/astro";
         imageCaption="Intuition by April Lee"
         isCard={true}
     />
-    <WipAlert />
-    <Card title="General Heuristics" titleTag="h2">
+    <Card title="Core Mechanics: Hand vs. Graveyard Enforcement" titleTag="h2">
         <p>
-            Timing is everything. Because <a href="#" class="card-hover" data-card-name="Intuition">Intuition</a> is an instant, you almost always want to cast it on your opponent's end step. This lets you untap with full mana available to resolve a lethal <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> or preserve interaction on your turn, granting your opponent a drastically compressed tactical window to react while gathering maximum information before committing.
+            Because your opponent decides which card enters your hand and which
+            are discarded to your graveyard, you must construct piles with
+            precise redundancy depending on your intended destination:
         </p>
+
+        <div
+            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; margin-bottom: 1.5rem;"
+        >
+            <div>
+                <h3
+                    style="margin: 0 0 0.5rem 0; color: var(--w-color-primary-10); font-size: 1.2rem;"
+                >
+                    Enforce to Hand
+                </h3>
+                <p style="margin: 0;">
+                    When you need a specific answer or threat in your hand
+                    immediately upon resolution (such as spot removal or a
+                    sideboard answer), your pile must contain <strong
+                        >3 identical copies</strong
+                    > or 3 functionally redundant cards. Consequently, any silver
+                    bullet you intend to reliably tutor with <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Intuition">Intuition</a
+                    > requires running at least 3 copies in your 75.
+                </p>
+            </div>
+
+            <div>
+                <h3
+                    style="margin: 0 0 0.5rem 0; color: var(--w-color-primary-10); font-size: 1.2rem;"
+                >
+                    Enforce to Graveyard
+                </h3>
+                <p style="margin: 0;">
+                    When your tactical goal is depositing a specific combo
+                    enchantment directly into the graveyard for an upcoming <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Replenish">Replenish</a
+                    >, your pile only needs <strong>2 copies</strong> of that target.
+                    Regardless of which card the opponent gives to your hand, at least
+                    one copy is mathematically guaranteed to reach the yard.
+                </p>
+            </div>
+        </div>
+
+        <div style="margin-top: 2rem; margin-bottom: 0.5rem;">
+            <Alert theme="warning">
+                <strong>Incomplete Piles & Deck Tracking</strong><br />
+                If you have already drawn a copy of a card you desperately need in
+                hand (leaving only two in your library), pair those two copies with
+                a high-priority threat like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Parallax Wave">Parallax Wave</a
+                > to force a lose-lose choice for your opponent. Always mentally track
+                your remaining deck contents before resolving Intuition so you never
+                end up with a broken pile.
+            </Alert>
+        </div>
+    </Card>
+
+    <Card title="General Heuristics & Timing" titleTag="h2">
         <p>
-            Navigating incomplete piles demands adaptability—if you desperately require a <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a>, but have already drawn one with only two remaining in your library, construct a hybrid defensive structure such as Swords + Swords + <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a>. Maintain strict mental tracking of remaining library allocations so you never cast Intuition only to discover you cannot assemble a three-of-a-kind guarantee.
+            <strong>Post-Sideboard Role Shift & On-Stack Hate:</strong> When confronting
+            permanent graveyard hate like <a
+                href="#"
+                class="card-hover"
+                data-card-name="Tormod's Crypt">Tormod's Crypt</a
+            >, <a href="#" class="card-hover" data-card-name="Phyrexian Furnace"
+                >Phyrexian Furnace</a
+            >, or <a href="#" class="card-hover" data-card-name="Planar Void"
+                >Planar Void</a
+            >, never construct combo-dumping piles blind. Intuition shifts out
+            of its graveyard selection role and transforms into a targeted spot
+            removal tutor—searching for three copies of <a
+                href="#"
+                class="card-hover"
+                data-card-name="Seal of Cleansing">Seal of Cleansing</a
+            > or <a href="#" class="card-hover" data-card-name="Disenchant"
+                >Disenchant</a
+            > to systematically dismantle opposing graveyard interruption before you
+            resume combo assembly.
         </p>
-        <p>
-            Finally, when fighting through permanent graveyard disruption like <a href="#" class="card-hover" data-card-name="Tormod's Crypt">Tormod's Crypt</a> or <a href="#" class="card-hover" data-card-name="Planar Void">Planar Void</a> post-sideboard, Intuition ceases functioning as a combo engine setup and immediately pivots into your ultimate removal tutor—searching for three copies of <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> to cleanly dismantle opposing hate prior to reloading your graveyard.
+        <p style="margin-bottom: 0;">
+            <strong>Deck Depletion & Managing Threat Density:</strong> In prolonged
+            attrition games against traditional Control structures, be wary of aggressive
+            over-tutoring. Because Intuition purges cards from your library in sets
+            of three—amplified by heavy looting from <a
+                href="#"
+                class="card-hover"
+                data-card-name="Attunement">Attunement</a
+            > and <a href="#" class="card-hover" data-card-name="Frantic Search"
+                >Frantic Search</a
+            >—you risk depleting your overall win-condition density or falling
+            prey to deck-out fatigue if your initial reanimation lines are
+            countered. Recognize when to pivot from deck thinning to preserving
+            your remaining resource volume.
         </p>
     </Card>
 
-    <Card title="Common Scenarios & Piles" titleTag="h2">
-        <p>Below are primary championship configurations and strategic navigation heuristics:</p>
+    <Card title="Common Tactical Piles" titleTag="h2">
+        <p style="margin-bottom: 2rem;">
+            Below are standard tactical configurations and when to deploy them
+            during tournament matches:
+        </p>
 
-        <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
-            <li style="margin-bottom: 1rem;">
-                <strong>Dumping Combo Pieces:</strong><br />
-                The primary operational sequence. Use Intuition to deposit precise foundational enchantments directly into your graveyard—an ideal play when holding <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> paired with an active discard engine (<a href="#" class="card-hover" data-card-name="Attunement">Attunement</a> or <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a>).<br />
-                <em>Crucial Heuristic:</em> Because the opponent selects which card enters your hand, if an enchantment absolutely must reach the graveyard immediately, your pile must include at least two copies of it.<br />
-                <strong>Standard Configurations:</strong> Opal + Decree + Wave, Opal + Opal + Wave, Opal + Opal + Decree, or Wave x3 (against explosive aggro).
-            </li>
-            <li style="margin-bottom: 1rem;">
-                <strong>Tutoring Removal (<a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a> or <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a>):</strong><br />
-                Deployed when confronting lethal on-board threat clocks. Searching for <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> yields higher systemic synergy than Swords because discarded Seals naturally reanimate to the battlefield upon revolving your next <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a>.<br />
-                <strong>Standard Configurations:</strong> <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a> x3, <a href="#" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> x3.
-            </li>
-            <li style="margin-bottom: 1rem;">
-                <strong>Guaranteeing Land Drops:</strong><br />
-                Search for three lands to guarantee continuous colored mana development, ensure critical land drops on schedule, or proactively accelerate mana production by grabbing three copies of <a href="#" class="card-hover" data-card-name="Ancient Tomb">Ancient Tomb</a>. While utilized less frequently, it prevents fatal developmental stumbles.<br />
-                <strong>Standard Configurations:</strong> <a href="#" class="card-hover" data-card-name="Ancient Tomb">Ancient Tomb</a> x3, <a href="#" class="card-hover" data-card-name="Skycloud Expanse">Skycloud Expanse</a> x3, <a href="#" class="card-hover" data-card-name="Plains">Plains</a> x3.
-            </li>
-            <li style="margin-bottom: 1rem;">
-                <strong>Finding a Discard Engine:</strong><br />
-                When retaining complete combo redundancy plus <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> in hand without an operational discard outlet, utilize Intuition to secure immediate card selection engines.<br />
-                <em>Note:</em> Grabbing three copies of <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a> requires substantial mana commitments across subsequent turns, so verify sufficient developmental time before opting out of instantaneous instant-speed cantrips.<br />
-                <strong>Standard Configurations:</strong> <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a> x3, <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a> x3.
-            </li>
-            <li style="margin-bottom: 1rem;">
-                <strong>Finding Sideboard Silver Bullets:</strong><br />
-                Fetch three exact copies of a meta-breaking sideboard tool to paralyze opposing combo engines, dismantle countermagic, or dominate mirror interactions.<br />
-                <strong>Standard Configurations:</strong> <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a> x3, <a href="#" class="card-hover" data-card-name="Abeyance">Abeyance</a> x3, <a href="#" class="card-hover" data-card-name="Tsabo's Web">Tsabo's Web</a> x3.
-            </li>
-        </ul>
+        <div
+            style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 1rem;"
+        >
+            <div
+                style="border-bottom: 1px solid rgba(150, 150, 150, 0.2); padding-bottom: 1.5rem;"
+            >
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
+                >
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Dumping Combo Pieces
+                    </h3>
+                    <Badge theme="secondary" small={true}
+                        >Enforce to Graveyard</Badge
+                    >
+                </div>
+                <p style="margin-top: 0; margin-bottom: 0.75rem;">
+                    The primary engine setup when holding <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Replenish">Replenish</a
+                    > paired with a discard outlet (<a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Attunement">Attunement</a
+                    > or <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Frantic Search">Frantic Search</a
+                    >). If an enchantment absolutely must reach the graveyard
+                    immediately to fuel your upcoming untap, include at least
+                    two copies in your trio.
+                </p>
+                <div
+                    style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"
+                >
+                    <strong>Standard Configurations:</strong>
+                    <a href="#" class="card-hover" data-card-name="Opalescence"
+                        >Opal</a
+                    > + <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Decree of Silence">Decree</a
+                    > + <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Parallax Wave">Wave</a
+                    >
+                    (balanced lock), <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Opalescence">Opal</a
+                    > + <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Opalescence">Opal</a
+                    > + <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Parallax Wave">Wave</a
+                    > (guaranteed Opal in yard/hand), or <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Parallax Wave">Wave</a
+                    > x3 (when fighting explosive aggression).
+                </div>
+            </div>
+
+            <div
+                style="border-bottom: 1px solid rgba(150, 150, 150, 0.2); padding-bottom: 1.5rem;"
+            >
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
+                >
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Split Piles: The Lose-Lose Dilemma
+                    </h3>
+                    <Badge theme="secondary" small={true}>Enforce to Hand</Badge
+                    >
+                </div>
+                <p style="margin-top: 0; margin-bottom: 0.75rem;">
+                    In mid-to-late game board states, you can abandon strict
+                    redundancy and instead construct a pile of three completely
+                    different, highly synergistic threats. By tutoring for a
+                    combination where discarded enchantments feed an
+                    accompanying reanimation spell or card selection engine, you
+                    force your opponent into an uncomfortable lose-lose choice
+                    where every outcome advances your win condition.
+                </p>
+                <div
+                    style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"
+                >
+                    <strong>Standard Configurations:</strong>
+                    <a href="#" class="card-hover" data-card-name="Replenish"
+                        >Replenish</a
+                    > + <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Attunement">Attunement</a
+                    > + <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Parallax Wave">Wave</a
+                    > (if they give you Replenish, you immediately animate Attunement
+                    and Wave; if they give you Attunement or Wave, you secure powerful
+                    on-board engines).
+                </div>
+            </div>
+
+            <div
+                style="border-bottom: 1px solid rgba(150, 150, 150, 0.2); padding-bottom: 1.5rem;"
+            >
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
+                >
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Tutoring Targeted Removal
+                    </h3>
+                    <Badge theme="secondary" small={true}>Enforce to Hand</Badge
+                    >
+                </div>
+                <p style="margin-top: 0; margin-bottom: 0.75rem;">
+                    Because <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Swords to Plowshares"
+                        >Swords to Plowshares</a
+                    > and <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Seal of Cleansing">Seal of Cleansing</a
+                    > answer fundamentally different threat axes, your selection must
+                    precisely target the battlefield problem. Tutor for three Swords
+                    when facing lethal aggressive creature clocks. Tutor for three
+                    Seals when breaking through oppressive lock pieces; as a major
+                    synergy bonus, discarded Seals will reanimate to the battlefield
+                    for free upon resolving your next <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Replenish">Replenish</a
+                    >.
+                </p>
+                <div
+                    style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"
+                >
+                    <strong>Standard Configurations:</strong>
+                    <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Swords to Plowshares"
+                        >Swords to Plowshares</a
+                    > x3 (anti-creature), <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Seal of Cleansing">Seal of Cleansing</a
+                    > x3 (anti-artifact/enchantment).
+                </div>
+            </div>
+
+            <div
+                style="border-bottom: 1px solid rgba(150, 150, 150, 0.2); padding-bottom: 1.5rem;"
+            >
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
+                >
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Guaranteeing Land Drops & Deck Thinning
+                    </h3>
+                    <Badge theme="secondary" small={true}>Enforce to Hand</Badge
+                    >
+                </div>
+                <p style="margin-top: 0; margin-bottom: 0.75rem;">
+                    In early developmental turns, enforcing a land drop prevents
+                    fatal tempo stumbles when holding an otherwise lethal hand.
+                    Furthermore, during prolonged attrition battles against slow
+                    Control opponents, tutoring for three lands serves as
+                    strategic deck-thinning—pulling dead lands out of your
+                    library so your subsequent draws yield a significantly
+                    higher density of live threats and countermagic.
+                </p>
+                <div
+                    style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"
+                >
+                    <strong>Standard Configurations:</strong>
+                    <a href="#" class="card-hover" data-card-name="Ancient Tomb"
+                        >Ancient Tomb</a
+                    > x3, <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Skycloud Expanse">Skycloud Expanse</a
+                    > x3, <a href="#" class="card-hover" data-card-name="Plains"
+                        >Plains</a
+                    > x3.
+                </div>
+            </div>
+
+            <div
+                style="border-bottom: 1px solid rgba(150, 150, 150, 0.2); padding-bottom: 1.5rem;"
+            >
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
+                >
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Finding a Discard Engine
+                    </h3>
+                    <Badge theme="secondary" small={true}>Enforce to Hand</Badge
+                    >
+                </div>
+                <p style="margin-top: 0; margin-bottom: 0.75rem;">
+                    When your hand is saturated with heavy combo enchantments
+                    and <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Replenish">Replenish</a
+                    > but lacks a reliable outlet to discard them, utilize Intuition
+                    to immediately secure a card selection engine and unlock your
+                    operational lines.
+                </p>
+                <div
+                    style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"
+                >
+                    <strong>Standard Configurations:</strong>
+                    <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Frantic Search">Frantic Search</a
+                    > x3, <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Attunement">Attunement</a
+                    > x3.
+                </div>
+            </div>
+
+            <div>
+                <div
+                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
+                >
+                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
+                        Tutoring Sideboard Tech
+                    </h3>
+                    <Badge theme="secondary" small={true}>Enforce to Hand</Badge
+                    >
+                </div>
+                <p style="margin-top: 0; margin-bottom: 0.75rem;">
+                    In high-stakes games 2 and 3, grabbing three exact copies of
+                    a meta-breaking sideboard piece allows you to sever opposing
+                    countermagic suites, disable taxing utility lands, or
+                    paralyze enemy combo setups on demand.
+                </p>
+                <div
+                    style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"
+                >
+                    <strong>Standard Configurations:</strong>
+                    <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Meddling Mage">Meddling Mage</a
+                    > x3, <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Abeyance">Abeyance</a
+                    > x3, <a
+                        href="#"
+                        class="card-hover"
+                        data-card-name="Tsabo's Web">Tsabo's Web</a
+                    > x3.
+                </div>
+            </div>
+        </div>
     </Card>
     <DecklistTooltip />
 </Layout>
