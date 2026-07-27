@@ -30,7 +30,7 @@ export const SIDEBAR_GROUPS: NavGroup[] = [
             { name: "Macro Strategy", href: "/strategy" },
             { name: "Mulligan Guide", href: "/mulligan" },
             { name: "Mechanics & Loops", href: "/mechanics" },
-            { name: "Intuition Guide", href: "/intuition" },
+            { name: "Intuition Cheatsheet", href: "/intuition" },
         ],
     },
     {
