@@ -1,15 +1,18 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import { List, Card } from "webcoreui/astro";
+import { Card } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
 import WipAlert from "@components/WipAlert.astro";
 ---
 
-<Layout title="Resources & Conclusion - Replenish Guide">
+<Layout
+    title="Conclusion & Credits - Replenish Guide"
+    description="Reflections on the enduring fellowship of Premodern Magic and honorable acknowledgments celebrating the scholars and pilots who shaped this comprehensive Replenish guide."
+>
     <PageHeader
-        title="Conclusion & Resources"
-        description="Comprehensive acknowledgments honoring the theorists, pioneers, and tournament pilots of the Premodern Replenish Discord community, alongside curated reading lists and project roadmaps."
+        title="Conclusion & Credits"
+        description="Reflections on the true spirit of table fellowship in Premodern Magic, accompanied by honorable acknowledgments celebrating the community theorists and pilots who elevated the archetype."
         imageSrc="/src/assets/banners/abeyance.webp"
         imageAlt="Abeyance"
         imageCaption="Abeyance by Thomas Gianni"
@@ -17,6 +20,28 @@ import WipAlert from "@components/WipAlert.astro";
     />
 
     <WipAlert />
+
+    <Card title="The Spirit of the Gathering" titleTag="h2">
+        <p
+            style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;"
+        >
+            At the end of the day, all the stack mechanics, matchup percentages,
+            and sideboard guides serve one simple purpose: <strong
+                style="color: var(--w-color-primary-10);"
+                >playing a game we love with people we respect.</strong
+            >
+        </p>
+        <p style="margin-bottom: 0; color: var(--w-color-primary-20);">
+            Premodern is special precisely because the human connection comes
+            first. When we sit down across the table—whether in a regional
+            tournament or at a kitchen table—the ultimate victory isn't locking
+            an opponent out of the game or lifting a trophy; it's the shared
+            laughter, the appreciation for classic old-frame cards, and the
+            conversations between rounds. Play hard, play with precision, but
+            always remember that the greatest magic is the gathering itself.
+        </p>
+    </Card>
+
     <Card title="Acknowledgments & Community Credits" titleTag="h2">
         <p
             style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;"
@@ -77,114 +102,6 @@ import WipAlert from "@components/WipAlert.astro";
                 passion continue to elevate the archetype.
             </li>
         </ul>
-    </Card>
-
-    <Card title="Project Backlog & Roadmap" titleTag="h2">
-        <p
-            style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;"
-        >
-            With our foundational UX architecture—including modular <code
-                >&lt;MatchupCard&gt;</code
-            > visual layouts, tiered sideboard categorizations, and exhaustive hate-counterplay
-            deep dives—now fully implemented, this guide continues to evolve as a
-            living strategic repository. Our current engineering backlog focuses on
-            advanced pedagogical tooling:
-        </p>
-        <ul
-            style="padding-left: 1.25rem; margin-bottom: 0; display: flex; flex-direction: column; gap: 0.75rem;"
-        >
-            <li>
-                <strong>Interactive Mulligan Sandbox & Hand Simulator:</strong> Developing
-                an in-browser interactive hand generator to test decision heuristics
-                against specific format archetypes and simulated pre-game disruption.
-            </li>
-            <li>
-                <strong>Ongoing Post-Ban Metagame Evolutions:</strong> Periodically
-                re-calibrating sideboard flex slots, threat assessments, and archetype
-                badges as contemporary regional championship meta dynamics shift.
-            </li>
-            <li>
-                <strong>Video Match Post-Mortems & Replay Archive:</strong> Integrating
-                curated championship match recordings and turn-by-turn video breakdowns
-                illustrating complex stack manipulations in live competitive environments.
-            </li>
-        </ul>
-    </Card>
-
-    <Card title="External Resources & Further Reading" titleTag="h2">
-        <List
-            itemGroups={[
-                {
-                    items: [
-                        {
-                            name: "Original Replenish Primer",
-                            subText: "by Brian Siu (Dr Siuss)",
-                            href: "https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu",
-                            target: "_blank",
-                        },
-                        {
-                            name: "External Interference in Opalescent Parallax Waves",
-                            subText: "by Gary Roth (December 2024)",
-                            href: "https://docs.google.com/document/d/e/2PACX-1vTS7yvU3FLB3Y2tPfV5EX8IEKFtGmMYDLAmKHieoIV90dbmX7jcu-C_dImJpM3ZU0w5zLt3hF_QuwCM/pub",
-                            target: "_blank",
-                        },
-                        {
-                            name: "On the Physics of Collisions Between Opalescent Parallax Waves",
-                            subText: "by Gary Roth (September 2024)",
-                            href: "https://docs.google.com/document/d/e/2PACX-1vQEW3hgl_gxjLwuTjdH5hoIZKxWNXAUotSipazs2pv60AzC0CUuwrjxjINJkgVfnKOquMgIgm6HZHc4/pub",
-                            target: "_blank",
-                        },
-                        {
-                            name: "Ban List Update 2026",
-                            subText:
-                                "by Martin Berlin (January 2026) on premodernmagic.com",
-                            href: "https://premodernmagic.com/blog/ban-list-update-2026/",
-                            target: "_blank",
-                        },
-                        {
-                            name: "Monster of the Week Episode 101: Replenish 2.0",
-                            subText: "(February 2026) on Wak-Wak",
-                            href: "https://www.wak-wak.se/monster/2026-2-5/episode-101-replenish-20",
-                            target: "_blank",
-                        },
-                        {
-                            name: "The quest to find the best sideboard card to play main continues!",
-                            subText:
-                                "YouTube Video Breakdown & Proactive Maindeck Tech Analysis",
-                            href: "https://www.youtube.com/watch?v=rqv5ZgezjCA",
-                            target: "_blank",
-                        },
-                        {
-                            name: "REPLENISH IS STILL BANANAS! Premodern Blue-White Opal-Wave Enchantment Combo MTG",
-                            subText: "YouTube Gameplay & Match Coverage",
-                            href: "https://www.youtube.com/watch?v=XWB2-UFgn6Q",
-                            target: "_blank",
-                        },
-                        {
-                            name: "LAN D HO's Replenish Masterclass",
-                            subText:
-                                "YouTube Strategic Tutorial & Deep-Dive Masterclass",
-                            href: "https://www.youtube.com/watch?v=DnOyOweDK5Y",
-                            target: "_blank",
-                        },
-                        {
-                            name: "[Premodern] Replenish vs Replenish - Finals - North American Championship 2026",
-                            subText:
-                                "YouTube Championship Finals Replay (Lobstercon 2026)",
-                            href: "https://www.youtube.com/watch?v=-TwRB8k71Sw",
-                            target: "_blank",
-                        },
-                        {
-                            name: "[Premodern] Moneyball Black vs Replenish - Top 8 - North American Championship 2026",
-                            subText:
-                                "YouTube Championship Top 8 Replay (Lobstercon 2026)",
-                            href: "https://www.youtube.com/watch?v=tFb1_RK8DnY",
-                            target: "_blank",
-                        },
-                    ],
-                },
-            ]}
-        />
     </Card>
     <DecklistTooltip />
 </Layout>

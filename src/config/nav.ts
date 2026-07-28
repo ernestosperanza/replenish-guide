@@ -42,9 +42,11 @@ export const SIDEBAR_GROUPS: NavGroup[] = [
         ],
     },
     {
-        title: "Wrapping Up",
+        title: "Community & Resources",
         items: [
-            { name: "Conclusion", href: "/conclusion" },
+            { name: "External Resources", href: "/resources" },
+            { name: "Project & Roadmap", href: "/roadmap" },
+            { name: "Conclusion & Credits", href: "/conclusion" },
         ],
     },
 ];

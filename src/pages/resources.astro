@@ -1,0 +1,105 @@
+---
+import Layout from "@components/Layout.astro";
+import PageHeader from "@components/PageHeader.astro";
+import { List, Card } from "webcoreui/astro";
+import DecklistTooltip from "@components/DecklistTooltip.astro";
+import WipAlert from "@components/WipAlert.astro";
+---
+
+<Layout
+    title="External Resources - Replenish Guide"
+    description="Curated reading lists, mathematical stack-physics treatises, championship match replays, and video masterclasses for Premodern Replenish."
+>
+    <PageHeader
+        title="External Resources"
+        description="A curated repository of mathematical stack treatises, historical primers, regional championship match replays, and strategic video breakdowns."
+        imageSrc="/src/assets/banners/web.jpg"
+        imageAlt="Tsabo's Web"
+        imageCaption="Tsabo's Web by Carl Critchlow"
+        isCard={true}
+    />
+
+    <WipAlert />
+
+    <Card title="Essential Reading & Championship Replays" titleTag="h2">
+        <p
+            style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.5rem;"
+        >
+            Expand your mastery beyond this guide by studying foundational primers, formal mathematical rules documentation by Gary Roth, and live tournament footage from regional Premodern championships.
+        </p>
+        <List
+            itemGroups={[
+                {
+                    items: [
+                        {
+                            name: "Original Replenish Primer",
+                            subText: "by Brian Siu (Dr Siuss)",
+                            href: "https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu",
+                            target: "_blank",
+                        },
+                        {
+                            name: "External Interference in Opalescent Parallax Waves",
+                            subText: "by Gary Roth (December 2024)",
+                            href: "https://docs.google.com/document/d/e/2PACX-1vTS7yvU3FLB3Y2tPfV5EX8IEKFtGmMYDLAmKHieoIV90dbmX7jcu-C_dImJpM3ZU0w5zLt3hF_QuwCM/pub",
+                            target: "_blank",
+                        },
+                        {
+                            name: "On the Physics of Collisions Between Opalescent Parallax Waves",
+                            subText: "by Gary Roth (September 2024)",
+                            href: "https://docs.google.com/document/d/e/2PACX-1vQEW3hgl_gxjLwuTjdH5hoIZKxWNXAUotSipazs2pv60AzC0CUuwrjxjINJkgVfnKOquMgIgm6HZHc4/pub",
+                            target: "_blank",
+                        },
+                        {
+                            name: "Ban List Update 2026",
+                            subText:
+                                "by Martin Berlin (January 2026) on premodernmagic.com",
+                            href: "https://premodernmagic.com/blog/ban-list-update-2026/",
+                            target: "_blank",
+                        },
+                        {
+                            name: "Monster of the Week Episode 101: Replenish 2.0",
+                            subText: "(February 2026) on Wak-Wak",
+                            href: "https://www.wak-wak.se/monster/2026-2-5/episode-101-replenish-20",
+                            target: "_blank",
+                        },
+                        {
+                            name: "The quest to find the best sideboard card to play main continues!",
+                            subText:
+                                "YouTube Video Breakdown & Proactive Maindeck Tech Analysis",
+                            href: "https://www.youtube.com/watch?v=rqv5ZgezjCA",
+                            target: "_blank",
+                        },
+                        {
+                            name: "REPLENISH IS STILL BANANAS! Premodern Blue-White Opal-Wave Enchantment Combo MTG",
+                            subText: "YouTube Gameplay & Match Coverage",
+                            href: "https://www.youtube.com/watch?v=XWB2-UFgn6Q",
+                            target: "_blank",
+                        },
+                        {
+                            name: "LAN D HO's Replenish Masterclass",
+                            subText:
+                                "YouTube Strategic Tutorial & Deep-Dive Masterclass",
+                            href: "https://www.youtube.com/watch?v=DnOyOweDK5Y",
+                            target: "_blank",
+                        },
+                        {
+                            name: "[Premodern] Replenish vs Replenish - Finals - North American Championship 2026",
+                            subText:
+                                "YouTube Championship Finals Replay (Lobstercon 2026)",
+                            href: "https://www.youtube.com/watch?v=-TwRB8k71Sw",
+                            target: "_blank",
+                        },
+                        {
+                            name: "[Premodern] Moneyball Black vs Replenish - Top 8 - North American Championship 2026",
+                            subText:
+                                "YouTube Championship Top 8 Replay (Lobstercon 2026)",
+                            href: "https://www.youtube.com/watch?v=tFb1_RK8DnY",
+                            target: "_blank",
+                        },
+                    ],
+                },
+            ]}
+        />
+    </Card>
+    <DecklistTooltip />
+</Layout>
