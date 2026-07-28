@@ -7,12 +7,12 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 ---
 
 <Layout
-    title="Project Roadmap & Open-Source Ecosystem - Replenish Guide"
-    description="Explore how this comprehensive Premodern Replenish strategic primer evolves as an open-source collaborative ecosystem, view upcoming pedagogical tools in our backlog, and learn how to contribute."
+    title="Project Roadmap - Replenish Guide"
+    description="See what's coming next for the Replenish guide and how you can help out. This is a community-driven project for Premodern Magic."
 >
     <PageHeader
         title="Project & Roadmap"
-        description="Discover our open-source architecture, initiate tactical discussions in the Discord ecosystem, suggest targeted additions, and track our ongoing pedagogical engineering backlog."
+        description="This guide is an open-source, community-driven project. Check out what we're planning to build next, and learn how you can contribute."
         imageSrc="/src/assets/banners/tomb.webp"
         imageAlt="Ancient Tomb"
         imageCaption="Ancient Tomb by Colin MacNeil"
@@ -21,145 +21,81 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 
 
 
-    <Card title="An Open-Source & Community-Driven Ecosystem" titleTag="h2">
-        <p
-            style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.5rem;"
-        >
-            This strategic compendium is not a static article; it is a <strong
-                >living, collaborative, open-source repository</strong
-            > maintained by and for the Premodern Magic community. As metagames adapt,
-            new sideboard concepts emerge, and tricky stack physics refine, this guide
-            relies on shared player rigor to remain the definitive resource for Replenish
-            pilots.
-        </p>
-        <div
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;"
-        >
-            <div
-                style="background-color: var(--w-color-primary-95); padding: 1.25rem; border-radius: var(--w-md-radius); border-left: 3px solid var(--w-color-primary-40);"
-            >
-                <strong
-                    style="color: var(--w-color-primary-10); display: block; margin-bottom: 0.5rem; font-size: 1.05rem;"
-                    >1. Strategic & Tournament Feedback</strong
-                >
-                <p style="margin: 0; font-size: 0.95rem; line-height: 1.5;">
-                    Share tournament match reports, propose sideboard adjustments,
-                    or debate mulligan heuristics by initiating conversations within
-                    the <strong>Premodern Replenish Discord</strong> community.
-                </p>
-            </div>
-            <div
-                style="background-color: var(--w-color-primary-95); padding: 1.25rem; border-radius: var(--w-md-radius); border-left: 3px solid var(--w-color-primary-40);"
-            >
-                <strong
-                    style="color: var(--w-color-primary-10); display: block; margin-bottom: 0.5rem; font-size: 1.05rem;"
-                    >2. Feature & Material Requests</strong
-                >
-                <p style="margin: 0; font-size: 0.95rem; line-height: 1.5;">
-                    Notice an unaddressed matchup, an omitted anti-graveyard tech
-                    card, or a complex priority loop ruling? Open an <strong
-                        >Issue on GitHub</strong
-                    > to suggest targeted additions or supplementary learning material.
-                </p>
-            </div>
-            <div
-                style="background-color: var(--w-color-primary-95); padding: 1.25rem; border-radius: var(--w-md-radius); border-left: 3px solid var(--w-color-primary-40);"
-            >
-                <strong
-                    style="color: var(--w-color-primary-10); display: block; margin-bottom: 0.5rem; font-size: 1.05rem;"
-                    >3. Code & UI Contributions</strong
-                >
-                <p style="margin: 0; font-size: 0.95rem; line-height: 1.5;">
-                    Built with <strong>Astro and TypeScript</strong>, our web architecture
-                    invites frontend developers to claim tasks directly from our
-                    engineering backlog—submitting Pull Requests to expand tools
-                    and refine UX aesthetics.
-                </p>
-            </div>
-        </div>
-    </Card>
 
-    <Card title="Project Backlog & Strategic Roadmap" titleTag="h2">
-        <p
-            style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;"
-        >
-            With our foundational UX architecture—including modular <code
-                >&lt;MatchupCard&gt;</code
-            > visual layouts, tiered sideboard categorizations, and exhaustive hate-counterplay
-            deep dives—now fully implemented, this guide continues to evolve as a
-            living tactical repository. Our active backlog highlights upcoming pedagogical
-            tooling and strategic expansions:
+
+    <Card title="Project Backlog & Roadmap" titleTag="h2">
+        <p style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;">
+            Here's what we are currently working on or planning to add to the site in the near future. If you want to tackle any of these, let us know!
         </p>
-        <ul
-            style="padding-left: 0; list-style: none; margin-bottom: 0; display: flex; flex-direction: column; gap: 1rem;"
-        >
+        <ul style="padding-left: 0; list-style: none; margin-bottom: 0; display: flex; flex-direction: column; gap: 1rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <div style="flex-shrink: 0; margin-top: 0.15rem;">
+                    <Badge theme="secondary" small={true}>To Do</Badge>
+                </div>
+                <div>
+                    <strong style="color: var(--w-color-primary-10);">Old Border Images:</strong>
+                    Replace all card tooltips and banners to ensure every single card uses its classic Premodern old border artwork.
+                </div>
+            </li>
+            
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <div style="flex-shrink: 0; margin-top: 0.15rem;">
+                    <Badge theme="secondary" small={true}>To Do</Badge>
+                </div>
+                <div>
+                    <strong style="color: var(--w-color-primary-10);">Spicy & Bizarre Decklists:</strong>
+                    Add a new section dedicated strictly to experimental variations, strange brews, and off-meta lists that run wild ideas.
+                </div>
+            </li>
+            
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <div style="flex-shrink: 0; margin-top: 0.15rem;">
+                    <Badge theme="secondary" small={true}>To Do</Badge>
+                </div>
+                <div>
+                    <strong style="color: var(--w-color-primary-10);">SEO Revision:</strong>
+                    Optimize metadata, tags, and structure so the guide is easier to find for players searching for Premodern content.
+                </div>
+            </li>
+            
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <div style="flex-shrink: 0; margin-top: 0.15rem;">
+                    <Badge theme="secondary" small={true}>To Do</Badge>
+                </div>
+                <div>
+                    <strong style="color: var(--w-color-primary-10);">More Resources:</strong>
+                    Expand the resources section with more articles, videos, and external links related to the archetype.
+                </div>
+            </li>
+
             <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
                 <div style="flex-shrink: 0; margin-top: 0.15rem;">
                     <Badge theme="secondary" small={true}>In Planning</Badge>
                 </div>
                 <div>
-                    <strong style="color: var(--w-color-primary-10);"
-                        >Interactive Mulligan Sandbox & Hand Simulator:</strong
-                    > Developing an in-browser interactive hand generator to test
-                    decision heuristics against specific format archetypes and simulated
-                    pre-game disruption.
+                    <strong style="color: var(--w-color-primary-10);">Mulligan Simulator:</strong>
+                    An in-browser mini app to generate random opening hands so you can practice your keep/mulligan decisions against specific matchups.
                 </div>
             </li>
+            
             <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
                 <div style="flex-shrink: 0; margin-top: 0.15rem;">
-                    <Badge theme="secondary" small={true}>
-                        Open for Contribution
-                    </Badge>
+                    <Badge theme="secondary" small={true}>Open for Contribution</Badge>
                 </div>
                 <div>
-                    <strong style="color: var(--w-color-primary-10);"
-                        >Tournament Quick-Reference "Cheat Sheet":</strong
-                    > Creating a condensed, single-screen or printable pocket summary
-                    detailing sideboard In/Out matrices and Intuition selection packages
-                    for fast round-to-round tournament reference.
-                </div>
-            </li>
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <div style="flex-shrink: 0; margin-top: 0.15rem;">
-                    <Badge theme="secondary" small={true}>
-                        Active Maintenance
-                    </Badge>
-                </div>
-                <div>
-                    <strong style="color: var(--w-color-primary-10);"
-                        >Ongoing Post-Ban Metagame Evolutions:</strong
-                    > Periodically re-calibrating sideboard flex slots, threat assessments,
-                    and archetype badges as contemporary regional championship meta
-                    dynamics shift.
-                </div>
-            </li>
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <div style="flex-shrink: 0; margin-top: 0.15rem;">
-                    <Badge theme="secondary" small={true}>
-                        Open for Contribution
-                    </Badge>
-                </div>
-                <div>
-                    <strong style="color: var(--w-color-primary-10);"
-                        >Changelog & Version Architecture:</strong
-                    > Integrating a user-facing release feed to transparently document
-                    rules updates, newly introduced matchups, and primer revisions
-                    over time.
-                </div>
-            </li>
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <div style="flex-shrink: 0; margin-top: 0.15rem;">
-                    <Badge theme="secondary" small={true}>In Development</Badge>
-                </div>
-                <div>
-                    <strong style="color: var(--w-color-primary-10);"
-                        >Video Match Post-Mortems & Replay Archive:</strong
-                    > Integrating curated championship match recordings and turn-by-turn
-                    video breakdowns illustrating complex stack manipulations in live
-                    competitive environments.
+                    <strong style="color: var(--w-color-primary-10);">Tournament Cheat Sheet:</strong>
+                    A condensed, printable one-pager summarizing the most important sideboard In/Out plans and Intuition piles to take to your next event.
                 </div>
             </li>
         </ul>
+    </Card>
+
+    <Card title="Get in Touch" titleTag="h2">
+        <p style="margin-top: 0; margin-bottom: 0; line-height: 1.6;">
+            Got a feature request, noticed a weird interaction we missed, or want to contribute to the guide? 
+            Feel free to reach out directly to <strong style="color: var(--w-color-primary);">@piposperanza</strong> on Discord 
+            or open an issue on <a href="https://github.com/ernestosperanza/replenish-guide/issues" target="_blank" rel="noopener noreferrer" style="color: var(--w-color-primary); font-weight: 600; text-decoration: none;">our GitHub repository</a>.
+        </p>
     </Card>
     <DecklistTooltip />
 </Layout>

@@ -3,23 +3,20 @@ import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import { Card } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
-
 ---
 
 <Layout
     title="Conclusion & Credits - Replenish Guide"
-    description="Reflections on the enduring fellowship of Premodern Magic and honorable acknowledgments celebrating the scholars and pilots who shaped this comprehensive Replenish guide."
+    description="Reflections on the Premodern Magic community and shoutouts to the players who helped shape this Replenish guide."
 >
     <PageHeader
         title="Conclusion & Credits"
-        description="Reflections on the true spirit of table fellowship in Premodern Magic, accompanied by honorable acknowledgments celebrating the community theorists and pilots who elevated the archetype."
+        description="A few final thoughts on what makes Premodern special, and huge thanks to the community members who helped elevate this archetype."
         imageSrc="/src/assets/banners/abeyance.webp"
         imageAlt="Abeyance"
         imageCaption="Abeyance by Thomas Gianni"
         isCard={true}
     />
-
-
 
     <Card title="The Spirit of the Gathering" titleTag="h2">
         <p
@@ -33,44 +30,38 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         </p>
         <p style="margin-bottom: 0; color: var(--w-color-primary-20);">
             Premodern is special precisely because the human connection comes
-            first. When we sit down across the table—whether in a regional
-            tournament or at a kitchen table—the ultimate victory isn't locking
-            an opponent out of the game or lifting a trophy; it's the shared
-            laughter, the appreciation for classic old-frame cards, and the
-            conversations between rounds. Play hard, play with precision, but
-            always remember that the greatest magic is the gathering itself.
+            first. When we sit down across the table—whether in a massive
+            regional tournament or at a kitchen table with a beer—the ultimate
+            victory isn't locking an opponent out of the game; it's the shared
+            laughs, the appreciation for classic old-frame cards, and the chats
+            between rounds. Play hard, play with precision, but always remember
+            that the greatest magic is the gathering itself.
         </p>
     </Card>
 
-    <Card title="Acknowledgments & Community Credits" titleTag="h2">
+    <Card title="Acknowledgments & Credits" titleTag="h2">
         <p
             style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;"
         >
-            This exhaustive strategic compendium represents the culmination of
-            years of rigorous tournament playtesting, mathematical analysis, and
-            passionate theoretical refinement within the Premodern competitive
-            ecosystem. Deepest gratitude and formal attribution belong to the
-            following community builders:
+            This guide is the result of years of tournament playtesting, endless
+            Discord debates, and refinement by the Premodern community. A
+            massive thank you to the following players who made this possible:
         </p>
         <ul
             style="padding-left: 1.25rem; margin-bottom: 0; display: flex; flex-direction: column; gap: 0.75rem;"
         >
             <li>
-                <strong>Brian Siu (Dr Siuss):</strong> Author of the original foundational
-                Premodern Replenish primer that inspired the educational framework
-                and design architecture of this comprehensive, interactive guide.
+                <strong>Brian Siu (Dr Siuss):</strong> Author of the original Premodern
+                Replenish primer that inspired the creation of this guide.
             </li>
             <li>
-                <strong>Gary Roth:</strong> Mathematical theorist and rules scholar
-                behind the definitive treatises documenting the formal stack-physics,
-                timestamp layering, and priority loops of Opalescent Parallax Wave
-                collisions.
+                <strong>Gary Roth:</strong> The rules guru behind the definitive explanation
+                of the Parallax Wave and Opalescence interactions.
             </li>
             <li>
-                <strong>The Premodern Replenish Discord Community:</strong> The collective
-                brotherhood of passionate tournament pilots, deckbuilders, and researchers
-                whose daily rigorous discussions, mulligan evaluations, and collaborative
-                passion continue to elevate the archetype. Special thanks to
+                <strong>The Premodern Replenish Discord Community:</strong> The entire
+                group of players testing, debating, and pushing the archetype forward
+                every day. Special thanks to
                 <strong>The Atog Lord</strong>, <strong>justint</strong>, <strong
                     >Pylse</strong
                 >,
@@ -80,8 +71,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                 >,
                 <strong>Bitner</strong>, <strong>chowder</strong>, <strong
                     >Lannynyny</strong
-                >, and <strong>Coinman</strong> for their invaluable insights into
-                post-ban opening hand evaluation.
+                >, and <strong>Coinman</strong> for their invaluable insights on mulligans
+                and post-ban strategies.
             </li>
         </ul>
     </Card>
