@@ -2,8 +2,7 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
-import WipAlert from "@components/WipAlert.astro";
-import { Card, Table } from "webcoreui/astro";
+import { Card, Table, Alert } from "webcoreui/astro";
 
 const tableHeadings = [
     "Spell Cast",
@@ -20,108 +19,85 @@ const tableData = [
 
 <Layout
     title="Mulligan Guide - Replenish Guide"
-    description="Learn when to keep or mulligan your opening hand with the Replenish deck. Explore probability tables, mathematical frameworks, and real-world case studies for MTG Premodern."
+    description="When to keep or mulligan your opening hand with the Replenish deck in MTG Premodern."
 >
     <PageHeader
         title="Mulligan Guide"
-        description="Knowing when to keep and when to throw back your opening hand is one of the most difficult and rewarding skills with Replenish. Let's break down the math and the theory."
+        description="Knowing when to keep and when to throw back your opening hand is one of the most important skills with Replenish."
         imageSrc="/src/assets/banners/search.webp"
         imageAlt="Frantic Search"
         imageCaption="Frantic Search by Jeff Miracola"
         isCard={true}
     />
 
-    <WipAlert />
-    <Card title="Advanced Mulligan Theory (Post-Tide)" titleTag="h2">
+    <Card title="Mulligan Philosophy" titleTag="h2">
         <p>
-            <strong>Reduced Topdeck Reliance:</strong> Following the banning of <a
-                href="#"
-                class="card-hover"
-                data-card-name="Parallax Tide">Parallax Tide</a
-            >, the deck transitioned from possessing eight autonomous
-            hand-fixers to only four (<a
-                href="#"
-                class="card-hover"
-                data-card-name="Attunement">Attunement</a
-            >). Because your statistical probability of drawing out of an
-            uncoordinated hand has literally halved, <strong
-                >you are mathematically obligated to mulligan far more
-                aggressively in Game 1 in the dark.</strong
-            > You can no longer afford to retain slow, speculative starting hands
-            and rely on perfect topdecks to bail you out.
-        </p>
-        <p>
-            <strong>The Early-Turn Rule:</strong> When evaluating opening hands in
-            the blind, a competitive pilot is willing to rely on topdecking exactly
-            <em>one</em> specific operational element during early draw steps (such
-            as hitting a third land drop or drawing an early interaction spell)—never
-            more than one.
-        </p>
-        <p style="margin-bottom: 1.5rem;">
-            <strong>Minimum Keep Thresholds:</strong> A viable championship hand must
-            guarantee functional mana delivery paired directly with either strong
-            early interaction, an active selection engine, or a reliable tutor.
+            With <a href="#" class="card-hover" data-card-name="Parallax Tide"
+                >Parallax Tide</a
+            > banned, the deck went from having 8 hand-fixers to just 4. You can't
+            rely on drawing out of a bad hand anymore. <strong
+                >You need to mulligan aggressively in Game 1 in the dark.</strong
+            > Don't keep slow hands hoping to topdeck exactly what you need.
         </p>
 
-        <h3 style="margin-top: 0; color: var(--w-color-success);">
-            Keepable Architectures (Snap Keeps)
-        </h3>
+        <Alert theme="info">
+            <strong>The 5-Point Checklist (Game 1, in the blind)</strong><br />
+            See how many of these boxes your opening hand ticks:<br /><br />
+            1. <strong>Interaction</strong> (Swords, Seal, Leak)<br />
+            2. <strong>A 3-mana blue Spell</strong> (Attunement, Intuition, Frantic
+            Search)<br />
+            3. <strong>A 4+ mana enchantment</strong> (Opal, Wave, Decree)<br />
+            4. <strong>Replenish</strong><br />
+            5. <strong>4+ mana</strong> (Lands/Tomb)<br /><br />
+            <strong>Rule of thumb:</strong> Keep if you have <strong
+                >3 or 4</strong
+            > of these. Anything with 2 or fewer is probably a mulligan.
+        </Alert>
+    </Card>
+
+    <Card title="Hands You Should Keep" titleTag="h2">
         <p>
-            Assuming functional colored mana production, standard keepable
-            formations in the blind include:
+            Assuming you have the lands to cast your spells, these are solid
+            starting hands in the dark:
         </p>
         <ul style="padding-left: 1.25rem; margin-bottom: 2rem;">
             <li style="margin-bottom: 0.5rem;">
-                <strong>Active Engine:</strong>
+                <strong>Engine + Lands:</strong>
                 <a href="#" class="card-hover" data-card-name="Attunement"
                     >Attunement</a
-                > + lands. The absolute gold-standard opening, immediately filtering
-                redundant draws and insulating resources against discard disruption.
+                > + lands. This is your best possible start.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Natural Combo In Hand:</strong>
+                <strong>Combo + Lands:</strong>
                 <a href="#" class="card-hover" data-card-name="Opalescence"
                     >Opalescence</a
                 > + <a
                     href="#"
                     class="card-hover"
                     data-card-name="Parallax Wave">Parallax Wave</a
-                >.
+                > + lands.
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Tutor + Key Piece:</strong>
+                <strong>Tutor + Piece:</strong>
                 <a href="#" class="card-hover" data-card-name="Intuition"
                     >Intuition</a
-                > + any foundational component (Opal, Wave, or Replenish). Intuition
-                reliably locates whatever missing link remains, fully justifying its
-                turn-three investment.
+                > + any combo piece (Opal, Wave, Replenish).
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Dual Interaction + Setup:</strong>
+                <strong>Heavy Control:</strong>
                 <a href="#" class="card-hover" data-card-name="Mana Leak"
                     >Mana Leak</a
-                > + at least 2 interaction pieces (<a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Swords to Plowshares"
-                    >Swords to Plowshares</a
-                >, <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                >). Buys critical operational time to locate selection engines
-                naturally.
+                > + at least two other interactive spells (Swords, Seal).
             </li>
             <li style="margin-bottom: 0.5rem;">
-                <strong>Interaction + Discard Engine:</strong>
+                <strong>Setup:</strong>
                 <a href="#" class="card-hover" data-card-name="Replenish"
                     >Replenish</a
                 > + <a
                     href="#"
                     class="card-hover"
                     data-card-name="Frantic Search">Frantic Search</a
-                > + an expensive permanent to dump into the graveyard (Opal, Wave,
-                or Decree).
+                > + an expensive permanent to discard (Opal, Wave, Decree).
             </li>
             <li>
                 <strong>Early Board Control:</strong>
@@ -135,190 +111,46 @@ const tableData = [
             </li>
         </ul>
 
-        <div
-            style="background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: 1.25rem; margin-bottom: 2.5rem;"
-        >
-            <h4 style="margin-top: 0; color: var(--w-color-primary-10);">
-                The Ancient Tomb Acceleration Factor
-            </h4>
-            <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                <a href="#" class="card-hover" data-card-name="Ancient Tomb"
-                    >Ancient Tomb</a
-                > dramatically accelerates game-plan pacing, transforming otherwise
-                sluggish combinations into automatic, tier-1 operational keeps. Consider
-                the following <strong>automatic keeps</strong> whenever Ancient Tomb
-                anchors your starting mana:
-            </p>
-            <ul style="padding-left: 1.25rem; margin-bottom: 0;">
-                <li style="margin-bottom: 0.35rem;">
-                    <code>Swords to Plowshares</code> + <code>Intuition</code> + <code
-                        >Ancient Tomb</code
-                    >
-                </li>
-                <li style="margin-bottom: 0.35rem;">
-                    <code>Frantic Search</code> + <code>Intuition</code> + <code
-                        >Ancient Tomb</code
-                    >
-                </li>
-                <li>
-                    <code>Mana Leak</code> + <code>Intuition</code> + <code
-                        >Ancient Tomb</code
-                    >
-                </li>
-            </ul>
-        </div>
-
-        <h3 style="margin-top: 0; color: var(--w-color-danger);">
-            Blind Mulligan Traps (Unviable Starts)
-        </h3>
-        <p>
-            A competitive pilot aggressively folds the following structured
-            traps when evaluating in the dark:
+        <h4 style="margin-top: 0; color: var(--w-color-primary-10);">
+            Ancient Tomb
+        </h4>
+        <p style="margin-bottom: 0;">
+            <a href="#" class="card-hover" data-card-name="Ancient Tomb"
+                >Ancient Tomb</a
+            > speeds up your game plan entirely. Hands like <strong
+                >Tomb + Intuition + (Swords/Leak/Frantic)</strong
+            > are usually instant keeps.
         </p>
-        <ul style="padding-left: 1.25rem; margin-bottom: 1rem;">
-            <li style="margin-bottom: 0.5rem;">
-                <strong>The Passive Hand (No Interaction or Engine):</strong> 4 Lands
-                + <a href="#" class="card-hover" data-card-name="Opalescence"
-                    >Opalescence</a
-                > + <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Decree of Silence">Decree of Silence</a
-                > + <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                >. Requires too many speculative, consecutive topdeck alignments
-                to execute anything proactive before falling fatally behind.
-            </li>
-            <li style="margin-bottom: 0.5rem;">
-                <strong>The Partial Resource Trap:</strong> 5 Lands + 2 spot interaction
-                spells. Presents an exceptionally high statistical probability of
-                drawing uncastable, redundant combo weights (Opal, Replenish, Decree)
-                without any mechanism to discard them or accelerate their development,
-                losing inevitable attrition games.
-            </li>
-            <li>
-                <strong>Orphaned Combo Pieces:</strong> Holding <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Replenish">Replenish</a
-                > without an active enabling engine (<a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Attunement">Attunement</a
-                >, <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Frantic Search">Frantic Search</a
-                >, or <a href="#" class="card-hover" data-card-name="Intuition"
-                    >Intuition</a
-                >). Replenish is strictly dead weight during early sequences
-                when uncoupled from graveyard preparation.
-            </li>
-        </ul>
-
-        <div
-            style="margin-top: 3rem; background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: clamp(1rem, 4vw, 2rem);"
-        >
-            <h3 style="margin-top: 0; color: var(--w-color-primary-10);">
-                Case Study: The Great Mulligan Debate
-            </h3>
-            <p style="font-size: 0.95rem;">
-                <em
-                    >This is a real community debate over a specific
-                    hypothetical opening hand that highlights how top players
-                    evaluate risk vs. reward in the post-ban format.</em
-                >
-            </p>
-
-            <p>
-                <strong>The Scenario:</strong> Game 1, on the play, in the dark.<br
-                />
-                <strong>The Hand:</strong> 4 Lands (including Ancient Tomb), <code
-                    >Seal of Cleansing</code
-                >, <code>Decree of Silence</code>, <code>Frantic Search</code>.
-            </p>
-
-            <p>
-                <em
-                    >Do you keep or mulligan? The community was split right down
-                    the middle.</em
-                >
-            </p>
-
-            <h4 style="margin-top: 1.5rem; color: var(--w-color-success);">
-                Argument 1: The "Keep" Camp
-            </h4>
-            <ul style="padding-left: 1.25rem;">
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Hitting Land Drops:</strong> Historically, Replenish loses
-                    games when it stumbles on mana. This hand guarantees you hit your
-                    first 4 land drops.
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>The Frantic Math:</strong> You have 15 "outs" left in
-                    the deck that turn this into a winning hand (Replenish, Wave,
-                    Attunement, Intuition). Between your natural draw steps and Frantic
-                    Search, you see 4 new cards by turn 3. Statistically, you have
-                    roughly a 75% chance to hit at least one of those outs.
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Flexibility:</strong> The hand has game against control
-                    (Seal + Decree + Lands) and discard decks (redundant lands). Its
-                    only glaring weakness is a fast aggro start.
-                </li>
-            </ul>
-
-            <h4 style="margin-top: 1.5rem; color: var(--w-color-danger);">
-                Argument 2: The "Mulligan" Camp
-            </h4>
-            <ul style="padding-left: 1.25rem;">
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Frantic Search is not an engine:</strong> Relying on it
-                    as your only path to victory is dangerous because it is card disadvantage.
-                    If you whiff, you are completely out of gas.
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>The 50/50 Coinflip:</strong> Looking at just the immediate
-                    Frantic Search draw, you have roughly a 50% chance to brick completely.
-                    A fresh hand of 7 cards has better overall odds of providing a
-                    coherent gameplan.
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    <strong>Seal is not a turn-buyer:</strong> While Seal is a fantastic
-                    maindeck card, unlike Swords to Plowshares or Mana Leak, it does
-                    not buy you time against early creature pressure. Keeping a hand
-                    with Seal as your only interaction is very risky in the dark.
-                </li>
-            </ul>
-
-            <h4 style="margin-top: 1.5rem; color: var(--w-color-primary-20);">
-                The Verdict
-            </h4>
-            <p style="margin-bottom: 0;">
-                There is no absolute "right" answer, but this debate reveals a
-                core tension: Risk-averse players prefer to guarantee their land
-                drops and trust the math of their cantrips, while aggressive
-                mulliganers believe that with the weaker topdecks post-ban, you
-                can no longer afford to keep hands that don't proactively
-                dictate the pace of the game.
-            </p>
-        </div>
     </Card>
 
-    <Card title="The Math Behind Replenish" titleTag="h2">
-        <p>
-            We can calculate the probability of finding a specific missing combo
-            piece (e.g., Replenish) when casting our card selection spells using
-            a hypergeometric calculator.
-        </p>
-        <p>
-            Assuming we are on the play and we cast our spell on Turn 3 (so we
-            have drawn 9 cards total: 7 starting + 2 draw steps). There are 51
-            cards left in the deck.
-        </p>
+    <Card title="Hands You Should Mulligan" titleTag="h2">
+        <p>Don't fall into the trap of keeping these hands in the dark:</p>
+        <ul style="padding-left: 1.25rem; margin-bottom: 0;">
+            <li style="margin-bottom: 0.5rem;">
+                <strong>The "Do Nothing" Hand:</strong> 4 Lands + Opal + Decree +
+                Seal. You have to topdeck perfectly for several turns to actually
+                do anything.
+            </li>
+            <li style="margin-bottom: 0.5rem;">
+                <strong>Flooded:</strong> 5 Lands + 2 interaction spells. You will
+                likely draw combo pieces with no way to discard them.
+            </li>
+            <li>
+                <strong>Dead Weight:</strong>
+                <a href="#" class="card-hover" data-card-name="Replenish"
+                    >Replenish</a
+                > without an enabler (Attunement, Frantic, or Intuition) is a dead
+                card.
+            </li>
+        </ul>
+    </Card>
 
+    <Card title="The Math" titleTag="h2">
+        <p>
+            Assuming you are on the play and cast a draw spell on Turn 3 (51
+            cards left in deck), here is the chance to find a specific card you
+            need (like Replenish):
+        </p>
         <div
             style="margin-bottom: 2rem; margin-top: 1rem; overflow-x: auto; width: 100%; max-width: 100%;"
         >
@@ -329,12 +161,57 @@ const tableData = [
                 striped="row"
             />
         </div>
-        <p style="margin-bottom: 4rem;">
-            This is why keeping hands without any engine or cantrip is
-            dangerous. A single Frantic Search only gives you a ~15% chance to
-            find that one specific card you need to survive. The more you know
-            these percentages, the better your in-game sequencing will be.
+        <p style="margin-bottom: 0;">
+            <strong>The Frantic Search Paradox:</strong> As the table shows, a single Frantic Search gives you just a 15% chance to find one specific 4-of. This is why keeping a hand where you desperately need Frantic Search to find exactly Replenish is a huge gamble. <br /><br />
+            However, if your hand is flexible and you have 15 different "outs" that make the hand work (e.g. any Replenish, Wave, Attunement, or Intuition), your odds jump to ~75% across your first three turns. Frantic Search shines as a discard outlet when you already have Replenish, or when you have many outs, but it is a weak engine on its own.
         </p>
     </Card>
+
     <DecklistTooltip />
 </Layout>
+
+<style>
+    .debate-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+        .debate-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .debate-box {
+        padding: 1.25rem;
+        border-radius: var(--w-md-radius);
+        border-left-width: 4px;
+        border-left-style: solid;
+    }
+
+    .debate-title {
+        display: block;
+        margin-bottom: 0.75rem;
+        font-size: 1.1rem;
+    }
+
+    .keep-box {
+        background-color: rgba(46, 204, 113, 0.08);
+        border-left-color: var(--w-color-success);
+    }
+
+    .keep-title {
+        color: var(--w-color-success);
+    }
+
+    .mulligan-box {
+        background-color: rgba(231, 76, 60, 0.08);
+        border-left-color: var(--w-color-danger);
+    }
+
+    .mulligan-title {
+        color: var(--w-color-danger);
+    }
+</style>

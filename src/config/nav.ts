@@ -28,10 +28,10 @@ export const SIDEBAR_GROUPS: NavGroup[] = [
         title: "Gameplay",
         items: [
             { name: "Macro Strategy", href: "/strategy" },
-            { name: "Sideboard Strategy", href: "/sideboard-strategy" },
             { name: "Mulligan Guide", href: "/mulligan" },
-            { name: "Mechanics & Loops", href: "/mechanics" },
             { name: "Intuition Cheatsheet", href: "/intuition" },
+            { name: "Mechanics & Loops", href: "/mechanics" },
+            { name: "Sideboard Strategy", href: "/sideboard-strategy" },
         ],
     },
     {
