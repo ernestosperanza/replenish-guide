@@ -7,198 +7,85 @@ import { Card, Alert } from "webcoreui/astro";
 
 <Layout
     title="Macro Strategy - Replenish Guide"
-    description="Master the foundational macro-concepts of competitive Premodern Replenish. Learn to navigate dual-angle disruption, identify archetype roles, and maintain rigorous selection discipline."
+    description="Learn the core concepts of playing Replenish in Premodern. Understand how to fight through disruption, identify your role in a matchup, and manage your resources."
 >
     <PageHeader
         title="Macro Strategy"
-        description="Master the foundational macro-concepts that dictate competitive game flow—navigating bi-directional disruption vectors, executing patient endpoint control, and maintaining strict resource discipline."
+        description="Understanding how Replenish ticks is about more than just knowing what your cards do. It's about recognizing when to play the control game, when to race the combo, and how to fight through hate."
         imageSrc="/src/assets/banners/swords.jpg"
         imageAlt="Swords to Plowshares"
         imageCaption="Swords to Plowshares by Kaja Foglio"
         isCard={true}
     />
 
-    <Card title="The Two-Angle Disruption Framework" titleTag="h2">
-        <p>
-            Parallax Replenish excels at insulating its game plan against
-            single-axis strategies. Pure aggression, linear mana denial, or slow
-            countermagic suites can all be systematically dismantled when
-            confronted in isolation. True strategic tension emerges when an
-            opposing archetype attacks across two intersecting angles
-            simultaneously—such as an early aggressive clock backed by severe
-            land destruction (<a
-                href="#"
-                class="card-hover"
-                data-card-name="Wasteland">Wasteland</a
-            >, <a href="#" class="card-hover" data-card-name="Rishadan Port"
-                >Rishadan Port</a
-            >) or fast combat pressure supported by cheap permission.
+    <Card title="Fighting Through Disruption" titleTag="h2">
+        <p style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;">
+            Replenish is incredibly resilient against single-axis strategies. Pure aggro, land destruction, or a pile of counterspells can usually be picked apart if they only attack you from one angle.
+            The real challenge starts when an opponent hits you from two angles at once—like early pressure backed up by <a href="#" class="card-hover" data-card-name="Wasteland">Wasteland</a> and <a href="#" class="card-hover" data-card-name="Rishadan Port">Rishadan Port</a>, or a fast clock supported by cheap counters.
         </p>
-        <div
-            style="background-color: var(--w-color-primary-95); padding: 1rem; border-radius: var(--w-md-radius); border-left: 3px solid var(--w-color-primary-40); margin-top: 1.25rem;"
-        >
-            <strong
-                style="color: var(--w-color-primary-10); display: block; margin-bottom: 0.5rem;"
-                >Mulligan Discipline Under Dual-Angle Pressure</strong
-            >
-            When confronting dual-angle pressure, attempting to sculpt out of a misaligned
-            starting hand across turns one and two is mathematically fatal because
-            dedicated card selection engines begin at three mana. For quantitative
-            heuristics and hand evaluation frameworks under disruption, consult our
-            dedicated <a
-                href="/mulligan"
-                class="guide-link"
-                >Mulligan Guide</a
-            >.
-        </div>
+        <p style="margin-bottom: 0; color: var(--w-color-primary-20);">
+            <strong style="color: var(--w-color-primary-10);">Mulliganing Under Pressure:</strong>
+            When you're facing down pressure from two different angles, keeping a slow hand and hoping to cantrip your way out of it on turns one and two is a death sentence. Our dedicated card draw doesn't really come online until turn three. Check out the <a href="/mulligan" style="color: var(--w-color-primary); font-weight: 600; text-decoration: none;">Mulligan Guide</a> for more on what hands to keep.
+        </p>
     </Card>
 
-    <Card title="Role Identification & Pace of Play" titleTag="h2">
-        <p>
-            In competitive Premodern, Parallax Replenish is a dynamic
-            Control-Combo archetype with multi-angled post-sideboard
-            capabilities. Succeeding across a full match requires accurately
-            identifying your strategic role based on your opponent's clock and
-            interaction suite:
+    <Card title="Identifying Your Role" titleTag="h2">
+        <p style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.5rem;">
+            Replenish is a classic Control-Combo deck. To win a full match, you need to correctly identify your role based on what your opponent is doing:
         </p>
-        <div
-            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.25rem;"
-        >
+        
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
             <div>
-                <h3
-                    style="margin: 0 0 0.5rem 0; color: var(--w-color-primary-10); font-size: 1.1rem;"
-                >
-                    Disruptive Control & Fast Combo Pivot
-                </h3>
-                <p style="margin: 0;">
-                    Against fast aggressive clocks and burn structures (such as
-                    Goblins, Sligh, or UG Madness), your goal is not passive
-                    long-term survival—you must actively disrupt their momentum
-                    and control the battlefield just long enough to assemble
-                    your combo as rapidly as possible. Deploy early defensive
-                    interaction like <a
-                        href="#"
-                        class="card-hover"
-                        data-card-name="Parallax Wave">Parallax Wave</a
-                    >, spot removal, and table resets to stall their clock,
-                    while aggressively sculpting your graveyard to force a
-                    decisive lethal untap before their direct damage reach or
-                    explosive topdecks close the gap.
+                <strong style="color: var(--w-color-primary-10); display: block; margin-bottom: 0.25rem; font-size: 1.1rem;">
+                    1. The Control Plan (Against Aggro)
+                </strong>
+                <p style="margin: 0; color: var(--w-color-primary-20);">
+                    Against fast aggressive decks like Goblins, Sligh, or UG Madness, your goal isn't just to survive forever. You need to disrupt their momentum and control the board <em>just long enough</em> to assemble your combo. Use <a href="#" class="card-hover" data-card-name="Parallax Wave">Parallax Wave</a> and <a href="#" class="card-hover" data-card-name="Swords to Plowshares">Swords to Plowshares</a> to stall the clock while you sculpt your graveyard for a lethal turn before they can burn you out.
                 </p>
             </div>
+            
             <div>
-                <h3
-                    style="margin: 0 0 0.5rem 0; color: var(--w-color-primary-10); font-size: 1.1rem;"
-                >
-                    The Proactive Combo Role
-                </h3>
-                <p style="margin: 0;">
-                    Against traditional inevitability control decks or faster
-                    pure combo setups, you must assume an urgent proactive
-                    stance. Your imperative shifts to aggressively sculpting
-                    your graveyard in early turns and forcing through an
-                    operational <a
-                        href="#"
-                        class="card-hover"
-                        data-card-name="Replenish">Replenish</a
-                    > or hardcasting <a
-                        href="#"
-                        class="card-hover"
-                        data-card-name="Opalescence">Opalescence</a
-                    > before their defensive countermagic perimeter fully solidifies.
+                <strong style="color: var(--w-color-primary-10); display: block; margin-bottom: 0.25rem; font-size: 1.1rem;">
+                    2. The Combo Plan (Against Control & Fast Combo)
+                </strong>
+                <p style="margin: 0; color: var(--w-color-primary-20);">
+                    Against slow control decks or faster combo decks, you have to be proactive. Shift gears, fill your graveyard aggressively in the early turns, and force them to have answers before they can establish full control. Jamming an early <a href="#" class="card-hover" data-card-name="Opalescence">Opalescence</a> or <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a> is often the best line.
                 </p>
             </div>
+            
             <div>
-                <h3
-                    style="margin: 0 0 0.5rem 0; color: var(--w-color-primary-10); font-size: 1.1rem;"
-                >
-                    The Transformational Midrange Role
-                </h3>
-                <p style="margin: 0;">
-                    In post-sideboard games, when opponents severely dilute
-                    their primary game plans with graveyard hate like <a
-                        href="#"
-                        class="card-hover"
-                        data-card-name="Tormod's Crypt">Tormod's Crypt</a
-                    > or <a
-                        href="#"
-                        class="card-hover"
-                        data-card-name="Planar Void">Planar Void</a
-                    >, Replenish can transform into a potent white-blue midrange
-                    deck. By deploying proactive disruptive armor like <a
-                        href="#"
-                        class="card-hover"
-                        data-card-name="Defense Grid">Defense Grid</a
-                    > alongside efficient threat engines such as <a
-                        href="#"
-                        class="card-hover"
-                        data-card-name="Exalted Angel">Exalted Angel</a
-                    > and <a
-                        href="#"
-                        class="card-hover"
-                        data-card-name="Meddling Mage">Meddling Mage</a
-                    >, you completely circumvent their reactive hate
-                    suite—closing out the game through superior battlefield
-                    presence and evasive combat clocks while they sit on dead
-                    graveyard interaction.
+                <strong style="color: var(--w-color-primary-10); display: block; margin-bottom: 0.25rem; font-size: 1.1rem;">
+                    3. The Midrange Pivot (Post-Sideboard)
+                </strong>
+                <p style="margin: 0; color: var(--w-color-primary-20);">
+                    In Games 2 and 3, opponents will often dilute their deck with graveyard hate like <a href="#" class="card-hover" data-card-name="Tormod's Crypt">Tormod's Crypt</a>. This is when Replenish shines by transforming into a UW Midrange deck. By bringing in cards like <a href="#" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a> or <a href="#" class="card-hover" data-card-name="Exalted Angel">Exalted Angel</a>, you completely ignore their hate and beat them down with evasive creatures while they sit on dead graveyard interaction.
                 </p>
             </div>
         </div>
     </Card>
 
-    <Card title="Endpoint Play & Resource Preservation" titleTag="h2">
-        <p>
-            Against heavy permission decks, evaluate game state progression
-            through the lens of terminal endpoints. Imagine a hypothetical final
-            state where both players draw out their entire libraries: if your
-            ultimate win-condition density overcomes their absolute countermagic
-            count, you are statistically favored to win prolonged attrition
-            battles. In such matchups, total resource preservation is
-            paramount—avoid executing speculative cantrips or discarding
-            high-value cards for trivial temporary advantages.
+    <Card title="Playing the Long Game" titleTag="h2">
+        <p style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;">
+            Against heavy counterspell decks, think about the game in terms of inevitability. If the game goes extremely long, and you both draw most of your decks, who wins? Since your threat density (with multiple copies of <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a>, <a href="#" class="card-hover" data-card-name="Opalescence">Opalescence</a>, and <a href="#" class="card-hover" data-card-name="Decree of Silence">Decree of Silence</a>) is incredibly high, you are usually favored to win attrition battles.
         </p>
-        <p style="margin-bottom: 0;">
-            In protracted counter-wars, if a control opponent retains eight
-            permission spells while you assemble four copies of <a
-                href="#"
-                class="card-hover"
-                data-card-name="Replenish">Replenish</a
-            >, four <a href="#" class="card-hover" data-card-name="Opalescence"
-                >Opalescence</a
-            >, and three <a
-                href="#"
-                class="card-hover"
-                data-card-name="Decree of Silence">Decree of Silence</a
-            >, your terminal spell will ultimately resolve—provided you have not
-            frittered away redundant engine pieces in early exchanges.
+        <p style="margin-bottom: 0; color: var(--w-color-primary-20);">
+            In these matchups, patience and resource preservation are everything. Don't waste your key spells or discard important combo pieces just for a temporary advantage. Make sure every threat you cast forces them to use a real answer. Eventually, your final spell will resolve simply because they ran out of counters.
         </p>
     </Card>
 
-    <Card title="Attunement Resource Discipline" titleTag="h2">
-        <Alert theme="warning">
-            <strong>Never Activate Attunement Blindly</strong><br />
-            Before resolving an activation, you must confidently answer two analytical
-            criteria: <em>which exact cards in your hand are expendable</em>,
-            and <em
-                >what precise mechanism or answer is required from the top of
-                your deck?</em
-            > If either answer remains ambiguous, strictly forego the activation.
-        </Alert>
-        <p style="margin-top: 1.25rem; margin-bottom: 0;">
-            A prevalent execution error among developing pilots is activating <a
-                href="#"
-                class="card-hover"
-                data-card-name="Attunement">Attunement</a
-            > repeatedly without a definitive resource plan. Particularly against
-            interactive control structures, every reckless filtering loop risks stripping
-            irreplaceable lands or protective win-condition redundancy—exposing your
-            late-game posture to fatal single-point answers. Always maintain documented
-            purpose for every discarded card, and cast <a
-                href="#"
-                class="card-hover"
-                data-card-name="Frantic Search">Frantic Search</a
-            > strictly during your opponent's end step to maximize operational untap
-            safety.
+    <Card title="Don't Loot Blindly" titleTag="h2">
+        <p style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 1.25rem;">
+            A common mistake for newer pilots is activating <a href="#" class="card-hover" data-card-name="Attunement">Attunement</a> or <a href="#" class="card-hover" data-card-name="Frantic Search">Frantic Search</a> repeatedly without a clear plan. 
+        </p>
+        <p style="margin-bottom: 1.25rem; color: var(--w-color-primary-20);">
+            Before you activate an engine, you should always know the answers to these two questions:
+        </p>
+        <ul style="margin-top: 0; margin-bottom: 1.5rem; color: var(--w-color-primary-20); padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li>Which exact cards in your hand are you willing to discard?</li>
+            <li>What specific card or answer are you digging for?</li>
+        </ul>
+        <p style="margin-bottom: 0; color: var(--w-color-primary-20);">
+            If you don't know the answer to both, <strong style="color: var(--w-color-primary-10);">don't activate it.</strong> Reckless looting against a control deck risks throwing away important lands or redundant combo pieces, leaving you vulnerable in the late game. Always have a purpose for every card you discard, and try to cast your card draw during your opponent's end step whenever possible.
         </p>
     </Card>
     <DecklistTooltip />
