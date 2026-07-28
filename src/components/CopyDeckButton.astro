@@ -1,5 +1,5 @@
 ---
-import { Button } from "webcoreui/astro";
+import { Icon } from "webcoreui/astro";
 export interface Props {
     decklist: string;
 }
@@ -7,7 +7,8 @@ const { decklist } = Astro.props;
 ---
 <div class="copy-deck-wrapper" data-decklist={decklist} style="display: inline-flex; align-items: center;">
     <button type="button" class="copy-btn" aria-label="Copy MTGO List" title="Copy MTGO List">
-        📋
+        <span class="icon-copy"><Icon type="copy" size={20} /></span>
+        <span class="icon-check" style="display: none; color: var(--w-color-success, #22c55e);"><Icon type="circle-check" size={20} /></span>
     </button>
 </div>
 
@@ -16,7 +17,6 @@ const { decklist } = Astro.props;
         background: transparent;
         border: none;
         cursor: pointer;
-        font-size: 1.2rem;
         padding: 0.25rem;
         transition: transform 0.2s ease, opacity 0.2s ease;
         opacity: 0.7;
@@ -24,6 +24,7 @@ const { decklist } = Astro.props;
         display: flex;
         align-items: center;
         justify-content: center;
+        color: var(--w-color-primary-20);
     }
     .copy-btn:hover {
         opacity: 1;
@@ -40,9 +41,18 @@ const { decklist } = Astro.props;
                 btn.addEventListener('click', (e) => {
                     e.stopPropagation(); // Prevent closing details if placed in summary
                     navigator.clipboard.writeText(wrapper.getAttribute('data-decklist') || '');
-                    const originalText = btn.innerHTML;
-                    btn.innerHTML = '✅';
-                    setTimeout(() => { btn.innerHTML = originalText; }, 2000);
+                    
+                    const copyIcon = btn.querySelector('.icon-copy') as HTMLElement;
+                    const checkIcon = btn.querySelector('.icon-check') as HTMLElement;
+                    
+                    if (copyIcon && checkIcon) {
+                        copyIcon.style.display = 'none';
+                        checkIcon.style.display = 'block';
+                        setTimeout(() => { 
+                            copyIcon.style.display = 'block';
+                            checkIcon.style.display = 'none';
+                        }, 2000);
+                    }
                 });
             }
         });
