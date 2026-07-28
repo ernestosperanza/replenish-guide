@@ -2,7 +2,7 @@ import type { Decklist } from "./types";
 
 export const marinebiomancerDeck: Decklist = {
     id: "marinebiomancer",
-    player: "Marinebiomancer",
+    player: "Marine Biomancer",
     badgeText: "Top 16 - New England Premodern Summer Regional (2026)",
     badgeTheme: "secondary",
     columns: [

@@ -4,7 +4,6 @@ import PageHeader from "@components/PageHeader.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 import { Card } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
-import WipAlert from "@components/WipAlert.astro";
 ---
 
 <Layout title="Playing Through Hate - Replenish Guide">
@@ -17,9 +16,8 @@ import WipAlert from "@components/WipAlert.astro";
         isCard={true}
     />
 
-    <WipAlert />
     <Card title="Graveyard Interference" titleTag="h2">
-        <p style="margin-bottom: 1.5rem;">
+        <p class="section-intro">
             Because <a href="#" class="card-hover" data-card-name="Replenish"
                 >Replenish</a
             > relies heavily on the graveyard to cheat massive mana costs, opponents
@@ -32,7 +30,7 @@ import WipAlert from "@components/WipAlert.astro";
             title="Withered Wretch"
             image="creatures/withered_wretch.jpg"
         >
-            <p style="margin-top: 0;">
+            <p>
                 <strong>(Black Aggro, The Rock):</strong>
                 <a href="#" class="card-hover" data-card-name="Withered Wretch"
                     >Withered Wretch</a
@@ -66,7 +64,7 @@ import WipAlert from "@components/WipAlert.astro";
             title="Tormod's Crypt"
             image="artifacts/tormods_crypt.jpg"
         >
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Universal Exile:</strong> The simplest physical answer to
                 an early <a
                     href="#"
@@ -106,7 +104,7 @@ import WipAlert from "@components/WipAlert.astro";
             title="Phyrexian Furnace"
             image="artifacts/phyrexian_furnace.jpg"
         >
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Incremental Attrition:</strong> Unlike <a
                     href="#"
                     class="card-hover"
@@ -142,7 +140,7 @@ import WipAlert from "@components/WipAlert.astro";
             title="Haunting Echoes"
             image="sorceries/haunting_echoes.jpg"
         >
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Graveyard & Library Extraction:</strong> The supreme terminal
                 hate piece of Black-based control shells and Psychatog variants. Resolving
                 a five-mana <a
@@ -175,7 +173,7 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
 
         <CardAnalysis title="Planar Void" image="enchantments/planar_void.jpg">
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Continuous Exile Constraint:</strong> A one-mana static enchantment
                 favored by Suicide Black and aggressive mono-black builds that automatically
                 exiles any card immediately as it hits the graveyard, creating an
@@ -206,8 +204,8 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
     </Card>
 
-    <Card title="Enchantment Sweepers & Removal" titleTag="h2">
-        <p style="margin-bottom: 1.5rem;">
+    <Card title="Sweepers & Permanent Wipes" titleTag="h2">
+        <p class="section-intro">
             When opponents fail to attack your graveyard, they frequently
             overload on reactive anti-enchantment removal to dismantle your
             engines once they reach the battlefield.
@@ -217,7 +215,7 @@ import WipAlert from "@components/WipAlert.astro";
             title="Tranquil Domain / Naturalize"
             image="instants/tranquil_domain.jpg"
         >
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Instant-Speed Destruction:</strong> Traditional green answers
                 aimed at destroying your lock pieces as they are cast or attacking
                 your established board during combat or end steps.
@@ -248,7 +246,7 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
 
         <CardAnalysis title="Scour" image="instants/scour.jpg">
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Surgical Eradication:</strong> Primarily fielded by blue-white
                 control sideboards utilizing Invasion-block removal suites, <a
                     href="#"
@@ -279,7 +277,7 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
 
         <CardAnalysis title="Anarchy" image="sorceries/anarchy.jpg">
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Red Sweeper & Color Hate:</strong> Aggressive red architectures
                 (Sligh, RG Ponza, Goblins) consistently side in <a
                     href="#"
@@ -329,7 +327,7 @@ import WipAlert from "@components/WipAlert.astro";
             title="Reverent Silence"
             image="sorceries/reverent_silence.jpg"
         >
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Free Enchantment Sweeper:</strong> Utilized by Elves and green
                 aggro-midrange builds as zero-mana interaction by having you gain
                 6 life as an alternate casting cost. While sweeping your entire enchantment
@@ -364,7 +362,7 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
 
         <CardAnalysis title="Ray of Revelation / Sylvan Reclamation">
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Flashback & Exile Spot Removal:</strong> Green-white disruptive
                 configurations rely on <a
                     href="#"
@@ -404,7 +402,7 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
 
         <CardAnalysis title="Calming Verse">
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Asymmetric Mass Sweeper:</strong> A catastrophic four-mana
                 green sorcery sweeper that destroys all enchantments you control while
                 leaving a tapped-out or green opponent's permanent infrastructure
@@ -437,8 +435,8 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
     </Card>
 
-    <Card title="Taxing Structures & Lockouts" titleTag="h2">
-        <p style="margin-bottom: 1.5rem;">
+    <Card title="Taxation & Cost Increases" titleTag="h2">
+        <p class="section-intro">
             Static restriction permanents attempt to lock down your resource
             development or prevent your core engine loops from executing
             cleanly.
@@ -448,7 +446,7 @@ import WipAlert from "@components/WipAlert.astro";
             title="Presence of the Master"
             image="enchantments/presence_of_the_master.jpg"
         >
-            <p style="margin-top: 0;">
+            <p>
                 <strong>The Replenish Bypass:</strong> While imposing on paper against
                 an enchantment archetype, <a
                     href="#"
@@ -493,7 +491,7 @@ import WipAlert from "@components/WipAlert.astro";
             title="Aura of Silence"
             image="enchantments/aura_of_silence.jpg"
         >
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Tax & Threat Combination:</strong> Frequently sideboarded
                 in White Weenie, BW Control, and Enchantress mirrors. Because <a
                     href="#"
@@ -533,7 +531,7 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
 
         <CardAnalysis title="Gloom" image="matchups/moneyball/gloom.jpg">
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Asymmetric Color Tax:</strong> Brought in by Black aggro,
                 Suicide Black, and The Rock. By taxing all white spells and white
                 enchantment activation costs by three generic mana, <a
@@ -600,7 +598,7 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
 
         <CardAnalysis title="Winter Orb" image="artifacts/winter_orb.jpg">
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Mana Chokepoints:</strong> Featured heavily in Stasis, Merfolk,
                 and aggressive tempo builds. Because Replenish operates around a critical
                 three- and four-mana spell curve, restricted untap steps severely
@@ -636,7 +634,7 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
 
         <CardAnalysis title="Cursed Totem" image="artifacts/cursed_totem.jpg">
-            <p style="margin-top: 0;">
+            <p>
                 <strong>The Opalescence Lockout:</strong> A subtle and deceptively
                 dangerous sideboard artifact. On an empty board or during standard
                 setup phases, <a
@@ -678,7 +676,7 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
 
         <CardAnalysis title="Dystopia" image="enchantments/dystopia.jpg">
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Cumulative Color Attrition:</strong> A grueling sideboard
                 enchantment deployed by Black control and midrange configurations
                 (such as The Rock) that imposes a recurring upkeep tax: at the beginning
@@ -725,7 +723,7 @@ import WipAlert from "@components/WipAlert.astro";
         </CardAnalysis>
 
         <CardAnalysis title="Humility">
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Layered Stat Normalization:</strong> Occasional mirror tech
                 or UW Control sideboard inclusion, <a
                     href="#"
@@ -762,7 +760,7 @@ import WipAlert from "@components/WipAlert.astro";
             title="Meddling Mage"
             image="creatures/meddling_mage.webp"
         >
-            <p style="margin-top: 0;">
+            <p>
                 <strong>Precision Bottlenecks:</strong> Opponents fielding blue-white
                 builds (UW Landstill, mirrors) frequently introduce <a
                     href="#"
@@ -800,3 +798,10 @@ import WipAlert from "@components/WipAlert.astro";
     </Card>
     <DecklistTooltip />
 </Layout>
+
+<style>
+    .section-intro {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+</style>
