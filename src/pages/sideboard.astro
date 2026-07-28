@@ -16,14 +16,35 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         isCard={true}
     />
 
+    <Card title="Metagame Data Methodology" titleTag="h2">
+        <p
+            style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 0;"
+        >
+            All sideboard tier classifications and statistical inclusion
+            percentages throughout this guide are derived from an exhaustive,
+            rigorous analysis of <strong
+                >180 winning Premodern tournament decklists</strong
+            > (aggregated via MTGDecks). To ensure tactical accuracy for contemporary
+            competitive play, our database explicitly filters for events conducted
+            <strong>strictly post-ban</strong> (following the departure of <a
+                href="#"
+                class="card-hover"
+                data-card-name="Parallax Tide">Parallax Tide</a
+            >). Removing historical "Tide-era" noise reveals true modern
+            tournament consensus—highlighting the universal necessity of
+            proactive mana protection and transformational post-board win
+            conditions.
+        </p>
+    </Card>
+
     <Card title="Tier 1: Core Tournament Staples" titleTag="h2">
         <p
             style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 2rem;"
         >
             The foundational reactive and transformative pillars of competitive
-            Premodern Replenish sideboards. Based on real post-ban tournament data,
-            these slots address universal format imbalances and belong in virtually
-            every optimized 75.
+            Premodern Replenish sideboards. Based on real post-ban tournament
+            data, these slots address universal format imbalances and belong in
+            virtually every optimized 75.
         </p>
 
         <CardAnalysis
@@ -70,16 +91,16 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             badge="3–4 Side · 92.2% Inclusion"
         >
             <p style="margin-top: 0;">
-                A defining powerhouse of the post-ban sideboard metagame. With over
-                92% of competitive sideboards fielding an average of 3 to 4 copies
-                (and another 10% running copies maindeck), <a
+                A defining powerhouse of the post-ban sideboard metagame. With
+                over 92% of competitive sideboards fielding an average of 3 to 4
+                copies (and another 10% running copies maindeck), <a
                     href="#"
                     class="card-hover"
                     data-card-name="Meddling Mage">Meddling Mage</a
-                > represents an absolute tournament consensus for Games 2 and 3.
-                Deploying Mage post-board operates on a devastating dual axis: it
-                proactively locks out critical enemy bottleneck spells while contributing
-                to a fast, transformational clock alongside Exalted Angel when opponents
+                > represents an absolute tournament consensus for Games 2 and 3. Deploying
+                Mage post-board operates on a devastating dual axis: it proactively
+                locks out critical enemy bottleneck spells while contributing to a
+                fast, transformational clock alongside Exalted Angel when opponents
                 trim their spot removal.
             </p>
             <p style="margin-bottom: 0;">
@@ -97,8 +118,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Counterspell">Counterspell</a
-                > or enchantment sweepers guarantees combo resolves on schedule.
-                For exhaustive matchup-by-match naming conventions, consult our <a
+                > or enchantment sweepers guarantees combo resolves on schedule. For
+                exhaustive matchup-by-match naming conventions, consult our <a
                     href="/matchups"
                     style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
                     >Matchup Matrix</a
@@ -111,44 +132,27 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             image="artifacts/tsabos_web.jpg"
             badge="1–3 Side · 77.8% Inclusion"
         >
-            <p style="margin-top: 0;">
-                In the post-ban format, protecting your land development from disruptive
-                mana taxation is paramount. Over three-quarters of all tournament
-                sideboards dedicate slots to <a
+            <p style="margin-top: 0; margin-bottom: 0;">
+                While pilots fielding maindeck copies utilize <a
                     href="#"
                     class="card-hover"
                     data-card-name="Tsabo's Web">Tsabo's Web</a
-                > (with nearly 25% of pilots running copies directly in the maindeck).
-                Deploying this simple two-mana artifact completely silences hostile
-                utility lands like <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Rishadan Port">Rishadan Port</a
-                >, <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Dust Bowl">Dust Bowl</a
-                >, and <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Wasteland">Wasteland</a
-                >, while immobilizing aggressive creature-lands like <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Mishra's Factory">Mishra's Factory</a
-                >.
-            </p>
-            <p style="margin-bottom: 0;">
-                Because Tsabo's Web replaces itself immediately upon resolution via cantrip
-                draw, it insulates your sequencing into lethal four-mana setup turns
-                without costing card velocity or slowing down combo assembly.
+                > as broad proactive disruption, over 77% of tournament players rely
+                on it in the sideboard specifically to counter Games 2 and 3 resource
+                attrition. In post-board games against aggressive shells (Goblins,
+                Rock, Ponza), opponents predictably double down on mana-denial loops
+                and land taxation to choke your four-mana setup turns before you can
+                answer their graveyard hate. Siding in Web acts as dedicated structural
+                mana armor, completely locking down enemy disruption and ensuring
+                your mana develops on schedule while preserving card velocity through
+                its cantrip draw.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
             title="Defense Grid"
             image="artifacts/defense_grid.jpg"
-            badge="2–3 Side · 52.8% Inclusion"
+            badge="0–3 Side · 52.8% Inclusion"
         >
             <p style="margin-top: 0; margin-bottom: 0;">
                 The premier resource equalizer against permission-heavy
@@ -166,19 +170,25 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         <CardAnalysis
             title="Hydroblast / Blue Elemental Blast"
             image="instants/hydroblast.jpg"
-            badge="3–4 Side · 76.1% Inclusion"
+            badge="2–4 Side · 76.1% Inclusion"
         >
             <p style="margin-top: 0; margin-bottom: 0;">
-                The cleanest one-mana answer to rapid red clocks and red
-                disruption suites. Whether countering an inbound <a
+                The cleanest one-mana answer to rapid red clocks and disruptive
+                sideboard tech. Whether countering an inbound <a
                     href="#"
                     class="card-hover"
-                    data-card-name="Pyroblast">Pyroblast</a
-                > targeting your combo pieces or destroying a lethal <a
+                    data-card-name="Pyroblast"
+                    >Pyroblast / Red Elemental Blast</a
+                > targeting your blue combo engines, removing a turn-one <a
                     href="#"
                     class="card-hover"
-                    data-card-name="Goblin Piledriver">Goblin Piledriver</a
-                > on combat declaration, Hydroblast represents indispensable defensive
+                    data-card-name="Goblin Lackey">Goblin Lackey</a
+                > on sight before it cheats lethal boards into play, or answering
+                game-breaking enchantment hate like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Anarchy">Anarchy</a
+                >, Hydroblast represents strictly indispensable defensive
                 velocity.
             </p>
         </CardAnalysis>
@@ -194,10 +204,10 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > dominates post-board artifact and enchantment interaction (fielded in 50% of sideboards and 97.8% of maindecks) due to its seamless recursion via <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Replenish">Replenish</a
+                > dominates post-board artifact and enchantment interaction (fielded
+                in 50% of sideboards and 97.8% of maindecks) due to its seamless recursion
+                via <a href="#" class="card-hover" data-card-name="Replenish"
+                    >Replenish</a
                 > and animation into a 2/2 threat under <a
                     href="#"
                     class="card-hover"
@@ -207,56 +217,63 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     class="card-hover"
                     data-card-name="Aura of Silence">Aura of Silence</a
                 > across contemporary tournaments, relying exclusively on Seal post-board
-                presents vulnerability to two-mana static taxation. Maintaining 1 or 2
-                copies of <a
+                presents vulnerability to two-mana static taxation. Maintaining 1
+                or 2 copies of <a
                     href="#"
                     class="card-hover"
                     data-card-name="Disenchant">Disenchant</a
-                > (3.9% inclusion) provides immune, instant-speed interaction that cleanly
-                bypasses Aura's cost penalty.
+                > (3.9% inclusion) provides immune, instant-speed interaction that
+                cleanly bypasses Aura's cost penalty.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
-            title="Abeyance & Orim's Chant"
-            image="instants/orims_chant.webp"
-            badge="1–2 Side · 42.2% Inclusion"
+            title="Abeyance"
+            image="instants/abeyance.jpg"
+            badge="1–2 Side · 42.2% SB / 72.8% Main"
         >
             <p style="margin-top: 0; margin-bottom: 0;">
-                High-leverage white instants that force open safe interaction
-                windows and enjoy massive combined presence across modern 75s (Abeyance appears in over 72% of maindecks and 42% of sideboards). Casting <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Orim's Chant">Orim's Chant</a
-                > (kicked or unkicked) during an opponent's upkeep halts aggressive
-                deployment turns, while leading with <a
+                For the 42.2% of competitive pilots fielding <a
                     href="#"
                     class="card-hover"
                     data-card-name="Abeyance">Abeyance</a
-                > prior to casting Replenish completely suppresses opposing countermagic
-                and troublesome activated abilities (such as <a
+                > in the sideboard, its Games 2 and 3 objective expands far beyond
+                simple combo protection. When facing opponents who aggressively transition
+                into instantaneous graveyard hate after Game 1 (<a
                     href="#"
                     class="card-hover"
                     data-card-name="Tormod's Crypt">Tormod's Crypt</a
-                > or <a
+                >, <a
                     href="#"
                     class="card-hover"
                     data-card-name="Withered Wretch">Withered Wretch</a
-                >) while instantly replacing itself via cantrip draw.
+                >, or <a href="#" class="card-hover" data-card-name="Scour"
+                    >Scour</a
+                >), bringing in supplementary copies of Abeyance allows you to
+                pivot into an upkeep disruption plan. By casting it during an
+                opponent's turn, you simultaneously paralyze their activated
+                hate pieces and freeze their reactive spell mana—buying critical
+                tempo for transformational threats like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Exalted Angel">Exalted Angel</a
+                > to dominate the battlefield.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
             title="Wrath of God"
             image="sorceries/wrath_of_god.webp"
-            badge="1–2 Side · 20.0% Inclusion"
+            badge="20.0% Inclusion"
         >
             <p style="margin-top: 0; margin-bottom: 0;">
                 The foundational sweeping reset against swarming tribal
-                formations and accelerated midrange boards. Surging to 20% post-ban inclusion as an essential defensive equalizer, in regional
-                environments saturated with Elves, Goblins, or Green White aggro
-                shells, supplementing spot removal with board sweepers buys the
-                necessary breathing room to assemble your enchantment lock.
+                formations and accelerated midrange boards. Surging to 20%
+                post-ban inclusion as an essential defensive equalizer, in
+                regional environments saturated with Elves, Goblins, or Green
+                White aggro shells, supplementing spot removal with board
+                sweepers buys the necessary breathing room to assemble your
+                enchantment lock.
             </p>
         </CardAnalysis>
     </Card>
@@ -267,7 +284,13 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         >
             Targeted weapons and defensive architectures calibrated to
             neutralize specific archetype saturations and aggressive post-board
-            hate suites.
+            hate suites. <strong>Why aren't these universally adopted?</strong> Unlike
+            Tier 1 pillars that solve broad structural problems across diverse matchups,
+            Tier 2 cards are narrow, reactionary adjustments designed specifically
+            for targeted regional metagames (such as environments heavily saturated
+            with aggressive Red or mana-denial loops). Because your 15 sideboard slots
+            are finite, dedicating excessive room to narrow technical bullets dilutes
+            your proactive transformational plans.
         </p>
 
         <CardAnalysis
@@ -283,11 +306,11 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             <ul style="margin-bottom: 0; padding-left: 1.25rem;">
                 <li style="margin-bottom: 0.5rem;">
                     <strong>Sphere of Law (Recommended):</strong> Simply the superior
-                    four-mana solution against both Goblins and Sligh, leading the post-ban format at 20% inclusion. Subtracting
-                    two points of damage passively from <em>every</em> source creates
-                    an unbreachable defensive wall without consuming ongoing mana.
-                    The acknowledged tradeoff is that aggressive red pilots will heavily
-                    side in <a
+                    four-mana solution against both Goblins and Sligh, leading the
+                    post-ban format at 20% inclusion. Subtracting two points of damage
+                    passively from <em>every</em> source creates an unbreachable defensive
+                    wall without consuming ongoing mana. The acknowledged tradeoff
+                    is that aggressive red pilots will heavily side in <a
                         href="#"
                         class="card-hover"
                         data-card-name="Anarchy">Anarchy</a
@@ -324,17 +347,76 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             image="enchantments/chill.jpg"
             badge="2–3 Side · 10.0% Inclusion"
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
-                An absolute tournament powerhouse against aggressive red decks,
-                Sligh, and Burn. By doubling the casting cost of every red
-                spell, it completely paralyzes early burn velocity and renders
-                high-cost threats untranslatable. Because it exists as an
-                enchantment, any discarded copies naturally recur during
-                late-game combo loops.
+            <p style="margin-top: 0;">
+                While <a href="#" class="card-hover" data-card-name="Chill"
+                    >Chill</a
+                > is an exceptional engine against traditional Sligh and Burn—doubling
+                the casting cost of red spells to paralyze burn velocity—it presents
+                a critical structural vulnerability against Goblins.
+            </p>
+            <p style="margin-bottom: 0;">
+                Against Goblins, aggressive pilots frequently resolve a turn-one <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Goblin Lackey">Goblin Lackey</a
+                > before Chill can ever touch the stack. A connecting Lackey trigger
+                bypasses spell-casting entirely, dumping lethal siege threats straight
+                onto the battlefield and rendering your two-mana tax completely superfluous.
+                Because it exists as an enchantment, discarded copies naturally recur
+                via <a href="#" class="card-hover" data-card-name="Replenish"
+                    >Replenish</a
+                >, but it should never be solely relied upon as anti-Goblins
+                tech without supplemental one-mana spot removal.
             </p>
         </CardAnalysis>
 
-        <CardAnalysis title="Annul" badge="1–2 Side · Instant Answer">
+        <CardAnalysis
+            title="Orim's Chant"
+            image="instants/orims_chant.webp"
+            badge="1–2 Side · 13.3% Inclusion"
+        >
+            <p style="margin-top: 0;">
+                Historically, <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Orim's Chant">Orim's Chant</a
+                > was a premier protection staple during the Parallax Tide era. When
+                rushing to resolve a turn-three or turn-four Tide to banish five enemy
+                lands in a devastating 5-for-1 blowout, paying just one mana (even
+                at the strict cost of card disadvantage) was an acceptable trade-off
+                against reactive blue decks.
+            </p>
+            <p style="margin-bottom: 0;">
+                <strong>Why Abeyance Eclipsed Chant Post-Ban:</strong> As contemporary
+                tournament theory established, the banning of Parallax Tide fundamentally
+                altered control counterplay; modern Replenish no longer operates under
+                rushed turn-four deadlines against blue decks that present zero clock,
+                making a one-mana discount immaterial. Furthermore, <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Abeyance">Abeyance</a
+                > completely eclipses Chant across three tactical axes: it draws a
+                card upon resolution (zero card disadvantage), it actively shuts down
+                lethal activated abilities (freezing an on-board <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Tormod's Crypt">Tormod's Crypt</a
+                > or <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Withered Wretch">Withered Wretch</a
+                > before comboing), and it generates unmatched defensive tempo against
+                mirror and Enchantress loops. Today, Chant remains a secondary option
+                only when hyper-efficient upkeep delay against aggressive combo is
+                strictly prioritized.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Annul"
+            image="instants/annul.jpg"
+            badge="1–2 Side · Instant Answer"
+        >
             <p style="margin-top: 0;">
                 An exceptionally versatile one-mana permission bullet that
                 solves problem permanents directly on the stack—neutralizing
@@ -361,8 +443,6 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > / <a href="#" class="card-hover" data-card-name="Disenchant"
-                    >Disenchant</a
                 >, <a
                     href="#"
                     class="card-hover"
@@ -440,9 +520,16 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         <p
             style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 2rem;"
         >
-            Specialized tactical tools, surgical interactions, and modular
-            candidate slots designed for unique meta considerations and
-            individualized playstyle preferences.
+            Specialized tactical tools, surgical interactions, and fringe
+            candidate slots seeing under 10% adoption across post-ban
+            tournaments. <strong>Why do these see so little usage?</strong> Most Tier
+            3 entries fall into two distinct structural categories: either they are
+            hyper-specialized bullets targeted at rare fringe matchups (such as Reanimator
+            or pure graveyard loops), or they represent historical pre-ban philosophies
+            whose functionality has been cleanly outclassed by modular 4-of transformational
+            staples like Meddling Mage and Exalted Angel. While theoretically viable,
+            fielding these slots requires explicit, high-confidence reads on your
+            local tournament environment.
         </p>
 
         <CardAnalysis
@@ -512,22 +599,25 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         </CardAnalysis>
 
         <CardAnalysis
-            title="Seal of Removal & Shackles (Proactive Creature Solutions)"
+            title="Seal of Removal (Proactive Creature Bounce)"
+            image="enchantments/seal_of_removal.jpg"
             badge="Modular Tech"
         >
             <p style="margin-top: 0;">
-                Low-cost enchantment-based removal options that excel against
-                explosive early threats like Turn 1 <a
+                A low-cost enchantment-based bounce bullet that excels against
+                explosive early deployments like Turn 1 <a
                     href="#"
                     class="card-hover"
                     data-card-name="Goblin Lackey">Goblin Lackey</a
                 > or high-pressure threats possessing protection from white. Deploying
                 <a href="#" class="card-hover" data-card-name="Seal of Removal"
                     >Seal of Removal</a
-                > or <a href="#" class="card-hover" data-card-name="Shackles"
-                    >Shackles</a
                 > buys vital setup turns for combo assembly while contributing recurring
-                permanent velocity to your graveyard pool.
+                permanent velocity to your graveyard pool for subsequent <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                > loops.
             </p>
             <p style="margin-bottom: 0;">
                 <strong>Strategic Critique & Tradeoff:</strong> Unlike terminal exile
@@ -536,19 +626,19 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     class="card-hover"
                     data-card-name="Swords to Plowshares"
                     >Swords to Plowshares</a
-                >), relying on permanent enchantment constraints carries an
-                acknowledged vulnerability: opponents running post-board answers
-                (<a href="#" class="card-hover" data-card-name="Naturalize"
-                    >Naturalize</a
-                >, <a href="#" class="card-hover" data-card-name="Disenchant"
-                    >Disenchant</a
-                >) can destroy your restraining piece post-combat or during end
-                steps, instantly unbinding their threat and neutralizing your
-                previous removal investment.
+                >), relying on interactive bounce offers temporary defensive
+                respite rather than a permanent solution. Furthermore,
+                dedicating sideboard slots to early bounce can degrade in
+                utility during slower attrition matches where raw card advantage
+                is paramount.
             </p>
         </CardAnalysis>
 
-        <CardAnalysis title="Spiritual Focus" badge="Anti-Discard Tech">
+        <CardAnalysis
+            title="Spiritual Focus"
+            image="enchantments/spiritual_focus.jpg"
+            badge="Anti-Discard Tech"
+        >
             <p style="margin-top: 0; margin-bottom: 0;">
                 A specialized defensive enchantment that harshly penalizes
                 aggressive black discard architectures by drawing two cards
@@ -571,7 +661,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
 
         <CardAnalysis
             title="Stifle"
-            image="stiflenought/stifle.jpg"
+            image="instants/stifle.jpg"
             badge="Surgical Tech"
         >
             <p style="margin-top: 0; margin-bottom: 0;">
@@ -596,54 +686,126 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             </p>
         </CardAnalysis>
 
-        <CardAnalysis title="Secondary Tactical Toolbox" badge="Flex Pool">
+        <CardAnalysis
+            title="Null Rod"
+            image="artifacts/null_rod.jpg"
+            badge="Anti-Artifact Prohibition"
+        >
             <p style="margin-top: 0; margin-bottom: 0;">
-                A curated overview of modular candidates available when
-                tailoring your master 85–90 card pool for specific local
-                environments:
+                Essential anti-artifact prohibition that cleanly shuts down
+                enemy mana rocks, modular engines, and lethal activated
+                graveyard hate artifacts like <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Tormod's Crypt">Tormod's Crypt</a
+                >, <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Phyrexian Furnace">Phyrexian Furnace</a
+                >, and <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a
+                >.
             </p>
-            <ul
-                style="margin-top: 0.5rem; margin-bottom: 0; padding-left: 1.25rem;"
-            >
-                <li style="margin-bottom: 0.4rem;">
-                    <strong>Null Rod:</strong> Essential anti-artifact prohibition that cleanly shuts down mana rocks, modular engines, and lethal activated artifacts like <a href="#" class="card-hover" data-card-name="Tormod's Crypt">Tormod's Crypt</a> and <a href="#" class="card-hover" data-card-name="Phyrexian Furnace">Phyrexian Furnace</a>.
-                </li>
-                <li style="margin-bottom: 0.4rem;">
-                    <strong>Powder Keg:</strong> A flexible artifact sweeper that completely truncates aggressive low-curve creature swarms, Mox alignments, and token formations without taxing double-pipped colored mana.
-                </li>
-                <li style="margin-bottom: 0.4rem;">
-                    <strong>Sacred Ground:</strong> The premier anti-land destruction fortress against hostile Ponza, Terrageddon, and Smokedown variants, turning opposing Wastelands and Stone Rains completely inert.
-                </li>
-                <li style="margin-bottom: 0.4rem;">
-                    <strong>Aura of Silence:</strong> Asymmetrical taxation and recurring
-                    enchantment/artifact control that cripples opposing mirror alignments
-                    and Sol-land artifact ramps.
-                </li>
-                <li style="margin-bottom: 0.4rem;">
-                    <strong>Library of Leng:</strong> Preserves carefully sculpted
-                    hands against targeted discard while bypassing maximum hand size
-                    constraints during heavy draw sequences.
-                </li>
-                <li style="margin-bottom: 0.4rem;">
-                    <strong>Mana Short:</strong> A devastating end-step tap-down bullet
-                    against heavy permission architectures, clearing all opposing
-                    blue mana before initiating your main-phase combo.
-                </li>
-                <li style="margin-bottom: 0.4rem;">
-                    <strong>Voidmage Apprentice:</strong> Uncounterable morph countermagic
-                    that cleanly circumvents opposing spell defenses and permission
-                    locks.
-                </li>
-                <li style="margin-bottom: 0.4rem;">
-                    <strong>Hibernation:</strong> An instant-speed asymmetric sweeper
-                    that obliterates green-heavy table presences, resetting Rock permanents,
-                    Survival engines, and Enchantress boards simultaneously.
-                </li>
-                <li style="margin-bottom: 0;">
-                    <strong>Arcane Laboratory:</strong> Absolute structural prohibition
-                    against chain-casting combo structures and velocity engines.
-                </li>
-            </ul>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Powder Keg"
+            image="artifacts/powder_keg.jpg"
+            badge="Flexible Sweeper"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                A flexible artifact sweeper that completely truncates
+                aggressive low-curve creature swarms, Mox alignments, and token
+                formations without taxing double-pipped colored mana.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Sacred Ground"
+            image="enchantments/sacred_ground.jpg"
+            badge="Anti-Land Destruction Fortress"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                The premier anti-land destruction fortress against hostile
+                Ponza, Terrageddon, and Smokedown variants, turning opposing
+                <a href="#" class="card-hover" data-card-name="Wasteland">Wastelands</a> and <a href="#" class="card-hover" data-card-name="Stone Rain">Stone Rains</a> completely inert while maintaining synergy with your enchantment-based recursion loops.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Aura of Silence"
+            image="enchantments/aura_of_silence.jpg"
+            badge="Asymmetrical Taxing & Control"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                Asymmetrical taxation and recurring enchantment/artifact control
+                that cripples opposing mirror alignments and Sol-land artifact
+                ramps. Because it can sacrifice itself for tactical removal and
+                recur via <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a>, it acts as both disruption and recurring defense.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Library of Leng"
+            image="artifacts/library_of_leng.jpg"
+            badge="Anti-Discard & Hand Sculpting"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                Preserves carefully sculpted hands against targeted discard suites
+                by directing discarded cards to the top of your library rather than
+                the graveyard when appropriate, while permanently bypassing
+                maximum hand size constraints during heavy draw sequences.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Mana Short"
+            image="instants/mana_short.jpg"
+            badge="End-Step Tap-Down Bullet"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                A devastating end-step tap-down bullet against heavy permission
+                architectures, clearing all opposing blue mana pools before
+                initiating your winning main-phase combo turn without contested countermagic.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Voidmage Apprentice"
+            image="creatures/voidmage_apprentice.jpg"
+            badge="Uncounterable Morph Tech"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                Uncounterable morph countermagic that cleanly circumvents
+                opposing spell defenses, permission locks, and effects that check
+                for spells on the stack, surprising opponents attempting to push
+                through contested turns.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Hibernation"
+            image="instants/hibernation.jpg"
+            badge="Asymmetric Green Sweeper"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                An instant-speed asymmetric sweeper that obliterates green-heavy
+                table presences—resetting Rock permanents, <a href="#" class="card-hover" data-card-name="Survival of the Fittest">Survival</a> engines, and Enchantress boards simultaneously without harming your white and blue infrastructure.
+            </p>
+        </CardAnalysis>
+
+        <CardAnalysis
+            title="Arcane Laboratory"
+            image="enchantments/arcane_laboratory.jpg"
+            badge="Combo & Velocity Prohibition"
+        >
+            <p style="margin-top: 0; margin-bottom: 0;">
+                Absolute structural prohibition against chain-casting combo
+                structures and storm velocity engines, restricting players to a
+                single spell per turn while recurring smoothly via Replenish if destroyed.
+            </p>
         </CardAnalysis>
     </Card>
 
