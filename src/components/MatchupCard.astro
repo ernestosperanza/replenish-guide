@@ -8,6 +8,7 @@ export interface Props {
     badgeText: string;
     badgeTheme?: "success" | "info" | "warning" | "alert" | "secondary";
     subtitle: string;
+    isOpen?: boolean;
 }
 
 const {
@@ -17,30 +18,58 @@ const {
     badgeText,
     badgeTheme = "secondary",
     subtitle,
+    isOpen = false,
 } = Astro.props;
 ---
 
-<div
-    class="matchup-block"
+<details
+    class="matchup-block group"
     data-matchup={matchup}
     data-category={category}
-    style="border: 2px solid var(--w-color-primary-60); border-radius: var(--w-lg-radius); background-color: var(--w-color-primary-95); padding: 2rem; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); transition: border-color 0.2s ease;"
+    style="border: 2px solid var(--w-color-primary-60); border-radius: var(--w-lg-radius); background-color: var(--w-color-primary-95); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); transition: border-color 0.2s ease; overflow: hidden;"
+    open={isOpen || undefined}
 >
-    <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.6rem; color: var(--w-color-primary-10);">
-        {title}
-    </h3>
-    <div
-        style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;"
-    >
-        <Badge theme={badgeTheme}>{badgeText}</Badge>
-        <span
-            style="font-size: 0.95rem; color: var(--w-color-primary-30); font-style: italic;"
-        >
-            {subtitle}
-        </span>
-    </div>
+    <summary style="cursor: pointer; list-style: none; outline: none;">
+        <div class="summary-content" style="padding: 2rem; position: relative; display: block;">
+            <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.6rem; color: var(--w-color-primary-10); display: flex; justify-content: space-between; align-items: center;">
+                <span>{title}</span>
+                <span class="chevron" style="transition: transform 0.2s; font-size: 1.2rem; color: var(--w-color-primary-60);">▼</span>
+            </h3>
+            <div
+                style="margin-bottom: 0; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;"
+            >
+                <Badge theme={badgeTheme}>{badgeText}</Badge>
+                <span
+                    style="font-size: 0.95rem; color: var(--w-color-primary-30); font-style: italic;"
+                >
+                    {subtitle}
+                </span>
+            </div>
+        </div>
+    </summary>
 
-    <div class="matchup-content">
+    <div class="matchup-content" style="padding: 0 2rem 2rem 2rem;">
         <slot />
     </div>
-</div>
+</details>
+
+<style>
+    /* Ocultar el marcador nativo del details */
+    details > summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    details.matchup-block .chevron {
+        transform: rotate(-90deg);
+    }
+    
+    details.matchup-block[open] .chevron {
+        transform: rotate(0deg);
+    }
+    
+    /* Borde inferior para separar el header del contenido cuando está abierto */
+    details.matchup-block[open] .summary-content {
+        border-bottom: 1px solid var(--w-color-primary-80);
+        margin-bottom: 2rem;
+    }
+</style>
