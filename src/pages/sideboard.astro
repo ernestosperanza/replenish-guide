@@ -6,7 +6,10 @@ import { Card } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
 ---
 
-<Layout title="Sideboard Analysis - Replenish Guide">
+<Layout
+    title="Sideboard Analysis - Replenish Guide"
+    description="Card-by-card sideboard analysis for Premodern Replenish. Tier-ranked tournament staples, metagame bullets, and modular tech with inclusion rates from 180+ post-ban decklists."
+>
     <PageHeader
         title="Sideboard Analysis"
         description="An analytical card-by-card breakdown of the Premodern Replenish sideboard architecture, evaluating Tier 1 tournament staples, high-leverage metagame bullets, and modular utility slots."
@@ -15,11 +18,8 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         imageCaption="Opalescence by John Avon"
         isCard={true}
     />
-
     <Card title="Metagame Data Methodology" titleTag="h2">
-        <p
-            style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 0;"
-        >
+        <p class="section-intro">
             All sideboard tier classifications and statistical inclusion
             percentages throughout this guide are derived from an exhaustive,
             rigorous analysis of <strong
@@ -37,10 +37,71 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         </p>
     </Card>
 
-    <Card title="Tier 1: Core Tournament Staples" titleTag="h2">
-        <p
-            style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 2rem;"
-        >
+    <Card title="Quick Reference" titleTag="h2">
+        <div class="sb-summary-table-wrapper">
+            <table class="sb-summary-table">
+                <thead>
+                    <tr>
+                        <th>Card</th>
+                        <th>Copies</th>
+                        <th>Inclusion</th>
+                        <th>Tier</th>
+                        <th>Primary Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        ><td>Exalted Angel</td><td>2–3</td><td>95.6%</td><td
+                            ><span class="tier-badge tier-1">T1</span></td
+                        ><td>Transformational threat</td></tr
+                    >
+                    <tr
+                        ><td>Meddling Mage</td><td>3–4</td><td>92.2%</td><td
+                            ><span class="tier-badge tier-1">T1</span></td
+                        ><td>Proactive lock / clock</td></tr
+                    >
+                    <tr
+                        ><td>Tsabo's Web</td><td>1–3</td><td>77.8%</td><td
+                            ><span class="tier-badge tier-1">T1</span></td
+                        ><td>Mana armor / cantrip</td></tr
+                    >
+                    <tr
+                        ><td>Hydroblast / BEB</td><td>2–4</td><td>76.1%</td><td
+                            ><span class="tier-badge tier-1">T1</span></td
+                        ><td>Anti-red defense</td></tr
+                    >
+                    <tr
+                        ><td>Defense Grid</td><td>0–3</td><td>52.8%</td><td
+                            ><span class="tier-badge tier-1">T1</span></td
+                        ><td>Anti-permission</td></tr
+                    >
+                    <tr
+                        ><td>Seal of Cleansing</td><td>1–3</td><td>50.0%</td><td
+                            ><span class="tier-badge tier-1">T1</span></td
+                        ><td>Artifact/enchant removal</td></tr
+                    >
+                    <tr
+                        ><td>Abeyance</td><td>1–2</td><td>42.2%</td><td
+                            ><span class="tier-badge tier-1">T1</span></td
+                        ><td>Combo protection</td></tr
+                    >
+                    <tr
+                        ><td>Wrath of God</td><td>1–2</td><td>20.0%</td><td
+                            ><span class="tier-badge tier-1">T1</span></td
+                        ><td>Board sweeper</td></tr
+                    >
+                    <tr
+                        ><td>Sphere of Law</td><td>1–2</td><td>20.0%</td><td
+                            ><span class="tier-badge tier-2">T2</span></td
+                        ><td>Anti-red fortress</td></tr
+                    >
+                </tbody>
+            </table>
+        </div>
+    </Card>
+
+    <Card title="Tier 1: Core Tournament Staples" titleTag="h2" id="tier-1">
+        <p class="section-intro">
             The foundational reactive and transformative pillars of competitive
             Premodern Replenish sideboards. Based on real post-ban tournament
             data, these slots address universal format imbalances and belong in
@@ -52,7 +113,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             image="creatures/exalted_angel.jpg"
             badge="2–3 Side · 95.6% Inclusion"
         >
-            <p style="margin-top: 0;">
+            <p>
                 The quintessential post-sideboard hammer, introduced across
                 virtually every non-combo matchup. Against red aggression, even
                 deploying it as a face-down morph blocker that absorbs a burn
@@ -69,7 +130,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     data-card-name="Armageddon">Armageddon</a
                 >.
             </p>
-            <p style="margin-bottom: 0;">
+            <p>
                 <strong>The Transformational Advantage:</strong> Because opponents
                 predictably side out spot removal in favor of enchantment sweepers
                 and graveyard extraction (<a
@@ -90,7 +151,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             image="creatures/meddling_mage.webp"
             badge="3–4 Side · 92.2% Inclusion"
         >
-            <p style="margin-top: 0;">
+            <p>
                 A defining powerhouse of the post-ban sideboard metagame. With
                 over 92% of competitive sideboards fielding an average of 3 to 4
                 copies (and another 10% running copies maindeck), <a
@@ -103,7 +164,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                 fast, transformational clock alongside Exalted Angel when opponents
                 trim their spot removal.
             </p>
-            <p style="margin-bottom: 0;">
+            <p>
                 <strong>Surgical Naming Protocol:</strong> Against graveyard hate,
                 naming <a
                     href="#"
@@ -121,8 +182,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                 > or enchantment sweepers guarantees combo resolves on schedule. For
                 exhaustive matchup-by-match naming conventions, consult our <a
                     href="/matchups"
-                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
-                    >Matchup Matrix</a
+                    class="guide-link">Matchup Matrix</a
                 >.
             </p>
         </CardAnalysis>
@@ -132,7 +192,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             image="artifacts/tsabos_web.jpg"
             badge="1–3 Side · 77.8% Inclusion"
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 While pilots fielding maindeck copies utilize <a
                     href="#"
                     class="card-hover"
@@ -154,7 +214,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             image="artifacts/defense_grid.jpg"
             badge="0–3 Side · 52.8% Inclusion"
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 The premier resource equalizer against permission-heavy
                 structures. By forcing opponents to pay an additional three mana
                 to play spells during your turn, it neutralizes countermagic and
@@ -172,7 +232,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             image="instants/hydroblast.jpg"
             badge="2–4 Side · 76.1% Inclusion"
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 The cleanest one-mana answer to rapid red clocks and disruptive
                 sideboard tech. Whether countering an inbound <a
                     href="#"
@@ -198,7 +258,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             image="enchantments/seal_of_cleansing.webp"
             badge="1–3 Side · 50.0% Inclusion"
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 <strong>The Seal/Disenchant Split:</strong> In modern tournament builds,
                 <a
                     href="#"
@@ -232,7 +292,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             image="instants/abeyance.jpg"
             badge="1–2 Side · 42.2% SB / 72.8% Main"
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 For the 42.2% of competitive pilots fielding <a
                     href="#"
                     class="card-hover"
@@ -266,7 +326,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             image="sorceries/wrath_of_god.webp"
             badge="20.0% Inclusion"
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 The foundational sweeping reset against swarming tribal
                 formations and accelerated midrange boards. Surging to 20%
                 post-ban inclusion as an essential defensive equalizer, in
@@ -278,10 +338,12 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         </CardAnalysis>
     </Card>
 
-    <Card title="Tier 2: High-Leverage Metagame Bullets" titleTag="h2">
-        <p
-            style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 2rem;"
-        >
+    <Card
+        title="Tier 2: High-Leverage Metagame Bullets"
+        titleTag="h2"
+        id="tier-2"
+    >
+        <p class="section-intro">
             Targeted weapons and defensive architectures calibrated to
             neutralize specific archetype saturations and aggressive post-board
             hate suites. <strong>Why aren't these universally adopted?</strong> Unlike
@@ -297,14 +359,15 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             title="Anti-Red Defense: Sphere of Law vs. Warmth vs. CoP: Red"
             image="enchantments/sphere_of_law.jpg"
             badge="Theory & Comparison · 20.0% Inclusion"
+            collapsible={true}
         >
-            <p style="margin-top: 0;">
+            <p>
                 Selecting the correct red defense suite requires rigorous
                 competitive analysis of your mana tolerances and anticipated
                 damage profiles:
             </p>
-            <ul style="margin-bottom: 0; padding-left: 1.25rem;">
-                <li style="margin-bottom: 0.5rem;">
+            <ul class="analysis-list">
+                <li>
                     <strong>Sphere of Law (Recommended):</strong> Simply the superior
                     four-mana solution against both Goblins and Sligh, leading the
                     post-ban format at 20% inclusion. Subtracting two points of damage
@@ -316,14 +379,14 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                         data-card-name="Anarchy">Anarchy</a
                     > as counter-hate, requiring prompt countermagic readiness.
                 </li>
-                <li style="margin-bottom: 0.5rem;">
+                <li>
                     <strong>Warmth:</strong> Exceptional against spell-slinging Sligh
                     builds where gaining two life per red spell nullifies burn curves.
                     However, it is structurally flawed against Goblins—recurring combat
                     damage from aggressive creatures rapidly overwhelms the temporary
                     lifegain buffer, rendering Warmth severely one-dimensional.
                 </li>
-                <li style="margin-bottom: 0;">
+                <li class="no-margin-bottom">
                     <strong>Circle of Protection: Red:</strong> While universally
                     protective, CoP is fatally <em>"mana hungry."</em> In our proactive
                     combo-control architecture, where mana utilization is extremely
@@ -346,15 +409,16 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             title="Chill"
             image="enchantments/chill.jpg"
             badge="2–3 Side · 10.0% Inclusion"
+            collapsible={true}
         >
-            <p style="margin-top: 0;">
+            <p>
                 While <a href="#" class="card-hover" data-card-name="Chill"
                     >Chill</a
                 > is an exceptional engine against traditional Sligh and Burn—doubling
                 the casting cost of red spells to paralyze burn velocity—it presents
                 a critical structural vulnerability against Goblins.
             </p>
-            <p style="margin-bottom: 0;">
+            <p>
                 Against Goblins, aggressive pilots frequently resolve a turn-one <a
                     href="#"
                     class="card-hover"
@@ -374,8 +438,9 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             title="Orim's Chant"
             image="instants/orims_chant.webp"
             badge="1–2 Side · 13.3% Inclusion"
+            collapsible={true}
         >
-            <p style="margin-top: 0;">
+            <p>
                 Historically, <a
                     href="#"
                     class="card-hover"
@@ -386,7 +451,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                 at the strict cost of card disadvantage) was an acceptable trade-off
                 against reactive blue decks.
             </p>
-            <p style="margin-bottom: 0;">
+            <p>
                 <strong>Why Abeyance Eclipsed Chant Post-Ban:</strong> As contemporary
                 tournament theory established, the banning of Parallax Tide fundamentally
                 altered control counterplay; modern Replenish no longer operates under
@@ -416,8 +481,9 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             title="Annul"
             image="instants/annul.jpg"
             badge="1–2 Side · Instant Answer"
+            collapsible={true}
         >
-            <p style="margin-top: 0;">
+            <p>
                 An exceptionally versatile one-mana permission bullet that
                 solves problem permanents directly on the stack—neutralizing
                 static taxers before they constrain our mana or when waiting to
@@ -427,7 +493,7 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
                 > carries lethal timing risks.
             </p>
-            <p style="margin-bottom: 0;">
+            <p>
                 <strong>Exhaustive Premodern Target Matrix:</strong> Maintaining Annul
                 in your 15 yields super-efficient 1-for-1 trades against format-defining
                 gamebreakers: <a
@@ -502,8 +568,9 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             title="Alter Reality"
             image="instants/alter_reality.jpg"
             badge="0–1 Side · Regional Tech"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 Highly precise regional tech deployed specifically to counter <a
                     href="#"
                     class="card-hover"
@@ -511,36 +578,41 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                 > from black disruptive piles. By modulating the word "White" to "Black"
                 on their resolved Gloom, the tax reverses entirely onto the opponent's
                 own spell curve. Its embedded Flashback cost ensures functional utility
-                even under discarded constraints.
+                even under discard constraints, and allows it to be efficiently tutored via <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Intuition">Intuition</a
+                >. Furthermore, it can be used tactically to change a creature's protection from white, or alter the color of your own <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Circle of Protection: Red">Circle of Protection: Red</a
+                > if you are running it.
             </p>
         </CardAnalysis>
     </Card>
 
-    <Card title="Tier 3: Niche & Modular Technology" titleTag="h2">
-        <p
-            style="margin-top: 0; color: var(--w-color-primary-20); margin-bottom: 2rem;"
-        >
-            Specialized tactical tools, surgical interactions, and fringe
+    <Card title="Tier 3: Niche & Modular Technology" titleTag="h2" id="tier-3">
+        <p class="section-intro">
+            Specialized tactical tools, surgical interactions, and niche
             candidate slots seeing under 10% adoption across post-ban
             tournaments. <strong>Why do these see so little usage?</strong> Most Tier
             3 entries fall into two distinct structural categories: either they are
-            hyper-specialized bullets targeted at rare fringe matchups (such as Reanimator
-            or pure graveyard loops), or they represent historical pre-ban philosophies
-            whose functionality has been cleanly outclassed by modular 4-of transformational
-            staples like Meddling Mage and Exalted Angel. While theoretically viable,
-            fielding these slots requires explicit, high-confidence reads on your
-            local tournament environment.
+            hyper-specialized bullets targeted at rare matchups, or they represent
+            historical pre-ban philosophies whose functionality has been cleanly outclassed
+            by modular 4-of transformational staples like Meddling Mage and Exalted
+            Angel. While theoretically viable, fielding these slots requires explicit,
+            high-confidence reads on your local tournament environment.
         </p>
 
         <CardAnalysis
             title="Tormod's Crypt"
             image="artifacts/tormods_crypt.jpg"
             badge="0–3 Side · Surgical Tech"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 The zero-mana benchmark for graveyard interaction. Critical
-                against accelerated Reanimator loops, explosive Phyrexian
-                Devourer combo structures, and tactical Replenish mirrors. In
+                against accelerated Reanimator loops and tactical Replenish mirrors. In
                 mirror matches, mastery requires clinical timing: preserve your
                 Crypt untapped on the table and sacrifice it strictly in
                 response to an opponent's terminal <a
@@ -552,7 +624,11 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     class="card-hover"
                     data-card-name="Attunement">Attunement</a
                 > activation on the stack, obliterating their setup while leaving
-                your own graveyard architecture intact.
+                your own graveyard architecture intact. It is also occasionally brought in against Terrageddon to shrink an opposing <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Terravore">Terravore</a
+                >, though this application is generally considered sub-optimal.
             </p>
         </CardAnalysis>
 
@@ -560,8 +636,9 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             title="Nevinyrral's Disk"
             image="artifacts/nevinyrrals_disk.jpg"
             badge="0–2 Side · Universal Reset"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 The premier universal reset button against intricate permanent
                 locks, heavy midrange boards, and resolved anti-combo artifacts.
                 In protracted attrition battles (e.g., The Rock, UW Control),
@@ -574,14 +651,18 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     data-card-name="Replenish">Replenish</a
                 > onto a completely clear board.
             </p>
+            <p>
+                <strong>The Setup Cost:</strong> While undeniably powerful, Disk carries a significant downside: it enters the battlefield tapped, requiring a full turn of setup. This exposes the artifact to instant-speed removal before it can be activated. If deployed against a deck packing dedicated artifact hate, you risk paying four mana for zero immediate impact, resulting in a catastrophic tempo loss.
+            </p>
         </CardAnalysis>
 
         <CardAnalysis
             title="Light of Day"
             image="enchantments/light_of_day.jpg"
             badge="1–2 Side · Silver Bullet"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 The ultimate structural lockdown against black creature-driven
                 archetypes. Against Suicide Black, Psychatog, or aggressive The
                 Rock formations, deploying a resolved <a
@@ -599,54 +680,15 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         </CardAnalysis>
 
         <CardAnalysis
-            title="Seal of Removal (Proactive Creature Bounce)"
-            image="enchantments/seal_of_removal.jpg"
-            badge="Modular Tech"
-        >
-            <p style="margin-top: 0;">
-                A low-cost enchantment-based bounce bullet that excels against
-                explosive early deployments like Turn 1 <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Goblin Lackey">Goblin Lackey</a
-                > or high-pressure threats possessing protection from white. Deploying
-                <a href="#" class="card-hover" data-card-name="Seal of Removal"
-                    >Seal of Removal</a
-                > buys vital setup turns for combo assembly while contributing recurring
-                permanent velocity to your graveyard pool for subsequent <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Replenish">Replenish</a
-                > loops.
-            </p>
-            <p style="margin-bottom: 0;">
-                <strong>Strategic Critique & Tradeoff:</strong> Unlike terminal exile
-                via spot removal (<a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Swords to Plowshares"
-                    >Swords to Plowshares</a
-                >), relying on interactive bounce offers temporary defensive
-                respite rather than a permanent solution. Furthermore,
-                dedicating sideboard slots to early bounce can degrade in
-                utility during slower attrition matches where raw card advantage
-                is paramount.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
             title="Spiritual Focus"
             image="enchantments/spiritual_focus.jpg"
-            badge="Anti-Discard Tech"
+            badge="0–1 Side · Anti-Discard Tech"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 A specialized defensive enchantment that harshly penalizes
                 aggressive black discard architectures by drawing two cards
                 whenever an opponent forces a hand drop via <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Hymn to Tourach">Hymn to Tourach</a
-                >, <a
                     href="#"
                     class="card-hover"
                     data-card-name="Gerrard's Verdict">Gerrard's Verdict</a
@@ -660,38 +702,12 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
         </CardAnalysis>
 
         <CardAnalysis
-            title="Stifle"
-            image="instants/stifle.jpg"
-            badge="Surgical Tech"
-        >
-            <p style="margin-top: 0; margin-bottom: 0;">
-                Historically a mandatory staple during competitive eras
-                dominated by High Tide and Reset combo shells, <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Stifle">Stifle</a
-                > exists today as a foundational relic in traditional Premodern Replenish
-                lists. However, it retains surgical tournament utility in specialized
-                fields—instantly shutting off <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Phyrexian Dreadnought"
-                    >Phyrexian Dreadnought</a
-                > deployment triggers, halting Storm mechanics, or completely blowing
-                out an opponent attempting to activate <a
-                    href="#"
-                    class="card-hover"
-                    data-card-name="Tormod's Crypt">Tormod's Crypt</a
-                > against your graveyard pool.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
             title="Null Rod"
             image="artifacts/null_rod.jpg"
-            badge="Anti-Artifact Prohibition"
+            badge="0–1 Side · Anti-Artifact"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 Essential anti-artifact prohibition that cleanly shuts down
                 enemy mana rocks, modular engines, and lethal activated
                 graveyard hate artifacts like <a
@@ -706,105 +722,123 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a
-                >.
+                >, as well as entirely disabling the <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Phyrexian Devourer">Phyrexian Devourer</a
+                > combo.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
             title="Powder Keg"
             image="artifacts/powder_keg.jpg"
-            badge="Flexible Sweeper"
+            badge="0–1 Side · Flexible Sweeper"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
-                A flexible artifact sweeper that completely truncates
-                aggressive low-curve creature swarms, Mox alignments, and token
-                formations without taxing double-pipped colored mana.
+            <p>
+                A flexible artifact sweeper that completely truncates aggressive
+                low-curve creature swarms, Mox alignments, and token formations
+                without taxing double-pipped colored mana.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
             title="Sacred Ground"
             image="enchantments/sacred_ground.jpg"
-            badge="Anti-Land Destruction Fortress"
+            badge="0–1 Side · Anti-LD Fortress"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 The premier anti-land destruction fortress against hostile
-                Ponza, Terrageddon, and Smokedown variants, turning opposing
-                <a href="#" class="card-hover" data-card-name="Wasteland">Wastelands</a> and <a href="#" class="card-hover" data-card-name="Stone Rain">Stone Rains</a> completely inert while maintaining synergy with your enchantment-based recursion loops.
+                Ponza and Terrageddon variants, turning opposing
+                <a href="#" class="card-hover" data-card-name="Wasteland"
+                    >Wastelands</a
+                > and <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Stone Rain">Stone Rains</a
+                > completely inert while maintaining synergy with your enchantment-based
+                recursion loops.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
             title="Aura of Silence"
             image="enchantments/aura_of_silence.jpg"
-            badge="Asymmetrical Taxing & Control"
+            badge="0–1 Side · Asymmetric Tax"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 Asymmetrical taxation and recurring enchantment/artifact control
                 that cripples opposing mirror alignments and Sol-land artifact
                 ramps. Because it can sacrifice itself for tactical removal and
-                recur via <a href="#" class="card-hover" data-card-name="Replenish">Replenish</a>, it acts as both disruption and recurring defense.
+                recur via <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                >, it acts as both disruption and recurring defense. It excels in the mirror match, against Enchantress, and against Stiflenought strategies. While its three-mana cost makes it slightly slower than <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Seal of Cleansing">Seal of Cleansing</a
+                >—which explains its reduced overall inclusion—some pilots successfully run 1-2 copies in the sideboard for these specific high-leverage matchups.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
             title="Library of Leng"
             image="artifacts/library_of_leng.jpg"
-            badge="Anti-Discard & Hand Sculpting"
+            badge="0–1 Side · Hand Sculpting"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
-                Preserves carefully sculpted hands against targeted discard suites
-                by directing discarded cards to the top of your library rather than
-                the graveyard when appropriate, while permanently bypassing
-                maximum hand size constraints during heavy draw sequences.
+            <p>
+                Preserves carefully sculpted hands against targeted discard
+                suites by directing discarded cards to the top of your library
+                rather than the graveyard when appropriate, while permanently
+                bypassing maximum hand size constraints during heavy draw
+                sequences. 
+            </p>
+            <p>
+                Beyond serving as a hard answer to general discard, it offers powerful synergy with <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Attunement">Attunement</a
+                > activations, allowing you to selectively place discarded pieces directly on top of your library for subsequent turns. It stands out as an intriguing technical option that warrants further metagame testing.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
             title="Mana Short"
             image="instants/mana_short.jpg"
-            badge="End-Step Tap-Down Bullet"
+            badge="0–1 Side · Tap-Down Bullet"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 A devastating end-step tap-down bullet against heavy permission
                 architectures, clearing all opposing blue mana pools before
-                initiating your winning main-phase combo turn without contested countermagic.
+                initiating your winning main-phase combo turn without contested
+                countermagic. 
             </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            title="Voidmage Apprentice"
-            image="creatures/voidmage_apprentice.jpg"
-            badge="Uncounterable Morph Tech"
-        >
-            <p style="margin-top: 0; margin-bottom: 0;">
-                Uncounterable morph countermagic that cleanly circumvents
-                opposing spell defenses, permission locks, and effects that check
-                for spells on the stack, surprising opponents attempting to push
-                through contested turns.
-            </p>
-        </CardAnalysis>
-
-        <CardAnalysis
-            title="Hibernation"
-            image="instants/hibernation.jpg"
-            badge="Asymmetric Green Sweeper"
-        >
-            <p style="margin-top: 0; margin-bottom: 0;">
-                An instant-speed asymmetric sweeper that obliterates green-heavy
-                table presences—resetting Rock permanents, <a href="#" class="card-hover" data-card-name="Survival of the Fittest">Survival</a> engines, and Enchantress boards simultaneously without harming your white and blue infrastructure.
+            <p>
+                While powerful, it is generally slower and more mana-intensive than <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Abeyance">Abeyance</a
+                >, which is why Abeyance remains the preferred interaction shield in most modern lists.
             </p>
         </CardAnalysis>
 
         <CardAnalysis
             title="Arcane Laboratory"
             image="enchantments/arcane_laboratory.jpg"
-            badge="Combo & Velocity Prohibition"
+            badge="0–1 Side · Anti-Combo"
+            collapsible={true}
         >
-            <p style="margin-top: 0; margin-bottom: 0;">
+            <p>
                 Absolute structural prohibition against chain-casting combo
                 structures and storm velocity engines, restricting players to a
-                single spell per turn while recurring smoothly via Replenish if destroyed.
+                single spell per turn while recurring smoothly via Replenish if
+                destroyed. It serves as an interesting silver bullet that shines particularly against Stiflenought and mass storm variants.
             </p>
         </CardAnalysis>
     </Card>
@@ -818,10 +852,85 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
             masterclass on defeating graveyard extraction, taxing structures,
             and enchantment sweepers, proceed to our dedicated <a
                 href="/playing-through-hate"
-                style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
-                >Playing Through Hate analysis</a
+                class="guide-link">Playing Through Hate analysis</a
             >.
         </p>
     </Card>
     <DecklistTooltip />
 </Layout>
+
+<style>
+    /* Quick Reference Summary Table */
+    .sb-summary-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sb-summary-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .sb-summary-table th {
+        text-align: left;
+        padding: 0.6rem 0.75rem;
+        font-weight: 700;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--w-color-primary-30);
+        border-bottom: 2px solid var(--w-color-primary-50);
+        white-space: nowrap;
+    }
+
+    .sb-summary-table td {
+        padding: 0.5rem 0.75rem;
+        color: var(--w-color-primary-10);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .sb-summary-table tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .sb-summary-table td:first-child {
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    /* Tier Badges in Summary Table */
+    .tier-badge {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 800;
+        padding: 0.15rem 0.45rem;
+        border-radius: 4px;
+        letter-spacing: 0.04em;
+    }
+
+    .tier-badge.tier-1 {
+        background: rgba(245, 158, 11, 0.18);
+        color: #f59e0b;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .tier-badge.tier-2 {
+        background: rgba(59, 130, 246, 0.15);
+        color: #60a5fa;
+        border: 1px solid rgba(59, 130, 246, 0.25);
+    }
+
+    /* Responsive: stack TOC vertically on small screens */
+    @media (max-width: 480px) {
+        .sb-summary-table {
+            font-size: 0.8rem;
+        }
+
+        .sb-summary-table th,
+        .sb-summary-table td {
+            padding: 0.4rem 0.5rem;
+        }
+    }
+</style>
