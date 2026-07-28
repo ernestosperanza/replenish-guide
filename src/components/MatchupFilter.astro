@@ -2,68 +2,29 @@
 import { Select } from "webcoreui/astro";
 ---
 
-<div
-    style="background-color: var(--w-color-primary-70); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: 1.5rem; margin-bottom: 2.5rem; position: sticky; top: 65px; z-index: 10; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);"
->
-    <div style="margin-bottom: 1.5rem;">
-        <label
-            style="display: block; margin-bottom: 0.75rem; font-weight: bold; color: var(--w-color-primary-10); font-size: 1.05rem;"
-            >Filter by Difficulty Tier:</label
-        >
-        <div
-            class="filter-buttons"
-            style="display: flex; gap: 0.6rem; flex-wrap: wrap;"
-        >
-            <button
-                type="button"
-                class="category-btn active"
-                data-category="all"
-                style="cursor: pointer; padding: 0.45rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid var(--w-color-primary); background: var(--w-color-primary); color: #ffffff; transition: all 0.2s ease;"
-                >All Matchups (16)</button
-            >
-            <button
-                type="button"
-                class="category-btn"
-                data-category="dominant"
-                data-color="var(--w-color-success, #22c55e)"
-                style="cursor: pointer; padding: 0.45rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid var(--w-color-success, #22c55e); background: transparent; color: var(--w-color-success, #22c55e); transition: all 0.2s ease;"
-                >Dominant (3)</button
-            >
-            <button
-                type="button"
-                class="category-btn"
-                data-category="favorable"
-                data-color="var(--w-color-info, #3b82f6)"
-                style="cursor: pointer; padding: 0.45rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid var(--w-color-info, #3b82f6); background: transparent; color: var(--w-color-info, #3b82f6); transition: all 0.2s ease;"
-                >Favorable (5)</button
-            >
-            <button
-                type="button"
-                class="category-btn"
-                data-category="competitive"
-                data-color="var(--w-color-warning, #f59e0b)"
-                style="cursor: pointer; padding: 0.45rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid var(--w-color-warning, #f59e0b); background: transparent; color: var(--w-color-warning, #f59e0b); transition: all 0.2s ease;"
-                >Competitive (6)</button
-            >
-            <button
-                type="button"
-                class="category-btn"
-                data-category="difficult"
-                data-color="var(--w-color-danger, #ef4444)"
-                style="cursor: pointer; padding: 0.45rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid var(--w-color-danger, #ef4444); background: transparent; color: var(--w-color-danger, #ef4444); transition: all 0.2s ease;"
-                >Difficult (2)</button
-            >
-        </div>
+<div class="matchup-filter-container">
+    <div class="filter-group filter-select">
+        <Select
+            name="difficulty-filter"
+            placeholder="All Difficulties"
+            itemGroups={[
+                {
+                    items: [
+                        { name: "All Difficulties", value: "all", selected: true },
+                        { name: "Dominant", value: "dominant" },
+                        { name: "Favorable", value: "favorable" },
+                        { name: "Competitive", value: "competitive" },
+                        { name: "Difficult", value: "difficult" },
+                    ],
+                },
+            ]}
+        />
     </div>
 
-    <div style="max-width: 320px;">
-        <label
-            style="display: block; margin-bottom: 0.75rem; font-weight: bold; color: var(--w-color-primary-10); font-size: 1.05rem;"
-            >Filter by Archetype:</label
-        >
+    <div class="filter-group filter-select">
         <Select
             name="matchup-filter"
-            placeholder="View All"
+            placeholder="Search Archetype..."
             itemGroups={[
                 {
                     items: [
@@ -107,69 +68,97 @@ import { Select } from "webcoreui/astro";
     </div>
 </div>
 
+<style>
+    .matchup-filter-container {
+        background-color: var(--w-color-primary-70);
+        border: 1px solid var(--w-color-primary-80);
+        border-radius: var(--w-lg-radius);
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 2.5rem;
+        position: sticky;
+        top: 65px;
+        z-index: 10;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .filter-select {
+        min-width: 240px;
+        flex: 1;
+        flex-wrap: nowrap;
+    }
+
+    /* Target WebCoreUI Select container to make it fit nicely */
+    .filter-select :global(.w-select) {
+        width: 100%;
+        margin: 0;
+    }
+
+    @media (max-width: 900px) {
+        .matchup-filter-container {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 1.25rem;
+        }
+        .filter-group {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .filter-select {
+            min-width: 100%;
+        }
+    }
+</style>
+
 <script>
     const blocks = document.querySelectorAll(
         ".matchup-block",
-    ) as NodeListOf<HTMLElement>;
-    const categoryBtns = document.querySelectorAll(
-        ".category-btn",
-    ) as NodeListOf<HTMLButtonElement>;
+    ) as NodeListOf<HTMLDetailsElement>;
 
-    function updateButtonStyles(activeBtn: HTMLButtonElement) {
-        categoryBtns.forEach((btn) => {
-            const color =
-                btn.getAttribute("data-color") ||
-                "var(--w-color-primary)";
-            if (btn === activeBtn) {
-                btn.classList.add("active");
-                btn.style.background = color;
-                btn.style.color = "#ffffff";
-            } else {
-                btn.classList.remove("active");
-                btn.style.background = "transparent";
-                btn.style.color = color;
+    document.addEventListener("selectOnChange", (e: any) => {
+        const payload = e.detail;
+        if (!payload) return;
+
+        if (payload.select === "difficulty-filter") {
+            const selected = payload.value;
+            
+            // Sync: Reset archetype dropdown
+            const archetypeSelect = document.querySelector('[data-id="w-select-matchup-filter"]') as HTMLInputElement;
+            if (archetypeSelect && selected !== "all") {
+                archetypeSelect.value = "View All";
             }
-        });
-    }
 
-    categoryBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            updateButtonStyles(btn);
-            const category =
-                btn.getAttribute("data-category") || "all";
             blocks.forEach((block: HTMLElement) => {
                 if (
-                    category === "all" ||
-                    block.getAttribute("data-category") === category
+                    selected === "all" ||
+                    block.getAttribute("data-category") === selected
                 ) {
                     block.style.display = "block";
                 } else {
                     block.style.display = "none";
                 }
             });
-        });
-    });
-
-    document.addEventListener("selectOnChange", (e: any) => {
-        const payload = e.detail;
-        if (payload && payload.select === "matchup-filter") {
+        }
+        
+        if (payload.select === "matchup-filter") {
             const selected = payload.value;
 
-            // Reset tier buttons to 'All' when selecting a specific archetype via dropdown
-            const allBtn = document.querySelector(
-                '.category-btn[data-category="all"]',
-            ) as HTMLButtonElement;
-            if (allBtn && selected !== "all") {
-                categoryBtns.forEach((btn) => {
-                    const color =
-                        btn.getAttribute("data-color") ||
-                        "var(--w-color-primary)";
-                    btn.classList.remove("active");
-                    btn.style.background = "transparent";
-                    btn.style.color = color;
-                });
-            } else if (allBtn && selected === "all") {
-                updateButtonStyles(allBtn);
+            // Sync: Reset difficulty dropdown
+            const difficultySelect = document.querySelector('[data-id="w-select-difficulty-filter"]') as HTMLInputElement;
+            if (difficultySelect && selected !== "all") {
+                difficultySelect.value = "All Difficulties";
             }
 
             blocks.forEach((block: HTMLElement) => {
