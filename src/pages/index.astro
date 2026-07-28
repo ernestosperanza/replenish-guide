@@ -3,7 +3,6 @@ import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import { Grid, Card } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
-import WipAlert from "@components/WipAlert.astro";
 ---
 
 <Layout
@@ -25,8 +24,7 @@ import WipAlert from "@components/WipAlert.astro";
             <a
                 href="https://squeeshouseofpizza.com/en-brl/pages/replenish-primer-brian-siu"
                 target="_blank"
-                style="color: var(--w-color-primary-20); text-decoration: underline;"
-                >excellent primer</a
+                class="guide-link">excellent primer</a
             >
             originally penned by <strong>Brian Siu (Dr Siuss)</strong>. It has
             been redesigned and upgraded to serve as your ultimate resource—so
@@ -111,7 +109,7 @@ import WipAlert from "@components/WipAlert.astro";
             through long, technical games against control and aggro, Replenish
             is an excellent match.
         </p>
-        <ul style="padding-left: 1.25rem; margin-bottom: 3rem;">
+        <ul style="padding-left: 1.25rem; margin-bottom: 0;">
             <li style="margin-bottom: 0.5rem;">
                 <strong>Strategic Patience:</strong> Rewards exacting sequencing math,
                 disciplined resource management, and decisive late-game execution.
@@ -230,6 +228,15 @@ import WipAlert from "@components/WipAlert.astro";
                 </ul>
             </Card>
         </Grid>
+    </Card>
+
+    <Card>
+        <p
+            style="margin-bottom: 0; text-align: center; color: var(--w-color-primary-30);"
+        >
+            Ready to explore? Continue to the History of the Deck to trace how
+            Replenish evolved across two decades of competitive play.
+        </p>
     </Card>
     <DecklistTooltip />
 </Layout>

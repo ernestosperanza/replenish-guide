@@ -4,6 +4,7 @@ import PageHeader from "@components/PageHeader.astro";
 import CardGrid from "@components/CardGrid.astro";
 import { Card, Alert, Badge } from "webcoreui/astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
+import DecklistTooltip from "@components/DecklistTooltip.astro";
 ---
 
 <Layout
@@ -41,16 +42,10 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             ]}
         />
 
-        <div
-            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;"
-        >
+        <div class="core-cards-list">
             <div>
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Replenish
-                    </h3>
+                <div class="core-card-header">
+                    <h3 class="core-card-title">Replenish</h3>
                     <Badge theme="secondary" small={true}
                         >4 Main · 100% Inclusion</Badge
                     >
@@ -63,12 +58,8 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 </p>
             </div>
             <div>
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Opalescence
-                    </h3>
+                <div class="core-card-header">
+                    <h3 class="core-card-title">Opalescence</h3>
                     <Badge theme="secondary" small={true}
                         >4 Main · 100% Inclusion</Badge
                     >
@@ -84,12 +75,8 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 </p>
             </div>
             <div>
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Parallax Wave
-                    </h3>
+                <div class="core-card-header">
+                    <h3 class="core-card-title">Parallax Wave</h3>
                     <Badge theme="secondary" small={true}
                         >4 Main · 100% Inclusion</Badge
                     >
@@ -102,12 +89,8 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 </p>
             </div>
             <div>
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Attunement
-                    </h3>
+                <div class="core-card-header">
+                    <h3 class="core-card-title">Attunement</h3>
                     <Badge theme="secondary" small={true}
                         >4 Main · 100% Inclusion</Badge
                     >
@@ -153,9 +136,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             <p>
                 For an analytical breakdown of when to field two versus three
                 copies across various metagames, reference our architectural
-                comparison on the <a
-                    href="/deck"
-                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                comparison on the <a href="/deck" class="guide-link"
                     >Lists page</a
                 >.
             </p>
@@ -181,13 +162,8 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 exhaustive matchup-by-match naming conventions and
                 transformational sideboarding principles, consult our dedicated <a
                     href="/sideboard"
-                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
-                    >Sideboard Analysis</a
-                > and <a
-                    href="/matchups"
-                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
-                    >Matchup Matrix</a
-                >.
+                    class="guide-link">Sideboard Analysis</a
+                > and <a href="/matchups" class="guide-link">Matchup Matrix</a>.
             </p>
         </CardAnalysis>
 
@@ -258,8 +234,7 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 masterclass on generating tactical piles and navigating tricky
                 board states, consult our dedicated <a
                     href="/intuition"
-                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
-                    >Intuition Cheatsheet</a
+                    class="guide-link">Intuition Cheatsheet</a
                 >.
             </p>
         </CardAnalysis>
@@ -422,42 +397,21 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             filtering and guaranteeing smooth, uninterrupted mana sequencing into
             four-mana turns.
         </p>
-        <div
-            style="display: flex; gap: 1.5rem; margin-bottom: 2.5rem; align-items: flex-start; flex-wrap: wrap;"
-        >
-            <div style="flex-shrink: 0; max-width: 100%;">
-                <CardGrid
-                    cards={[
-                        {
-                            src: "/src/assets/cards/lands/island.jpg",
-                            alt: "Island",
-                        },
-                        {
-                            src: "/src/assets/cards/lands/plains.jpg",
-                            alt: "Plains",
-                        },
-                    ]}
-                    width="220px"
-                />
-            </div>
-            <div style="flex: 1; min-width: 300px;">
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap;"
+        <div>
+            <div class="core-card-header">
+                <h3 class="core-card-title">Ten Basics</h3>
+                <Badge theme="secondary" small={true}
+                    >10 Main (5 Island · 5 Plains)</Badge
                 >
-                    <h3 style="margin: 0;">Ten Basics</h3>
-                    <Badge theme="secondary" small={true}
-                        >10 Main (5 Island · 5 Plains)</Badge
-                    >
-                </div>
-                <p style="margin-top: 0;">
-                    Running five basic Islands and five basic Plains insulates
-                    the strategy against aggressive non-basic punishment like
-                    Wasteland and Price of Progress. Securing your first three
-                    land drops as basics is a crucial stabilizing line against
-                    burn and mana-denial builds. Providing ~16 sources of each
-                    color to cast double-pipped four-drops on schedule.
-                </p>
             </div>
+            <p style="margin-top: 0;">
+                Running five basic Islands and five basic Plains insulates
+                the strategy against aggressive non-basic punishment like
+                Wasteland and Price of Progress. Securing your first three
+                land drops as basics is a crucial stabilizing line against
+                burn and mana-denial builds. Providing ~16 sources of each
+                color to cast double-pipped four-drops on schedule.
+            </p>
         </div>
 
         <CardAnalysis
@@ -491,11 +445,8 @@ import CardAnalysis from "@components/CardAnalysis.astro";
                 Ancient Tomb alters early spell math, it frequently transforms
                 borderline opening hands into automatic keeps; consult our <a
                     href="/mulligan#the-ancient-tomb-acceleration-factor"
-                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
-                    >Mulligan Guide</a
-                > and <a
-                    href="/mechanics"
-                    style="color: var(--w-color-info); text-decoration: underline; font-weight: bold;"
+                    class="guide-link">Mulligan Guide</a
+                > and <a href="/mechanics" class="guide-link"
                     >Mechanics Masterclass</a
                 > for deeper technical breakdowns.
             </p>
@@ -545,4 +496,36 @@ import CardAnalysis from "@components/CardAnalysis.astro";
             </Alert>
         </div>
     </Card>
+
+    <Card>
+        <p
+            style="margin-bottom: 0; text-align: center; color: var(--w-color-primary-30);"
+        >
+            Now that you know the 60, explore the full Sideboard Analysis to
+            complete your 75.
+        </p>
+    </Card>
+    <DecklistTooltip />
 </Layout>
+
+<style>
+    .core-cards-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .core-card-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .core-card-title {
+        margin: 0;
+        color: var(--w-color-primary-10);
+    }
+</style>

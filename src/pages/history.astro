@@ -53,18 +53,12 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
                 </p>
 
                 <Card>
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;"
-                    >
+                    <div class="deck-header">
                         <div>
-                            <h3
-                                style="margin: 0; font-size: 1.5rem; color: var(--w-color-primary-10);"
-                            >
+                            <h3 class="deck-header-title">
                                 2000 World Championship (Standard)
                             </h3>
-                            <p
-                                style="margin: 0.25rem 0 0 0; color: var(--w-color-primary-40);"
-                            >
+                            <p class="deck-header-subtitle">
                                 Played by Tom van de Logt
                             </p>
                         </div>
@@ -124,18 +118,12 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
                     intervened.
                 </p>
                 <Card>
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;"
-                    >
+                    <div class="deck-header">
                         <div>
-                            <h3
-                                style="margin: 0; font-size: 1.5rem; color: var(--w-color-primary-10);"
-                            >
+                            <h3 class="deck-header-title">
                                 Parallax Tide Lock Architecture
                             </h3>
-                            <p
-                                style="margin: 0.25rem 0 0 0; color: var(--w-color-primary-40);"
-                            >
+                            <p class="deck-header-subtitle">
                                 Piloted by AchiIIes (Pre-Ban)
                             </p>
                         </div>
@@ -188,8 +176,31 @@ import { tomVanDeLogtDeck, achiIIesDeck } from "@data/decklists";
                     destruction to maintain its position as a tournament
                     heavyweight.
                 </p>
+                <p>
+                    See the modern post-ban configuration in our <a href="/analysis" class="guide-link">Maindeck Analysis</a>, or explore proven tournament-winning builds on the <a href="/deck" class="guide-link">Tournament Lists</a> page.
+                </p>
             </TimelineItem>
         </Timeline>
     </div>
     <DecklistTooltip />
 </Layout>
+
+<style>
+    .deck-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+    }
+
+    .deck-header-title {
+        margin: 0;
+        font-size: 1.5rem;
+        color: var(--w-color-primary-10);
+    }
+
+    .deck-header-subtitle {
+        margin: 0.25rem 0 0 0;
+        color: var(--w-color-primary-40);
+    }
+</style>
