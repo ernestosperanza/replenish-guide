@@ -11,7 +11,7 @@ export interface Props {
     isCard?: boolean;
 }
 
-const { title, description, imageSrc, imageAlt, imageCaption } = Astro.props;
+const { title, description, imageSrc, imageAlt, imageCaption, isCard = false } = Astro.props;
 ---
 
 <header style="margin-bottom: -1.5rem;">
@@ -37,7 +37,7 @@ const { title, description, imageSrc, imageAlt, imageCaption } = Astro.props;
                     src={imageSrc}
                     alt={imageAlt || ""}
                     caption={imageCaption}
-                    isCard={false}
+                    isCard={isCard}
                 />
             )
         }

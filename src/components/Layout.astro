@@ -47,6 +47,9 @@ const ogImageUrl = new URL(image, siteUrl).toString();
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={ogImageUrl} />
+
+        <!-- Canonical -->
+        <link rel="canonical" href={Astro.url} />
     </head>
     <body>
         <Header />

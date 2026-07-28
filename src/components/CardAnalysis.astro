@@ -163,6 +163,17 @@ if (image && images[fullPath]) {
         line-height: 1.65;
     }
 
+    /* Auto-handle paragraph margins so pages don't need inline styles */
+    .slot-content p:first-child,
+    .collapsible-content p:first-child {
+        margin-top: 0;
+    }
+
+    .slot-content p:last-child,
+    .collapsible-content p:last-child {
+        margin-bottom: 0;
+    }
+
     /* 4. Collapsible Elements Polish */
     .card-summary {
         cursor: pointer;
