@@ -21,6 +21,26 @@ const {
 // Construimos la URL absoluta de la imagen para el og:image (requerido por Twitter/Facebook)
 const siteUrl = Astro.site ? Astro.site.toString() : "https://replenish.guide";
 const ogImageUrl = new URL(image, siteUrl).toString();
+
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description: description,
+    image: ogImageUrl,
+    author: {
+        "@type": "Person",
+        name: "ernesthope",
+    },
+    publisher: {
+        "@type": "Organization",
+        name: "Replenish Guide",
+        logo: {
+            "@type": "ImageObject",
+            url: new URL("/logo.svg", siteUrl).toString(),
+        },
+    },
+};
 ---
 
 <!doctype html>
@@ -33,6 +53,10 @@ const ogImageUrl = new URL(image, siteUrl).toString();
 
         <!-- SEO y Metadatos -->
         <meta name="description" content={description} />
+        <meta
+            name="keywords"
+            content="MTG, Magic the Gathering, Premodern, Replenish, Combo Deck, Sideboard Guide"
+        />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
@@ -47,9 +71,13 @@ const ogImageUrl = new URL(image, siteUrl).toString();
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={ogImageUrl} />
+        <meta property="twitter:creator" content="@ernesthope" />
 
         <!-- Canonical -->
         <link rel="canonical" href={Astro.url} />
+
+        <!-- JSON-LD Schema -->
+        <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     </head>
     <body>
         <Header />
@@ -80,6 +108,10 @@ const ogImageUrl = new URL(image, siteUrl).toString();
             theme: "vintage",
         )
     );
+
+    html {
+        scroll-behavior: smooth;
+    }
 
     body {
         margin: 0;

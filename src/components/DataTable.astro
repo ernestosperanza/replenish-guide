@@ -1,0 +1,94 @@
+---
+export interface Props {
+    headers: string[];
+}
+const { headers } = Astro.props;
+---
+
+<div class="sb-summary-table-wrapper">
+    <table class="sb-summary-table">
+        <thead>
+            <tr>
+                {headers.map((header) => <th>{header}</th>)}
+            </tr>
+        </thead>
+        <tbody>
+            <slot />
+        </tbody>
+    </table>
+</div>
+
+<style is:global>
+    .sb-summary-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sb-summary-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .sb-summary-table th {
+        text-align: left;
+        padding: 0.6rem 0.75rem;
+        font-weight: 700;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--w-color-primary-30);
+        border-bottom: 2px solid var(--w-color-primary-50);
+        white-space: nowrap;
+    }
+
+    .sb-summary-table td {
+        padding: 0.5rem 0.75rem;
+        color: var(--w-color-primary-10);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .sb-summary-table tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .sb-summary-table td:first-child {
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    /* Tier Badges in Summary Table */
+    .tier-badge {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 800;
+        padding: 0.15rem 0.45rem;
+        border-radius: 4px;
+        letter-spacing: 0.04em;
+    }
+
+    .tier-badge.tier-1 {
+        background: rgba(245, 158, 11, 0.18);
+        color: #f59e0b;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .tier-badge.tier-2 {
+        background: rgba(59, 130, 246, 0.15);
+        color: #60a5fa;
+        border: 1px solid rgba(59, 130, 246, 0.25);
+    }
+
+    /* Responsive: stack TOC vertically on small screens */
+    @media (max-width: 480px) {
+        .sb-summary-table {
+            font-size: 0.8rem;
+        }
+
+        .sb-summary-table th,
+        .sb-summary-table td {
+            padding: 0.4rem 0.5rem;
+        }
+    }
+</style>

@@ -4,6 +4,7 @@ import PageHeader from "@components/PageHeader.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 import { Card } from "webcoreui/astro";
 import DecklistTooltip from "@components/DecklistTooltip.astro";
+import DataTable from "@components/DataTable.astro";
 ---
 
 <Layout
@@ -38,66 +39,35 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     </Card>
 
     <Card title="Quick Reference" titleTag="h2">
-        <div class="sb-summary-table-wrapper">
-            <table class="sb-summary-table">
-                <thead>
-                    <tr>
-                        <th>Card</th>
-                        <th>Copies</th>
-                        <th>Inclusion</th>
-                        <th>Tier</th>
-                        <th>Primary Role</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr
-                        ><td>Exalted Angel</td><td>2–3</td><td>95.6%</td><td
-                            ><span class="tier-badge tier-1">T1</span></td
-                        ><td>Transformational threat</td></tr
-                    >
-                    <tr
-                        ><td>Meddling Mage</td><td>3–4</td><td>92.2%</td><td
-                            ><span class="tier-badge tier-1">T1</span></td
-                        ><td>Proactive lock / clock</td></tr
-                    >
-                    <tr
-                        ><td>Tsabo's Web</td><td>1–3</td><td>77.8%</td><td
-                            ><span class="tier-badge tier-1">T1</span></td
-                        ><td>Mana armor / cantrip</td></tr
-                    >
-                    <tr
-                        ><td>Hydroblast / BEB</td><td>2–4</td><td>76.1%</td><td
-                            ><span class="tier-badge tier-1">T1</span></td
-                        ><td>Anti-red defense</td></tr
-                    >
-                    <tr
-                        ><td>Defense Grid</td><td>0–3</td><td>52.8%</td><td
-                            ><span class="tier-badge tier-1">T1</span></td
-                        ><td>Anti-permission</td></tr
-                    >
-                    <tr
-                        ><td>Seal of Cleansing</td><td>1–3</td><td>50.0%</td><td
-                            ><span class="tier-badge tier-1">T1</span></td
-                        ><td>Artifact/enchant removal</td></tr
-                    >
-                    <tr
-                        ><td>Abeyance</td><td>1–2</td><td>42.2%</td><td
-                            ><span class="tier-badge tier-1">T1</span></td
-                        ><td>Combo protection</td></tr
-                    >
-                    <tr
-                        ><td>Wrath of God</td><td>1–2</td><td>20.0%</td><td
-                            ><span class="tier-badge tier-1">T1</span></td
-                        ><td>Board sweeper</td></tr
-                    >
-                    <tr
-                        ><td>Sphere of Law</td><td>1–2</td><td>20.0%</td><td
-                            ><span class="tier-badge tier-2">T2</span></td
-                        ><td>Anti-red fortress</td></tr
-                    >
-                </tbody>
-            </table>
-        </div>
+        <DataTable headers={["Card", "Copies", "Inclusion", "Tier", "Primary Role"]}>
+            <tr>
+                <td>Exalted Angel</td><td>2–3</td><td>95.6%</td><td><span class="tier-badge tier-1">T1</span></td><td>Transformational threat</td>
+            </tr>
+            <tr>
+                <td>Meddling Mage</td><td>3–4</td><td>92.2%</td><td><span class="tier-badge tier-1">T1</span></td><td>Proactive lock / clock</td>
+            </tr>
+            <tr>
+                <td>Tsabo's Web</td><td>1–3</td><td>77.8%</td><td><span class="tier-badge tier-1">T1</span></td><td>Mana armor / cantrip</td>
+            </tr>
+            <tr>
+                <td>Hydroblast / BEB</td><td>2–4</td><td>76.1%</td><td><span class="tier-badge tier-1">T1</span></td><td>Anti-red defense</td>
+            </tr>
+            <tr>
+                <td>Defense Grid</td><td>0–3</td><td>52.8%</td><td><span class="tier-badge tier-1">T1</span></td><td>Anti-permission</td>
+            </tr>
+            <tr>
+                <td>Seal of Cleansing</td><td>1–3</td><td>50.0%</td><td><span class="tier-badge tier-1">T1</span></td><td>Artifact/enchant removal</td>
+            </tr>
+            <tr>
+                <td>Abeyance</td><td>1–2</td><td>42.2%</td><td><span class="tier-badge tier-1">T1</span></td><td>Combo protection</td>
+            </tr>
+            <tr>
+                <td>Wrath of God</td><td>1–2</td><td>20.0%</td><td><span class="tier-badge tier-1">T1</span></td><td>Board sweeper</td>
+            </tr>
+            <tr>
+                <td>Sphere of Law</td><td>1–2</td><td>20.0%</td><td><span class="tier-badge tier-2">T2</span></td><td>Anti-red fortress</td>
+            </tr>
+        </DataTable>
     </Card>
 
     <Card title="Tier 1: Core Tournament Staples" titleTag="h2" id="tier-1">
@@ -859,78 +829,4 @@ import DecklistTooltip from "@components/DecklistTooltip.astro";
     <DecklistTooltip />
 </Layout>
 
-<style>
-    /* Quick Reference Summary Table */
-    .sb-summary-table-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
 
-    .sb-summary-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 0.88rem;
-        line-height: 1.5;
-    }
-
-    .sb-summary-table th {
-        text-align: left;
-        padding: 0.6rem 0.75rem;
-        font-weight: 700;
-        font-size: 0.78rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--w-color-primary-30);
-        border-bottom: 2px solid var(--w-color-primary-50);
-        white-space: nowrap;
-    }
-
-    .sb-summary-table td {
-        padding: 0.5rem 0.75rem;
-        color: var(--w-color-primary-10);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    }
-
-    .sb-summary-table tbody tr:hover {
-        background-color: rgba(255, 255, 255, 0.03);
-    }
-
-    .sb-summary-table td:first-child {
-        font-weight: 600;
-        white-space: nowrap;
-    }
-
-    /* Tier Badges in Summary Table */
-    .tier-badge {
-        display: inline-block;
-        font-size: 0.7rem;
-        font-weight: 800;
-        padding: 0.15rem 0.45rem;
-        border-radius: 4px;
-        letter-spacing: 0.04em;
-    }
-
-    .tier-badge.tier-1 {
-        background: rgba(245, 158, 11, 0.18);
-        color: #f59e0b;
-        border: 1px solid rgba(245, 158, 11, 0.3);
-    }
-
-    .tier-badge.tier-2 {
-        background: rgba(59, 130, 246, 0.15);
-        color: #60a5fa;
-        border: 1px solid rgba(59, 130, 246, 0.25);
-    }
-
-    /* Responsive: stack TOC vertically on small screens */
-    @media (max-width: 480px) {
-        .sb-summary-table {
-            font-size: 0.8rem;
-        }
-
-        .sb-summary-table th,
-        .sb-summary-table td {
-            padding: 0.4rem 0.5rem;
-        }
-    }
-</style>

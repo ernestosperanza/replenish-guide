@@ -1,0 +1,187 @@
+---
+import { Select } from "webcoreui/astro";
+---
+
+<div
+    style="background-color: var(--w-color-primary-95); border: 1px solid var(--w-color-primary-80); border-radius: var(--w-lg-radius); padding: 1.5rem; margin-bottom: 2.5rem;"
+>
+    <div style="margin-bottom: 1.5rem;">
+        <label
+            style="display: block; margin-bottom: 0.75rem; font-weight: bold; color: var(--w-color-primary-10); font-size: 1.05rem;"
+            >Filter by Difficulty Tier:</label
+        >
+        <div
+            class="filter-buttons"
+            style="display: flex; gap: 0.6rem; flex-wrap: wrap;"
+        >
+            <button
+                type="button"
+                class="category-btn active"
+                data-category="all"
+                style="cursor: pointer; padding: 0.45rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid var(--w-color-primary); background: var(--w-color-primary); color: var(--w-color-bg); transition: all 0.2s ease;"
+                >All Matchups (16)</button
+            >
+            <button
+                type="button"
+                class="category-btn"
+                data-category="dominant"
+                data-color="var(--w-color-success, #22c55e)"
+                style="cursor: pointer; padding: 0.45rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid var(--w-color-success, #22c55e); background: transparent; color: var(--w-color-success, #22c55e); transition: all 0.2s ease;"
+                >Dominant (3)</button
+            >
+            <button
+                type="button"
+                class="category-btn"
+                data-category="favorable"
+                data-color="var(--w-color-info, #3b82f6)"
+                style="cursor: pointer; padding: 0.45rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid var(--w-color-info, #3b82f6); background: transparent; color: var(--w-color-info, #3b82f6); transition: all 0.2s ease;"
+                >Favorable (5)</button
+            >
+            <button
+                type="button"
+                class="category-btn"
+                data-category="competitive"
+                data-color="var(--w-color-warning, #f59e0b)"
+                style="cursor: pointer; padding: 0.45rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid var(--w-color-warning, #f59e0b); background: transparent; color: var(--w-color-warning, #f59e0b); transition: all 0.2s ease;"
+                >Competitive (6)</button
+            >
+            <button
+                type="button"
+                class="category-btn"
+                data-category="difficult"
+                data-color="var(--w-color-danger, #ef4444)"
+                style="cursor: pointer; padding: 0.45rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem; border: 1px solid var(--w-color-danger, #ef4444); background: transparent; color: var(--w-color-danger, #ef4444); transition: all 0.2s ease;"
+                >Difficult (2)</button
+            >
+        </div>
+    </div>
+
+    <div style="max-width: 320px;">
+        <label
+            style="display: block; margin-bottom: 0.75rem; font-weight: bold; color: var(--w-color-primary-10); font-size: 1.05rem;"
+            >Filter by Archetype:</label
+        >
+        <Select
+            name="matchup-filter"
+            placeholder="View All"
+            itemGroups={[
+                {
+                    items: [
+                        {
+                            name: "View All",
+                            value: "all",
+                            selected: true,
+                        },
+                        { name: "Enchantress", value: "enchantress" },
+                        { name: "Elves", value: "elves" },
+                        {
+                            name: "Rock and Midrange",
+                            value: "rock_and_midrange",
+                        },
+                        { name: "Sligh", value: "sligh" },
+                        { name: "Landstill", value: "landstill" },
+                        { name: "Psychatog", value: "psychatog" },
+                        { name: "BW Control", value: "bw_control" },
+                        { name: "RG Ponza", value: "rg_ponza" },
+                        {
+                            name: "Moneyball (Black Aggro)",
+                            value: "moneyball",
+                        },
+                        { name: "Goblins", value: "goblins" },
+                        {
+                            name: "Terrageddon / Quiet Spec Oath",
+                            value: "terrageddon",
+                        },
+                        { name: "Stiflenought", value: "stiflenought" },
+                        { name: "Mirror", value: "mirror" },
+                        { name: "Stasis", value: "stasis" },
+                        { name: "Devourer", value: "devourer" },
+                        {
+                            name: "Aggro with Armageddon",
+                            value: "aggro_with_armageddon",
+                        },
+                    ],
+                },
+            ]}
+        />
+    </div>
+</div>
+
+<script>
+    const blocks = document.querySelectorAll(
+        ".matchup-block",
+    ) as NodeListOf<HTMLElement>;
+    const categoryBtns = document.querySelectorAll(
+        ".category-btn",
+    ) as NodeListOf<HTMLButtonElement>;
+
+    function updateButtonStyles(activeBtn: HTMLButtonElement) {
+        categoryBtns.forEach((btn) => {
+            const color =
+                btn.getAttribute("data-color") ||
+                "var(--w-color-primary)";
+            if (btn === activeBtn) {
+                btn.classList.add("active");
+                btn.style.background = color;
+                btn.style.color = "var(--w-color-bg, #ffffff)";
+            } else {
+                btn.classList.remove("active");
+                btn.style.background = "transparent";
+                btn.style.color = color;
+            }
+        });
+    }
+
+    categoryBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            updateButtonStyles(btn);
+            const category =
+                btn.getAttribute("data-category") || "all";
+            blocks.forEach((block: HTMLElement) => {
+                if (
+                    category === "all" ||
+                    block.getAttribute("data-category") === category
+                ) {
+                    block.style.display = "block";
+                } else {
+                    block.style.display = "none";
+                }
+            });
+        });
+    });
+
+    document.addEventListener("selectOnChange", (e: any) => {
+        const payload = e.detail;
+        if (payload && payload.select === "matchup-filter") {
+            const selected = payload.value;
+
+            // Reset tier buttons to 'All' when selecting a specific archetype via dropdown
+            const allBtn = document.querySelector(
+                '.category-btn[data-category="all"]',
+            ) as HTMLButtonElement;
+            if (allBtn && selected !== "all") {
+                categoryBtns.forEach((btn) => {
+                    const color =
+                        btn.getAttribute("data-color") ||
+                        "var(--w-color-primary)";
+                    btn.classList.remove("active");
+                    btn.style.background = "transparent";
+                    btn.style.color = color;
+                });
+            } else if (allBtn && selected === "all") {
+                updateButtonStyles(allBtn);
+            }
+
+            blocks.forEach((block: HTMLElement) => {
+                if (
+                    selected === "all" ||
+                    block.getAttribute("data-matchup") === selected
+                ) {
+                    block.style.display = "block";
+                } else {
+                    block.style.display = "none";
+                }
+            });
+        }
+    });
+</script>
