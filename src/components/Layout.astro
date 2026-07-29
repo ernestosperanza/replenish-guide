@@ -50,6 +50,20 @@ const schema = {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+        <link
+            rel="preload"
+            href="/fonts/Inter-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/Inter-Bold.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
         <title>{title}</title>
 
         <!-- SEO y Metadatos -->
@@ -289,5 +303,16 @@ const schema = {
 
     .scroll-top:hover {
         background-color: var(--w-color-primary-50);
+    }
+
+    /* Keyboard focus visibility (vintage-themed ring), keyboard-only */
+    :where(a, button, summary, [tabindex]):focus-visible {
+        outline: 2px solid #8c4b22;
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+
+    summary:focus:not(:focus-visible) {
+        outline: none;
     }
 </style>

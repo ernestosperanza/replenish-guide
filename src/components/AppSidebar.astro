@@ -77,13 +77,15 @@ const sidebarGroups = SIDEBAR_GROUPS.map((group) => ({
     // Mobile menu toggle (via top header hamburger button)
     if (btn && wrapper && overlay) {
         btn.addEventListener("click", () => {
-            wrapper.classList.toggle("mobile-open");
+            const open = wrapper.classList.toggle("mobile-open");
             overlay.classList.toggle("mobile-open");
+            btn.setAttribute("aria-expanded", String(open));
         });
 
         overlay.addEventListener("click", () => {
             wrapper.classList.remove("mobile-open");
             overlay.classList.remove("mobile-open");
+            btn.setAttribute("aria-expanded", "false");
         });
     }
 
