@@ -198,16 +198,26 @@
         };
 
         const hoverItems = document.querySelectorAll('.card-hover');
+        
+        // Use IntersectionObserver to lazy load card images to prevent Scryfall rate limits
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const cardName = entry.target.getAttribute('data-card-name');
+                    if (cardName && !imageCache.has(cardName)) {
+                        fetchOldestImageUrl(cardName);
+                    }
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '200px' });
+
         hoverItems.forEach(item => {
             item.addEventListener('mouseenter', handleMouseEnter);
             item.addEventListener('mousemove', handleMouseMove);
             item.addEventListener('mouseleave', handleMouseLeave);
             
-            // Preload the URL in the background
-            const cardName = item.getAttribute('data-card-name');
-            if (cardName && !imageCache.has(cardName)) {
-                setTimeout(() => fetchOldestImageUrl(cardName), Math.random() * 2000);
-            }
+            observer.observe(item);
         });
     };
 
