@@ -220,8 +220,10 @@
         // on touch, a tap toggles the preview open/closed.
         const handlePointerDown = (e: PointerEvent) => { lastPointerType = e.pointerType; };
         const handleClick = (e: MouseEvent) => {
-            e.preventDefault();
+            // On touch there's no hover, so a tap toggles the preview instead
+            // of navigating. On mouse/keyboard, let the click open Scryfall.
             if (lastPointerType !== 'touch') return;
+            e.preventDefault();
             const el = e.currentTarget as HTMLElement;
             if (activeCard === el && tooltip.style.display === 'block') {
                 hide();
@@ -247,6 +249,19 @@
         }, { rootMargin: '200px' });
 
         hoverItems.forEach(item => {
+            // Turn the placeholder "#" links into real Scryfall links: adds
+            // utility (rulings/prices/art) and fixes link semantics for
+            // screen readers. Desktop still gets the hover preview.
+            const cardName = item.getAttribute('data-card-name');
+            if (cardName) {
+                item.setAttribute(
+                    'href',
+                    `https://scryfall.com/search?q=${encodeURIComponent(`!"${cardName}"`)}`
+                );
+                item.setAttribute('target', '_blank');
+                item.setAttribute('rel', 'noopener noreferrer');
+            }
+
             item.addEventListener('mouseenter', handleMouseEnter);
             item.addEventListener('mousemove', handleMouseMove);
             item.addEventListener('mouseleave', handleMouseLeave);

@@ -6,5 +6,9 @@ import sitemap from '@astrojs/sitemap'
 // https://astro.build/config
 export default defineConfig({
     site: 'https://replenish.guide',
+    prefetch: {
+        prefetchAll: true,
+        defaultStrategy: 'hover'
+    },
     integrations: [webcore(), sitemap()]
 })

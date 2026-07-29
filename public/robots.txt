@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://replenish.guide/sitemap-index.xml
