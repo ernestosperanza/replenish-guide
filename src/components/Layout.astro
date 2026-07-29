@@ -195,7 +195,15 @@ const schema = {
     h3,
     h4 {
         margin-top: 0.5em;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.25em;
+    }
+
+    /* Collapse top margin of first paragraph after any heading */
+    h1 + p,
+    h2 + p,
+    h3 + p,
+    h4 + p {
+        margin-top: 0;
     }
 
     h1 {
@@ -206,7 +214,8 @@ const schema = {
     p {
         line-height: 1.6;
         color: var(--w-color-primary-10);
-        margin-bottom: 1.2em;
+        margin-top: 0em;
+        margin-bottom: 0.5em;
     }
 
     /* Semantic Utility Classes */
@@ -280,6 +289,7 @@ const schema = {
 
     [class*="card_"] > [class*="body_"] {
         min-width: 0;
+        padding-top: 0.25rem !important;
     }
 
     /* Guide Links (internal navigation across all pages) */
