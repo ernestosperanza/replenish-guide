@@ -3,7 +3,7 @@ import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import CardAnalysis from "@components/CardAnalysis.astro";
 import { Card } from "webcoreui/astro";
-import DataTable from "@components/DataTable.astro";
+
 ---
 
 <Layout
@@ -36,37 +36,7 @@ import DataTable from "@components/DataTable.astro";
         </p>
     </Card>
 
-    <Card title="Quick Reference" titleTag="h2">
-        <DataTable headers={["Card", "Copies", "Inclusion", "Tier", "Primary Role"]}>
-            <tr>
-                <td>Exalted Angel</td><td>2–3</td><td>95.6%</td><td><span class="tier-badge tier-1">T1</span></td><td>Transformational threat</td>
-            </tr>
-            <tr>
-                <td>Meddling Mage</td><td>3–4</td><td>92.2%</td><td><span class="tier-badge tier-1">T1</span></td><td>Proactive lock / clock</td>
-            </tr>
-            <tr>
-                <td>Tsabo's Web</td><td>1–3</td><td>77.8%</td><td><span class="tier-badge tier-1">T1</span></td><td>Mana armor / cantrip</td>
-            </tr>
-            <tr>
-                <td>Hydroblast / BEB</td><td>2–4</td><td>76.1%</td><td><span class="tier-badge tier-1">T1</span></td><td>Anti-red defense</td>
-            </tr>
-            <tr>
-                <td>Defense Grid</td><td>0–3</td><td>52.8%</td><td><span class="tier-badge tier-1">T1</span></td><td>Anti-permission</td>
-            </tr>
-            <tr>
-                <td>Seal of Cleansing</td><td>1–3</td><td>50.0%</td><td><span class="tier-badge tier-1">T1</span></td><td>Artifact/enchant removal</td>
-            </tr>
-            <tr>
-                <td>Abeyance</td><td>1–2</td><td>42.2%</td><td><span class="tier-badge tier-1">T1</span></td><td>Combo protection</td>
-            </tr>
-            <tr>
-                <td>Wrath of God</td><td>1–2</td><td>20.0%</td><td><span class="tier-badge tier-1">T1</span></td><td>Board sweeper</td>
-            </tr>
-            <tr>
-                <td>Sphere of Law</td><td>1–2</td><td>20.0%</td><td><span class="tier-badge tier-2">T2</span></td><td>Anti-red fortress</td>
-            </tr>
-        </DataTable>
-    </Card>
+
 
     <Card title="Tier 1: Core Tournament Staples" titleTag="h2" id="tier-1">
         <p class="section-intro">
