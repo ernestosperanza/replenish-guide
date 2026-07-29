@@ -6,6 +6,7 @@ import Footer from "./Footer.astro";
 import DecklistTooltip from "./DecklistTooltip.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
+import { getImage } from "astro:assets";
 
 export interface Props {
     title?: string;
@@ -14,14 +15,27 @@ export interface Props {
 }
 
 const {
-    title = "Replenish Guide",
-    description = "The definitive guide to playing the Replenish deck in the Premodern format.",
+    title = "Replenish Primer & Guide | Premodern MTG",
+    description = "The definitive Replenish primer and strategy guide for the Premodern MTG format. Learn the Replenish combo, matchups, sideboarding, and deck mechanics.",
     image = "/images/banners/replenish.webp",
 } = Astro.props;
 
 // Construimos la URL absoluta de la imagen para el og:image (requerido por Twitter/Facebook)
 const siteUrl = Astro.site ? Astro.site.toString() : "https://replenish.guide";
-const ogImageUrl = new URL(image, siteUrl).toString();
+
+// If `image` points at a src/assets banner, generate an optimized 1200px JPEG
+// (broad social-crawler compatibility). Otherwise treat it as a public path.
+const banners = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/banners/*.{jpg,jpeg,png,webp}",
+);
+let ogImageUrl: string;
+if (image in banners) {
+    const meta = (await banners[image]()).default;
+    const og = await getImage({ src: meta, width: 1200, format: "jpeg" });
+    ogImageUrl = new URL(og.src, siteUrl).toString();
+} else {
+    ogImageUrl = new URL(image, siteUrl).toString();
+}
 
 const schema = {
     "@context": "https://schema.org",
@@ -70,7 +84,7 @@ const schema = {
         <meta name="description" content={description} />
         <meta
             name="keywords"
-            content="MTG, Magic the Gathering, Premodern, Replenish, Combo Deck, Sideboard Guide"
+            content="Replenish Primer, Replenish Guide, Premodern MTG, Replenish Premodern, Magic the Gathering, Replenish Combo Deck, MTG Premodern, Replenish Decklist, Sideboard Guide"
         />
 
         <!-- Open Graph / Facebook -->
@@ -95,12 +109,13 @@ const schema = {
         <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     </head>
     <body>
+        <a href="#main-content" class="skip-link">Skip to content</a>
         <Header />
 
         <div class="flex main-wrapper">
             <AppSidebar />
 
-            <main class="content-area">
+            <main id="main-content" tabindex="-1" class="content-area">
                 <div class="content-container">
                     <slot />
                     <Pagination />
@@ -313,6 +328,33 @@ const schema = {
     }
 
     summary:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    /* Skip-to-content link: hidden until focused via keyboard */
+    .skip-link {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 0.6rem 1rem;
+        background-color: var(--w-color-primary-70);
+        color: var(--w-color-primary-10);
+        border: 2px solid #8c4b22;
+        border-radius: 0 0 var(--w-sm-radius) 0;
+        font-weight: 600;
+        text-decoration: none;
+        transform: translateY(-120%);
+        transition: transform 0.15s ease;
+    }
+
+    .skip-link:focus {
+        transform: translateY(0);
+    }
+
+    /* main is a programmatic focus target, not interactive — no focus ring */
+    #main-content:focus,
+    #main-content:focus-visible {
         outline: none;
     }
 </style>
