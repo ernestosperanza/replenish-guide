@@ -1,15 +1,34 @@
 ---
+import { getImage } from "astro:assets";
+
+const rawImages = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/cards/**/*.{jpeg,jpg,png,gif,webp}",
+);
+
+// Pre-generate resized WebP previews for every local card image. The tooltip
+// shows them ~250px wide, so 488px covers retina while avoiding shipping the
+// full-size ~300KB scans (was ~19MB of raw images bundled eagerly).
+const cardImageMap: Record<string, string> = {};
+await Promise.all(
+    Object.entries(rawImages).map(async ([path, load]) => {
+        const img = (await load()).default;
+        const optimized = await getImage({ src: img, width: 488, format: "webp" });
+        cardImageMap[path] = optimized.src;
+    }),
+);
 ---
 <div id="decklist-tooltip" style="display: none; position: fixed; z-index: 9999; pointer-events: none; width: 250px; border-radius: 4.75% / 3.5%; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
     <img id="decklist-tooltip-img" src="" alt="Card Preview" style="width: 100%; height: auto; display: block;" />
 </div>
+<script type="application/json" id="card-image-map" set:html={JSON.stringify(cardImageMap)}></script>
 
 <script>
-    const assetUrls = import.meta.glob('/src/assets/cards/**/*.{jpeg,jpg,png,gif,webp}', {
-        eager: true,
-        query: '?url',
-        import: 'default'
-    }) as Record<string, string>;
+    // Optimized WebP preview URLs (path -> url), generated at build time in
+    // the component frontmatter and passed down as JSON.
+    const mapEl = document.getElementById('card-image-map');
+    const assetUrls: Record<string, string> = mapEl
+        ? JSON.parse(mapEl.textContent || '{}')
+        : {};
 
     // Cache for storing the oldest printing image URLs across page navigations
     const imageCache = new Map<string, string>();
