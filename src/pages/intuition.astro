@@ -10,7 +10,7 @@ import { Card, Badge, Alert } from "webcoreui/astro";
 >
     <PageHeader
         title="The Intuition Cheatsheet"
-        description="<strong>A few tips:</strong> Intuition is a skill-intensive card, and it might take some time to learn all the possible lines that the card enables, as it plays multiple critical roles throughout a game. A fundamental rule of Intuition is the tradeoff between immediacy and future availability: when you tutor for a non-combo piece (like removal or a sideboard card), you are effectively removing three copies of that card from your deck to guarantee access to one. Keep in mind also when you are building your deck that any card you intend to reliably fetch with Intuition requires you to run at least 3 copies in your 75."
+        description="<strong>A few tips:</strong> Intuition takes real skill, and it'll take a while to learn every line it opens up, since it does so many jobs over the course of a game. The core tradeoff is now versus later: when you tutor for a non-combo piece (like removal or a sideboard card), you're pulling three copies out of your deck to guarantee one in hand right now. Keep this in mind when building your deck, too—anything you want to reliably fetch with Intuition needs at least 3 copies in your 75."
         imageSrc="/src/assets/banners/intuition.jpeg"
         imageAlt="Intuition"
         imageCaption="Intuition by April Lee"
@@ -18,9 +18,9 @@ import { Card, Badge, Alert } from "webcoreui/astro";
     />
     <Card title="Core Mechanics: Hand vs. Graveyard Enforcement" titleTag="h2">
         <p>
-            Because your opponent decides which card enters your hand and which
-            are discarded to your graveyard, you must construct piles with
-            precise redundancy depending on your intended destination:
+            Your opponent picks which card goes to your hand and which two hit
+            the graveyard, so you have to build your pile with the right
+            redundancy for where you want each card to end up:
         </p>
 
         <div
@@ -33,16 +33,15 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                     Enforce to Hand
                 </h3>
                 <p style="margin: 0;">
-                    When you need a specific answer or threat in your hand
-                    immediately upon resolution (such as spot removal or a
-                    sideboard answer), your pile must contain <strong
+                    When you need a specific answer or threat in hand right away
+                    (spot removal, a sideboard card), your pile has to be <strong
                         >3 identical copies</strong
-                    > or 3 functionally redundant cards. Consequently, any silver
-                    bullet you intend to reliably tutor with <a
+                    > or 3 cards that do the same job. That's why any silver bullet
+                    you want to reliably grab with <a
                         href="#"
                         class="card-hover"
                         data-card-name="Intuition">Intuition</a
-                    > requires running at least 3 copies in your 75.
+                    > needs at least 3 copies in your 75.
                 </p>
             </div>
 
@@ -53,14 +52,14 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                     Enforce to Graveyard
                 </h3>
                 <p style="margin: 0;">
-                    When your tactical goal is depositing a specific combo
-                    enchantment directly into the graveyard for an upcoming <a
+                    When you just need a combo enchantment in the graveyard for
+                    an upcoming <a
                         href="#"
                         class="card-hover"
                         data-card-name="Replenish">Replenish</a
-                    >, your pile only needs <strong>2 copies</strong> of that target.
-                    Regardless of which card the opponent gives to your hand, at least
-                    one copy is mathematically guaranteed to reach the yard.
+                    >, the pile only needs <strong>2 copies</strong> of that card.
+                    Whichever one the opponent puts in your hand, at least one is
+                    guaranteed to hit the yard.
                 </p>
             </div>
         </div>
@@ -68,22 +67,22 @@ import { Card, Badge, Alert } from "webcoreui/astro";
         <div style="margin-top: 2rem; margin-bottom: 0.5rem;">
             <Alert theme="warning">
                 <strong>Incomplete Piles & Deck Tracking</strong><br />
-                If you have already drawn a copy of a card you desperately need in
-                hand (leaving only two in your library), pair those two copies with
-                a high-priority threat like <a
+                If you've already drawn a copy of a card you really need in
+                hand (leaving only two in your library), pair those two with a
+                high-value threat like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Parallax Wave">Parallax Wave</a
-                > to force a lose-lose choice for your opponent. Always mentally track
-                your remaining deck contents before resolving Intuition so you never
-                end up with a broken pile.
+                > to put your opponent in a lose-lose spot. Always keep track of what's
+                left in your deck before you resolve Intuition, so you never build a
+                pile you can't use.
             </Alert>
         </div>
     </Card>
 
     <Card title="General Heuristics & Timing" titleTag="h2">
         <p>
-            <strong>Post-Sideboard Role Shift & On-Stack Hate:</strong> When confronting
+            <strong>Post-Sideboard Role Shift & On-Stack Hate:</strong> Against
             permanent graveyard hate like <a
                 href="#"
                 class="card-hover"
@@ -92,38 +91,36 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                 >Phyrexian Furnace</a
             >, or <a href="#" class="card-hover" data-card-name="Planar Void"
                 >Planar Void</a
-            >, never construct combo-dumping piles blind. Intuition shifts out
-            of its graveyard selection role and transforms into a targeted spot
-            removal tutor—searching for three copies of <a
+            >, don't build combo-dumping piles blind. Intuition stops being a
+            graveyard-stocking tool and becomes a removal tutor instead—grab
+            three copies of <a
                 href="#"
                 class="card-hover"
                 data-card-name="Seal of Cleansing">Seal of Cleansing</a
             > or <a href="#" class="card-hover" data-card-name="Disenchant"
                 >Disenchant</a
-            > to systematically dismantle opposing graveyard interruption before you
-            resume combo assembly.
+            > to clear out their graveyard hate before you go back to assembling the
+            combo.
         </p>
         <p style="margin-bottom: 0;">
-            <strong>Deck Depletion & Managing Threat Density:</strong> In prolonged
-            attrition games against traditional Control structures, be wary of aggressive
-            over-tutoring. Because Intuition purges cards from your library in sets
-            of three—amplified by heavy looting from <a
+            <strong>Deck Depletion & Managing Threat Density:</strong> In long
+            attrition games against control, be careful not to over-tutor.
+            Intuition pulls cards three at a time, and with <a
                 href="#"
                 class="card-hover"
                 data-card-name="Attunement">Attunement</a
             > and <a href="#" class="card-hover" data-card-name="Frantic Search"
                 >Frantic Search</a
-            >—you risk depleting your overall win-condition density or falling
-            prey to deck-out fatigue if your initial reanimation lines are
-            countered. Recognize when to pivot from deck thinning to preserving
-            your remaining resource volume.
+            > looting on top of that, you can burn through your win conditions or
+            even risk decking out if your first few reanimation attempts get
+            countered. Know when to stop thinning your deck and start conserving
+            what's left.
         </p>
     </Card>
 
     <Card title="Common Tactical Piles" titleTag="h2">
         <p style="margin-bottom: 2rem;">
-            Below are standard tactical configurations and when to deploy them
-            during tournament matches:
+            Here are the standard piles and when to reach for each one:
         </p>
 
         <div
@@ -143,11 +140,11 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                     >
                 </div>
                 <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    The primary engine setup when holding <a
+                    Your bread-and-butter setup when you're holding <a
                         href="#"
                         class="card-hover"
                         data-card-name="Replenish">Replenish</a
-                    > paired with a discard outlet (<a
+                    > plus a discard outlet (<a
                         href="#"
                         class="card-hover"
                         data-card-name="Attunement">Attunement</a
@@ -155,9 +152,8 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                         href="#"
                         class="card-hover"
                         data-card-name="Frantic Search">Frantic Search</a
-                    >). If an enchantment absolutely must reach the graveyard
-                    immediately to fuel your upcoming untap, include at least
-                    two copies in your trio.
+                    >). If a particular enchantment has to hit the graveyard now
+                    to set up your untap, put at least two copies in the pile.
                 </p>
                 <div
                     style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"
@@ -207,13 +203,12 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                     >
                 </div>
                 <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    In mid-to-late game board states, you can abandon strict
-                    redundancy and instead construct a pile of three completely
-                    different, highly synergistic threats. By tutoring for a
-                    combination where discarded enchantments feed an
-                    accompanying reanimation spell or card selection engine, you
-                    force your opponent into an uncomfortable lose-lose choice
-                    where every outcome advances your win condition.
+                    Later in the game you can drop the redundancy and build a
+                    pile of three different cards that work together. If you pick
+                    a combo where the enchantments you discard feed a
+                    reanimation spell or a draw engine in the same pile, every
+                    card the opponent could hand you still moves you
+                    forward—a real lose-lose choice for them.
                 </p>
                 <div
                     style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"
@@ -248,7 +243,7 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                     >
                 </div>
                 <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    Because <a
+                    <a
                         href="#"
                         class="card-hover"
                         data-card-name="Swords to Plowshares"
@@ -257,12 +252,11 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                         href="#"
                         class="card-hover"
                         data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                    > answer fundamentally different threat axes, your selection must
-                    precisely target the battlefield problem. Tutor for three Swords
-                    when facing lethal aggressive creature clocks. Tutor for three
-                    Seals when breaking through oppressive lock pieces; as a major
-                    synergy bonus, discarded Seals will reanimate to the battlefield
-                    for free upon resolving your next <a
+                    > answer completely different problems, so grab whichever one the
+                    board calls for. Tutor for three Swords when a fast creature clock
+                    is about to kill you. Tutor for three Seals to break through a lock
+                    piece—and as a bonus, any Seals you discard come back for free off
+                    your next <a
                         href="#"
                         class="card-hover"
                         data-card-name="Replenish">Replenish</a
@@ -298,13 +292,11 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                     >
                 </div>
                 <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    In early developmental turns, enforcing a land drop prevents
-                    fatal tempo stumbles when holding an otherwise lethal hand.
-                    Furthermore, during prolonged attrition battles against slow
-                    Control opponents, tutoring for three lands serves as
-                    strategic deck-thinning—pulling dead lands out of your
-                    library so your subsequent draws yield a significantly
-                    higher density of live threats and countermagic.
+                    Early on, locking in a land drop keeps you from stumbling on
+                    mana with an otherwise great hand. And in long games against
+                    slow control, grabbing three lands thins your deck—pulling
+                    dead lands out so your future draws are more likely to be
+                    live threats and counters.
                 </p>
                 <div
                     style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"
@@ -335,14 +327,12 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                     >
                 </div>
                 <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    When your hand is saturated with heavy combo enchantments
-                    and <a
+                    When your hand is clogged with combo enchantments and <a
                         href="#"
                         class="card-hover"
                         data-card-name="Replenish">Replenish</a
-                    > but lacks a reliable outlet to discard them, utilize Intuition
-                    to immediately secure a card selection engine and unlock your
-                    operational lines.
+                    > but has no way to discard them, use Intuition to grab a draw
+                    engine and get your lines moving.
                 </p>
                 <div
                     style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"
@@ -371,10 +361,10 @@ import { Card, Badge, Alert } from "webcoreui/astro";
                     >
                 </div>
                 <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    In high-stakes games 2 and 3, grabbing three exact copies of
-                    a meta-breaking sideboard piece allows you to sever opposing
-                    countermagic suites, disable taxing utility lands, or
-                    paralyze enemy combo setups on demand.
+                    In games 2 and 3, grabbing three copies of the right
+                    sideboard card lets you shut off their counters, disable
+                    their utility lands, or stop their combo cold whenever you
+                    need to.
                 </p>
                 <div
                     style="background-color: var(--w-color-primary-95); padding: 0.75rem 1rem; border-radius: var(--w-md-radius); font-size: 0.95rem; border-left: 3px solid var(--w-color-primary-40);"

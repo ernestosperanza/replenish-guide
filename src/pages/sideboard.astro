@@ -12,7 +12,7 @@ import DataTable from "@components/DataTable.astro";
 >
     <PageHeader
         title="Sideboard Analysis"
-        description="An analytical card-by-card breakdown of the Premodern Replenish sideboard architecture, evaluating Tier 1 tournament staples, high-leverage metagame bullets, and modular utility slots."
+        description="A card-by-card look at the Premodern Replenish sideboard: the Tier 1 staples you always want, the metagame bullets worth knowing, and the flexible slots you tune to your local field."
         imageSrc="/src/assets/banners/opalescence.jpeg"
         imageAlt="Opalescence"
         imageCaption="Opalescence by John Avon"
@@ -20,20 +20,18 @@ import DataTable from "@components/DataTable.astro";
     />
     <Card title="Metagame Data Methodology" titleTag="h2">
         <p class="section-intro">
-            All sideboard tier classifications and statistical inclusion
-            percentages throughout this guide are derived from an exhaustive,
-            rigorous analysis of <strong
-                >180 winning Premodern tournament decklists</strong
-            > (aggregated via MTGDecks). To ensure tactical accuracy for contemporary
-            competitive play, our database explicitly filters for events conducted
-            <strong>strictly post-ban</strong> (following the departure of <a
+            Every tier ranking and inclusion percentage in this guide comes from
+            going through <strong>180 winning Premodern tournament decklists</strong
+            > (pulled from MTGDecks). To keep the numbers relevant to how the
+            format plays now, we only counted events held <strong
+                >after the ban</strong
+            > (once <a
                 href="#"
                 class="card-hover"
                 data-card-name="Parallax Tide">Parallax Tide</a
-            >). Removing historical "Tide-era" noise reveals true modern
-            tournament consensus—highlighting the universal necessity of
-            proactive mana protection and transformational post-board win
-            conditions.
+            > left the format). Cutting out the old "Tide-era" lists is what shows
+            you what modern lists actually agree on: you need to protect your mana,
+            and you need post-board threats you can turn the corner with.
         </p>
     </Card>
 
@@ -71,10 +69,10 @@ import DataTable from "@components/DataTable.astro";
 
     <Card title="Tier 1: Core Tournament Staples" titleTag="h2" id="tier-1">
         <p class="section-intro">
-            The foundational reactive and transformative pillars of competitive
-            Premodern Replenish sideboards. Based on real post-ban tournament
-            data, these slots address universal format imbalances and belong in
-            virtually every optimized 75.
+            These are the cards that hold competitive Replenish sideboards
+            together. The post-ban data backs it up: they answer problems that
+            come up across the whole format, and they belong in just about every
+            75.
         </p>
 
         <CardAnalysis
@@ -83,26 +81,24 @@ import DataTable from "@components/DataTable.astro";
             badge="2–3 Side · 95.6% Inclusion"
         >
             <p>
-                The quintessential post-sideboard hammer, introduced across
-                virtually every non-combo matchup. Against red aggression, even
-                deploying it as a face-down morph blocker that absorbs a burn
-                spell preserves critical life. Against control, it demands
-                physical removal that opponents frequently trimmed after Game 1.
-                Against mana-denial builds (<a
+                Your go-to post-board threat, and you'll bring it in for almost
+                every non-combo matchup. Against red, even flipping it down as a
+                morph blocker that eats a burn spell saves you real life. Against
+                control, it forces them to have removal they've often trimmed
+                after Game 1. Against mana-denial decks (<a
                     href="#"
                     class="card-hover"
                     data-card-name="Terravore">Terrageddon</a
-                >), establishing an early Angel clock consistently deters
-                opponents from executing <a
+                >), getting an early Angel clock going usually talks them out of
+                casting <a
                     href="#"
                     class="card-hover"
                     data-card-name="Armageddon">Armageddon</a
-                >.
+                > at all.
             </p>
             <p>
-                <strong>The Transformational Advantage:</strong> Because opponents
-                predictably side out spot removal in favor of enchantment sweepers
-                and graveyard extraction (<a
+                <strong>Why the flip matters:</strong> opponents almost always cut
+                spot removal for enchantment sweepers and graveyard hate (<a
                     href="#"
                     class="card-hover"
                     data-card-name="Aura of Silence">Aura of Silence</a
@@ -110,8 +106,8 @@ import DataTable from "@components/DataTable.astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Tormod's Crypt">Tormod's Crypt</a
-                >), an early morph transition frequently dominates UW Control,
-                Rock, and Ponza while they clutch inert hate pieces.
+                >), so an early morph flip runs away with games against UW Control,
+                Rock, and Ponza while they sit there holding hate they can't use.
             </p>
         </CardAnalysis>
 
@@ -121,21 +117,19 @@ import DataTable from "@components/DataTable.astro";
             badge="3–4 Side · 92.2% Inclusion"
         >
             <p>
-                A defining powerhouse of the post-ban sideboard metagame. With
-                over 92% of competitive sideboards fielding an average of 3 to 4
-                copies (and another 10% running copies maindeck), <a
+                One of the best sideboard cards in the post-ban format. Over 92%
+                of sideboards run 3 or 4 copies (and another 10% play some
+                maindeck), so <a
                     href="#"
                     class="card-hover"
                     data-card-name="Meddling Mage">Meddling Mage</a
-                > represents an absolute tournament consensus for Games 2 and 3. Deploying
-                Mage post-board operates on a devastating dual axis: it proactively
-                locks out critical enemy bottleneck spells while contributing to a
-                fast, transformational clock alongside Exalted Angel when opponents
-                trim their spot removal.
+                > is about as close to a consensus card for Games 2 and 3 as it
+                gets. It does two jobs at once: it names the one spell that would
+                blow you out, and it chips in on a fast clock next to Exalted Angel
+                once your opponent has trimmed their removal.
             </p>
             <p>
-                <strong>Surgical Naming Protocol:</strong> Against graveyard hate,
-                naming <a
+                <strong>What to name:</strong> against graveyard hate, name <a
                     href="#"
                     class="card-hover"
                     data-card-name="Tormod's Crypt">Tormod's Crypt</a
@@ -143,15 +137,13 @@ import DataTable from "@components/DataTable.astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Phyrexian Furnace">Phyrexian Furnace</a
-                > clears the runway for an unhindered Replenish loop. Against control,
-                shutting down <a
+                > so your Replenish loop can go off clean. Against control, naming <a
                     href="#"
                     class="card-hover"
                     data-card-name="Counterspell">Counterspell</a
-                > or enchantment sweepers guarantees combo resolves on schedule. For
-                exhaustive matchup-by-match naming conventions, consult our <a
-                    href="/matchups"
-                    class="guide-link">Matchup Matrix</a
+                > or their enchantment sweeper means the combo resolves when you
+                need it to. For the full list of what to name in each matchup, check
+                the <a href="/matchups" class="guide-link">Matchup Matrix</a
                 >.
             </p>
         </CardAnalysis>
@@ -162,19 +154,16 @@ import DataTable from "@components/DataTable.astro";
             badge="1–3 Side · 77.8% Inclusion"
         >
             <p>
-                While pilots fielding maindeck copies utilize <a
+                Some pilots play <a
                     href="#"
                     class="card-hover"
                     data-card-name="Tsabo's Web">Tsabo's Web</a
-                > as broad proactive disruption, over 77% of tournament players rely
-                on it in the sideboard specifically to counter Games 2 and 3 resource
-                attrition. In post-board games against aggressive shells (Goblins,
-                Rock, Ponza), opponents predictably double down on mana-denial loops
-                and land taxation to choke your four-mana setup turns before you can
-                answer their graveyard hate. Siding in Web acts as dedicated structural
-                mana armor, completely locking down enemy disruption and ensuring
-                your mana develops on schedule while preserving card velocity through
-                its cantrip draw.
+                > maindeck as general disruption, but over 77% keep it in the
+                sideboard for Games 2 and 3, when the grind really sets in. After
+                board, aggressive decks (Goblins, Rock, Ponza) lean even harder on
+                mana denial and land taxation to choke your four-mana setup turns
+                before you can deal with their graveyard hate. Web shuts that down,
+                keeps your mana on schedule, and replaces itself with a card.
             </p>
         </CardAnalysis>
 
@@ -184,15 +173,14 @@ import DataTable from "@components/DataTable.astro";
             badge="0–3 Side · 52.8% Inclusion"
         >
             <p>
-                The premier resource equalizer against permission-heavy
-                structures. By forcing opponents to pay an additional three mana
-                to play spells during your turn, it neutralizes countermagic and
-                allows your four-mana combo setups to deploy uninhibited.
-                Furthermore, it operates seamlessly alongside cycling <a
+                Your best tool against counterspell decks. Making them pay three
+                extra mana to cast anything on your turn shuts off their
+                countermagic long enough to land a four-mana combo piece. It also
+                plays nicely with cycling <a
                     href="#"
                     class="card-hover"
                     data-card-name="Decree of Silence">Decree of Silence</a
-                > on opposing end steps.
+                > on their end step.
             </p>
         </CardAnalysis>
 
@@ -202,23 +190,22 @@ import DataTable from "@components/DataTable.astro";
             badge="2–4 Side · 76.1% Inclusion"
         >
             <p>
-                The cleanest one-mana answer to rapid red clocks and disruptive
-                sideboard tech. Whether countering an inbound <a
+                The cleanest one-mana answer to fast red starts and red sideboard
+                cards. It counters an incoming <a
                     href="#"
                     class="card-hover"
                     data-card-name="Pyroblast"
                     >Pyroblast / Red Elemental Blast</a
-                > targeting your blue combo engines, removing a turn-one <a
+                > aimed at your blue combo pieces, kills a turn-one <a
                     href="#"
                     class="card-hover"
                     data-card-name="Goblin Lackey">Goblin Lackey</a
-                > on sight before it cheats lethal boards into play, or answering
-                game-breaking enchantment hate like <a
+                > before it drops a lethal board into play, and answers
+                back-breaking enchantment hate like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Anarchy">Anarchy</a
-                >, Hydroblast represents strictly indispensable defensive
-                velocity.
+                >. One mana, always useful.
             </p>
         </CardAnalysis>
 
@@ -228,31 +215,30 @@ import DataTable from "@components/DataTable.astro";
             badge="1–3 Side · 50.0% Inclusion"
         >
             <p>
-                <strong>The Seal/Disenchant Split:</strong> In modern tournament builds,
+                <strong>The Seal/Disenchant Split:</strong> In modern lists,
                 <a
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > dominates post-board artifact and enchantment interaction (fielded
-                in 50% of sideboards and 97.8% of maindecks) due to its seamless recursion
-                via <a href="#" class="card-hover" data-card-name="Replenish"
+                > is the default answer to artifacts and enchantments after board
+                (50% of sideboards, 97.8% of maindecks), because it comes back with
+                <a href="#" class="card-hover" data-card-name="Replenish"
                     >Replenish</a
-                > and animation into a 2/2 threat under <a
+                > and becomes a 2/2 under <a
                     href="#"
                     class="card-hover"
                     data-card-name="Opalescence">Opalescence</a
-                >. However, with the dominance of <a
+                >. The catch is <a
                     href="#"
                     class="card-hover"
                     data-card-name="Aura of Silence">Aura of Silence</a
-                > across contemporary tournaments, relying exclusively on Seal post-board
-                presents vulnerability to two-mana static taxation. Maintaining 1
-                or 2 copies of <a
+                >, which is everywhere now—if Seal is your only answer, that
+                two-mana tax lands and sticks. Keeping 1 or 2 <a
                     href="#"
                     class="card-hover"
                     data-card-name="Disenchant">Disenchant</a
-                > (3.9% inclusion) provides immune, instant-speed interaction that
-                cleanly bypasses Aura's cost penalty.
+                > (3.9% inclusion) gives you an instant-speed answer that ignores
+                Aura's tax entirely.
             </p>
         </CardAnalysis>
 
@@ -262,13 +248,13 @@ import DataTable from "@components/DataTable.astro";
             badge="1–2 Side · 42.2% SB / 72.8% Main"
         >
             <p>
-                For the 42.2% of competitive pilots fielding <a
+                For the 42.2% of pilots who keep <a
                     href="#"
                     class="card-hover"
                     data-card-name="Abeyance">Abeyance</a
-                > in the sideboard, its Games 2 and 3 objective expands far beyond
-                simple combo protection. When facing opponents who aggressively transition
-                into instantaneous graveyard hate after Game 1 (<a
+                > in the sideboard, it does more than just protect the combo in
+                Games 2 and 3. When opponents bring in fast graveyard hate after
+                Game 1 (<a
                     href="#"
                     class="card-hover"
                     data-card-name="Tormod's Crypt">Tormod's Crypt</a
@@ -278,15 +264,14 @@ import DataTable from "@components/DataTable.astro";
                     data-card-name="Withered Wretch">Withered Wretch</a
                 >, or <a href="#" class="card-hover" data-card-name="Scour"
                     >Scour</a
-                >), bringing in supplementary copies of Abeyance allows you to
-                pivot into an upkeep disruption plan. By casting it during an
-                opponent's turn, you simultaneously paralyze their activated
-                hate pieces and freeze their reactive spell mana—buying critical
-                tempo for transformational threats like <a
+                >), extra copies let you play a disruption game on their upkeep.
+                Cast it on their turn and you lock down their activated hate and
+                tie up the mana they'd use to react—enough of a window to land a
+                threat like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Exalted Angel">Exalted Angel</a
-                > to dominate the battlefield.
+                > and take over.
             </p>
         </CardAnalysis>
 
@@ -296,13 +281,11 @@ import DataTable from "@components/DataTable.astro";
             badge="20.0% Inclusion"
         >
             <p>
-                The foundational sweeping reset against swarming tribal
-                formations and accelerated midrange boards. Surging to 20%
-                post-ban inclusion as an essential defensive equalizer, in
-                regional environments saturated with Elves, Goblins, or Green
-                White aggro shells, supplementing spot removal with board
-                sweepers buys the necessary breathing room to assemble your
-                enchantment lock.
+                Your reset button against go-wide tribal decks and fast midrange
+                boards. It's climbed to 20% post-ban inclusion for a reason: in
+                fields full of Elves, Goblins, or GW aggro, spot removal alone
+                isn't enough, and a sweeper buys you the turn or two you need to
+                set up the enchantment lock.
             </p>
         </CardAnalysis>
     </Card>
@@ -313,15 +296,13 @@ import DataTable from "@components/DataTable.astro";
         id="tier-2"
     >
         <p class="section-intro">
-            Targeted weapons and defensive architectures calibrated to
-            neutralize specific archetype saturations and aggressive post-board
-            hate suites. <strong>Why aren't these universally adopted?</strong> Unlike
-            Tier 1 pillars that solve broad structural problems across diverse matchups,
-            Tier 2 cards are narrow, reactionary adjustments designed specifically
-            for targeted regional metagames (such as environments heavily saturated
-            with aggressive Red or mana-denial loops). Because your 15 sideboard slots
-            are finite, dedicating excessive room to narrow technical bullets dilutes
-            your proactive transformational plans.
+            Targeted answers for specific decks and the hate they bring in after
+            Game 1. <strong>So why aren't these in every list?</strong> Tier 1 cards
+            fix problems that show up across a lot of matchups; Tier 2 cards are
+            narrow, and you only want them when your local field calls for them (a
+            room full of red aggro or mana-denial decks, say). You've only got 15
+            slots, and every one you spend on a narrow bullet is one you're not
+            spending on your main plan.
         </p>
 
         <CardAnalysis
@@ -331,45 +312,42 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                Selecting the correct red defense suite requires rigorous
-                competitive analysis of your mana tolerances and anticipated
-                damage profiles:
+                Which red defense you want comes down to how much mana you can
+                spare and what kind of damage you expect to face:
             </p>
             <ul class="analysis-list">
                 <li>
-                    <strong>Sphere of Law (Recommended):</strong> Simply the superior
-                    four-mana solution against both Goblins and Sligh, leading the
-                    post-ban format at 20% inclusion. Subtracting two points of damage
-                    passively from <em>every</em> source creates an unbreachable defensive
-                    wall without consuming ongoing mana. The acknowledged tradeoff
-                    is that aggressive red pilots will heavily side in <a
+                    <strong>Sphere of Law (Recommended):</strong> The best four-mana
+                    option against both Goblins and Sligh, and the most-played of the
+                    three at 20% post-ban. Shaving two damage off <em>every</em>
+                    source builds a wall you don't have to keep paying for. The
+                    downside: red decks will bring in <a
                         href="#"
                         class="card-hover"
                         data-card-name="Anarchy">Anarchy</a
-                    > as counter-hate, requiring prompt countermagic readiness.
+                    > against it, so have countermagic ready.
                 </li>
                 <li>
-                    <strong>Warmth:</strong> Exceptional against spell-slinging Sligh
-                    builds where gaining two life per red spell nullifies burn curves.
-                    However, it is structurally flawed against Goblins—recurring combat
-                    damage from aggressive creatures rapidly overwhelms the temporary
-                    lifegain buffer, rendering Warmth severely one-dimensional.
+                    <strong>Warmth:</strong> Great against spell-heavy Sligh, where
+                    two life per red spell just erases their burn. Against Goblins
+                    it falls apart—their creatures deal combat damage faster than the
+                    lifegain can keep up, so it does very little.
                 </li>
                 <li class="no-margin-bottom">
-                    <strong>Circle of Protection: Red:</strong> While universally
-                    protective, CoP is fatally <em>"mana hungry."</em> In our proactive
-                    combo-control architecture, where mana utilization is extremely
-                    tight for <a
+                    <strong>Circle of Protection: Red:</strong> Protects you against
+                    anything, but it's too <em>mana hungry.</em> We're a proactive
+                    combo-control deck, and our mana is already stretched thin
+                    cycling <a
                         href="#"
                         class="card-hover"
                         data-card-name="Attunement">Attunement</a
-                    > cycling and <a
+                    > and running <a
                         href="#"
                         class="card-hover"
                         data-card-name="Frantic Search">Frantic Search</a
-                    > velocity, we lack the luxury of remaining untapped like a passive
-                    draw-go deck. Continually taxing your own generic mana directly
-                    stifles combo assembly, rendering CoP sub-optimal here.
+                    >—we can't sit back untapped like a draw-go deck. Paying to
+                    prevent damage every turn just gets in the way of setting up the
+                    combo, so CoP is the weakest of the three here.
                 </li>
             </ul>
         </CardAnalysis>
@@ -381,25 +359,25 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                While <a href="#" class="card-hover" data-card-name="Chill"
-                    >Chill</a
-                > is an exceptional engine against traditional Sligh and Burn—doubling
-                the casting cost of red spells to paralyze burn velocity—it presents
-                a critical structural vulnerability against Goblins.
+                <a href="#" class="card-hover" data-card-name="Chill">Chill</a> is
+                fantastic against classic Sligh and Burn—doubling the cost of their
+                red spells basically stops the burn dead—but it has a real problem
+                against Goblins.
             </p>
             <p>
-                Against Goblins, aggressive pilots frequently resolve a turn-one <a
+                Goblins often just drops a turn-one <a
                     href="#"
                     class="card-hover"
                     data-card-name="Goblin Lackey">Goblin Lackey</a
-                > before Chill can ever touch the stack. A connecting Lackey trigger
-                bypasses spell-casting entirely, dumping lethal siege threats straight
-                onto the battlefield and rendering your two-mana tax completely superfluous.
-                Because it exists as an enchantment, discarded copies naturally recur
-                via <a href="#" class="card-hover" data-card-name="Replenish"
-                    >Replenish</a
-                >, but it should never be solely relied upon as anti-Goblins
-                tech without supplemental one-mana spot removal.
+                > before you can even cast Chill. Once Lackey connects, they're
+                putting creatures straight onto the battlefield without casting
+                anything, and your two-mana tax does nothing. It's an enchantment,
+                so discarded copies come back with <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                >, but don't lean on it as your only Goblins plan—back it up with
+                one-mana removal.
             </p>
         </CardAnalysis>
 
@@ -410,28 +388,25 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                Historically, <a
+                Back in the Parallax Tide era, <a
                     href="#"
                     class="card-hover"
                     data-card-name="Orim's Chant">Orim's Chant</a
-                > was a premier protection staple during the Parallax Tide era. When
-                rushing to resolve a turn-three or turn-four Tide to banish five enemy
-                lands in a devastating 5-for-1 blowout, paying just one mana (even
-                at the strict cost of card disadvantage) was an acceptable trade-off
-                against reactive blue decks.
+                > was a top protection card. When you were racing to resolve a
+                turn-three or turn-four Tide and blow up five of their lands in a
+                5-for-1, spending one mana to clear the way—even down a card—was
+                well worth it against blue decks.
             </p>
             <p>
-                <strong>Why Abeyance Eclipsed Chant Post-Ban:</strong> As contemporary
-                tournament theory established, the banning of Parallax Tide fundamentally
-                altered control counterplay; modern Replenish no longer operates under
-                rushed turn-four deadlines against blue decks that present zero clock,
-                making a one-mana discount immaterial. Furthermore, <a
+                <strong>Why Abeyance took over post-ban:</strong> once Parallax Tide
+                was banned, that changed. Modern Replenish isn't racing a turn-four
+                deadline against blue decks that put you on no clock, so saving one
+                mana doesn't matter much anymore. And <a
                     href="#"
                     class="card-hover"
                     data-card-name="Abeyance">Abeyance</a
-                > completely eclipses Chant across three tactical axes: it draws a
-                card upon resolution (zero card disadvantage), it actively shuts down
-                lethal activated abilities (freezing an on-board <a
+                > just does more: it replaces itself with a card, it can shut off an
+                activated ability (freezing an <a
                     href="#"
                     class="card-hover"
                     data-card-name="Tormod's Crypt">Tormod's Crypt</a
@@ -439,10 +414,10 @@ import DataTable from "@components/DataTable.astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Withered Wretch">Withered Wretch</a
-                > before comboing), and it generates unmatched defensive tempo against
-                mirror and Enchantress loops. Today, Chant remains a secondary option
-                only when hyper-efficient upkeep delay against aggressive combo is
-                strictly prioritized.
+                > right before you combo), and it buys great tempo in the mirror and
+                against Enchantress. These days Chant is only worth it when you
+                specifically need the cheapest possible upkeep delay against fast
+                combo.
             </p>
         </CardAnalysis>
 
@@ -453,19 +428,17 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                An exceptionally versatile one-mana permission bullet that
-                solves problem permanents directly on the stack—neutralizing
-                static taxers before they constrain our mana or when waiting to
-                crack an on-board <a
+                A flexible one-mana counter that deals with problem permanents on
+                the stack—stopping a taxing effect before it locks up your mana, or
+                answering something when waiting to crack an on-board <a
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > carries lethal timing risks.
+                > would be too slow.
             </p>
             <p>
-                <strong>Exhaustive Premodern Target Matrix:</strong> Maintaining Annul
-                in your 15 yields super-efficient 1-for-1 trades against format-defining
-                gamebreakers: <a
+                <strong>What it hits in Premodern:</strong> keeping Annul in your 15
+                gives you clean 1-for-1s against a long list of format staples: <a
                     href="#"
                     class="card-hover"
                     data-card-name="Gloom">Gloom</a
@@ -540,37 +513,34 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                Highly precise regional tech deployed specifically to counter <a
+                Narrow regional tech aimed squarely at <a
                     href="#"
                     class="card-hover"
                     data-card-name="Gloom">Gloom</a
-                > from black disruptive piles. By modulating the word "White" to "Black"
-                on their resolved Gloom, the tax reverses entirely onto the opponent's
-                own spell curve. Its embedded Flashback cost ensures functional utility
-                even under discard constraints, and allows it to be efficiently tutored via <a
+                > out of black disruption decks. Change the word "White" to "Black"
+                on their resolved Gloom and the tax now falls on their own spells
+                instead of yours. It has Flashback, so it still works even if it
+                gets discarded, and you can tutor for it with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Intuition">Intuition</a
-                >. Furthermore, it can be used tactically to change a creature's protection from white, or alter the color of your own <a
+                >. You can also use it to strip a creature's protection from white,
+                or to change the color on your own <a
                     href="#"
                     class="card-hover"
                     data-card-name="Circle of Protection: Red">Circle of Protection: Red</a
-                > if you are running it.
+                > if you're running it.
             </p>
         </CardAnalysis>
     </Card>
 
     <Card title="Tier 3: Niche & Modular Technology" titleTag="h2" id="tier-3">
         <p class="section-intro">
-            Specialized tactical tools, surgical interactions, and niche
-            candidate slots seeing under 10% adoption across post-ban
-            tournaments. <strong>Why do these see so little usage?</strong> Most Tier
-            3 entries fall into two distinct structural categories: either they are
-            hyper-specialized bullets targeted at rare matchups, or they represent
-            historical pre-ban philosophies whose functionality has been cleanly outclassed
-            by modular 4-of transformational staples like Meddling Mage and Exalted
-            Angel. While theoretically viable, fielding these slots requires explicit,
-            high-confidence reads on your local tournament environment.
+            Specialized tools and niche slots that show up in under 10% of post-ban
+            lists. <strong>Why so little play?</strong> Most of these are either
+            bullets for rare matchups, or old pre-ban ideas that flexible 4-ofs like
+            Meddling Mage and Exalted Angel have simply outclassed. They can still be
+            right—but only if you have a clear read on your local field.
         </p>
 
         <CardAnalysis
@@ -580,24 +550,24 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                The zero-mana benchmark for graveyard interaction. Critical
-                against accelerated Reanimator loops and tactical Replenish mirrors. In
-                mirror matches, mastery requires clinical timing: preserve your
-                Crypt untapped on the table and sacrifice it strictly in
-                response to an opponent's terminal <a
+                The zero-mana standard for graveyard hate. Big against fast
+                Reanimator and the Replenish mirror. In the mirror, it's all about
+                timing: leave your Crypt on the table and only sacrifice it in
+                response to their <a
                     href="#"
                     class="card-hover"
                     data-card-name="Replenish">Replenish</a
-                > resolution or an <a
+                > resolving or an <a
                     href="#"
                     class="card-hover"
                     data-card-name="Attunement">Attunement</a
-                > activation on the stack, obliterating their setup while leaving
-                your own graveyard architecture intact. It is also occasionally brought in against Terrageddon to shrink an opposing <a
+                > activation, so you wipe their setup and keep your own graveyard
+                intact. It also comes in against Terrageddon now and then to shrink
+                their <a
                     href="#"
                     class="card-hover"
                     data-card-name="Terravore">Terravore</a
-                >, though this application is generally considered sub-optimal.
+                >, though that's usually not worth a slot.
             </p>
         </CardAnalysis>
 
@@ -608,20 +578,21 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                The premier universal reset button against intricate permanent
-                locks, heavy midrange boards, and resolved anti-combo artifacts.
-                In protracted attrition battles (e.g., The Rock, UW Control),
-                detonating an active Disk not only wipes opposing creatures and
-                hate pieces simultaneously, but milimetrically drops your own
-                fielded enchantments directly into your graveyard—preparing a
-                devastating follow-up <a
+                The best catch-all reset against permanent-based locks, wide
+                midrange boards, and resolved anti-combo artifacts. In long grindy
+                games (The Rock, UW Control), popping an active Disk wipes their
+                creatures and hate pieces and drops your own enchantments into the
+                graveyard at the same time—setting up a follow-up <a
                     href="#"
                     class="card-hover"
                     data-card-name="Replenish">Replenish</a
-                > onto a completely clear board.
+                > onto an empty board.
             </p>
             <p>
-                <strong>The Setup Cost:</strong> While undeniably powerful, Disk carries a significant downside: it enters the battlefield tapped, requiring a full turn of setup. This exposes the artifact to instant-speed removal before it can be activated. If deployed against a deck packing dedicated artifact hate, you risk paying four mana for zero immediate impact, resulting in a catastrophic tempo loss.
+                <strong>The catch:</strong> Disk enters tapped, so it needs a full
+                turn before you can use it. That's a window for them to kill it at
+                instant speed, and against a deck with artifact hate you can end up
+                paying four mana for nothing and falling way behind.
             </p>
         </CardAnalysis>
 
@@ -632,19 +603,17 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                The ultimate structural lockdown against black creature-driven
-                archetypes. Against Suicide Black, Psychatog, or aggressive The
-                Rock formations, deploying a resolved <a
+                A near-total lock against black creature decks. Against Suicide
+                Black, Psychatog, or aggressive Rock builds, a resolved <a
                     href="#"
                     class="card-hover"
                     data-card-name="Light of Day">Light of Day</a
-                > establishes an absolute prohibition: black creatures are permanently
-                forbidden from attacking or blocking. Furthermore, its four-mana enchantment
-                card type ensures seamless recursion with <a
+                > means their black creatures can't attack or block, full stop. And
+                since it's a four-mana enchantment, it comes back with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Replenish">Replenish</a
-                > if stripped early by opposing discard suites.
+                > if they strip it with early discard.
             </p>
         </CardAnalysis>
 
@@ -655,18 +624,16 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                A specialized defensive enchantment that harshly penalizes
-                aggressive black discard architectures by drawing two cards
-                whenever an opponent forces a hand drop via <a
+                A defensive enchantment that punishes black discard decks by
+                drawing you two cards every time they make you pitch a card with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Gerrard's Verdict">Gerrard's Verdict</a
-                >, or <a href="#" class="card-hover" data-card-name="Duress"
+                > or <a href="#" class="card-hover" data-card-name="Duress"
                     >Duress</a
-                >. While select veteran pilots value its ability to out-grind
-                heavy attrition loops, it remains inherently slow and
-                passive—frequently underperforming in fast-paced tempo
-                environments where initiative is paramount.
+                >. Some longtime pilots like it for out-grinding attrition decks,
+                but it's slow and passive, and it tends to be too little too late
+                against fast, tempo-driven starts.
             </p>
         </CardAnalysis>
 
@@ -677,9 +644,8 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                Essential anti-artifact prohibition that cleanly shuts down
-                enemy mana rocks, modular engines, and lethal activated
-                graveyard hate artifacts like <a
+                A clean anti-artifact lock that shuts off enemy mana rocks and,
+                more importantly, activated graveyard-hate artifacts like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Tormod's Crypt">Tormod's Crypt</a
@@ -691,11 +657,11 @@ import DataTable from "@components/DataTable.astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Nevinyrral's Disk">Nevinyrral's Disk</a
-                >, as well as entirely disabling the <a
+                >, and it shuts off the <a
                     href="#"
                     class="card-hover"
                     data-card-name="Phyrexian Devourer">Phyrexian Devourer</a
-                > combo.
+                > combo entirely.
             </p>
         </CardAnalysis>
 
@@ -706,9 +672,9 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                A flexible artifact sweeper that completely truncates aggressive
-                low-curve creature swarms, Mox alignments, and token formations
-                without taxing double-pipped colored mana.
+                A flexible artifact sweeper that clears out low-curve creature
+                swarms, Moxen, and token boards—and it does it without asking for
+                double-colored mana.
             </p>
         </CardAnalysis>
 
@@ -719,15 +685,15 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                The premier anti-land destruction fortress against hostile
-                Ponza and Terrageddon variants, turning opposing
+                Your best anti-land-destruction card against Ponza and Terrageddon,
+                turning their
                 <a href="#" class="card-hover" data-card-name="Wasteland"
                     >Wastelands</a
                 > and <a
                     href="#"
                     class="card-hover"
                     data-card-name="Stone Rain">Stone Rains</a
-                > completely inert while maintaining synergy with your enchantment-based
+                > into blanks—and since it's an enchantment, it fits right into your
                 recursion loops.
             </p>
         </CardAnalysis>
@@ -739,18 +705,20 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                Asymmetrical taxation and recurring enchantment/artifact control
-                that cripples opposing mirror alignments and Sol-land artifact
-                ramps. Because it can sacrifice itself for tactical removal and
-                recur via <a
+                A one-sided tax and a recurring answer to artifacts and
+                enchantments that really hurts the mirror and Sol-land artifact
+                decks. It can sacrifice itself for removal and then come back with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Replenish">Replenish</a
-                >, it acts as both disruption and recurring defense. It excels in the mirror match, against Enchantress, and against Stiflenought strategies. While its three-mana cost makes it slightly slower than <a
+                >, so it's both disruption and a repeatable answer. It's at its best
+                in the mirror, against Enchantress, and against Stiflenought. The
+                three-mana cost makes it a touch slower than <a
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                >—which explains its reduced overall inclusion—some pilots successfully run 1-2 copies in the sideboard for these specific high-leverage matchups.
+                >—which is why it sees less play overall—but plenty of pilots run
+                1–2 in the board for those specific matchups.
             </p>
         </CardAnalysis>
 
@@ -761,18 +729,19 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                Preserves carefully sculpted hands against targeted discard
-                suites by directing discarded cards to the top of your library
-                rather than the graveyard when appropriate, while permanently
-                bypassing maximum hand size constraints during heavy draw
-                sequences. 
+                Protects a hand you've worked to set up against targeted discard,
+                since you can send discarded cards to the top of your library
+                instead of the graveyard when it helps—and it lets you ignore the
+                seven-card hand limit during big draw turns.
             </p>
             <p>
-                Beyond serving as a hard answer to general discard, it offers powerful synergy with <a
+                On top of being a hard answer to discard, it has nice synergy with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Attunement">Attunement</a
-                > activations, allowing you to selectively place discarded pieces directly on top of your library for subsequent turns. It stands out as an intriguing technical option that warrants further metagame testing.
+                >: you can stack the cards you discard right on top of your library
+                for the next few turns. It's an interesting option that's worth more
+                testing.
             </p>
         </CardAnalysis>
 
@@ -783,17 +752,17 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                A devastating end-step tap-down bullet against heavy permission
-                architectures, clearing all opposing blue mana pools before
-                initiating your winning main-phase combo turn without contested
-                countermagic. 
+                A brutal end-step tap-down against counterspell decks: strip all
+                their blue mana on their turn, then untap and combo off on your main
+                phase with no countermagic left to stop you.
             </p>
             <p>
-                While powerful, it is generally slower and more mana-intensive than <a
+                It's strong, but it's slower and costs more mana than <a
                     href="#"
                     class="card-hover"
                     data-card-name="Abeyance">Abeyance</a
-                >, which is why Abeyance remains the preferred interaction shield in most modern lists.
+                >, which is why Abeyance is the go-to protection spell in most modern
+                lists.
             </p>
         </CardAnalysis>
 
@@ -804,22 +773,21 @@ import DataTable from "@components/DataTable.astro";
             collapsible={true}
         >
             <p>
-                Absolute structural prohibition against chain-casting combo
-                structures and storm velocity engines, restricting players to a
-                single spell per turn while recurring smoothly via Replenish if
-                destroyed. It serves as an interesting silver bullet that shines particularly against Stiflenought and mass storm variants.
+                A hard stop against decks that chain spells together—storm and the
+                like—since it limits everyone to one spell per turn, and it comes
+                back with Replenish if they blow it up. A neat silver bullet that's
+                especially good against Stiflenought and storm decks.
             </p>
         </CardAnalysis>
     </Card>
 
     <Card title="Navigating Opposing Sideboard Hate" titleTag="h2">
         <p style="margin-top: 0; margin-bottom: 0;">
-            Once you have constructed your sideboard architecture and mastered
-            your strategic transformations, the ultimate test of competitive
-            proficiency is anticipating and out-sequencing your opponent's
-            targeted hate in Games 2 and 3. For a comprehensive, card-by-card
-            masterclass on defeating graveyard extraction, taxing structures,
-            and enchantment sweepers, proceed to our dedicated <a
+            Once your sideboard is built and you know your transformations cold,
+            the last piece is reading and playing around the hate your opponent
+            brings in for Games 2 and 3. For a card-by-card breakdown of how to
+            beat graveyard hate, taxing effects, and enchantment sweepers, head to
+            the <a
                 href="/playing-through-hate"
                 class="guide-link">Playing Through Hate analysis</a
             >.

@@ -8,7 +8,7 @@ import { Card } from "webcoreui/astro";
 <Layout title="Playing Through Hate - Replenish Guide">
     <PageHeader
         title="Playing Through Hate"
-        description="Mastering post-sideboard matches requires understanding how to navigate around targeted opposing interaction. You do not need an explicit answer to every sideboard threat; rather, winning Games 2 and 3 relies on altering your sequencing, timing your stack triggers, and executing disciplined counterplay."
+        description="Winning post-sideboard games is about playing around their hate, not answering all of it. You rarely need a specific answer to every sideboard card—Games 2 and 3 come down to changing your sequencing, timing your stack triggers, and staying disciplined."
         imageSrc="/src/assets/banners/mage.webp"
         imageAlt="Meddling Mage"
         imageCaption="Meddling Mage by Christopher Moeller"
@@ -19,10 +19,10 @@ import { Card } from "webcoreui/astro";
         <p class="section-intro">
             Because <a href="#" class="card-hover" data-card-name="Replenish"
                 >Replenish</a
-            > relies heavily on the graveyard to cheat massive mana costs, opponents
-            will inevitably present graveyard disruption in post-board games. The
-            secret to defeating graveyard hate is simple: never commit critical resources
-            blindly without an immediate win condition on the stack or in hand.
+            > leans on the graveyard to cheat out big mana costs, opponents will
+            bring graveyard hate in post-board games. Beating it comes down to one
+            rule: never dump your key cards into the yard without a win already on
+            the stack or in hand.
         </p>
 
         <CardAnalysis
@@ -33,20 +33,19 @@ import { Card } from "webcoreui/astro";
                 <strong>(Black Aggro, The Rock):</strong>
                 <a href="#" class="card-hover" data-card-name="Withered Wretch"
                     >Withered Wretch</a
-                > is exceptionally dangerous because its graveyard exile activation
-                is repeatable, instant-speed, and attached to an aggressive creature
-                body that clocks your life total.
+                > is dangerous because it exiles from your graveyard over and over,
+                at instant speed, and it's stapled to an aggressive body that's also
+                racing your life total.
             </p>
             <p>
-                <strong>Counterplay:</strong> When playing against black midrange
-                or aggro, strictly preserve your copies of <a
+                <strong>Counterplay:</strong> Against black midrange or aggro, save
+                your <a
                     href="#"
                     class="card-hover"
                     data-card-name="Swords to Plowshares"
                     >Swords to Plowshares</a
-                > specifically for Withered Wretch. Prioritize removing it before
-                activating card selection engines or committing enchantments to your
-                graveyard.
+                > for Withered Wretch. Kill it before you start firing card-selection
+                spells or putting enchantments in your graveyard.
             </p>
         </CardAnalysis>
 
@@ -55,35 +54,33 @@ import { Card } from "webcoreui/astro";
             image="artifacts/tormods_crypt.jpg"
         >
             <p>
-                <strong>Universal Exile:</strong> The simplest physical answer to
-                an early <a
+                <strong>Universal Exile:</strong> The simplest answer to an early
+                <a
                     href="#"
                     class="card-hover"
                     data-card-name="Tormod's Crypt">Tormod's Crypt</a
-                > is destroying it with <a
+                > is just blowing it up with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
                 > or <a href="#" class="card-hover" data-card-name="Disenchant"
                     >Disenchant</a
-                > before initiating a combo loop.
+                > before you go for the combo.
             </p>
             <p>
-                <strong>The Stack Trick:</strong> Against an active Crypt on the battlefield,
-                do not blindly dump your entire hand into your graveyard. Instead,
-                maintain an active <a
+                <strong>The Stack Trick:</strong> If a Crypt is already in play, don't
+                just dump your whole hand into the graveyard. Keep an <a
                     href="#"
                     class="card-hover"
                     data-card-name="Attunement">Attunement</a
-                > on the table while retaining your winning combo pieces in hand.
-                With a moderate, tempting graveyard (just enough value to bait activation),
-                cast <a href="#" class="card-hover" data-card-name="Replenish"
+                > on the table and hold your combo pieces in hand. Build a graveyard
+                that's tempting but not essential—just enough to bait them—then cast
+                <a href="#" class="card-hover" data-card-name="Replenish"
                     >Replenish</a
-                >. When your opponent sacrifices Crypt in response to purge your
-                existing yard, Replenish remains sitting on the stack. Still in
-                response to your own Replenish, activate your Attunement to dump
-                a fresh hand of combo enchantments into your newly cleared
-                graveyard. Replenish resolves instantly thereafter, returning
+                >. When they crack Crypt in response to empty your yard, Replenish
+                is still on the stack. In response to your own Replenish, activate
+                Attunement to pitch a fresh handful of combo enchantments into the
+                now-empty graveyard. Replenish resolves right after and brings back
                 everything you just discarded.
             </p>
         </CardAnalysis>
@@ -101,26 +98,24 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Phyrexian Furnace">Phyrexian Furnace</a
-                > exiles only one card at a time via targeted sacrifice or random
-                tap activations.
+                > only exiles one card at a time—either by sacrificing it or with its
+                tap ability.
             </p>
             <p>
-                <strong>Counterplay:</strong> Never commit your combo enchantments
-                to the graveyard gradually over several turns—this simply invites
-                your opponent to snipe key lock pieces one by one. Instead, execute
-                your setup explosively in a single turn via <a
+                <strong>Counterplay:</strong> Don't feed your combo enchantments into
+                the graveyard slowly over several turns—that just lets them pick off
+                your lock pieces one at a time. Load up in a single turn with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Frantic Search">Frantic Search</a
                 > or <a href="#" class="card-hover" data-card-name="Intuition"
                     >Intuition</a
-                > immediately before casting <a
+                > right before you cast <a
                     href="#"
                     class="card-hover"
                     data-card-name="Replenish">Replenish</a
-                >. By overwhelming their single targeted exile activation on the
-                stack, they can capture at most one card while the rest of your
-                architecture returns to end the game.
+                >. They can only exile one card in response, so the rest of your
+                pieces come back and end the game.
             </p>
         </CardAnalysis>
 
@@ -129,19 +124,19 @@ import { Card } from "webcoreui/astro";
             image="sorceries/haunting_echoes.jpg"
         >
             <p>
-                <strong>Graveyard & Library Extraction:</strong> The supreme terminal
-                hate piece of Black-based control shells and Psychatog variants. Resolving
-                a five-mana <a
+                <strong>Graveyard & Library Extraction:</strong> The scariest hate
+                card out of black control decks and Psychatog. A resolved five-mana
+                <a
                     href="#"
                     class="card-hover"
                     data-card-name="Haunting Echoes">Haunting Echoes</a
-                > obliterates your accumulated graveyard while scouring your entire
-                library of all namesake copies, completely disabling your combo architecture.
+                > wipes your whole graveyard and then pulls every copy of those cards
+                out of your library too, which basically shuts the combo off.
             </p>
             <p>
-                <strong>Counterplay:</strong> Because Haunting Echoes is a heavy five-mana
-                sorcery, opponents are forced to tap down significantly during their
-                own main phase to deploy it. Preserve cheap blue countermagic (<a
+                <strong>Counterplay:</strong> Since it costs five and it's a sorcery,
+                they have to tap way down on their own turn to cast it. Hold your cheap
+                counters (<a
                     href="#"
                     class="card-hover"
                     data-card-name="Mana Leak">Mana Leak</a
@@ -149,47 +144,45 @@ import { Card } from "webcoreui/astro";
                     >Counterspell</a
                 >, <a href="#" class="card-hover" data-card-name="Arcane Denial"
                     >Arcane Denial</a
-                >) specifically for their fifth mana threshold, or proactively
-                lock out the spell via <a
+                >) for when they hit five mana, or name it with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Meddling Mage">Meddling Mage</a
-                > in Games 2 and 3. Avoid passively building an overflowing graveyard
-                against five-mana black control pools without an immediate plan to
-                execute Replenish on your own turn.
+                > in Games 2 and 3. Don't let your graveyard pile up against five-mana
+                black control unless you can cast Replenish off it on your next turn.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Planar Void" image="enchantments/planar_void.jpg">
             <p>
-                <strong>Continuous Exile Constraint:</strong> A one-mana static enchantment
-                favored by Suicide Black and aggressive mono-black builds that automatically
-                exiles any card immediately as it hits the graveyard, creating an
-                oppressive graveyard vacuum.
+                <strong>Continuous Exile Constraint:</strong> A one-mana enchantment
+                out of Suicide Black and mono-black aggro that exiles every card the
+                moment it would hit a graveyard, so nothing ever sticks around for you
+                to use.
             </p>
             <p>
-                <strong>Counterplay & Trigger Manipulation:</strong> Because <a
+                <strong>Counterplay & Trigger Manipulation:</strong> Since <a
                     href="#"
                     class="card-hover"
                     data-card-name="Planar Void">Planar Void</a
-                > is an enchantment itself, our maindeck copies of <a
+                > is an enchantment, your maindeck <a
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > or instant-speed <a
+                > or an instant-speed <a
                     href="#"
                     class="card-hover"
                     data-card-name="Disenchant">Disenchant</a
-                > cleanly destroy it before attempting combo loops.
+                > kills it cleanly before you go off.
             </p>
         </CardAnalysis>
     </Card>
 
     <Card title="Sweepers & Permanent Wipes" titleTag="h2">
         <p class="section-intro">
-            When opponents fail to attack your graveyard, they frequently
-            overload on reactive anti-enchantment removal to dismantle your
-            engines once they reach the battlefield.
+            When opponents can't attack your graveyard, they'll often load up on
+            enchantment removal instead, trying to break up your engines once they
+            land.
         </p>
 
         <CardAnalysis
@@ -197,9 +190,9 @@ import { Card } from "webcoreui/astro";
             image="instants/tranquil_domain.jpg"
         >
             <p>
-                <strong>Instant-Speed Destruction:</strong> Traditional green answers
-                aimed at destroying your lock pieces as they are cast or attacking
-                your established board during combat or end steps.
+                <strong>Instant-Speed Destruction:</strong> The classic green answers—they
+                destroy your lock pieces as you cast them, or pick apart your board at
+                instant speed during combat or your end step.
             </p>
             <p>
                 <strong>Counterplay:</strong>
@@ -207,35 +200,33 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Decree of Silence">Decree of Silence</a
-                > serves as the premier overarching defense: returning Decree alongside
-                your combo forces the opponent to exhaust three spells just to break
-                through the automatic counter shielding. Furthermore, under an active
-                Opal-Wave engine, you can activate <a
+                > is your best defense here: bring it back alongside the combo and they
+                have to spend three spells just to punch through the counters it hands
+                out. You can also use <a
                     href="#"
                     class="card-hover"
                     data-card-name="Parallax Wave">Parallax Wave</a
-                > targeting your own vulnerable enchantments in response to removal;
-                once the stack clears and Wave triggers, your board returns unharmed
-                and refreshed. Finally, transitioning into our post-sideboard creature
-                package (<a
+                > under an active Opal-Wave engine—target your own vulnerable enchantments
+                in response to their removal, and once the stack clears and Wave's fading
+                counters bring them back, your board is safe. And in the sideboard games,
+                switching to <a
                     href="#"
                     class="card-hover"
                     data-card-name="Exalted Angel">Exalted Angel</a
-                >) completely invalidates opposing naturalize suites by
-                presenting lethal damage from non-enchantment sources.
+                > just turns their naturalize effects into dead cards, since you're now
+                winning with a creature instead of enchantments.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Scour" image="instants/scour.jpg">
             <p>
-                <strong>Surgical Eradication:</strong> Primarily fielded by blue-white
-                control sideboards utilizing Invasion-block removal suites, <a
+                <strong>Surgical Eradication:</strong> Mostly a blue-white control
+                sideboard card. <a
                     href="#"
                     class="card-hover"
                     data-card-name="Scour">Scour</a
-                > threatens to destroy an enchantment on the battlefield and permanently
-                exile all corresponding copies across your hand, library, and graveyard.
-                A single resolved Scour targeting <a
+                > destroys an enchantment on the battlefield and then exiles every copy
+                of it from your hand, library, and graveyard. One Scour on <a
                     href="#"
                     class="card-hover"
                     data-card-name="Opalescence">Opalescence</a
@@ -243,28 +234,26 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Parallax Wave">Parallax Wave</a
-                > can dismantle your foundational win condition for the rest of the
-                match.
+                > can take your win condition off the table for the rest of the match.
             </p>
             <p>
-                <strong>Counterplay:</strong> Never deploy an unprotected engine enchantment
-                against open four-mana white suites post-sideboard without permission
-                or a defensive plan. Most importantly, when initiating an Opal-Wave
-                loop, maintain active fading counters on your Parallax Wave so you
-                can instantly exile your own enchantments in response to Scour targeting
-                them on the stack. If the target leaves the battlefield before resolution,
-                Scour completely fizzles and zero copies are exiled.
+                <strong>Counterplay:</strong> Don't drop a naked engine enchantment
+                into open four-mana white post-board unless you have a counter or a
+                plan. The key trick: keep fading counters on your Parallax Wave during
+                an Opal-Wave loop, so you can exile your own enchantments in response
+                to a Scour targeting them. If the target's already gone when Scour tries
+                to resolve, it fizzles and exiles nothing.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Anarchy" image="sorceries/anarchy.jpg">
             <p>
-                <strong>Red Sweeper & Color Hate:</strong> Aggressive red architectures
-                (Sligh, RG Ponza, Goblins) consistently side in <a
+                <strong>Red Sweeper & Color Hate:</strong> Red aggro decks (Sligh,
+                RG Ponza, Goblins) bring in <a
                     href="#"
                     class="card-hover"
                     data-card-name="Anarchy">Anarchy</a
-                > to destroy white stabilization engines like <a
+                > to wipe your white stuff like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Sphere of Law">Sphere of Law</a
@@ -278,12 +267,11 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Parallax Wave">Parallax Wave</a
-                > in a single sweeping blow.
+                > all in one shot.
             </p>
             <p>
-                <strong>Counterplay:</strong> Anarchy is a four-mana sorcery that
-                destroys rather than exiles. First, proactively throttle their mana
-                development via <a
+                <strong>Counterplay:</strong> Anarchy is a four-mana sorcery, and it
+                destroys rather than exiles. First, slow their mana down with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Tsabo's Web">Tsabo's Web</a
@@ -291,16 +279,16 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Rishadan Port">Rishadan Port</a
-                > to keep them off four operational mana, or name it defensively with
+                > to keep them off four mana, or just name it with
                 <a href="#" class="card-hover" data-card-name="Meddling Mage"
                     >Meddling Mage</a
-                >. Second, recognize that because Anarchy sends all destroyed
-                enchantments directly to your graveyard, retaining a backup copy
-                of <a href="#" class="card-hover" data-card-name="Replenish"
-                    >Replenish</a
-                > allows you to instantly reanimate your entire wiped board on your
-                subsequent turn, turning an apparent catastrophe into immediate game-ending
-                tempo.
+                >. Second, remember that everything it destroys goes straight to your
+                graveyard—so if you're holding a backup <a
+                    href="#"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                >, you bring the whole board right back next turn and turn the blowout
+                into a game-ending swing.
             </p>
         </CardAnalysis>
 
@@ -309,98 +297,93 @@ import { Card } from "webcoreui/astro";
             image="sorceries/reverent_silence.jpg"
         >
             <p>
-                <strong>Free Enchantment Sweeper:</strong> Utilized by Elves and green
-                aggro-midrange builds as zero-mana interaction by having you gain
-                6 life as an alternate casting cost. While sweeping your entire enchantment
-                board for zero mana can ruin early stabilization pieces like <a
+                <strong>Free Enchantment Sweeper:</strong> Elves and green aggro-midrange
+                use this as free interaction—they can cast it for zero mana by giving
+                you 6 life. Sweeping your whole enchantment board for free can blow out
+                early pieces like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Sphere of Law">Sphere of Law</a
                 > or <a href="#" class="card-hover" data-card-name="Attunement"
                     >Attunement</a
-                >, the dynamic is deeply advantageous if planned correctly.
+                >, but if you plan around it, the exchange is actually great for you.
             </p>
             <p>
-                <strong>Counterplay:</strong> As a sorcery, opponents are restricted
-                to casting <a
+                <strong>Counterplay:</strong> It's a sorcery, so they can only cast
+                <a
                     href="#"
                     class="card-hover"
                     data-card-name="Reverent Silence">Reverent Silence</a
-                > during their main phase. During preliminary setup rounds, gladly
-                accept the 6-life cushion; every destroyed enchantment lands directly
-                in your graveyard, actively advancing your <a
+                > on their own main phase. Early on, take the 6 life happily—every
+                enchantment it destroys goes to your graveyard and sets up <a
                     href="#"
                     class="card-hover"
                     data-card-name="Replenish">Replenish</a
-                > setup at zero card cost to you. Once your Opal-Wave engine is fully
-                assembled, simply activate <a
+                > for free. And once your Opal-Wave engine is online, just respond by
+                activating <a
                     href="#"
                     class="card-hover"
                     data-card-name="Parallax Wave">Parallax Wave</a
-                > in response to stack self-protection triggers, bringing your entire
-                board back safely once Reverent Silence resolves.
+                > to blink your own board, so it all comes back safely after Reverent
+                Silence resolves.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Ray of Revelation / Sylvan Reclamation">
             <p>
-                <strong>Flashback & Exile Spot Removal:</strong> Green-white disruptive
-                configurations rely on <a
+                <strong>Flashback & Exile Spot Removal:</strong> Green-white decks
+                use <a
                     href="#"
                     class="card-hover"
                     data-card-name="Ray of Revelation">Ray of Revelation</a
-                > for devastating 2-for-1 enchantment attrition via Flashback, while
-                extended format analyses frequently emphasize permanent exile sweepers
-                like <a
+                > for a 2-for-1 thanks to Flashback, and you'll also see exile-based
+                sweepers like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Sylvan Reclamation">Sylvan Reclamation</a
-                > to deny graveyard recursion entirely. Countering the front half
-                of Ray from hand fails to prevent an opponent from paying one white
-                mana to destroy your key piece directly from the graveyard.
+                > that shut off graveyard recursion entirely. Note that countering the
+                first cast of Ray doesn't help much—they can just pay one white mana
+                to flash it back from the graveyard and destroy your key piece anyway.
             </p>
             <p>
-                <strong>Counterplay:</strong> Against recurring flashback interaction,
-                do not rely on sequential, piece-by-piece enchantment deployments.
-                Execute simultaneous multi-enchantment installations via <a
+                <strong>Counterplay:</strong> Against recurring flashback removal, don't
+                lay your enchantments out one at a time. Put them all down at once with
+                <a
                     href="#"
                     class="card-hover"
                     data-card-name="Replenish">Replenish</a
-                > where an instant-speed <a
+                >, where an instant-speed <a
                     href="#"
                     class="card-hover"
                     data-card-name="Parallax Wave">Parallax Wave</a
-                > can protect your lock pieces, or shift tactical focus entirely toward
-                transformational non-enchantment win conditions (<a
+                > can protect them, or just pivot to non-enchantment threats like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Exalted Angel">Exalted Angel</a
-                >, <a href="#" class="card-hover" data-card-name="Meddling Mage"
+                > and <a href="#" class="card-hover" data-card-name="Meddling Mage"
                     >Meddling Mage</a
-                >) that leave opposing enchantment removal completely dead in
-                hand.
+                > that leave their enchantment removal stranded in hand.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Calming Verse">
             <p>
-                <strong>Asymmetric Mass Sweeper:</strong> A catastrophic four-mana
-                green sorcery sweeper that destroys all enchantments you control while
-                leaving a tapped-out or green opponent's permanent infrastructure
-                completely unharmed.
+                <strong>Asymmetric Mass Sweeper:</strong> A four-mana green sorcery
+                that destroys every enchantment you control while leaving the opponent's
+                own permanents untouched.
             </p>
             <p>
-                <strong>Counterplay:</strong> Calming Verse demands rigorous permission
-                discipline: preserve hard blue countermagic (<a
+                <strong>Counterplay:</strong> You have to be disciplined with your
+                counters here: hold <a
                     href="#"
                     class="card-hover"
                     data-card-name="Mana Leak">Mana Leak</a
                 >, <a href="#" class="card-hover" data-card-name="Counterspell"
                     >Counterspell</a
-                >, <a href="#" class="card-hover" data-card-name="Arcane Denial"
+                >, or <a href="#" class="card-hover" data-card-name="Arcane Denial"
                     >Arcane Denial</a
-                >) strictly for their four-mana sorcery deployment window.
-                Alternatively, deploy proactive interaction like <a
+                > for when they hit four mana to cast it. Otherwise, use proactive pieces
+                like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Abeyance">Abeyance</a
@@ -410,17 +393,15 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Defense Grid">Defense Grid</a
-                > to strip their ability to safely clear the table during decisive
-                setup turns.
+                > to stop them from wiping the board on the turn that matters.
             </p>
         </CardAnalysis>
     </Card>
 
     <Card title="Taxation & Cost Increases" titleTag="h2">
         <p class="section-intro">
-            Static restriction permanents attempt to lock down your resource
-            development or prevent your core engine loops from executing
-            cleanly.
+            These permanents sit on the board and try to choke your mana or stop
+            your engine loops from working.
         </p>
 
         <CardAnalysis
@@ -428,16 +409,14 @@ import { Card } from "webcoreui/astro";
             image="enchantments/presence_of_the_master.jpg"
         >
             <p>
-                <strong>The Replenish Bypass:</strong> While imposing on paper against
-                an enchantment archetype, <a
+                <strong>The Replenish Bypass:</strong> It looks terrifying against
+                an enchantment deck, but <a
                     href="#"
                     class="card-hover"
                     data-card-name="Presence of the Master"
                     >Presence of the Master</a
-                > strictly counters enchantment spells that are <em>played</em> (cast
-                from your hand). <strong
-                    >It does not intercept enchantments entering the battlefield
-                    via <a
+                > only counters enchantment spells you <em>cast</em> from hand. <strong
+                    >It does nothing to enchantments coming in off <a
                         href="#"
                         class="card-hover"
                         data-card-name="Replenish">Replenish</a
@@ -445,18 +424,17 @@ import { Card } from "webcoreui/astro";
                 >
             </p>
             <p>
-                However, a resolved Presence prevents you from casting manual
-                combo pieces or hardcasting answers like <a
+                Still, once it's in play you can't hardcast combo pieces or answers
+                like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                >. To navigate around it, focus entirely on sculpting a decisive
-                graveyard and winning directly off a single Replenish, or rely
-                on instant-speed removal like <a
+                >. Play around it by building your graveyard and winning straight off
+                a single Replenish, or lean on instant-speed removal like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Disenchant">Disenchant</a
-                > and non-enchantment proactive threats like <a
+                > and non-enchantment threats like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Meddling Mage">Meddling Mage</a
@@ -473,28 +451,26 @@ import { Card } from "webcoreui/astro";
             image="enchantments/aura_of_silence.jpg"
         >
             <p>
-                <strong>Tax & Threat Combination:</strong> Frequently sideboarded
-                in White Weenie, BW Control, and Enchantress mirrors. Because <a
+                <strong>Tax & Threat Combination:</strong> You'll see this out of
+                White Weenie, BW Control, and the Enchantress mirror. <a
                     href="#"
                     class="card-hover"
                     data-card-name="Aura of Silence">Aura of Silence</a
-                > increases the casting cost of your artifacts and enchantments by
-                two generic mana, deploying early ramp or hardcasting combo engines
-                becomes agonizingly slow. Worse still, sitting openly on the battlefield,
-                it represents an immediate sacrifice trigger to destroy whatever key
-                enchantment you do manage to resolve.
+                > taxes your artifacts and enchantments by two mana, which makes early
+                ramp and hardcasting your engines painfully slow. On top of that, it
+                can sacrifice itself to destroy whatever key enchantment you finally
+                do resolve.
             </p>
             <p>
-                <strong>Counterplay:</strong> This interaction underscores precisely
-                why our sideboard engineers a split between <a
+                <strong>Counterplay:</strong> This is exactly why the sideboard splits
+                between <a
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
                 > and <a href="#" class="card-hover" data-card-name="Disenchant"
                     >Disenchant</a
-                >. Disenchant remains a clean two-mana instant entirely immune
-                to Aura's static tax. In attrition matchups where Aura hits the
-                table early, concentrate your mana on resolving <a
+                >—Disenchant is a clean two-mana instant that Aura's tax doesn't touch.
+                In grindy games where Aura lands early, spend your mana on <a
                     href="#"
                     class="card-hover"
                     data-card-name="Attunement">Attunement</a
@@ -502,24 +478,24 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Frantic Search">Frantic Search</a
-                > to load the graveyard, then cast a multi-enchantment <a
+                > to fill the graveyard, then cast a <a
                     href="#"
                     class="card-hover"
                     data-card-name="Replenish">Replenish</a
-                >; a single sacrifice trigger cannot dismantle a complete
-                Opal-Wave-Decree lock entering simultaneously.
+                > that brings back several enchantments at once; one sacrifice trigger
+                can't break up a whole Opal-Wave-Decree lock hitting the board together.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Gloom" image="matchups/moneyball/gloom.jpg">
             <p>
-                <strong>Asymmetric Color Tax:</strong> Brought in by Black aggro,
-                Suicide Black, and The Rock. By taxing all white spells and white
-                enchantment activation costs by three generic mana, <a
+                <strong>Asymmetric Color Tax:</strong> Black aggro, Suicide Black,
+                and The Rock all bring this in. <a
                     href="#"
                     class="card-hover"
                     data-card-name="Gloom">Gloom</a
-                > threatens to cripple <a
+                > taxes every white spell and white activated ability by three mana,
+                which can badly slow down <a
                     href="#"
                     class="card-hover"
                     data-card-name="Replenish">Replenish</a
@@ -537,8 +513,8 @@ import { Card } from "webcoreui/astro";
                 >.
             </p>
             <p>
-                <strong>Counterplay:</strong> Fortunately, Gloom is strictly color-scoped
-                to white. Your entire blue card-selection engine (<a
+                <strong>Counterplay:</strong> The good news is Gloom only touches white.
+                Your whole blue card-selection package (<a
                     href="#"
                     class="card-hover"
                     data-card-name="Attunement">Attunement</a
@@ -550,15 +526,14 @@ import { Card } from "webcoreui/astro";
                     >Intuition</a
                 >, <a href="#" class="card-hover" data-card-name="Deep Analysis"
                     >Deep Analysis</a
-                >) and blue permission suite (<a
+                >) and your counters (<a
                     href="#"
                     class="card-hover"
                     data-card-name="Mana Leak">Mana Leak</a
                 >, <a href="#" class="card-hover" data-card-name="Counterspell"
                     >Counterspell</a
-                >) function entirely unimpeded. Against heavily black fields,
-                reserve early blue countermagic strictly for intercepting Gloom
-                on the stack. If resolved, leverage sol lands (<a
+                >) work just fine. Against heavily black decks, save your early counters
+                for Gloom itself. If it does resolve, use your sol lands (<a
                     href="#"
                     class="card-hover"
                     data-card-name="Ancient Tomb">Ancient Tomb</a
@@ -566,9 +541,8 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="City of Traitors">City of Traitors</a
-                >) and artifact ramp to manually overcome the three-mana
-                surcharge over extended games, or rely on blue bounce mechanics
-                like <a href="#" class="card-hover" data-card-name="Upheaval"
+                >) and artifact ramp to just pay through the three-mana tax over a long
+                game, or lean on blue tools like <a href="#" class="card-hover" data-card-name="Upheaval"
                     >Upheaval</a
                 > and cycling <a
                     href="#"
@@ -580,50 +554,47 @@ import { Card } from "webcoreui/astro";
 
         <CardAnalysis title="Winter Orb" image="artifacts/winter_orb.jpg">
             <p>
-                <strong>Mana Chokepoints:</strong> Featured heavily in Stasis, Merfolk,
-                and aggressive tempo builds. Because Replenish operates around a critical
-                three- and four-mana spell curve, restricted untap steps severely
-                constrain your operational bandwidth and setup speed.
+                <strong>Mana Chokepoints:</strong> Common in Stasis, Merfolk, and tempo
+                decks. Replenish is built around three- and four-mana spells, so only
+                untapping one land a turn really slows down your setup.
             </p>
             <p>
-                <strong>Counterplay:</strong> Prioritize removing <a
+                <strong>Counterplay:</strong> Get rid of <a
                     href="#"
                     class="card-hover"
                     data-card-name="Winter Orb">Winter Orb</a
-                > immediately with <a
+                > right away with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > or instant-speed <a
+                > or an instant-speed <a
                     href="#"
                     class="card-hover"
                     data-card-name="Disenchant">Disenchant</a
-                >. In game lines where Orb persists, sol lands like <a
+                >. If it sticks, sol lands like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Ancient Tomb">Ancient Tomb</a
-                > provide immense tactical leverage by generating two mana off a single
-                untap step. Most importantly, remember that <a
+                > are great because you get two mana off the one land you untap. Best
+                of all, <a
                     href="#"
                     class="card-hover"
                     data-card-name="Frantic Search">Frantic Search</a
-                > functions as an extraordinary burst untapper under Winter Orb: tap
-                all available lands for mana before casting Search, then untap three
-                lands upon resolution to suddenly generate a massive mana pool during
-                a choked turn.
+                > is a fantastic burst-untapper under Orb: tap all your lands for mana
+                first, cast Search, and untap three lands when it resolves—suddenly you've
+                got a big pile of mana on an otherwise locked turn.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Cursed Totem" image="artifacts/cursed_totem.jpg">
             <p>
-                <strong>The Opalescence Lockout:</strong> A subtle and deceptively
-                dangerous sideboard artifact. On an empty board or during standard
-                setup phases, <a
+                <strong>The Opalescence Lockout:</strong> A sneaky, easy-to-miss sideboard
+                artifact. On its own, <a
                     href="#"
                     class="card-hover"
                     data-card-name="Cursed Totem">Cursed Totem</a
-                > has zero interaction with normal enchantments. However, <strong
-                    >the instant <a
+                > doesn't touch your normal enchantments at all. But <strong
+                    >the moment <a
                         href="#"
                         class="card-hover"
                         data-card-name="Opalescence">Opalescence</a
@@ -632,8 +603,8 @@ import { Card } from "webcoreui/astro";
                 >
             </p>
             <p>
-                <strong>Counterplay:</strong> Under Opalescence and Cursed Totem simultaneously,
-                <a href="#" class="card-hover" data-card-name="Parallax Wave"
+                <strong>Counterplay:</strong> With both Opalescence and Cursed Totem
+                out, <a href="#" class="card-hover" data-card-name="Parallax Wave"
                     >Parallax Wave</a
                 >, <a href="#" class="card-hover" data-card-name="Attunement"
                     >Attunement</a
@@ -641,32 +612,29 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > are strictly considered creatures with activated abilities—meaning
-                Cursed Totem completely disables their activation loops! To circumvent
-                this critical gotcha, always utilize <a
+                > are all creatures with activated abilities—so Cursed Totem shuts their
+                activations off completely! To avoid this trap, always use <a
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > or instant-speed <a
+                > or an instant-speed <a
                     href="#"
                     class="card-hover"
                     data-card-name="Disenchant">Disenchant</a
-                > to destroy Cursed Totem <em>before</em> deploying Opalescence onto
-                the battlefield.
+                > to kill Cursed Totem <em>before</em> Opalescence hits the table.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Dystopia" image="enchantments/dystopia.jpg">
             <p>
-                <strong>Cumulative Color Attrition:</strong> A grueling sideboard
-                enchantment deployed by Black control and midrange configurations
-                (such as The Rock) that imposes a recurring upkeep tax: at the beginning
-                of your upkeep, you are forced to sacrifice a green or white permanent.
-                Left unchecked, <a
+                <strong>Cumulative Color Attrition:</strong> A grinding sideboard
+                enchantment out of black control and midrange decks like The Rock.
+                Every one of your upkeeps, you have to sacrifice a green or white
+                permanent. Left alone, <a
                     href="#"
                     class="card-hover"
                     data-card-name="Dystopia">Dystopia</a
-                > aggressively strips away your <a
+                > chews through your <a
                     href="#"
                     class="card-hover"
                     data-card-name="Opalescence">Opalescence</a
@@ -676,13 +644,12 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Sphere of Law">Sphere of Law</a
-                > structures.
+                >.
             </p>
             <p>
-                <strong>Counterplay:</strong> Crucially, Dystopia demands progressive
-                cumulative upkeep life payments from the opponent and is entirely
-                color-restricted to green and white—meaning your foundational blue
-                draw-discard engine (<a
+                <strong>Counterplay:</strong> The key points: Dystopia costs the opponent
+                more and more life each upkeep, and it only hits green and white—so
+                your blue draw-discard engine (<a
                     href="#"
                     class="card-hover"
                     data-card-name="Attunement">Attunement</a
@@ -690,48 +657,44 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Frantic Search">Frantic Search</a
-                >) and sol artifact base operate completely immune to its
-                effect. Simply accumulate your combo payload safely inside your
-                graveyard without casting premature white permanents; when
-                ready, deploy <a
+                >) and your sol-land base are completely safe. Just build your combo
+                up in the graveyard without laying out white permanents early, and when
+                you're ready, cast <a
                     href="#"
                     class="card-hover"
                     data-card-name="Replenish">Replenish</a
-                > onto an overwhelming board where sacrificing a single redundant
-                white permanent to Dystopia's upkeep trigger is irrelevant before
-                executing lethal attacks.
+                > onto a full board. At that point sacrificing one spare white permanent
+                to the upkeep trigger doesn't matter, and you swing for the win.
             </p>
         </CardAnalysis>
 
         <CardAnalysis title="Humility">
             <p>
-                <strong>Layered Stat Normalization:</strong> Occasional mirror tech
-                or UW Control sideboard inclusion, <a
+                <strong>Layered Stat Normalization:</strong> You'll occasionally see
+                this as mirror tech or out of UW Control. <a
                     href="#"
                     class="card-hover"
                     data-card-name="Humility">Humility</a
-                > strips all creature abilities and forces base stats to 1/1. Because
-                our lethal endgame relies on <a
+                > removes all creature abilities and sets every creature to 1/1. Since
+                your kill relies on <a
                     href="#"
                     class="card-hover"
                     data-card-name="Opalescence">Opalescence</a
-                > transforming our non-Aura enchantments into dynamic attacking creatures,
-                a resolved Humility creates complex layer conflicts and neutralizes
-                your creature-based engine activations if timestamped over your setup.
+                > turning your non-Aura enchantments into attackers, a Humility that
+                resolves after your setup creates messy layer interactions and shuts
+                off your creature-based activations.
             </p>
             <p>
-                <strong>Counterplay:</strong> When Humility is fielded, do not attempt
-                to win through combat damage with Opalescence creatures or rely on
-                creature-state activated abilities. Treat Humility as a mandatory
-                removal target: systematically clear it from the table via instant-speed
+                <strong>Counterplay:</strong> When Humility is in play, don't try to
+                win with Opalescence creatures or count on creature abilities. Treat
+                it as a must-kill target: clear it with an instant-speed
                 <a href="#" class="card-hover" data-card-name="Disenchant"
                     >Disenchant</a
                 > or an existing <a
                     href="#"
                     class="card-hover"
                     data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > prior to transitioning your graveyard architecture into active battlefield
-                combat.
+                > before you turn your graveyard into an attacking board.
             </p>
         </CardAnalysis>
     </Card>

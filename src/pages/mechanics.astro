@@ -22,16 +22,14 @@ import { Card } from "webcoreui/astro";
                 >Opalescence</a
             > and <a href="#" class="card-hover" data-card-name="Parallax Wave"
                 >Parallax Wave</a
-            > on the battlefield, Wave becomes an operational 4/4 creature capable
-            of targeting itself. You retain priority and stack consecutive creature-exile
-            triggers against opposing threats, allocating the final fading counter
-            to target Wave itself. Wave exits and immediately returns with five fresh
-            fading counters as a brand-new object. Subsequently, the original exile
-            triggers resolve on the stack, eradicating those targets permanently.
-            Repeat this sequence until the opposing battlefield is cleared. For
-            exhaustive stack physics, timestamp layering, and formal rules
-            treatises on Opal-Wave loops, consult the mathematical breakdowns
-            and video tutorials curated in our <a
+            > both out, Wave is a 4/4 that can target itself. Hold priority and stack
+            up several exile activations on your opponent's creatures, then spend Wave's
+            last fading counter targeting Wave itself. Wave leaves and comes right back
+            as a brand-new object with five fresh fading counters. Now the earlier exile
+            activations resolve—and since the Wave that would have returned those
+            creatures is gone, they're exiled for good. Repeat until their board is
+            empty. For the full stack breakdown, timestamps, and video walkthroughs of
+            the Opal-Wave loop, check our <a
                 href="/resources"
                 class="guide-link"
                 >External Resources</a
@@ -44,10 +42,10 @@ import { Card } from "webcoreui/astro";
                 href="#"
                 class="card-hover"
                 data-card-name="Opalescence">Opalescence</a
-            > globally animates <em>all</em> non-Aura enchantments on the battlefield,
-            opposing enchantments transform into targetable creatures. Consequently,
-            you can utilize the Wave interaction to permanently exile antagonistic
-            permanents such as <a
+            > animates <em>all</em> non-Aura enchantments on the battlefield, your
+            opponent's enchantments become creatures too—and creatures are targetable.
+            So you can use the same Wave loop to permanently exile problem permanents
+            like <a
                 href="#"
                 class="card-hover"
                 data-card-name="Survival of the Fittest"
@@ -69,35 +67,33 @@ import { Card } from "webcoreui/astro";
                 href="#"
                 class="card-hover"
                 data-card-name="Parallax Wave">Parallax Wave</a
-            > re-enters as a new permanent subject to summoning sickness, preventing
-            it from attacking that turn. Therefore, whenever tactically possible,
-            temporarily exile opposing blockers before combat, execute a full team
-            attack (swinging with Wave for 4 damage), and initiate the permanent exile
-            loop during your post-combat main phase. The notable exception occurs
-            when opposing creatures carry devastating Enter the Battlefield (ETB)
-            triggers (such as <a
+            > comes back as a new permanent, so it has summoning sickness and can't
+            attack that turn. So when you can, temporarily exile their blockers before
+            combat, swing with the whole team (including Wave for 4), and run the
+            permanent-exile loop in your second main phase. The exception is creatures
+            with nasty enter-the-battlefield triggers (like <a
                 href="#"
                 class="card-hover"
                 data-card-name="Goblin Ringleader">Goblin Ringleader</a
             > or <a href="#" class="card-hover" data-card-name="Bone Shredder"
                 >Bone Shredder</a
-            >). Because temporary exile permits them to re-enter and re-trigger
-            before permanent removal, immediately permanently exile such threats
-            prior to combat.
+            >): temporary exile lets them come back and re-trigger, so exile those
+            permanently before combat instead.
         </p>
 
         <h3 style="margin-top: 2.5rem;">Opalescence & Post-Replenish Sickness</h3>
         <p style="margin-bottom: 0;">
-            A frequent analytical misstep among inexperienced pilots is assuming
-            a resolved <a href="#" class="card-hover" data-card-name="Replenish"
-                >Replenish</a
-            > enables immediate lethal combat. Because <a
+            A common mistake for new pilots is thinking a resolved <a
+                href="#"
+                class="card-hover"
+                data-card-name="Replenish">Replenish</a
+            > means you can swing for lethal that turn. <a
                 href="#"
                 class="card-hover"
                 data-card-name="Opalescence">Opalescence</a
-            > animates returned enchantments into creatures, any permanent entering
-            the battlefield this turn is governed by summoning sickness and cannot
-            attack. Consequently, executing a decisive board lock via <a
+            > turns the returned enchantments into creatures, but anything that entered
+            this turn has summoning sickness and can't attack. So you usually need to
+            lock the board down first with <a
                 href="#"
                 class="card-hover"
                 data-card-name="Parallax Wave">Parallax Wave</a
@@ -105,8 +101,7 @@ import { Card } from "webcoreui/astro";
                 href="#"
                 class="card-hover"
                 data-card-name="Decree of Silence">Decree of Silence</a
-            > is essential to completely insulate your position across a full turn
-            cycle before delivering lethal damage.
+            >, keep yourself safe for a full turn, and swing for the kill after.
         </p>
     </Card>
 
@@ -116,27 +111,26 @@ import { Card } from "webcoreui/astro";
                 href="#"
                 class="card-hover"
                 data-card-name="Decree of Silence">Decree of Silence</a
-            > counters its third spell, its mandatory sacrifice trigger stacks. In
-            response, activate an animated <a
+            > is about to be sacrificed after its third counter, respond by activating
+            an animated <a
                 href="#"
                 class="card-hover"
                 data-card-name="Parallax Wave">Parallax Wave</a
-            > to target the Decree. Upon resolving the standard flicker loop, Decree
-            returns with three refreshed depletion counters. While this sequence briefly
-            exposes a tiny window on the stack, an opponent would need to cast three
-            distinct spells simply to force the third trigger and still retain instant-speed
-            interaction to exploit the transition—an exceptional hurdle for traditional
-            Premodern archetypes. Even if removal targeting Opalescence resolves during
-            this brief gap, Decree simply returns as an unenchantment object ready
-            to counter their next three plays.
+            > targeting the Decree. Run the standard flicker loop and Decree comes back
+            as a fresh object, ready to counter three more spells. There's a tiny window
+            on the stack during the swap, but to exploit it the opponent would need to
+            have cast three separate spells just to force the sacrifice and still have
+            instant-speed interaction left over—a tall order for most Premodern decks.
+            And even if they resolve removal on Opalescence in that gap, Decree just
+            returns as a plain, non-creature enchantment, still ready to counter their
+            next three plays.
         </p>
     </Card>
 
     <Card title="Board Protection & Stack Interactions" titleTag="h2">
         <p style="margin-top: 0;">
-            When confronting mass removal, your self-protection mechanics differ
-            significantly depending on whether the sweeper targets creatures or
-            enchantments:
+            How you protect your board against a sweeper depends on whether it
+            hits creatures or enchantments:
         </p>
         <ul style="padding-left: 1.25rem; margin-bottom: 0;">
             <li style="margin-bottom: 1rem;">
@@ -145,70 +139,62 @@ import { Card } from "webcoreui/astro";
                     href="#"
                     class="card-hover"
                     data-card-name="Wrath of God">Wrath of God</a
-                >, a single active <a
+                >, one <a
                     href="#"
                     class="card-hover"
                     data-card-name="Opalescence">Opalescence</a
-                > is sufficient. Because Opalescence does not animate itself,
-                Wrath threatens only your animated enchantments. Retain priority
-                to exile your own vulnerable team via <a
+                > is enough. It doesn't animate itself, so the only things Wrath
+                can hit are your animated enchantments. Hold priority and use <a
                     href="#"
                     class="card-hover"
                     data-card-name="Parallax Wave">Parallax Wave</a
-                >; when the sweeper resolves and destroys Wave, your exiled
-                permanents re-enter completely refreshed alongside the untouched
-                Opalescence.
+                > to exile your own team; when the sweeper resolves and kills Wave,
+                your exiled permanents come back untouched—and so does Opalescence.
             </li>
             <li style="margin-bottom: 0;">
                 <strong>Enchantment Sweepers (Tranquil Domain):</strong>
-                Surviving a global enchantment sweeper such as <a
+                To survive a mass enchantment sweeper like <a
                     href="#"
                     class="card-hover"
                     data-card-name="Tranquil Domain">Tranquil Domain</a
-                > strictly requires controlling <strong>two copies</strong> of <a
+                >, you need <strong>two copies</strong> of <a
                     href="#"
                     class="card-hover"
                     data-card-name="Opalescence">Opalescence</a
-                >. If you control only a single Opalescence and target it with
-                Wave to save it, its leaves-play transition instantly strips
-                Wave's creature status—terminating your ability to chain further
-                loop activations or protect the remaining board before Tranquil
-                Domain eradicates everything. With two copies of Opalescence on
-                the table, exiling one still leaves the second operational to
-                keep Wave animated throughout the flicker sequence. Because
-                assembling dual Opalescence instances purely to dodge a sweeper
-                is logistically demanding, your overriding tactical imperative
-                against green decks fielding Tranquil Domain is to proactively
-                lock out the spell via <a
+                >. With only one, exiling it with Wave to save it backfires—the
+                moment Opalescence leaves, Wave loses its creature status, so you
+                can't keep looping or protect the rest of your board before
+                Tranquil Domain wipes everything. With two Opalescence out, you
+                can exile one and the second keeps Wave animated through the
+                flicker. Since setting up two Opalescence just to dodge a sweeper
+                is a lot to ask, the better plan against green decks with Tranquil
+                Domain is to lock the spell out with <a
                     href="#"
                     class="card-hover"
                     data-card-name="Decree of Silence">Decree of Silence</a
-                > rather than relying on reactive Wave loops.
+                > rather than rely on reactive Wave loops.
             </li>
         </ul>
 
         <h3 style="margin-top: 2.5rem;">Stack Trick: Wave + Disenchant Exile</h3>
         <p style="margin-bottom: 0;">
-            Independent of Opalescence, you can engineer permanent creature
-            removal utilizing <a
+            You don't even need Opalescence to exile creatures permanently—<a
                 href="#"
                 class="card-hover"
                 data-card-name="Seal of Cleansing">Seal of Cleansing</a
-            > or sideboard <a
+            > or a sideboard <a
                 href="#"
                 class="card-hover"
                 data-card-name="Disenchant">Disenchant</a
-            > effects. Activate <a
+            > works too. Activate <a
                 href="#"
                 class="card-hover"
                 data-card-name="Parallax Wave">Parallax Wave</a
-            > to target up to five opposing creatures. Retaining priority with those
-            targeting activations on the stack, sacrifice your Seal (or cast Disenchant)
-            destroying your own Wave. As Wave exits the battlefield prior to exiling
-            anything, its leaves-play clause resolves immediately (returning zero
-            creatures). Finally, the original exile activations resolve, permanently
-            expelling those targets—a paramount defensive stabilization maneuver during
-            early turns.
+            > targeting up to five of their creatures. With those activations still on
+            the stack, crack your Seal (or cast Disenchant) to destroy your own Wave.
+            Wave leaves before it exiles anything, so its leaves-the-battlefield clause
+            returns nothing. Then the exile activations resolve and their creatures are
+            gone for good—a huge defensive play in the early turns.
         </p>
 
         <h3 style="margin-top: 2.5rem;">Attunement's Activation Cost Immunity</h3>
@@ -217,11 +203,10 @@ import { Card } from "webcoreui/astro";
                 href="#"
                 class="card-hover"
                 data-card-name="Attunement">Attunement</a
-            > explicitly states: "Return Attunement to its owner's hand: Draw three
-            cards, then discard four cards." Because bouncing the enchantment back
-            to your hand represents the mandatory activation <em>cost</em> (rather
-            than an effect residing on the stack), you can freely activate it in immediate
-            response to inbound removal like <a
+            > reads: "Return Attunement to its owner's hand: Draw three cards, then
+            discard four cards." Bouncing it to your hand is part of the <em>cost</em>,
+            not an effect on the stack, so you can activate it in response to removal
+            like <a
                 href="#"
                 class="card-hover"
                 data-card-name="Disenchant">Disenchant</a
@@ -229,9 +214,8 @@ import { Card } from "webcoreui/astro";
                 href="#"
                 class="card-hover"
                 data-card-name="Seal of Cleansing">Seal of Cleansing</a
-            >. Attunement immediately returns to safety in your
-            hand—invalidating their interaction spell completely while
-            guaranteeing full card-filtering velocity.
+            >. Attunement is back in your hand before their spell resolves—their removal
+            fizzles and you still get the full dig.
         </p>
     </Card>
 
@@ -298,7 +282,7 @@ import { Card } from "webcoreui/astro";
             >. This restriction remains completely asymmetrical because Tsabo's
             Web strictly targets lands possessing activated abilities that <em
                 >do not</em
-            > generate mana. All native non-basic filtering sources within our architecture
+            > generate mana. All of our non-basic filtering lands
             (<a href="#" class="card-hover" data-card-name="Skycloud Expanse"
                 >Skycloud Expanse</a
             >, <a href="#" class="card-hover" data-card-name="Adarkar Wastes"
@@ -311,7 +295,7 @@ import { Card } from "webcoreui/astro";
 
         <h3 style="margin-top: 2.5rem;">Frantic Search Mana Tricks</h3>
         <p>
-            Beyond its role as a high-velocity discard engine, the untap clause
+            On top of being a cheap way to churn through your deck, the untap clause
             within <a
                 href="#"
                 class="card-hover"
@@ -349,7 +333,7 @@ import { Card } from "webcoreui/astro";
                     data-card-name="Tangle Wire">Tangle Wire</a
                 > tap triggers, float all available mana across your targeted lands
                 in response. After the tap effects resolve and exhaust your board state,
-                immediately utilize that floating mana to cast <a
+                immediately use that floating mana to cast <a
                     href="#"
                     class="card-hover"
                     data-card-name="Frantic Search">Frantic Search</a

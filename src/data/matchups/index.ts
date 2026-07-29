@@ -15,7 +15,7 @@ export const matchups: MatchupMeta[] = [
         title: "Enchantress",
         badgeTheme: "success",
         badgeText: "Dominant",
-        subtitle: "Faster combo assembly & superior graveyard refueling",
+        subtitle: "We combo off faster and refuel from the graveyard better",
         cards: [
             { src: "/src/assets/cards/matchups/enchantress/argothian_enchantress.jpg", alt: "Argothian Enchantress" },
             { src: "/src/assets/cards/matchups/enchantress/enchantresss_presence.jpg", alt: "Enchantress's Presence" },
@@ -28,7 +28,7 @@ export const matchups: MatchupMeta[] = [
         title: "Elves",
         badgeTheme: "success",
         badgeText: "Dominant",
-        subtitle: "Overwhelming endgame combo lock & high-leverage removal",
+        subtitle: "Our endgame lock and removal outclass their creatures",
         cards: [
             { src: "/src/assets/cards/matchups/elves/priest_of_titania.jpg", alt: "Priest of Titania" },
             { src: "/src/assets/cards/matchups/elves/quirion_ranger.jpg", alt: "Quirion Ranger" },
@@ -41,7 +41,7 @@ export const matchups: MatchupMeta[] = [
         title: "Rock and Midrange",
         badgeTheme: "success",
         badgeText: "Dominant",
-        subtitle: "Massive card advantage engine overcomes one-for-one attrition",
+        subtitle: "Our card advantage buries their one-for-one trades",
         cards: [
             { src: "/src/assets/cards/matchups/rock_and_midrange/pernicious_deed.jpg", alt: "Pernicious Deed" },
             { src: "/src/assets/cards/matchups/rock_and_midrange/spiritmonger.jpg", alt: "Spiritmonger" },
@@ -54,7 +54,7 @@ export const matchups: MatchupMeta[] = [
         title: "Sligh",
         badgeTheme: "info",
         badgeText: "Favorable",
-        subtitle: "Superior survival architecture overcomes burn clocks & lock finishes",
+        subtitle: "We survive the burn clock and lock the game up",
         cards: [
             { src: "/src/assets/cards/matchups/sligh/jackal_pup.jpg", alt: "Jackal Pup" },
             { src: "/src/assets/cards/matchups/sligh/fireblast.jpg", alt: "Fireblast" },
@@ -67,7 +67,7 @@ export const matchups: MatchupMeta[] = [
         title: "Landstill",
         badgeTheme: "info",
         badgeText: "Favorable",
-        subtitle: "Overwhelming threat density exhausts reactive countermagic",
+        subtitle: "Too many threats for their counterspells to keep up with",
         cards: [
             { src: "/src/assets/cards/matchups/landstill/standstill.jpg", alt: "Standstill" },
             { src: "/src/assets/cards/matchups/landstill/mishras_factory.jpg", alt: "Mishra's Factory" },
@@ -80,7 +80,7 @@ export const matchups: MatchupMeta[] = [
         title: "Psychatog",
         badgeTheme: "info",
         badgeText: "Favorable",
-        subtitle: "High-leverage threat overload beats slow developmental control",
+        subtitle: "We flood the board with threats faster than they set up",
         cards: [
             { src: "/src/assets/cards/matchups/psychatog/psychatog.jpg", alt: "Psychatog" },
             { src: "/src/assets/cards/matchups/psychatog/upheaval.jpg", alt: "Upheaval" },
@@ -93,7 +93,7 @@ export const matchups: MatchupMeta[] = [
         title: "BW Control",
         badgeTheme: "info",
         badgeText: "Favorable",
-        subtitle: "Opposing discard actively accelerates our Replenish graveyard setup",
+        subtitle: "Their discard just fills our graveyard for Replenish",
         cards: [
             { src: "/src/assets/cards/matchups/bw_control/vindicate.jpg", alt: "Vindicate" },
             { src: "/src/assets/cards/matchups/bw_control/gerrards_verdict.jpg", alt: "Gerrard's Verdict" },
@@ -106,7 +106,7 @@ export const matchups: MatchupMeta[] = [
         title: "RG Ponza",
         badgeTheme: "info",
         badgeText: "Favorable",
-        subtitle: "Basic mana discipline & post-board permanent locks defeat land destruction",
+        subtitle: "Fetch basics and lock them out after board to beat land destruction",
         cards: [
             { src: "/src/assets/cards/matchups/rg_ponza/stone_rain.jpg", alt: "Stone Rain" },
             { src: "/src/assets/cards/matchups/rg_ponza/pillage.jpg", alt: "Pillage" },
@@ -119,7 +119,7 @@ export const matchups: MatchupMeta[] = [
         title: "Moneyball (Black Aggro)",
         badgeTheme: "warning",
         badgeText: "Competitive",
-        subtitle: "Volatile early disruption meets our defensive Attunement resource vault",
+        subtitle: "Their early disruption runs into our Attunement engine",
         cards: [
             { src: "/src/assets/cards/matchups/moneyball/wretched_anurid.jpg", alt: "Wretched Anurid" },
             { src: "/src/assets/cards/matchups/moneyball/grinning_demon.jpg", alt: "Grinning Demon" },
@@ -132,7 +132,7 @@ export const matchups: MatchupMeta[] = [
         title: "Goblins",
         badgeTheme: "warning",
         badgeText: "Competitive",
-        subtitle: "Explosive dual-axis aggression demands surviving the opening three turns",
+        subtitle: "Survive their explosive first three turns and you win",
         cards: [
             { src: "/src/assets/cards/matchups/goblins/goblin_lackey.jpg", alt: "Goblin Lackey" },
             { src: "/src/assets/cards/matchups/goblins/goblin_piledriver.jpg", alt: "Goblin Piledriver" },
@@ -145,7 +145,7 @@ export const matchups: MatchupMeta[] = [
         title: "Terrageddon / Quiet Spec Oath",
         badgeTheme: "warning",
         badgeText: "Competitive",
-        subtitle: "Land destruction & aggressive beaters tested against mana discipline",
+        subtitle: "Careful mana beats their land destruction and beaters",
         cards: [
             { src: "/src/assets/cards/matchups/terrageddon/terravore.jpg", alt: "Terravore" },
             { src: "/src/assets/cards/matchups/terrageddon/armageddon.jpg", alt: "Armageddon" },
@@ -158,7 +158,7 @@ export const matchups: MatchupMeta[] = [
         title: "Stiflenought",
         badgeTheme: "warning",
         badgeText: "Competitive",
-        subtitle: "Configuration-dependent speed demands reactive control transition",
+        subtitle: "How fast they are depends on their build—play the control role",
         cards: [
             { src: "/src/assets/cards/matchups/stiflenought/phyrexian_dreadnought.jpg", alt: "Phyrexian Dreadnought" },
             { src: "/src/assets/cards/matchups/stiflenought/stifle.jpg", alt: "Stifle" },
@@ -171,7 +171,7 @@ export const matchups: MatchupMeta[] = [
         title: "Mirror",
         badgeTheme: "warning",
         badgeText: "Competitive",
-        subtitle: "High-velocity setup race governed by stack discipline and Abeyance",
+        subtitle: "A fast setup race decided by stack discipline and Abeyance",
         cards: [
             { src: "/src/assets/cards/matchups/mirror/replenish.jpg", alt: "Replenish" },
             { src: "/src/assets/cards/matchups/mirror/opalescence.jpg", alt: "Opalescence" },
@@ -184,7 +184,7 @@ export const matchups: MatchupMeta[] = [
         title: "Stasis",
         badgeTheme: "warning",
         badgeText: "Competitive",
-        subtitle: "Resource paralysis dismantled by instant-speed end-step escape hatches",
+        subtitle: "Break their lock at end step with instant-speed removal",
         cards: [
             { src: "/src/assets/cards/matchups/stasis/stasis.jpg", alt: "Stasis" },
             { src: "/src/assets/cards/matchups/stasis/black_vise.jpg", alt: "Black Vise" },
@@ -197,7 +197,7 @@ export const matchups: MatchupMeta[] = [
         title: "Devourer",
         badgeTheme: "alert",
         badgeText: "Difficult",
-        subtitle: "Blisteringly fast graveyard combo demands immediate Meddling Mage & Seal reactivity",
+        subtitle: "A blazing-fast combo—lean on Meddling Mage and Seal to keep up",
         cards: [
             { src: "/src/assets/cards/matchups/devourer/phyrexian_devourer.jpg", alt: "Phyrexian Devourer" },
             { src: "/src/assets/cards/matchups/devourer/sutured_ghoul.jpg", alt: "Sutured Ghoul" },
@@ -210,7 +210,7 @@ export const matchups: MatchupMeta[] = [
         title: "Aggro with Armageddon",
         badgeTheme: "alert",
         badgeText: "Difficult",
-        subtitle: "Dual-axis hatebears & mana denial neutralized by basic land fetch discipline",
+        subtitle: "Fetch basics to blunt their hatebears and Armageddon",
         cards: [
             { src: "/src/assets/cards/matchups/terrageddon/armageddon.jpg", alt: "Armageddon" },
             { src: "/src/assets/cards/matchups/aggro_with_armageddon/mother_of_runes.jpg", alt: "Mother of Runes" },
