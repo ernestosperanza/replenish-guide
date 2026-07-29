@@ -1,5 +1,12 @@
 ---
 import { Select } from "webcoreui/astro";
+import { matchups } from "@data/matchups/index";
+
+// Derive the archetype dropdown from the matchup data (single source of truth)
+const archetypeItems = [
+    { name: "View All", value: "all", selected: true },
+    ...matchups.map((m) => ({ name: m.title, value: m.id })),
+];
 ---
 
 <div class="matchup-filter-container">
@@ -25,45 +32,7 @@ import { Select } from "webcoreui/astro";
         <Select
             name="matchup-filter"
             placeholder="Search Archetype..."
-            itemGroups={[
-                {
-                    items: [
-                        {
-                            name: "View All",
-                            value: "all",
-                            selected: true,
-                        },
-                        { name: "Enchantress", value: "enchantress" },
-                        { name: "Elves", value: "elves" },
-                        {
-                            name: "Rock and Midrange",
-                            value: "rock_and_midrange",
-                        },
-                        { name: "Sligh", value: "sligh" },
-                        { name: "Landstill", value: "landstill" },
-                        { name: "Psychatog", value: "psychatog" },
-                        { name: "BW Control", value: "bw_control" },
-                        { name: "RG Ponza", value: "rg_ponza" },
-                        {
-                            name: "Moneyball (Black Aggro)",
-                            value: "moneyball",
-                        },
-                        { name: "Goblins", value: "goblins" },
-                        {
-                            name: "Terrageddon / Quiet Spec Oath",
-                            value: "terrageddon",
-                        },
-                        { name: "Stiflenought", value: "stiflenought" },
-                        { name: "Mirror", value: "mirror" },
-                        { name: "Stasis", value: "stasis" },
-                        { name: "Devourer", value: "devourer" },
-                        {
-                            name: "Aggro with Armageddon",
-                            value: "aggro_with_armageddon",
-                        },
-                    ],
-                },
-            ]}
+            itemGroups={[{ items: archetypeItems }]}
         />
     </div>
 </div>

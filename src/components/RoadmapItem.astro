@@ -1,0 +1,32 @@
+---
+import { Badge } from "webcoreui/astro";
+
+interface Props {
+    status: string;
+    title: string;
+}
+
+const { status, title } = Astro.props;
+---
+
+<li class="roadmap-item">
+    <div class="roadmap-item__badge">
+        <Badge theme="secondary" small={true}>{status}</Badge>
+    </div>
+    <div>
+        <strong class="text-highlight">{title}</strong>
+        <slot />
+    </div>
+</li>
+
+<style>
+    .roadmap-item {
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-start;
+    }
+    .roadmap-item__badge {
+        flex-shrink: 0;
+        margin-top: 0.15rem;
+    }
+</style>

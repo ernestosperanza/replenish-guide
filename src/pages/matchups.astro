@@ -2,11 +2,10 @@
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import CardGrid from "@components/CardGrid.astro";
-import { Select, Badge, Card } from "webcoreui/astro";
 import MatchupCard from "@components/MatchupCard.astro";
 import MatchupFilter from "@components/MatchupFilter.astro";
 
-import { matchups } from "@data/matchups/index";
+import { matchups, CATEGORY_BADGE } from "@data/matchups/index";
 
 // Static imports for each matchup's prose content
 import EnchantressProse from "@data/matchups/enchantress.astro";
@@ -72,8 +71,8 @@ const proseComponents: Record<string, any> = {
                         matchup={m.id}
                         category={m.category}
                         title={m.title}
-                        badgeTheme={m.badgeTheme}
-                        badgeText={m.badgeText}
+                        badgeTheme={CATEGORY_BADGE[m.category].theme}
+                        badgeText={CATEGORY_BADGE[m.category].text}
                         subtitle={m.subtitle}
                         isOpen={i === 0}
                     >

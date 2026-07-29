@@ -2,19 +2,26 @@ export interface MatchupMeta {
     id: string;
     category: "dominant" | "favorable" | "competitive" | "difficult";
     title: string;
-    badgeTheme: "success" | "info" | "warning" | "alert";
-    badgeText: string;
     subtitle: string;
     cards: { src: string; alt: string }[];
 }
+
+// Badge theme + label are fully determined by category (single source of truth)
+export const CATEGORY_BADGE: Record<
+    MatchupMeta["category"],
+    { theme: "success" | "info" | "warning" | "alert"; text: string }
+> = {
+    dominant: { theme: "success", text: "Dominant" },
+    favorable: { theme: "info", text: "Favorable" },
+    competitive: { theme: "warning", text: "Competitive" },
+    difficult: { theme: "alert", text: "Difficult" },
+};
 
 export const matchups: MatchupMeta[] = [
     {
         id: "enchantress",
         category: "dominant",
         title: "Enchantress",
-        badgeTheme: "success",
-        badgeText: "Dominant",
         subtitle: "We combo off faster and refuel from the graveyard better",
         cards: [
             { src: "/src/assets/cards/matchups/enchantress/argothian_enchantress.jpg", alt: "Argothian Enchantress" },
@@ -26,8 +33,6 @@ export const matchups: MatchupMeta[] = [
         id: "elves",
         category: "dominant",
         title: "Elves",
-        badgeTheme: "success",
-        badgeText: "Dominant",
         subtitle: "Our endgame lock and removal outclass their creatures",
         cards: [
             { src: "/src/assets/cards/matchups/elves/priest_of_titania.jpg", alt: "Priest of Titania" },
@@ -39,8 +44,6 @@ export const matchups: MatchupMeta[] = [
         id: "rock_and_midrange",
         category: "dominant",
         title: "Rock and Midrange",
-        badgeTheme: "success",
-        badgeText: "Dominant",
         subtitle: "Our card advantage buries their one-for-one trades",
         cards: [
             { src: "/src/assets/cards/matchups/rock_and_midrange/pernicious_deed.jpg", alt: "Pernicious Deed" },
@@ -52,8 +55,6 @@ export const matchups: MatchupMeta[] = [
         id: "sligh",
         category: "favorable",
         title: "Sligh",
-        badgeTheme: "info",
-        badgeText: "Favorable",
         subtitle: "We survive the burn clock and lock the game up",
         cards: [
             { src: "/src/assets/cards/matchups/sligh/jackal_pup.jpg", alt: "Jackal Pup" },
@@ -65,8 +66,6 @@ export const matchups: MatchupMeta[] = [
         id: "landstill",
         category: "favorable",
         title: "Landstill",
-        badgeTheme: "info",
-        badgeText: "Favorable",
         subtitle: "Too many threats for their counterspells to keep up with",
         cards: [
             { src: "/src/assets/cards/matchups/landstill/standstill.jpg", alt: "Standstill" },
@@ -78,8 +77,6 @@ export const matchups: MatchupMeta[] = [
         id: "psychatog",
         category: "favorable",
         title: "Psychatog",
-        badgeTheme: "info",
-        badgeText: "Favorable",
         subtitle: "We flood the board with threats faster than they set up",
         cards: [
             { src: "/src/assets/cards/matchups/psychatog/psychatog.jpg", alt: "Psychatog" },
@@ -91,8 +88,6 @@ export const matchups: MatchupMeta[] = [
         id: "bw_control",
         category: "favorable",
         title: "BW Control",
-        badgeTheme: "info",
-        badgeText: "Favorable",
         subtitle: "Their discard just fills our graveyard for Replenish",
         cards: [
             { src: "/src/assets/cards/matchups/bw_control/vindicate.jpg", alt: "Vindicate" },
@@ -104,8 +99,6 @@ export const matchups: MatchupMeta[] = [
         id: "rg_ponza",
         category: "favorable",
         title: "RG Ponza",
-        badgeTheme: "info",
-        badgeText: "Favorable",
         subtitle: "Fetch basics and lock them out after board to beat land destruction",
         cards: [
             { src: "/src/assets/cards/matchups/rg_ponza/stone_rain.jpg", alt: "Stone Rain" },
@@ -117,8 +110,6 @@ export const matchups: MatchupMeta[] = [
         id: "moneyball",
         category: "competitive",
         title: "Moneyball (Black Aggro)",
-        badgeTheme: "warning",
-        badgeText: "Competitive",
         subtitle: "Their early disruption runs into our Attunement engine",
         cards: [
             { src: "/src/assets/cards/matchups/moneyball/wretched_anurid.jpg", alt: "Wretched Anurid" },
@@ -130,8 +121,6 @@ export const matchups: MatchupMeta[] = [
         id: "goblins",
         category: "competitive",
         title: "Goblins",
-        badgeTheme: "warning",
-        badgeText: "Competitive",
         subtitle: "Survive their explosive first three turns and you win",
         cards: [
             { src: "/src/assets/cards/matchups/goblins/goblin_lackey.jpg", alt: "Goblin Lackey" },
@@ -143,8 +132,6 @@ export const matchups: MatchupMeta[] = [
         id: "terrageddon",
         category: "competitive",
         title: "Terrageddon / Quiet Spec Oath",
-        badgeTheme: "warning",
-        badgeText: "Competitive",
         subtitle: "Careful mana beats their land destruction and beaters",
         cards: [
             { src: "/src/assets/cards/matchups/terrageddon/terravore.jpg", alt: "Terravore" },
@@ -156,8 +143,6 @@ export const matchups: MatchupMeta[] = [
         id: "stiflenought",
         category: "competitive",
         title: "Stiflenought",
-        badgeTheme: "warning",
-        badgeText: "Competitive",
         subtitle: "How fast they are depends on their build—play the control role",
         cards: [
             { src: "/src/assets/cards/matchups/stiflenought/phyrexian_dreadnought.jpg", alt: "Phyrexian Dreadnought" },
@@ -169,8 +154,6 @@ export const matchups: MatchupMeta[] = [
         id: "mirror",
         category: "competitive",
         title: "Mirror",
-        badgeTheme: "warning",
-        badgeText: "Competitive",
         subtitle: "A fast setup race decided by stack discipline and Abeyance",
         cards: [
             { src: "/src/assets/cards/matchups/mirror/replenish.jpg", alt: "Replenish" },
@@ -182,8 +165,6 @@ export const matchups: MatchupMeta[] = [
         id: "stasis",
         category: "competitive",
         title: "Stasis",
-        badgeTheme: "warning",
-        badgeText: "Competitive",
         subtitle: "Break their lock at end step with instant-speed removal",
         cards: [
             { src: "/src/assets/cards/matchups/stasis/stasis.jpg", alt: "Stasis" },
@@ -195,8 +176,6 @@ export const matchups: MatchupMeta[] = [
         id: "devourer",
         category: "difficult",
         title: "Devourer",
-        badgeTheme: "alert",
-        badgeText: "Difficult",
         subtitle: "A blazing-fast combo—lean on Meddling Mage and Seal to keep up",
         cards: [
             { src: "/src/assets/cards/matchups/devourer/phyrexian_devourer.jpg", alt: "Phyrexian Devourer" },
@@ -208,8 +187,6 @@ export const matchups: MatchupMeta[] = [
         id: "aggro_with_armageddon",
         category: "difficult",
         title: "Aggro with Armageddon",
-        badgeTheme: "alert",
-        badgeText: "Difficult",
         subtitle: "Fetch basics to blunt their hatebears and Armageddon",
         cards: [
             { src: "/src/assets/cards/matchups/terrageddon/armageddon.jpg", alt: "Armageddon" },

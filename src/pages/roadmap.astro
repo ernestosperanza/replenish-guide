@@ -1,7 +1,8 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import { Card, Badge } from "webcoreui/astro";
+import { Card } from "webcoreui/astro";
+import RoadmapItem from "@components/RoadmapItem.astro";
 
 ---
 
@@ -28,65 +29,29 @@ import { Card, Badge } from "webcoreui/astro";
             Here's what we are currently working on or planning to add to the site in the near future. If you want to tackle any of these, let us know!
         </p>
         <ul style="padding-left: 0; list-style: none; margin-bottom: 0; display: flex; flex-direction: column; gap: 1rem;">
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <div style="flex-shrink: 0; margin-top: 0.15rem;">
-                    <Badge theme="secondary" small={true}>To Do</Badge>
-                </div>
-                <div>
-                    <strong class="text-highlight">Old Border Images:</strong>
-                    Replace all card tooltips and banners to ensure every single card uses its classic Premodern old border artwork.
-                </div>
-            </li>
+            <RoadmapItem status="To Do" title="Old Border Images:">
+                Replace all card tooltips and banners to ensure every single card uses its classic Premodern old border artwork.
+            </RoadmapItem>
             
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <div style="flex-shrink: 0; margin-top: 0.15rem;">
-                    <Badge theme="secondary" small={true}>To Do</Badge>
-                </div>
-                <div>
-                    <strong class="text-highlight">Spicy & Bizarre Decklists:</strong>
-                    Add a new section dedicated strictly to experimental variations, strange brews, and off-meta lists that run wild ideas.
-                </div>
-            </li>
+            <RoadmapItem status="To Do" title="Spicy & Bizarre Decklists:">
+                Add a new section dedicated strictly to experimental variations, strange brews, and off-meta lists that run wild ideas.
+            </RoadmapItem>
             
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <div style="flex-shrink: 0; margin-top: 0.15rem;">
-                    <Badge theme="secondary" small={true}>To Do</Badge>
-                </div>
-                <div>
-                    <strong class="text-highlight">SEO Revision:</strong>
-                    Optimize metadata, tags, and structure so the guide is easier to find for players searching for Premodern content.
-                </div>
-            </li>
+            <RoadmapItem status="To Do" title="SEO Revision:">
+                Optimize metadata, tags, and structure so the guide is easier to find for players searching for Premodern content.
+            </RoadmapItem>
             
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <div style="flex-shrink: 0; margin-top: 0.15rem;">
-                    <Badge theme="secondary" small={true}>To Do</Badge>
-                </div>
-                <div>
-                    <strong class="text-highlight">More Resources:</strong>
-                    Expand the resources section with more articles, videos, and external links related to the archetype.
-                </div>
-            </li>
+            <RoadmapItem status="To Do" title="More Resources:">
+                Expand the resources section with more articles, videos, and external links related to the archetype.
+            </RoadmapItem>
 
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <div style="flex-shrink: 0; margin-top: 0.15rem;">
-                    <Badge theme="secondary" small={true}>In Planning</Badge>
-                </div>
-                <div>
-                    <strong class="text-highlight">Mulligan Simulator:</strong>
-                    An in-browser mini app to generate random opening hands so you can practice your keep/mulligan decisions against specific matchups.
-                </div>
-            </li>
+            <RoadmapItem status="In Planning" title="Mulligan Simulator:">
+                An in-browser mini app to generate random opening hands so you can practice your keep/mulligan decisions against specific matchups.
+            </RoadmapItem>
             
-            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <div style="flex-shrink: 0; margin-top: 0.15rem;">
-                    <Badge theme="secondary" small={true}>Open for Contribution</Badge>
-                </div>
-                <div>
-                    <strong class="text-highlight">Tournament Cheat Sheet:</strong>
-                    A condensed, printable one-pager summarizing the most important sideboard In/Out plans and Intuition piles to take to your next event.
-                </div>
-            </li>
+            <RoadmapItem status="Open for Contribution" title="Tournament Cheat Sheet:">
+                A condensed, printable one-pager summarizing the most important sideboard In/Out plans and Intuition piles to take to your next event.
+            </RoadmapItem>
         </ul>
     </Card>
 
