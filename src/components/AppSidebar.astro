@@ -243,6 +243,16 @@ const sidebarGroups = SIDEBAR_GROUPS.map((group) => ({
         }
     }
 
+    /* Tablets: narrow the sidebar so the reading column isn't cramped */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .sidebar-wrapper:not(.collapsed),
+        .sidebar-header-bar,
+        .sidebar-content {
+            width: 216px;
+            min-width: 216px;
+        }
+    }
+
     /* Responsive adjustments for Mobile & Small Tablets */
     @media (max-width: 768px) {
         .sidebar-wrapper {
