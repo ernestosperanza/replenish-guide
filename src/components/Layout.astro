@@ -3,6 +3,7 @@ import Header from "./Header.astro";
 import AppSidebar from "./AppSidebar.astro";
 import Pagination from "./Pagination.astro";
 import Footer from "./Footer.astro";
+import DecklistTooltip from "./DecklistTooltip.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import Analytics from "@vercel/analytics/astro";
 
@@ -93,6 +94,7 @@ const schema = {
                 </div>
             </main>
         </div>
+        <DecklistTooltip />
         <SpeedInsights />
         <Analytics />
     </body>

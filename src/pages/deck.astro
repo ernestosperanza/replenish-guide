@@ -3,7 +3,6 @@ import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
 import { Grid, Card, Badge, Select } from "webcoreui/astro";
 import DeckSection from "@components/DeckSection.astro";
-import DecklistTooltip from "@components/DecklistTooltip.astro";
 import CopyDeckButton from "@components/CopyDeckButton.astro";
 import { modernDecklists, getCopyString } from "@data/decklists";
 ---
@@ -104,7 +103,6 @@ import { modernDecklists, getCopyString } from "@data/decklists";
             ))
         }
     </div>
-    <DecklistTooltip />
 
     <style>
         details > summary::-webkit-details-marker {
