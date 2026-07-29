@@ -158,47 +158,81 @@
             return fallbackUrl;
         };
 
-        const handleMouseEnter = async (e: MouseEvent) => {
-            const target = e.currentTarget as HTMLElement;
-            const cardName = target.getAttribute('data-card-name');
-            if (cardName) {
-                tooltip.style.display = 'block';
-                tooltipImg.src = ''; // Clear previous image
-                
-                const url = await fetchOldestImageUrl(cardName);
-                if (tooltip.style.display === 'block') {
-                    tooltipImg.src = url!;
-                }
+        const TOOLTIP_W = 250;
+        const TOOLTIP_H = 350;
+        let activeCard: HTMLElement | null = null;
+        let lastPointerType = '';
+
+        const positionAt = (clientX: number, clientY: number) => {
+            const offset = 15;
+            let x = clientX + offset;
+            let y = clientY + offset;
+            if (x + TOOLTIP_W > window.innerWidth) x = clientX - TOOLTIP_W - offset;
+            if (y + TOOLTIP_H > window.innerHeight) y = clientY - TOOLTIP_H - offset;
+            tooltip.style.left = `${Math.max(8, x)}px`;
+            tooltip.style.top = `${Math.max(8, y)}px`;
+        };
+
+        // Anchor the tooltip to an element's box (used for keyboard focus & touch taps)
+        const positionNear = (el: HTMLElement) => {
+            const r = el.getBoundingClientRect();
+            positionAt(r.left, r.bottom);
+        };
+
+        const showFor = async (el: HTMLElement) => {
+            const cardName = el.getAttribute('data-card-name');
+            if (!cardName) return;
+            activeCard = el;
+            tooltip.style.display = 'block';
+            tooltipImg.src = ''; // Clear previous image
+            const url = await fetchOldestImageUrl(cardName);
+            // Guard against races: only paint if this card is still the active one
+            if (tooltip.style.display === 'block' && activeCard === el) {
+                tooltipImg.src = url!;
             }
         };
 
-        const handleMouseMove = (e: MouseEvent) => {
-            const xOffset = 15;
-            const yOffset = 15;
-            const tooltipWidth = 250;
-            const tooltipHeight = 350;
-            
-            let x = e.clientX + xOffset;
-            let y = e.clientY + yOffset;
-
-            if (x + tooltipWidth > window.innerWidth) {
-                x = e.clientX - tooltipWidth - xOffset;
-            }
-            if (y + tooltipHeight > window.innerHeight) {
-                y = e.clientY - tooltipHeight - yOffset;
-            }
-
-            tooltip.style.left = `${x}px`;
-            tooltip.style.top = `${y}px`;
-        };
-
-        const handleMouseLeave = () => {
+        const hide = () => {
             tooltip.style.display = 'none';
             tooltipImg.src = '';
+            activeCard = null;
         };
 
-        const hoverItems = document.querySelectorAll('.card-hover');
-        
+        // Mouse (desktop hover)
+        const handleMouseEnter = (e: MouseEvent) => {
+            positionAt(e.clientX, e.clientY);
+            showFor(e.currentTarget as HTMLElement);
+        };
+        const handleMouseMove = (e: MouseEvent) => positionAt(e.clientX, e.clientY);
+        const handleMouseLeave = () => hide();
+
+        // Keyboard (focus/blur). Skip when the focus came from a touch tap —
+        // that case is handled by the click toggle below.
+        const handleFocus = (e: FocusEvent) => {
+            if (lastPointerType === 'touch') return;
+            const el = e.currentTarget as HTMLElement;
+            showFor(el);
+            positionNear(el);
+        };
+        const handleBlur = () => hide();
+
+        // Touch / click. Always prevent the "#" href from scrolling to top;
+        // on touch, a tap toggles the preview open/closed.
+        const handlePointerDown = (e: PointerEvent) => { lastPointerType = e.pointerType; };
+        const handleClick = (e: MouseEvent) => {
+            e.preventDefault();
+            if (lastPointerType !== 'touch') return;
+            const el = e.currentTarget as HTMLElement;
+            if (activeCard === el && tooltip.style.display === 'block') {
+                hide();
+            } else {
+                showFor(el);
+                positionNear(el);
+            }
+        };
+
+        const hoverItems = document.querySelectorAll<HTMLElement>('.card-hover');
+
         // Use IntersectionObserver to lazy load card images to prevent Scryfall rate limits
         const observer = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
@@ -216,9 +250,26 @@
             item.addEventListener('mouseenter', handleMouseEnter);
             item.addEventListener('mousemove', handleMouseMove);
             item.addEventListener('mouseleave', handleMouseLeave);
-            
+            item.addEventListener('focus', handleFocus);
+            item.addEventListener('blur', handleBlur);
+            item.addEventListener('pointerdown', handlePointerDown);
+            item.addEventListener('click', handleClick);
+
             observer.observe(item);
         });
+
+        // Close on Escape (bound once; survives Astro view transitions)
+        if (!(window as any).__cardTooltipEscBound) {
+            (window as any).__cardTooltipEscBound = true;
+            document.addEventListener('keydown', (e) => {
+                if (e.key !== 'Escape') return;
+                const t = document.getElementById('decklist-tooltip');
+                const img = document.getElementById('decklist-tooltip-img') as HTMLImageElement | null;
+                if (t) t.style.display = 'none';
+                if (img) img.src = '';
+                (document.activeElement as HTMLElement | null)?.blur();
+            });
+        }
     };
 
     // Run immediately since Astro module scripts execute deferred (after DOM parsing)
