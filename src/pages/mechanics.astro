@@ -19,9 +19,9 @@ import { Card } from "webcoreui/astro";
 
     <Card title="The Opal-Wave Permanent Exile Engine" titleTag="h2">
         <p class="mt-0">
-            With <a href="#" class="card-hover" data-card-name="Opalescence"
+            With <a role="button" tabindex="0" class="card-hover" data-card-name="Opalescence"
                 >Opalescence</a
-            > and <a href="#" class="card-hover" data-card-name="Parallax Wave"
+            > and <a role="button" tabindex="0" class="card-hover" data-card-name="Parallax Wave"
                 >Parallax Wave</a
             > both out, Wave is a 4/4 that can target itself. Hold priority and stack
             up several exile activations on your opponent's creatures, then spend Wave's
@@ -40,21 +40,21 @@ import { Card } from "webcoreui/astro";
         <h3 style="margin-top: 2.5rem;">Exiling Opposing Enchantments</h3>
         <p class="mb-0">
             Because <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Opalescence">Opalescence</a
             > animates <em>all</em> non-Aura enchantments on the battlefield, your
             opponent's enchantments become creatures too—and creatures are targetable.
             So you can use the same Wave loop to permanently exile problem permanents
             like <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Survival of the Fittest"
                 >Survival of the Fittest</a
-            >, <a href="#" class="card-hover" data-card-name="Sylvan Library"
+            >, <a role="button" tabindex="0" class="card-hover" data-card-name="Sylvan Library"
                 >Sylvan Library</a
             >, or an opposing <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Seal of Cleansing">Seal of Cleansing</a
             >.
@@ -65,7 +65,7 @@ import { Card } from "webcoreui/astro";
         <h3 class="mt-0">Parallax Wave Combat Sequencing</h3>
         <p>
             A mechanical consequence of the permanent exile loop is that <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Parallax Wave">Parallax Wave</a
             > comes back as a new permanent, so it has summoning sickness and can't
@@ -73,10 +73,10 @@ import { Card } from "webcoreui/astro";
             combat, swing with the whole team (including Wave for 4), and run the
             permanent-exile loop in your second main phase. The exception is creatures
             with nasty enter-the-battlefield triggers (like <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Goblin Ringleader">Goblin Ringleader</a
-            > or <a href="#" class="card-hover" data-card-name="Bone Shredder"
+            > or <a role="button" tabindex="0" class="card-hover" data-card-name="Bone Shredder"
                 >Bone Shredder</a
             >): temporary exile lets them come back and re-trigger, so exile those
             permanently before combat instead.
@@ -85,21 +85,21 @@ import { Card } from "webcoreui/astro";
         <h3 style="margin-top: 2.5rem;">Opalescence & Post-Replenish Sickness</h3>
         <p class="mb-0">
             A common mistake for new pilots is thinking a resolved <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Replenish">Replenish</a
             > means you can swing for lethal that turn. <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Opalescence">Opalescence</a
             > turns the returned enchantments into creatures, but anything that entered
             this turn has summoning sickness and can't attack. So you usually need to
             lock the board down first with <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Parallax Wave">Parallax Wave</a
             > and <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Decree of Silence">Decree of Silence</a
             >, keep yourself safe for a full turn, and swing for the kill after.
@@ -109,12 +109,12 @@ import { Card } from "webcoreui/astro";
     <Card title="The Decree of Silence Lock" titleTag="h2">
         <p class="m-0">
             When <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Decree of Silence">Decree of Silence</a
             > is about to be sacrificed after its third counter, respond by activating
             an animated <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Parallax Wave">Parallax Wave</a
             > targeting the Decree. Run the standard flicker loop and Decree comes back
@@ -137,16 +137,16 @@ import { Card } from "webcoreui/astro";
             <li style="margin-bottom: 1rem;">
                 <strong>Creature Sweepers (Wrath of God):</strong> Against a
                 creature wipe like <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Wrath of God">Wrath of God</a
                 >, one <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Opalescence">Opalescence</a
                 > is enough. It doesn't animate itself, so the only things Wrath
                 can hit are your animated enchantments. Hold priority and use <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Parallax Wave">Parallax Wave</a
                 > to exile your own team; when the sweeper resolves and kills Wave,
@@ -155,11 +155,11 @@ import { Card } from "webcoreui/astro";
             <li class="mb-0">
                 <strong>Enchantment Sweepers (Tranquil Domain):</strong>
                 To survive a mass enchantment sweeper like <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Tranquil Domain">Tranquil Domain</a
                 >, you need <strong>two copies</strong> of <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Opalescence">Opalescence</a
                 >. With only one, exiling it with Wave to save it backfires—the
@@ -170,7 +170,7 @@ import { Card } from "webcoreui/astro";
                 flicker. Since setting up two Opalescence just to dodge a sweeper
                 is a lot to ask, the better plan against green decks with Tranquil
                 Domain is to lock the spell out with <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Decree of Silence">Decree of Silence</a
                 > rather than rely on reactive Wave loops.
@@ -180,15 +180,15 @@ import { Card } from "webcoreui/astro";
         <h3 style="margin-top: 2.5rem;">Stack Trick: Wave + Disenchant Exile</h3>
         <p class="mb-0">
             You don't even need Opalescence to exile creatures permanently—<a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Seal of Cleansing">Seal of Cleansing</a
             > or a sideboard <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Disenchant">Disenchant</a
             > works too. Activate <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Parallax Wave">Parallax Wave</a
             > targeting up to five of their creatures. With those activations still on
@@ -201,18 +201,18 @@ import { Card } from "webcoreui/astro";
         <h3 style="margin-top: 2.5rem;">Attunement's Activation Cost Immunity</h3>
         <p class="mb-0">
             The activation syntax of <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Attunement">Attunement</a
             > reads: "Return Attunement to its owner's hand: Draw three cards, then
             discard four cards." Bouncing it to your hand is part of the <em>cost</em>,
             not an effect on the stack, so you can activate it in response to removal
             like <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Disenchant">Disenchant</a
             > or an opposing <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Seal of Cleansing">Seal of Cleansing</a
             >. Attunement is back in your hand before their spell resolves—their removal
@@ -223,13 +223,13 @@ import { Card } from "webcoreui/astro";
     <Card title="Post-Sideboard Creature Synergies" titleTag="h2">
         <p class="mt-0">
             Beyond clearing adversarial boards, <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Parallax Wave">Parallax Wave</a
             > exhibits profound synergy with your own creature packages, particularly
             post-sideboard. <em
                 >Note: These maneuvers rely on active <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Opalescence">Opalescence</a
                 > and Wave presence to execute immediate loop flickers.</em
@@ -238,12 +238,12 @@ import { Card } from "webcoreui/astro";
         <ul class="pl-md mb-0">
             <li style="margin-bottom: 1rem;">
                 <strong>Flipping Exalted Angel for Free:</strong> Deploying <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Exalted Angel">Exalted Angel</a
                 > face-down via morph for three colorless mana permits targeting it
                 with <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Parallax Wave">Parallax Wave</a
                 >. Executing an Opal-Wave flicker immediately returns the Angel
@@ -255,7 +255,7 @@ import { Card } from "webcoreui/astro";
                 <strong>Resetting Meddling Mage:</strong> If an opponent reveals alternative
                 threat avenues or circumvents your primary named restriction, target
                 your own <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Meddling Mage">Meddling Mage</a
                 > with Wave before initiating an immediate flicker loop. Upon re-entering,
@@ -269,26 +269,26 @@ import { Card } from "webcoreui/astro";
         <h3 class="mt-0">Asymmetrical Tsabo's Web</h3>
         <p>
             Competitive Replenish relies on <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Tsabo's Web">Tsabo's Web</a
             > to paralyze disruptive opposing lands including <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Rishadan Port">Rishadan Port</a
-            >, <a href="#" class="card-hover" data-card-name="Wasteland"
+            >, <a role="button" tabindex="0" class="card-hover" data-card-name="Wasteland"
                 >Wasteland</a
-            >, and <a href="#" class="card-hover" data-card-name="Dust Bowl"
+            >, and <a role="button" tabindex="0" class="card-hover" data-card-name="Dust Bowl"
                 >Dust Bowl</a
             >. This restriction remains completely asymmetrical because Tsabo's
             Web strictly targets lands possessing activated abilities that <em
                 >do not</em
             > generate mana. All of our non-basic filtering lands
-            (<a href="#" class="card-hover" data-card-name="Skycloud Expanse"
+            (<a role="button" tabindex="0" class="card-hover" data-card-name="Skycloud Expanse"
                 >Skycloud Expanse</a
-            >, <a href="#" class="card-hover" data-card-name="Adarkar Wastes"
+            >, <a role="button" tabindex="0" class="card-hover" data-card-name="Adarkar Wastes"
                 >Adarkar Wastes</a
-            >, <a href="#" class="card-hover" data-card-name="Ancient Tomb"
+            >, <a role="button" tabindex="0" class="card-hover" data-card-name="Ancient Tomb"
                 >Ancient Tomb</a
             >) exclusively carry mana-generating abilities, untapping
             effortlessly under the lock.
@@ -298,7 +298,7 @@ import { Card } from "webcoreui/astro";
         <p>
             On top of being a cheap way to churn through your deck, the untap clause
             within <a
-                href="#"
+                role="button" tabindex="0"
                 class="card-hover"
                 data-card-name="Frantic Search">Frantic Search</a
             > unlocks pivotal logistical combat mana tricks:
@@ -308,34 +308,34 @@ import { Card } from "webcoreui/astro";
                 <strong>Netting Mana via Ancient Tomb:</strong> While Frantic Search
                 conventionally operates as a zero-net-cost discard mechanism, resolving
                 it when untapping <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Ancient Tomb">Ancient Tomb</a
                 > actively ramps mana production. For example, tapping three lands
                 (including Tomb) floats 4 mana; spending 3 on <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Frantic Search">Frantic Search</a
                 > leaves 1 mana floating before untapping those exact three lands.
                 You now command 5 available mana on turn three—enabling an immediate
-                <a href="#" class="card-hover" data-card-name="Replenish"
+                <a role="button" tabindex="0" class="card-hover" data-card-name="Replenish"
                     >Replenish</a
                 > while preserving open interaction mana.
             </li>
             <li class="mb-0">
                 <strong>Bypassing Upkeep Tap Disruptors:</strong> When confronting
                 opposing upkeep mana denial such as <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Rishadan Port">Rishadan Port</a
                 > activations or <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Tangle Wire">Tangle Wire</a
                 > tap triggers, float all available mana across your targeted lands
                 in response. After the tap effects resolve and exhaust your board state,
                 immediately use that floating mana to cast <a
-                    href="#"
+                    role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Frantic Search">Frantic Search</a
                 >—cleanly untapping three core lands to execute main-phase development
