@@ -37,13 +37,6 @@ import { Card } from "webcoreui/astro";
 
 
     <Card title="Tier 1: Core Tournament Staples" titleTag="h2" id="tier-1">
-        <p class="section-intro">
-            These are the cards that hold competitive Replenish sideboards
-            together. The post-ban data backs it up: they answer problems that
-            come up across the whole format, and they belong in just about every
-            75.
-        </p>
-
         <CardAnalysis
             title="Exalted Angel"
             image="creatures/exalted_angel.jpg"
@@ -149,7 +142,7 @@ import { Card } from "webcoreui/astro";
                     role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Decree of Silence">Decree of Silence</a
-                > on their end step.
+                >.
             </p>
         </CardAnalysis>
 
@@ -223,24 +216,18 @@ import { Card } from "webcoreui/astro";
                     data-card-name="Abeyance">Abeyance</a
                 > in the sideboard, it does more than just protect the combo in
                 Games 2 and 3. When opponents bring in fast graveyard hate after
-                Game 1 (<a
-                    role="button" tabindex="0"
-                    class="card-hover"
-                    data-card-name="Tormod's Crypt">Tormod's Crypt</a
-                >, <a
-                    role="button" tabindex="0"
-                    class="card-hover"
-                    data-card-name="Withered Wretch">Withered Wretch</a
-                >, or <a role="button" tabindex="0" class="card-hover" data-card-name="Scour"
-                    >Scour</a
-                >), extra copies let you play a disruption game on their upkeep.
+                Game 1, extra copies let you play a disruption game on their upkeep.
                 Cast it on their turn and you lock down their activated hate and
                 tie up the mana they'd use to react—enough of a window to land a
                 threat like <a
-                    role="button" tabindex="0"
+                    role="button" tabindex="0"  
                     class="card-hover"
                     data-card-name="Exalted Angel">Exalted Angel</a
-                > and take over.
+                > or buy a turn to resolve <a
+                    role="button" tabindex="0"
+                    class="card-hover"
+                    data-card-name="Replenish">Replenish</a
+                >.
             </p>
         </CardAnalysis>
 
@@ -328,7 +315,7 @@ import { Card } from "webcoreui/astro";
             collapsible={true}
         >
             <p>
-                <a role="button" tabindex="0" class="card-hover" data-card-name="Chill">Chill</span> is
+                <a role="button" tabindex="0" class="card-hover" data-card-name="Chill">Chill</a> is
                 fantastic against classic Sligh and Burn—doubling the cost of their
                 red spells basically stops the burn dead—but it has a real problem
                 against Goblins.
@@ -383,7 +370,7 @@ import { Card } from "webcoreui/astro";
                     role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Withered Wretch">Withered Wretch</a
-                > right before you combo), and it buys great tempo in the mirror and
+                > right before you combo and forcing the oponent to activate in reponse), and it buys great tempo in the mirror and
                 against Enchantress. These days Chant is only worth it when you
                 specifically need the cheapest possible upkeep delay against fast
                 combo.
@@ -397,17 +384,8 @@ import { Card } from "webcoreui/astro";
             collapsible={true}
         >
             <p>
-                A flexible one-mana counter that deals with problem permanents on
-                the stack—stopping a taxing effect before it locks up your mana, or
-                answering something when waiting to crack an on-board <a
-                    role="button" tabindex="0"
-                    class="card-hover"
-                    data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                > would be too slow.
-            </p>
-            <p>
-                <strong>What it hits in Premodern:</strong> keeping Annul in your 15
-                gives you clean 1-for-1s against a long list of format staples: <a
+                A flexible one-mana counter that deals with problem permanents on the stack. While you have <a role="button" tabindex="0" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a> to handle artifacts and enchantments once they hit the board, many cards generate immediate value or lock you the second they resolve. 
+                This makes Annul a critical 1-for-1 answer against a long list of format staples that you must stop on the stack, including: <a
                     role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Gloom">Gloom</a
@@ -520,7 +498,7 @@ import { Card } from "webcoreui/astro";
         >
             <p>
                 The zero-mana standard for graveyard hate. Big against fast
-                Reanimator and the Replenish mirror. In the mirror, it's all about
+                Reanimator and the mirror. In the mirror, it's all about
                 timing: leave your Crypt on the table and only sacrifice it in
                 response to their <a
                     role="button" tabindex="0"
@@ -530,8 +508,7 @@ import { Card } from "webcoreui/astro";
                     role="button" tabindex="0"
                     class="card-hover"
                     data-card-name="Attunement">Attunement</a
-                > activation, so you wipe their setup and keep your own graveyard
-                intact. It also comes in against Terrageddon now and then to shrink
+                > activation, so you wipe their setup. It also comes in against Terrageddon now and then to shrink
                 their <a
                     role="button" tabindex="0"
                     class="card-hover"
@@ -699,9 +676,7 @@ import { Card } from "webcoreui/astro";
         >
             <p>
                 Protects a hand you've worked to set up against targeted discard,
-                since you can send discarded cards to the top of your library
-                instead of the graveyard when it helps—and it lets you ignore the
-                seven-card hand limit during big draw turns.
+                since you can send discarded cards to the top of your library instead of the graveyard. Its one mana cost make it fast enough to play before they cast discard spells.
             </p>
             <p>
                 On top of being a hard answer to discard, it has nice synergy with <a
@@ -742,10 +717,7 @@ import { Card } from "webcoreui/astro";
             collapsible={true}
         >
             <p>
-                A hard stop against decks that chain spells together—storm and the
-                like—since it limits everyone to one spell per turn, and it comes
-                back with Replenish if they blow it up. A neat silver bullet that's
-                especially good against Stiflenought and storm decks.
+                A hard lock against decks looking to chain multiple spells in a single turn. By restricting players to one spell per turn, it completely shuts down Storm combos and protects you from Stiflenought lines. Since it's an enchantment, it naturally fits into your recursion loops and comes right back with <a role="button" tabindex="0" class="card-hover" data-card-name="Replenish">Replenish</a> if they manage to destroy it.
             </p>
         </CardAnalysis>
     </Card>

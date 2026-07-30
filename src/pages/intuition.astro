@@ -1,7 +1,7 @@
 ---
 import Layout from "@components/Layout.astro";
 import PageHeader from "@components/PageHeader.astro";
-import { Card, Badge, Alert } from "webcoreui/astro";
+import { Card } from "webcoreui/astro";
 ---
 
 <Layout
@@ -17,375 +17,215 @@ import { Card, Badge, Alert } from "webcoreui/astro";
         imageCaption="Intuition by April Lee"
         isCard={true}
     />
-    <Card title="Core Mechanics: Hand vs. Graveyard Enforcement" titleTag="h2">
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 1: Core Mechanics — Compact Info Box
+         ═══════════════════════════════════════════════ -->
+    <Card title="How Piles Work" titleTag="h2">
         <p>
-            Your opponent picks which card goes to your hand and which two hit
-            the graveyard, so you have to build your pile with the right
-            redundancy for where you want each card to end up:
+            Your opponent picks which card goes to your hand—the other two hit
+            the graveyard. Build every pile around this rule:
         </p>
-
-        <div
-            style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; margin-bottom: 1.5rem;"
-        >
-            <div>
-                <h3
-                    style="margin: 0 0 0.5rem 0; color: var(--w-color-primary-10); font-size: 1.2rem;"
-                >
-                    Enforce to Hand
-                </h3>
-                <p style="margin: 0;">
-                    When you need a specific answer or threat in hand right away
-                    (spot removal, a sideboard card), your pile has to be <strong
-                        >3 identical copies</strong
-                    > or 3 cards that do the same job. That's why any silver bullet
-                    you want to reliably grab with <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Intuition">Intuition</a
-                    > needs at least 3 copies in your 75.
-                </p>
+        <div class="enforce-rules">
+            <div class="enforce-rule">
+                <span class="enforce-number enforce-number--hand">3</span>
+                <span>copies → guarantees one <strong>in hand</strong>. Use when you need a specific answer right now.</span>
             </div>
-
-            <div>
-                <h3
-                    style="margin: 0 0 0.5rem 0; color: var(--w-color-primary-10); font-size: 1.2rem;"
-                >
-                    Enforce to Graveyard
-                </h3>
-                <p style="margin: 0;">
-                    When you just need a combo enchantment in the graveyard for
-                    an upcoming <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Replenish">Replenish</a
-                    >, the pile only needs <strong>2 copies</strong> of that card.
-                    Whichever one the opponent puts in your hand, at least one is
-                    guaranteed to hit the yard.
-                </p>
+            <div class="enforce-rule">
+                <span class="enforce-number enforce-number--yard">2</span>
+                <span>copies → guarantees one <strong>in the graveyard</strong>. Use when you're setting up a <a role="button" tabindex="0" class="card-hover" data-card-name="Replenish">Replenish</a>.</span>
             </div>
-        </div>
-
-        <div style="margin-top: 2rem; margin-bottom: 0.5rem;">
-            <Alert theme="warning">
-                <strong>Incomplete Piles & Deck Tracking</strong><br />
-                If you've already drawn a copy of a card you really need in
-                hand (leaving only two in your library), pair those two with a
-                high-value threat like <a
-                    role="button" tabindex="0"
-                    class="card-hover"
-                    data-card-name="Parallax Wave">Parallax Wave</a
-                > to put your opponent in a lose-lose spot. Always keep track of what's
-                left in your deck before you resolve Intuition, so you never build a
-                pile you can't use.
-            </Alert>
         </div>
     </Card>
 
+    <!-- ═══════════════════════════════════════════════
+         SECTION 2: General Heuristics & Timing
+         ═══════════════════════════════════════════════ -->
     <Card title="General Heuristics & Timing" titleTag="h2">
-        <p>
-            <strong>Post-Sideboard Role Shift & On-Stack Hate:</strong> Against
-            permanent graveyard hate like <a
-                role="button" tabindex="0"
-                class="card-hover"
-                data-card-name="Tormod's Crypt">Tormod's Crypt</a
-            >, <a role="button" tabindex="0" class="card-hover" data-card-name="Phyrexian Furnace"
-                >Phyrexian Furnace</a
-            >, or <a role="button" tabindex="0" class="card-hover" data-card-name="Planar Void"
-                >Planar Void</a
-            >, don't build combo-dumping piles blind. Intuition stops being a
-            graveyard-stocking tool and becomes a removal tutor instead—grab
-            three copies of <a
-                role="button" tabindex="0"
-                class="card-hover"
-                data-card-name="Seal of Cleansing">Seal of Cleansing</a
-            > or <a role="button" tabindex="0" class="card-hover" data-card-name="Disenchant"
-                >Disenchant</a
-            > to clear out their graveyard hate before you go back to assembling the
-            combo.
-        </p>
-        <p class="mb-0">
-            <strong>Deck Depletion & Managing Threat Density:</strong> In long
-            attrition games against control, be careful not to over-tutor.
-            Intuition pulls cards three at a time, and with <a
-                role="button" tabindex="0"
-                class="card-hover"
-                data-card-name="Attunement">Attunement</a
-            > and <a role="button" tabindex="0" class="card-hover" data-card-name="Frantic Search"
-                >Frantic Search</a
-            > looting on top of that, you can burn through your win conditions or
-            even risk decking out if your first few reanimation attempts get
-            countered. Know when to stop thinning your deck and start conserving
-            what's left.
-        </p>
-    </Card>
-
-    <Card title="Common Tactical Piles" titleTag="h2">
-        <p style="margin-bottom: 2rem;">
-            Here are the standard piles and when to reach for each one:
-        </p>
-
-        <div
-            style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 1rem;"
-        >
-            <div
-                style="border-bottom: 1px solid rgba(150, 150, 150, 0.2); padding-bottom: 1.5rem;"
-            >
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Dumping Combo Pieces
-                    </h3>
-                    <Badge theme="secondary" small={true}
-                        >Enforce to Graveyard</Badge
-                    >
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    Your bread-and-butter setup when you're holding <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Replenish">Replenish</a
-                    > plus a discard outlet (<a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Attunement">Attunement</a
-                    > or <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Frantic Search">Frantic Search</a
-                    >). If a particular enchantment has to hit the graveyard now
-                    to set up your untap, put at least two copies in the pile.
-                </p>
-                <div
-                    class="callout"
-                >
-                    <strong>Standard Configurations:</strong>
-                    <a role="button" tabindex="0" class="card-hover" data-card-name="Opalescence"
-                        >Opal</a
-                    > + <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Decree of Silence">Decree</a
-                    > + <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Parallax Wave">Wave</a
-                    >
-                    (balanced lock), <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Opalescence">Opal</a
-                    > + <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Opalescence">Opal</a
-                    > + <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Parallax Wave">Wave</a
-                    > (guaranteed Opal in yard/hand), or <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Parallax Wave">Wave</a
-                    > x3 (when fighting explosive aggression).
-                </div>
-            </div>
-
-            <div
-                style="border-bottom: 1px solid rgba(150, 150, 150, 0.2); padding-bottom: 1.5rem;"
-            >
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Split Piles: The Lose-Lose Dilemma
-                    </h3>
-                    <Badge theme="secondary" small={true}>Enforce to Hand</Badge
-                    >
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    Later in the game you can drop the redundancy and build a
-                    pile of three different cards that work together. If you pick
-                    a combo where the enchantments you discard feed a
-                    reanimation spell or a draw engine in the same pile, every
-                    card the opponent could hand you still moves you
-                    forward—a real lose-lose choice for them.
-                </p>
-                <div
-                    class="callout"
-                >
-                    <strong>Standard Configurations:</strong>
-                    <a role="button" tabindex="0" class="card-hover" data-card-name="Replenish"
-                        >Replenish</a
-                    > + <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Attunement">Attunement</a
-                    > + <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Parallax Wave">Wave</a
-                    > (if they give you Replenish, you immediately animate Attunement
-                    and Wave; if they give you Attunement or Wave, you secure powerful
-                    on-board engines).
-                </div>
-            </div>
-
-            <div
-                style="border-bottom: 1px solid rgba(150, 150, 150, 0.2); padding-bottom: 1.5rem;"
-            >
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Tutoring Targeted Removal
-                    </h3>
-                    <Badge theme="secondary" small={true}>Enforce to Hand</Badge
-                    >
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Swords to Plowshares"
-                        >Swords to Plowshares</a
-                    > and <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                    > answer completely different problems, so grab whichever one the
-                    board calls for. Tutor for three Swords when a fast creature clock
-                    is about to kill you. Tutor for three Seals to break through a lock
-                    piece—and as a bonus, any Seals you discard come back for free off
-                    your next <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Replenish">Replenish</a
-                    >.
-                </p>
-                <div
-                    class="callout"
-                >
-                    <strong>Standard Configurations:</strong>
-                    <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Swords to Plowshares"
-                        >Swords to Plowshares</a
-                    > x3 (anti-creature), <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Seal of Cleansing">Seal of Cleansing</a
-                    > x3 (anti-artifact/enchantment).
-                </div>
-            </div>
-
-            <div
-                style="border-bottom: 1px solid rgba(150, 150, 150, 0.2); padding-bottom: 1.5rem;"
-            >
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Guaranteeing Land Drops & Deck Thinning
-                    </h3>
-                    <Badge theme="secondary" small={true}>Enforce to Hand</Badge
-                    >
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    Early on, locking in a land drop keeps you from stumbling on
-                    mana with an otherwise great hand. And in long games against
-                    slow control, grabbing three lands thins your deck—pulling
-                    dead lands out so your future draws are more likely to be
-                    live threats and counters.
-                </p>
-                <div
-                    class="callout"
-                >
-                    <strong>Standard Configurations:</strong>
-                    <a role="button" tabindex="0" class="card-hover" data-card-name="Ancient Tomb"
-                        >Ancient Tomb</a
-                    > x3, <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Skycloud Expanse">Skycloud Expanse</a
-                    > x3, <a role="button" tabindex="0" class="card-hover" data-card-name="Plains"
-                        >Plains</a
-                    > x3.
-                </div>
-            </div>
-
-            <div
-                style="border-bottom: 1px solid rgba(150, 150, 150, 0.2); padding-bottom: 1.5rem;"
-            >
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Finding a Discard Engine
-                    </h3>
-                    <Badge theme="secondary" small={true}>Enforce to Hand</Badge
-                    >
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    When your hand is clogged with combo enchantments and <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Replenish">Replenish</a
-                    > but has no way to discard them, use Intuition to grab a draw
-                    engine and get your lines moving.
-                </p>
-                <div
-                    class="callout"
-                >
-                    <strong>Standard Configurations:</strong>
-                    <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Frantic Search">Frantic Search</a
-                    > x3, <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Attunement">Attunement</a
-                    > x3.
-                </div>
-            </div>
-
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
             <div>
-                <div
-                    style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;"
-                >
-                    <h3 style="margin: 0; color: var(--w-color-primary-10);">
-                        Tutoring Sideboard Tech
-                    </h3>
-                    <Badge theme="secondary" small={true}>Enforce to Hand</Badge
-                    >
-                </div>
-                <p style="margin-top: 0; margin-bottom: 0.75rem;">
-                    In games 2 and 3, grabbing three copies of the right
-                    sideboard card lets you shut off their counters, disable
-                    their utility lands, or stop their combo cold whenever you
-                    need to.
+                <strong class="card-heading">Post-Sideboard Role Shift & On-Stack Hate</strong>
+                <p class="mb-0">
+                    Against permanent graveyard hate like <a role="button" tabindex="0" class="card-hover" data-card-name="Tormod's Crypt">Tormod's Crypt</a>,
+                    <a role="button" tabindex="0" class="card-hover" data-card-name="Phyrexian Furnace">Phyrexian Furnace</a>,
+                    or <a role="button" tabindex="0" class="card-hover" data-card-name="Planar Void">Planar Void</a>,
+                    don't build combo-dumping piles blind. Intuition becomes a
+                    removal tutor—grab three <a role="button" tabindex="0" class="card-hover" data-card-name="Seal of Cleansing">Seal of Cleansing</a>
+                    or <a role="button" tabindex="0" class="card-hover" data-card-name="Disenchant">Disenchant</a>
+                    to clear their hate before reassembling the combo.
                 </p>
-                <div
-                    class="callout"
-                >
-                    <strong>Standard Configurations:</strong>
-                    <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Meddling Mage">Meddling Mage</a
-                    > x3, <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Abeyance">Abeyance</a
-                    > x3, <a
-                        role="button" tabindex="0"
-                        class="card-hover"
-                        data-card-name="Tsabo's Web">Tsabo's Web</a
-                    > x3.
-                </div>
+            </div>
+            <div>
+                <strong class="card-heading">Deck Depletion & Threat Density</strong>
+                <p class="mb-0">
+                    In long games against control, don't over-tutor. Intuition
+                    pulls three cards at a time, and with <a role="button" tabindex="0" class="card-hover" data-card-name="Attunement">Attunement</a>
+                    and <a role="button" tabindex="0" class="card-hover" data-card-name="Frantic Search">Frantic Search</a>
+                    looting on top, you can burn through win conditions or risk
+                    decking out if your first reanimation attempts get countered.
+                    Know when to stop thinning and start conserving.
+                </p>
             </div>
         </div>
+    </Card>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 3: Common Tactical Piles — Reference Table
+         ═══════════════════════════════════════════════ -->
+    <Card title="Common Tactical Piles" titleTag="h2">
+        <p style="margin-bottom: 1.25rem;">
+            The standard piles and when to reach for each one. <span class="badge-legend"><span class="enforce-dot enforce-dot--hand"></span> = to hand</span> <span class="badge-legend"><span class="enforce-dot enforce-dot--yard"></span> = to graveyard</span>
+        </p>
+
+        <table class="ref-table">
+            <thead>
+                <tr>
+                    <th>Pile</th>
+                    <th>When to Use</th>
+                    <th>Standard Configurations</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Pile"><strong>Dumping Combo Pieces</strong></td>
+                    <td data-label="When to Use">
+                        You're holding <a role="button" tabindex="0" class="card-hover" data-card-name="Replenish">Replenish</a>
+                        plus a discard outlet. Need enchantments in the yard now.
+                    </td>
+                    <td data-label="Configs">
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Opalescence">Opal</a> + <a role="button" tabindex="0" class="card-hover" data-card-name="Decree of Silence">Decree</a> + <a role="button" tabindex="0" class="card-hover" data-card-name="Parallax Wave">Wave</a></span>
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Opalescence">Opal</a> + <a role="button" tabindex="0" class="card-hover" data-card-name="Opalescence">Opal</a> + <a role="button" tabindex="0" class="card-hover" data-card-name="Parallax Wave">Wave</a></span>
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Parallax Wave">Wave</a> ×3</span>
+                    </td>
+                    <td data-label="Type"><span class="ref-badge ref-badge--amber">Graveyard</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Pile"><strong>Split Piles</strong></td>
+                    <td data-label="When to Use">
+                        Late game. Three different cards that all advance your plan—every
+                        choice the opponent makes is wrong.
+                    </td>
+                    <td data-label="Configs">
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Replenish">Replenish</a> + <a role="button" tabindex="0" class="card-hover" data-card-name="Attunement">Attunement</a> + <a role="button" tabindex="0" class="card-hover" data-card-name="Parallax Wave">Wave</a></span>
+                    </td>
+                    <td data-label="Type"><span class="ref-badge ref-badge--blue">Hand</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Pile"><strong>Targeted Removal</strong></td>
+                    <td data-label="When to Use">
+                        A creature clock or a lock piece is about to kill you.
+                        Grab whichever answer the board needs.
+                    </td>
+                    <td data-label="Configs">
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Swords to Plowshares">Swords</a> ×3</span>
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Seal of Cleansing">Seal</a> ×3</span>
+                    </td>
+                    <td data-label="Type"><span class="ref-badge ref-badge--blue">Hand</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Pile"><strong>Land Drops</strong></td>
+                    <td data-label="When to Use">
+                        Mana-light hand that's otherwise great, or late-game deck
+                        thinning against control.
+                    </td>
+                    <td data-label="Configs">
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Ancient Tomb">Tomb</a> ×3</span>
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Skycloud Expanse">Skycloud</a> ×3</span>
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Plains">Plains</a> ×3</span>
+                    </td>
+                    <td data-label="Type"><span class="ref-badge ref-badge--blue">Hand</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Pile"><strong>Discard Engine</strong></td>
+                    <td data-label="When to Use">
+                        Hand is clogged with enchantments and <a role="button" tabindex="0" class="card-hover" data-card-name="Replenish">Replenish</a>
+                        but no way to discard them.
+                    </td>
+                    <td data-label="Configs">
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Frantic Search">Frantic Search</a> ×3</span>
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Attunement">Attunement</a> ×3</span>
+                    </td>
+                    <td data-label="Type"><span class="ref-badge ref-badge--blue">Hand</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Pile"><strong>Sideboard Tech</strong></td>
+                    <td data-label="When to Use">
+                        Games 2–3. Shut off counters, disable utility lands, or
+                        stop their combo cold.
+                    </td>
+                    <td data-label="Configs">
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Meddling Mage">Meddling Mage</a> ×3</span>
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Abeyance">Abeyance</a> ×3</span>
+                        <span class="ref-config"><a role="button" tabindex="0" class="card-hover" data-card-name="Tsabo's Web">Tsabo's Web</a> ×3</span>
+                    </td>
+                    <td data-label="Type"><span class="ref-badge ref-badge--blue">Hand</span></td>
+                </tr>
+            </tbody>
+        </table>
     </Card>
 </Layout>
+
+<style>
+    /* ──────────────────────────────────────────────
+       Enforce Rules (Section 1 — compact info box)
+       ────────────────────────────────────────────── */
+    .enforce-rules {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .enforce-rule {
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        color: var(--w-color-primary-20);
+        line-height: 1.5;
+    }
+
+    .enforce-number {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        flex-shrink: 0;
+        width: 1.75rem;
+        text-align: center;
+    }
+
+    .enforce-number--hand {
+        color: #5a9fd4;
+    }
+
+    .enforce-number--yard {
+        color: #d4a44a;
+    }
+
+    /* ──────────────────────────────────────────────
+       Pile Table (Section 3)
+       ────────────────────────────────────────────── */
+    .badge-legend {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.85rem;
+        color: var(--w-color-primary-30);
+        margin-right: 0.75rem;
+    }
+
+    .enforce-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+    }
+
+    .enforce-dot--hand {
+        background: #5a9fd4;
+    }
+
+    .enforce-dot--yard {
+        background: #d4a44a;
+    }
+
+</style>

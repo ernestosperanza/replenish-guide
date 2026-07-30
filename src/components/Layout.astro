@@ -257,6 +257,7 @@ const schema = {
         border-left: 3px solid var(--w-color-primary-40);
     }
 
+
     /* Reduce el espacio entre todas las secciones (Cards) globalmente */
     :global(.w-card) {
         margin-bottom: 1rem !important;
@@ -302,6 +303,148 @@ const schema = {
 
     .guide-link:hover {
         color: #5c3014; /* Darker brown on hover */
+    }
+
+    /* ─── Reusable Reference Table ─── */
+    .ref-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    .ref-table thead {
+        border-bottom: 2px solid var(--w-color-primary-50);
+    }
+
+    .ref-table th {
+        text-align: left;
+        padding: 0.6rem 0.75rem;
+        color: var(--w-color-primary-20);
+        font-weight: 600;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .ref-table td {
+        padding: 0.75rem;
+        color: var(--w-color-primary-20);
+        vertical-align: top;
+        border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+    }
+
+    .ref-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    .ref-table tbody tr:nth-child(even) {
+        background: rgba(150, 150, 150, 0.04);
+    }
+
+    .ref-table td:first-child {
+        white-space: nowrap;
+        color: var(--w-color-primary-10);
+    }
+
+    /* Pill badges for table cells */
+    .ref-badge {
+        display: inline-block;
+        padding: 0.15rem 0.55rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+    }
+
+    .ref-badge--blue {
+        background: rgba(90, 159, 212, 0.15);
+        color: #5a9fd4;
+        border: 1px solid rgba(90, 159, 212, 0.3);
+    }
+
+    .ref-badge--amber {
+        background: rgba(212, 164, 74, 0.15);
+        color: #d4a44a;
+        border: 1px solid rgba(212, 164, 74, 0.3);
+    }
+
+    .ref-badge--green {
+        background: rgba(46, 204, 113, 0.12);
+        color: #2ecc71;
+        border: 1px solid rgba(46, 204, 113, 0.25);
+    }
+
+    .ref-badge--red {
+        background: rgba(231, 76, 60, 0.12);
+        color: #e74c3c;
+        border: 1px solid rgba(231, 76, 60, 0.25);
+    }
+
+    /* Each config on its own line within a cell */
+    .ref-config {
+        display: block;
+        padding: 0.15rem 0;
+    }
+
+    /* Responsive: table → stacked cards on mobile */
+    @media (max-width: 640px) {
+        .ref-table thead {
+            display: none;
+        }
+
+        .ref-table,
+        .ref-table tbody,
+        .ref-table tr,
+        .ref-table td {
+            display: block;
+            width: 100%;
+        }
+
+        .ref-table tr {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(150, 150, 150, 0.12);
+        }
+
+        .ref-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .ref-table tbody tr:nth-child(even) {
+            background: none;
+        }
+
+        .ref-table td {
+            padding: 0.2rem 0;
+            border-bottom: none;
+        }
+
+        .ref-table td:first-child {
+            white-space: normal;
+            font-size: 1rem;
+            padding-bottom: 0.25rem;
+        }
+
+        .ref-table td::before {
+            content: attr(data-label);
+            display: block;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--w-color-primary-30);
+            margin-bottom: 0.1rem;
+            font-weight: 600;
+        }
+
+        .ref-table td:first-child::before,
+        .ref-table td:last-child::before {
+            display: none;
+        }
+
+        .ref-table td:last-child {
+            padding-top: 0.35rem;
+        }
     }
 
     /* Floating back-to-top button (long pages) */
